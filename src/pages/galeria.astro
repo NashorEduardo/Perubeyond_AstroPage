@@ -1,0 +1,514 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const images = [
+  {
+    src: '/images/Machupicchu/IMG_7709.webp',
+    location: 'Machu Picchu, Cusco',
+    tag: 'Maravilla del Mundo',
+    description: 'Ciudadela inca del siglo XV enclavada a 2,430 msnm entre las montañas sagradas del Cusco. Una de las Siete Maravillas del Mundo Moderno.',
+    size: 'big',
+  },
+  {
+    src: '/images/Montaña_de_7_colores/DSC02961.webp',
+    location: 'Vinicunca, Cusco',
+    tag: 'Cerro de 7 Colores',
+    description: 'La Montaña Arcoíris a 5,200 msnm. Sus minerales —hierro, cobre y azufre— oxidados por el deshielo crean una paleta de colores única en el mundo.',
+    size: 'wide',
+  },
+  {
+    src: '/images/Laguna_Humantay/DSC04361.webp',
+    location: 'Laguna Humantay, Cusco',
+    tag: 'Tesoro Turquesa',
+    description: 'Laguna de aguas turquesa a 4,200 msnm, custodiada por el Nevado Salkantay. Lugar sagrado para las comunidades andinas del Cusco.',
+    size: 'tall',
+  },
+  {
+    src: '/images/Cuzco/cusco.webp',
+    location: 'Plaza de Armas, Cusco',
+    tag: 'Centro Histórico',
+    description: 'Corazón del antiguo Tahuantinsuyo y hoy Patrimonio de la Humanidad. La Plaza de Armas es el alma colonial e inca de la ciudad del Cusco.',
+    size: 'normal',
+  },
+  {
+    src: '/images/ValleSagrado/moray.webp',
+    location: 'Moray, Valle Sagrado',
+    tag: 'Laboratorio Inca',
+    description: 'Terrazas circulares concéntricas que los Incas usaron como laboratorio agrícola para cultivar más de 250 especies de papa y maíz.',
+    size: 'wide',
+  },
+  {
+    src: '/images/ValleSagrado/ollantaytambo.webp',
+    location: 'Ollantaytambo, Valle Sagrado',
+    tag: 'Fortaleza Inca',
+    description: 'Último bastión de resistencia inca frente a la conquista española. Sus andenes escalonados y el Templo del Sol son de una belleza impresionante.',
+    size: 'tall',
+  },
+  {
+    src: '/images/ValleSagrado/moray-2.webp',
+    location: 'Andenes de Moray, Cusco',
+    tag: 'Ingeniería Ancestral',
+    description: 'Cada nivel de Moray puede tener una diferencia de temperatura de hasta 15 °C. Una demostración del conocimiento científico del Imperio Inca.',
+    size: 'normal',
+  },
+  {
+    src: '/images/ValleSagrado/ollantaytambo-2.webp',
+    location: 'Templo del Sol, Ollantaytambo',
+    tag: 'Arquitectura Sagrada',
+    description: 'Los seis monolitos rosados del Templo del Sol, tallados con precisión milimétrica y transportados desde canteras a kilómetros de distancia.',
+    size: 'normal',
+  },
+  {
+    src: '/images/ValleSagrado/moray-3.webp',
+    location: 'Complejo de Moray, Cusco',
+    tag: 'Vista Panorámica',
+    description: 'Vista aérea del complejo arqueológico de Moray, rodeado de montañas verdes. Un lugar que combina ciencia inca con una belleza paisajística única.',
+    size: 'wide',
+  },
+  {
+    src: '/images/ValleSagrado/ollantaytambo-3.webp',
+    location: 'Pueblo de Ollantaytambo',
+    tag: 'Pueblo Vivo',
+    description: 'Único pueblo inca habitado sin interrupción desde el siglo XV. Sus calles empedradas y canales de irrigación funcionan exactamente igual que hace 600 años.',
+    size: 'normal',
+  },
+  {
+    src: '/images/Machupicchu/IMG_7715.webp',
+    location: 'Machu Picchu, Cusco',
+    tag: 'Experiencia Única',
+    description: 'Cada año, viajeros de todo el mundo llegan hasta Machu Picchu en busca de una conexión espiritual con la civilización inca y la naturaleza andina.',
+    size: 'normal',
+  },
+  {
+    src: '/images/Huacachina/ica.jpg',
+    location: 'Oasis de Huacachina, Ica',
+    tag: 'El Único Oasis',
+    description: 'El único oasis natural de América del Sur, rodeado de dunas de arena de hasta 100 metros. Paraíso para sandboard, paseos en buggy y atardeceres mágicos.',
+    size: 'wide',
+  },
+];
+---
+
+<Layout title="Galería | Perú Beyond" description="Explora la galería visual de Perú Beyond: paisajes, ruinas y cultura del Cusco y el Perú.">
+  <Header />
+
+  <main>
+    <!-- ── Hero ── -->
+    <section class="gallery-hero">
+      <img
+        src="/images/Machupicchu/IMG_7711.webp"
+        alt="Galería Perú Beyond"
+        class="hero-img"
+      />
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <nav class="breadcrumb">
+            <a href="/">Inicio</a><span>›</span><span class="active">Galería</span>
+          </nav>
+          <p class="hero-script">Perú Beyond</p>
+          <h1 class="hero-title">Galería de <span>Imágenes</span></h1>
+          <p class="hero-sub">Haz click en cada imagen para descubrir su historia</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Intro ── -->
+    <section class="gallery-intro">
+      <p class="intro-tag">Cusco & Perú en imágenes</p>
+      <p class="intro-desc">
+        Una colección visual de los paisajes, ruinas y maravillas naturales que hacen del Perú
+        uno de los destinos más extraordinarios del planeta.
+      </p>
+      <div class="hint-badge">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"/></svg>
+        Haz click en una imagen para voltearla
+      </div>
+    </section>
+
+    <!-- ── Gallery grid ── -->
+    <section class="gallery-section">
+      <div class="gallery-grid">
+        {images.map((img) => (
+          <div class={`flip-container size-${img.size}`}>
+            <div class="flip-card">
+
+              <!-- Front -->
+              <div class="flip-front">
+                <img src={img.src} alt={img.location} loading="lazy" />
+                <div class="front-gradient">
+                  <span class="front-tag">{img.tag}</span>
+                </div>
+              </div>
+
+              <!-- Back -->
+              <div class="flip-back">
+                <div class="back-inner">
+                  <div class="back-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  </div>
+                  <h3 class="back-location">{img.location}</h3>
+                  <div class="back-line"></div>
+                  <p class="back-desc">{img.description}</p>
+                  <span class="back-brand">Perú Beyond</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="gallery-cta">
+      <p class="cta-tag">¿Te inspira lo que ves?</p>
+      <h2 class="cta-title">Vive el Perú con <span>Perú Beyond</span></h2>
+      <p class="cta-desc">Diseñamos viajes únicos para que tú seas el protagonista de estas historias.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/51943491959" class="btn-gold" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-4.988-1.365l-.357-.212-3.758.9.946-3.658-.232-.376A9.818 9.818 0 012.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+          Planifica tu viaje
+        </a>
+        <a href="/blog" class="btn-outline">Ver el Blog</a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.flip-container').forEach((container) => {
+    container.addEventListener('click', () => {
+      container.querySelector('.flip-card')?.classList.toggle('is-flipped');
+    });
+  });
+</script>
+
+<style>
+  /* ── Hero ── */
+  .gallery-hero {
+    position: relative;
+    height: 58vh;
+    min-height: 400px;
+    overflow: hidden;
+  }
+  .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.65) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 3.5rem;
+  }
+  .hero-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0.75rem;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: #f6d06a; }
+  .breadcrumb .active { color: rgba(255,255,255,0.8); }
+  .hero-script {
+    font-family: 'Satisfy', cursive;
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.4rem;
+  }
+  .hero-title {
+    font-family: Georgia, serif;
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+  .hero-title span { color: #f6d06a; }
+  .hero-sub {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.65);
+  }
+
+  /* ── Intro ── */
+  .gallery-intro {
+    background: #f8f6f3;
+    text-align: center;
+    padding: 3rem 1.5rem 2rem;
+  }
+  .intro-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    margin-bottom: 0.5rem;
+  }
+  .intro-desc {
+    font-size: 0.95rem;
+    color: #6b7280;
+    max-width: 540px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.7;
+  }
+  .hint-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #fff;
+    border: 1px solid #e8d9b0;
+    border-left: 3px solid #c9a84c;
+    padding: 0.45rem 1rem;
+    font-size: 0.78rem;
+    color: #5a4a2a;
+    font-weight: 600;
+    border-radius: 2px;
+  }
+  .hint-badge svg { width: 0.9rem; height: 0.9rem; color: #c9a84c; }
+
+  /* ── Gallery section ── */
+  .gallery-section {
+    background: #f8f6f3;
+    padding: 1rem 1.5rem 5rem;
+  }
+
+  /* ── Grid ── */
+  .gallery-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 240px;
+    grid-auto-flow: dense;
+    gap: 10px;
+  }
+
+  /* Size variants */
+  .size-big   { grid-column: span 2; grid-row: span 2; }
+  .size-wide  { grid-column: span 2; grid-row: span 1; }
+  .size-tall  { grid-column: span 1; grid-row: span 2; }
+  .size-normal{ grid-column: span 1; grid-row: span 1; }
+
+  /* Responsive grid */
+  @media (max-width: 1024px) {
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 220px; }
+  }
+  @media (max-width: 640px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 180px;
+    }
+    .size-big { grid-column: span 2; grid-row: span 2; }
+    .size-wide { grid-column: span 2; }
+  }
+
+  /* ── Flip container ── */
+  .flip-container {
+    perspective: 1200px;
+    cursor: pointer;
+  }
+  .flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.75s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+  .flip-card.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  /* ── Front ── */
+  .flip-front,
+  .flip-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+  }
+  .flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .flip-container:hover .flip-front img {
+    transform: scale(1.04);
+  }
+  .front-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 55%);
+    display: flex;
+    align-items: flex-end;
+    padding: 0.85rem;
+    pointer-events: none;
+  }
+  .front-tag {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #f6d06a;
+    background: rgba(0,0,0,0.45);
+    padding: 0.25rem 0.6rem;
+    border-radius: 2px;
+    border-left: 2px solid #c9a84c;
+  }
+
+  /* ── Back ── */
+  .flip-back {
+    transform: rotateY(180deg);
+    background: #0d1b2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+  }
+  .back-inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 260px;
+  }
+  .back-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .back-icon svg {
+    width: 1rem;
+    height: 1rem;
+    color: #c9a84c;
+  }
+  .back-location {
+    font-family: Georgia, serif;
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0;
+  }
+  .back-line {
+    width: 2.5rem;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, #c9a84c, transparent);
+    flex-shrink: 0;
+  }
+  .back-desc {
+    font-size: clamp(0.68rem, 1.1vw, 0.82rem);
+    color: rgba(255,255,255,0.65);
+    line-height: 1.65;
+    margin: 0;
+  }
+  .back-brand {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    opacity: 0.7;
+    margin-top: 0.25rem;
+  }
+
+  /* ── CTA ── */
+  .gallery-cta {
+    background: #0d1b2e;
+    text-align: center;
+    padding: 5rem 1.5rem;
+  }
+  .cta-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #f6d06a;
+    margin-bottom: 0.6rem;
+  }
+  .cta-title {
+    font-family: Georgia, serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+  .cta-title span { color: #f6d06a; }
+  .cta-desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.55);
+    max-width: 480px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+  .cta-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #c9a84c;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.75rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-gold svg { width: 1.1rem; height: 1.1rem; }
+  .btn-gold:hover { background: #a07830; transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-outline:hover { color: #f6d06a; border-color: #f6d06a; }
+</style>

@@ -1,0 +1,52 @@
+---
+---
+<section class="relative h-screen flex items-center overflow-hidden">
+
+  <!-- Video de fondo YouTube -->
+  <div class="absolute inset-0 w-full h-full pointer-events-none">
+    <iframe
+      id="hero-yt"
+      src="https://www.youtube.com/embed/HjTJtS7r8do?autoplay=1&mute=1&loop=1&playlist=HjTJtS7r8do&controls=0&showinfo=0&rel=0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full min-w-[177.78vh] min-h-[56.25vw]"
+      style="border:0;"
+    ></iframe>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div class="absolute inset-0 bg-navy/35"></div>
+
+  <!-- Neblina animada -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
+    <div class="fog-layer fog-1"></div>
+    <div class="fog-layer fog-2"></div>
+    <div class="fog-layer fog-3"></div>
+  </div>
+
+  <!-- Contenido -->
+  <div class="container-pb text-white py-24 relative z-10 text-center">
+    <span class="script-title block mb-3" data-i18n="hero.tagline">Explora, vive y disfruta</span>
+    <h1 class="text-white text-4xl md:text-6xl font-bold leading-tight max-w-3xl mx-auto">
+      Peru Beyond <br/>
+      <span class="text-gold" data-i18n="hero.title">Más de lo que Imaginas</span>
+    </h1>
+    <a
+      href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d33404487-Reviews-Peru_Beyond-Cusco_Cusco_Region.html"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center gap-3 mt-6"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/0/02/TripAdvisor_Logo.svg"
+        alt="Tripadvisor"
+        class="h-8 object-contain"
+      />
+      <i class="bi bi-tripadvisor text-3xl text-gold"></i>
+      <div>
+        <div class="flex text-gold">{Array.from({length:5}).map(()=> <i class="bi bi-star-fill"></i>)}</div>
+        <span class="text-sm" data-i18n="hero.reviews">5.0 · 4 reseñas en TripAdvisor</span>
+      </div>
+    </a>
+  </div>
+</section>

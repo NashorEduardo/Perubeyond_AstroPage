@@ -1,0 +1,186 @@
+---
+const tours = [
+  {
+    image: '/images/Huacachina/ica.jpg',
+    title: 'Lima, Paracas, Huacachina, Cusco y Machu Picchu',
+    duration: '7 Días / 6 Noches',
+    price: '407',
+    description: 'El gran circuito de la costa y sierra: dunas gigantes de Huacachina, la Reserva de Paracas y la magia inca de Cusco con Machu Picchu en un solo viaje.',
+  },
+  {
+    image: '/images/Machupicchu/IMG_7709.webp',
+    title: 'Lima, Paracas, Huacachina y Machu Picchu',
+    duration: '6 Días / 5 Noches',
+    price: '348',
+    description: 'Combina el desierto costero de Huacachina y las aguas turquesas de Paracas con la ciudadela de Machu Picchu, la maravilla del mundo moderno.',
+  },
+  {
+    image: '/images/Lima/lima.webp',
+    title: 'Lima Colonial, Ica, Cusco y Machu Picchu',
+    duration: '7 Días / 6 Noches',
+    price: '449',
+    description: 'Recorre el centro histórico de Lima, el oasis de Ica, las ruinas del Cusco imperial y culmina con la impresionante ciudadela de Machu Picchu.',
+  },
+  {
+    image: '/images/Montaña_de_7_colores/DSC02961.webp',
+    title: 'Lima, Paracas, Machu Picchu y Montaña de Colores',
+    duration: '8 Días / 7 Noches',
+    price: '416',
+    description: 'Desde la costa de Paracas hasta los Andes más coloridos del mundo. Naturaleza, cultura y los paisajes más únicos del Perú.',
+  },
+  {
+    image: '/images/Paracas/pexels-gilmerdiaz-14097704.webp',
+    title: 'Lima, Paracas, Ica, Machu Picchu y Montaña de Colores',
+    duration: '9 Días / 8 Noches',
+    price: '690',
+    description: 'La ruta completa de la costa sur con la profundidad andina: Paracas, las dunas de Ica, Machu Picchu y la Montaña Arcoíris.',
+  },
+  {
+    image: '/images/ValleSagrado/ollantaytambo.webp',
+    title: 'Lima, Ica, Cusco y Machu Picchu',
+    duration: '10 Días / 9 Noches',
+    price: '723',
+    description: 'El viaje más completo: gastronomía limeña, aventura en las dunas de Ica, el Valle Sagrado y la maravilla de Machu Picchu en 10 días.',
+  },
+];
+---
+
+<section id="tours-peru" class="section tours-peru-bg">
+  <div class="container-pb">
+
+    <!-- Encabezado -->
+    <div class="text-center mb-12 max-w-2xl mx-auto">
+      <span class="script-title" data-i18n="peru_sec.badge">Perú Completo</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2" data-i18n="peru_sec.title">¿Buscas otro tipo de experiencia?</h2>
+      <p class="text-sm text-gray-500 mt-4 leading-relaxed" data-i18n="peru_sec.desc">
+        Explora las maravillas del Perú con nuestros paquetes turísticos personalizados y de alta calidad.
+        Cada ruta ha sido diseñada para ofrecerte lo mejor de cada destino, adaptada a tus tiempos y preferencias.
+      </p>
+    </div>
+
+    <!-- Slider -->
+    <div class="relative">
+      <div class="swiper tours-peru-swiper">
+        <div class="swiper-wrapper items-start">
+          {tours.map(t => (
+            <div class="swiper-slide tours-peru-slide">
+              <a href="#" class="flex flex-col group">
+
+                <!-- Imagen -->
+                <div class="overflow-hidden mb-5">
+                  <img
+                    src={t.image}
+                    alt={t.title}
+                    class="w-full h-[260px] object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                </div>
+
+                <!-- Duración + precio -->
+                <div class="flex items-center gap-3 text-[11px] text-gray-400 mb-2">
+                  <span>{t.duration}</span>
+                  <span class="text-gray-200">|</span>
+                  <span><span data-i18n="peru_sec.from">Desde</span> <strong class="text-navy">${t.price} USD</strong></span>
+                </div>
+
+                <!-- Título -->
+                <h3 class="text-base font-bold text-navy leading-snug mb-3">{t.title}</h3>
+
+                <!-- Descripción -->
+                <p class="text-sm text-gray-500 leading-relaxed line-clamp-3 mb-5">{t.description}</p>
+
+                <!-- Link editorial -->
+                <span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-navy border-b-2 border-navy pb-0.5 w-fit group-hover:text-gold group-hover:border-gold transition-colors duration-300">
+                  <span data-i18n="peru_sec.see">Ver esta experiencia</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Flechas -->
+      <button class="tours-prev absolute -left-5 top-[120px] z-10 w-9 h-9 flex items-center justify-center bg-white border border-gray-200 rounded-full shadow-sm hover:border-navy transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button class="tours-next absolute -right-5 top-[120px] z-10 w-9 h-9 flex items-center justify-center bg-white border border-gray-200 rounded-full shadow-sm hover:border-navy transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .tours-peru-bg {
+    position: relative;
+    background-image: url('/images/Machupicchu/IMG_7715.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .tours-peru-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.92);
+    pointer-events: none;
+  }
+  .tours-peru-bg > * {
+    position: relative;
+    z-index: 1;
+  }
+  .tours-peru-swiper {
+    overflow: hidden;
+    padding: 3rem 0 3rem;
+  }
+  .tours-peru-slide {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: scale(0.82) translateY(30px);
+  }
+  .tours-peru-slide.swiper-slide-active {
+    transform: scale(1.08) translateY(-18px);
+    z-index: 10;
+  }
+  .tours-peru-slide.swiper-slide-prev,
+  .tours-peru-slide.swiper-slide-next {
+    transform: scale(0.9) translateY(16px);
+  }
+</style>
+
+<script is:inline>
+  window.addEventListener('load', () => {
+    if (window.Swiper) new Swiper('.tours-peru-swiper', {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 40,
+      loop: true,
+      autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+      },
+      speed: 700,
+      navigation: {
+        nextEl: '.tours-next',
+        prevEl: '.tours-prev',
+      },
+      pagination: {
+        el: '.tours-peru-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        0:    { slidesPerView: 1, spaceBetween: 20 },
+        640:  { slidesPerView: 2, spaceBetween: 30 },
+        1024: { slidesPerView: 3, spaceBetween: 40 },
+      },
+    });
+  });
+</script>

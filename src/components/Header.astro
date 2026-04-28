@@ -1,0 +1,604 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface PeruLink  { n: string; h: string }
+interface MachuTour { name: string; duration: string; img: string; href: string }
+interface CuscoTour { name: string; href: string }
+interface BrandLink { n: string; h: string; icon: string; i18n: string }
+
+interface MegaPeruItem {
+  label: string; navKey: string; href: string; type: 'mega-peru';
+  details: { title: string; desc: string; links: PeruLink[]; images: { src: string; label: string }[] };
+}
+interface MegaCuscoItem {
+  label: string; navKey: string; href: string; type: 'mega-cusco';
+  details: { categories: { title: string; img: string; tours: CuscoTour[] }[] };
+}
+interface MegaMachuItem {
+  label: string; navKey: string; href: string; type: 'mega-machu';
+  details: { featured: { title: string; desc: string; img: string; href: string }; tours: MachuTour[] };
+}
+interface MegaBrandItem {
+  label: string; navKey: string; href: string; type: 'mega-brand';
+  details: { links: BrandLink[]; contact: { phone: string; email: string; whatsapp: string }; image: string; tagline: string };
+}
+type MenuItem = MegaPeruItem | MegaCuscoItem | MegaMachuItem | MegaBrandItem;
+
+const menu: MenuItem[] = [
+  {
+    label: 'TOURS PERÚ',
+    navKey: 'nav.tours_peru',
+    href: '/tours',
+    type: 'mega-peru',
+    details: {
+      title: "Paquetes & Destinos",
+      desc: "Experiencias diseñadas para quienes buscan vivir el Perú auténtico — desde la selva amazónica hasta las cumbres andinas.",
+      links: [
+        { n: "Lima – Paracas – Cusco – Machu Picchu 6 días / 5 noches", h: "/tours/peru/tour-lima-paracas-cusco-machu-picchu-6-dias" },
+        { n: "Lima – Paracas – Huacachina – Machu Picchu – Cusco – 7días / 6 noches", h: "/tours/peru/tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias" },
+        { n: "Lima - Huacachina - Valle Sagrado - Machu Picchu - 7 días / 6 noches", h: "/tours/peru/tour-lima-huacachina-valle-sagrado-machu-picchu-7-dias"},
+        { n: "Lima - Paracas - Machu Picchu - Montaña Arcoíris - 8 días / 7 noches",  h: "/tours/peru/tour-lima-paracas-machu-picchu-montana-arcoiris-8-dias" },
+        { n: "Lima - Paracas - Machu Picchu - Montaña Arcoíris - 9 días / 8 noches",  h: "/tours/peru/tour-lima-paracas-machu-picchu-montana-arcoiris-9-dias" },
+        { n: "Lima - Huacachina - Machu Picchu - Montaña Arcoíris - 10 días / 9 noches",  h: "/tours/peru/tour-lima-huacachina-machu-picchu-montana-arcoiris-10-dias" },
+      ],
+      images: [
+        { src: "/images/Cuzco/cusco.webp",          label: "CUSCO" },
+        { src: "/images/Machupicchu/IMG_7709.webp",  label: "MACHUPICCHU" },
+        { src: "/images/Huacachina/ica.jpg",         label: "ICA" },
+        { src: "/images/Lima/lima.webp",             label: "LIMA" },
+      ],
+    },
+  },
+  {
+    label: 'TOUR CUSCO',
+    navKey: 'nav.tour_cusco',
+    href: '/tours/cusco',
+    type: 'mega-cusco',
+    details: {
+      categories: [
+        {
+          title: "Aventura en las Cumbres",
+          img: "/images/ValleSagrado/ollantaytambo-3.webp",
+          tours: [
+            { name: "Montaña de 7 Colores", href: "/tours/cusco/trekking-montana-7-colores" },
+            { name: "Montaña Palcoyo",      href: "/tours/cusco/trekking-palcoyo" },
+            { name: "Laguna Humantay",      href: "/tours/cusco/trekking-laguna-humantay-full-day" },
+          ],
+        },
+        {
+          title: "Cultura Viva & Historia",
+          img: "/images/ValleSagrado/moray.webp",
+          tours: [
+            { name: "City Tour + 4 Ruinas", href: "/tours/cusco/city-tour-cusco-qoricancha-4-ruinas" },
+            { name: "Super Valle Sagrado",  href: "/tours/cusco/valle-sagrado-full-day-almuerzo-buffet" },
+            { name: "Tour Valle Sur     ",  href: "/tours/cusco/valle-sur-cusco-tour" },
+            { name: "Tour 7 Lagunas",       href: "/tours/cusco/trekking-7-lagunas-ausangate" },
+          ],
+        },
+        {
+          title: "Maravillas y Paisajes",
+          img: "/images/Machupicchu/IMG_7709.webp",
+          tours: [
+            { name: "Machu Picchu Full Day", href: "/tours/cusco/machu-picchu-full-day-tour" },
+            { name: "Maras & Moray",         href: "/tours/cusco/super-valle-sagrado" },
+            { name: "Valle Sagrado Clásico", href: "/tours/cusco/maras-moray-salineras-tour" },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    label: 'MACHUPICCHU',
+    navKey: 'nav.machupicchu',
+    href: '/tours/machu-picchu',
+    type: 'mega-machu',
+    details: {
+      featured: {
+        title: "La Maravilla del Mundo",
+        desc: "Machu Picchu es el destino más icónico de Sudamérica. Descúbrelo con nuestros guías expertos y vive una experiencia que cambiará tu perspectiva del mundo.",
+        img: "/images/Machupicchu/IMG_7711.webp",
+        href: "/tours/machu-picchu",
+      },
+      tours: [
+        { name: "Cusco, Machu Picchu, Maras y Moray",                     duration: "3D / 2N", img: "/images/Maras/F1.webp",                          href: "/tours/machupicchu/cusco-machu-picchu-maras-moray-3d-2n" },
+        { name: "Cusco y Machu Picchu",                                    duration: "3D / 2N", img: "/images/Machupicchu/IMG_7709.webp",               href: "/tours/machupicchu/cusco-machu-picchu-3d-2n" },
+        { name: "Cusco, Valle Sagrado y Machu Picchu",                     duration: "4D / 3N", img: "/images/ValleSagrado/ollantaytambo.webp",         href: "/tours/machupicchu/cusco-valle-sagrado-machu-picchu-4d-3n" },
+        { name: "Cusco, Machu Picchu y Montaña de Colores",               duration: "4D / 3N", img: "/images/Montaña_de_7_colores/DSC02961.webp",      href: "/tours/machupicchu/cusco-machu-picchu-montana-colores-4d-3n" },
+        { name: "Cusco, Machu Picchu y Laguna Humantay",                   duration: "4D / 3N", img: "/images/Laguna_Humantay/DSC04361.webp",           href: "/tours/machupicchu/cusco-machu-picchu-humantay-4d-3n" },
+        { name: "Cusco, Valle Sagrado, Machu Picchu y Montaña de Colores", duration: "5D / 4N", img: "/images/Montaña_de_7_colores/DSC02974.webp",      href: "/tours/machupicchu/cusco-valle-sagrado-machu-picchu-montana-colores-5d-4n" },
+        { name: "Cusco, Valle Sagrado, Machu Picchu y Laguna Humantay",    duration: "5D / 4N", img: "/images/Laguna_Humantay/DSC04368.webp",           href: "/tours/machupicchu/cusco-valle-sagrado-machu-picchu-humantay-5d-4n" },
+        { name: "Cusco, Machu Picchu, Humantay y Montaña de Colores",     duration: "5D / 4N", img: "/images/Machupicchu/FT%208.webp",                 href: "/tours/machupicchu/cusco-machu-picchu-humantay-montana-colores-5d-4n" },
+        { name: "Cusco, Machu Picchu y Montaña de Colores",               duration: "6D / 5N", img: "/images/Montaña_de_7_colores/DSC03001.webp",      href: "/tours/machupicchu/cusco-machu-picchu-montana-colores-6d-5n" },
+        { name: "Cusco, Machu Picchu, Maras Moray y Montaña de Colores",  duration: "7D / 6N", img: "/images/Maras/F2.webp",                           href: "/tours/machupicchu/cusco-machu-picchu-maras-moray-montana-colores-7d-6n" },
+      ],
+    },
+  },
+  {
+    label: 'PERÚ BEYOND',
+    navKey: 'nav.peru_beyond',
+    href: '/nosotros',
+    type: 'mega-brand',
+    details: {
+      links: [
+        { n: "Sobre Nosotros", h: "/sobre-nosotros", icon: "bi-people-fill",      i18n: "brand.about"   },
+        { n: "Nuestro Equipo", h: "/equipo",          icon: "bi-person-badge-fill", i18n: "brand.team"    },
+        { n: "Blog de Viajes", h: "/blog",             icon: "bi-journal-richtext",  i18n: "brand.blog"    },
+        { n: "Galería",        h: "/galeria",          icon: "bi-images",            i18n: "brand.gallery" },
+        { n: "Contacto",       h: "/contacto",         icon: "bi-envelope-fill",     i18n: "brand.contact" },
+      ],
+      contact: {
+        phone: "+51 943 491 959",
+        email: "info@perubeyond.com",
+        whatsapp: "51943491959",
+      },
+      image: "/images/Machupicchu/IMG_7726.webp",
+      tagline: "Explorando el Perú auténtico desde Cusco.",
+    },
+  },
+];
+---
+
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between py-3 relative">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center flex-shrink-0">
+      <img id="header-logo"
+           src="https://www.perubeyond.com/wp-content/uploads/2025/07/logo-perubeyond-1.png"
+           alt="Peru Beyond"
+           width="140"
+           class="transition-all duration-300" />
+    </a>
+
+    <!-- Nav Desktop -->
+    <nav class="hidden lg:flex items-center h-full">
+      {menu.map(m => (
+        <div class="group h-full flex items-center relative">
+          <a href={m.href}
+             class="header-link font-bold text-[13px] tracking-wider px-5 py-2 transition-all duration-300 text-white hover:text-gold flex items-center gap-1.5 rounded-lg hover:bg-white/10">
+            <span data-i18n={m.navKey}>{m.label}</span>
+            <i class="bi bi-chevron-down text-[9px] transition-transform duration-300 group-hover:rotate-180 opacity-60"></i>
+          </a>
+
+          <div class={`mega-dropdown pt-1
+            opacity-0 invisible pointer-events-none
+            group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+            transition-all duration-300 ease-out
+            translate-y-2 group-hover:translate-y-0
+            ${m.type === 'mega-peru'
+              ? 'fixed top-[50px] left-1/2 -translate-x-1/2 w-[980px]'
+              : 'absolute top-[100%] left-1/2 -translate-x-1/2'}`}>
+
+            <!-- ══════════════════════════════
+                TOURS PERÚ
+            ══════════════════════════════ -->
+            {m.type === 'mega-peru' && (
+              <div class="w-full bg-white rounded-[28px] shadow-2xl border border-gray-100 overflow-hidden">
+                <div class="grid grid-cols-12 gap-0">
+
+                  <!-- IZQUIERDA -->
+                  <div class="col-span-5 bg-navy p-8 flex flex-col">
+                    <div>
+                      <span class="text-gold text-xs font-bold uppercase tracking-widest mb-3 block" data-i18n="mega.peru.badge">
+                        Paquetes Perú
+                      </span>
+
+                      <h3 class="text-3xl font-extrabold text-white mb-4 leading-tight" data-i18n="mega.peru.title">
+                        {m.details.title}
+                      </h3>
+
+                      <div class="w-9 h-0.5 bg-gold mb-6"></div>
+
+                      <p class="text-white/70 text-[15px] leading-relaxed mb-6" data-i18n="mega.peru.desc">
+                        {m.details.desc}
+                      </p>
+
+                      <ul class="space-y-2 mt-4">
+                        {m.details.links.map(link => {
+                          const text = link.n || "";
+                          const match = text.match(/(.+?)(\d+\s*días?[\s\/]*\d+\s*noches?.*)$/i);
+                          const name = match ? match[1].trim().replace(/[-–]\s*$/, "") : text;
+                          const duration = match ? match[2].trim() : "";
+
+                          return (
+                            <li>
+                              <a
+                                href={link.h || "#"}
+                                class="group/link block transition-all duration-300"
+                              >
+                                <div class="flex justify-between items-start gap-4 py-2 px-3 rounded-xl
+                                            hover:bg-white/10 hover:pl-5 transition-all duration-300 relative overflow-hidden">
+                                  <span class="absolute left-0 top-0 h-full w-[3px] bg-gold
+                                              scale-y-0 group-hover/link:scale-y-100
+                                              origin-bottom transition-transform duration-300"></span>
+                                  <span class="text-[14.5px] leading-snug font-medium text-white/90 flex-1
+                                              group-hover/link:text-white transition-colors">
+                                    {name}
+                                  </span>
+                                  {duration && (
+                                    <span class="inline-flex items-center gap-2 text-gold text-sm font-semibold whitespace-nowrap flex-shrink-0
+                                                group-hover/link:translate-x-1 transition-transform duration-300">
+                                      <i class="bi bi-calendar3"></i>
+                                      {duration}
+                                    </span>
+                                  )}
+                                </div>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+
+                    <!-- CTA -->
+                    <a
+                      href="/tours"
+                      class="mt-auto inline-flex items-center gap-2 text-gold text-sm font-bold pt-8 hover:gap-4 transition-all group"
+                    >
+                      <span data-i18n="mega.peru.cta">Ver todos los paquetes</span>
+                      <i class="bi bi-arrow-right transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                  </div>
+
+                  <!-- DERECHA -->
+                  <div class="col-span-7 p-10 bg-white flex flex-col">
+                    <p class="text-gray-400 text-xs uppercase tracking-widest font-semibold mb-6" data-i18n="mega.peru.featured">
+                      Destinos destacados
+                    </p>
+
+                    <div class="grid grid-cols-4 gap-5 flex-1">
+                      {m.details.images.map((img, index) => (
+                        <div
+                          class="relative h-full min-h-[420px] rounded-[20px] overflow-hidden
+                                group/card cursor-pointer shadow-lg"
+                        >
+                          <img
+                            src={img.src}
+                            class="absolute inset-0 w-full h-full object-cover
+                                  transition-transform duration-700 group-hover/card:scale-110"
+                            alt={img.label}
+                            loading="lazy"
+                          />
+                          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                          <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <span class="text-white font-bold text-sm tracking-wider uppercase block">
+                              {img.label}
+                            </span>
+                            <div class="w-6 h-px bg-gold mt-2
+                                        transform origin-left scale-x-0
+                                        group-hover/card:scale-x-100
+                                        transition-all duration-500"></div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            )}
+
+            <!-- ══════════════════════════════
+                 TOUR CUSCO
+            ══════════════════════════════ -->
+            {m.type === 'mega-cusco' && (
+              <div class="w-[860px] bg-white rounded-[28px] shadow-2xl overflow-hidden border border-gray-100">
+
+                <div class="px-8 pt-7 pb-5 flex items-end justify-between border-b border-gray-100">
+                  <div>
+                    <span class="text-gold text-[10px] font-bold uppercase tracking-widest block mb-1" data-i18n="mega.cusco.badge">
+                      Destinos
+                    </span>
+                    <h3 class="text-navy text-xl font-extrabold leading-tight" data-i18n="mega.cusco.title">
+                      Explora Cusco
+                    </h3>
+                  </div>
+                  <a href="/tours/cusco"
+                    class="text-gray-400 hover:text-gold text-xs font-semibold flex items-center gap-1.5 transition-colors">
+                    <span data-i18n="mega.cusco.see_all">Ver todos</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+
+                <div class="grid grid-cols-3 gap-0">
+                  {m.details.categories.map((cat, i) => (
+                    <div class={`relative h-[360px] overflow-hidden group/card cursor-pointer
+                                ${i < 2 ? 'border-r border-white/20' : ''}`}>
+
+                      <img src={cat.img}
+                          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
+                          alt={cat.title}
+                          loading="lazy" />
+
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10"></div>
+                      <div class="absolute inset-0 bg-gold/0 group-hover/card:bg-gold/10 transition-colors duration-500"></div>
+
+                      <div class="absolute inset-0 flex flex-col justify-end p-6">
+                        <h3 class="text-white text-xl font-extrabold mb-2 leading-snug drop-shadow-lg">
+                          {cat.title}
+                        </h3>
+                        <div class="w-6 h-0.5 bg-gold mb-4 group-hover/card:w-12 transition-all duration-500"></div>
+
+                        <ul class="space-y-2.5 opacity-0 translate-y-4
+                                  group-hover/card:opacity-100 group-hover/card:translate-y-0
+                                  transition-all duration-300">
+                          {cat.tours.map(t => (
+                            <li>
+                              <a href={t.href}
+                                class="text-white/85 hover:text-gold text-[14px] font-medium
+                                        flex items-center gap-2 transition-colors group/link">
+                                <i class="bi bi-chevron-right text-gold text-[10px]
+                                          group-hover/link:translate-x-0.5 transition-transform"></i>
+                                {t.name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            )}
+
+            <!-- ══════════════════════════════
+                 MACHUPICCHU
+            ══════════════════════════════ -->
+            {m.type === 'mega-machu' && (
+              <div class="w-[820px] bg-white rounded-[28px] shadow-2xl border border-gray-100 overflow-hidden">
+                <div class="grid grid-cols-5 gap-0">
+                  <div class="col-span-2 relative h-full min-h-[340px] group/feat cursor-pointer overflow-hidden">
+                    <img src={m.details.featured.img}
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/feat:scale-105"
+                         alt="Machu Picchu"
+                         loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-7">
+                      <span class="text-gold text-[10px] font-bold uppercase tracking-widest mb-2" data-i18n="mega.machu.badge">Maravilla del Mundo</span>
+                      <h3 class="text-white text-xl font-extrabold mb-2 leading-tight">{m.details.featured.title}</h3>
+                      <p class="text-white/70 text-xs leading-relaxed mb-4">{m.details.featured.desc}</p>
+                      <a href={m.details.featured.href}
+                         class="inline-flex items-center gap-2 text-gold text-xs font-bold hover:gap-4 transition-all">
+                        <span data-i18n="mega.machu.discover">Descubrir</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-span-3 p-7 flex flex-col">
+                    <p class="text-gray-400 text-xs uppercase tracking-widest font-semibold mb-5" data-i18n="mega.machu.packages">
+                      Paquetes disponibles
+                    </p>
+
+                    <div class="overflow-y-auto max-h-[340px] space-y-2 pr-2
+                                scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent
+                                hover:scrollbar-thumb-gray-300">
+                      {m.details.tours.map(tour => (
+                        <a href={tour.href}
+                          class="flex items-center gap-4 p-3 rounded-2xl hover:bg-gray-50 transition-colors group/tour border border-transparent hover:border-gray-100">
+                          <div class="relative w-14 h-14 rounded-xl overflow-hidden flex-shrink-0">
+                            <img src={tour.img}
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover/tour:scale-110"
+                                alt={tour.name}
+                                loading="lazy" />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p class="text-navy font-bold text-sm group-hover/tour:text-gold transition-colors truncate">
+                              {tour.name}
+                            </p>
+                            <p class="text-gray-400 text-xs mt-0.5 flex items-center gap-1">
+                              <i class="bi bi-clock text-gold"></i> {tour.duration}
+                            </p>
+                          </div>
+                          <i class="bi bi-arrow-right text-gray-300 group-hover/tour:text-gold group-hover/tour:translate-x-1 transition-all flex-shrink-0"></i>
+                        </a>
+                      ))}
+                    </div>
+
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                      <a href="/tours/machu-picchu"
+                        class="flex items-center justify-between text-sm text-gray-500 hover:text-gold transition-colors font-medium">
+                        <span data-i18n="mega.machu.see_all">Ver todos los tours a Machu Picchu</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <!-- ══════════════════════════════
+                 PERÚ BEYOND
+            ══════════════════════════════ -->
+            {m.type === 'mega-brand' && (
+              <div class="w-[580px] bg-white rounded-[28px] shadow-2xl border border-gray-100 overflow-hidden">
+                <div class="grid grid-cols-2 gap-0">
+                  <div class="p-7">
+                    <span class="text-gold text-[10px] font-bold uppercase tracking-widest mb-4 block" data-i18n="mega.brand.badge">La empresa</span>
+                    <ul class="space-y-1 mb-8">
+                      {m.details.links.map(link => (
+                        <li>
+                          <a href={link.h}
+                             class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 text-navy hover:text-gold transition-all group/link text-sm font-semibold">
+                            <span class="w-8 h-8 rounded-lg bg-gray-100 group-hover/link:bg-gold/10 flex items-center justify-center transition-colors">
+                              <i class={`bi ${link.icon} text-gray-400 group-hover/link:text-gold text-xs`}></i>
+                            </span>
+                            <span data-i18n={link.i18n}>{link.n}</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                    <div class="border-t border-gray-100 pt-5 space-y-2">
+                      <a href={`tel:${m.details.contact.phone}`}
+                         class="flex items-center gap-2 text-xs text-gray-500 hover:text-gold transition-colors">
+                        <i class="bi bi-telephone-fill text-gold"></i>
+                        {m.details.contact.phone}
+                      </a>
+                      <a href={`mailto:${m.details.contact.email}`}
+                         class="flex items-center gap-2 text-xs text-gray-500 hover:text-gold transition-colors">
+                        <i class="bi bi-envelope-fill text-gold"></i>
+                        {m.details.contact.email}
+                      </a>
+                      <a href={`https://wa.me/${m.details.contact.whatsapp}`} target="_blank"
+                         class="flex items-center gap-2 text-xs text-gray-500 hover:text-green-500 transition-colors">
+                        <i class="bi bi-whatsapp text-green-500"></i>
+                        <span data-i18n="cta.whatsapp">WhatsApp directo</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="relative overflow-hidden">
+                    <img src={m.details.image}
+                         class="absolute inset-0 w-full h-full object-cover"
+                         alt="Peru Beyond Team"
+                         loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                      <p class="text-gold text-[10px] font-bold uppercase tracking-widest mb-2">Peru Beyond</p>
+                      <p class="text-white text-sm font-medium leading-snug">{m.details.tagline}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+          </div>
+        </div>
+      ))}
+    </nav>
+
+    <!-- CTA + idioma + móvil -->
+    <div class="flex items-center gap-3">
+      <a href="tel:+51943491959"
+         class="header-phone hidden md:flex items-center gap-2 font-bold text-white transition-all duration-300">
+        <span class="bg-gold w-9 h-9 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
+          <i class="bi bi-telephone-fill text-navy text-sm"></i>
+        </span>
+        <span class="hidden lg:inline text-sm">+51 943 491 959</span>
+      </a>
+      <a href="/contacto"
+         class="hidden lg:inline-flex items-center gap-2 bg-gold hover:bg-yellow-400 text-navy font-bold text-xs px-5 py-2.5 rounded-full transition-all shadow-lg shadow-gold/20 hover:shadow-gold/40 hover:-translate-y-0.5 uppercase tracking-wider">
+        <span data-i18n="cta.reserve">Reservar</span>
+      </a>
+
+      <!-- Selector de idioma -->
+      <LanguageSwitcher />
+
+      <button id="mobile-menu-btn"
+              class="header-burger lg:hidden text-2xl text-white transition-colors duration-300 focus:outline-none p-2">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════
+     MENÚ MÓVIL
+══════════════════════════════ -->
+<div id="mobile-menu"
+     class="fixed inset-0 bg-navy z-[60] flex flex-col transition-all duration-500 translate-x-full lg:hidden overflow-y-auto">
+
+  <div class="flex justify-between items-center px-8 py-6 border-b border-white/10">
+    <img src="https://www.perubeyond.com/wp-content/uploads/2025/07/logo-perubeyond-1.png"
+         alt="Logo" width="120" class="brightness-0 invert" />
+    <button id="close-menu-btn" class="text-white text-3xl p-1">
+      <i class="bi bi-x"></i>
+    </button>
+  </div>
+
+  <nav class="flex-1 px-6 py-6 space-y-1">
+    {menu.map((m, i) => (
+      <div class="mobile-item border-b border-white/10">
+        <button
+          class="mobile-trigger w-full flex items-center justify-between py-4 text-white text-base font-black uppercase tracking-tight hover:text-gold transition-colors"
+          data-index={String(i)}>
+          <span data-i18n={m.navKey}>{m.label}</span>
+          <i class="bi bi-chevron-down text-xs text-white/40 transition-transform duration-300"></i>
+        </button>
+        <div class="mobile-submenu overflow-hidden max-h-0 transition-all duration-400">
+          <div class="pb-4 pl-2 space-y-2">
+            {m.type === 'mega-peru' && m.details.links.map(l => (
+              <a href={l.h || "#"} class="block text-white/60 hover:text-gold text-sm py-1.5 transition-colors">{l.n}</a>
+            ))}
+            {m.type === 'mega-machu' && m.details.tours.map(t => (
+              <a href={t.href} class="flex items-center justify-between text-white/60 hover:text-gold text-sm py-1.5 transition-colors">
+                {t.name} <span class="text-xs text-white/30">{t.duration}</span>
+              </a>
+            ))}
+            {m.type === 'mega-cusco' && m.details.categories.map(cat => (
+              <div class="mb-3">
+                <p class="text-gold text-[10px] uppercase tracking-widest font-bold mb-1">{cat.title}</p>
+                {cat.tours.map(t => (
+                  <a href={t.href} class="block text-white/60 hover:text-gold text-sm py-1 pl-2 transition-colors">{t.name}</a>
+                ))}
+              </div>
+            ))}
+            {m.type === 'mega-brand' && m.details.links.map(l => (
+              <a href={l.h} class="flex items-center gap-2 text-white/60 hover:text-gold text-sm py-1.5 transition-colors">
+                <i class={`bi ${l.icon} text-xs`}></i>
+                <span data-i18n={l.i18n}>{l.n}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))}
+  </nav>
+
+  <div class="px-8 py-6 border-t border-white/10 space-y-3">
+    <p class="text-gold font-bold uppercase text-[10px] tracking-widest" data-i18n="cta.contact_us">Contáctanos</p>
+    <a href="tel:+51943491959" class="flex items-center gap-2 text-white font-bold text-lg">
+      <i class="bi bi-telephone-fill text-gold text-sm"></i> +51 943 491 959
+    </a>
+    <a href="https://wa.me/51943491959" target="_blank"
+       class="flex items-center gap-2 bg-green-500 text-white font-bold px-5 py-3 rounded-xl text-sm justify-center">
+      <i class="bi bi-whatsapp"></i>
+      <span data-i18n="cta.whatsapp">WhatsApp directo</span>
+    </a>
+  </div>
+</div>
+
+<script is:inline>
+  const header     = document.getElementById('main-header');
+  const links      = document.querySelectorAll('.header-link');
+  const phone      = document.querySelector('.header-phone');
+  const burger     = document.querySelector('.header-burger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const openBtn    = document.getElementById('mobile-menu-btn');
+  const closeBtn   = document.getElementById('close-menu-btn');
+
+  function onScroll() {
+    const scrolled = window.scrollY > 60;
+    header.classList.toggle('bg-white',       scrolled);
+    header.classList.toggle('shadow-md',      scrolled);
+    header.classList.toggle('bg-transparent', !scrolled);
+    links.forEach(l => {
+      l.classList.toggle('text-white', !scrolled);
+      l.classList.toggle('text-navy',   scrolled);
+    });
+    if (phone)  { phone.classList.toggle('text-white',  !scrolled); phone.classList.toggle('text-navy',  scrolled); }
+    if (burger) { burger.classList.toggle('text-white', !scrolled); burger.classList.toggle('text-navy', scrolled); }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  openBtn?.addEventListener('click', () => mobileMenu?.classList.remove('translate-x-full'));
+  closeBtn?.addEventListener('click', () => mobileMenu?.classList.add('translate-x-full'));
+
+  document.querySelectorAll('.mobile-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item    = btn.closest('.mobile-item');
+      const submenu = item?.querySelector('.mobile-submenu');
+      const icon    = btn.querySelector('i');
+      const isOpen  = submenu?.style.maxHeight && submenu.style.maxHeight !== '0px';
+
+      document.querySelectorAll('.mobile-submenu').forEach(s => s.style.maxHeight = '0px');
+      document.querySelectorAll('.mobile-trigger i').forEach(i => i.style.transform = '');
+
+      if (!isOpen && submenu) {
+        submenu.style.maxHeight = submenu.scrollHeight + 'px';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+</script>

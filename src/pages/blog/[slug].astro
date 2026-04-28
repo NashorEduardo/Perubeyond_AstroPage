@@ -1,0 +1,1019 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  const blogsData = {
+  'sacsayhuaman': {
+    title: 'Sacsayhuamán, donde las piedras cuentan historias',
+    date: '27 de Agosto, 2025',
+    readTime: '4 Min de lectura',
+    views: '320',
+    author: 'Perú Beyond',
+    category: 'Historia & Cultura',
+    heroImage: '/images/Cuzco/cusco.webp',
+    heroPosition: 'center 40%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'Hay lugares que no se explican, se sienten. Así fue mi experiencia en Sacsayhuamán, una de las fortalezas más impresionantes del Cusco y, sin duda, un sitio que te deja pensando en el poder, la precisión y el misterio de los Incas.',
+          'Desde que llegas, las enormes murallas te hacen sentir pequeño. No solo por su tamaño, sino por la energía que emana cada piedra, como si todavía guardaran secretos del antiguo Tahuantinsuyo.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Llegando a Sacsayhuamán',
+        paragraphs: [
+          'Salí temprano desde el centro histórico de Cusco, caminando lentamente por calles empedradas que parecen no tener fin. En unos 30 o 40 minutos, llegué a la entrada del complejo arqueológico, rodeado de colinas verdes y un aire fresco que solo se siente en la altura de los Andes.',
+          'Si prefieres, también puedes ir en taxi (son solo 10 minutos desde la Plaza de Armas), pero caminar hasta allí tiene algo especial: ves cómo la ciudad se va quedando atrás mientras te acercas a la historia viva del Cusco.',
+          'Al llegar, compré mi boleto turístico y me recibió mi guía local, Wilmer, con una sonrisa y un dato curioso: "Sacsayhuamán no fue solo una fortaleza, también fue un centro ceremonial dedicado al Sol". Ahí entendí que estaba por entrar a un lugar sagrado, no solo a una ruina.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Las piedras imposibles',
+        paragraphs: [
+          'Lo primero que impresiona son las piedras: enormes bloques de más de 100 toneladas, tallados con una precisión que ni una hoja de papel puede pasar entre ellos. Nadie sabe exactamente cómo las movieron desde tan lejos ni cómo las encajaron sin herramientas modernas.',
+          'Caminé despacio, tocando las paredes, imaginando el trabajo y la fe que debieron tener los constructores incas. El guía me mostró figuras ocultas entre las piedras: la serpiente, el puma y el cóndor.',
+          'En ese momento entendí que Sacsayhuamán no solo fue construido con fuerza, sino con espiritualidad.',
+        ],
+        image: null,
+        highlight: '"Los tres símbolos del mundo andino: la serpiente, el puma y el cóndor. Cada piedra tiene una historia que contar."',
+      },
+      {
+        heading: 'Una vista que corta la respiración',
+        paragraphs: [
+          'Desde lo alto, la vista del Cusco es simplemente espectacular. Puedes ver toda la ciudad extendiéndose en forma de puma —sí, así fue diseñada originalmente— y entender por qué los incas eligieron este lugar.',
+          'El aire es frío, pero se siente puro, y el sonido del viento parece susurrarte historias antiguas. Me senté unos minutos en silencio, solo mirando, respirando. Fue uno de esos momentos donde el viaje deja de ser turismo y se convierte en conexión.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Las fiestas y la energía viva',
+        paragraphs: [
+          'Si tienes la suerte de visitar Cusco en junio, no te pierdas el Inti Raymi, la Fiesta del Sol. Cada 24 de junio, Sacsayhuamán se llena de música, danzas y color, recreando la ceremonia más importante del Imperio Inca.',
+          'Verlo en persona es como viajar en el tiempo: cientos de actores vestidos como sacerdotes, vírgenes del sol y guerreros desfilando entre los muros milenarios.',
+        ],
+        image: null,
+        highlight: null,
+      },
+    ],
+    tips: [
+      'Ve temprano en la mañana o al atardecer; la luz es perfecta para fotos.',
+      'Lleva una botella de agua y algo de abrigo, el clima cambia rápido.',
+      'Camina con calma, disfruta los detalles y la vista panorámica.',
+      'Contrata un guía local: cada piedra tiene una historia diferente.',
+      'No corras. Cusco está alto, y la mejor forma de disfrutarlo es respirando lento.',
+    ],
+    conclusion: 'Al bajar de Sacsayhuamán, me quedé mirando hacia la ciudad. Pensé en cómo los incas lograron tanto sin tecnología moderna, y en cómo todo —el sol, las montañas, el viento— parece alinearse aquí. Sacsayhuamán no es solo una construcción, es un testimonio de sabiduría, fe y respeto por la naturaleza. Y eso, más que cualquier foto, es lo que te llevas contigo.',
+  },
+
+  'machu-picchu': {
+    title: 'Machu Picchu: La Maravilla del Mundo Inca',
+    date: '10 de Octubre, 2025',
+    readTime: '5 Min de lectura',
+    views: '301',
+    author: 'Frank Vasco',
+    category: 'Destinos Imperdibles',
+    heroImage: '/images/Machupicchu/IMG_7709.webp',
+    heroPosition: 'center 50%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'Machu Picchu no solo es una maravilla del mundo moderno, es también una experiencia espiritual, histórica y visual que ningún viajero olvida. Pero para vivirla al máximo, hay cosas que debes saber antes de comprar tu ticket o reservar tu tour.',
+          'En esta guía real y sin adornos, te cuento todo lo que necesitas saber para visitar Machu Picchu de forma inteligente, segura y memorable.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: '¿Qué es Machu Picchu realmente?',
+        paragraphs: [
+          'Machu Picchu es una ciudadela inca del siglo XV ubicada en la cima de una montaña a 2430 msnm, en el valle del río Urubamba (Cusco, Perú). A pesar de su fama mundial, todavía guarda misterios sobre su propósito original: ¿fue una residencia real?, ¿un centro espiritual?, ¿una universidad andina? Tal vez fue todo a la vez.',
+        ],
+        image: '/images/Machupicchu/IMG_7715.webp',
+        imageCaption: 'Machu Picchu fue más que una visita para mí, fue una lección de respeto, historia y conexión con la tierra. — Frank Vasco',
+        highlight: null,
+      },
+      {
+        heading: '¿Cuál es la mejor hora y mes para visitar?',
+        paragraphs: [
+          'Mejor hora: entre las 6 a.m. y las 8 a.m., o después de la 1 p.m. (menos gente, mejor luz).',
+          'Temporada seca (mayo a septiembre): menos lluvia, más sol y vistas despejadas.',
+          'Temporada verde (noviembre a marzo): paisajes más exuberantes, pero con lluvias frecuentes.',
+          'Evita fines de semana largos o festivos locales si prefieres menos turistas.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: '¿Cómo llegar a Machu Picchu?',
+        paragraphs: [
+          'Tour clásico en tren: Salida desde Ollantaytambo o Cusco hacia Aguas Calientes (pueblo base). Ideal para quienes quieren comodidad y poco esfuerzo físico. Recomendado para familias, adultos mayores o viajes cortos.',
+          'Camino Inca (4 días / 3 noches): Ruta de trekking icónica, con ingreso por la Puerta del Sol (Inti Punku). Necesitas reservar con meses de anticipación. Para aventureros en forma que buscan una experiencia profunda.',
+          'Alternativa Hidroeléctrica + caminata: Más económica, pero más exigente. No recomendada si tienes poco tiempo o vas con niños.',
+        ],
+        image: null,
+        highlight: '"Machu Picchu fue más que una visita para mí, fue una lección de respeto, historia y conexión con la tierra."',
+      },
+      {
+        heading: '¿Qué tipo de entradas hay y cuál elegir?',
+        paragraphs: [
+          'Desde 2024, el ingreso se organiza por circuitos numerados.',
+          'Circuito 1 y 2 (completo): vista panorámica + ciudadela. Recomendado para primera vez.',
+          'Circuito 4 + Huayna Picchu: ideal para fotos desde la cima del cerro. Reserva con 2-3 meses de anticipación.',
+          'Circuito 3 + Montaña Machu Picchu: ruta más larga y exigente, pero con vistas increíbles.',
+        ],
+        image: null,
+        highlight: null,
+      },
+    ],
+    tips: [
+      'Compra tus entradas con meses de anticipación, especialmente para Huayna Picchu.',
+      'Lleva ropa impermeable; el clima puede cambiar de forma repentina.',
+      'Sube antes de las 8 a.m. para evitar las multitudes y disfrutar la neblina matutina.',
+      'Contrata un guía certificado para entender la historia de cada sector.',
+      'No toques los muros ni las estructuras; ayuda a preservar este patrimonio.',
+    ],
+    conclusion: 'Machu Picchu fue más que una visita para mí, fue una lección de respeto, historia y conexión con la tierra. Espero que esta guía te sirva para vivirlo con los ojos bien abiertos y el corazón aún más.',
+  },
+
+  'valle-sagrado': {
+    title: 'Descubre el Valle Sagrado: Ruinas y Espíritu Inca',
+    date: '11 de Septiembre, 2025',
+    readTime: '4 Min de lectura',
+    views: '294',
+    author: 'Alexander Villares Calvo',
+    category: 'Experiencias',
+    heroImage: '/images/ValleSagrado/ollantaytambo.webp',
+    heroPosition: 'center 60%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          '¿Qué tiene el Valle Sagrado que atrapa a todos los que lo visitan? No se trata solo de sus ruinas impresionantes ni de su cercanía a Machu Picchu. Este lugar tiene algo más profundo, algo que se siente en el aire, en las montañas, en las sonrisas de su gente.',
+          'Con este artículo, quiero compartirte mi experiencia en uno de los destinos más impactantes del Perú, el Valle Sagrado de los Incas. Desde pueblos tradicionales hasta sitios arqueológicos impresionantes, este viaje está diseñado para quienes buscan algo más que turismo: una experiencia transformadora.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'El viaje comienza en Cusco…',
+        paragraphs: [
+          'Desde que sales de Cusco rumbo a Pisac, sientes que estás entrando en otro ritmo. Los colores de los textiles, los aromas del mercado, los saludos en quechua… todo parece sacado de otro tiempo, pero sigue vivo.',
+        ],
+        image: '/images/ValleSagrado/ollantaytambo.webp',
+        imageCaption: 'Las ruinas de Ollantaytambo, una de las joyas del Valle Sagrado con su arquitectura inca impecable.',
+        highlight: null,
+      },
+      {
+        heading: 'Las ruinas te hablan, si sabes escucharlas',
+        paragraphs: [
+          'En Ollantaytambo, caminé por calles construidas hace siglos, subí por escalinatas incas y sentí la historia en cada piedra. Nuestro guía, Wilber, no solo contaba fechas y batallas: nos hablaba del sentido espiritual de la arquitectura inca, de cómo el sol, el agua y las montañas eran parte del diseño.',
+        ],
+        image: null,
+        highlight: '"El viaje dejó de ser turístico y se volvió personal. Las ruinas no son piedras muertas; son historias vivas."',
+      },
+      {
+        heading: 'Una ceremonia que no olvidaré',
+        paragraphs: [
+          'En Urubamba, justo antes del almuerzo, participamos en una pequeña ofrenda a la Pachamama. Fue algo sencillo, pero poderoso. Un maestro andino explicó cada hoja de coca, cada grano, cada gesto. No era un show, era un momento de respeto.',
+          'Sentí que el viaje dejó de ser turístico y se volvió personal.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Entre comunidades y tejidos: Chinchero',
+        paragraphs: [
+          'En Chinchero, una comunidad de mujeres tejedoras nos recibió con una sonrisa y lana teñida de colores imposibles. Nos explicaron cómo usan plantas y minerales para lograrlo, y luego nos invitaron a probar.',
+          'No fui muy hábil, pero me reí mucho y me llevé más que un souvenir: me llevé una historia que contar.',
+        ],
+        image: null,
+        highlight: null,
+      },
+    ],
+    tips: [
+      'Lleva ropa en capas: frío en la mañana, sol al mediodía.',
+      'Compra directo a las comunidades; ellos valoran más tu gesto que tu dinero.',
+      'Escucha a tu guía, pero también escucha el entorno.',
+      'No tengas miedo de cerrar los ojos un momento… y solo sentir.',
+      'Combina el Valle Sagrado con Machu Picchu para una experiencia completa.',
+    ],
+    conclusion: 'Cusco. Desde que sales de Cusco rumbo al Valle Sagrado, el alma se queda allá. Las ruinas te hablan, los tejidos te abrazan y las ceremonias te conectan con algo más antiguo que cualquier texto de historia. El Valle Sagrado no es un destino, es una transformación.',
+  },
+
+  'laguna-humantay': {
+    title: 'Laguna Humantay: el tesoro turquesa del Cusco que no te puedes perder',
+    date: '16 de Abril, 2026',
+    readTime: '3 Min de lectura',
+    views: '150',
+    author: 'Perú Beyond',
+    category: 'Naturaleza & Aventura',
+    heroImage: '/images/Laguna_Humantay/DSC04361.webp',
+    heroPosition: 'center 50%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'En medio de las montañas sagradas del Cusco, entre picos nevados y nubes que parecen tocar el cielo, se esconde una joya natural que deja sin aliento: la Laguna Humantay. Sus aguas turquesa reflejan la grandeza de los Andes y la energía del nevado Salkantay, convirtiéndola en uno de los destinos más mágicos del Perú.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: '¿Dónde se encuentra la Laguna Humantay?',
+        paragraphs: [
+          'La Laguna Humantay se ubica en la ruta hacia el Nevado Salkantay, dentro de la cordillera del mismo nombre, a 4,200 metros sobre el nivel del mar. Pertenece al distrito de Mollepata, en la provincia de Anta, a unas 3 horas y media al noroeste de Cusco.',
+          'El nombre "Humantay" proviene del quechua y significa "cabeza sagrada". Es un lugar venerado por las comunidades andinas y símbolo de equilibrio entre el ser humano y la naturaleza.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Cómo llegar desde Cusco',
+        paragraphs: [
+          'Salida entre las 4:00 y 5:00 a.m. en bus turístico hacia Mollepata (aprox. 2 h 30 min). En el pueblo de Mollepata podrás disfrutar de un desayuno tradicional antes de continuar.',
+          'Desde Mollepata hasta Soraypampa toma aproximadamente 1 hora más. Desde allí inicia la caminata hacia la laguna.',
+          'Duración de la caminata: 1 hora y media (ida). Dificultad: media. Hay opción de caballo para quienes prefieran una subida más cómoda.',
+        ],
+        image: null,
+        highlight: '"La laguna brilla en tonos azules y verdes, cambiando con la luz del sol, mientras el Nevado Humantay y el Salkantay la protegen desde lo alto."',
+      },
+      {
+        heading: 'Mejor época para visitar',
+        paragraphs: [
+          'Temporada seca (abril a octubre): ideal para fotos, con cielo azul y laguna de color intenso.',
+          'Temporada de lluvias (noviembre a marzo): el paisaje se vuelve más verde y los ríos crecen; lleva poncho impermeable.',
+          'Hora ideal: llegar entre 9:00 y 11:00 a.m. para disfrutar del reflejo turquesa con la mejor luz natural.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Un espectáculo natural imposible de olvidar',
+        paragraphs: [
+          'La vista desde el mirador es simplemente impresionante. La laguna brilla en tonos azules y verdes, cambiando con la luz del sol, mientras el Nevado Humantay y el Salkantay la protegen desde lo alto.',
+          'Muchos viajeros dejan pequeñas ofrendas con piedras, conocidas como apachetas, en señal de agradecimiento a la Pachamama.',
+        ],
+        image: '/images/Laguna_Humantay/DSC04368.webp',
+        imageCaption: 'Las aguas turquesa de la Laguna Humantay a 4,200 msnm, custodiadas por el Nevado Salkantay.',
+        highlight: null,
+      },
+    ],
+    tips: [
+      'Aclimatízate uno o dos días en Cusco antes de la excursión.',
+      'La caminata es corta, pero la altura se siente. Sube con calma y lleva hojas de coca.',
+      'Evita cargar mucho peso; la subida se hace más fácil.',
+      'Lleva tus residuos contigo: no hay tachos en la cima.',
+      'Respeta el silencio y el entorno: para muchos, este lugar es sagrado.',
+    ],
+    conclusion: 'La Laguna Humantay no es solo un paisaje hermoso; es un encuentro espiritual con los Andes. Sus aguas turquesa, el silencio de las montañas y la energía de la Pachamama te recordarán por qué el Perú es uno de los destinos más extraordinarios del mundo.',
+  },
+
+  'maras-moray-salineras': {
+    title: 'Maras, Moray y las Salineras: tres joyas que revelan la sabiduría del Valle Sagrado',
+    date: '14 de Abril, 2026',
+    readTime: '4 Min de lectura',
+    views: '160',
+    author: 'Perú Beyond',
+    category: 'Cultura & Gastronomía',
+    heroImage: '/images/ValleSagrado/moray.webp',
+    heroPosition: 'center 50%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'Muy cerca de Cusco, existe un triángulo de historia, ingeniería y belleza natural que sorprende a cada visitante: Maras, Moray y las Salineras. Estos tres lugares, combinados en una sola excursión, representan la mezcla perfecta entre paisaje, cultura y ciencia ancestral inca.',
+          'Prepárate para conocer uno de los recorridos más mágicos del Valle Sagrado de los Incas, donde cada parada tiene su propia historia y encanto.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Moray: los laboratorios agrícolas de los Incas',
+        paragraphs: [
+          'A solo 7 km de Maras se encuentra Moray, un complejo arqueológico que parece un anfiteatro, pero en realidad fue un laboratorio agrícola inca. Sus impresionantes terrazas circulares fueron utilizadas para experimentar con microclimas, simulando diferentes altitudes y temperaturas.',
+          'Los Incas cultivaban aquí más de 250 especies de papa y maíz, adaptándolas a distintas condiciones. Cada nivel puede tener una diferencia de temperatura de hasta 15 °C entre la parte superior e inferior.',
+        ],
+        image: '/images/ValleSagrado/moray-2.webp',
+        imageCaption: 'Las terrazas circulares de Moray, uno de los experimentos agrícolas más ingeniosos de la civilización Inca.',
+        highlight: null,
+      },
+      {
+        heading: 'Maras: un pueblo con sabor a historia',
+        paragraphs: [
+          'El pintoresco pueblo de Maras conserva su encanto colonial, con portadas de piedra tallada y calles tranquilas que miran hacia los nevados del Valle Sagrado. Durante la época virreinal fue un importante centro comercial de sal y productos agrícolas.',
+          'Aprovecha para visitar su iglesia colonial, probar el choclo con queso local o comprar una bolsita de sal rosada artesanal. Maras es también el punto de partida hacia las Salineras.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Salineras de Maras: un río convertido en sal',
+        paragraphs: [
+          'A solo 4 km del pueblo, las Salineras de Maras conforman un espectáculo natural y humano: más de 3,000 pozas de sal en terrazas que brillan bajo el sol. Cada poza pertenece a una familia local y se llena con agua salada que proviene de una fuente subterránea natural.',
+          'El mejor momento para visitar es entre mayo y octubre, cuando las pozas están más blancas y secas, creando un contraste impresionante con las montañas rojizas del entorno.',
+          'Aquí podrás observar cómo los pobladores mantienen viva una tradición ancestral de recolección de sal que se remonta a tiempos preincaicos.',
+        ],
+        image: null,
+        highlight: '"Más de 3,000 pozas de sal que brillan bajo el sol andino. Una tradición viva que se remonta a tiempos preincaicos."',
+      },
+    ],
+    tips: [
+      'Lleva ropa ligera y abrigo para la tarde; el clima cambia rápido.',
+      'En Moray, usa un lente gran angular o modo panorámico para las mejores fotos.',
+      'En Salineras, las mejores fotos son al mediodía, cuando el sol ilumina las pozas blancas.',
+      'Compra sal artesanal directamente a las familias locales.',
+      'Combina el tour con una degustación de cervezas artesanales del Valle Sagrado.',
+    ],
+    conclusion: 'Maras, Moray y las Salineras no son solo paradas turísticas; son ventanas al ingenio y la espiritualidad de los Incas. Cada lugar revela una dimensión distinta de esta civilización: la ciencia, la tradición y la armonía con la naturaleza. Un recorrido que se queda grabado en la memoria.',
+  },
+
+  'pikillaqta': {
+    title: 'Pikillaqta, el sitio que revela el Cusco antes de los Incas',
+    date: '14 de Abril, 2026',
+    readTime: '4 Min de lectura',
+    views: '122',
+    author: 'Perú Beyond',
+    category: 'Historia & Arqueología',
+    heroImage: '/images/Cuzco/FT2.webp',
+    heroPosition: 'center 60%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'Cuando pensamos en Cusco, todos imaginamos templos incas y muros de piedra perfecta. Pero muy pocos saben que, antes del Imperio de los Incas, ya existieron civilizaciones que dominaron los Andes. Una de ellas fue la cultura Wari, y su legado más importante en el sur del Perú se encuentra en un lugar fascinante: Pikillaqta.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Camino a Pikillaqta',
+        paragraphs: [
+          'Salí de Cusco temprano, con un mate de coca en la mano y la cámara lista. El viaje hacia Pikillaqta toma alrededor de 45 minutos, rumbo al sureste, pasando por campos dorados y montañas que parecen pintadas. La ruta es tranquila y hermosa, ideal para disfrutar sin prisa.',
+          'Llegué cuando el sol empezaba a iluminar las colinas, y lo primero que pensé fue: "¿Cómo es posible que tan pocos conozcan este lugar?"',
+          'El nombre Pikillaqta significa "ciudad de las pulgas" en quechua —aunque en realidad no tiene nada que ver con insectos—, sino con la forma diminuta de sus recintos vistos desde arriba.',
+        ],
+        image: '/images/ValleSagrado/ollantaytambo-2.webp',
+        imageCaption: 'Ruinas incas del Valle Sagrado, testimonio de la avanzada arquitectura andina precolombina.',
+        highlight: null,
+      },
+      {
+        heading: 'Una ciudad Wari en el corazón del Cusco',
+        paragraphs: [
+          'A diferencia de las construcciones incas, Pikillaqta es anterior al Tahuantinsuyo, y fue levantada entre los siglos VI y IX por los Wari, una cultura que dominó gran parte del sur del Perú mucho antes de que naciera el Imperio Inca.',
+          'El sitio está compuesto por más de 700 recintos, muros perfectamente alineados y calles rectas que demuestran un planeamiento urbano adelantado para su época.',
+          'Los arqueólogos consideran a Pikillaqta una de las ciudades preincas mejor conservadas del Perú, comparable en importancia a las ruinas de Tiahuanaco en Bolivia.',
+        ],
+        image: null,
+        highlight: '"Aquí vivieron administradores, guerreros y sacerdotes. Pikillaqta fue un gran centro político y ceremonial Wari."',
+      },
+      {
+        heading: 'Silencio y conexión',
+        paragraphs: [
+          'Lo que más me sorprendió no fueron las estructuras, sino el silencio. Solo se escucha el viento y algún pájaro lejano. En ese momento entendí por qué a veces los lugares menos conocidos son los más poderosos.',
+          'Caminé hasta un mirador natural y vi cómo el valle se abría frente a mí. Al fondo, el lago Huacarpay reflejaba el cielo como un espejo. Es un paisaje que invita a quedarse quieto, a mirar y respirar.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Qué ver en Pikillaqta',
+        paragraphs: [
+          'Murallas monumentales: algunas de más de 12 metros de altura.',
+          'Plazas y calles rectas: muestran la organización avanzada de la cultura Wari.',
+          'Templos y recintos ceremoniales: donde se realizaban rituales religiosos.',
+          'Lago Huacarpay: un sitio natural al pie del complejo, ideal para fotos o para observar aves andinas.',
+          'Tip: combina tu visita a Pikillaqta con el sitio arqueológico de Tipón, otro tesoro menos visitado que muestra la ingeniería hidráulica inca.',
+        ],
+        image: null,
+        highlight: null,
+      },
+    ],
+    tips: [
+      'Visita temprano, entre las 8:00 y 10:00 a.m., para tener el sitio casi solo para ti.',
+      'Lleva gorra y bloqueador solar: el sol es fuerte y no hay mucha sombra.',
+      'Zapatos cómodos; el terreno es irregular.',
+      'Pide a tu guía que te muestre los canales subterráneos y zonas poco accesibles.',
+      'Combina con Tipón para un día completo de arqueología preinca.',
+    ],
+    conclusion: 'Cuando regresé a Cusco, entendí algo: la historia de los Andes no comenzó con los Incas, y Pikillaqta es la prueba viva de eso. Aquí, cada muro cuenta una historia diferente, y cada piedra guarda siglos de sabiduría que merecen ser escuchados. Visitarlo es viajar en el tiempo, pero también es recordar que, incluso en los lugares olvidados, el pasado sigue respirando.',
+  },
+
+  'vinicunca-7-colores': {
+    title: 'Cerro de 7 Colores (Vinicunca): la joya natural más sorprendente del Cusco',
+    date: '11 de Abril, 2026',
+    readTime: '4 Min de lectura',
+    views: '202',
+    author: 'Perú Beyond',
+    category: 'Naturaleza & Aventura',
+    heroImage: '/images/Montaña_de_7_colores/DSC02961.webp',
+    heroPosition: 'center 55%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'El Cerro de 7 Colores, conocido también como Vinicunca o Montaña Arcoíris, es uno de los lugares más impresionantes del Perú. A más de 5,000 metros sobre el nivel del mar, este destino ofrece una experiencia única para los amantes de la naturaleza, la aventura y la fotografía.',
+          'Con sus tonos rojizos, turquesas, dorados y lavandas, Vinicunca parece sacado de una pintura. Pero más allá de su belleza visual, también representa la fuerza y el espíritu de los Andes peruanos.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: '¿Dónde está el Cerro de 7 Colores?',
+        paragraphs: [
+          'El Cerro de 7 Colores se encuentra en la cordillera del Vilcanota, a unas 3 horas y media al sureste de Cusco, en la provincia de Canchis. Es parte de una formación natural que estuvo cubierta de nieve por siglos, hasta que el deshielo reveló sus minerales multicolores.',
+          'Vinicunca se formó por la erosión de minerales como el hierro, cobre y azufre, que al oxidarse crearon sus distintivos tonos.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Cómo llegar y la caminata',
+        paragraphs: [
+          'Salida entre 4:00 y 5:00 a.m. desde Cusco en bus turístico, con desayuno típico andino en el camino.',
+          'Desde el punto de inicio de la caminata (Phulawasipata), la duración es de 1.5 a 2 horas (ida), con dificultad media-alta por la altura. También puedes alquilar caballos locales para parte del recorrido.',
+        ],
+        image: null,
+        highlight: '"Sus tonos rojizos, turquesas, dorados y lavandas hacen que Vinicunca parezca sacado de una pintura."',
+      },
+      {
+        heading: 'El momento perfecto para la foto',
+        paragraphs: [
+          'El mirador principal ofrece una vista panorámica de toda la montaña multicolor, con el nevado Ausangate al fondo. Si te sientes con energía, puedes subir al mirador secundario (unos 15 minutos más) para obtener la mejor toma aérea del cerro.',
+          'Llega entre 8:00 y 10:00 a.m. para evitar aglomeraciones y aprovechar la mejor luz. Usa un lente gran angular o el modo panorámico del celular para captar toda la gama de colores.',
+        ],
+        image: '/images/Montaña_de_7_colores/DSC02974.webp',
+        imageCaption: 'Los Andes del sur de Cusco ofrecen paisajes de una belleza indescriptible, desde lagunas turquesas hasta montañas de colores.',
+        highlight: null,
+      },
+      {
+        heading: 'Experiencia cultural',
+        paragraphs: [
+          'Durante el recorrido, verás comunidades altoandinas con alpacas, llamas y ovejas. Algunas familias venden artesanías o bebidas calientes, y muchas comparten sus historias de vida en la montaña.',
+          'Esa conexión humana es parte esencial de la experiencia: no es solo una caminata, es un encuentro con la naturaleza y la cultura viva del Perú.',
+        ],
+        image: null,
+        highlight: null,
+      },
+    ],
+    tips: [
+      'Aclimatízate al menos 2 días en Cusco antes de subir a los 5,000 msnm.',
+      'No subestimes la altura: camina despacio y escucha a tu cuerpo.',
+      'Lleva ropa térmica, cortaviento, guantes y bufanda (hace frío, incluso con sol).',
+      'Apoya el turismo local: contrata guías y compra snacks a los pobladores.',
+      'Evita el plástico: lleva botella reutilizable y no dejes basura.',
+    ],
+    conclusion: 'Visitar el Cerro de 7 Colores es mucho más que ver un paisaje espectacular: es sentir la energía de los Andes y entender por qué el Perú sigue siendo uno de los destinos más mágicos del mundo. Prepárate, respira profundo y deja que la montaña te hable.',
+  },
+  };
+  return Object.entries(blogsData).map(([slug, blog]) => ({
+    params: { slug },
+    props: { blog },
+  }));
+}
+
+const { blog } = Astro.props;
+const { slug } = Astro.params;
+---
+
+<Layout title={`${blog.title} | Perú Beyond`} description={blog.sections[0].paragraphs[0]}>
+  <Header />
+
+  <main>
+    <!-- ── Hero ── -->
+    <section class="blog-hero" style={`background-image: url('${blog.heroImage}'); background-position: ${blog.heroPosition};`}>
+      <div class="hero-overlay">
+        <div class="hero-inner">
+          <nav class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span>›</span>
+            <a href="/blog">Blog</a>
+            <span>›</span>
+            <span class="current">{blog.title}</span>
+          </nav>
+          <span class="category-badge">{blog.category}</span>
+          <h1 class="hero-title">{blog.title}</h1>
+          <div class="hero-meta">
+            <span>
+              <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              {blog.date}
+            </span>
+            <span class="meta-dot">·</span>
+            <span>
+              <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              {blog.readTime}
+            </span>
+            <span class="meta-dot">·</span>
+            <span>
+              <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+              {blog.views} Vistas
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Article ── -->
+    <div class="article-wrapper">
+      <article class="article-card">
+
+        <!-- Author row -->
+        <div class="author-row">
+          <div class="author-avatar">{blog.author.charAt(0)}</div>
+          <div>
+            <p class="author-label">Por,</p>
+            <p class="author-name">{blog.author}</p>
+          </div>
+          <div class="author-divider"></div>
+          <div class="share-row">
+            <span class="share-label">Compartir:</span>
+            <a href={`https://wa.me/?text=${encodeURIComponent(blog.title)}`} class="share-btn" aria-label="WhatsApp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-4.988-1.365l-.357-.212-3.758.9.946-3.658-.232-.376A9.818 9.818 0 012.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+            </a>
+            <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://perubeyond.com/blog/' + slug)}`} class="share-btn" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="gold-separator"></div>
+
+        <!-- Content sections -->
+        {blog.sections.map((section) => (
+          <div class={section.heading ? 'content-section' : 'intro-section'}>
+            {section.heading && <h2 class="section-heading">{section.heading}</h2>}
+            {section.paragraphs.map((p) => (
+              <p class={section.heading ? 'body-text' : 'intro-text'}>{p}</p>
+            ))}
+            {section.highlight && (
+              <blockquote class="pull-quote">
+                <p>{section.highlight}</p>
+              </blockquote>
+            )}
+            {section.image && (
+              <figure class="article-figure">
+                <img src={section.image} alt={section.imageCaption ?? ''} loading="lazy" />
+                {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
+              </figure>
+            )}
+          </div>
+        ))}
+
+        <!-- Tips box -->
+        <div class="tips-box">
+          <div class="tips-header">
+            <svg class="tips-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            <h3>Tips para tu visita</h3>
+          </div>
+          <ul class="tips-list">
+            {blog.tips.map((tip) => (
+              <li>
+                <svg class="tip-check" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{tip}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="conclusion-section">
+          <div class="conclusion-line"></div>
+          <p class="conclusion-text">{blog.conclusion}</p>
+        </div>
+
+        <!-- Back link -->
+        <div class="back-row">
+          <a href="/blog" class="back-link">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/></svg>
+            Volver al Blog
+          </a>
+        </div>
+
+      </article>
+    </div>
+
+    <!-- ── CTA ── -->
+    <section class="cta-section">
+      <div class="cta-inner">
+        <p class="cta-tag">¿Listo para la aventura?</p>
+        <h2 class="cta-title">Vive esta experiencia con <span>Perú Beyond</span></h2>
+        <p class="cta-desc">Nuestro equipo de expertos locales diseña viajes únicos, seguros y auténticos. Contáctanos y planifica tu próxima aventura peruana.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/51943491959" class="btn-primary" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-4.988-1.365l-.357-.212-3.758.9.946-3.658-.232-.376A9.818 9.818 0 012.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+            Reservar por WhatsApp
+          </a>
+          <a href="/blog" class="btn-secondary">Ver más artículos</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ── Hero ── */
+  .blog-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 480px;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.25) 0%,
+      rgba(0,0,0,0.55) 60%,
+      rgba(0,0,0,0.78) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 3.5rem;
+  }
+  .hero-inner {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .breadcrumb a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .breadcrumb a:hover { color: #f6d06a; }
+  .breadcrumb .current {
+    color: rgba(255,255,255,0.75);
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .category-badge {
+    display: inline-block;
+    background: #c9a84c;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.28rem 0.85rem;
+    border-radius: 2px;
+    margin-bottom: 0.9rem;
+  }
+  .hero-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.7rem, 4.5vw, 3rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 1.1rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.45);
+    max-width: 780px;
+  }
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.65);
+  }
+  .hero-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .meta-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+    flex-shrink: 0;
+  }
+  .meta-dot { color: rgba(255,255,255,0.3); }
+
+  /* ── Article wrapper ── */
+  .article-wrapper {
+    background: #f8f6f3;
+    padding: 0 1rem 5rem;
+  }
+  .article-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+    padding: 2.5rem 2.5rem 3rem;
+    position: relative;
+    top: -3rem;
+  }
+  @media (max-width: 640px) {
+    .article-card { padding: 1.75rem 1.25rem 2rem; }
+  }
+
+  /* ── Author row ── */
+  .author-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .author-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #c9a84c, #f6d06a);
+    color: #fff;
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .author-label { font-size: 0.7rem; color: #9ca3af; margin: 0; line-height: 1.2; }
+  .author-name  { font-size: 0.85rem; font-weight: 700; color: #1a1208; margin: 0; }
+  .author-divider {
+    flex: 1;
+    height: 1px;
+    background: #ece7de;
+    min-width: 1rem;
+  }
+  .share-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .share-label { font-size: 0.68rem; color: #9ca3af; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+  .share-btn {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 9999px;
+    background: #f3ede3;
+    color: #c9a84c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+  }
+  .share-btn svg { width: 0.85rem; height: 0.85rem; }
+  .share-btn:hover { background: #c9a84c; color: #fff; }
+
+  /* ── Gold separator ── */
+  .gold-separator {
+    height: 2px;
+    background: linear-gradient(to right, #c9a84c, #f6d06a, transparent);
+    margin-bottom: 2rem;
+    border-radius: 1px;
+  }
+
+  /* ── Intro ── */
+  .intro-section { margin-bottom: 2rem; }
+  .intro-text {
+    font-family: Georgia, serif;
+    font-size: 1.125rem;
+    line-height: 1.85;
+    color: #2d2d2d;
+    margin-bottom: 1.1rem;
+  }
+
+  /* ── Sections ── */
+  .content-section { margin-bottom: 2.25rem; }
+  .section-heading {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0d1b2e;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid #c9a84c;
+    line-height: 1.4;
+  }
+  .body-text {
+    font-size: 0.97rem;
+    line-height: 1.85;
+    color: #4b4b4b;
+    margin-bottom: 0.9rem;
+  }
+
+  /* ── Pull quote ── */
+  .pull-quote {
+    border-left: 4px solid #c9a84c;
+    margin: 1.75rem 0;
+    padding: 1rem 1.5rem;
+    background: #faf7f0;
+    border-radius: 0 4px 4px 0;
+  }
+  .pull-quote p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #5a4a2a;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ── Article figure ── */
+  .article-figure {
+    margin: 2rem 0;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  .article-figure img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+  }
+  .article-figure figcaption {
+    padding: 0.6rem 1rem;
+    font-size: 0.78rem;
+    color: #9ca3af;
+    font-style: italic;
+    background: #faf7f0;
+    border-top: 1px solid #ece7de;
+    text-align: center;
+  }
+
+  /* ── Tips box ── */
+  .tips-box {
+    background: #fdf9f0;
+    border: 1px solid #e8d9b0;
+    border-left: 4px solid #c9a84c;
+    border-radius: 4px;
+    padding: 1.5rem 1.75rem;
+    margin: 2.5rem 0;
+  }
+  .tips-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .tips-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #c9a84c;
+    flex-shrink: 0;
+  }
+  .tips-header h3 {
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #5a4a2a;
+    margin: 0;
+  }
+  .tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .tips-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: #4b4b4b;
+    line-height: 1.55;
+  }
+  .tip-check {
+    width: 1rem;
+    height: 1rem;
+    color: #c9a84c;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  /* ── Conclusion ── */
+  .conclusion-section { margin-top: 2rem; }
+  .conclusion-line {
+    width: 3rem;
+    height: 2px;
+    background: #c9a84c;
+    margin-bottom: 1.25rem;
+    border-radius: 1px;
+  }
+  .conclusion-text {
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #3a3a3a;
+    font-style: italic;
+  }
+
+  /* ── Back link ── */
+  .back-row {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ece7de;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    text-decoration: none;
+    transition: gap 0.2s;
+  }
+  .back-link svg { width: 1rem; height: 1rem; }
+  .back-link:hover { gap: 0.7rem; }
+
+  /* ── CTA section ── */
+  .cta-section {
+    background: #0d1b2e;
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+  .cta-inner { max-width: 620px; margin: 0 auto; }
+  .cta-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #f6d06a;
+    margin-bottom: 0.75rem;
+  }
+  .cta-title {
+    font-family: Georgia, serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+  .cta-title span { color: #f6d06a; }
+  .cta-desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    margin-bottom: 2.25rem;
+  }
+  .cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #c9a84c;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.75rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-primary svg { width: 1.1rem; height: 1.1rem; }
+  .btn-primary:hover { background: #a07830; transform: translateY(-2px); }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-secondary:hover { color: #f6d06a; border-color: #f6d06a; }
+</style>

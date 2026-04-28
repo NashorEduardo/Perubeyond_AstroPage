@@ -1,0 +1,142 @@
+---
+const tours = [
+  // Fila 1 (2 tarjetas - más altas)
+  {
+    image: '/images/Machupicchu/IMG_7709.webp',
+    title: 'Cusco + Valle Sagrado + Machu Picchu',
+    duration: '4 Días / 3 Noches',
+    price: '462',
+    description: 'Explora la capital del Imperio Inca, el místico Valle Sagrado y la maravilla del mundo: Machu Picchu.',
+    row: 'top',
+  },
+  {
+    image: '/images/Lima/lima.webp',
+    title: 'Lima + Paracas + Ica',
+    duration: '9 Días / 8 Noches',
+    price: '690',
+    description: 'Desde la vibrante capital peruana hasta las dunas de Ica y la magia de la Reserva Nacional de Paracas.',
+    row: 'top',
+  },
+  // Fila 2 (3 tarjetas - medianas)
+  {
+    image: '/images/Montaña_de_7_colores/DSC02961.webp',
+    title: 'Cusco + Machu Picchu + Montaña 7 Colores',
+    duration: '4 Días / 3 Noches',
+    price: '447',
+    description: 'Machu Picchu y el espectáculo natural de la Montaña Arcoíris, uno de los paisajes más únicos del mundo.',
+    row: 'mid',
+  },
+  {
+    image: '/images/ValleSagrado/ollantaytambo.webp',
+    title: 'Tour Valle Sagrado de los Incas',
+    duration: 'Full Day',
+    price: '39',
+    description: 'Recorre Pisac, Ollantaytambo y los mercados artesanales del corazón del Valle Sagrado inca.',
+    row: 'mid',
+  },
+  {
+    image: '/images/Huacachina/ica.jpg',
+    title: 'Lima + Paracas + Huacachina',
+    duration: '7 Días / 6 Noches',
+    price: '589',
+    description: 'El oasis de Huacachina, sandboard en las dunas gigantes y la biodiversidad única de Paracas.',
+    row: 'mid',
+  },
+  // Fila 3 (2 tarjetas - más altas)
+  {
+    image: '/images/Laguna_Humantay/DSC04361.webp',
+    title: 'Cusco + Machu Picchu + Laguna Humantay',
+    duration: '5 Días / 4 Noches',
+    price: '486',
+    description: 'Cultura, historia y naturaleza: ruinas incas, la ciudadela de Machu Picchu y la turquesa laguna Humantay.',
+    row: 'bottom',
+  },
+  {
+    image: '/images/Paracas/pexels-gilmerdiaz-14097704.webp',
+    title: 'Lima + Paracas',
+    duration: '8 Días / 7 Noches',
+    price: '653',
+    description: 'Lima colonial y moderna, combinada con la riqueza natural y marina de la Reserva Nacional de Paracas.',
+    row: 'bottom',
+  },
+];
+
+const topTours = tours.filter(t => t.row === 'top');
+const midTours = tours.filter(t => t.row === 'mid');
+---
+
+<section id="favoritos" class="section favorites-section">
+  <div class="container-pb">
+    <div class="text-center mb-10">
+      <span class="script-title" style="color: #f6d06a;" data-i18n="fav.badge">Experiencias Imperdibles</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 tracking-wide" style="color: #ffffff;" data-i18n="fav.title">Los Paquetes Favoritos de Nuestros Clientes</h2>
+      <p class="text-sm mt-3 max-w-xl mx-auto" style="color: rgba(255,255,255,0.55);" data-i18n="fav.desc">Una gran variedad de experiencias, totalmente personalizables y especialmente seleccionadas según las opiniones de nuestros clientes. Nuestros mejores viajes en Perú están a tu disposición con la atención de alta calidad que nos caracteriza.</p>
+    </div>
+
+    <!-- Fila 1: 2 tarjetas altas -->
+    <style>
+      .favorites-section {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse at 10% 25%, rgba(201, 168, 76, 0.13) 0%, transparent 50%),
+          radial-gradient(ellipse at 90% 75%, rgba(180, 110, 20, 0.09) 0%, transparent 50%),
+          radial-gradient(ellipse at 50% 50%, rgba(140, 90, 10, 0.05) 0%, transparent 70%),
+          linear-gradient(160deg, #1e1508 0%, #2c1d0b 45%, #3a2610 65%, #1a1208 100%);
+      }
+      .favorites-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M40 0C17.9 0 0 17.9 0 40s17.9 40 40 40 40-17.9 40-40S62.1 0 40 0zm0 72C22.4 72 8 57.6 8 40S22.4 8 40 8s32 14.4 32 32-14.4 32-32 32z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        pointer-events: none;
+        opacity: 0.6;
+      }
+      .favorites-section::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(201,168,76,0.4), transparent);
+      }
+      .favorites-section .container-pb {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      {topTours.map(t => (
+        <a href="#" class="group relative block overflow-hidden">
+          <img src={t.image} alt={t.title} class="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute bottom-0 left-0 right-0 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 50%, transparent 100%); padding: 4rem 1.5rem 1.5rem;">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[11px] font-bold tracking-widest uppercase text-white/90">{t.duration}</span>
+              <span class="text-[11px] font-bold text-white/90"><span data-i18n="fav.from">Desde</span> <span class="text-sm text-white">${t.price}<span class="font-bold text-xs"> /pp</span></span></span>
+            </div>
+            <h3 class="text-lg font-bold leading-snug mb-1 text-white">{t.title}</h3>
+            <p class="text-xs font-bold text-white/80 leading-relaxed line-clamp-1">{t.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- Fila 2: 3 tarjetas medianas -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {midTours.map(t => (
+        <a href="#" class="group relative block overflow-hidden">
+          <img src={t.image} alt={t.title} class="w-full h-[380px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute bottom-0 left-0 right-0 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 50%, transparent 100%); padding: 3rem 1.25rem 1.25rem;">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold tracking-widest uppercase text-white/90">{t.duration}</span>
+              <span class="text-[10px] font-bold text-white/90"><span data-i18n="fav.from">Desde</span> <span class="text-xs text-white">${t.price}<span class="font-bold"> /pp</span></span></span>
+            </div>
+            <h3 class="text-sm font-bold leading-snug mb-1 text-white">{t.title}</h3>
+            <p class="text-[11px] font-bold text-white/80 leading-relaxed line-clamp-1">{t.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

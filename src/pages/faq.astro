@@ -1,0 +1,309 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const faqSections = [
+  {
+    category: 'General',
+    items: [
+      { q: '¿Cómo Puedo Reservar Un Viaje En Su Página Web?', a: '' },
+      { q: '¿Qué Métodos De Pago Aceptan?', a: '' },
+      { q: '¿Puedo Hacer Cambios En Mi Reserva Después De Realizarla?', a: '' },
+      { q: '¿Cuál Es Su Política De Cancelación?', a: '' },
+      { q: '¿Ofrecen Descuentos Para Reservas De Grupos?', a: '' },
+    ],
+  },
+  {
+    category: 'Consejos de Viaje',
+    items: [
+      { q: '¿Cuál Es El Proceso Y Calendario De Pagos?', a: '' },
+      { q: '¿Existen Cargos Adicionales O Sobrecargos?', a: '' },
+      { q: '¿Puedo Transferir Mi Reserva A Otra Persona?', a: '' },
+      { q: '¿Puedo Solicitar Un Tour Privado Para Mi Grupo?', a: '' },
+      { q: '¿Ofrecen Tarifas Especiales Para Grupos?', a: '' },
+    ],
+  },
+];
+
+const collageImages = [
+  { src: '/images/Machupicchu/IMG_7709.webp',                    alt: 'Machu Picchu'       },
+  { src: '/images/Cuzco/cusco.webp',                             alt: 'Plaza de Cusco'     },
+  { src: '/images/Montaña_de_7_colores/DSC02961.webp',           alt: 'Montaña de Colores' },
+  { src: '/images/Laguna_Humantay/DSC04361.webp',                alt: 'Laguna Humantay'    },
+  { src: '/images/Huacachina/ica.jpg',                           alt: 'Huacachina, Ica'    },
+];
+---
+
+<Layout>
+  <Header />
+
+  <main class="bg-white">
+
+    <!-- ══ HERO ══ -->
+    <section class="faq-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20" style="height: 56vh;">
+      <img
+        src="/images/Machupicchu/IMG_7726.webp"
+        alt="FAQ Peru Beyond"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);"></div>
+      <div class="relative z-10">
+        <p class="script-title text-white/75 mb-3 text-lg">Peru Beyond</p>
+        <h1 class="faq-hero-title">
+          Preguntas <span class="text-gold">Frecuentes</span>
+        </h1>
+        <p class="faq-hero-sub">Todo lo que necesitas saber antes de tu aventura peruana.</p>
+        <nav class="flex items-center justify-center gap-2 text-xs text-white/50 mt-5">
+          <a href="/" class="hover:text-white transition-colors">Inicio</a>
+          <span class="text-white/30">›</span>
+          <span class="text-white/80">FAQ</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ══ COLLAGE DE DESTINOS ══ -->
+    <section class="py-16 px-4" style="background-color: #faf9f7;">
+      <div class="max-w-5xl mx-auto">
+
+        <div class="text-center mb-10">
+          <span class="script-title block mb-2">Destinos que te esperan</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-navy">El Perú que vamos a mostrarte</h2>
+          <div class="w-10 h-px bg-amber-400 mx-auto mt-4"></div>
+        </div>
+
+        <!-- Mosaico bento (5 imágenes) -->
+        <div class="collage-grid">
+          <!-- 1: Grande izquierda — Machu Picchu -->
+          <div class="collage-tall overflow-hidden collage-img-wrap">
+            <img src={collageImages[0].src} alt={collageImages[0].alt} class="collage-img" />
+            <div class="collage-label">{collageImages[0].alt}</div>
+          </div>
+          <!-- 2: Centro arriba — Cusco -->
+          <div class="overflow-hidden collage-img-wrap">
+            <img src={collageImages[1].src} alt={collageImages[1].alt} class="collage-img" />
+            <div class="collage-label">{collageImages[1].alt}</div>
+          </div>
+          <!-- 3: Derecha arriba — Montaña Colores -->
+          <div class="overflow-hidden collage-img-wrap">
+            <img src={collageImages[2].src} alt={collageImages[2].alt} class="collage-img" />
+            <div class="collage-label">{collageImages[2].alt}</div>
+          </div>
+          <!-- 4: Centro abajo — Humantay -->
+          <div class="overflow-hidden collage-img-wrap">
+            <img src={collageImages[3].src} alt={collageImages[3].alt} class="collage-img" />
+            <div class="collage-label">{collageImages[3].alt}</div>
+          </div>
+          <!-- 5: Derecha abajo — Huacachina -->
+          <div class="overflow-hidden collage-img-wrap">
+            <img src={collageImages[4].src} alt={collageImages[4].alt} class="collage-img" />
+            <div class="collage-label">{collageImages[4].alt}</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ SECCIÓN FAQ ══ -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-5xl mx-auto">
+
+        <div class="grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+
+          <!-- Columna izquierda: descripción sticky -->
+          <div class="md:sticky md:top-28">
+            <span class="script-title block mb-3">Soporte</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-navy leading-tight mb-4">
+              ¿Tienes alguna<br/>duda sobre tu viaje?
+            </h2>
+            <div class="w-8 h-px bg-amber-400 mb-5"></div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-8">
+              Aquí encontrarás respuestas a las preguntas más comunes. Si no encuentras lo que buscas, nuestro equipo está disponible para ayudarte.
+            </p>
+            <a
+              href="https://wa.me/51943491959"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-3 bg-gray-900 hover:bg-amber-500 text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300"
+            >
+              <i class="bi bi-whatsapp text-base"></i>
+              Escríbenos al WhatsApp
+            </a>
+
+            <!-- Tarjeta de contacto -->
+            <div class="mt-8 p-5 rounded-2xl border border-amber-100 bg-amber-50">
+              <p class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-3">Contacto Directo</p>
+              <div class="flex items-center gap-3 mb-2">
+                <i class="bi bi-telephone text-amber-500"></i>
+                <a href="tel:+51943491959" class="text-sm text-gray-700 hover:text-amber-600 transition-colors">+51 943 491 959</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="bi bi-envelope text-amber-500"></i>
+                <a href="mailto:info@perubeyond.com" class="text-sm text-gray-700 hover:text-amber-600 transition-colors">info@perubeyond.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: acordeón -->
+          <div>
+            {faqSections.map((section, si) => (
+              <div class={si > 0 ? 'mt-12' : ''}>
+                <!-- Encabezado de categoría -->
+                <div class="flex items-center gap-3 mb-5">
+                  <div class="w-1 h-6 rounded-full" style="background-color: #c9a84c;"></div>
+                  <h2 class="text-lg font-bold text-navy tracking-wide">{section.category}</h2>
+                </div>
+
+                <div class="faq-group divide-y" style="border-color: #ece7de; border-top: 1px solid #ece7de;">
+                  {section.items.map((item, ii) => (
+                    <div class="faq-item">
+                      <button
+                        class="faq-trigger w-full flex items-center justify-between py-4 text-left gap-4"
+                        aria-expanded="false"
+                      >
+                        <span class="flex items-center gap-3 text-sm font-semibold text-gray-800">
+                          <span class="faq-num">{String(ii + 1).padStart(2, '0')}</span>
+                          {item.q}
+                        </span>
+                        <span class="faq-icon w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 flex-shrink-0 transition-all duration-300">
+                          <i class="bi bi-plus text-lg"></i>
+                        </span>
+                      </button>
+                      <div class="faq-answer hidden pb-5 pl-9 pr-4">
+                        {item.a
+                          ? <p class="text-gray-500 text-sm leading-relaxed">{item.a}</p>
+                          : <p class="text-gray-400 text-sm italic">Respuesta próximamente...</p>
+                        }
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ── Hero ── */
+  .faq-hero-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+  .faq-hero-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.72);
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* ── Collage ── */
+  .collage-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 230px 230px;
+    gap: 10px;
+  }
+  .collage-tall {
+    grid-row: span 2;
+  }
+  .collage-img-wrap {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .collage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .collage-img-wrap:hover .collage-img {
+    transform: scale(1.06);
+  }
+  .collage-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1rem 0.75rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ── FAQ Acordeón ── */
+  .faq-trigger {
+    transition: color 0.2s;
+  }
+  .faq-trigger:hover {
+    color: #c9a84c;
+  }
+  .faq-trigger:hover .faq-num {
+    color: #c9a84c;
+  }
+  .faq-num {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #c9a84c;
+    opacity: 0.7;
+    min-width: 1.5rem;
+    transition: opacity 0.2s;
+  }
+  .faq-item[data-open="true"] .faq-icon {
+    background-color: #c9a84c;
+    border-color: #c9a84c;
+    color: white;
+  }
+  .faq-icon {
+    transition: background-color 0.25s, border-color 0.25s, color 0.25s, transform 0.3s;
+  }
+</style>
+
+<script is:inline>
+  document.querySelectorAll('.faq-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item   = btn.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const icon   = item.querySelector('.faq-icon');
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      document.querySelectorAll('.faq-item').forEach(other => {
+        if (other !== item) {
+          other.querySelector('.faq-answer').classList.add('hidden');
+          other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+          other.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+          other.removeAttribute('data-open');
+        }
+      });
+
+      if (isOpen) {
+        answer.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        icon.style.transform = 'rotate(0deg)';
+        item.removeAttribute('data-open');
+      } else {
+        answer.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        icon.style.transform = 'rotate(45deg)';
+        item.setAttribute('data-open', 'true');
+      }
+    });
+  });
+</script>

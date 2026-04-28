@@ -1,0 +1,47 @@
+---
+import TourCard from './TourCard.astro';
+const tours = [
+  {
+    image: '/images/Machupicchu/IMG_7709.webp',
+    title: 'Cusco + Valle Sagrado + Machu Picchu 4D/3N',
+    duration: '4 Días / 3 Noches',
+    price: '462',
+    description: 'Explora la capital del Imperio Inca, recorre el místico Valle Sagrado y culmina tu aventura en la maravilla del mundo: Machu Picchu.',
+  },
+  {
+    image: '/images/Montaña_de_7_colores/DSC02961.webp',
+    title: 'Cusco + Machu Picchu + Montaña 7 Colores 4D/3N',
+    duration: '4 Días / 3 Noches',
+    price: '447',
+    description: 'Combina la magia de Machu Picchu con el espectáculo natural de la Montaña Arcoíris, uno de los paisajes más impresionantes de los Andes.',
+  },
+  {
+    image: '/images/Laguna_Humantay/DSC04361.webp',
+    title: 'Cusco + Valle + Machu Picchu + Humantay 5D/4N',
+    duration: '5 Días / 4 Noches',
+    price: '486',
+    description: 'Una experiencia completa que combina cultura, historia y naturaleza: desde las ruinas incas del Valle Sagrado hasta la turquesa laguna Humantay.',
+  },
+  {
+    image: '/images/Maras/F1.webp',
+    title: 'Cusco, Machu Picchu, Maras Moray y Montaña de Colores 7D/6N',
+    duration: '7 Días / 6 Noches',
+    price: '550',
+    oldPrice: '600',
+    location: 'Cusco',
+    description: 'Una semana completa recorriendo lo mejor de Cusco: la ciudadela de Machu Picchu, las impresionantes Salineras de Maras, los circulares andenes de Moray y el espectáculo de colores de la Montaña Arcoíris. Un viaje perfecto para quienes quieren vivir el Perú profundo sin prisas.',
+  },
+];
+---
+<section id="machupicchu" class="section">
+  <div class="container-pb">
+    <div class="text-center mb-12">
+      <span class="script-title" data-i18n="machu_sec.badge">Machu Picchu</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2" data-i18n="machu_sec.title">Machu Picchu y Cusco – Lo esencial en tu viaje</h2>
+      <p class="text-sm text-gray-500 mt-3 max-w-xl mx-auto" data-i18n="machu_sec.desc">Encuentre aquí los Tours a Machu Picchu más solicitados, no lo dude y pregunte por la opción que más le convenga.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {tours.map(t => <TourCard {...t} />)}
+    </div>
+  </div>
+</section>

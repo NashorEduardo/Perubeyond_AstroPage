@@ -1,0 +1,337 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import TourCard from '../../components/TourCard.astro';
+
+const lang = Astro.url.searchParams.get('lang') || 'es';
+const allTours = await getCollection('tours');
+const machuTours = allTours.filter(t => t.id.startsWith(`${lang}/machupicchu/`));
+
+// Agrupar por duración
+const cortos  = machuTours.filter(t => t.data.duration.includes('3 D'));
+const medios  = machuTours.filter(t => t.data.duration.includes('4 D') || t.data.duration.includes('5 D'));
+const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data.duration.includes('7 D'));
+---
+
+<Layout title="Tours Machu Picchu – Peru Beyond" description="Paquetes a Machu Picchu desde Cusco: 3, 4, 5, 6 y 7 días. Incluye tren, bus, guía y alojamiento. La maravilla del mundo te espera.">
+  <Header />
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="relative h-[75vh] min-h-[480px] w-full overflow-hidden">
+    <img
+      src="/images/Machupicchu/IMG_7709.webp"
+      alt="Tours Machu Picchu"
+      class="absolute inset-0 w-full h-full object-cover scale-105 hero-img"
+    />
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+    <!-- Gradiente lateral izquierdo para mejorar legibilidad -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+
+    <!-- Badge maravilla -->
+    <div class="absolute top-8 right-8 hidden md:block hero-fade" style="animation-delay:0.7s">
+      <div class="bg-[#c9a84c] text-navy px-4 py-2 text-center">
+        <span class="text-[10px] font-bold uppercase tracking-widest block">Maravilla del</span>
+        <span class="text-sm font-bold uppercase tracking-widest block">Mundo</span>
+      </div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto h-full flex flex-col justify-end pb-16 px-6">
+
+      <!-- Breadcrumb -->
+      <nav class="text-white/60 text-xs uppercase tracking-widest mb-5 flex items-center gap-2 hero-fade" style="animation-delay:0.1s">
+        <a href="/" class="hover:text-gold transition-colors">Inicio</a>
+        <span class="text-white/30">›</span>
+        <a href="/tours" class="hover:text-gold transition-colors">Tours</a>
+        <span class="text-white/30">›</span>
+        <span class="text-white/80">Machu Picchu</span>
+      </nav>
+
+      <span class="script-title text-[#f6d06a] hero-fade" style="animation-delay:0.2s; font-size:1.5rem;">
+        La Ciudadela Inca
+      </span>
+      <h1 class="text-4xl md:text-6xl font-bold text-white mt-2 mb-4 leading-tight hero-fade" style="animation-delay:0.35s">
+        Tours a<br class="hidden md:block" /> Machu Picchu
+      </h1>
+      <p class="text-white/70 max-w-xl text-sm leading-relaxed hero-fade" style="animation-delay:0.5s">
+        {machuTours.length} paquetes disponibles — desde escapadas de 3 días hasta aventuras completas de 7 días por las maravillas del sur del Perú.
+      </p>
+
+      <!-- Stats -->
+      <div class="flex flex-wrap gap-8 mt-6 hero-fade" style="animation-delay:0.65s">
+        <div>
+          <span class="text-2xl font-bold text-white">{machuTours.length}</span>
+          <span class="text-white/50 text-xs ml-1 uppercase tracking-wide">Paquetes</span>
+        </div>
+        <div class="w-px bg-white/20"></div>
+        <div>
+          <span class="text-2xl font-bold text-white">3–7</span>
+          <span class="text-white/50 text-xs ml-1 uppercase tracking-wide">Días</span>
+        </div>
+        <div class="w-px bg-white/20"></div>
+        <div>
+          <span class="text-2xl font-bold text-white">Todo</span>
+          <span class="text-white/50 text-xs ml-1 uppercase tracking-wide">Incluido</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TABS DE FILTRO
+  ═══════════════════════════════════════════ -->
+  <div class="sticky top-0 z-40 bg-white border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <nav class="flex gap-0 overflow-x-auto">
+        <button data-target="todos" class="tab-btn active flex-shrink-0 px-5 py-4 text-xs font-bold uppercase tracking-widest border-b-2 transition-all duration-200">
+          Todos ({machuTours.length})
+        </button>
+        <button data-target="cortos" class="tab-btn flex-shrink-0 px-5 py-4 text-xs font-bold uppercase tracking-widest border-b-2 transition-all duration-200">
+          3 Días ({cortos.length})
+        </button>
+        <button data-target="medios" class="tab-btn flex-shrink-0 px-5 py-4 text-xs font-bold uppercase tracking-widest border-b-2 transition-all duration-200">
+          4–5 Días ({medios.length})
+        </button>
+        <button data-target="largos" class="tab-btn flex-shrink-0 px-5 py-4 text-xs font-bold uppercase tracking-widest border-b-2 transition-all duration-200">
+          6–7 Días ({largos.length})
+        </button>
+      </nav>
+      <a href="/tours" class="hidden md:flex items-center gap-1 text-xs text-gray-400 hover:text-navy transition-colors flex-shrink-0 ml-4">
+        <i class="bi bi-arrow-left"></i> Todos los tours
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HIGHLIGHTS
+  ═══════════════════════════════════════════ -->
+  <div class="bg-navy text-white">
+    <div class="container-pb py-6">
+      <div class="flex flex-wrap gap-6 justify-center md:justify-between">
+        <div class="flex items-center gap-2 text-xs">
+          <i class="bi bi-train-front text-[#f6d06a] text-base"></i>
+          <span class="text-white/70">Tren incluido</span>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <i class="bi bi-house-heart text-[#f6d06a] text-base"></i>
+          <span class="text-white/70">Alojamiento incluido</span>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <i class="bi bi-person-badge text-[#f6d06a] text-base"></i>
+          <span class="text-white/70">Guía bilingüe</span>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <i class="bi bi-ticket-perforated text-[#f6d06a] text-base"></i>
+          <span class="text-white/70">Entradas incluidas</span>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <i class="bi bi-cup-hot text-[#f6d06a] text-base"></i>
+          <span class="text-white/70">Desayunos diarios</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       GRID PRINCIPAL
+  ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container-pb">
+
+      <!-- Encabezado de sección -->
+      <div class="flex items-start gap-4 mb-10">
+        <div class="w-1 bg-gradient-to-b from-[#c9a84c] to-[#f6d06a] self-stretch flex-shrink-0 rounded-full" style="min-height:60px"></div>
+        <div>
+          <span class="script-title block mb-1">Elige tu experiencia</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-navy" id="section-title">Todos los Paquetes Machu Picchu</h2>
+          <p class="text-gray-500 text-sm mt-1">Incluyen traslados, tren, bus, guía, alojamiento y desayunos.</p>
+        </div>
+      </div>
+
+      <!-- Todos -->
+      <div id="grid-todos" class="tour-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {machuTours.map(tour => (
+          <TourCard
+            image={tour.data.image}
+            title={tour.data.title}
+            duration={tour.data.duration}
+            price={tour.data.price}
+            description={tour.data.description ?? ''}
+            location="Machu Picchu"
+            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+          />
+        ))}
+      </div>
+
+      <!-- 3 Días -->
+      <div id="grid-cortos" class="tour-grid hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {cortos.map(tour => (
+          <TourCard
+            image={tour.data.image}
+            title={tour.data.title}
+            duration={tour.data.duration}
+            price={tour.data.price}
+            description={tour.data.description ?? ''}
+            location="Machu Picchu"
+            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+          />
+        ))}
+      </div>
+
+      <!-- 4-5 Días -->
+      <div id="grid-medios" class="tour-grid hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {medios.map(tour => (
+          <TourCard
+            image={tour.data.image}
+            title={tour.data.title}
+            duration={tour.data.duration}
+            price={tour.data.price}
+            description={tour.data.description ?? ''}
+            location="Machu Picchu"
+            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+          />
+        ))}
+      </div>
+
+      <!-- 6-7 Días -->
+      <div id="grid-largos" class="tour-grid hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {largos.map(tour => (
+          <TourCard
+            image={tour.data.image}
+            title={tour.data.title}
+            duration={tour.data.duration}
+            price={tour.data.price}
+            description={tour.data.description ?? ''}
+            location="Machu Picchu"
+            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+          />
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       QUÉ INCLUYE NUESTRO SERVICIO
+  ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-[#f8f4ed]">
+    <div class="container-pb">
+      <div class="text-center mb-10">
+        <span class="script-title block mb-1">Nuestro compromiso</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-navy">¿Por qué elegirnos para Machu Picchu?</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="bg-white p-6 border-t-2 border-[#c9a84c]">
+          <i class="bi bi-star text-[#c9a84c] text-2xl mb-3 block"></i>
+          <h3 class="font-bold text-navy text-sm mb-2">Operadores Locales</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">Con base en Cusco. Conocemos Machu Picchu mejor que nadie — cada sendero, cada secreto.</p>
+        </div>
+
+        <div class="bg-white p-6 border-t-2 border-[#c9a84c]">
+          <i class="bi bi-clock-history text-[#c9a84c] text-2xl mb-3 block"></i>
+          <h3 class="font-bold text-navy text-sm mb-2">Puntualidad Garantizada</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">Trenes y buses reservados con anticipación. Sin sorpresas de último minuto.</p>
+        </div>
+
+        <div class="bg-white p-6 border-t-2 border-[#c9a84c]">
+          <i class="bi bi-translate text-[#c9a84c] text-2xl mb-3 block"></i>
+          <h3 class="font-bold text-navy text-sm mb-2">Guías Bilingües</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">Español e inglés. Historiadores apasionados que hacen cobrar vida la historia inca.</p>
+        </div>
+
+        <div class="bg-white p-6 border-t-2 border-[#c9a84c]">
+          <i class="bi bi-arrow-repeat text-[#c9a84c] text-2xl mb-3 block"></i>
+          <h3 class="font-bold text-navy text-sm mb-2">Itinerario Flexible</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">Adaptamos cada paquete a tus tiempos y preferencias. Tu viaje, a tu ritmo.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA
+  ═══════════════════════════════════════════ -->
+  <section class="relative overflow-hidden py-20">
+    <div class="absolute inset-0">
+      <img src="/images/Machupicchu/IMG_7709.webp" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-navy/85"></div>
+    </div>
+    <div class="relative container-pb text-center">
+      <span class="script-title text-[#f6d06a] text-xl block mb-3">Tu sueño más cercano</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Reserva Machu Picchu Ahora</h2>
+      <p class="text-white/60 max-w-xl mx-auto text-sm leading-relaxed mb-8">
+        Las entradas a Machu Picchu tienen cupos limitados. Asegura tu lugar hoy y vive la experiencia de tu vida.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://wa.me/51943491959"
+          target="_blank"
+          class="inline-flex items-center gap-2 bg-[#25D366] text-white text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#1db954] transition-colors"
+        >
+          <i class="bi bi-whatsapp text-base"></i>
+          Reservar por WhatsApp
+        </a>
+        <a
+          href="/contacto"
+          class="inline-flex items-center gap-2 border border-[#c9a84c] text-[#c9a84c] text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#c9a84c] hover:text-navy transition-all"
+        >
+          Solicitar cotización
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  @keyframes heroZoom {
+    from { transform: scale(1.08); }
+    to   { transform: scale(1); }
+  }
+  .hero-img { animation: heroZoom 8s ease-out forwards; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-fade { opacity: 0; animation: fadeUp 0.7s ease forwards; }
+
+  .tab-btn {
+    color: #9ca3af;
+    border-bottom-color: transparent;
+  }
+  .tab-btn:hover { color: #0D1B2E; border-bottom-color: #e5e7eb; }
+  .tab-btn.active { color: #0D1B2E; border-bottom-color: #c9a84c; }
+
+  .tour-grid { display: grid; }
+  .tour-grid.hidden { display: none; }
+</style>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.tab-btn');
+  const sectionTitle = document.getElementById('section-title');
+
+  const titles: Record<string, string> = {
+    todos:  'Todos los Paquetes Machu Picchu',
+    cortos: 'Paquetes de 3 Días',
+    medios: 'Paquetes de 4 a 5 Días',
+    largos: 'Paquetes de 6 a 7 Días',
+  };
+
+  function activate(target: string) {
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.target === target));
+    document.querySelectorAll<HTMLElement>('[id^="grid-"]').forEach(el => {
+      el.classList.toggle('hidden', el.id !== `grid-${target}`);
+    });
+    if (sectionTitle) sectionTitle.textContent = titles[target] ?? '';
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => activate(tab.dataset.target!)));
+</script>

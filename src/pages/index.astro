@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import FavoriteTours from '../components/FavoriteTours.astro';
+import MachuPicchuTours from '../components/MachuPicchuTours.astro';
+import ToursPeru from '../components/ToursPeru.astro';
+import ToursCuscoSlider from '../components/ToursCuscoSlider.astro';
+import DestinationsSlider from '../components/DestinationsSlider.astro';
+import Testimonials from '../components/Testimonials.astro';
+import WhyChooseUs from '../components/WhyChooseUs.astro';
+import BlogPreview from '../components/BlogPreview.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout>
+  <Header />
+  <Hero />
+  <About />
+  <FavoriteTours />
+  <MachuPicchuTours />
+  <DestinationsSlider />
+  <ToursPeru />
+  <ToursCuscoSlider />
+  <Testimonials />
+  <WhyChooseUs />
+  <BlogPreview />
+  <Footer />
+
+  <div class="fixed bottom-0 z-20 lorito-float" style="width:700px; pointer-events:none; right:-180px;">
+  <div class="relative">
+    <img
+      src="/images/PeruBeyond/loritoBeyond.png"
+      alt="Lorito Peru Beyond"
+      class="w-full drop-shadow-2xl scale-x-[-1]"
+    />
+    <a
+      href="https://wa.me/51943491959"
+      target="_blank"
+      rel="noopener"
+      aria-label="WhatsApp"
+      class="absolute hover:scale-110 transition-transform"
+      style="pointer-events:auto; left:23%; top:10%; width:68px; height:68px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(0,0,0,0.35);"
+    >
+      <i class="bi bi-whatsapp" style="font-size:2rem; color:white;"></i>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+---
+const certLogos = [
+  { src: 'https://gercetur.com.pe/wp-content/uploads/2025/11/LOGO-POSITIVO-scaled-e1763582114614.png', alt: 'Gercetur' },
+  { src: 'https://www.perubeyond.com/wp-content/uploads/2026/01/marca-peru-peru-beyond-2_1_-748x1024.webp', alt: 'Marca Perú' },
+  { src: 'https://www.perubeyond.com/wp-content/uploads/2026/01/tripadvisor-peru-beyond_1_.webp', alt: 'TripAdvisor' },
+  { src: 'https://www.perubeyond.com/wp-content/uploads/2026/01/protegeme-peru-beyond_1_.webp', alt: 'Protegeme' },
+  { src: 'https://www.wayraqperu.com/wp-content/uploads/mincetur.png', alt: 'Mincetur' },
+];
+---
+
+<section id="about" class="section bg-white">
+  <div class="container-pb">
+    <div class="grid md:grid-cols-2 gap-12 items-start mb-10">
+      <!-- Columna izquierda: Instagram -->
+      <div class="flex justify-center">
+        <blockquote
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/DWH96UqlUb3/"
+          data-instgrm-version="14"
+          style="max-width:320px; width:100%; border-radius:1rem; overflow:hidden;">
+        </blockquote>
+        <script is:inline async src="//www.instagram.com/embed.js"></script>
+      </div>
+
+      <!-- Columna derecha -->
+      <div>
+        <span class="script-title" data-i18n="about.badge">Sobre Nosotros</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4" data-i18n="about.title">Tu Puerta de Entrada a un Perú Auténtico y Exclusivo</h2>
+        <p class="text-gray-600 mb-6" data-i18n="about.desc">En Peru Beyond, creamos rutas únicas y significativas que van mucho más allá de lo convencional. Nos especializamos en conectar a viajeros exigentes con la esencia viva de los Andes, la Amazonía y nuestras costas, permitiéndoles descubrir el Perú desde una perspectiva auténtica, profunda y memorable. Cada experiencia es cuidadosamente diseñada para integrar cultura, naturaleza y confort, combinando tradiciones ancestrales con paisajes extraordinarios y servicios de alta calidad. Nuestro compromiso es ofrecer un servicio personalizado, cuidando cada detalle de tu aventura para que vivas un viaje exclusivo, inspirador y lleno de momentos inolvidables.</p>
+
+        <a
+          href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d33404487-Reviews-Peru_Beyond-Cusco_Cusco_Region.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 mt-2 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Tripadvisor_2025_Logo.svg/500px-Tripadvisor_2025_Logo.svg.png"
+            alt="Tripadvisor"
+            class="h-8 object-contain"
+          />
+          <div>
+            <div class="flex text-[#34E0A1] text-lg">★★★★★</div>
+            <span class="text-xs text-gray-600" data-i18n="about.reviews">5.0 · 4 reseñas en TripAdvisor</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Logos de certificaciones -->
+    <div class="flex flex-wrap justify-center items-center gap-8 pt-6 border-t border-gray-200">
+      {certLogos.map((c, i) => (
+        <div class={`flex items-center justify-center ${i >= 1 && i <= 3 ? 'w-36 h-28' : 'w-28 h-20'}`}>
+          <img src={c.src} alt={c.alt} class="max-w-full max-h-full object-contain" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

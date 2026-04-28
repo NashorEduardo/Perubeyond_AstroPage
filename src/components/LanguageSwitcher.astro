@@ -1,0 +1,112 @@
+---
+const langs = [
+  { code: 'es', flag: '🇵🇪', label: 'Español' },
+  { code: 'en', flag: '🇺🇸', label: 'English' },
+  { code: 'pt', flag: '🇧🇷', label: 'Português' },
+];
+---
+
+<div class="lang-switcher relative" id="lang-switcher">
+  <button
+    id="lang-btn"
+    class="header-link flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border border-white/25 hover:border-white/60 transition-all duration-300 text-white"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <span id="lang-flag">🇵🇪</span>
+    <span id="lang-code" class="tracking-wider">ES</span>
+    <i class="bi bi-chevron-down text-[8px] opacity-60 transition-transform duration-300" id="lang-chevron"></i>
+  </button>
+
+  <div
+    id="lang-dropdown"
+    class="absolute right-0 top-[calc(100%+8px)] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden
+           opacity-0 invisible pointer-events-none translate-y-1
+           transition-all duration-200 ease-out"
+    style="min-width:140px; z-index:200;"
+  >
+    {langs.map(l => (
+      <button
+        class="lang-option w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 text-navy text-sm font-semibold transition-colors text-left"
+        data-lang={l.code}
+      >
+        <span class="text-base">{l.flag}</span>
+        <span>{l.label}</span>
+      </button>
+    ))}
+  </div>
+</div>
+
+<script is:inline>
+(function () {
+  const LANGS = { es: { flag: '🇵🇪', code: 'ES' }, en: { flag: '🇺🇸', code: 'EN' }, pt: { flag: '🇧🇷', code: 'PT' } };
+
+  const btn       = document.getElementById('lang-btn');
+  const dropdown  = document.getElementById('lang-dropdown');
+  const flagEl    = document.getElementById('lang-flag');
+  const codeEl    = document.getElementById('lang-code');
+  const chevron   = document.getElementById('lang-chevron');
+
+  function setDisplay(lang) {
+    if (!LANGS[lang]) return;
+    flagEl.textContent = LANGS[lang].flag;
+    codeEl.textContent = LANGS[lang].code;
+  }
+
+  function openDropdown() {
+    dropdown.classList.remove('opacity-0', 'invisible', 'pointer-events-none', 'translate-y-1');
+    dropdown.classList.add('opacity-100', 'translate-y-0');
+    chevron.style.transform = 'rotate(180deg)';
+    btn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeDropdown() {
+    dropdown.classList.add('opacity-0', 'invisible', 'pointer-events-none', 'translate-y-1');
+    dropdown.classList.remove('opacity-100', 'translate-y-0');
+    chevron.style.transform = '';
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
+  // Init display
+  setDisplay(localStorage.getItem('pb_lang') || 'es');
+
+  btn?.addEventListener('click', function (e) {
+    e.stopPropagation();
+    dropdown.classList.contains('invisible') ? openDropdown() : closeDropdown();
+  });
+
+  document.addEventListener('click', closeDropdown);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDropdown(); });
+
+  document.querySelectorAll('.lang-option').forEach(function (opt) {
+    opt.addEventListener('click', function () {
+      var lang = opt.getAttribute('data-lang');
+      localStorage.setItem('pb_lang', lang);
+      setDisplay(lang);
+      closeDropdown();
+      // Change URL
+      var currentPath = window.location.pathname;
+      var isTourPage = currentPath.startsWith('/tours/') && currentPath.split('/').length > 2;
+      if (isTourPage) {
+        // For tour pages, change the path
+        var newPath = currentPath;
+        if (lang === 'es') {
+          newPath = currentPath.replace(/^\/tours\/(en|pt)\//, '/tours/');
+        } else {
+          if (currentPath.startsWith('/tours/en/') || currentPath.startsWith('/tours/pt/')) {
+            newPath = currentPath.replace(/^\/tours\/(en|pt)\//, '/tours/' + lang + '/');
+          } else {
+            newPath = currentPath.replace('/tours/', '/tours/' + lang + '/');
+          }
+        }
+        window.location.href = newPath;
+      } else {
+        // For other pages, add ?lang=
+        var url = new URL(window.location);
+        url.searchParams.set('lang', lang);
+        window.location.href = url.toString();
+      }
+    });
+  });
+})();
+</script>

@@ -1,0 +1,298 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import TourCard from '../../components/TourCard.astro';
+
+const allTours = await getCollection('tours');
+const peruTours   = allTours.filter(t => t.id.startsWith('es/peru/'));
+const cuscoTours  = allTours.filter(t => t.id.startsWith('es/cusco/'));
+const machuTours  = allTours.filter(t => t.id.startsWith('es/machupicchu/'));
+---
+
+<Layout title="Tours Perú – Peru Beyond" description="Descubre todos nuestros tours y paquetes por Perú: Cusco, Machu Picchu, Lima, Paracas y más. Experiencias únicas con guías expertos.">
+  <Header />
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+    <img
+      src="/images/Cuzco/cusco.webp"
+      alt="Tours Perú"
+      class="absolute inset-0 w-full h-full object-cover scale-105 hero-img"
+    />
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+    <div class="relative max-w-7xl mx-auto h-full flex flex-col justify-end pb-16 px-6">
+
+      <!-- Breadcrumb -->
+      <nav class="text-white/60 text-xs uppercase tracking-widest mb-5 flex items-center gap-2 hero-fade" style="animation-delay:0.1s">
+        <a href="/" class="hover:text-gold transition-colors">Inicio</a>
+        <span class="text-white/30">›</span>
+        <span class="text-white/80">Tours Perú</span>
+      </nav>
+
+      <span class="script-title text-[#f6d06a] hero-fade" style="animation-delay:0.2s; font-size:1.5rem;">
+        Experiencias Auténticas
+      </span>
+      <h1 class="text-4xl md:text-6xl font-bold text-white mt-2 mb-4 leading-tight hero-fade" style="animation-delay:0.35s">
+        Todos Nuestros Tours
+      </h1>
+      <p class="text-white/70 max-w-xl text-sm leading-relaxed hero-fade" style="animation-delay:0.5s">
+        Desde las cumbres andinas de Cusco hasta la magia de Machu Picchu y las costas de Lima. Encuentra el viaje perfecto para ti.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TABS DE CATEGORÍA
+  ═══════════════════════════════════════════ -->
+  <div class="sticky top-0 z-40 bg-white border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav class="flex gap-0 overflow-x-auto" id="category-tabs">
+        <button
+          data-target="todos"
+          class="tab-btn active flex-shrink-0 px-6 py-4 text-xs font-bold uppercase tracking-widest border-b-2 transition-all duration-200"
+        >
+          Todos los Tours
+        </button>
+        <button
+          data-target="peru"
+          class="tab-btn flex-shrink-0 px-6 py-4 text-xs font-bold uppercase tracking-widest border-b-2 transition-all duration-200"
+        >
+          Tours Perú
+        </button>
+        <button
+          data-target="cusco"
+          class="tab-btn flex-shrink-0 px-6 py-4 text-xs font-bold uppercase tracking-widest border-b-2 transition-all duration-200"
+        >
+          Tours Cusco
+        </button>
+        <button
+          data-target="machupicchu"
+          class="tab-btn flex-shrink-0 px-6 py-4 text-xs font-bold uppercase tracking-widest border-b-2 transition-all duration-200"
+        >
+          Machu Picchu
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SECCIÓN: TOURS PERÚ
+  ═══════════════════════════════════════════ -->
+  <section class="section tour-section" id="section-peru" data-section="peru">
+    <div class="container-pb">
+
+      <!-- Header de sección -->
+      <div class="flex items-start gap-4 mb-10">
+        <div class="w-1 bg-gradient-to-b from-[#c9a84c] to-[#f6d06a] self-stretch flex-shrink-0 rounded-full" style="min-height:60px"></div>
+        <div>
+          <span class="script-title block mb-1">Paquetes Multidestino</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-navy">Tours por el Perú</h2>
+          <p class="text-gray-500 text-sm mt-2 max-w-2xl leading-relaxed">
+            Recorre lo mejor del país en un solo viaje. Lima, Paracas, Cusco, Machu Picchu, Ica y más — todo diseñado para vivir el Perú auténtico.
+          </p>
+        </div>
+        <a
+          href="/tours/peru"
+          class="ml-auto flex-shrink-0 hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#c9a84c] hover:gap-3 transition-all duration-200"
+        >
+          Ver todos
+          <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0-5 5m5-5H6"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {peruTours.map(tour => (
+          <TourCard
+            image={tour.data.image}
+            title={tour.data.title}
+            duration={tour.data.duration}
+            price={tour.data.price}
+            description={tour.data.description ?? ''}
+            location="Perú"
+            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Divisor decorativo -->
+  <div class="w-full h-px bg-gradient-to-r from-transparent via-[#c9a84c]/30 to-transparent"></div>
+
+  <!-- ═══════════════════════════════════════════
+       SECCIÓN: TOURS CUSCO
+  ═══════════════════════════════════════════ -->
+  <section class="section tour-section" id="section-cusco" data-section="cusco">
+    <div class="container-pb">
+
+      <div class="flex items-start gap-4 mb-10">
+        <div class="w-1 bg-gradient-to-b from-[#c9a84c] to-[#f6d06a] self-stretch flex-shrink-0 rounded-full" style="min-height:60px"></div>
+        <div>
+          <span class="script-title block mb-1">Ciudad Imperial</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-navy">Tours en Cusco</h2>
+          <p class="text-gray-500 text-sm mt-2 max-w-2xl leading-relaxed">
+            Explora la capital del Imperio Inca: city tours, trekking, valles sagrados y cumbres andinas. Un día en Cusco cambia tu visión del mundo.
+          </p>
+        </div>
+        <a
+          href="/tours/cusco"
+          class="ml-auto flex-shrink-0 hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#c9a84c] hover:gap-3 transition-all duration-200"
+        >
+          Ver todos
+          <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0-5 5m5-5H6"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cuscoTours.map(tour => (
+          <TourCard
+            image={tour.data.image}
+            title={tour.data.title}
+            duration={tour.data.duration}
+            price={tour.data.price}
+            description={tour.data.description ?? ''}
+            location="Cusco"
+            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Divisor decorativo -->
+  <div class="w-full h-px bg-gradient-to-r from-transparent via-[#c9a84c]/30 to-transparent"></div>
+
+  <!-- ═══════════════════════════════════════════
+       SECCIÓN: MACHU PICCHU
+  ═══════════════════════════════════════════ -->
+  <section class="section tour-section" id="section-machupicchu" data-section="machupicchu">
+    <div class="container-pb">
+
+      <div class="flex items-start gap-4 mb-10">
+        <div class="w-1 bg-gradient-to-b from-[#c9a84c] to-[#f6d06a] self-stretch flex-shrink-0 rounded-full" style="min-height:60px"></div>
+        <div>
+          <span class="script-title block mb-1">Maravilla del Mundo</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-navy">Paquetes Machu Picchu</h2>
+          <p class="text-gray-500 text-sm mt-2 max-w-2xl leading-relaxed">
+            La ciudadela inca más famosa del mundo, combinada con el Valle Sagrado, la Montaña de 7 Colores y más. Elige el paquete que más te inspire.
+          </p>
+        </div>
+        <a
+          href="/tours/machu-picchu"
+          class="ml-auto flex-shrink-0 hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#c9a84c] hover:gap-3 transition-all duration-200"
+        >
+          Ver todos
+          <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0-5 5m5-5H6"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {machuTours.map(tour => (
+          <TourCard
+            image={tour.data.image}
+            title={tour.data.title}
+            duration={tour.data.duration}
+            price={tour.data.price}
+            description={tour.data.description ?? ''}
+            location="Machu Picchu"
+            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA BANNER
+  ═══════════════════════════════════════════ -->
+  <section class="relative overflow-hidden py-20">
+    <div class="absolute inset-0 bg-navy"></div>
+    <div class="absolute inset-0 opacity-10" style="background-image:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23c9a84c\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+    <div class="relative container-pb text-center">
+      <span class="script-title text-[#f6d06a] text-xl block mb-3">¿Tienes preguntas?</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Diseñamos tu viaje a medida</h2>
+      <p class="text-white/60 max-w-xl mx-auto text-sm leading-relaxed mb-8">
+        Nuestro equipo de expertos en Cusco está listo para crear la experiencia perfecta según tus tiempos, presupuesto e intereses.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://wa.me/51943491959"
+          target="_blank"
+          class="inline-flex items-center gap-2 bg-[#25D366] text-white text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#1db954] transition-colors duration-200"
+        >
+          <i class="bi bi-whatsapp text-base"></i>
+          Contactar por WhatsApp
+        </a>
+        <a
+          href="/contacto"
+          class="inline-flex items-center gap-2 border border-[#c9a84c] text-[#c9a84c] text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#c9a84c] hover:text-navy transition-all duration-200"
+        >
+          Solicitar cotización
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  @keyframes heroZoom {
+    from { transform: scale(1.08); }
+    to   { transform: scale(1); }
+  }
+  .hero-img { animation: heroZoom 8s ease-out forwards; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-fade { opacity: 0; animation: fadeUp 0.7s ease forwards; }
+
+  /* Tabs */
+  .tab-btn {
+    color: #9ca3af;
+    border-bottom-color: transparent;
+  }
+  .tab-btn:hover {
+    color: #0D1B2E;
+    border-bottom-color: #e5e7eb;
+  }
+  .tab-btn.active {
+    color: #0D1B2E;
+    border-bottom-color: #c9a84c;
+  }
+</style>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.tab-btn');
+  const sections = document.querySelectorAll<HTMLElement>('.tour-section');
+
+  function setActiveTab(target: string) {
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.target === target));
+
+    if (target === 'todos') {
+      sections.forEach(s => s.style.display = '');
+    } else {
+      sections.forEach(s => {
+        s.style.display = s.dataset.section === target ? '' : 'none';
+      });
+    }
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => setActiveTab(tab.dataset.target!));
+  });
+</script>

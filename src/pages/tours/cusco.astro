@@ -1,0 +1,295 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import TourCard from '../../components/TourCard.astro';
+
+const lang = Astro.url.searchParams.get('lang') || 'es';
+const allTours = await getCollection('tours');
+const cuscoTours = allTours.filter(t => t.id.startsWith(`${lang}/cusco/`));
+
+// Categorías para filtrar
+const aventura  = cuscoTours.filter(t =>
+  ['trekking-montana-7-colores','trekking-palcoyo','trekking-laguna-humantay-full-day','trekking-7-lagunas-ausangate'].some(s => t.id.includes(s))
+);
+const cultura   = cuscoTours.filter(t =>
+  ['city-tour','valle-sagrado','valle-sur','maras','super-valle'].some(s => t.id.includes(s))
+);
+const naturaleza = cuscoTours.filter(t =>
+  ['machu-picchu-full-day'].some(s => t.id.includes(s))
+);
+---
+
+<Layout title="Tours en Cusco – Peru Beyond" description="Descubre los mejores tours en Cusco: city tour, Montaña de 7 Colores, Valle Sagrado, Laguna Humantay, Machu Picchu y más. Guías expertos, salidas diarias.">
+  <Header />
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="relative h-[70vh] min-h-[450px] w-full overflow-hidden">
+    <img
+      src="/images/Cuzco/cusco.webp"
+      alt="Tours en Cusco"
+      class="absolute inset-0 w-full h-full object-cover scale-105 hero-img"
+    />
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent"></div>
+
+    <!-- Destino badge -->
+    <div class="absolute top-8 right-8 hidden md:flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full text-white text-xs font-bold uppercase tracking-widest hero-fade" style="animation-delay:0.6s">
+      <i class="bi bi-geo-alt-fill text-[#f6d06a]"></i>
+      Cusco, Perú · 3,400 msnm
+    </div>
+
+    <div class="relative max-w-7xl mx-auto h-full flex flex-col justify-end pb-16 px-6">
+
+      <!-- Breadcrumb -->
+      <nav class="text-white/60 text-xs uppercase tracking-widest mb-5 flex items-center gap-2 hero-fade" style="animation-delay:0.1s">
+        <a href="/" class="hover:text-gold transition-colors">Inicio</a>
+        <span class="text-white/30">›</span>
+        <a href="/tours" class="hover:text-gold transition-colors">Tours</a>
+        <span class="text-white/30">›</span>
+        <span class="text-white/80">Cusco</span>
+      </nav>
+
+      <span class="script-title text-[#f6d06a] hero-fade" style="animation-delay:0.2s; font-size:1.5rem;">
+        Ciudad Imperial de los Incas
+      </span>
+      <h1 class="text-4xl md:text-6xl font-bold text-white mt-2 mb-4 leading-tight hero-fade" style="animation-delay:0.35s">
+        Tours en Cusco
+      </h1>
+      <p class="text-white/70 max-w-xl text-sm leading-relaxed hero-fade" style="animation-delay:0.5s">
+        {cuscoTours.length} experiencias disponibles — desde el corazón de la ciudad imperial hasta las cumbres más espectaculares de los Andes.
+      </p>
+
+      <!-- Stats -->
+      <div class="flex gap-8 mt-6 hero-fade" style="animation-delay:0.65s">
+        <div>
+          <span class="text-2xl font-bold text-white">{cuscoTours.length}</span>
+          <span class="text-white/50 text-xs ml-1 uppercase tracking-wide">Tours</span>
+        </div>
+        <div class="w-px bg-white/20"></div>
+        <div>
+          <span class="text-2xl font-bold text-white">Diario</span>
+          <span class="text-white/50 text-xs ml-1 uppercase tracking-wide">Salidas</span>
+        </div>
+        <div class="w-px bg-white/20"></div>
+        <div>
+          <span class="text-2xl font-bold text-white">24/7</span>
+          <span class="text-white/50 text-xs ml-1 uppercase tracking-wide">Soporte</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TABS DE FILTRO
+  ═══════════════════════════════════════════ -->
+  <div class="sticky top-0 z-40 bg-white border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <nav class="flex gap-0 overflow-x-auto">
+        <button data-target="todos" class="tab-btn active flex-shrink-0 px-5 py-4 text-xs font-bold uppercase tracking-widest border-b-2 transition-all duration-200">
+          Todos ({cuscoTours.length})
+        </button>
+        <button data-target="aventura" class="tab-btn flex-shrink-0 px-5 py-4 text-xs font-bold uppercase tracking-widest border-b-2 transition-all duration-200">
+          Trekking & Aventura
+        </button>
+        <button data-target="cultura" class="tab-btn flex-shrink-0 px-5 py-4 text-xs font-bold uppercase tracking-widest border-b-2 transition-all duration-200">
+          Cultura & Valle Sagrado
+        </button>
+      </nav>
+      <a href="/tours" class="hidden md:flex items-center gap-1 text-xs text-gray-400 hover:text-navy transition-colors flex-shrink-0 ml-4">
+        <i class="bi bi-arrow-left"></i> Todos los tours
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       GRID PRINCIPAL
+  ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container-pb">
+
+      <!-- Todos -->
+      <div id="grid-todos" class="tour-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {cuscoTours.map(tour => (
+          <TourCard
+            image={tour.data.image}
+            title={tour.data.title}
+            duration={tour.data.duration}
+            price={tour.data.price}
+            description={tour.data.description ?? ''}
+            location="Cusco"
+            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+          />
+        ))}
+      </div>
+
+      <!-- Aventura -->
+      <div id="grid-aventura" class="tour-grid hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {aventura.length > 0
+          ? aventura.map(tour => (
+              <TourCard
+                image={tour.data.image}
+                title={tour.data.title}
+                duration={tour.data.duration}
+                price={tour.data.price}
+                description={tour.data.description ?? ''}
+                location="Cusco"
+                href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+              />
+            ))
+          : cuscoTours.filter(t => t.id.toLowerCase().includes('trekking')).map(tour => (
+              <TourCard
+                image={tour.data.image}
+                title={tour.data.title}
+                duration={tour.data.duration}
+                price={tour.data.price}
+                description={tour.data.description ?? ''}
+                location="Cusco"
+                href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+              />
+            ))
+        }
+      </div>
+
+      <!-- Cultura -->
+      <div id="grid-cultura" class="tour-grid hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {cultura.length > 0
+          ? cultura.map(tour => (
+              <TourCard
+                image={tour.data.image}
+                title={tour.data.title}
+                duration={tour.data.duration}
+                price={tour.data.price}
+                description={tour.data.description ?? ''}
+                location="Cusco"
+                href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+              />
+            ))
+          : cuscoTours.filter(t => !t.id.toLowerCase().includes('trekking')).map(tour => (
+              <TourCard
+                image={tour.data.image}
+                title={tour.data.title}
+                duration={tour.data.duration}
+                price={tour.data.price}
+                description={tour.data.description ?? ''}
+                location="Cusco"
+                href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BANNER INFO
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f8f4ed] py-16">
+    <div class="container-pb">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="flex gap-4 items-start">
+          <div class="w-12 h-12 bg-[#c9a84c]/10 flex items-center justify-center flex-shrink-0">
+            <i class="bi bi-shield-check text-[#c9a84c] text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-navy text-sm mb-1">Guías Certificados</h3>
+            <p class="text-gray-500 text-xs leading-relaxed">Todos nuestros guías están certificados por el Ministerio de Comercio Exterior y Turismo del Perú.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <div class="w-12 h-12 bg-[#c9a84c]/10 flex items-center justify-center flex-shrink-0">
+            <i class="bi bi-calendar-check text-[#c9a84c] text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-navy text-sm mb-1">Salidas Diarias</h3>
+            <p class="text-gray-500 text-xs leading-relaxed">Operamos los 365 días del año. Elige la fecha que mejor se adapte a tu itinerario.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <div class="w-12 h-12 bg-[#c9a84c]/10 flex items-center justify-center flex-shrink-0">
+            <i class="bi bi-chat-dots text-[#c9a84c] text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-navy text-sm mb-1">Atención Personalizada</h3>
+            <p class="text-gray-500 text-xs leading-relaxed">Un asesor dedicado para resolver tus dudas antes, durante y después de tu viaje.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA
+  ═══════════════════════════════════════════ -->
+  <section class="relative overflow-hidden py-16">
+    <div class="absolute inset-0 bg-navy"></div>
+    <div class="relative container-pb flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <span class="script-title text-[#f6d06a] block mb-1">¿Listo para la aventura?</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-white">Reserva tu tour en Cusco hoy</h2>
+      </div>
+      <div class="flex gap-4 flex-shrink-0">
+        <a
+          href="https://wa.me/51943491959"
+          target="_blank"
+          class="inline-flex items-center gap-2 bg-[#25D366] text-white text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-[#1db954] transition-colors"
+        >
+          <i class="bi bi-whatsapp text-sm"></i>
+          WhatsApp
+        </a>
+        <a
+          href="/contacto"
+          class="inline-flex items-center gap-2 border border-[#c9a84c] text-[#c9a84c] text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-[#c9a84c] hover:text-navy transition-all"
+        >
+          Cotizar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  @keyframes heroZoom {
+    from { transform: scale(1.08); }
+    to   { transform: scale(1); }
+  }
+  .hero-img { animation: heroZoom 8s ease-out forwards; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-fade { opacity: 0; animation: fadeUp 0.7s ease forwards; }
+
+  .tab-btn {
+    color: #9ca3af;
+    border-bottom-color: transparent;
+  }
+  .tab-btn:hover { color: #0D1B2E; border-bottom-color: #e5e7eb; }
+  .tab-btn.active { color: #0D1B2E; border-bottom-color: #c9a84c; }
+
+  .tour-grid { display: grid; }
+  .tour-grid.hidden { display: none; }
+</style>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.tab-btn');
+
+  function activate(target: string) {
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.target === target));
+    document.querySelectorAll<HTMLElement>('[id^="grid-"]').forEach(el => {
+      el.classList.toggle('hidden', el.id !== `grid-${target}`);
+    });
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => activate(tab.dataset.target!)));
+</script>

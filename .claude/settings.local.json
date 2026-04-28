@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Palcoyo+Peru&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(node -e \"let d=''; process.stdin.on\\('data',c=>d+=c\\); process.stdin.on\\('end',\\(\\)=>{ try { const p=JSON.parse\\(d\\); p.query.search.forEach\\(r=>console.log\\(r.title\\)\\); } catch\\(e\\) { console.log\\('ERROR'\\); } }\\)\")",
+      "Bash(curl -s \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Ausangate+lagunas+Peru&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(curl -s \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Tipon+Cusco+Peru&srnamespace=6&format=json&srlimit=3\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Incan_aqueduct_at_Tipon._Cusco%2C_Peru.jpg/1280px-Incan_aqueduct_at_Tipon._Cusco%2C_Peru.jpg\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://upload.wikimedia.org/wikipedia/commons/0/0e/Islas_Ballestas_-_panoramio_%283%29.jpg\")",
+      "Bash(curl -s \"https://en.wikipedia.org/w/api.php?action=query&titles=Plaza_Mayor,_Lima&prop=pageimages&format=json&pithumbsize=1200\")",
+      "Bash(node -e \"let d=''; process.stdin.on\\('data',c=>d+=c\\); process.stdin.on\\('end',\\(\\)=>{ try { const p=JSON.parse\\(d\\); const pages=p.query.pages; const img=Object.values\\(pages\\)[0]?.thumbnail?.source || 'NOT FOUND'; console.log\\('Lima: '+img\\); } catch\\(e\\) { console.log\\('ERROR'\\); } }\\)\")",
+      "Bash(curl -s \"https://en.wikipedia.org/w/api.php?action=query&titles=Plaza_de_Armas,_Cusco&prop=pageimages&format=json&pithumbsize=1200\")",
+      "Bash(node -e \"let d=''; process.stdin.on\\('data',c=>d+=c\\); process.stdin.on\\('end',\\(\\)=>{ try { const p=JSON.parse\\(d\\); const pages=p.query.pages; const img=Object.values\\(pages\\)[0]?.thumbnail?.source || 'NOT FOUND'; console.log\\('Cusco Plaza: '+img\\); } catch\\(e\\) { console.log\\('ERROR'\\); } }\\)\")",
+      "Bash(curl -s \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=MINCETUR+Peru+logo&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(curl -s \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Indecopi+Peru+logo&srnamespace=6&format=json&srlimit=5\")"
+    ]
+  }
+}
