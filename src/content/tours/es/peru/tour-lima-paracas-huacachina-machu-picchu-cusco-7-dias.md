@@ -28,7 +28,9 @@ itinerary:
     title: "Llegada a Lima"
     description: "Bienvenida a la capital del Perú."
     images:
-      - "/images/MultiTours/lima-1.webp"
+      - "/itinerario/LIMA/lima01.webp"
+      - "/itinerario/LIMA/lima02.webp"
+      - "/itinerario/LIMA/lima03.webp"
     activities:
       - "Recepción en el aeropuerto y traslado al hotel"
       - "Tiempo libre para aclimatarse o recorrer la ciudad"
@@ -37,8 +39,9 @@ itinerary:
     title: "Paracas – Ica – Huacachina"
     description: "Naturaleza marina, viñedos y aventura en el desierto."
     images:
-      - "/images/MultiTours/paracas.webp"
-      - "/images/MultiTours/huacachina.webp"
+      - "/itinerario/PARACAS/paracas01.webp"
+      - "/itinerario/HUACACHINA/huacachina01.webp"
+      - "/itinerario/PARACAS/paracas02.webp"
     activities:
       - "Viaje en bus hacia Paracas"
       - "Paseo en bote a las Islas Ballestas"
@@ -50,7 +53,9 @@ itinerary:
     title: "Vuelo a Cusco"
     description: "Llegada a la ciudad imperial."
     images:
-      - "/images/MultiTours/cusco.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
     activities:
       - "Vuelo hacia Cusco"
       - "Recepción y traslado al hotel"
@@ -60,7 +65,9 @@ itinerary:
     title: "Machu Picchu – Maravilla del Mundo"
     description: "Exploración de la ciudadela inca."
     images:
-      - "/images/MultiTours/machu-picchu-2.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Traslado a la estación de tren"
       - "Viaje en tren hacia Aguas Calientes"
@@ -72,7 +79,9 @@ itinerary:
     title: "Laguna Humantay"
     description: "Excursión de trekking a una laguna de aguas turquesas."
     images:
-      - "/images/Laguna_Humantay/DSC04368.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Excursión de día completo a la Laguna Humantay"
       - "Caminata rodeada de paisajes andinos"
@@ -83,7 +92,9 @@ itinerary:
     title: "Montaña de Colores (Vinicunca)"
     description: "Trekking a uno de los paisajes más impresionantes del Perú."
     images:
-      - "/images/MultiTours/vinicunca.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Excursión de día completo a la Montaña de Colores"
       - "Caminata guiada en altura"
@@ -94,20 +105,22 @@ itinerary:
     title: "Cusco – Lima – Retorno"
     description: "Fin del tour."
     images:
-      - "/images/MultiTours/aeropuerto.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
+      - "/itinerario/CUZCO/cusco06.webp"
     activities:
       - "Desayuno en el hotel"
       - "Traslado al aeropuerto"
       - "Vuelo de retorno"
 
 gallery:
-  - "/images/MultiTours/lima-1.webp"
-  - "/images/MultiTours/paracas.webp"
-  - "/images/MultiTours/huacachina.webp"
-  - "/images/MultiTours/machu-picchu-2.webp"
-  - "/images/Laguna_Humantay/DSC04368.webp"
-  - "/images/MultiTours/vinicunca.webp"
-
+  - "/itinerario/LIMA/lima04.webp"
+  - "/itinerario/PARACAS/paracas03.webp"
+  - "/itinerario/HUACACHINA/huacachina02.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
+  - "/itinerario/7COLORES/7colores04.webp"
+  
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 
 faq:

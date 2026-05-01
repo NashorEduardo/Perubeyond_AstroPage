@@ -22,10 +22,10 @@ itinerary:
   - day: 1
     title: "Tour Trekking 7 Lagunas"
     description: "Caminata, contacto con la naturaleza y relajación en aguas termales."
-    images:
-      - "/images/7Lagunas/7-lagunas-2.webp"
-      - "/images/7Lagunas/7-lagunas-3.webp"
-      - "/images/7Lagunas/7-lagunas-4.webp"
+    images: 
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay05.webp"
     activities:
       - "Recojo desde hoteles en Cusco (04:30 a.m. aprox.)"
       - "Viaje en transporte turístico hacia Pacchanta"
@@ -37,10 +37,11 @@ itinerary:
       - "Retorno a Cusco (07:00 p.m. aprox.)"
 
 gallery:
-  - "/images/7Lagunas/7-lagunas-2.webp"
-  - "/images/7Lagunas/7-lagunas-3.webp"
-  - "/images/7Lagunas/7-lagunas-4.webp"
-  - "/images/Laguna_Humantay/DSC04361.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay06.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay07.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay10.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

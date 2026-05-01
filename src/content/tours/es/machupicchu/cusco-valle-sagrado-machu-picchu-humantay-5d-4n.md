@@ -28,7 +28,9 @@ itinerary:
     title: "Cusco – City Tour"
     description: "Primer contacto con la historia inca y colonial en la ciudad imperial."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Recepción en el aeropuerto y traslado al hotel"
       - "Visita a la Catedral de Cusco y el Qoricancha"
@@ -39,7 +41,9 @@ itinerary:
     title: "Valle Sagrado de los Incas"
     description: "Exploración cultural y paisajística del Valle Sagrado."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
     activities:
       - "Recorrido por Pisac y su mercado artesanal"
       - "Almuerzo buffet en Urubamba"
@@ -50,7 +54,9 @@ itinerary:
     title: "Machu Picchu – Maravilla del Mundo"
     description: "Visita guiada a la joya del Imperio Inca."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Traslado a la estación de tren y viaje a Aguas Calientes"
       - "Bus a Machu Picchu y tour guiado (aprox. 2h30)"
@@ -61,7 +67,9 @@ itinerary:
     title: "Laguna Humantay"
     description: "Excursión de altura hacia una de las lagunas más impresionantes de los Andes."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Excursión de día completo a la Laguna Humantay"
       - "Caminata guiada y tiempo para disfrutar del paisaje"
@@ -71,17 +79,21 @@ itinerary:
     title: "Cusco – Traslado al aeropuerto"
     description: "Fin del tour y retorno."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
     activities:
       - "Desayuno en el hotel"
       - "Traslado al aeropuerto para vuelo de retorno"
 
 gallery:
-  - "/images/Ollantaytambo/DSC03970.webp"
-  - "/images/Ollantaytambo/DSC03970.webp"
-  - "/images/Ollantaytambo/DSC03970.webp"
-
-videoUrl: ""
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo05.webp"
+  - "/itinerario/CUZCO/cusco06.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu08.webp"
+  
+videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 
 faq:
   - question: "¿Es difícil la caminata a la Laguna Humantay?"

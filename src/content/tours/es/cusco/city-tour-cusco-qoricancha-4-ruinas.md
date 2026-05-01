@@ -24,11 +24,10 @@ itinerary:
     title: "City Tour Cusco + Qoricancha & 4 Ruinas"
     description: "Historia y cultura viva en la capital del Imperio Inca."
     images:
-      - "/images/CityTour/sacsayhuaman-2.webp"
-      - "/images/CityTour/qoricancha-2.webp"
-      - "/images/CityTour/qenqo.webp"
-      - "/images/CityTour/puka-pukara.webp"
-      - "/images/Cuzco/FT1.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
     activities:
       - "Recojo desde el hotel en Cusco (turno mañana o tarde)"
       - "Visita al Templo de Qoricancha"
@@ -39,11 +38,12 @@ itinerary:
       - "Retorno a Cusco"
 
 gallery:
-  - "/images/CityTour/sacsayhuaman-2.webp"
-  - "/images/CityTour/qoricancha-2.webp"
-  - "/images/CityTour/qenqo.webp"
-  - "/images/CityTour/puka-pukara.webp"
-  - "/images/Cuzco/FT1.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
+      - "/itinerario/CUZCO/cusco06.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

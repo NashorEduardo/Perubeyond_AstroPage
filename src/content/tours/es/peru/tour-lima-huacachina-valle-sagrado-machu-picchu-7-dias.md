@@ -28,7 +28,9 @@ itinerary:
     title: "Llegada a Lima"
     description: "Bienvenida a la capital del Perú."
     images:
-      - "/images/MultiTours/lima-1.webp"
+      - "/itinerario/LIMA/lima01.webp"
+      - "/itinerario/LIMA/lima02.webp"
+      - "/itinerario/LIMA/lima03.webp"
     activities:
       - "Recepción en el aeropuerto y traslado al hotel"
       - "Tiempo libre para aclimatarse"
@@ -37,7 +39,9 @@ itinerary:
     title: "City Tour Lima Colonial y Moderna"
     description: "Recorrido por la historia y modernidad de Lima."
     images:
-      - "/images/MultiTours/lima-2.webp"
+      - "/itinerario/LIMA/lima04.webp"
+      - "/itinerario/LIMA/lima01.webp"
+      - "/itinerario/LIMA/lima02.webp"
     activities:
       - "Recorrido por el centro histórico: Plaza Mayor, Catedral y Convento de San Francisco"
       - "Visita a las catacumbas"
@@ -47,8 +51,9 @@ itinerary:
     title: "Paracas – Ica – Huacachina"
     description: "Naturaleza marina, viñedos y aventura en el desierto."
     images:
-      - "/images/MultiTours/paracas.webp"
-      - "/images/MultiTours/huacachina.webp"
+      - "/itinerario/PARACAS/paracas01.webp"
+      - "/itinerario/HUACACHINA/huacachina01.webp"
+      - "/itinerario/PARACAS/paracas02.webp"
     activities:
       - "Viaje en bus hacia Paracas"
       - "Paseo en bote a las Islas Ballestas"
@@ -60,7 +65,9 @@ itinerary:
     title: "Vuelo a Cusco"
     description: "Llegada a la ciudad imperial."
     images:
-      - "/images/MultiTours/cusco.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
     activities:
       - "Vuelo hacia Cusco"
       - "Recepción y traslado al hotel"
@@ -69,7 +76,9 @@ itinerary:
     title: "Valle Sagrado de los Incas"
     description: "Exploración de los principales atractivos del valle."
     images:
-      - "/images/MultiTours/valle-sagrado.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
     activities:
       - "Visita a Pisac (mercado artesanal y ruinas)"
       - "Almuerzo buffet en Urubamba"
@@ -80,7 +89,9 @@ itinerary:
     title: "Machu Picchu – Maravilla del Mundo"
     description: "Visita guiada a la ciudadela inca."
     images:
-      - "/images/MultiTours/machu-picchu-2.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Traslado a la estación de tren"
       - "Viaje en tren hacia Aguas Calientes"
@@ -92,18 +103,20 @@ itinerary:
     title: "Cusco – Lima – Retorno"
     description: "Fin del tour."
     images:
-      - "/images/MultiTours/aeropuerto.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
+      - "/itinerario/CUZCO/cusco06.webp"
     activities:
       - "Desayuno en el hotel"
       - "Traslado al aeropuerto"
       - "Vuelo de retorno"
 
 gallery:
-  - "/images/MultiTours/lima-1.webp"
-  - "/images/MultiTours/paracas.webp"
-  - "/images/MultiTours/huacachina.webp"
-  - "/images/MultiTours/valle-sagrado.webp"
-  - "/images/MultiTours/machu-picchu-2.webp"
+  - "/itinerario/LIMA/lima03.webp"
+  - "/itinerario/PARACAS/paracas03.webp"
+  - "/itinerario/HUACACHINA/huacachina02.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo03.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

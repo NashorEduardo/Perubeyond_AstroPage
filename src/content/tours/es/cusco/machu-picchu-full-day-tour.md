@@ -26,9 +26,10 @@ itinerary:
     title: "Full Day Machu Picchu – Maravilla del Mundo"
     description: "Un día completo descubriendo el santuario histórico más famoso del Perú."
     images:
-      - "/images/MachuPicchu/machu-picchu-2.webp"
-      - "/images/MachuPicchu/machu-picchu-3.webp"
-      - "/images/MachuPicchu/machu-picchu-4.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+
     activities:
       - "Recojo desde el hotel en Cusco"
       - "Traslado en bus turístico hacia Ollantaytambo"
@@ -41,10 +42,15 @@ itinerary:
       - "Traslado en bus bimodal hacia Cusco y hotel"
 
 gallery:
-  - "/images/MachuPicchu/machu-picchu-2.webp"
-  - "/images/MachuPicchu/machu-picchu-3.webp"
-  - "/images/MachuPicchu/machu-picchu-4.webp"
-  - "/images/Machupicchu/IMG_7709.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu08.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu07.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu06.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu05.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu08.webp"
+
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

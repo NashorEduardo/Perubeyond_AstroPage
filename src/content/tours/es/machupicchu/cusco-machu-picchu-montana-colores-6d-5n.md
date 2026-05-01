@@ -29,7 +29,9 @@ itinerary:
     title: "Cusco – City Tour"
     description: "Inicio del recorrido en la capital histórica del Imperio Inca."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Recepción en el aeropuerto y traslado al hotel"
       - "Visita a la Catedral, Qoricancha y complejos arqueológicos"
@@ -39,7 +41,9 @@ itinerary:
     title: "Valle Sagrado de los Incas"
     description: "Exploración de los principales atractivos del Valle Sagrado."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
     activities:
       - "Visita a Pisac y su mercado artesanal"
       - "Almuerzo buffet en Urubamba"
@@ -50,7 +54,9 @@ itinerary:
     title: "Machu Picchu – Maravilla del Mundo"
     description: "Visita a la ciudadela inca más importante del Perú."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Traslado a la estación de tren"
       - "Viaje a Aguas Calientes"
@@ -62,7 +68,9 @@ itinerary:
     title: "Laguna Humantay"
     description: "Excursión a una de las lagunas más impresionantes del Cusco."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Excursión de día completo a la Laguna Humantay"
       - "Caminata guiada en paisajes andinos"
@@ -72,7 +80,9 @@ itinerary:
     title: "Montaña de Colores (Vinicunca)"
     description: "Ascenso a uno de los paisajes más impresionantes del Perú."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Excursión de día completo a la Montaña de Colores"
       - "Caminata guiada"
@@ -83,15 +93,19 @@ itinerary:
     title: "Traslado al aeropuerto"
     description: "Fin del tour y retorno."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
     activities:
       - "Desayuno en el hotel"
       - "Traslado al aeropuerto para vuelo de retorno"
 
 gallery:
-  - "/images/Cuzco/cusco.webp"
-  - "/images/Cuzco/cusco.webp"
-  - "/images/Cuzco/cusco.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/7COLORES/7colores04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo05.webp"
+  - "/itinerario/CUZCO/cusco06.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

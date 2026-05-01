@@ -68,15 +68,19 @@ itinerary:
     title: "Cusco – Traslado al aeropuerto"
     description: "Fin del tour y retorno."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
     activities:
       - "Desayuno en el hotel"
       - "Traslado al aeropuerto para vuelo de retorno"
 
 gallery:
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
+  - "/itinerario/CUZCO/cusco03.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
+  - "/itinerario/CUZCO/cusco05.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu08.webp"
 
 videoUrl: ""
 

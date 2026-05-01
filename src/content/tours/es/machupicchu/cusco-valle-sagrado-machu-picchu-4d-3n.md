@@ -27,7 +27,9 @@ itinerary:
     title: "Llegada a Cusco – City Tour"
     description: "Inicio del viaje con un recorrido por los principales atractivos históricos de Cusco."
     images:
-      - "/images/ValleSagrado/ollantaytambo.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Recepción en el aeropuerto y traslado al hotel"
       - "Por la tarde, visita a la Catedral, Qoricancha y complejos arqueológicos cercanos: Sacsayhuamán, Qenqo, Puca Pucara y Tambomachay"
@@ -36,7 +38,9 @@ itinerary:
     title: "Valle Sagrado de los Incas"
     description: "Recorrido por los principales atractivos del Valle Sagrado."
     images:
-      - "/images/ValleSagrado/ollantaytambo.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
     activities:
       - "Recorrido por Pisac y su mercado artesanal"
       - "Almuerzo buffet en Urubamba"
@@ -47,7 +51,9 @@ itinerary:
     title: "Machu Picchu – Maravilla del Mundo"
     description: "Visita a la ciudadela inca más importante del Perú."
     images:
-      - "/images/ValleSagrado/ollantaytambo.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Traslado a la estación de tren y viaje a Aguas Calientes"
       - "Bus a Machu Picchu y visita guiada (aprox. 2h30)"
@@ -58,16 +64,20 @@ itinerary:
     title: "Cusco – Traslado al Aeropuerto"
     description: "Fin del tour y retorno."
     images:
-      - "/images/ValleSagrado/ollantaytambo.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
     activities:
       - "Desayuno en el hotel"
       - "Traslado al aeropuerto para vuelo de retorno"
 
 gallery:
-  - "/images/ValleSagrado/ollantaytambo.webp"
-  - "/images/ValleSagrado/ollantaytambo.webp"
-  - "/images/ValleSagrado/ollantaytambo.webp"
-
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo05.webp"
+  - "/itinerario/CUZCO/cusco06.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu06.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo08.webp"
+  
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 
 faq:

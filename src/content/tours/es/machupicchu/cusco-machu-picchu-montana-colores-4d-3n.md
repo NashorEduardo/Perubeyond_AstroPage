@@ -27,7 +27,9 @@ itinerary:
     title: "Cusco – City Tour"
     description: "Recorrido por los principales atractivos históricos y arqueológicos de Cusco."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Recepción en el aeropuerto y traslado al hotel"
       - "Visita a la Catedral, Qoricancha y complejos arqueológicos cercanos"
@@ -37,7 +39,9 @@ itinerary:
     title: "Machu Picchu – Maravilla del Mundo"
     description: "Visita a la ciudadela inca más importante del Perú."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu05.webp"
     activities:
       - "Traslado a la estación de tren y viaje a Aguas Calientes"
       - "Bus a Machu Picchu y tour guiado (aprox. 2h30)"
@@ -48,7 +52,9 @@ itinerary:
     title: "Montaña de Colores (Vinicunca)"
     description: "Excursión de día completo a uno de los paisajes más impresionantes del Perú."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Excursión a la Montaña de Colores"
       - "Caminata guiada y tiempo para disfrutar del paisaje"
@@ -58,15 +64,19 @@ itinerary:
     title: "Cusco – Traslado al aeropuerto"
     description: "Fin del tour y retorno."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
     activities:
       - "Desayuno en el hotel"
       - "Traslado al aeropuerto para vuelo de retorno"
 
 gallery:
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
+  - "/itinerario/7COLORES/7colores04.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/CUZCO/cusco06.webp"
+  - "/itinerario/7COLORES/7colores08.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu08.webp"
 
 videoUrl: ""
 

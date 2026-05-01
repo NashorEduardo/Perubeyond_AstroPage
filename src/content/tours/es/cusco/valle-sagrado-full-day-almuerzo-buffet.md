@@ -25,9 +25,10 @@ itinerary:
     title: "Full Day Valle Sagrado de los Incas"
     description: "Una jornada completa de historia, paisajes y cultura viva."
     images:
-      - "/images/ValleSagrado/pisac-2.webp"
-      - "/images/ValleSagrado/ollantaytambo.webp"
-      - "/images/ValleSagrado/chinchero.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero03.webp"
+
     activities:
       - "Recojo en la recepción del hotel (07:50 a.m. aprox.)"
       - "Salida hacia el Valle Sagrado"
@@ -38,11 +39,12 @@ itinerary:
       - "Retorno a Cusco (se deja al viajero a una cuadra de la Plaza de Armas)"
 
 gallery:
-  - "/images/ValleSagrado/pisac-2.webp"
-  - "/images/ValleSagrado/ollantaytambo.webp"
-  - "/images/ValleSagrado/chinchero.webp"
-  - "/images/ValleSagrado/ollantaytambo.webp"
-
+  - "/itinerario/CHINCHEROS/chinchero05.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo04.webp"
+  - "/itinerario/CHINCHEROS/chinchero07.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo08.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo12.webp"
+  
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 
 faq:

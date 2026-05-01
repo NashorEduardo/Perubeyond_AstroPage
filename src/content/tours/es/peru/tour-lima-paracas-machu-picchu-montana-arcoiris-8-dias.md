@@ -30,7 +30,9 @@ itinerary:
     title: "Llegada a Lima"
     description: "Bienvenida a la capital peruana y tiempo para aclimatarte tras el viaje."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/LIMA/lima01.webp"
+      - "/itinerario/LIMA/lima02.webp"
+      - "/itinerario/LIMA/lima03.webp"
     activities:
       - "Recepción en el aeropuerto y traslado al hotel"
       - "Tiempo libre para aclimatarse"
@@ -39,7 +41,9 @@ itinerary:
     title: "Paracas & Ica – Islas Ballestas y Huacachina"
     description: "Aventura en la costa sur del Perú entre fauna marina y dunas."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/PARACAS/paracas01.webp"
+      - "/itinerario/HUACACHINA/huacachina01.webp"
+      - "/itinerario/PARACAS/paracas02.webp"
     activities:
       - "Viaje en bus hacia Paracas"
       - "Paseo en bote a las Islas Ballestas"
@@ -51,7 +55,9 @@ itinerary:
     title: "Vuelo a Cusco – Ciudad Imperial"
     description: "Viaje hacia la capital del Imperio Inca."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
     activities:
       - "Vuelo hacia Cusco"
       - "Recepción y traslado al hotel"
@@ -60,7 +66,9 @@ itinerary:
     title: "Valle Sagrado de los Incas"
     description: "Recorrido por los principales atractivos del Valle Sagrado."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
     activities:
       - "Visita a Pisac (mercado artesanal y ruinas)"
       - "Almuerzo buffet en Urubamba"
@@ -71,7 +79,9 @@ itinerary:
     title: "Machu Picchu – Maravilla del Mundo"
     description: "Exploración de la ciudadela inca más famosa del mundo."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Traslado a la estación y viaje en tren a Aguas Calientes"
       - "Bus a Machu Picchu y tour guiado"
@@ -81,7 +91,9 @@ itinerary:
     title: "Laguna Humantay"
     description: "Excursión a una de las lagunas más impresionantes del Cusco."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Excursión de día completo a la Laguna Humantay"
       - "Caminata guiada y tiempo libre"
@@ -91,7 +103,9 @@ itinerary:
     title: "Montaña de Colores (Vinicunca)"
     description: "Ascenso a una de las maravillas naturales más impresionantes del Perú."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Excursión de día completo a la Montaña de Colores"
       - "Caminata guiada"
@@ -101,15 +115,19 @@ itinerary:
     title: "Cusco – Lima – Retorno"
     description: "Fin del viaje y retorno a casa."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
+      - "/itinerario/CUZCO/cusco06.webp"
     activities:
       - "Desayuno en el hotel"
       - "Traslado al aeropuerto para vuelo de retorno"
 
 gallery:
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
+  - "/itinerario/LIMA/lima04.webp"
+  - "/itinerario/HUACACHINA/huacachina02.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/7COLORES/7colores04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

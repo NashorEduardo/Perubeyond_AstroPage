@@ -27,7 +27,9 @@ itinerary:
     title: "Cusco – City Tour"
     description: "Recorrido por los principales atractivos históricos de la ciudad imperial."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Recepción en el aeropuerto y traslado al hotel"
       - "Visita a la Catedral, Qoricancha y complejos arqueológicos cercanos"
@@ -37,7 +39,9 @@ itinerary:
     title: "Valle Sagrado de los Incas"
     description: "Exploración de los principales destinos del Valle Sagrado."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
     activities:
       - "Visita a Pisac y su mercado artesanal"
       - "Almuerzo buffet en Urubamba"
@@ -48,7 +52,9 @@ itinerary:
     title: "Machu Picchu – Maravilla del Mundo"
     description: "Visita guiada a la ciudadela inca más importante del Perú."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Traslado a la estación de tren y viaje a Aguas Calientes"
       - "Bus a Machu Picchu y tour guiado (aprox. 2h30)"
@@ -59,7 +65,9 @@ itinerary:
     title: "Montaña de Colores (Vinicunca)"
     description: "Excursión de día completo a uno de los paisajes más impresionantes de los Andes."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Excursión a la Montaña de Colores"
       - "Caminata guiada y tiempo para disfrutar del paisaje"
@@ -69,15 +77,19 @@ itinerary:
     title: "Cusco – Traslado al aeropuerto"
     description: "Fin del tour y retorno."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
     activities:
       - "Desayuno en el hotel"
       - "Traslado al aeropuerto para vuelo de retorno"
 
 gallery:
-  - "/images/Ollantaytambo/DSC03970.webp"
-  - "/images/Ollantaytambo/DSC03970.webp"
-  - "/images/Ollantaytambo/DSC03970.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/7COLORES/7colores04.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo05.webp"
+  - "/itinerario/CUZCO/cusco06.webp"
+  - "/itinerario/7COLORES/7colores05.webp"
 
 videoUrl: ""
 

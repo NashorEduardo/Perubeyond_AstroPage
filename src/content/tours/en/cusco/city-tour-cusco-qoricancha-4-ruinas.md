@@ -24,7 +24,7 @@ itinerary:
     title: "City Tour Cusco + Qoricancha & 4 Ruins"
     description: "Living history and culture in the capital of the Inca Empire."
     images:
-      - "/images/CityTour/sacsayhuaman-2.webp"
+      - "/images/CUZCO/sacsayhuaman-2.webp"
       - "/images/CityTour/qoricancha-2.webp"
       - "/images/CityTour/qenqo.webp"
       - "/images/CityTour/puka-pukara.webp"

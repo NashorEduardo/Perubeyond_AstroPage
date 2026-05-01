@@ -27,7 +27,9 @@ itinerary:
     title: "Llegada a Cusco – City Tour"
     description: "Inicio del viaje con un recorrido por los principales atractivos históricos de Cusco."
     images:
-      - "/images/Machupicchu/IMG_7709.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Recepción en el aeropuerto y traslado al hotel"
       - "Por la tarde, visita guiada al Qoricancha (Templo del Sol), Catedral y complejos arqueológicos cercanos: Sacsayhuamán, Qenqo, Puca Pucara y Tambomachay"
@@ -37,7 +39,9 @@ itinerary:
     title: "Machu Picchu – Maravilla del Mundo"
     description: "Excursión a la ciudadela inca más importante del Perú."
     images:
-      - "/images/Machupicchu/IMG_7709.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Traslado temprano a la estación de tren"
       - "Viaje hacia Aguas Calientes y subida en bus a Machu Picchu"
@@ -50,15 +54,18 @@ itinerary:
     title: "Cusco – Traslado al Aeropuerto"
     description: "Fin del tour y retorno."
     images:
-      - "/images/Machupicchu/IMG_7709.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco07.webp"    
     activities:
       - "Traslado al aeropuerto para su vuelo de retorno"
 
 gallery:
-  - "/images/Machupicchu/IMG_7709.webp"
-  - "/images/Machupicchu/IMG_7709.webp"
-  - "/images/Machupicchu/IMG_7709.webp"
-
+  - "/itinerario/CUZCO/cusco03.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/CUZCO/cusco05.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu05.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu06.webp"
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 
 faq:

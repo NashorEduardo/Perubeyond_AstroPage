@@ -30,7 +30,9 @@ itinerary:
     title: "Llegada a Lima"
     description: "Bienvenida a la capital del Perú."
     images:
-      - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
+      - "/itinerario/LIMA/lima01.webp"
+      - "/itinerario/LIMA/lima02.webp"
+      - "/itinerario/LIMA/lima03.webp"
     activities:
       - "Recepción en el aeropuerto y traslado al hotel"
       - "Tiempo libre para descansar o aclimatarse"
@@ -39,7 +41,9 @@ itinerary:
     title: "City Tour Lima Colonial y Moderna"
     description: "Recorrido por los principales atractivos históricos y modernos de Lima."
     images:
-      - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
+      - "/itinerario/LIMA/lima04.webp"
+      - "/itinerario/LIMA/lima01.webp"
+      - "/itinerario/LIMA/lima02.webp"
     activities:
       - "Recorrido por Lima colonial: Plaza Mayor, Catedral, Convento de San Francisco y catacumbas"
       - "Vista panorámica de Miraflores y San Isidro"
@@ -48,7 +52,9 @@ itinerary:
     title: "Paracas e Ica – Islas Ballestas y Oasis de Huacachina"
     description: "Aventura en la costa sur del Perú."
     images:
-      - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
+      - "/itinerario/PARACAS/paracas01.webp"
+      - "/itinerario/HUACACHINA/huacachina01.webp"
+      - "/itinerario/PARACAS/paracas02.webp"
     activities:
       - "Viaje en bus hacia Paracas"
       - "Paseo en bote a las Islas Ballestas"
@@ -60,7 +66,9 @@ itinerary:
     title: "Vuelo a Cusco"
     description: "Traslado hacia la ciudad imperial."
     images:
-      - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
     activities:
       - "Vuelo hacia Cusco"
       - "Recepción y traslado al hotel"
@@ -69,7 +77,9 @@ itinerary:
     title: "Valle Sagrado de los Incas"
     description: "Exploración de los principales atractivos del Valle Sagrado."
     images:
-      - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
     activities:
       - "Visita a Pisac (mercado artesanal y ruinas)"
       - "Almuerzo buffet en Urubamba"
@@ -80,7 +90,9 @@ itinerary:
     title: "Machu Picchu – Maravilla del Mundo"
     description: "Visita a la ciudadela inca más importante del Perú."
     images:
-      - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Traslado a la estación y viaje en tren a Aguas Calientes"
       - "Bus a Machu Picchu y tour guiado"
@@ -90,7 +102,9 @@ itinerary:
     title: "Laguna Humantay"
     description: "Excursión a una de las lagunas más impresionantes del Cusco."
     images:
-      - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Excursión de día completo a la Laguna Humantay"
       - "Retorno a Cusco por la tarde"
@@ -99,7 +113,9 @@ itinerary:
     title: "Montaña de Colores (Vinicunca)"
     description: "Ascenso a uno de los paisajes más impresionantes del Perú."
     images:
-      - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Excursión de día completo a la Montaña de Colores"
       - "Caminata guiada y tiempo para fotografías"
@@ -108,15 +124,20 @@ itinerary:
     title: "Cusco – Lima – Retorno"
     description: "Fin del tour y retorno."
     images:
-      - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
+      - "/itinerario/CUZCO/cusco06.webp"
     activities:
       - "Desayuno en el hotel"
       - "Traslado al aeropuerto para vuelo de retorno"
 
 gallery:
-  - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
-  - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
-  - "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
+  - "/itinerario/LIMA/lima04.webp"
+  - "/itinerario/PARACAS/paracas03.webp"
+  - "/itinerario/HUACACHINA/huacachina02.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
+  - "/itinerario/7COLORES/7colores04.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

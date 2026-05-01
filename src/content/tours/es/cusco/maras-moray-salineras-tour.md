@@ -24,9 +24,11 @@ itinerary:
     title: "Salineras de Maras, Moray & Centro Textil en Chinchero"
     description: "Paisajes, innovación agrícola y tradición viva en los Andes."
     images:
-      - "/images/MarasMoray/moray-2.webp"
-      - "/images/MarasMoray/salineras-2.webp"
-      - "/images/MarasMoray/chinchero-textil.webp"
+      - "/itinerario/MARAS/maras01.webp"
+      - "/itinerario/MARAS/maras02.webp"
+      - "/itinerario/MORAY/moray03.webp"
+      - "/itinerario/MORAY/moray02.webp"
+
     activities:
       - "Recojo desde el hotel en Cusco (08:00 a.m. aprox.)"
       - "Salida hacia el Valle Sagrado"
@@ -36,10 +38,13 @@ itinerary:
       - "Retorno a Cusco (03:00 p.m. aprox.)"
 
 gallery:
-  - "/images/MarasMoray/moray-2.webp"
-  - "/images/MarasMoray/salineras-2.webp"
-  - "/images/MarasMoray/chinchero-textil.webp"
-  - "/images/Maras/F1.webp"
+      - "/itinerario/MARAS/maras01.webp"
+      - "/itinerario/MARAS/maras02.webp"
+      - "/itinerario/MORAY/moray03.webp"
+      - "/itinerario/MORAY/moray02.webp"
+      - "/itinerario/MORAY/moray01.webp"
+
+
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 
