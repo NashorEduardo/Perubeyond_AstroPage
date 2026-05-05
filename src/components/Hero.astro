@@ -2,16 +2,17 @@
 ---
 <section class="relative h-screen flex items-center overflow-hidden">
 
-  <!-- Video de fondo YouTube -->
+  <!-- Video de fondo local -->
   <div class="absolute inset-0 w-full h-full pointer-events-none">
-    <iframe
-      id="hero-yt"
-      src="https://www.youtube.com/embed/HjTJtS7r8do?autoplay=1&mute=1&loop=1&playlist=HjTJtS7r8do&controls=0&showinfo=0&rel=0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full min-w-[177.78vh] min-h-[56.25vw]"
-      style="border:0;"
-    ></iframe>
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
+    >
+      <source src="/images/PeruBeyond/Per%C3%BA_Beyond_Video.mp4" type="video/mp4" />
+    </video>
   </div>
 
   <!-- Overlay oscuro -->
