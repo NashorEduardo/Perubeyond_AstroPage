@@ -7,9 +7,35 @@ export interface Props {
   oldPrice?: string;
   location?: string;
   description: string;
-  href?: string;
+  slug: string;
+  category: string;
 }
-const { image, title, duration, price, oldPrice, location, description, href = '#' } = Astro.props;
+
+const {
+  image,
+  title,
+  duration,
+  price,
+  oldPrice,
+  location,
+  description,
+  slug,
+  category
+} = Astro.props;
+
+// detectar idioma actual
+const lang = Astro.url.pathname.split('/')[2];
+
+const validLangs = ['es', 'en', 'pt'];
+
+const currentLang = validLangs.includes(lang)
+  ? lang
+  : 'es';
+
+// generar link
+const href = currentLang === 'es'
+  ? `/tours/${category}/${slug}`
+  : `/tours/${currentLang}/${category}/${slug}`;
 ---
 
 <a href={href} class="tour-card group">
