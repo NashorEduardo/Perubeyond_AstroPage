@@ -1,4 +1,19 @@
 ---
+
+/// LOGICA DE LAS DIRECCIONES DE LOS TOURS EN LOS DIFERENTES LENGUAJES 
+const lang = Astro.url.pathname.split('/')[1];
+const validLangs = ['es', 'en', 'pt'];
+const currentLang = validLangs.includes(lang) ? lang : 'es';
+
+// helper
+const getTourLink = (slug, category) => {
+  return currentLang === 'es'
+    ? `/tours/${category}/${slug}`  
+    : `/tours/${currentLang}/${category}/${slug}`;
+};
+
+
+
 const tours = [
   {
     image: '/images/Huacachina/ica.jpg',
@@ -6,6 +21,9 @@ const tours = [
     duration: '7 Días / 6 Noches',
     price: '407',
     description: 'El gran circuito de la costa y sierra: dunas gigantes de Huacachina, la Reserva de Paracas y la magia inca de Cusco con Machu Picchu en un solo viaje.',
+    slug : 'tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias',
+    category : 'peru'
+
   },
   {
     image: '/images/Machupicchu/IMG_7709.webp',
@@ -13,6 +31,8 @@ const tours = [
     duration: '6 Días / 5 Noches',
     price: '348',
     description: 'Combina el desierto costero de Huacachina y las aguas turquesas de Paracas con la ciudadela de Machu Picchu, la maravilla del mundo moderno.',
+    slug : 'tour-lima-paracas-cusco-machu-picchu-6-dias',
+    category : 'peru'
   },
   {
     image: '/images/Lima/lima.webp',
@@ -20,6 +40,9 @@ const tours = [
     duration: '7 Días / 6 Noches',
     price: '449',
     description: 'Recorre el centro histórico de Lima, el oasis de Ica, las ruinas del Cusco imperial y culmina con la impresionante ciudadela de Machu Picchu.',
+    slug : 'tour-lima-huacachina-valle-sagrado-machu-picchu-7-dias',
+    category : 'peru'  
+  
   },
   {
     image: '/images/Montaña_de_7_colores/DSC02961.webp',
@@ -27,6 +50,8 @@ const tours = [
     duration: '8 Días / 7 Noches',
     price: '416',
     description: 'Desde la costa de Paracas hasta los Andes más coloridos del mundo. Naturaleza, cultura y los paisajes más únicos del Perú.',
+    slug : 'tour-lima-paracas-machu-picchu-montana-arcoiris-8-dias',
+    category : 'peru'
   },
   {
     image: '/images/Paracas/pexels-gilmerdiaz-14097704.webp',
@@ -34,6 +59,8 @@ const tours = [
     duration: '9 Días / 8 Noches',
     price: '690',
     description: 'La ruta completa de la costa sur con la profundidad andina: Paracas, las dunas de Ica, Machu Picchu y la Montaña Arcoíris.',
+    slug : 'tour-lima-paracas-machu-picchu-montana-arcoiris-9-dias',
+    category : 'peru'
   },
   {
     image: '/images/ValleSagrado/ollantaytambo.webp',
@@ -41,6 +68,8 @@ const tours = [
     duration: '10 Días / 9 Noches',
     price: '723',
     description: 'El viaje más completo: gastronomía limeña, aventura en las dunas de Ica, el Valle Sagrado y la maravilla de Machu Picchu en 10 días.',
+    slug : 'tour-lima-huacachina-machu-picchu-montana-arcoiris-10-dias',
+    category : 'peru'
   },
 ];
 ---
@@ -64,7 +93,7 @@ const tours = [
         <div class="swiper-wrapper items-start">
           {tours.map(t => (
             <div class="swiper-slide tours-peru-slide">
-              <a href="#" class="flex flex-col group">
+              <a href={getTourLink(t.slug, t.category)} class="flex flex-col group">
 
                 <!-- Imagen -->
                 <div class="overflow-hidden mb-5">
