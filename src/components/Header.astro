@@ -145,25 +145,28 @@ const menu: MenuItem[] = [
     <a href="/" class="flex items-center flex-shrink-0">
       <img id="header-logo"
            src="/images/PeruBeyond/Logo.png"
+           alt="Peru Beyond"
            width="90"
            class="transition-all duration-300" />
     </a>
 
     <!-- Nav Desktop -->
-    <nav class="hidden lg:flex items-center h-full">
+    <nav class="hidden lg:flex items-center h-full" aria-label="Menú principal">
       {menu.map(m => (
         <div class="group h-full flex items-center relative">
           <a href={m.href}
-             class="header-link font-bold text-[13px] tracking-wider px-5 py-2 transition-all duration-300 text-white hover:text-gold flex items-center gap-1.5 rounded-lg hover:bg-white/10">
+             class="header-link font-bold text-[13px] tracking-wider px-5 py-2 transition-all duration-300 text-white hover:text-gold flex items-center gap-1.5 rounded-lg hover:bg-white/10"
+             aria-haspopup="true">
             <span data-i18n={m.navKey}>{m.label}</span>
-            <i class="bi bi-chevron-down text-[9px] transition-transform duration-300 group-hover:rotate-180 opacity-60"></i>
+            <i class="bi bi-chevron-down text-[9px] transition-transform duration-300 group-hover:rotate-180 opacity-60" aria-hidden="true"></i>
           </a>
 
           <div class={`mega-dropdown pt-1
             opacity-0 invisible pointer-events-none
             group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+            group-focus-within:opacity-100 group-focus-within:visible group-focus-within:pointer-events-auto
             transition-all duration-300 ease-out
-            translate-y-2 group-hover:translate-y-0
+            translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0
             ${m.type === 'mega-peru'
               ? 'fixed top-[50px] left-1/2 -translate-x-1/2 w-[980px]'
               : 'absolute top-[100%] left-1/2 -translate-x-1/2'}`}>
@@ -438,7 +441,7 @@ const menu: MenuItem[] = [
                         <i class="bi bi-envelope-fill text-gold"></i>
                         {m.details.contact.email}
                       </a>
-                      <a href={`https://wa.me/${m.details.contact.whatsapp}`} target="_blank"
+                      <a href={`https://wa.me/${m.details.contact.whatsapp}`} target="_blank" rel="noopener noreferrer"
                          class="flex items-center gap-2 text-xs text-gray-500 hover:text-green-500 transition-colors">
                         <i class="bi bi-whatsapp text-green-500"></i>
                         <span data-i18n="cta.whatsapp">WhatsApp directo</span>
@@ -483,8 +486,11 @@ const menu: MenuItem[] = [
       <LanguageSwitcher />
 
       <button id="mobile-menu-btn"
-              class="header-burger lg:hidden text-2xl text-white transition-colors duration-300 focus:outline-none p-2">
-        <i class="bi bi-list"></i>
+              class="header-burger lg:hidden text-2xl text-white transition-colors duration-300 focus:outline-none p-2"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <i class="bi bi-list" aria-hidden="true"></i>
       </button>
     </div>
   </div>
@@ -498,20 +504,21 @@ const menu: MenuItem[] = [
 
   <div class="flex justify-between items-center px-8 py-6 border-b border-white/10">
     <img src="/images/PeruBeyond/Logo.png"
-         alt="Logo" width="120" class="brightness-0 invert" />
-    <button id="close-menu-btn" class="text-white text-3xl p-1">
-      <i class="bi bi-x"></i>
+         alt="Peru Beyond" width="120" class="brightness-0 invert" />
+    <button id="close-menu-btn" class="text-white text-3xl p-1" aria-label="Cerrar menú">
+      <i class="bi bi-x" aria-hidden="true"></i>
     </button>
   </div>
 
-  <nav class="flex-1 px-6 py-6 space-y-1">
+  <nav class="flex-1 px-6 py-6 space-y-1" aria-label="Menú móvil">
     {menu.map((m, i) => (
       <div class="mobile-item border-b border-white/10">
         <button
           class="mobile-trigger w-full flex items-center justify-between py-4 text-white text-base font-black uppercase tracking-tight hover:text-gold transition-colors"
-          data-index={String(i)}>
+          data-index={String(i)}
+          aria-expanded="false">
           <span data-i18n={m.navKey}>{m.label}</span>
-          <i class="bi bi-chevron-down text-xs text-white/40 transition-transform duration-300"></i>
+          <i class="bi bi-chevron-down text-xs text-white/40 transition-transform duration-300" aria-hidden="true"></i>
         </button>
         <div class="mobile-submenu overflow-hidden max-h-0 transition-all duration-400">
           <div class="pb-4 pl-2 space-y-2">
@@ -548,7 +555,7 @@ const menu: MenuItem[] = [
     <a href="tel:+51943491959" class="flex items-center gap-2 text-white font-bold text-lg">
       <i class="bi bi-telephone-fill text-gold text-sm"></i> +51 943 491 959
     </a>
-    <a href="https://wa.me/51943491959" target="_blank"
+    <a href="https://wa.me/51943491959" target="_blank" rel="noopener noreferrer"
        class="flex items-center gap-2 bg-green-500 text-white font-bold px-5 py-3 rounded-xl text-sm justify-center">
       <i class="bi bi-whatsapp"></i>
       <span data-i18n="cta.whatsapp">WhatsApp directo</span>
@@ -581,8 +588,16 @@ const menu: MenuItem[] = [
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  openBtn?.addEventListener('click', () => mobileMenu?.classList.remove('translate-x-full'));
-  closeBtn?.addEventListener('click', () => mobileMenu?.classList.add('translate-x-full'));
+  openBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('translate-x-full');
+    openBtn.setAttribute('aria-expanded', 'true');
+    openBtn.setAttribute('aria-label', 'Cerrar menú');
+  });
+  closeBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.add('translate-x-full');
+    openBtn?.setAttribute('aria-expanded', 'false');
+    openBtn?.setAttribute('aria-label', 'Abrir menú');
+  });
 
   document.querySelectorAll('.mobile-trigger').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -593,10 +608,12 @@ const menu: MenuItem[] = [
 
       document.querySelectorAll('.mobile-submenu').forEach(s => s.style.maxHeight = '0px');
       document.querySelectorAll('.mobile-trigger i').forEach(i => i.style.transform = '');
+      document.querySelectorAll('.mobile-trigger').forEach(b => b.setAttribute('aria-expanded', 'false'));
 
       if (!isOpen && submenu) {
         submenu.style.maxHeight = submenu.scrollHeight + 'px';
         if (icon) icon.style.transform = 'rotate(180deg)';
+        btn.setAttribute('aria-expanded', 'true');
       }
     });
   });
