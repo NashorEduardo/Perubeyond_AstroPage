@@ -2,13 +2,8 @@
 ---
 <section class="relative h-screen flex items-center overflow-hidden">
 
-  <!-- Móvil: gradiente CSS puro (sin imagen → LCP es el texto, carga instantánea) -->
-  <div class="block md:hidden absolute inset-0 w-full h-full"
-       style="background: linear-gradient(160deg, #0d1b2e 0%, #1a3a5c 60%, #0d2a1a 100%);">
-  </div>
-
-  <!-- Desktop: video con poster -->
-  <div class="hidden md:block absolute inset-0 w-full h-full pointer-events-none">
+  <!-- Video de fondo -->
+  <div class="absolute inset-0 w-full h-full pointer-events-none">
     <video
       autoplay
       muted
