@@ -28,11 +28,11 @@ const quickLinks = [
 ];
 
 const socials = [
-  { icon: 'bi-facebook',  href: 'https://www.facebook.com/perubeyond' },
-  { icon: 'bi-instagram', href: 'https://www.instagram.com/perubeyond/' },
-  { icon: 'bi-tiktok',    href: 'https://www.tiktok.com/@perubeyond_agency' },
-  { icon: 'bi-youtube',   href: '#' },
-  { icon: 'bi-whatsapp',  href: 'https://wa.me/51943491959' },
+  { icon: 'bi-facebook',  href: 'https://www.facebook.com/perubeyond',          label: 'Facebook de Peru Beyond' },
+  { icon: 'bi-instagram', href: 'https://www.instagram.com/perubeyond/',         label: 'Instagram de Peru Beyond' },
+  { icon: 'bi-tiktok',    href: 'https://www.tiktok.com/@perubeyond_agency',     label: 'TikTok de Peru Beyond' },
+  { icon: 'bi-youtube',   href: '#',                                             label: 'YouTube de Peru Beyond' },
+  { icon: 'bi-whatsapp',  href: 'https://wa.me/51943491959',                     label: 'WhatsApp de Peru Beyond' },
 ];
 ---
 
@@ -126,9 +126,10 @@ const socials = [
             href={s.href}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={s.label}
             class="w-10 h-10 rounded-full bg-[#FFBC00] hover:bg-[#e6a900] transition flex items-center justify-center"
           >
-            <i class={`bi ${s.icon} text-white`}></i>
+            <i class={`bi ${s.icon} text-white`} aria-hidden="true"></i>
           </a>
         ))}
       </div>
