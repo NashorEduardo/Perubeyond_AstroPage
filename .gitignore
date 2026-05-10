@@ -3,3 +3,6 @@ dist
 .astro
 .env
 .DS_Store
+*.mp4
+*.MP4
+!public/images/PeruBeyond/MachuPicchu-PerúBeyond.mp4

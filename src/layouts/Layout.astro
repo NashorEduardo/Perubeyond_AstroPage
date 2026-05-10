@@ -46,12 +46,13 @@ const ogImageAbs = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteB
     {langAlternates?.en && <link rel="alternate" hreflang="en" href={langAlternates.en} />}
     {langAlternates?.pt && <link rel="alternate" hreflang="pt-BR" href={langAlternates.pt} />}
     {langAlternates && <link rel="alternate" hreflang="x-default" href={langAlternates.es ?? canonicalURL.href} />}
-    <link rel="icon" href="/images/PeruBeyond/Gallito_PeruBeyond_nobg.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/images/PeruBeyond/Gallito_PeruBeyond_nobg.png" />
+    <link rel="icon" href="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp" type="image/webp" />
+    <link rel="apple-touch-icon" href="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Satisfy&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
     <slot name="head" />
     <!-- i18n: embed translations & apply on load -->
     <script define:vars={{ i18nData: ui }} is:inline>
