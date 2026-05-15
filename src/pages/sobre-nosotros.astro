@@ -167,12 +167,14 @@ const reasons = [
           </p>
         </div>
         <div class="certs-logos">
-          {certLogos.map(logo => (
-            <img
-              src={logo.src}
-              alt={logo.alt}
-              class="cert-logo"
-            />
+          {certLogos.map((logo, i) => (
+            <div class={`cert-logo-wrap ${i >= 1 && i <= 3 ? 'cert-logo-wrap--lg' : 'cert-logo-wrap--sm'}`}>
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                class="cert-logo"
+              />
+            </div>
           ))}
         </div>
       </section>
@@ -549,12 +551,18 @@ const reasons = [
     padding-top: 2.5rem;
     border-top: 1px solid #f0ebe2;
   }
-  .cert-logo {
-    height: 3.5rem;
-    object-fit: contain;
-    filter: grayscale(1);
-    opacity: 0.45;
-    transition: filter 0.35s, opacity 0.35s, transform 0.25s;
+  .cert-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .cert-logo:hover { filter: grayscale(0); opacity: 1; transform: scale(1.06); }
+  .cert-logo-wrap--sm { width: 7rem; height: 5rem; }
+  .cert-logo-wrap--lg { width: 9rem; height: 7rem; }
+  .cert-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.25s;
+  }
+  .cert-logo:hover { transform: scale(1.06); }
 </style>
