@@ -261,7 +261,7 @@ const menu: MenuItem[] = [
                             alt={img.label}
                             loading="lazy"
                           />
-                          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                          <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-transparent"></div>
                           <div class="absolute bottom-0 left-0 right-0 p-4">
                             <span class="text-white font-bold text-sm tracking-wider uppercase block">
                               {img.label}
@@ -312,7 +312,7 @@ const menu: MenuItem[] = [
                           alt={cat.title}
                           loading="lazy" />
 
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10"></div>
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/5"></div>
                       <div class="absolute inset-0 bg-gold/0 group-hover/card:bg-gold/10 transition-colors duration-500"></div>
 
                       <div class="absolute inset-0 flex flex-col justify-end p-6">
@@ -568,6 +568,7 @@ const menu: MenuItem[] = [
   const links      = document.querySelectorAll('.header-link');
   const phone      = document.querySelector('.header-phone');
   const burger     = document.querySelector('.header-burger');
+  const logo       = document.getElementById('header-logo');
   const mobileMenu = document.getElementById('mobile-menu');
   const openBtn    = document.getElementById('mobile-menu-btn');
   const closeBtn   = document.getElementById('close-menu-btn');
@@ -583,6 +584,7 @@ const menu: MenuItem[] = [
     });
     if (phone)  { phone.classList.toggle('text-white',  !scrolled); phone.classList.toggle('text-navy',  scrolled); }
     if (burger) { burger.classList.toggle('text-white', !scrolled); burger.classList.toggle('text-navy', scrolled); }
+    if (logo)   { logo.classList.toggle('brightness-0', !scrolled); logo.classList.toggle('invert', !scrolled); }
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });

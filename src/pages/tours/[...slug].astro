@@ -76,8 +76,8 @@ const langAlternates = {
       class="absolute inset-0 w-full h-full object-cover scale-105 hero-img"
     />
     <!-- Overlay en dos capas: oscuridad base + degradado hacia abajo -->
-    <div class="absolute inset-0 bg-black/40"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+    <div class="absolute inset-0 bg-black/25"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent"></div>
 
     <!-- Contenido del hero -->
     <div class="relative max-w-7xl mx-auto h-full flex flex-col justify-end pb-16 px-6">
@@ -235,70 +235,6 @@ const langAlternates = {
         </div>
       </section>  
 
-      <!-- ── SECCIÓN: INCLUYE / NO INCLUYE (MODIFICADO - DISEÑO MÁS LIMPIO) ── -->
-      {(includes || excludes) && (
-        <section id = "incluye" >
-          <div class="flex items-center gap-4 mb-8">
-            <div class="w-1 h-10 bg-gold rounded-full"></div>
-            <h2 class="text-3xl font-extrabold text-navy">{t['tour.what_includes']}</h2>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-            <!-- Incluye -->
-            {includes && (
-              <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <div class="bg-emerald-50 px-6 py-4 border-b border-emerald-100">
-                  <h3 class="text-lg font-bold text-emerald-800 flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    {t['tour.includes']}
-                  </h3>
-                </div>
-                <ul class="p-6 space-y-4">
-                  {includes.map((item) => (
-                    <li class="flex items-start gap-3 text-sm text-gray-700">
-                      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center">
-                        <svg class="w-3 h-3 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                        </svg>
-                      </span>
-                      <span class="leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            <!-- No incluye -->
-            {excludes && (
-              <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <div class="bg-red-50 px-6 py-4 border-b border-red-100">
-                  <h3 class="text-lg font-bold text-red-800 flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                    {t['tour.not_included']}
-                  </h3>
-                </div>
-                <ul class="p-6 space-y-4">
-                  {excludes.map((item) => (
-                    <li class="flex items-start gap-3 text-sm text-gray-700">
-                      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center">
-                        <svg class="w-3 h-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                      </span>
-                      <span class="leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-          </div>
-        </section>
-      )}
-
-
-
       <!--ITINERARIO  -->
       <!-- ── SECCIÓN: ITINERARIO ── -->
       {itinerary && itinerary.length > 0 && (
@@ -446,6 +382,68 @@ const langAlternates = {
         </div>
       )}
 
+      <!-- ── SECCIÓN: INCLUYE / NO INCLUYE ── -->
+      {(includes || excludes) && (
+        <section id="incluye">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="w-1 h-10 bg-gold rounded-full"></div>
+            <h2 class="text-3xl font-extrabold text-navy">{t['tour.what_includes']}</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Incluye -->
+            {includes && (
+              <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="bg-emerald-50 px-6 py-4 border-b border-emerald-100">
+                  <h3 class="text-lg font-bold text-emerald-800 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    {t['tour.includes']}
+                  </h3>
+                </div>
+                <ul class="p-6 space-y-4">
+                  {includes.map((item) => (
+                    <li class="flex items-start gap-3 text-sm text-gray-700">
+                      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center">
+                        <svg class="w-3 h-3 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                        </svg>
+                      </span>
+                      <span class="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <!-- No incluye -->
+            {excludes && (
+              <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="bg-red-50 px-6 py-4 border-b border-red-100">
+                  <h3 class="text-lg font-bold text-red-800 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    {t['tour.not_included']}
+                  </h3>
+                </div>
+                <ul class="p-6 space-y-4">
+                  {excludes.map((item) => (
+                    <li class="flex items-start gap-3 text-sm text-gray-700">
+                      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center">
+                        <svg class="w-3 h-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                      </span>
+                      <span class="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+          </div>
+        </section>
+      )}
+
       <!-- ── SECCIÓN: PREGUNTAS FRECUENTES ── -->
       {faq && faq.length > 0 && (
         <section>
@@ -561,11 +559,11 @@ const langAlternates = {
   </main>
  <!-- ── SECCIÓN: GALERÍA (MODIFICADO - FONDO OSCURO) ── -->
  {gallery && gallery.length > 0 && (
-  <section id = "galeria" class="bg-navy py-16">
+  <section id="galeria" style="background-color:#f0f5fa;" class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex items-center gap-4 mb-8">
         <div class="w-1 h-10 bg-gold rounded-full"></div>
-        <h2 class="text-3xl font-extrabold text-white">{t['tour.gallery_title']}</h2>
+        <h2 class="text-3xl font-extrabold text-navy">{t['tour.gallery_title']}</h2>
       </div>
 
       <div class="grid grid-cols-3 grid-rows-2 gap-3 h-[520px]">
