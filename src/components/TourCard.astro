@@ -7,8 +7,9 @@ export interface Props {
   oldPrice?: string;
   location?: string;
   description: string;
-  slug: string;
-  category: string;
+  href?: string;
+  slug?: string;
+  category?: string;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   oldPrice,
   location,
   description,
+  href: hrefProp,
   slug,
   category
 } = Astro.props;
@@ -32,10 +34,11 @@ const currentLang = validLangs.includes(lang)
   ? lang
   : 'es';
 
-// generar link
-const href = currentLang === 'es'
-  ? `/tours/${category}/${slug}`
-  : `/tours/${currentLang}/${category}/${slug}`;
+// usar href directo si se provee, sino generarlo desde slug+category
+const href = hrefProp
+  ?? (currentLang === 'es'
+    ? `/tours/${category}/${slug}`
+    : `/tours/${currentLang}/${category}/${slug}`);
 ---
 
 <a href={href} class="tour-card group">
