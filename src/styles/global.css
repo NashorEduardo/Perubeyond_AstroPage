@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Raleway', sans-serif; color: #0D1B2E; }
 .btn-gold:hover { background:#202f59; color:#FFBC00; }
 .section { padding: 70px 0; }
 .script-title {
-  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-family: 'Raleway', sans-serif;
   font-style: italic;
   font-weight: 600;
   color: #8c6d1f;
