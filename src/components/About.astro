@@ -17,7 +17,9 @@ const certLogos = [
           <!-- Header -->
           <div class="ig-header">
             <div class="ig-avatar">
-              <img src="/images/PeruBeyond/Logo.png" alt="perubeyond" />
+              <div class="ig-avatar-inner">
+                <img src="/images/PeruBeyond/Logo.webp" alt="perubeyond" />
+              </div>
             </div>
             <div class="ig-user">
               <span class="ig-username">perubeyond</span>
@@ -67,7 +69,7 @@ const certLogos = [
       <!-- Columna derecha -->
       <div>
         <span class="script-title" data-i18n="about.badge">Sobre Nosotros</span>
-        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4" style="font-family:'Times New Roman',Times,serif;" data-i18n="about.title">Tu Puerta de Entrada a un Perú Auténtico y Exclusivo</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4" style="font-family:'Raleway',sans-serif;" data-i18n="about.title">Tu Puerta de Entrada a un Perú Auténtico y Exclusivo</h2>
         <p class="text-gray-600 mb-6" data-i18n="about.desc">En Peru Beyond, creamos rutas únicas y significativas que van mucho más allá de lo convencional. Nos especializamos en conectar a viajeros exigentes con la esencia viva de los Andes, la Amazonía y nuestras costas, permitiéndoles descubrir el Perú desde una perspectiva auténtica, profunda y memorable. Cada experiencia es cuidadosamente diseñada para integrar cultura, naturaleza y confort, combinando tradiciones ancestrales con paisajes extraordinarios y servicios de alta calidad. Nuestro compromiso es ofrecer un servicio personalizado, cuidando cada detalle de tu aventura para que vivas un viaje exclusivo, inspirador y lleno de momentos inolvidables.</p>
 
         <a
@@ -107,7 +109,7 @@ const certLogos = [
     border: 1px solid #dbdbdb;
     border-radius: 12px;
     background: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Raleway', sans-serif;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   }
@@ -121,24 +123,30 @@ const certLogos = [
   }
 
   .ig-avatar {
-    width: 42px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     padding: 2px;
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     flex-shrink: 0;
   }
 
+  .ig-avatar-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+  }
+
   .ig-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-sizing: border-box;
+    object-position: left center;
     display: block;
-    background: #fff;
+    transform: scale(2.6);
+    transform-origin: 14% 44%;
   }
 
   .ig-user {
