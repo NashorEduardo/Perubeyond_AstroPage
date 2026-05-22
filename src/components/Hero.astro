@@ -1,5 +1,3 @@
----
----
 <section class="relative h-screen flex items-center overflow-hidden">
 
   <!-- Video de fondo -->
@@ -18,36 +16,74 @@
     </video>
   </div>
 
-  <!-- Overlay oscuro para contraste -->
+  <!-- Overlays -->
   <div class="absolute inset-0 bg-black/45"></div>
   <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/20"></div>
 
   <!-- Contenido -->
   <div class="container-pb text-white py-24 relative z-10 text-center">
-    <span class="script-title block mb-3" data-i18n="hero.tagline">Explora, vive y disfruta</span>
-    <h1 class="text-white text-4xl md:text-6xl font-bold leading-tight max-w-3xl mx-auto">
+
+    <!-- Tagline -->
+    <span
+      class="script-title block mb-5"
+      data-i18n="hero.tagline"
+    >
+      Explora, vive y disfruta
+    </span>
+
+    <!-- Título -->
+    <h1 class="text-white text-5xl md:text-7xl font-bold leading-tight max-w-4xl mx-auto drop-shadow-2xl">
       Peru Beyond <br/>
-      <span class="text-gold" data-i18n="hero.title">Más de lo que Imaginas</span>
+
+      <span
+        class="text-gold"
+        data-i18n="hero.title"
+      >
+        Más de lo que Imaginas
+      </span>
     </h1>
+
+    <!-- Tripadvisor -->
     <a
       href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d33404487-Reviews-Peru_Beyond-Cusco_Cusco_Region.html"
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center justify-center gap-3 mt-6"
+      class="inline-flex items-center justify-center gap-4 mt-8"
     >
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/0/02/TripAdvisor_Logo.svg"
         alt="Tripadvisor"
-        width="160"
-        height="64"
+        width="170"
+        height="70"
         class="h-16 object-contain drop-shadow-[0_0_6px_rgba(255,255,255,0.9)]"
         fetchpriority="low"
       />
-      <i class="bi bi-tripadvisor text-3xl text-gold"></i>
+
       <div>
-        <div class="flex text-gold">{Array.from({length:5}).map(()=> <i class="bi bi-star-fill"></i>)}</div>
-        <span class="text-sm" data-i18n="hero.reviews">5.0 · 4 reseñas en TripAdvisor</span>
+        <div class="flex text-gold text-xl justify-start">
+          {Array.from({length:5}).map(()=> <i class="bi bi-star-fill"></i>)}
+        </div>
+
+        <span
+          class="text-sm md:text-base text-white drop-shadow-lg"
+          data-i18n="hero.reviews"
+        >
+          5.0 · 4 reseñas en TripAdvisor
+        </span>
       </div>
     </a>
+
   </div>
 </section>
+
+<style>
+  .script-title{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    color: #d4a017;
+    text-shadow: 0 2px 10px rgba(0,0,0,.6);
+  }
+</style>
