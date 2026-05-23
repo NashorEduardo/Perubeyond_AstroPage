@@ -24,9 +24,10 @@ itinerary:
     title: "Maras Salt Mines, Moray & Textile Center in Chinchero"
     description: "Landscapes, agricultural innovation and living tradition in the Andes."
     images:
-      - "/images/MarasMoray/moray-2.webp"
-      - "/images/MarasMoray/salineras-2.webp"
-      - "/images/MarasMoray/chinchero-textil.webp"
+      - "/itinerario/MARAS/maras01.webp"
+      - "/itinerario/MARAS/maras02.webp"
+      - "/itinerario/MORAY/moray03.webp"
+      - "/itinerario/MORAY/moray02.webp"
     activities:
       - "Hotel pickup in Cusco (approx. 08:00 a.m.)"
       - "Departure to the Sacred Valley"
@@ -36,10 +37,11 @@ itinerary:
       - "Return to Cusco (approx. 03:00 p.m.)"
 
 gallery:
-  - "/images/MarasMoray/moray-2.webp"
-  - "/images/MarasMoray/salineras-2.webp"
-  - "/images/MarasMoray/chinchero-textil.webp"
-  - "/images/Maras/F1.webp"
+  - "/itinerario/MARAS/maras01.webp"
+  - "/itinerario/MARAS/maras02.webp"
+  - "/itinerario/MORAY/moray03.webp"
+  - "/itinerario/MORAY/moray02.webp"
+  - "/itinerario/MORAY/moray01.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

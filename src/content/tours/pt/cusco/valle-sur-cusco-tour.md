@@ -24,9 +24,9 @@ itinerary:
     title: "Cusco – Vale Sul – Cusco"
     description: "Um percurso repleto de história e contrastes."
     images:
-      - "/images/ValleSur/tipon-2.webp"
-      - "/images/ValleSur/pikillacta.webp"
-      - "/images/ValleSur/andahuaylillas.webp"
+      - "/itinerario/TIPON/tipon01.webp"
+      - "/itinerario/TIPON/tipon02.webp"
+      - "/itinerario/TIPON/tipon03.webp"
     activities:
       - "Traslado desde o hotel em Cusco (aprox. 08:00)"
       - "Visita a Tipón: centro cerimonial inca"
@@ -35,10 +35,11 @@ itinerary:
       - "Retorno a Cusco (aprox. 15:00)"
 
 gallery:
-  - "/images/ValleSur/tipon-2.webp"
-  - "/images/ValleSur/pikillacta.webp"
-  - "/images/ValleSur/andahuaylillas.webp"
-  - "/images/Cuzco/FT2.webp"
+  - "/itinerario/TIPON/tipon04.webp"
+  - "/itinerario/TIPON/tipon05.webp"
+  - "/itinerario/CUZCO/cusco01.webp"
+  - "/itinerario/CUZCO/cusco03.webp"
+  - "/itinerario/CUZCO/cusco05.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

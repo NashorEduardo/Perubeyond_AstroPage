@@ -30,7 +30,9 @@ itinerary:
     title: "Cusco – City Tour"
     description: "Start of the tour in the historic capital of the Inca Empire."
     images:
-      - "/images/Maras/F2.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Airport reception and transfer to the hotel"
       - "Visit to the Cathedral and Qoricancha"
@@ -40,7 +42,9 @@ itinerary:
     title: "Sacred Valley of the Incas"
     description: "Exploration of the main attractions of the Sacred Valley."
     images:
-      - "/images/Maras/F2.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo03.webp"
     activities:
       - "Visit to Pisac and its artisan market"
       - "Buffet lunch in Urubamba"
@@ -51,7 +55,9 @@ itinerary:
     title: "Machu Picchu – Wonder of the World"
     description: "Visit to the most important Inca citadel in Peru."
     images:
-      - "/images/Maras/F2.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Transfer to the train station"
       - "Journey to Aguas Calientes"
@@ -63,7 +69,9 @@ itinerary:
     title: "Maras & Moray"
     description: "Visit to the circular terraces and ancestral salt mines."
     images:
-      - "/images/Maras/F2.webp"
+      - "/itinerario/MARAS/maras01.webp"
+      - "/itinerario/MORAY/moray01.webp"
+      - "/itinerario/MARAS/maras02.webp"
     activities:
       - "Excursion to the circular terraces of Moray"
       - "Visit to the Maras Salt Mines"
@@ -73,7 +81,9 @@ itinerary:
     title: "Humantay Lake"
     description: "Excursion to one of the most impressive lakes near Cusco."
     images:
-      - "/images/Maras/F2.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Full-day excursion to Humantay Lake"
       - "Guided hike through Andean landscapes"
@@ -83,7 +93,9 @@ itinerary:
     title: "Rainbow Mountain (Vinicunca)"
     description: "Ascent to one of the most impressive landscapes in Peru."
     images:
-      - "/images/Maras/F2.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Full-day excursion to Rainbow Mountain"
       - "Guided hike"
@@ -94,15 +106,19 @@ itinerary:
     title: "Transfer to the Airport"
     description: "End of the tour and departure."
     images:
-      - "/images/Maras/F2.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
     activities:
       - "Breakfast at the hotel"
       - "Transfer to the airport for the return flight"
 
 gallery:
-  - "/images/Maras/F2.webp"
-  - "/images/Maras/F2.webp"
-  - "/images/Maras/F2.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/7COLORES/7colores05.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay05.webp"
+  - "/itinerario/MORAY/moray02.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo05.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

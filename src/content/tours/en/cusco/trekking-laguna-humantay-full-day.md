@@ -26,9 +26,9 @@ itinerary:
     title: "Full Day Humantay Lake"
     description: "Explore Humantay Lake on a full day trek from Cusco."
     images:
-      - "/images/Humantay/humantay-2.webp"
-      - "/images/Humantay/humantay-3.webp"
-      - "/images/Humantay/humantay-4.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Hotel pickup in Cusco (approx. 04:00 a.m.)"
       - "Journey to Mollepata"
@@ -41,10 +41,11 @@ itinerary:
       - "Return to Cusco (approx. 06:00 p.m.)"
 
 gallery:
-  - "/images/Humantay/humantay-2.webp"
-  - "/images/Humantay/humantay-3.webp"
-  - "/images/Humantay/humantay-4.webp"
-  - "/images/Laguna_Humantay/DSC04361.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay05.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay06.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay07.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay08.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

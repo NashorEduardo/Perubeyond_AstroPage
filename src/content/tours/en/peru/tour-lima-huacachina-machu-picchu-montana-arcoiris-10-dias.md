@@ -30,7 +30,9 @@ itinerary:
     title: "Arrival in Lima"
     description: "Welcome to the capital of Peru."
     images:
-      - "/images/Moray/F1.webp"
+      - "/itinerario/LIMA/lima01.webp"
+      - "/itinerario/LIMA/lima02.webp"
+      - "/itinerario/LIMA/lima03.webp"
     activities:
       - "Airport reception and transfer to the hotel"
       - "Free time to rest or acclimatize"
@@ -39,7 +41,9 @@ itinerary:
     title: "Lima Colonial & Modern City Tour"
     description: "Tour of the main historical and modern attractions of Lima."
     images:
-      - "/images/Moray/F1.webp"
+      - "/itinerario/LIMA/lima04.webp"
+      - "/itinerario/LIMA/lima01.webp"
+      - "/itinerario/LIMA/lima02.webp"
     activities:
       - "Tour of colonial Lima: Plaza Mayor, Cathedral, San Francisco Convent and catacombs"
       - "Panoramic view of Miraflores and San Isidro"
@@ -48,7 +52,9 @@ itinerary:
     title: "Paracas & Ica – Ballestas Islands and Huacachina Oasis"
     description: "Adventure on the southern coast of Peru."
     images:
-      - "/images/Moray/F1.webp"
+      - "/itinerario/PARACAS/paracas01.webp"
+      - "/itinerario/HUACACHINA/huacachina01.webp"
+      - "/itinerario/PARACAS/paracas02.webp"
     activities:
       - "Bus journey to Paracas"
       - "Boat tour to the Ballestas Islands"
@@ -60,7 +66,9 @@ itinerary:
     title: "Flight to Cusco"
     description: "Transfer to the imperial city."
     images:
-      - "/images/Moray/F1.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Flight to Cusco"
       - "Reception and transfer to the hotel"
@@ -69,7 +77,9 @@ itinerary:
     title: "Sacred Valley of the Incas"
     description: "Exploration of the main attractions of the Sacred Valley."
     images:
-      - "/images/Moray/F1.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo03.webp"
     activities:
       - "Visit to Pisac (artisan market and ruins)"
       - "Buffet lunch in Urubamba"
@@ -80,7 +90,9 @@ itinerary:
     title: "Machu Picchu – Wonder of the World"
     description: "Visit to the most important Inca citadel in Peru."
     images:
-      - "/images/Moray/F1.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu05.webp"
     activities:
       - "Transfer to the station and train journey to Aguas Calientes"
       - "Bus to Machu Picchu and guided tour"
@@ -90,7 +102,9 @@ itinerary:
     title: "Humantay Lake"
     description: "Excursion to one of the most impressive lakes near Cusco."
     images:
-      - "/images/Moray/F1.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Full-day excursion to Humantay Lake"
       - "Return to Cusco in the afternoon"
@@ -99,7 +113,9 @@ itinerary:
     title: "Maras & Moray"
     description: "Visit to the circular terraces of Moray and the Maras Salt Mines."
     images:
-      - "/images/Moray/F1.webp"
+      - "/itinerario/MORAY/moray01.webp"
+      - "/itinerario/MARAS/maras01.webp"
+      - "/itinerario/MORAY/moray02.webp"
     activities:
       - "Half-day tour to Moray and the Maras Salt Mines"
       - "Free afternoon in Cusco for shopping or strolling"
@@ -108,7 +124,9 @@ itinerary:
     title: "Rainbow Mountain (Vinicunca)"
     description: "Ascent to one of the most breathtaking landscapes in Peru."
     images:
-      - "/images/Moray/F1.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Full-day excursion to Rainbow Mountain"
       - "Guided hike and time for photos"
@@ -117,15 +135,19 @@ itinerary:
     title: "Cusco – Lima – Departure"
     description: "End of tour and departure."
     images:
-      - "/images/Moray/F1.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
     activities:
       - "Breakfast at the hotel"
       - "Transfer to the airport for the return flight"
 
 gallery:
-  - "/images/Moray/F1.webp"
-  - "/images/Moray/F1.webp"
-  - "/images/Moray/F1.webp"
+  - "/itinerario/LIMA/lima01.webp"
+  - "/itinerario/HUACACHINA/huacachina02.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/7COLORES/7colores04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

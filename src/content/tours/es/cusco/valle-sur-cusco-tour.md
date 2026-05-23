@@ -2,7 +2,7 @@
 title: "Tour Valle Sur Cusco"
 price: "20"
 duration: "1/2 Día"
-image: "/images/Cuzco/FT2.webp"
+image: "itinerario/WAKRAPUKARA/wakrapukara09.webp"
 wetravelUuid: "6710388859"
 description: "Recorrido cultural por el Valle Sur visitando Tipón, Pikillacta y Andahuaylillas, combinando historia inca, preinca y colonial en medio día."
 availability: "Todos los días"

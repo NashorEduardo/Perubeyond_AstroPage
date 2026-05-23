@@ -26,9 +26,9 @@ itinerary:
     title: "Full Day Machu Picchu – Wonder of the World"
     description: "A full day discovering Peru's most famous historical sanctuary."
     images:
-      - "/images/MachuPicchu/machu-picchu-2.webp"
-      - "/images/MachuPicchu/machu-picchu-3.webp"
-      - "/images/MachuPicchu/machu-picchu-4.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu04.webp"
     activities:
       - "Hotel pickup in Cusco"
       - "Tourist bus transfer to Ollantaytambo"
@@ -41,10 +41,15 @@ itinerary:
       - "Bimodal bus transfer back to Cusco and hotel"
 
 gallery:
-  - "/images/MachuPicchu/machu-picchu-2.webp"
-  - "/images/MachuPicchu/machu-picchu-3.webp"
-  - "/images/MachuPicchu/machu-picchu-4.webp"
-  - "/images/Machupicchu/IMG_7709.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu08.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu07.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu06.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu05.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu08.webp"
+
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

@@ -28,7 +28,9 @@ itinerary:
     title: "Cusco – City Tour"
     description: "First encounter with Inca and colonial history in the imperial city."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Airport reception and hotel transfer"
       - "Visit to Cusco Cathedral and Qoricancha"
@@ -39,7 +41,9 @@ itinerary:
     title: "Sacred Valley of the Incas"
     description: "Cultural and scenic exploration of the Sacred Valley."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
     activities:
       - "Tour of Pisac and its artisan market"
       - "Buffet lunch in Urubamba"
@@ -50,7 +54,9 @@ itinerary:
     title: "Machu Picchu – Wonder of the World"
     description: "Guided visit to the jewel of the Inca Empire."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Transfer to the train station and journey to Aguas Calientes"
       - "Bus to Machu Picchu and guided tour (approx. 2h30)"
@@ -61,7 +67,9 @@ itinerary:
     title: "Humantay Lake"
     description: "High-altitude excursion to one of the most impressive lakes in the Andes."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Full-day excursion to Humantay Lake"
       - "Guided hike and time to enjoy the landscape"
@@ -71,15 +79,19 @@ itinerary:
     title: "Cusco – Airport Transfer"
     description: "End of tour and departure."
     images:
-      - "/images/Ollantaytambo/DSC03970.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
     activities:
       - "Breakfast at the hotel"
       - "Transfer to the airport for return flight"
 
 gallery:
-  - "/images/Ollantaytambo/DSC03970.webp"
-  - "/images/Ollantaytambo/DSC03970.webp"
-  - "/images/Ollantaytambo/DSC03970.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo05.webp"
+  - "/itinerario/CUZCO/cusco06.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu08.webp"
 
 videoUrl: ""
 

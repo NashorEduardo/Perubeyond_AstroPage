@@ -24,9 +24,9 @@ itinerary:
     title: "Cusco – South Valley – Cusco"
     description: "A tour full of history and contrasts."
     images:
-      - "/images/ValleSur/tipon-2.webp"
-      - "/images/ValleSur/pikillacta.webp"
-      - "/images/ValleSur/andahuaylillas.webp"
+      - "/itinerario/TIPON/tipon01.webp"
+      - "/itinerario/TIPON/tipon02.webp"
+      - "/itinerario/TIPON/tipon03.webp"
     activities:
       - "Hotel pickup in Cusco (approx. 08:00 a.m.)"
       - "Visit to Tipon: Inca ceremonial center"
@@ -35,10 +35,11 @@ itinerary:
       - "Return to Cusco (approx. 03:00 p.m.)"
 
 gallery:
-  - "/images/ValleSur/tipon-2.webp"
-  - "/images/ValleSur/pikillacta.webp"
-  - "/images/ValleSur/andahuaylillas.webp"
-  - "/images/Cuzco/FT2.webp"
+  - "/itinerario/TIPON/tipon04.webp"
+  - "/itinerario/TIPON/tipon05.webp"
+  - "/itinerario/CUZCO/cusco01.webp"
+  - "/itinerario/CUZCO/cusco03.webp"
+  - "/itinerario/CUZCO/cusco05.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

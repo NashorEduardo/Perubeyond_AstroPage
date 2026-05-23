@@ -29,7 +29,9 @@ itinerary:
     title: "Cusco – City Tour"
     description: "Start of the tour in the historic capital of the Inca Empire."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Airport reception and transfer to the hotel"
       - "Visit to the Cathedral, Qoricancha and archaeological complexes"
@@ -39,7 +41,9 @@ itinerary:
     title: "Sacred Valley of the Incas"
     description: "Exploration of the main attractions of the Sacred Valley."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
     activities:
       - "Visit to Pisac and its artisan market"
       - "Buffet lunch in Urubamba"
@@ -50,7 +54,9 @@ itinerary:
     title: "Machu Picchu – Wonder of the World"
     description: "Visit to the most important Inca citadel in Peru."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Transfer to the train station"
       - "Journey to Aguas Calientes"
@@ -62,7 +68,9 @@ itinerary:
     title: "Humantay Lake"
     description: "Excursion to one of the most impressive lakes near Cusco."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Full-day excursion to Humantay Lake"
       - "Guided hike through Andean landscapes"
@@ -72,7 +80,9 @@ itinerary:
     title: "Rainbow Mountain (Vinicunca)"
     description: "Ascent to one of the most impressive landscapes in Peru."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Full-day excursion to Rainbow Mountain"
       - "Guided hike"
@@ -83,15 +93,19 @@ itinerary:
     title: "Transfer to the Airport"
     description: "End of the tour and departure."
     images:
-      - "/images/Cuzco/cusco.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
     activities:
       - "Breakfast at the hotel"
       - "Transfer to the airport for the return flight"
 
 gallery:
-  - "/images/Cuzco/cusco.webp"
-  - "/images/Cuzco/cusco.webp"
-  - "/images/Cuzco/cusco.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/7COLORES/7colores04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo05.webp"
+  - "/itinerario/CUZCO/cusco06.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

@@ -30,7 +30,9 @@ itinerary:
     title: "Chegada a Lima"
     description: "Boas-vindas à capital peruana e tempo para se aclimatar após a viagem."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/LIMA/lima01.webp"
+      - "/itinerario/LIMA/lima02.webp"
+      - "/itinerario/LIMA/lima03.webp"
     activities:
       - "Recepção no aeroporto e translado ao hotel"
       - "Tempo livre para se aclimatar"
@@ -39,7 +41,9 @@ itinerary:
     title: "Paracas & Ica – Ilhas Ballestas e Huacachina"
     description: "Aventura no litoral sul do Peru entre fauna marinha e dunas."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/PARACAS/paracas01.webp"
+      - "/itinerario/HUACACHINA/huacachina01.webp"
+      - "/itinerario/PARACAS/paracas02.webp"
     activities:
       - "Viagem de ônibus até Paracas"
       - "Passeio de barco pelas Ilhas Ballestas"
@@ -51,7 +55,9 @@ itinerary:
     title: "Voo para Cusco – Cidade Imperial"
     description: "Viagem para a capital do Império Inca."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
     activities:
       - "Voo para Cusco"
       - "Recepção e translado ao hotel"
@@ -60,7 +66,9 @@ itinerary:
     title: "Vale Sagrado dos Incas"
     description: "Percurso pelos principais atrativos do Vale Sagrado."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
     activities:
       - "Visita a Pisac (mercado artesanal e ruínas)"
       - "Almoço buffet em Urubamba"
@@ -71,7 +79,9 @@ itinerary:
     title: "Machu Picchu – Maravilha do Mundo"
     description: "Exploração da cidadela inca mais famosa do mundo."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Translado à estação e viagem de trem a Aguas Calientes"
       - "Ônibus para Machu Picchu e tour guiado"
@@ -81,7 +91,9 @@ itinerary:
     title: "Laguna Humantay"
     description: "Excursão a uma das lagunas mais impressionantes de Cusco."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Excursão de dia inteiro à Laguna Humantay"
       - "Caminhada guiada e tempo livre"
@@ -91,7 +103,9 @@ itinerary:
     title: "Montanha das Cores (Vinicunca)"
     description: "Subida a uma das maravilhas naturais mais impressionantes do Peru."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Excursão de dia inteiro à Montanha das Cores"
       - "Caminhada guiada"
@@ -101,15 +115,19 @@ itinerary:
     title: "Cusco – Lima – Retorno"
     description: "Fim da viagem e retorno para casa."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
+      - "/itinerario/CUZCO/cusco06.webp"
     activities:
       - "Café da manhã no hotel"
       - "Translado ao aeroporto para o voo de retorno"
 
 gallery:
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
+  - "/itinerario/LIMA/lima04.webp"
+  - "/itinerario/HUACACHINA/huacachina02.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/7COLORES/7colores04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 
