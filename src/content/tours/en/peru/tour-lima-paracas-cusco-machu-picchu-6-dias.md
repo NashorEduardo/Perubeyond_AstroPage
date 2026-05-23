@@ -27,8 +27,9 @@ itinerary:
     title: "Arrival in Lima"
     description: "Welcome to the Peruvian capital."
     images:
-      - "/images/MultiTours/lima-1.webp"
-      - "/images/MultiTours/lima-2.webp"
+      - "/itinerario/LIMA/lima01.webp"
+      - "/itinerario/LIMA/lima02.webp"
+      - "/itinerario/LIMA/lima03.webp"
     activities:
       - "Airport reception"
       - "Transfer to the hotel"
@@ -38,8 +39,9 @@ itinerary:
     title: "Paracas – Ica – Huacachina"
     description: "Excursion along the southern coast with nature and adventure."
     images:
-      - "/images/MultiTours/paracas.webp"
-      - "/images/MultiTours/huacachina.webp"
+      - "/itinerario/PARACAS/paracas01.webp"
+      - "/itinerario/HUACACHINA/huacachina01.webp"
+      - "/itinerario/PARACAS/paracas02.webp"
     activities:
       - "Early departure from Lima to Paracas"
       - "Visit to the Ballestas Islands"
@@ -52,7 +54,9 @@ itinerary:
     title: "Lima – Flight to Cusco"
     description: "Transfer to the capital of the Inca Empire."
     images:
-      - "/images/MultiTours/cusco.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco03.webp"
     activities:
       - "Transfer to Lima airport"
       - "Flight to Cusco"
@@ -63,7 +67,9 @@ itinerary:
     title: "Sacred Valley of the Incas"
     description: "Exploration of the main sites of the Sacred Valley."
     images:
-      - "/images/MultiTours/valle-sagrado.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
     activities:
       - "Visit to Pisac and its archaeological complex"
       - "Buffet lunch in Urubamba"
@@ -74,7 +80,9 @@ itinerary:
     title: "Machu Picchu – Wonder of the World"
     description: "Guided visit to the Inca citadel."
     images:
-      - "/images/MultiTours/machu-picchu-2.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu03.webp"
     activities:
       - "Train journey to Aguas Calientes"
       - "Bus ascent to Machu Picchu"
@@ -86,18 +94,20 @@ itinerary:
     title: "Cusco – Lima – Departure"
     description: "End of the journey."
     images:
-      - "/images/MultiTours/aeropuerto.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
+      - "/itinerario/CUZCO/cusco06.webp"
     activities:
       - "Transfer to Cusco airport"
       - "Flight to Lima"
       - "International connection or end of service"
 
 gallery:
-  - "/images/MultiTours/lima-1.webp"
-  - "/images/MultiTours/paracas.webp"
-  - "/images/MultiTours/huacachina.webp"
-  - "/images/MultiTours/valle-sagrado.webp"
-  - "/images/MultiTours/machu-picchu-2.webp"
+  - "/itinerario/LIMA/lima04.webp"
+  - "/itinerario/PARACAS/paracas03.webp"
+  - "/itinerario/HUACACHINA/huacachina02.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo03.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

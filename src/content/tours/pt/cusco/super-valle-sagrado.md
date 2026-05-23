@@ -26,11 +26,10 @@ itinerary:
     title: "Full Day Super Vale Sagrado"
     description: "Um dia completo explorando o melhor do Vale Sagrado dos Incas."
     images:
-      - "/images/ValleSagrado/ollantaytambo-3.webp"
-      - "/images/ValleSagrado/moray-2.webp"
-      - "/images/ValleSagrado/moray-3.webp"
-      - "/images/ValleSagrado/ollantaytambo.webp"
-      - "/images/ValleSagrado/ollantaytambo-2.webp"
+      - "/itinerario/CHINCHEROS/chinchero01.webp"
+      - "/itinerario/MARAS/maras01.webp"
+      - "/itinerario/MORAY/moray01.webp"
+      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
     activities:
       - "Recolha no hotel (aprox. 07:00 a.m.)"
       - "Visita ao vilarejo de Chinchero e seu parque arqueológico"
@@ -43,12 +42,11 @@ itinerary:
 
 
 gallery:
-  - "/images/ValleSagrado/ollantaytambo-3.webp"
-  - "/images/ValleSagrado/moray-2.webp"
-  - "/images/ValleSagrado/moray-3.webp"
-  - "/images/ValleSagrado/ollantaytambo.webp"
-  - "/images/ValleSagrado/ollantaytambo-2.webp"
-  - "/images/ValleSagrado/ollantaytambo-2.webp"
+  - "/itinerario/CHINCHEROS/chinchero02.webp"
+  - "/itinerario/MARAS/maras02.webp"
+  - "/itinerario/MORAY/moray02.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
+  - "/itinerario/OLLANTAYTAMBO/ollantaytambo03.webp"
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 
 

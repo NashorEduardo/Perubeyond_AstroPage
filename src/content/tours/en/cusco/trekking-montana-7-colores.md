@@ -27,9 +27,9 @@ itinerary:
     title: "Full Day Rainbow Mountain"
     description: "A full day of trekking, Andean landscapes and living culture."
     images:
-      - "/images/MontanaColores/montana-colores-2.webp"
-      - "/images/MontanaColores/montana-colores-3.webp"
-      - "/images/MontanaColores/montana-colores-4.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Hotel pickup in Cusco (approx. 04:00 a.m.)"
       - "Journey to Cusipata (approx. 2 hours)"
@@ -43,10 +43,11 @@ itinerary:
       - "Return to Cusco (approx. 05:00 p.m.)"
 
 gallery:
-  - "/images/MontanaColores/montana-colores-2.webp"
-  - "/images/MontanaColores/montana-colores-3.webp"
-  - "/images/MontanaColores/montana-colores-4.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
+  - "/itinerario/7COLORES/7colores04.webp"
+  - "/itinerario/7COLORES/7colores05.webp"
+  - "/itinerario/7COLORES/7colores06.webp"
+  - "/itinerario/7COLORES/7colores07.webp"
+  - "/itinerario/7COLORES/7colores08.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

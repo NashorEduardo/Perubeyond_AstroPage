@@ -27,9 +27,9 @@ itinerary:
     title: "Dia Completo Montanha 7 Cores"
     description: "Um dia completo de trekking, paisagens andinas e cultura viva."
     images:
-      - "/images/MontanaColores/montana-colores-2.webp"
-      - "/images/MontanaColores/montana-colores-3.webp"
-      - "/images/MontanaColores/montana-colores-4.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Traslado do hotel em Cusco (04:00 da manhã aprox.)"
       - "Viagem até Cusipata (aprox. 2 horas)"
@@ -43,10 +43,11 @@ itinerary:
       - "Retorno a Cusco (aprox. 17:00)"
 
 gallery:
-  - "/images/MontanaColores/montana-colores-2.webp"
-  - "/images/MontanaColores/montana-colores-3.webp"
-  - "/images/MontanaColores/montana-colores-4.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
+  - "/itinerario/7COLORES/7colores04.webp"
+  - "/itinerario/7COLORES/7colores05.webp"
+  - "/itinerario/7COLORES/7colores06.webp"
+  - "/itinerario/7COLORES/7colores07.webp"
+  - "/itinerario/7COLORES/7colores08.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

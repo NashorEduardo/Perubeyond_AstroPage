@@ -68,15 +68,19 @@ itinerary:
     title: "Cusco – Transfer to the Airport"
     description: "End of the tour and departure."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/CUZCO/cusco07.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
     activities:
       - "Breakfast at the hotel"
       - "Transfer to the airport for the return flight"
 
 gallery:
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
-  - "/images/Montaña_de_7_colores/DSC02961.webp"
+  - "/itinerario/CUZCO/cusco03.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
+  - "/itinerario/CUZCO/cusco05.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu08.webp"
 
 videoUrl: ""
 

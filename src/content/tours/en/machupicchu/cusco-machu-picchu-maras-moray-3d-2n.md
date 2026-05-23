@@ -27,7 +27,9 @@ itinerary:
     title: "Arrival in Cusco + City Tour"
     description: "Tour of the main historic attractions of Cusco."
     images:
-      - "/images/ValleSagrado/moray.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Airport reception and transfer to the hotel"
       - "In the afternoon, guided visit to Qoricancha (Temple of the Sun), Cathedral, and nearby archaeological complexes: Sacsayhuamán, Qenqo, Puca Pucara and Tambomachay"
@@ -37,7 +39,9 @@ itinerary:
     title: "Machu Picchu – Wonder of the World"
     description: "Visit to the most important Inca citadel in Peru."
     images:
-      - "/images/ValleSagrado/moray.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu05.webp"
     activities:
       - "Early transfer to the train station"
       - "Journey to Aguas Calientes and bus ride up to Machu Picchu"
@@ -50,16 +54,20 @@ itinerary:
     title: "Maras & Moray – Transfer to the Airport"
     description: "Exploration of the circular terraces and salt mines."
     images:
-      - "/images/ValleSagrado/moray.webp"
+      - "/itinerario/MORAY/moray01.webp"
+      - "/itinerario/MARAS/maras01.webp"
+      - "/itinerario/MORAY/moray02.webp"
     activities:
       - "Excursion to the circular terraces of Moray"
       - "Visit to the Maras Salt Mines"
       - "Transfer to the airport for the return flight"
 
 gallery:
-  - "/images/ValleSagrado/moray.webp"
-  - "/images/ValleSagrado/moray.webp"
-  - "/images/ValleSagrado/moray.webp"
+  - "/itinerario/CUZCO/cusco03.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu04.webp"
+  - "/itinerario/MORAY/moray03.webp"
+  - "/itinerario/MARAS/maras02.webp"
+  - "/itinerario/MACHUPICCHU/machupicchu08.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 
