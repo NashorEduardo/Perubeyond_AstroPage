@@ -7,6 +7,7 @@ import { ui } from '../../i18n/ui';
 
 // Otros tipos de Esperiencias
 import ToursPeru from '../../components/ToursPeru.astro';
+import Testimonials from '../../components/Testimonials.astro';
 
 export async function getStaticPaths() {
   const tourEntries = await getCollection('tours');
@@ -649,22 +650,10 @@ const langAlternates = {
 )}
 
     
- <!-- COMENTARIOS  -->   
-  <section id = "comentarios" class="max-w-7xl mx-auto px-4 sm:px-6 pt-20 pb-10 border-t border-gray-100">
-    <div class="mb-12">
-      <span class="text-gold text-xs font-bold uppercase tracking-[0.3em] block mb-2">
-        {t['tour.experiences']}
-      </span>
-      <h2 class="text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
-        {t['tour.reviews_title']}
-      </h2>
-      <div class="w-20 h-1.5 bg-gold mt-6 rounded-full"></div>
-    </div>
-
-    <div class="bg-white rounded-3xl p-2 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-gray-50">
-      <script defer async src='https://cdn.trustindex.io/loader.js?db268cf717459601af16de52aa3'></script>
-    </div>
-  </section>
+ <!-- COMENTARIOS  -->
+  <div id="comentarios">
+    <Testimonials />
+  </div>
 
   <!-- OTROS TIPOS DE EXPERIENCIAS  -->
   <ToursPeru />
