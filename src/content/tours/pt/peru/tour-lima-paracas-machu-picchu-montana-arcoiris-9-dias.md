@@ -3,7 +3,7 @@ title: "Lima, Paracas, Ica, Machu Picchu e Montanha das Cores – 9 Dias / 8 Noi
 price: "690"
 duration: "9 Dias / 8 Noites"
 image: "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
-wetravelUuid: "6710388859"
+wetravelUuid: "0857343783"
 description: "Descubra o melhor do Peru em 9 dias: Lima, Paracas, Ica, Cusco, Vale Sagrado, Machu Picchu, Laguna Humantay e Montanha das Cores, combinando cultura, aventura e paisagens únicos."
 availability: "Todos os dias"
 frequency: "O ano todo"
