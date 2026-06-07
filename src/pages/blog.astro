@@ -4,13 +4,21 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const featuredPost = {
-  date: '11 de Septiembre, 2025',
-  title: 'Descubre el Valle Sagrado: Ruinas y Espíritu Inca',
-  image: '/images/ValleSagrado/ollantaytambo.webp',
-  slug: '/blog/valle-sagrado',
+  date: '4 de Junio, 2026',
+  category: 'Historia & Cultura',
+  title: 'Corpus Christi Cusqueño: La Fiesta de los Santos que Viste de Oro al Cusco',
+  excerpt: 'Una fusión viva entre la fe católica colonial y la espiritualidad andina. Quince santos desfilan en carrozas de plata y oro por las calles empedradas del Cusco en la celebración más fascinante del mundo andino.',
+  image: '/images/PeruBeyond/carroza.webp',
+  slug: '/blog/corpus-christi-cusqueno',
 };
 
 const gridPosts = [
+  {
+    date: '11 de Septiembre, 2025',
+    title: 'Descubre el Valle Sagrado: Ruinas y Espíritu Inca',
+    image: '/images/ValleSagrado/ollantaytambo.webp',
+    slug: '/blog/valle-sagrado',
+  },
   {
     date: '10 de Octubre, 2025',
     title: 'Machu Picchu: La Maravilla del Mundo Inca',
@@ -48,15 +56,6 @@ const gridPosts = [
     slug: '/blog/vinicunca-7-colores',
   },
 ];
-
-const testimonial = {
-  package:    'Cusco + Valle Sagrado + Machu Picchu 4D/3N',
-  reviewer:   'Andrea Southall',
-  from:       'EE.UU.',
-  visitDate:  'Marzo 2026',
-  initials:   'AS',
-  text:       'Tuvimos una experiencia increíble con PeruBeyond. Planeamos el viaje familiar para 8 personas y todo resultó perfecto desde el primer momento. Fueron más allá de nuestras expectativas y la comunicación fue excelente en todo momento...',
-};
 ---
 
 <Layout>
@@ -66,16 +65,12 @@ const testimonial = {
 
     <!-- ── Hero con imagen de portada ── -->
     <section class="hero-section relative flex flex-col items-center justify-center text-center text-white px-4 pt-20" style="height: 58vh;">
-      <!-- Imagen de portada -->
       <img
-        src="/images/Machupicchu/IMG_7709.webp"
+        src="/images/Maras/F4.webp"
         alt="Blog PeruBeyond"
         class="hero-img"
       />
-      <!-- Overlay degradado -->
       <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 100%);"></div>
-
-      <!-- Contenido del hero -->
       <div class="relative z-10">
         <p class="script-title text-white/80 mb-3 text-lg">Peru Beyond</p>
         <h1 class="hero-title">
@@ -84,7 +79,6 @@ const testimonial = {
         <p class="hero-subtitle">
           Historias, consejos y destinos para inspirar tu próxima aventura peruana.
         </p>
-        <!-- Breadcrumb -->
         <nav class="flex items-center justify-center gap-2 text-xs text-white/50 mt-5">
           <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
@@ -100,105 +94,87 @@ const testimonial = {
 
     <!-- ── Contenido principal ── -->
     <div class="blog-content-section">
-    <div class="max-w-3xl mx-auto px-4 md:px-8">
+      <div class="max-w-6xl mx-auto px-4 md:px-8">
 
-      <!-- Descripción encima de los blogs -->
-      <div class="text-center max-w-xl mx-auto mb-10">
-        <p class="blog-tagline">
-          La diversidad natural, cultural e histórica del Perú te brindará una experiencia auténtica e inolvidable.
-        </p>
-        <p class="blog-desc">
-          En el blog de PeruBeyond encontrarás información valiosa sobre los destinos más icónicos del Perú:
-          consejos de viaje, actividades destacadas, sugerencias de atracciones y mucho más.
-        </p>
-      </div>
+        <!-- Descripción -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="blog-tagline">
+            La diversidad natural, cultural e histórica del Perú te brindará una experiencia auténtica e inolvidable.
+          </p>
+          <p class="blog-desc">
+            En el blog de PeruBeyond encontrarás información valiosa sobre los destinos más icónicos del Perú:
+            consejos de viaje, actividades destacadas, sugerencias de atracciones y mucho más.
+          </p>
+        </div>
 
-      <!-- Fila destacada: Post + Testimonio -->
-      <div class="grid md:grid-cols-2 gap-3 mb-3">
-
-        <!-- Artículo destacado -->
-        <a href={featuredPost.slug} class="featured-card group block overflow-hidden relative" style="height: 440px;">
-          <img
-            src={featuredPost.image}
-            alt={featuredPost.title}
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-          />
-          <div class="featured-overlay">
-            <time class="post-date">{featuredPost.date}</time>
-            <h2 class="featured-title">{featuredPost.title}</h2>
-            <span class="read-more-btn">
-              LEER MÁS
-              <svg class="w-3.5 h-3.5 inline ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0-5 5m5-5H6"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Tarjeta de testimonio -->
-        <div class="testimonial-card p-7 flex flex-col" style="height: 440px;">
-          <div class="text-center mb-4">
-            <h3 class="testi-heading">¡Viaja con PeruBeyond!</h3>
-            <div class="flex justify-center gap-0.5 mt-2 mb-3">
-              {[...Array(5)].map(() => <span class="text-amber-400 text-lg">★</span>)}
-            </div>
-            <p class="testi-package">Tour: {testimonial.package}</p>
+        <!-- ── ARTÍCULO DESTACADO ── -->
+        <div class="mb-10">
+          <!-- Separador con etiqueta -->
+          <div class="featured-label-row mb-5">
+            <div class="label-line"></div>
+            <span class="label-text">Artículo Destacado</span>
+            <div class="label-line"></div>
           </div>
 
-          <!-- Reviewer info -->
-          <div class="flex items-center gap-4 my-4 py-4 border-y border-amber-100">
-            <div class="testi-avatar flex-shrink-0">
-              {testimonial.initials}
+          <a href={featuredPost.slug} class="featured-main group block overflow-hidden">
+            <div class="featured-inner">
+              <!-- Imagen -->
+              <div class="featured-img-wrap">
+                <img
+                  src={featuredPost.image}
+                  alt={featuredPost.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div class="featured-img-shade"></div>
+              </div>
+              <!-- Texto editorial -->
+              <div class="featured-text-panel">
+                <span class="featured-category-tag">{featuredPost.category}</span>
+                <time class="featured-date">{featuredPost.date}</time>
+                <h2 class="featured-headline">{featuredPost.title}</h2>
+                <p class="featured-excerpt">{featuredPost.excerpt}</p>
+                <span class="featured-cta">
+                  LEER ARTÍCULO
+                  <svg class="w-4 h-4 inline ml-1.5 group-hover:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0-5 5m5-5H6"/>
+                  </svg>
+                </span>
+              </div>
             </div>
-            <div class="text-sm">
-              <p class="text-gray-700">
-                <span class="font-semibold text-gray-900">Por:</span> {testimonial.reviewer}
-              </p>
-              <p class="text-gray-500">
-                <span class="font-medium">De:</span> {testimonial.from}
-                &nbsp;·&nbsp;
-                <span class="font-medium">Visitó en:</span> {testimonial.visitDate}
-              </p>
-            </div>
-          </div>
-
-          <!-- Texto del testimonio -->
-          <p class="testi-text flex-1">{testimonial.text}</p>
-
-          <a href="#" class="testi-link mt-4">
-            LEER TESTIMONIO
-            <svg class="w-3.5 h-3.5 inline ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0-5 5m5-5H6"/>
-            </svg>
           </a>
         </div>
 
-      </div>
+        <!-- Separador grid -->
+        <div class="featured-label-row mb-6">
+          <div class="label-line"></div>
+          <span class="label-text">Más Artículos</span>
+          <div class="label-line"></div>
+        </div>
 
-      <!-- Grid de artículos (3 columnas) -->
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-        {gridPosts.map(post => (
-          <a href={post.slug} class="grid-card group block overflow-hidden relative" style="height: 420px;">
-            <img
-              src={post.image}
-              alt={post.title}
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div class="grid-overlay">
-              <time class="post-date">{post.date}</time>
-              <h3 class="grid-title">{post.title}</h3>
-              <span class="read-more-btn read-more-sm">
-                LEER MÁS
-                <svg class="w-3 h-3 inline ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0-5 5m5-5H6"/>
-                </svg>
-              </span>
-            </div>
-          </a>
-        ))}
-      </div>
+        <!-- ── Grid de artículos ── -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {gridPosts.map(post => (
+            <a href={post.slug} class="grid-card group block overflow-hidden relative" style="height: 380px;">
+              <img
+                src={post.image}
+                alt={post.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div class="grid-overlay">
+                <time class="post-date">{post.date}</time>
+                <h3 class="grid-title">{post.title}</h3>
+                <span class="read-more-btn read-more-sm">
+                  LEER MÁS
+                  <svg class="w-3 h-3 inline ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0-5 5m5-5H6"/>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
 
-    </div>
+      </div>
     </div>
   </main>
 
@@ -240,6 +216,7 @@ const testimonial = {
     margin: 0 auto;
     line-height: 1.6;
   }
+  .text-gold { color: #f6d06a; }
 
   /* ── Sección de contenido ── */
   .blog-content-section {
@@ -263,32 +240,142 @@ const testimonial = {
     margin: 0 auto;
   }
 
+  /* ── Etiqueta separadora ── */
+  .featured-label-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .label-line {
+    flex: 1;
+    height: 1px;
+    background: #e8c76a;
+    opacity: 0.5;
+  }
+  .label-text {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #c9a84c;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
   /* ── Artículo destacado ── */
-  .featured-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .featured-main {
+    box-shadow: 0 8px 40px rgba(0,0,0,0.14);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
-  .featured-card:hover {
+  .featured-main:hover {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.22);
     transform: translateY(-3px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
   }
-  .featured-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.3) 45%, transparent 100%);
+  .featured-inner {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
+    height: auto;
   }
-  .featured-title {
-    font-family: Georgia, serif;
-    font-size: 1.3rem;
+  @media (min-width: 768px) {
+    .featured-inner {
+      flex-direction: row;
+      height: 500px;
+    }
+  }
+
+  /* Imagen del destacado */
+  .featured-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  @media (min-width: 768px) {
+    .featured-img-wrap {
+      width: 58%;
+      height: 100%;
+    }
+  }
+  .featured-img-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent 60%, rgba(13,27,46,0.25) 100%);
+  }
+  @media (max-width: 767px) {
+    .featured-img-shade {
+      background: linear-gradient(to bottom, transparent 50%, rgba(13,27,46,0.4) 100%);
+    }
+  }
+
+  /* Panel de texto del destacado */
+  .featured-text-panel {
+    background-color: #0d1b2e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.25rem 2.5rem;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .featured-text-panel {
+      width: 42%;
+    }
+  }
+  .featured-category-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0d1b2e;
+    background: #f6d06a;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.85rem;
+    align-self: flex-start;
+  }
+  .featured-date {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
+  }
+  .featured-headline {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.3rem, 2.2vw, 1.75rem);
     font-weight: 700;
     color: #ffffff;
-    line-height: 1.45;
-    margin-bottom: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 1.1rem;
+  }
+  .featured-excerpt {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.75;
+    margin-bottom: 1.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .featured-cta {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #f6d06a;
+    border-bottom: 1px solid rgba(246,208,106,0.4);
+    padding-bottom: 2px;
+    align-self: flex-start;
+    transition: color 0.25s, border-color 0.25s;
+  }
+  .featured-main:hover .featured-cta {
+    color: #ffffff;
+    border-color: rgba(255,255,255,0.5);
   }
 
   /* ── Grid de artículos ── */
@@ -328,7 +415,7 @@ const testimonial = {
   }
   .grid-title {
     font-family: Georgia, serif;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #ffffff;
     line-height: 1.45;
@@ -337,7 +424,7 @@ const testimonial = {
 
   /* ── Elementos comunes ── */
   .post-date {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     color: #f6d06a;
@@ -346,7 +433,7 @@ const testimonial = {
     display: block;
   }
   .read-more-btn {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     color: rgba(255,255,255,0.85);
@@ -358,59 +445,8 @@ const testimonial = {
     border-bottom: 1px solid rgba(255,255,255,0.3);
     transition: color 0.25s, border-color 0.25s;
   }
-  .featured-card:hover .read-more-btn,
   .grid-card:hover .read-more-btn {
     color: #f6d06a;
     border-color: #f6d06a;
-  }
-
-  /* ── Tarjeta de testimonio ── */
-  .testimonial-card {
-    background-color: #faf9f7;
-    border: 1px solid #ece7de;
-  }
-  .testi-heading {
-    font-family: Georgia, serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #1a1208;
-  }
-  .testi-package {
-    font-size: 0.78rem;
-    color: #c9a84c;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-  }
-  .testi-avatar {
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 9999px;
-    background: linear-gradient(135deg, #c9a84c, #e8c76a);
-    color: white;
-    font-weight: 800;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .testi-text {
-    font-size: 0.83rem;
-    color: #6b7280;
-    line-height: 1.7;
-  }
-  .testi-link {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: #c9a84c;
-    text-transform: uppercase;
-    border-bottom: 1px solid #e8c76a;
-    padding-bottom: 1px;
-    display: inline-block;
-    transition: color 0.2s;
-  }
-  .testi-link:hover {
-    color: #a07830;
   }
 </style>
