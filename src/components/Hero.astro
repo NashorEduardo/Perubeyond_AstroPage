@@ -2,17 +2,25 @@
 
   <!-- Video de fondo -->
   <div class="absolute inset-0 w-full h-full pointer-events-none">
+    <!-- Poster fallback: visible hasta que el video carga -->
+    <img
+      id="hero-poster"
+      src="/images/Lima/pexels-icarus-7357663.webp"
+      alt=""
+      aria-hidden="true"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
     <video
+      id="hero-video"
       autoplay
       muted
       loop
       playsinline
-      preload="none"
+      preload="auto"
       poster="/images/Lima/pexels-icarus-7357663.webp"
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
     >
       <source src="/images/PeruBeyond/Peru_beyond_01.mp4" type="video/mp4" />
-      <track kind="captions" srclang="es" label="Español" default />
     </video>
   </div>
 
@@ -87,3 +95,40 @@
     text-shadow: 0 2px 10px rgba(0,0,0,.6);
   }
 </style>
+
+<script is:inline>
+  (function () {
+    var video  = document.getElementById('hero-video');
+    var poster = document.getElementById('hero-poster');
+    if (!video) return;
+
+    function showVideo() {
+      video.style.opacity = '1';
+      if (poster) poster.style.opacity = '0';
+    }
+
+    // Cuando tiene suficientes datos para reproducir → mostrar
+    video.addEventListener('canplay', function () {
+      var p = video.play();
+      if (p !== undefined) {
+        p.then(showVideo).catch(function () {
+          // Autoplay bloqueado o error de carga → el poster se queda visible
+        });
+      } else {
+        showVideo();
+      }
+    }, { once: true });
+
+    // Si el video falla (error de red, servidor sin Range support, etc.)
+    video.addEventListener('error', function () {
+      video.style.display = 'none';
+    });
+
+    // Tiempo máximo de espera: si en 4s no cargó, el poster se queda
+    setTimeout(function () {
+      if (video.readyState < 3) {
+        video.style.display = 'none';
+      }
+    }, 4000);
+  })();
+</script>
