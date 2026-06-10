@@ -5,6 +5,13 @@ interface PeruLink  { n: string; h: string }
 interface MachuTour { name: string; duration: string; img: string; href: string }
 interface CuscoTour { name: string; href: string }
 interface BrandLink { n: string; h: string; icon: string; i18n: string }
+interface ActivityItem { name: string; difficulty: 'EXTREMO' | 'MODERADO' | 'SUAVE'; price: string; href: string }
+interface ActivityCategory { label: string; icon: string; count: string; activities: ActivityItem[] }
+
+interface MegaActivitiesItem {
+  label: string; navKey: string; href: string; type: 'mega-activities';
+  details: { badge: string; title: string; desc: string; totalActivities: string; destinations: string; categories: ActivityCategory[] };
+}
 
 interface MegaPeruItem {
   label: string; navKey: string; href: string; type: 'mega-peru';
@@ -22,7 +29,7 @@ interface MegaBrandItem {
   label: string; navKey: string; href: string; type: 'mega-brand';
   details: { links: BrandLink[]; contact: { phone: string; email: string; whatsapp: string }; image: string; tagline: string };
 }
-type MenuItem = MegaPeruItem | MegaMachuItem | MegaCuscoItem | MegaBrandItem;
+type MenuItem = MegaPeruItem | MegaMachuItem | MegaCuscoItem | MegaBrandItem | MegaActivitiesItem;
 
 const menu: MenuItem[] = [
   {
@@ -115,6 +122,53 @@ const menu: MenuItem[] = [
   },
 
   {
+    label: 'ACTIVIDADES',
+    navKey: 'nav.actividades',
+    href: '/actividades',
+    type: 'mega-activities',
+    details: {
+      badge: 'Adrenalina & Naturaleza',
+      title: 'Actividades',
+      desc: 'Tours de aventura extrema y experiencias únicas en Perú',
+      totalActivities: '15+',
+      destinations: '3',
+      categories: [
+        {
+          label: 'CIELO',
+          icon: 'bi-wind',
+          count: '3 tours',
+          activities: [
+            { name: 'Paracaidismo',         difficulty: 'EXTREMO',  price: '$199', href: '/actividades#paracaidismo' },
+            { name: 'Parapente Cusco',       difficulty: 'MODERADO', price: '$89',  href: '/actividades#parapente' },
+            { name: 'Vuelo en Helicóptero',  difficulty: 'SUAVE',    price: '$149', href: '/actividades#helicoptero' },
+          ],
+        },
+        {
+          label: 'AGUA',
+          icon: 'bi-water',
+          count: '3 tours',
+          activities: [
+            { name: 'Rafting Río Urubamba',    difficulty: 'EXTREMO', price: '$55', href: '/actividades#rafting' },
+            { name: 'Kayak Lago Titicaca',     difficulty: 'SUAVE',   price: '$45', href: '/actividades#kayak' },
+            { name: 'Snorkel Islas Ballestas', difficulty: 'SUAVE',   price: '$65', href: '/actividades#snorkel' },
+          ],
+        },
+        {
+          label: 'TIERRA',
+          icon: 'bi-bicycle',
+          count: '4 tours',
+          activities: [
+            { name: 'Ciclismo de Montaña',       difficulty: 'MODERADO', price: '$49',  href: '/actividades#ciclismo' },
+            { name: 'Cabalgata en los Andes',     difficulty: 'SUAVE',    price: '$55',  href: '/actividades#cabalgata' },
+            { name: 'Sandboarding Huacachina',    difficulty: 'MODERADO', price: '$35',  href: '/actividades#sandboarding' },
+            { name: 'Camping Ausangate',          difficulty: 'EXTREMO',  price: '$120', href: '/actividades#camping' },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
     label: 'PERÚ BEYOND',
     navKey: 'nav.peru_beyond',
     href: '/sobre-nosotros',
@@ -168,7 +222,7 @@ const menu: MenuItem[] = [
             group-focus-within:opacity-100 group-focus-within:visible group-focus-within:pointer-events-auto
             transition-all duration-300 ease-out
             translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0
-            ${m.type === 'mega-peru'
+            ${(m.type === 'mega-peru' || m.type === 'mega-activities')
               ? 'fixed top-[50px] left-1/2 -translate-x-1/2 w-[980px]'
               : 'absolute top-[100%] left-1/2 -translate-x-1/2'}`}>
 
@@ -282,6 +336,99 @@ const menu: MenuItem[] = [
 
 
 
+
+            <!-- ══════════════════════════════
+                 ACTIVIDADES
+            ══════════════════════════════ -->
+            {m.type === 'mega-activities' && (
+              <div class="w-[900px] bg-white rounded-[28px] shadow-2xl border border-gray-100 overflow-hidden">
+
+                <!-- Header bar navy -->
+                <div class="bg-navy px-8 py-5 flex items-center justify-between">
+                  <div>
+                    <span class="text-gold text-[10px] font-bold uppercase tracking-widest block mb-1">
+                      {m.details.badge}
+                    </span>
+                    <h3 class="text-white text-xl font-extrabold leading-tight">{m.details.title}</h3>
+                    <p class="text-white/55 text-xs mt-0.5">{m.details.desc}</p>
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <div class="text-center">
+                      <span class="text-gold text-2xl font-black block leading-none">{m.details.totalActivities}</span>
+                      <span class="text-white/45 text-[10px] uppercase tracking-wider">Actividades</span>
+                    </div>
+                    <div class="text-center">
+                      <span class="text-gold text-2xl font-black block leading-none">{m.details.destinations}</span>
+                      <span class="text-white/45 text-[10px] uppercase tracking-wider">Destinos</span>
+                    </div>
+                    <a href="/actividades"
+                       class="bg-gold/15 border border-gold/40 text-gold text-xs font-bold px-4 py-2 rounded-full hover:bg-gold hover:text-navy transition-all whitespace-nowrap">
+                      VER TODAS →
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Category headers -->
+                <div class="grid grid-cols-3 border-b border-gray-100">
+                  {m.details.categories.map((cat, i) => (
+                    <div class={`px-6 py-3.5 flex items-center gap-2.5 ${i < 2 ? 'border-r border-gray-100' : ''}`}>
+                      <div class="w-8 h-8 rounded-lg bg-navy/8 flex items-center justify-center flex-shrink-0">
+                        <i class={`bi ${cat.icon} text-navy text-sm`}></i>
+                      </div>
+                      <div>
+                        <span class="font-black text-navy text-sm tracking-wider">{cat.label}</span>
+                        <span class="text-gray-400 text-xs ml-2">{cat.count}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <!-- Activities columns -->
+                <div class="grid grid-cols-3 divide-x divide-gray-100">
+                  {m.details.categories.map(cat => (
+                    <div class="p-3 space-y-0.5">
+                      {cat.activities.map(act => (
+                        <a href={act.href}
+                           class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-50 group/act border border-transparent hover:border-gray-100 transition-all">
+                          <div class={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0
+                            ${act.difficulty === 'EXTREMO'  ? 'bg-red-50'    :
+                              act.difficulty === 'MODERADO' ? 'bg-amber-50'  : 'bg-green-50'}`}>
+                            <i class={`bi ${cat.icon} text-sm
+                              ${act.difficulty === 'EXTREMO'  ? 'text-red-500'    :
+                                act.difficulty === 'MODERADO' ? 'text-amber-500'  : 'text-green-500'}`}></i>
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p class="text-navy font-bold text-sm group-hover/act:text-gold transition-colors leading-tight">{act.name}</p>
+                            <div class="flex items-center gap-2 mt-0.5">
+                              <span class={`text-[9px] font-bold px-1.5 py-0.5 rounded leading-none
+                                ${act.difficulty === 'EXTREMO'  ? 'bg-red-100 text-red-600'    :
+                                  act.difficulty === 'MODERADO' ? 'bg-amber-100 text-amber-600' : 'bg-green-100 text-green-600'}`}>
+                                ● {act.difficulty}
+                              </span>
+                              <span class="text-gray-400 text-xs">Desde {act.price}</span>
+                            </div>
+                          </div>
+                          <i class="bi bi-arrow-right text-gray-300 group-hover/act:text-gold group-hover/act:translate-x-1 transition-all flex-shrink-0 text-xs"></i>
+                        </a>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+
+                <!-- Footer bar -->
+                <div class="px-8 py-3.5 border-t border-gray-100 bg-gray-50 flex items-center justify-between">
+                  <span class="text-gray-400 text-xs flex items-center gap-1.5">
+                    <i class="bi bi-shield-check text-gold text-sm"></i>
+                    Todas incluyen guía certificado, seguro y equipamiento
+                  </span>
+                  <a href="/actividades"
+                     class="text-gold text-xs font-bold flex items-center gap-1 hover:gap-2.5 transition-all">
+                    EXPLORAR TODAS <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+
+              </div>
+            )}
 
             <!-- ══════════════════════════════
                  TOUR CUSCO
@@ -538,6 +685,19 @@ const menu: MenuItem[] = [
                 <p class="text-gold text-[10px] uppercase tracking-widest font-bold mb-1">{cat.title}</p>
                 {cat.tours.map(t => (
                   <a href={t.href} class="block text-white/60 hover:text-gold text-sm py-1 pl-2 transition-colors">{t.name}</a>
+                ))}
+              </div>
+            ))}
+            {m.type === 'mega-activities' && m.details.categories.map((cat: ActivityCategory) => (
+              <div class="mb-3">
+                <p class="text-gold text-[10px] uppercase tracking-widest font-bold mb-1 flex items-center gap-1.5">
+                  <i class={`bi ${cat.icon} text-xs`}></i> {cat.label}
+                </p>
+                {cat.activities.map((act: ActivityItem) => (
+                  <a href={act.href} class="flex items-center justify-between text-white/60 hover:text-gold text-sm py-1 pl-2 transition-colors">
+                    {act.name}
+                    <span class="text-xs text-white/30">Desde {act.price}</span>
+                  </a>
                 ))}
               </div>
             ))}

@@ -1,0 +1,521 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const categories = [
+  {
+    id: 'cielo',
+    label: 'CIELO',
+    icon: 'bi-wind',
+    color: 'blue',
+    activities: [
+      {
+        id: 'paracaidismo',
+        name: 'Paracaidismo',
+        difficulty: 'EXTREMO',
+        price: 199,
+        duration: '3–4 horas',
+        location: 'Cusco / Ica',
+        description: 'Salta desde 4,000 m sobre el Cusco o Ica y experimenta la adrenalina pura. Una experiencia que te dejará sin palabras y con vistas únicas de los Andes.',
+        image: '/images/Laguna_Humantay/DSC04361.webp',
+        imagePosition: 'center 30%',
+      },
+      {
+        id: 'parapente',
+        name: 'Parapente Cusco',
+        difficulty: 'MODERADO',
+        price: 89,
+        duration: '1–2 horas',
+        location: 'Cusco',
+        description: 'Vuela sobre los Andes del Cusco y disfruta de vistas panorámicas de la ciudad imperial y sus montañas sagradas desde las alturas.',
+        image: '/images/Cuzco/cusco.webp',
+        imagePosition: 'center 40%',
+      },
+      {
+        id: 'helicoptero',
+        name: 'Vuelo en Helicóptero',
+        difficulty: 'SUAVE',
+        price: 149,
+        duration: '1 hora',
+        location: 'Cusco / Lima',
+        description: 'Sobrevuela Machu Picchu, el Valle Sagrado o Lima desde las alturas en una experiencia única. Vistas aéreas que solo desde el cielo son posibles.',
+        image: '/images/Machupicchu/IMG_7709.webp',
+        imagePosition: 'center 50%',
+      },
+    ],
+  },
+  {
+    id: 'agua',
+    label: 'AGUA',
+    icon: 'bi-water',
+    color: 'cyan',
+    activities: [
+      {
+        id: 'rafting',
+        name: 'Rafting Río Urubamba',
+        difficulty: 'EXTREMO',
+        price: 55,
+        duration: '4–5 horas',
+        location: 'Cusco',
+        description: 'Desafía los rápidos del sagrado río Urubamba rodeado de selva y montañas en el corazón del Valle Sagrado del Cusco.',
+        image: '/images/ValleSagrado/ollantaytambo.webp',
+        imagePosition: 'center 60%',
+      },
+      {
+        id: 'kayak',
+        name: 'Kayak Lago Titicaca',
+        difficulty: 'SUAVE',
+        price: 45,
+        duration: '3 horas',
+        location: 'Puno',
+        description: 'Navega entre las islas flotantes de los Uros y las aguas azules del lago navegable más alto del mundo, a 3,812 m sobre el mar.',
+        image: '/images/Puno/FT 1.webp',
+        imagePosition: 'center 50%',
+      },
+      {
+        id: 'snorkel',
+        name: 'Snorkel Islas Ballestas',
+        difficulty: 'SUAVE',
+        price: 65,
+        duration: '3 horas',
+        location: 'Paracas',
+        description: 'Explora las aguas frías de las Islas Ballestas y observa lobos marinos, pingüinos y aves marinas desde el agua en la Reserva de Paracas.',
+        image: '/images/Paracas/pexels-luamorales-4125019.webp',
+        imagePosition: 'center 50%',
+      },
+    ],
+  },
+  {
+    id: 'tierra',
+    label: 'TIERRA',
+    icon: 'bi-bicycle',
+    color: 'amber',
+    activities: [
+      {
+        id: 'ciclismo',
+        name: 'Ciclismo de Montaña',
+        difficulty: 'MODERADO',
+        price: 49,
+        duration: '5–6 horas',
+        location: 'Cusco',
+        description: 'Baja por los caminos incas y senderos andinos en bicicleta de montaña. Guía experto, casco y equipamiento completo incluidos.',
+        image: '/images/Montaña_de_7_colores/DSC03311.webp',
+        imagePosition: 'center 40%',
+      },
+      {
+        id: 'cabalgata',
+        name: 'Cabalgata en los Andes',
+        difficulty: 'SUAVE',
+        price: 55,
+        duration: '3–4 horas',
+        location: 'Cusco',
+        description: 'Recorre los paisajes más hermosos de los Andes a caballo, con vistas al Cusco, el Valle Sagrado y los nevados circundantes.',
+        image: '/images/ValleSagrado/ollantaytambo-3.webp',
+        imagePosition: 'center 50%',
+      },
+      {
+        id: 'sandboarding',
+        name: 'Sandboarding Huacachina',
+        difficulty: 'MODERADO',
+        price: 35,
+        duration: '2–3 horas',
+        location: 'Ica',
+        description: 'Deslízate por las dunas más grandes de Sudamérica en la laguna oasis de Huacachina. Pura adrenalina en el desierto de Ica.',
+        image: '/images/Huacachina/pexels-gilmerdiaz-30151118.webp',
+        imagePosition: 'center 50%',
+      },
+      {
+        id: 'camping',
+        name: 'Camping Ausangate',
+        difficulty: 'EXTREMO',
+        price: 120,
+        duration: '2–3 días',
+        location: 'Cusco',
+        description: 'Acampa a los pies del nevado Ausangate (6,384 m) en una de las rutas de alta montaña más espectaculares y remotas del Perú.',
+        image: '/images/Montaña_de_7_colores/DSC02979.webp',
+        imagePosition: 'center 35%',
+      },
+    ],
+  },
+];
+
+const difficultyStyles: Record<string, string> = {
+  EXTREMO:  'bg-red-100 text-red-600',
+  MODERADO: 'bg-amber-100 text-amber-600',
+  SUAVE:    'bg-green-100 text-green-600',
+};
+
+const categoryStyles: Record<string, { bg: string; text: string; border: string }> = {
+  cielo:  { bg: 'bg-blue-500',  text: 'text-blue-600',  border: 'border-blue-200'  },
+  agua:   { bg: 'bg-cyan-500',  text: 'text-cyan-600',  border: 'border-cyan-200'  },
+  tierra: { bg: 'bg-amber-500', text: 'text-amber-600', border: 'border-amber-200' },
+};
+---
+
+<Layout title="Actividades de Aventura | Perú Beyond" description="Tours de aventura extrema y experiencias únicas en Perú. Paracaidismo, rafting, parapente, sandboarding y mucho más con PeruBeyond.">
+  <Header />
+
+  <main class="min-h-screen">
+
+    <!-- ── Hero ── -->
+    <section class="act-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20">
+      <img src="/images/Laguna_Humantay/DSC04410.webp" alt="Actividades en Perú" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+      <div class="relative z-10 max-w-3xl">
+        <span class="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-gold mb-4 bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full">
+          Adrenalina & Naturaleza
+        </span>
+        <h1 class="act-hero-title">
+          Vive el Perú con <span class="text-gold">Adrenalina</span>
+        </h1>
+        <p class="act-hero-sub">
+          Desde las alturas del Cusco hasta las dunas de Ica: 15+ actividades de aventura diseñadas para quienes buscan emociones únicas.
+        </p>
+        <!-- Stats -->
+        <div class="flex items-center justify-center gap-8 mt-8">
+          <div class="text-center">
+            <span class="text-gold text-3xl font-black block leading-none">15+</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Actividades</span>
+          </div>
+          <div class="w-px h-10 bg-white/20"></div>
+          <div class="text-center">
+            <span class="text-gold text-3xl font-black block leading-none">3</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Destinos</span>
+          </div>
+          <div class="w-px h-10 bg-white/20"></div>
+          <div class="text-center">
+            <span class="text-gold text-3xl font-black block leading-none">100%</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Seguro incluido</span>
+          </div>
+        </div>
+        <!-- Breadcrumb -->
+        <nav class="flex items-center justify-center gap-2 text-xs text-white/40 mt-8">
+          <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10.707 2.293a1 1 0 0 0-1.414 0l-7 7A1 1 0 0 0 3 11h1v6a1 1 0 0 0 1 1h4v-4h2v4h4a1 1 0 0 0 1-1v-6h1a1 1 0 0 0 .707-1.707l-7-7z"/>
+            </svg>
+            Inicio
+          </a>
+          <span class="text-white/20">›</span>
+          <span class="text-white/70">Actividades</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ── Contenido principal ── -->
+    <div class="act-content-bg">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 py-16">
+
+        {categories.map(cat => (
+          <section id={cat.id} class="mb-20">
+
+            <!-- Category header -->
+            <div class="flex items-center gap-4 mb-8">
+              <div class={`w-12 h-12 rounded-2xl ${categoryStyles[cat.id].bg} flex items-center justify-center shadow-lg flex-shrink-0`}>
+                <i class={`bi ${cat.icon} text-white text-xl`}></i>
+              </div>
+              <div>
+                <h2 class="act-cat-title">{cat.label}</h2>
+                <p class="act-cat-sub">{cat.activities.length} actividades disponibles</p>
+              </div>
+              <div class="flex-1 h-px bg-gray-200 ml-4 hidden sm:block"></div>
+            </div>
+
+            <!-- Activities grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+              {cat.activities.map(act => (
+                <div id={act.id} class="act-card group">
+
+                  <!-- Image -->
+                  <div class="act-card-img-wrap">
+                    <img
+                      src={act.image}
+                      alt={act.name}
+                      class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                      style={`object-position: ${act.imagePosition};`}
+                      loading="lazy"
+                    />
+                    <div class="act-card-img-shade"></div>
+                    <!-- Category tag on image -->
+                    <span class={`act-img-tag ${categoryStyles[cat.id].bg}`}>
+                      <i class={`bi ${cat.icon} text-[10px] mr-1`}></i>{cat.label}
+                    </span>
+                    <!-- Difficulty badge on image -->
+                    <span class={`act-diff-badge ${difficultyStyles[act.difficulty]}`}>
+                      ● {act.difficulty}
+                    </span>
+                  </div>
+
+                  <!-- Card body -->
+                  <div class="act-card-body">
+                    <h3 class="act-card-title">{act.name}</h3>
+                    <p class="act-card-desc">{act.description}</p>
+
+                    <!-- Meta row -->
+                    <div class="flex items-center gap-3 mt-3 mb-4">
+                      <span class="act-meta-item">
+                        <i class="bi bi-clock text-gold text-xs"></i>
+                        {act.duration}
+                      </span>
+                      <span class="act-meta-sep">·</span>
+                      <span class="act-meta-item">
+                        <i class="bi bi-geo-alt text-gold text-xs"></i>
+                        {act.location}
+                      </span>
+                    </div>
+
+                    <!-- Price + CTA -->
+                    <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
+                      <div>
+                        <span class="text-[10px] text-gray-400 uppercase tracking-wider">Desde</span>
+                        <span class="act-price">${act.price}</span>
+                      </div>
+                      <a href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: ' + act.name)}`}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         class="act-cta-btn group/btn">
+                        Reservar
+                        <i class="bi bi-arrow-right text-xs group-hover/btn:translate-x-0.5 transition-transform"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              ))}
+            </div>
+
+          </section>
+        ))}
+
+        <!-- CTA Banner -->
+        <section class="act-cta-banner relative overflow-hidden rounded-3xl">
+          <img src="/images/Machupicchu/IMG_7726.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+          <div class="absolute inset-0 bg-navy/80"></div>
+          <div class="relative z-10 text-center py-16 px-6">
+            <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">¿Listo para la aventura?</span>
+            <h2 class="cta-banner-title">Diseñamos tu experiencia a medida</h2>
+            <p class="cta-banner-sub">
+              Nuestro equipo en Cusco te asesora sin costo para armar el itinerario perfecto combinando las actividades que más te emocionan.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+              <a href="https://wa.me/51943491959?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20actividades%20de%20aventura"
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5">
+                <i class="bi bi-whatsapp text-base"></i>
+                WhatsApp directo
+              </a>
+              <a href="/contacto"
+                 class="inline-flex items-center gap-2 bg-gold hover:bg-yellow-400 text-navy font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5">
+                Consultar ahora
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ── Hero ── */
+  .act-hero {
+    height: 70vh;
+    min-height: 560px;
+    overflow: hidden;
+  }
+  .hero-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(13,27,46,0.55) 0%, rgba(13,27,46,0.75) 100%);
+  }
+  .act-hero-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.45);
+  }
+  .act-hero-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.65;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* ── Content area ── */
+  .act-content-bg {
+    background-color: #f8f6f3;
+  }
+
+  /* ── Category headings ── */
+  .act-cat-title {
+    font-family: Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0d1b2e;
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+  .act-cat-sub {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    font-weight: 500;
+    margin-top: 0.2rem;
+  }
+
+  /* ── Activity card ── */
+  .act-card {
+    background: #ffffff;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .act-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.14);
+  }
+
+  .act-card-img-wrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .act-card-img-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%);
+  }
+  .group:hover .act-card-img-wrap img {
+    transform: scale(1.08);
+  }
+
+  .act-img-tag {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.25rem 0.6rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+  }
+
+  .act-diff-badge {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 9999px;
+    backdrop-filter: blur(4px);
+  }
+
+  .act-card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .act-card-title {
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0d1b2e;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+  .act-card-desc {
+    font-size: 0.8rem;
+    color: #6b7280;
+    line-height: 1.65;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .act-meta-item {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .act-meta-sep {
+    color: #d1d5db;
+    font-size: 0.75rem;
+  }
+
+  .act-price {
+    font-family: Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0d1b2e;
+    line-height: 1;
+    margin-left: 0.25rem;
+  }
+
+  .act-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #0d1b2e;
+    color: #f6d06a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+  }
+  .act-cta-btn:hover {
+    background: #c9a84c;
+    color: #0d1b2e;
+    transform: translateY(-1px);
+  }
+
+  /* ── CTA banner ── */
+  .act-cta-banner {
+    margin-top: 2rem;
+  }
+  .cta-banner-title {
+    font-family: Georgia, serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+  .cta-banner-sub {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+</style>
