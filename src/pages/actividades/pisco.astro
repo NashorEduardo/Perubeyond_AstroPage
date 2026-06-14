@@ -1,0 +1,335 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const highlights = [
+  'Historia del Pisco Sour: origen en Lima, años 1920',
+  'Ingredientes clave: pisco, limón, clara de huevo y almíbar',
+  'Demostración profesional por bartender experto',
+  'Prepara tu propio cóctel: sencillo, doble o "Catedral"',
+  'Degustación de variedades de piscos peruanos',
+  'Sesión de preguntas y respuestas al final',
+];
+
+const otherActivities = [
+  {
+    name: 'Clásicos de la Gastronomía Peruana',
+    desc: 'Taller gastronómico · 2 horas · Lima',
+    img: '/images/Actividades/Platillo_01.webp',
+    href: '/actividades/gastronomia',
+    icon: 'bi-stars',
+    color: 'bg-amber-500',
+  },
+  {
+    name: 'Pintado de Toritos de Pucará',
+    desc: 'Arte & Cultura andina · 1.5–2 horas · Lima',
+    img: '/images/Actividades/Toritos_01.webp',
+    href: '/actividades/toritos',
+    icon: 'bi-palette',
+    color: 'bg-red-500',
+  },
+];
+---
+
+<Layout
+  title="Making Sour + Pisco Tasting | PeruBeyond"
+  description="Aprende a preparar el auténtico Pisco Sour y degusta variedades de pisco peruano de la mano de un bartender experto en Lima. Reserva con PeruBeyond."
+>
+  <Header />
+
+  <main class="min-h-screen">
+
+    <!-- Hero -->
+    <section class="act-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20">
+      <img src="/images/Actividades/Pisco.webp" alt="Pisco Sour peruano" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+      <div class="relative z-10 max-w-3xl">
+        <span class="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-gold mb-4 bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full">
+          Coctelería Artesanal
+        </span>
+        <h1 class="act-hero-title">
+          Making Sour + <span class="text-gold">Pisco Tasting</span>
+        </h1>
+        <p class="act-hero-sub">
+          Descubre la historia y los secretos del cóctel más emblemático del Perú. Prepara tu propio Pisco Sour y degusta variedades de piscos artesanales.
+        </p>
+
+        <!-- Stats -->
+        <div class="flex items-center justify-center gap-8 mt-8">
+          <div class="text-center">
+            <span class="text-gold text-3xl font-black block leading-none">2-3</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Horas</span>
+          </div>
+          <div class="w-px h-10 bg-white/20"></div>
+          <div class="text-center">
+            <span class="text-gold text-3xl font-black block leading-none">1920</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Origen</span>
+          </div>
+          <div class="w-px h-10 bg-white/20"></div>
+          <div class="text-center">
+            <span class="text-gold text-3xl font-black block leading-none">Lima</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Ubicación</span>
+          </div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <nav class="flex items-center justify-center gap-2 text-xs text-white/40 mt-8">
+          <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10.707 2.293a1 1 0 0 0-1.414 0l-7 7A1 1 0 0 0 3 11h1v6a1 1 0 0 0 1 1h4v-4h2v4h4a1 1 0 0 0 1-1v-6h1a1 1 0 0 0 .707-1.707l-7-7z"/>
+            </svg>
+            Inicio
+          </a>
+          <span class="text-white/20">›</span>
+          <a href="/actividades" class="hover:text-white transition-colors">Actividades</a>
+          <span class="text-white/20">›</span>
+          <span class="text-white/70">Making Sour</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <div class="act-content-bg">
+      <div class="max-w-6xl mx-auto px-4 md:px-8 py-16 space-y-20">
+
+        <!-- Layout principal -->
+        <section>
+          <div class="flex items-center gap-4 mb-10">
+            <div class="w-12 h-12 rounded-2xl bg-gold flex items-center justify-center shadow-lg flex-shrink-0">
+              <i class="bi bi-cup-straw text-navy text-xl"></i>
+            </div>
+            <div>
+              <h2 class="act-section-title">Making Sour + Pisco Tasting</h2>
+              <p class="act-section-sub">Coctelería artesanal · 2–3 horas · Lima</p>
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+            <!-- Texto -->
+            <div class="order-2 lg:order-1">
+              <p class="act-desc mb-4">
+                En la clase "Making Sour", los participantes comenzarán con una cálida bienvenida en nuestra ubicación designada. Nuestro experto bartender introducirá la historia del Pisco Sour, destacando su origen en Lima en los años 1920 y cómo se ha convertido en uno de los cócteles más emblemáticos de Perú.
+              </p>
+              <p class="act-desc mb-6">
+                Se explicará a los asistentes los componentes clave del Pisco Sour: pisco, jugo de limón, clara de huevo y almíbar de azúcar. Los participantes tendrán la oportunidad de preparar su propio cóctel eligiendo entre sencillo, doble o "Catedral", y posteriormente compartirán impresiones con el grupo. La actividad cierra con degustación de variedades de piscos peruanos.
+              </p>
+
+              <!-- Highlights -->
+              <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Incluye</p>
+              <ul class="space-y-3 mb-8">
+                {highlights.map(item => (
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center mt-0.5">
+                      <i class="bi bi-check text-gold text-xs font-bold"></i>
+                    </span>
+                    <span class="text-sm text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <!-- Info rápida -->
+              <div class="grid grid-cols-2 gap-3 mb-8">
+                <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                  <i class="bi bi-clock text-yellow-500 text-lg mb-1 block"></i>
+                  <span class="text-navy font-bold text-sm block">Duración</span>
+                  <span class="text-gray-500 text-xs">2 a 3 horas</span>
+                </div>
+                <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                  <i class="bi bi-geo-alt text-yellow-500 text-lg mb-1 block"></i>
+                  <span class="text-navy font-bold text-sm block">Ubicación</span>
+                  <span class="text-gray-500 text-xs">Lima, Perú</span>
+                </div>
+                <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                  <i class="bi bi-people text-yellow-500 text-lg mb-1 block"></i>
+                  <span class="text-navy font-bold text-sm block">Grupos</span>
+                  <span class="text-gray-500 text-xs">Pequeños y privados</span>
+                </div>
+                <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                  <i class="bi bi-translate text-yellow-500 text-lg mb-1 block"></i>
+                  <span class="text-navy font-bold text-sm block">Idioma</span>
+                  <span class="text-gray-500 text-xs">Español / Inglés</span>
+                </div>
+              </div>
+
+              <a
+                href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: Making Sour + Pisco Tasting')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="act-main-cta"
+              >
+                <i class="bi bi-whatsapp text-base"></i>
+                Reservar experiencia
+              </a>
+            </div>
+
+            <!-- Imagen -->
+            <div class="order-1 lg:order-2">
+              <img
+                src="/images/Actividades/Pisco.webp"
+                alt="Pisco Sour peruano"
+                class="act-img w-full h-[480px] object-cover rounded-2xl"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Cómo prepararlo -->
+        <section>
+          <div class="act-divider mb-14"></div>
+          <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Ingredientes del Pisco Sour</p>
+          <div class="grid sm:grid-cols-4 gap-4">
+            {[
+              { icon: 'bi-droplet', color: 'bg-yellow-50 text-yellow-600', name: 'Pisco', desc: 'Uva quebranta o italia' },
+              { icon: 'bi-circle', color: 'bg-green-50 text-green-600', name: 'Limón', desc: 'Jugo fresco natural' },
+              { icon: 'bi-egg', color: 'bg-white text-gray-500', name: 'Clara de huevo', desc: 'Para la espuma' },
+              { icon: 'bi-cup-hot', color: 'bg-amber-50 text-amber-600', name: 'Almíbar', desc: 'Azúcar derretida' },
+            ].map(item => (
+              <div class="dish-card text-center items-center">
+                <div class={`dish-icon ${item.color} mx-auto`}>
+                  <i class={`bi ${item.icon} text-xl`}></i>
+                </div>
+                <h4 class="dish-name">{item.name}</h4>
+                <p class="dish-desc">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- Otras actividades -->
+        <section>
+          <div class="act-divider mb-14"></div>
+          <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Otras experiencias</p>
+          <div class="grid sm:grid-cols-2 gap-5">
+            {otherActivities.map(act => (
+              <a href={act.href} class="group relative overflow-hidden rounded-2xl h-52 block">
+                <img src={act.img} alt={act.name} class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-6">
+                  <div class={`w-8 h-8 rounded-lg ${act.color} flex items-center justify-center mb-2`}>
+                    <i class={`bi ${act.icon} text-white text-sm`}></i>
+                  </div>
+                  <h3 class="text-white font-bold text-base leading-snug">{act.name}</h3>
+                  <p class="text-white/60 text-xs mt-0.5">{act.desc}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="act-cta-banner relative overflow-hidden rounded-3xl">
+          <img src="/images/Actividades/Pisco.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+          <div class="absolute inset-0 bg-navy/80"></div>
+          <div class="relative z-10 text-center py-16 px-6">
+            <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">¿Listo para vivir el Perú?</span>
+            <h2 class="cta-banner-title">Diseñamos tu experiencia a medida</h2>
+            <p class="cta-banner-sub">
+              Nuestro equipo te asesora sin costo para combinar las actividades culturales y gastronómicas que más te apasionen.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+              <a
+                href="https://wa.me/51943491959?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20clase%20de%20Pisco%20Sour"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
+              >
+                <i class="bi bi-whatsapp text-base"></i>
+                WhatsApp directo
+              </a>
+              <a
+                href="/contacto"
+                class="inline-flex items-center gap-2 bg-gold hover:bg-yellow-400 text-navy font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
+              >
+                Consultar ahora
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  :root { --navy: #0d1b2e; --gold: #f6d06a; }
+
+  .act-hero {
+    height: 70vh; min-height: 560px; overflow: hidden;
+  }
+  .hero-bg-img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 40%;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(13,27,46,0.55) 0%, rgba(13,27,46,0.80) 100%);
+  }
+  .act-hero-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 800; color: #fff;
+    line-height: 1.15; margin-bottom: 1rem;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.45);
+  }
+  .act-hero-sub {
+    font-size: 1.05rem; color: rgba(255,255,255,0.72);
+    line-height: 1.65; max-width: 560px; margin: 0 auto;
+  }
+  .act-content-bg { background-color: #f8f6f3; }
+  .act-section-title {
+    font-family: Georgia, serif; font-size: 1.65rem;
+    font-weight: 800; color: #0d1b2e;
+    letter-spacing: 0.02em; line-height: 1.1;
+  }
+  .act-section-sub { font-size: 0.8rem; color: #9ca3af; font-weight: 500; margin-top: 0.25rem; }
+  .act-desc { font-size: 0.9rem; color: #4b5563; line-height: 1.75; }
+  .act-img { transition: transform 0.4s ease; }
+  .act-img:hover { transform: scale(1.02); }
+  .act-main-cta {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: #0d1b2e; color: #f6d06a;
+    font-size: 0.85rem; font-weight: 700;
+    padding: 0.7rem 1.5rem; border-radius: 9999px;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    text-decoration: none;
+  }
+  .act-main-cta:hover { background: #c9a84c; color: #0d1b2e; transform: translateY(-2px); }
+  .dish-card {
+    background: #fff; border-radius: 1.25rem; padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    display: flex; flex-direction: column; gap: 0.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .dish-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.12); }
+  .dish-icon {
+    width: 3rem; height: 3rem; border-radius: 0.75rem;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;
+  }
+  .dish-name { font-family: Georgia, serif; font-size: 1rem; font-weight: 700; color: #0d1b2e; }
+  .dish-desc { font-size: 0.8rem; color: #6b7280; line-height: 1.65; }
+  .act-divider { height: 1px; background: linear-gradient(to right, transparent, #e5e7eb, transparent); }
+  .act-cta-banner { margin-top: 2rem; }
+  .cta-banner-title {
+    font-family: Georgia, serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    font-weight: 800; color: #fff;
+    margin-bottom: 0.75rem; line-height: 1.2;
+  }
+  .cta-banner-sub {
+    font-size: 0.95rem; color: rgba(255,255,255,0.65);
+    max-width: 520px; margin: 0 auto; line-height: 1.7;
+  }
+  .text-navy { color: #0d1b2e; }
+  .text-gold { color: #f6d06a; }
+  .bg-navy { background-color: #0d1b2e; }
+  .bg-gold { background-color: #f6d06a; }
+</style>
