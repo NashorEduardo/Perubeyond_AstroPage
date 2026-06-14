@@ -3,192 +3,71 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const categories = [
-  {
-    id: 'cielo',
-    label: 'CIELO',
-    icon: 'bi-wind',
-    color: 'blue',
-    activities: [
-      {
-        id: 'paracaidismo',
-        name: 'Paracaidismo',
-        difficulty: 'EXTREMO',
-        price: 199,
-        duration: '3–4 horas',
-        location: 'Cusco / Ica',
-        description: 'Salta desde 4,000 m sobre el Cusco o Ica y experimenta la adrenalina pura. Una experiencia que te dejará sin palabras y con vistas únicas de los Andes.',
-        image: '/images/Laguna_Humantay/DSC04361.webp',
-        imagePosition: 'center 30%',
-      },
-      {
-        id: 'parapente',
-        name: 'Parapente Cusco',
-        difficulty: 'MODERADO',
-        price: 89,
-        duration: '1–2 horas',
-        location: 'Cusco',
-        description: 'Vuela sobre los Andes del Cusco y disfruta de vistas panorámicas de la ciudad imperial y sus montañas sagradas desde las alturas.',
-        image: '/images/Cuzco/cusco.webp',
-        imagePosition: 'center 40%',
-      },
-      {
-        id: 'helicoptero',
-        name: 'Vuelo en Helicóptero',
-        difficulty: 'SUAVE',
-        price: 149,
-        duration: '1 hora',
-        location: 'Cusco / Lima',
-        description: 'Sobrevuela Machu Picchu, el Valle Sagrado o Lima desde las alturas en una experiencia única. Vistas aéreas que solo desde el cielo son posibles.',
-        image: '/images/Machupicchu/IMG_7709.webp',
-        imagePosition: 'center 50%',
-      },
-    ],
-  },
-  {
-    id: 'agua',
-    label: 'AGUA',
-    icon: 'bi-water',
-    color: 'cyan',
-    activities: [
-      {
-        id: 'rafting',
-        name: 'Rafting Río Urubamba',
-        difficulty: 'EXTREMO',
-        price: 55,
-        duration: '4–5 horas',
-        location: 'Cusco',
-        description: 'Desafía los rápidos del sagrado río Urubamba rodeado de selva y montañas en el corazón del Valle Sagrado del Cusco.',
-        image: '/images/ValleSagrado/ollantaytambo.webp',
-        imagePosition: 'center 60%',
-      },
-      {
-        id: 'kayak',
-        name: 'Kayak Lago Titicaca',
-        difficulty: 'SUAVE',
-        price: 45,
-        duration: '3 horas',
-        location: 'Puno',
-        description: 'Navega entre las islas flotantes de los Uros y las aguas azules del lago navegable más alto del mundo, a 3,812 m sobre el mar.',
-        image: '/images/Puno/FT 1.webp',
-        imagePosition: 'center 50%',
-      },
-      {
-        id: 'snorkel',
-        name: 'Snorkel Islas Ballestas',
-        difficulty: 'SUAVE',
-        price: 65,
-        duration: '3 horas',
-        location: 'Paracas',
-        description: 'Explora las aguas frías de las Islas Ballestas y observa lobos marinos, pingüinos y aves marinas desde el agua en la Reserva de Paracas.',
-        image: '/images/Paracas/pexels-luamorales-4125019.webp',
-        imagePosition: 'center 50%',
-      },
-    ],
-  },
-  {
-    id: 'tierra',
-    label: 'TIERRA',
-    icon: 'bi-bicycle',
-    color: 'amber',
-    activities: [
-      {
-        id: 'ciclismo',
-        name: 'Ciclismo de Montaña',
-        difficulty: 'MODERADO',
-        price: 49,
-        duration: '5–6 horas',
-        location: 'Cusco',
-        description: 'Baja por los caminos incas y senderos andinos en bicicleta de montaña. Guía experto, casco y equipamiento completo incluidos.',
-        image: '/images/Montaña_de_7_colores/DSC03311.webp',
-        imagePosition: 'center 40%',
-      },
-      {
-        id: 'cabalgata',
-        name: 'Cabalgata en los Andes',
-        difficulty: 'SUAVE',
-        price: 55,
-        duration: '3–4 horas',
-        location: 'Cusco',
-        description: 'Recorre los paisajes más hermosos de los Andes a caballo, con vistas al Cusco, el Valle Sagrado y los nevados circundantes.',
-        image: '/images/ValleSagrado/ollantaytambo-3.webp',
-        imagePosition: 'center 50%',
-      },
-      {
-        id: 'sandboarding',
-        name: 'Sandboarding Huacachina',
-        difficulty: 'MODERADO',
-        price: 35,
-        duration: '2–3 horas',
-        location: 'Ica',
-        description: 'Deslízate por las dunas más grandes de Sudamérica en la laguna oasis de Huacachina. Pura adrenalina en el desierto de Ica.',
-        image: '/images/Huacachina/pexels-gilmerdiaz-30151118.webp',
-        imagePosition: 'center 50%',
-      },
-      {
-        id: 'camping',
-        name: 'Camping Ausangate',
-        difficulty: 'EXTREMO',
-        price: 120,
-        duration: '2–3 días',
-        location: 'Cusco',
-        description: 'Acampa a los pies del nevado Ausangate (6,384 m) en una de las rutas de alta montaña más espectaculares y remotas del Perú.',
-        image: '/images/Montaña_de_7_colores/DSC02979.webp',
-        imagePosition: 'center 35%',
-      },
-    ],
-  },
+const piscoHighlights = [
+  'Historia del Pisco Sour: origen en Lima, años 1920',
+  'Ingredientes clave: pisco, limón, clara de huevo y almíbar',
+  'Demostración profesional por bartender experto',
+  'Prepara tu propio cóctel: sencillo, doble o "Catedral"',
+  'Degustación de variedades de piscos peruanos',
+  'Sesión de preguntas y respuestas al final',
 ];
 
-const difficultyStyles: Record<string, string> = {
-  EXTREMO:  'bg-red-100 text-red-600',
-  MODERADO: 'bg-amber-100 text-amber-600',
-  SUAVE:    'bg-green-100 text-green-600',
-};
+const toritosExperience = [
+  'Conocer la historia y el significado del Torito de Pucará',
+  'Aprender técnicas básicas de pintura artesanal',
+  'Decorar tu propio torito con colores y diseños personalizados',
+  'Llevarte una pieza creada por ti como recuerdo especial',
+];
 
-const categoryStyles: Record<string, { bg: string; text: string; border: string }> = {
-  cielo:  { bg: 'bg-blue-500',  text: 'text-blue-600',  border: 'border-blue-200'  },
-  agua:   { bg: 'bg-cyan-500',  text: 'text-cyan-600',  border: 'border-cyan-200'  },
-  tierra: { bg: 'bg-amber-500', text: 'text-amber-600', border: 'border-amber-200' },
-};
+const toritosSymbols = [
+  { label: 'Protección', desc: 'del hogar',          icon: 'bi-shield-check' },
+  { label: 'Prosperidad', desc: 'y abundancia',       icon: 'bi-stars'        },
+  { label: 'Fertilidad', desc: 'y crecimiento',       icon: 'bi-flower1'      },
+  { label: 'Conexión',   desc: 'con la cultura andina', icon: 'bi-heart'      },
+];
 ---
 
-<Layout title="Actividades de Aventura | Perú Beyond" description="Tours de aventura extrema y experiencias únicas en Perú. Paracaidismo, rafting, parapente, sandboarding y mucho más con PeruBeyond.">
+<Layout
+  title="Actividades Culturales y Gastronómicas | PeruBeyond"
+  description="Vive la auténtica cultura peruana con talleres de gastronomía, clases de Pisco Sour y arte andino. Experiencias únicas con PeruBeyond en Lima."
+>
   <Header />
 
   <main class="min-h-screen">
 
     <!-- ── Hero ── -->
     <section class="act-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20">
-      <img src="/images/Laguna_Humantay/DSC04410.webp" alt="Actividades en Perú" class="hero-bg-img" />
+      <img src="/images/Actividades/Platillo_01.webp" alt="Gastronomía peruana" class="hero-bg-img" />
       <div class="hero-overlay"></div>
       <div class="relative z-10 max-w-3xl">
         <span class="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-gold mb-4 bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full">
-          Adrenalina & Naturaleza
+          Cultura & Gastronomía
         </span>
         <h1 class="act-hero-title">
-          Vive el Perú con <span class="text-gold">Adrenalina</span>
+          Descubre el Perú a través de su <span class="text-gold">Cultura</span>
         </h1>
         <p class="act-hero-sub">
-          Desde las alturas del Cusco hasta las dunas de Ica: 15+ actividades de aventura diseñadas para quienes buscan emociones únicas.
+          Talleres gastronómicos, coctelería artesanal y arte andino: experiencias auténticas que conectan con el alma del Perú.
         </p>
+
         <!-- Stats -->
         <div class="flex items-center justify-center gap-8 mt-8">
           <div class="text-center">
-            <span class="text-gold text-3xl font-black block leading-none">15+</span>
-            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Actividades</span>
-          </div>
-          <div class="w-px h-10 bg-white/20"></div>
-          <div class="text-center">
             <span class="text-gold text-3xl font-black block leading-none">3</span>
-            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Destinos</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Experiencias</span>
           </div>
           <div class="w-px h-10 bg-white/20"></div>
           <div class="text-center">
             <span class="text-gold text-3xl font-black block leading-none">100%</span>
-            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Seguro incluido</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Auténtico</span>
+          </div>
+          <div class="w-px h-10 bg-white/20"></div>
+          <div class="text-center">
+            <span class="text-gold text-3xl font-black block leading-none">Lima</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Ubicación</span>
           </div>
         </div>
+
         <!-- Breadcrumb -->
         <nav class="flex items-center justify-center gap-2 text-xs text-white/40 mt-8">
           <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
@@ -205,108 +84,292 @@ const categoryStyles: Record<string, { bg: string; text: string; border: string 
 
     <!-- ── Contenido principal ── -->
     <div class="act-content-bg">
-      <div class="max-w-7xl mx-auto px-4 md:px-8 py-16">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-28">
 
-        {categories.map(cat => (
-          <section id={cat.id} class="mb-20">
+        <!-- ══════════════════════════════════════════
+             ACTIVIDAD 1 — Clásicos de la Gastronomía
+             ══════════════════════════════════════════ -->
+        <section id="gastronomia">
 
-            <!-- Category header -->
-            <div class="flex items-center gap-4 mb-8">
-              <div class={`w-12 h-12 rounded-2xl ${categoryStyles[cat.id].bg} flex items-center justify-center shadow-lg flex-shrink-0`}>
-                <i class={`bi ${cat.icon} text-white text-xl`}></i>
+          <!-- Header de sección -->
+          <div class="flex items-center gap-4 mb-10">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500 flex items-center justify-center shadow-lg flex-shrink-0">
+              <i class="bi bi-stars text-white text-xl"></i>
+            </div>
+            <div>
+              <h2 class="act-section-title">Clásicos de la Gastronomía Peruana</h2>
+              <p class="act-section-sub">Taller gastronómico · 2 horas · Lima</p>
+            </div>
+            <div class="flex-1 h-px bg-gray-200 ml-4 hidden sm:block"></div>
+          </div>
+
+          <!-- Layout principal: imágenes izq. · texto der. -->
+          <div class="grid lg:grid-cols-2 gap-10 items-start mb-12">
+
+            <!-- Imágenes -->
+            <div class="grid grid-cols-2 gap-3">
+              <img
+                src="/images/Actividades/Platillo_01.webp"
+                alt="Platillos de la gastronomía peruana"
+                class="act-img col-span-2 h-72 object-cover rounded-2xl"
+                loading="lazy"
+              />
+              <img
+                src="/images/Actividades/Platillo_02.webp"
+                alt="Preparación de causa limeña"
+                class="act-img h-48 object-cover rounded-2xl"
+                loading="lazy"
+              />
+              <div class="bg-amber-50 border border-amber-100 rounded-2xl h-48 flex flex-col items-center justify-center p-6">
+                <i class="bi bi-clock text-amber-500 text-3xl mb-2"></i>
+                <span class="text-navy font-bold text-xl">2 horas</span>
+                <span class="text-gray-400 text-sm text-center mt-1">de experiencia gastronómica</span>
               </div>
-              <div>
-                <h2 class="act-cat-title">{cat.label}</h2>
-                <p class="act-cat-sub">{cat.activities.length} actividades disponibles</p>
-              </div>
-              <div class="flex-1 h-px bg-gray-200 ml-4 hidden sm:block"></div>
             </div>
 
-            <!-- Activities grid -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-              {cat.activities.map(act => (
-                <div id={act.id} class="act-card group">
+            <!-- Texto -->
+            <div>
+              <p class="act-desc mb-4">
+                Nuestro evento comienza con una bienvenida seguida de una introducción al pisco, explorando su historia y variedades. Los participantes aprenderán a preparar un auténtico pisco sour bajo la guía de nuestro experto bartender, con la oportunidad de degustar su propia creación.
+              </p>
+              <p class="act-desc mb-4">
+                Continuaremos con un taller práctico de causa limeña, donde cada uno personalizará y preparará su versión de este plato tradicional. La experiencia culminará con una sesión interactiva de cocina para preparar lomo saltado, aprendiendo técnicas de salteado antes de disfrutar del plato que han cocinado.
+              </p>
+              <p class="act-desc mb-8">
+                El evento concluye con una sesión de preguntas y respuestas, proporcionando una oportunidad para discutir lo aprendido y compartir impresiones sobre la experiencia gastronómica.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: Clásicos de la Gastronomía Peruana')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="act-main-cta"
+                >
+                  <i class="bi bi-whatsapp text-base"></i>
+                  Reservar experiencia
+                </a>
+                <a href="/actividades/gastronomia" class="act-secondary-cta">
+                  Ver página completa
+                  <i class="bi bi-arrow-right text-sm"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-                  <!-- Image -->
-                  <div class="act-card-img-wrap">
-                    <img
-                      src={act.image}
-                      alt={act.name}
-                      class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
-                      style={`object-position: ${act.imagePosition};`}
-                      loading="lazy"
-                    />
-                    <div class="act-card-img-shade"></div>
-                    <!-- Category tag on image -->
-                    <span class={`act-img-tag ${categoryStyles[cat.id].bg}`}>
-                      <i class={`bi ${cat.icon} text-[10px] mr-1`}></i>{cat.label}
-                    </span>
-                    <!-- Difficulty badge on image -->
-                    <span class={`act-diff-badge ${difficultyStyles[act.difficulty]}`}>
-                      ● {act.difficulty}
-                    </span>
-                  </div>
+          <!-- Tarjetas de platos -->
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-5">Qué se prepara</p>
+            <div class="grid sm:grid-cols-3 gap-5">
 
-                  <!-- Card body -->
-                  <div class="act-card-body">
-                    <h3 class="act-card-title">{act.name}</h3>
-                    <p class="act-card-desc">{act.description}</p>
-
-                    <!-- Meta row -->
-                    <div class="flex items-center gap-3 mt-3 mb-4">
-                      <span class="act-meta-item">
-                        <i class="bi bi-clock text-gold text-xs"></i>
-                        {act.duration}
-                      </span>
-                      <span class="act-meta-sep">·</span>
-                      <span class="act-meta-item">
-                        <i class="bi bi-geo-alt text-gold text-xs"></i>
-                        {act.location}
-                      </span>
-                    </div>
-
-                    <!-- Price + CTA -->
-                    <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
-                      <div>
-                        <span class="text-[10px] text-gray-400 uppercase tracking-wider">Desde</span>
-                        <span class="act-price">${act.price}</span>
-                      </div>
-                      <a href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: ' + act.name)}`}
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         class="act-cta-btn group/btn">
-                        Reservar
-                        <i class="bi bi-arrow-right text-xs group-hover/btn:translate-x-0.5 transition-transform"></i>
-                      </a>
-                    </div>
-                  </div>
-
+              <div class="dish-card">
+                <div class="dish-icon bg-amber-100 text-amber-600">
+                  <i class="bi bi-layers text-xl"></i>
                 </div>
-              ))}
+                <h4 class="dish-name">Causita Limeña</h4>
+                <p class="dish-desc">Capas de puré de papa amarilla aliñado con sal, pimienta y limón, rellenas de pollo, vegetales o quinua. Un clásico de la gastronomía peruana.</p>
+              </div>
+
+              <div class="dish-card">
+                <div class="dish-icon bg-red-100 text-red-500">
+                  <i class="bi bi-fire text-xl"></i>
+                </div>
+                <h4 class="dish-name">Lomo Saltado</h4>
+                <p class="dish-desc">Carne de lomo fino salteada en wok con cebolla, tomates y ají amarillo, servida sobre papas fritas y acompañada de arroz.</p>
+              </div>
+
+              <div class="dish-card">
+                <div class="dish-icon bg-yellow-100 text-yellow-600">
+                  <i class="bi bi-egg-fried text-xl"></i>
+                </div>
+                <h4 class="dish-name">Crepe de Quinua y Kiwicha</h4>
+                <p class="dish-desc">Delicioso crepe en base de quinua y kiwicha acompañado de crema de durazno o mango.</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <div class="act-divider"></div>
+
+        <!-- ══════════════════════════════════════════
+             ACTIVIDAD 2 — Making Sour + Pisco Tasting
+             ══════════════════════════════════════════ -->
+        <section id="pisco">
+
+          <!-- Header de sección -->
+          <div class="flex items-center gap-4 mb-10">
+            <div class="w-12 h-12 rounded-2xl bg-gold flex items-center justify-center shadow-lg flex-shrink-0">
+              <i class="bi bi-cup-straw text-navy text-xl"></i>
+            </div>
+            <div>
+              <h2 class="act-section-title">Making Sour + Pisco Tasting</h2>
+              <p class="act-section-sub">Coctelería artesanal · 2–3 horas · Lima</p>
+            </div>
+            <div class="flex-1 h-px bg-gray-200 ml-4 hidden sm:block"></div>
+          </div>
+
+          <!-- Layout: texto izq. · imagen der. -->
+          <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+            <!-- Texto -->
+            <div class="order-2 lg:order-1">
+              <p class="act-desc mb-4">
+                En la clase "Making Sour", los participantes comenzarán con una cálida bienvenida en nuestra ubicación designada. Nuestro experto bartender introducirá la historia del Pisco Sour, destacando su origen en Lima en los años 1920 y cómo se ha convertido en uno de los cócteles más emblemáticos de Perú.
+              </p>
+              <p class="act-desc mb-6">
+                Se explicará a los asistentes los componentes clave del Pisco Sour: pisco, jugo de limón, clara de huevo y almíbar de azúcar. Los participantes tendrán la oportunidad de preparar su propio cóctel eligiendo entre sencillo, doble o "Catedral", y posteriormente compartirán impresiones con el grupo. La actividad cierra con degustación de variedades de piscos peruanos.
+              </p>
+
+              <!-- Lista de highlights -->
+              <ul class="space-y-3 mb-8">
+                {piscoHighlights.map(item => (
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center mt-0.5">
+                      <i class="bi bi-check text-gold text-xs font-bold"></i>
+                    </span>
+                    <span class="text-sm text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: Making Sour + Pisco Tasting')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="act-main-cta"
+                >
+                  <i class="bi bi-whatsapp text-base"></i>
+                  Reservar experiencia
+                </a>
+                <a href="/actividades/pisco" class="act-secondary-cta">
+                  Ver página completa
+                  <i class="bi bi-arrow-right text-sm"></i>
+                </a>
+              </div>
             </div>
 
-          </section>
-        ))}
+            <!-- Imagen -->
+            <div class="order-1 lg:order-2">
+              <img
+                src="/images/Actividades/Pisco.webp"
+                alt="Pisco Sour peruano"
+                class="act-img w-full h-[460px] object-cover rounded-2xl"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
 
-        <!-- CTA Banner -->
+        <div class="act-divider"></div>
+
+        <!-- ══════════════════════════════════════════
+             ACTIVIDAD 3 — Pintado de Toritos de Pucará
+             ══════════════════════════════════════════ -->
+        <section id="toritos">
+
+          <!-- Header de sección -->
+          <div class="flex items-center gap-4 mb-10">
+            <div class="w-12 h-12 rounded-2xl bg-red-500 flex items-center justify-center shadow-lg flex-shrink-0">
+              <i class="bi bi-palette text-white text-xl"></i>
+            </div>
+            <div>
+              <h2 class="act-section-title">Pintado de Toritos de Pucará</h2>
+              <p class="act-section-sub">Arte & Cultura andina · 1.5–2 horas · Lima</p>
+            </div>
+            <div class="flex-1 h-px bg-gray-200 ml-4 hidden sm:block"></div>
+          </div>
+
+          <!-- Introducción -->
+          <p class="act-desc max-w-3xl mb-10">
+            El Torito de Pucará es una de las expresiones más representativas del arte andino peruano. Elaborado en cerámica y decorado a mano, simboliza protección, prosperidad, fertilidad y buena fortuna para los hogares. Esta emblemática artesanía tiene sus raíces en las tradiciones del altiplano peruano y, con el paso del tiempo, se convirtió en un símbolo cultural reconocido en todo el país.
+          </p>
+
+          <!-- Galería + Contenido -->
+          <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+            <!-- Galería de imágenes -->
+            <div class="grid grid-cols-2 gap-2">
+              <img src="/images/Actividades/Toritos_01.webp" alt="Torito de Pucará" class="act-img col-span-2 h-64 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_02.webp" alt="Torito de Pucará" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_03.webp" alt="Torito de Pucará" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_04.webp" alt="Torito de Pucará" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_05.webp" alt="Torito de Pucará" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_06.webp" alt="Torito de Pucará" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_07.webp" alt="Torito de Pucará" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+            </div>
+
+            <!-- Contenido -->
+            <div>
+
+              <!-- Tu experiencia -->
+              <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Tu experiencia</p>
+              <ul class="space-y-3 mb-8">
+                {toritosExperience.map(item => (
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                      <i class="bi bi-check text-red-500 text-xs font-bold"></i>
+                    </span>
+                    <span class="text-sm text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <!-- ¿Qué representa? -->
+              <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">¿Qué representa?</p>
+              <div class="grid grid-cols-2 gap-3 mb-8">
+                {toritosSymbols.map(sym => (
+                  <div class="symbol-card">
+                    <i class={`bi ${sym.icon} text-red-500 text-2xl mb-1`}></i>
+                    <span class="font-bold text-navy text-sm">{sym.label}</span>
+                    <span class="text-gray-400 text-xs">{sym.desc}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: Pintado de Toritos de Pucará')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="act-main-cta"
+                >
+                  <i class="bi bi-whatsapp text-base"></i>
+                  Reservar experiencia
+                </a>
+                <a href="/actividades/toritos" class="act-secondary-cta">
+                  Ver página completa
+                  <i class="bi bi-arrow-right text-sm"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── CTA Banner ── -->
         <section class="act-cta-banner relative overflow-hidden rounded-3xl">
-          <img src="/images/Machupicchu/IMG_7726.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+          <img src="/images/Actividades/Platillo_02.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
           <div class="absolute inset-0 bg-navy/80"></div>
           <div class="relative z-10 text-center py-16 px-6">
-            <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">¿Listo para la aventura?</span>
+            <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">¿Listo para vivir el Perú?</span>
             <h2 class="cta-banner-title">Diseñamos tu experiencia a medida</h2>
             <p class="cta-banner-sub">
-              Nuestro equipo en Cusco te asesora sin costo para armar el itinerario perfecto combinando las actividades que más te emocionan.
+              Nuestro equipo te asesora sin costo para combinar las actividades culturales y gastronómicas que más te apasionen.
             </p>
             <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
-              <a href="https://wa.me/51943491959?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20actividades%20de%20aventura"
-                 target="_blank" rel="noopener noreferrer"
-                 class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5">
+              <a
+                href="https://wa.me/51943491959?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20actividades%20culturales%20y%20gastron%C3%B3micas"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
+              >
                 <i class="bi bi-whatsapp text-base"></i>
                 WhatsApp directo
               </a>
-              <a href="/contacto"
-                 class="inline-flex items-center gap-2 bg-gold hover:bg-yellow-400 text-navy font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5">
+              <a
+                href="/contacto"
+                class="inline-flex items-center gap-2 bg-gold hover:bg-yellow-400 text-navy font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
+              >
                 Consultar ahora
                 <i class="bi bi-arrow-right"></i>
               </a>
@@ -323,6 +386,12 @@ const categoryStyles: Record<string, { bg: string; text: string; border: string 
 </Layout>
 
 <style>
+  /* ── Variables ── */
+  :root {
+    --navy: #0d1b2e;
+    --gold:  #f6d06a;
+  }
+
   /* ── Hero ── */
   .act-hero {
     height: 70vh;
@@ -335,16 +404,16 @@ const categoryStyles: Record<string, { bg: string; text: string; border: string 
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 35%;
+    object-position: center 40%;
   }
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(13,27,46,0.55) 0%, rgba(13,27,46,0.75) 100%);
+    background: linear-gradient(to bottom, rgba(13,27,46,0.55) 0%, rgba(13,27,46,0.80) 100%);
   }
   .act-hero-title {
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
     font-weight: 800;
     color: #ffffff;
     line-height: 1.15;
@@ -359,147 +428,141 @@ const categoryStyles: Record<string, { bg: string; text: string; border: string 
     margin: 0 auto;
   }
 
-  /* ── Content area ── */
+  /* ── Fondo general ── */
   .act-content-bg {
     background-color: #f8f6f3;
   }
 
-  /* ── Category headings ── */
-  .act-cat-title {
+  /* ── Encabezados de sección ── */
+  .act-section-title {
     font-family: Georgia, serif;
-    font-size: 1.6rem;
+    font-size: 1.65rem;
     font-weight: 800;
     color: #0d1b2e;
-    letter-spacing: 0.05em;
-    line-height: 1;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
   }
-  .act-cat-sub {
+  .act-section-sub {
     font-size: 0.8rem;
     color: #9ca3af;
     font-weight: 500;
-    margin-top: 0.2rem;
+    margin-top: 0.25rem;
   }
 
-  /* ── Activity card ── */
-  .act-card {
-    background: #ffffff;
-    border-radius: 1.25rem;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .act-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 16px 48px rgba(0,0,0,0.14);
+  /* ── Texto descriptivo ── */
+  .act-desc {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.75;
   }
 
-  .act-card-img-wrap {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-    flex-shrink: 0;
+  /* ── Imágenes ── */
+  .act-img {
+    transition: transform 0.4s ease;
   }
-  .act-card-img-shade {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%);
-  }
-  .group:hover .act-card-img-wrap img {
-    transform: scale(1.08);
+  .act-img:hover {
+    transform: scale(1.02);
   }
 
-  .act-img-tag {
-    position: absolute;
-    top: 0.75rem;
-    left: 0.75rem;
-    font-size: 0.62rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: white;
-    padding: 0.25rem 0.6rem;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-  }
-
-  .act-diff-badge {
-    position: absolute;
-    bottom: 0.75rem;
-    left: 0.75rem;
-    font-size: 0.62rem;
-    font-weight: 700;
-    padding: 0.25rem 0.6rem;
-    border-radius: 9999px;
-    backdrop-filter: blur(4px);
-  }
-
-  .act-card-body {
-    padding: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  .act-card-title {
-    font-family: Georgia, serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #0d1b2e;
-    line-height: 1.3;
-    margin-bottom: 0.5rem;
-  }
-  .act-card-desc {
-    font-size: 0.8rem;
-    color: #6b7280;
-    line-height: 1.65;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .act-meta-item {
-    font-size: 0.75rem;
-    color: #9ca3af;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-  .act-meta-sep {
-    color: #d1d5db;
-    font-size: 0.75rem;
-  }
-
-  .act-price {
-    font-family: Georgia, serif;
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #0d1b2e;
-    line-height: 1;
-    margin-left: 0.25rem;
-  }
-
-  .act-cta-btn {
+  /* ── Botón secundario ── */
+  .act-secondary-cta {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
+    background: transparent;
+    color: #0d1b2e;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.7rem 1.5rem;
+    border-radius: 9999px;
+    border: 2px solid #0d1b2e;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    text-decoration: none;
+  }
+  .act-secondary-cta:hover {
     background: #0d1b2e;
     color: #f6d06a;
-    font-size: 0.75rem;
+    transform: translateY(-2px);
+  }
+
+  /* ── Botón CTA principal ── */
+  .act-main-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #0d1b2e;
+    color: #f6d06a;
+    font-size: 0.85rem;
     font-weight: 700;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.5rem;
     border-radius: 9999px;
     letter-spacing: 0.04em;
     transition: background 0.2s, color 0.2s, transform 0.2s;
+    text-decoration: none;
   }
-  .act-cta-btn:hover {
+  .act-main-cta:hover {
     background: #c9a84c;
     color: #0d1b2e;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
   }
 
-  /* ── CTA banner ── */
+  /* ── Tarjetas de platos ── */
+  .dish-card {
+    background: #ffffff;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .dish-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+  }
+  .dish-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+  }
+  .dish-name {
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0d1b2e;
+  }
+  .dish-desc {
+    font-size: 0.8rem;
+    color: #6b7280;
+    line-height: 1.65;
+  }
+
+  /* ── Tarjetas de símbolos (Toritos) ── */
+  .symbol-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #fde8e8;
+  }
+
+  /* ── Divisor ── */
+  .act-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+  }
+
+  /* ── CTA Banner ── */
   .act-cta-banner {
     margin-top: 2rem;
   }
