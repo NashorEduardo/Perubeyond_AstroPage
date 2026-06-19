@@ -58,11 +58,89 @@ const langAlternates = {
 ---
 
 <Layout
-  title={title}
-  description={description ?? 'Tour en Perú con Peru Beyond - Operador líder en Cusco.'}
+  title={`${title} | Peru Beyond — Agencia de Tours en Cusco`}
+  description={`${title} desde $${price} · ${duration} · ${description ?? 'Tour en Perú con Peru Beyond - Guías certificados en Cusco.'}`}
   ogImage={image}
   langAlternates={langAlternates}
 >
+  <!-- Schema.org: TouristTrip -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": title,
+    "description": description,
+    "image": image?.startsWith('http') ? image : `https://www.perubeyond.com${image}`,
+    "touristType": "Adventure travelers",
+    "offers": {
+      "@type": "Offer",
+      "price": price,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2026-01-01",
+      "url": `https://www.perubeyond.com/tours/${slug}`
+    },
+    "provider": {
+      "@type": "TravelAgency",
+      "name": "Peru Beyond",
+      "url": "https://www.perubeyond.com",
+      "telephone": "+51943491959"
+    },
+    ...(itinerary && itinerary.length > 0 ? {
+      "itinerary": {
+        "@type": "ItemList",
+        "numberOfItems": itinerary.length,
+        "itemListElement": itinerary.map((item: any, i: number) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": `${t['tour.day']} ${item.day}: ${item.title}`,
+          "description": item.description ?? ''
+        }))
+      }
+    } : {})
+  })} />
+
+  <!-- Schema.org: BreadcrumbList -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.perubeyond.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tours",
+        "item": "https://www.perubeyond.com/tours/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": title,
+        "item": `https://www.perubeyond.com/tours/${slug}`
+      }
+    ]
+  })} />
+
+  {/* Schema.org: FAQPage */}
+  {faq && faq.length > 0 && (
+    <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faq.map((item: any) => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    })} />
+  )}
+
   <Header />
 
   
@@ -413,6 +491,58 @@ const langAlternates = {
         </section>
       )}
 
+      <!-- ── SECCIÓN: POLÍTICA DE CANCELACIÓN ── -->
+      <section>
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-1 h-10 bg-gold rounded-full"></div>
+          <h2 class="text-3xl font-extrabold text-navy" data-i18n="tour.cancel_title">{t['tour.cancel_title']}</h2>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <div class="divide-y divide-gray-100">
+
+            <div class="flex items-start gap-4 p-6">
+              <span class="mt-0.5 flex-shrink-0 w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
+                <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </span>
+              <div>
+                <h3 class="text-base font-bold text-navy" data-i18n="tour.cancel_free">{t['tour.cancel_free']}</h3>
+                <p class="text-sm text-gray-500 mt-1 leading-relaxed" data-i18n="tour.cancel_free_desc">{t['tour.cancel_free_desc']}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-6">
+              <span class="mt-0.5 flex-shrink-0 w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+                <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </span>
+              <div>
+                <h3 class="text-base font-bold text-navy" data-i18n="tour.cancel_no_refund">{t['tour.cancel_no_refund']}</h3>
+                <p class="text-sm text-gray-500 mt-1 leading-relaxed" data-i18n="tour.cancel_no_refund_desc">{t['tour.cancel_no_refund_desc']}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-6">
+              <span class="mt-0.5 flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </span>
+              <div>
+                <h3 class="text-base font-bold text-navy" data-i18n="tour.cancel_changes">{t['tour.cancel_changes']}</h3>
+                <p class="text-sm text-gray-500 mt-1 leading-relaxed" data-i18n="tour.cancel_changes_desc">{t['tour.cancel_changes_desc']}</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="bg-gray-50 px-6 py-4 text-center">
+            <p class="text-xs text-gray-500" data-i18n="tour.cancel_contact">{t['tour.cancel_contact']}</p>
+          </div>
+        </div>
+      </section>
 
       <!-- ── LIGHTBOX ── -->
       {gallery && gallery.length > 0 && (
@@ -650,6 +780,50 @@ const langAlternates = {
 )}
 
     
+ <!-- ── IMPACTO SOCIAL ── -->
+  <section class="py-16" style="background-color:#0d1b2e;">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+
+        <div>
+          <span class="inline-flex items-center gap-2 bg-gold/15 border border-gold/30 text-gold text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4" data-i18n="social.badge">
+            {t['social.badge']}
+          </span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4" data-i18n="social.tour_title">{t['social.tour_title']}</h2>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6" data-i18n="social.tour_desc">{t['social.tour_desc']}</p>
+          <a
+            href="/equipo"
+            class="inline-flex items-center gap-2 bg-gold hover:bg-amber-400 text-navy font-bold text-sm px-6 py-3 rounded-xl transition-all"
+            data-i18n="social.tour_cta"
+          >
+            {t['social.tour_cta']}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-gold/30 transition-colors">
+            <div class="text-2xl mb-2">🌾</div>
+            <p class="text-white text-sm font-semibold leading-snug" data-i18n="social.quinoa">{t['social.quinoa']}</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-gold/30 transition-colors">
+            <div class="text-2xl mb-2">🏥</div>
+            <p class="text-white text-sm font-semibold leading-snug" data-i18n="social.medical">{t['social.medical']}</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-gold/30 transition-colors">
+            <div class="text-2xl mb-2">🏡</div>
+            <p class="text-white text-sm font-semibold leading-snug" data-i18n="social.lodge">{t['social.lodge']}</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-gold/30 transition-colors">
+            <div class="text-2xl mb-2">🤝</div>
+            <p class="text-white text-sm font-semibold leading-snug" data-i18n="social.volunteer">{t['social.volunteer']}</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
  <!-- COMENTARIOS  -->
   <div id="comentarios">
     <Testimonials />
