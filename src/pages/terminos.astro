@@ -1,0 +1,382 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const sections = [
+  {
+    title: '1. Aceptación de los Términos',
+    content: [
+      'Bienvenido a Peru Beyond, marca comercial operada por MOTOANDES PERU E.I.R.L. (RUC 20614108437), con domicilio en Calle Zetas 109, Cusco. Al reservar y/o contratar nuestros servicios a través de nuestra página web, correo electrónico, WhatsApp o de forma presencial, usted declara haber leído, entendido y aceptado los presentes Términos y Condiciones.',
+      'Cualquier participación en nuestros servicios será considerada como la aceptación plena de este acuerdo.',
+    ],
+  },
+  {
+    title: '2. Alcance de Nuestro Servicio',
+    content: [
+      'Peru Beyond actúa como operador y/o intermediario entre el viajero y los proveedores de servicios turísticos (compañías de transporte, trenes, hoteles, restaurantes, guías locales, entre otros). Cada proveedor cuenta con sus propias políticas, que el viajero se compromete a respetar.',
+      'Nuestro sitio web muestra información referencial sobre los servicios ofrecidos, pero no garantiza su disponibilidad inmediata. Una vez realizada una solicitud de reserva, nuestro equipo se pondrá en contacto en un plazo no mayor a 48 horas para confirmar la disponibilidad del servicio solicitado.',
+    ],
+  },
+  {
+    title: '3. Precios de los Programas y Servicios',
+    content: [
+      'Todas las tarifas se expresan en dólares estadounidenses (USD) y/o soles peruanos (PEN), y no incluyen el IGV del 18% aplicable a ciudadanos peruanos y residentes extranjeros en el Perú (exonerado para turistas extranjeros no residentes, según la normativa vigente).',
+      'Las tarifas publicadas no son válidas durante feriados, puentes o temporadas de alta demanda, salvo que se indique expresamente lo contrario.',
+      'Las tarifas de transporte, hospedaje y boletos de tren están sujetas a cambios y disponibilidad, las cuales serán confirmadas en el momento de la reserva por uno de nuestros asesores vía correo electrónico o WhatsApp.',
+    ],
+  },
+  {
+    title: '4. Reservas y Pagos',
+    content: [
+      'Para confirmar cualquier reserva es necesario abonar un depósito mínimo del 30% del valor total del servicio contratado, más los gastos bancarios o de transferencia internacional que correspondan.',
+      'La reserva se considera confirmada únicamente tras la emisión de un voucher de servicio o un correo electrónico de confirmación por parte de Peru Beyond.',
+      'El saldo restante deberá ser cancelado antes del inicio de los servicios, según el plazo acordado con nuestro equipo de ventas.',
+      'Es responsabilidad del viajero proporcionar correctamente sus datos de llegada, salida y contacto, así como presentarse puntualmente en los puntos de encuentro establecidos en el itinerario.',
+      'Las reservas de boletos (tren, bus o avión) son personales e intransferibles, y están sujetas a las políticas de cancelación del proveedor correspondiente.',
+      'Todos los tours están sujetos a condiciones climáticas y operativas; en caso de interferencias por este motivo, aplicarán las condiciones particulares de cada servicio.',
+      'El cliente cuenta con un plazo de 48 horas, desde la recepción de la confirmación, para realizar observaciones. Transcurrido este plazo sin comunicación, se entenderá que el servicio ha sido aceptado conforme.',
+      'El incumplimiento en el pago del saldo dentro del plazo establecido faculta a Peru Beyond a cancelar la reserva sin reembolso y a actuar conforme a lo dispuesto en los artículos pertinentes del Código Civil peruano sobre incumplimiento de obligaciones.',
+    ],
+  },
+  {
+    title: '5. Métodos de Pago',
+    content: [
+      'Aceptamos transferencias bancarias nacionales e internacionales, depósitos en efectivo, tarjetas de crédito o débito Visa y Mastercard, así como giros a través de Western Union o MoneyGram.',
+      'Todos los gastos bancarios, comisiones por transferencia o costos de intermediarios financieros son asumidos por el cliente.',
+      'Los pagos realizados con tarjeta de crédito o débito están sujetos a un recargo por comisión bancaria internacional, el cual será informado antes de procesar el cobro.',
+      'Los pagos en moneda distinta al dólar estadounidense se convertirán utilizando el tipo de cambio vigente publicado por Peru Beyond en la fecha de la transacción.',
+      'Por motivos de seguridad y prevención de fraude, podemos solicitar una copia del documento de identidad o pasaporte del titular de la tarjeta utilizada para el pago.',
+    ],
+  },
+  {
+    title: '6. Cancelaciones, Reprogramaciones y Reembolsos',
+    content: [
+      'Cancelaciones con más de 70 días de anticipación al inicio del servicio: penalidad del 25% del valor del programa.',
+      'Cancelaciones entre 70 y 45 días antes del inicio del servicio: penalidad del 50% del valor del programa.',
+      'Cancelaciones dentro de los 45 días previos o no presentación (No Show): penalidad del 100%, sin derecho a reembolso.',
+      'Las reprogramaciones dentro de los 45 días previos al servicio podrán ser evaluadas siempre que el cliente no tenga saldos pendientes, el proveedor lo permita y no exista diferencia de tarifa.',
+      'Cuando un servicio sea operado por un tercero (aerolínea, Peru Rail, hoteles, etc.) cuyas políticas de cancelación sean más estrictas que las aquí descritas, prevalecerán las condiciones del proveedor.',
+      'Los reembolsos aprobados se procesarán en un plazo de entre 30 y 120 días hábiles, descontando los gastos administrativos y comisiones bancarias correspondientes.',
+    ],
+  },
+  {
+    title: '7. Política de No Presentación (No Show)',
+    content: [
+      'Si el viajero no se presenta en el punto de encuentro acordado, en la fecha y hora establecidas, sin previo aviso, perderá el derecho al servicio contratado y no habrá lugar a reembolso alguno.',
+    ],
+  },
+  {
+    title: '8. Modificaciones del Servicio',
+    content: [
+      'En caso de que se produzcan cambios de horario, ruta o condiciones por parte de proveedores externos (aerolíneas, trenes, hoteles, transporte terrestre), Peru Beyond gestionará la mejor alternativa disponible en beneficio del viajero, siempre sujeta a la disponibilidad del proveedor.',
+      'Si la modificación es directamente atribuible a Peru Beyond, asumiremos la responsabilidad correspondiente conforme a los presentes términos.',
+    ],
+  },
+  {
+    title: '9. Causas de Fuerza Mayor',
+    content: [
+      'Peru Beyond no será responsable por cancelaciones, retrasos o la no prestación de servicios derivados de causas de fuerza mayor, tales como huelgas, bloqueos de vías, fenómenos climáticos, desastres naturales, estados de emergencia o cualquier otro evento ajeno a nuestro control.',
+      'En estos casos, nuestro equipo brindará apoyo al viajero para buscar la reprogramación de los servicios afectados en la medida de lo posible.',
+    ],
+  },
+  {
+    title: '10. Salud y Condición Física',
+    content: [
+      'Algunas de nuestras actividades —como el Camino Inca, trekkings de altura o rutas a la Montaña de 7 Colores y la Laguna Humantay— requieren una condición física adecuada y aclimatación previa a la altitud.',
+      'El viajero debe informar a Peru Beyond, antes de iniciar el servicio, cualquier condición médica relevante (cardiopatías, problemas respiratorios, embarazo, entre otros). Peru Beyond no se hace responsable por afecciones de salud no declaradas previamente.',
+      'Recomendamos encarecidamente aclimatarse en ciudades de altura (como Cusco) durante 2 a 3 días antes de iniciar actividades de trekking, mantenerse hidratado y evitar el consumo de alcohol y tabaco durante este periodo.',
+    ],
+  },
+  {
+    title: '11. Seguro de Viaje',
+    content: [
+      'Recomendamos encarecidamente que todos nuestros pasajeros cuenten con un seguro de viaje que cubra accidentes, emergencias médicas, evacuación y cancelaciones imprevistas. Este seguro no está incluido en nuestros paquetes, salvo que se indique expresamente lo contrario en la cotización.',
+    ],
+  },
+  {
+    title: '12. Equipaje y Pertenencias',
+    content: [
+      'El pasajero es el único responsable de su equipaje y pertenencias personales durante todo el viaje. Algunos servicios, como los trenes a Machu Picchu, tienen restricciones estrictas de peso y volumen que el pasajero debe respetar.',
+      'Peru Beyond no se hace responsable por la pérdida, robo o daño de equipaje u objetos de valor. Recomendamos a nuestros pasajeros tomar las precauciones necesarias y mantener sus pertenencias bajo supervisión constante.',
+    ],
+  },
+  {
+    title: '13. Boletos de Ingreso a Machu Picchu y Camino Inca',
+    content: [
+      'Las entradas a la Llaqta de Machu Picchu y a la red de caminos del Camino Inca son personales, intransferibles y válidas únicamente para la fecha y horario seleccionados al momento de la compra.',
+      'No se permite el cambio de nombre del titular del boleto; excepcionalmente, solo puede corregirse el número de pasaporte o documento de identidad.',
+      'El Ministerio de Cultura / Dirección Desconcentrada de Cultura de Cusco es la entidad que emite y regula estos boletos, y no realiza reembolsos salvo en casos de fuerza mayor debidamente acreditados.',
+      'Peru Beyond actúa únicamente como intermediario en la gestión de estos boletos; la responsabilidad del correcto uso del documento recae en el pasajero.',
+    ],
+  },
+  {
+    title: '14. Trenes Turísticos (PeruRail / IncaRail)',
+    content: [
+      'Las modificaciones de boletos de tren se admiten hasta 48 horas antes de la fecha de viaje, aplicándose un recargo administrativo según la política vigente del operador ferroviario.',
+      'Las oficinas de atención de los operadores ferroviarios permanecen cerradas los domingos y feriados, lo cual puede retrasar la gestión de cualquier cambio solicitado.',
+      'Solicitamos a nuestros pasajeros comunicar con la mayor anticipación posible cualquier cambio o solicitud especial relacionada con sus boletos de tren.',
+    ],
+  },
+  {
+    title: '15. Vuelos Nacionales e Internacionales',
+    content: [
+      'Los reembolsos de vuelos nacionales están sujetos a las condiciones tarifarias establecidas por la aerolínea correspondiente.',
+      'En caso de reprogramación por motivos operativos, climáticos o de fuerza mayor atribuibles a la aerolínea, esta se encargará de reubicar al pasajero sin costo adicional, con el apoyo de nuestro equipo.',
+      'Si la reprogramación es solicitada voluntariamente por el pasajero, esta quedará sujeta a la diferencia de tarifa, además de las penalidades y tasas de reemisión que la aerolínea determine.',
+      'Para vuelos internacionales, Peru Beyond brinda asistencia en la gestión de cambios, pero no asume responsabilidad si la aerolínea no autoriza la modificación solicitada.',
+    ],
+  },
+  {
+    title: '16. Hospedaje',
+    content: [
+      'Peru Beyond se reserva el derecho de sustituir el hotel contratado por otro de categoría similar, en caso de no disponibilidad, garantizando siempre un estándar de calidad equivalente.',
+      'Las políticas de cancelación, No Show y reembolso para hospedaje dependerán de las condiciones particulares de cada hotel y serán informadas al momento de la reserva.',
+      'Los cambios de fecha de hospedaje están sujetos a disponibilidad y podrían generar un costo adicional, el cual será asumido por el pasajero.',
+    ],
+  },
+  {
+    title: '17. Puntos de Recojo y Conducta del Pasajero',
+    content: [
+      'La hora de recojo será indicada en el itinerario entregado al pasajero, quien deberá estar listo en el lobby del hotel o punto de encuentro acordado con la debida anticipación.',
+      'Peru Beyond no se hace responsable por la pérdida del servicio de transporte debido a la impuntualidad del pasajero.',
+      'En caso de que un pasajero se encuentre bajo evidente estado de ebriedad o bajo el efecto de sustancias que comprometan su seguridad o la de terceros, Peru Beyond se reserva el derecho de cancelar el servicio sin derecho a reembolso.',
+    ],
+  },
+  {
+    title: '18. Menores de Edad',
+    content: [
+      'Los menores de edad deben viajar acompañados de un padre, madre o apoderado, presentando su documento de identidad vigente. En caso de viajar con un solo progenitor o tercero responsable, se requerirá la autorización notarial correspondiente conforme a la normativa peruana vigente.',
+      'Salvo que se indique lo contrario en el programa, la tarifa de niño aplica hasta los 11 años con 11 meses; a partir de los 12 años se considera tarifa de adulto.',
+    ],
+  },
+  {
+    title: '19. Uso de Datos Personales',
+    content: [
+      'Los datos personales proporcionados por nuestros pasajeros serán utilizados exclusivamente para fines relacionados con la gestión de reservas y la prestación de los servicios contratados, en cumplimiento de la Ley N.º 29733, Ley de Protección de Datos Personales, y su reglamento.',
+      'Peru Beyond no comparte datos personales con terceros sin autorización expresa del titular, salvo cuando sea estrictamente necesario para la operación del servicio (por ejemplo, datos requeridos por aerolíneas u hoteles) o cuando la ley así lo exija.',
+    ],
+  },
+  {
+    title: '20. Uso de Imágenes y Material Audiovisual',
+    content: [
+      'Al contratar nuestros servicios, el pasajero autoriza a Peru Beyond a utilizar fotografías o material audiovisual captado durante las actividades, con fines promocionales y de difusión en nuestros canales digitales, salvo que el cliente solicite expresamente lo contrario por escrito antes del inicio del servicio.',
+    ],
+  },
+  {
+    title: '21. Responsabilidad de la Agencia',
+    content: [
+      'Peru Beyond, operado por MOTOANDES PERU E.I.R.L., se compromete a brindar servicios turísticos de calidad conforme al artículo 28 de la Ley General de Turismo N.º 29408.',
+      'Nuestra obligación frente a servicios no prestados por causas atribuibles a la agencia se limita al costo real del servicio omitido, excluyendo cualquier costo indirecto o consecuente.',
+      'Peru Beyond actúa como intermediario respecto de servicios prestados por terceros (aerolíneas, hoteles, operadores de transporte, restaurantes, etc.) y no asume responsabilidad por pérdidas, daños o lesiones derivadas directamente de la actuación de dichos proveedores, quienes operan bajo sus propias normativas y regulaciones.',
+      'Al reservar con nosotros, el pasajero reconoce y acepta los riesgos inherentes a las actividades de turismo de aventura y trekking en altura.',
+    ],
+  },
+  {
+    title: '22. Tiempos de Respuesta',
+    content: [
+      'Peru Beyond se compromete a atender y responder solicitudes de cambios, reembolsos o reclamos en un plazo máximo de 10 días hábiles desde su recepción.',
+    ],
+  },
+  {
+    title: '23. Documentación Requerida',
+    content: [
+      'El pasajero debe contar con pasaporte o documento de identidad vigente, según lo exija la normativa peruana para su nacionalidad.',
+      'Los viajeros extranjeros no residentes deben conservar la constancia de su ingreso al país (Tarjeta Andina de Migración o sello de ingreso) a fin de acreditar la exoneración del IGV cuando corresponda.',
+      'Los menores de edad deben presentar su documento de identidad vigente y, de ser el caso, la autorización notarial de viaje correspondiente.',
+    ],
+  },
+  {
+    title: '24. Marco Legal Aplicable',
+    content: [
+      'Constitución Política del Perú (1993): garantiza la libertad contractual, el derecho de propiedad y la protección frente a actos arbitrarios.',
+      'Ley General de Turismo N.º 29408: regula la prestación de servicios turísticos y las responsabilidades de las agencias y operadores, particularmente en lo referido a los estándares de calidad establecidos en su artículo 28.',
+      'Código Civil del Perú (1984): regula el cumplimiento de los contratos, la responsabilidad por incumplimiento y las obligaciones civiles entre las partes.',
+      'Ley N.º 29733, Ley de Protección de Datos Personales: regula el tratamiento de los datos personales de nuestros clientes.',
+    ],
+  },
+  {
+    title: '25. Modificaciones de los Términos y Condiciones',
+    content: [
+      'Peru Beyond se reserva el derecho de modificar o actualizar los presentes Términos y Condiciones en cualquier momento, sin previo aviso. Es responsabilidad del cliente revisar periódicamente esta página antes de confirmar una nueva reserva.',
+    ],
+  },
+];
+---
+
+<Layout>
+  <Header />
+
+  <main class="bg-white">
+
+    <!-- ══ HERO ══ -->
+    <section class="terms-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20" style="height: 56vh;">
+      <img
+        src="/images/Machupicchu/IMG_7726.webp"
+        alt="Términos y Condiciones Peru Beyond"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);"></div>
+      <div class="relative z-10">
+        <p class="script-title text-white/75 mb-3 text-lg">Peru Beyond</p>
+        <h1 class="terms-hero-title">
+          Términos y <span class="text-gold">Condiciones</span>
+        </h1>
+        <p class="terms-hero-sub">Las condiciones que rigen la reserva y prestación de nuestros servicios turísticos.</p>
+        <nav class="flex items-center justify-center gap-2 text-xs text-white/50 mt-5">
+          <a href="/" class="hover:text-white transition-colors">Inicio</a>
+          <span class="text-white/30">›</span>
+          <span class="text-white/80">Términos y Condiciones</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ══ INTRO + DATOS DE LA EMPRESA ══ -->
+    <section class="py-16 px-4" style="background-color: #faf9f7;">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <span class="script-title block mb-2">Antes de reservar</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-navy">Información importante</h2>
+          <div class="w-10 h-px bg-amber-400 mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-2xl p-6 border border-amber-100">
+            <p class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-3">Razón Social</p>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              <strong>MOTOANDES PERU E.I.R.L.</strong><br/>
+              RUC: 20614108437<br/>
+              Marca comercial: <strong>Peru Beyond</strong><br/>
+              Dirección: Calle Zetas 109, Cusco 08002, Perú
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-amber-100">
+            <p class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-3">Contacto</p>
+            <div class="flex items-center gap-3 mb-2">
+              <i class="bi bi-telephone text-amber-500"></i>
+              <a href="tel:+51943491959" class="text-sm text-gray-700 hover:text-amber-600 transition-colors">+51 943 491 959</a>
+            </div>
+            <div class="flex items-center gap-3 mb-2">
+              <i class="bi bi-envelope text-amber-500"></i>
+              <a href="mailto:info@perubeyond.com" class="text-sm text-gray-700 hover:text-amber-600 transition-colors">info@perubeyond.com</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="bi bi-envelope text-amber-500"></i>
+              <a href="mailto:reservas@perubeyond.com" class="text-sm text-gray-700 hover:text-amber-600 transition-colors">reservas@perubeyond.com</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-gray-400 text-sm leading-relaxed mt-8 text-center max-w-3xl mx-auto">
+          Peru Beyond es la marca comercial de MOTOANDES PERU E.I.R.L. Al reservar y/o contratar nuestros servicios a través de nuestra página web, correo electrónico, WhatsApp o de forma presencial, usted acepta íntegramente las condiciones descritas a continuación.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ SECCIÓN TÉRMINOS ══ -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+
+          <!-- Columna izquierda: sticky -->
+          <div class="md:sticky md:top-28">
+            <span class="script-title block mb-3">Documento Legal</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-navy leading-tight mb-4">
+              Condiciones de<br/>reserva y servicio
+            </h2>
+            <div class="w-8 h-px bg-amber-400 mb-5"></div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-8">
+              Te recomendamos leer cada apartado con atención. Si tienes alguna duda sobre estos términos, nuestro equipo está disponible para aclararla antes de confirmar tu reserva.
+            </p>
+            <a
+              href="https://wa.me/51943491959"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-3 bg-gray-900 hover:bg-amber-500 text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300"
+            >
+              <i class="bi bi-whatsapp text-base"></i>
+              Escríbenos al WhatsApp
+            </a>
+
+            <!-- Tarjeta de contacto -->
+            <div class="mt-8 p-5 rounded-2xl border border-amber-100 bg-amber-50">
+              <p class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-3">Contacto Directo</p>
+              <div class="flex items-center gap-3 mb-2">
+                <i class="bi bi-telephone text-amber-500"></i>
+                <a href="tel:+51943491959" class="text-sm text-gray-700 hover:text-amber-600 transition-colors">+51 943 491 959</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="bi bi-envelope text-amber-500"></i>
+                <a href="mailto:reservas@perubeyond.com" class="text-sm text-gray-700 hover:text-amber-600 transition-colors">reservas@perubeyond.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: artículos -->
+          <div>
+            {sections.map((section) => (
+              <div class="terms-item">
+                <h3 class="text-base md:text-lg font-bold text-navy mb-3 flex items-start gap-3">
+                  <span class="terms-bullet"></span>
+                  {section.title}
+                </h3>
+                <div class="pl-5 space-y-3">
+                  {section.content.map((paragraph) => (
+                    <p class="text-gray-500 text-sm leading-relaxed">{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <p class="text-xs text-gray-400 mt-10 pl-5">
+              Última actualización: junio de 2026. Peru Beyond se reserva el derecho de modificar estos Términos y Condiciones en cualquier momento.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ── Hero ── */
+  .terms-hero-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+  .terms-hero-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.72);
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  /* ── Artículos de términos ── */
+  .terms-item {
+    padding-bottom: 1.75rem;
+    margin-bottom: 1.75rem;
+    border-bottom: 1px solid #ece7de;
+  }
+  .terms-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .terms-bullet {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    border-radius: 50%;
+    background-color: #c9a84c;
+    margin-top: 0.5rem;
+  }
+</style>
