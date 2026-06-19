@@ -3,7 +3,7 @@ title: "Lima, Paracas, Ica, Machu Picchu & Rainbow Mountain – 9 Days / 8 Night
 price: "690"
 duration: "9 Days / 8 Nights"
 image: "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
-wetravelUuid: "6710388859"
+wetravelUuid: "0857343783"
 description: "Discover the best of Peru in 9 days: Lima, Paracas, Ica, Cusco, Sacred Valley, Machu Picchu, Humantay Lake and Rainbow Mountain, combining culture, adventure and unique landscapes."
 availability: "Every day"
 frequency: "All year round"

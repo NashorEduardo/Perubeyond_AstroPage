@@ -1,45 +1,51 @@
 ---
-title: "Super Sacred Valley Tour"
-price: "42"
+title: "Palcoyo Mountain Tour"
+price: "40"
 duration: "1 Day"
 image: "/images/ValleSagrado/moray.webp"
-wetravelUuid: "6710388859" 
-description: "Full Day visiting the main attractions of the Sacred Valley of the Incas: Chinchero, Maras Salt Mines, Moray, Ollantaytambo and Pisac, with buffet lunch included."
-availability: "Every day"
-frequency: "All year round"
-difficulty: "Grade I – short walks"
+wetravelUuid: ""
+description: "Full Day Tour to Palcoyo Mountain from Cusco. Discover the Rainbow Mountain Range, the Stone Forest, and breathtaking Andean landscapes with breakfast and buffet lunch included."
+availability: "Every Day"
+frequency: "All Year Round"
+difficulty: "Grade II, III - Maximum Altitude 4900 m.a.s.l."
+
 includes:
   - "Hotel pickup in Cusco"
-  - "Tourist transport"
+  - "Tourist transportation"
   - "Professional bilingual guide"
-  - "Buffet lunch in Urubamba"
-  - "Entrance tickets (Partial ticket + Salt Mines)"
-  - "Constant assistance throughout the tour"
-excludes:
-  - "Tips for service"
-  - "Breakfast and dinner"
-  - "Extra expenses not mentioned"
+  - "Breakfast on the route"
+  - "Buffet lunch"
+  - "Entrance ticket to Palcoyo Mountain"
+  - "Permanent assistance during the tour"
 
+excludes:
+  - "Service tips"
+  - "Dinner"
+  - "Extra expenses not mentioned"
 
 itinerary:
   - day: 1
-    title: "Full Day Super Sacred Valley"
-    description: "A full day exploring the best of the Sacred Valley of the Incas."
+    title: "Palcoyo Mountain Full Day"
+    description: "A unique experience visiting the Palcoyo Rainbow Mountain Range and its impressive Stone Forest."
     images:
       - "/itinerario/CHINCHEROS/chinchero01.webp"
       - "/itinerario/MARAS/maras01.webp"
       - "/itinerario/MORAY/moray01.webp"
       - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
-    activities:
-      - "Hotel pickup (approx. 07:00 a.m.)"
-      - "Visit to the town of Chinchero and its archaeological park"
-      - "Tour of the Maras Salt Mines"
-      - "Visit to the circular terraces of Moray"
-      - "Buffet lunch in Urubamba"
-      - "Tour of the Ollantaytambo fortress"
-      - "Final visit to Pisac (ruins and craft market)"
-      - "Return to Cusco (travelers are dropped off one block from the Plaza de Armas)"
 
+    activities:
+      - "Hotel pickup (04:00 a.m. approx.)"
+      - "Scenic drive south of Cusco"
+      - "Breakfast on the route"
+      - "Transfer to the Palcoyo community"
+      - "Easy hike of approximately 40 minutes"
+      - "Visit to the main viewpoint of Palcoyo Mountain"
+      - "Observation of the colorful mountains"
+      - "Visit to the Stone Forest"
+      - "Free time for photos and rest"
+      - "Return to the tourist transportation"
+      - "Buffet lunch on the route"
+      - "Return to Cusco (arrival approximately 05:00 p.m.)"
 
 gallery:
   - "/itinerario/CHINCHEROS/chinchero02.webp"
@@ -47,27 +53,35 @@ gallery:
   - "/itinerario/MORAY/moray02.webp"
   - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
   - "/itinerario/OLLANTAYTAMBO/ollantaytambo03.webp"
-videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 
+videoUrl: ""
 
 faq:
-  - question: "Do I need to be in good physical condition for this tour?"
-    answer: "No, the tour is low difficulty with light walks, suitable for all ages."
+  - question: "Is the hike to Palcoyo difficult?"
+    answer: "No. The hike is short and moderately easy, making it an excellent alternative to Vinicunca Rainbow Mountain."
+
   - question: "What should I bring?"
-    answer: "Comfortable clothing, sunscreen, a hat, water and a camera. A rain jacket is recommended during the rainy season."
-  - question: "Does the tour run every day?"
-    answer: "Yes, the tour operates every day of the year without exception."
+    answer: "Warm clothing, comfortable hiking shoes, sunscreen, sunglasses, water, and a camera."
+
+  - question: "Does the tour operate every day?"
+    answer: "Yes, the tour operates daily throughout the year, subject to favorable weather conditions."
+
   - question: "How long does the tour last?"
-    answer: "It is a full day tour, approximately 12 hours from pickup to return to Cusco."
-  - question: "Can I do it on the same day I arrive in Cusco?"
-    answer: "It is not recommended. We suggest at least one day of acclimatization in Cusco before taking the tour."
+    answer: "It is a full-day experience lasting approximately 13 hours from pickup to return to Cusco."
+
+  - question: "Do I need to acclimatize before the tour?"
+    answer: "Yes. We recommend spending at least one or two days in Cusco before participating in activities above 4,500 meters."
 
 ---
 
-The Full Day Super Sacred Valley Tour + Buffet Lunch begins at 7:00 a.m. with the hotel pickup in Cusco to embark on a full day visiting the main attractions of the majestic Sacred Valley of the Incas. This tour is designed for those who want to explore in depth the history, culture and landscapes that made this valley a vital center of the Inca empire. Our first stop will be Chinchero, a traditional village where we will visit its archaeological park and learn more about its cultural and artisanal importance.
+The Palcoyo Mountain Full Day Tour begins early in the morning with pickup from your hotel in Cusco as we head south through the stunning Andean highlands. Along the way, you will enjoy breathtaking landscapes, traditional villages, and herds of alpacas and llamas that characterize this beautiful region of Peru.
 
-We will then continue to the impressive Maras Salt Mines, a collection of thousands of natural salt pools that have been harvested by hand since ancient times. Next, we will visit Moray, an archaeological site made up of circular terraces that the Incas used as an agricultural laboratory to experiment with different microclimates and crops. These sites offer a fascinating insight into the wisdom and agricultural engineering of the Incas.
+Palcoyo Mountain is considered one of the best alternatives to the famous Vinicunca Rainbow Mountain thanks to its shorter and more accessible hike. The trail takes approximately 40 minutes and offers spectacular views of colorful mountains, unique geological formations, and panoramic Andean scenery.
 
-We will then head to Urubamba, where we will enjoy a delicious buffet lunch featuring a variety of typical dishes from local gastronomy. The tour continues to the imposing Ollantaytambo fortress, an archaeological site renowned for its monumental architecture and its strategic role in the defense of the valley. To close out the day, we will visit Pisac, famous for its agricultural terraces and picturesque craft market.
+During the excursion, visitors will discover several rainbow-colored mountains that form part of the Palcoyo Rainbow Mountain Range. This incredible natural attraction provides outstanding opportunities for photography and an unforgettable connection with nature.
 
-The tour offers a complete and enriching experience that combines history, culture, nature and gastronomy. From the archaeological remains of Chinchero, Maras and Moray to the fortresses of Ollantaytambo and Pisac, each destination reveals the greatness of the Inca legacy. An unforgettable journey through the heart of the Sacred Valley, ideal for those who want to experience an authentic connection with the history and beauty of Cusco.
+The tour also includes a visit to the famous Stone Forest, a remarkable rock formation shaped by natural processes over millions of years. From this viewpoint, travelers can admire some of the most impressive landscapes in the Peruvian Andes.
+
+After enjoying free time to explore and take photographs, we will return for a delicious buffet lunch before heading back to Cusco. The tour concludes in the afternoon with unforgettable memories of one of the most spectacular natural destinations in the region.
+
+The Palcoyo Mountain Tour is ideal for travelers seeking a rainbow mountain experience with less physical effort, fewer crowds, and extraordinary scenery. A perfect adventure for nature lovers visiting Cusco.
