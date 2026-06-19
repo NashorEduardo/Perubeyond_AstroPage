@@ -1,0 +1,982 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Testimonials from '../../components/Testimonials.astro';
+
+export async function getStaticPaths() {
+  const allEntries = await getCollection('tours');
+  const paths = [];
+  for (const entry of allEntries) {
+    const parts = entry.id.split('/');
+    const lang = parts[0];
+    const slug = parts.slice(1).join('/');
+    if (!slug.startsWith('actividades/')) continue;
+    const actSlug = slug.replace('actividades/', '');
+    if (lang === 'es') {
+      paths.push({ params: { slug: actSlug }, props: { entry } });
+    }
+    paths.push({ params: { slug: `${lang}/${actSlug}` }, props: { entry } });
+  }
+  return paths;
+}
+
+const slugParam = Astro.params.slug ?? '';
+let lang = 'es';
+if (slugParam.startsWith('en/') || slugParam.startsWith('pt/')) {
+  lang = slugParam.split('/')[0];
+}
+
+const { entry } = Astro.props;
+const {
+  title, image, price, duration, description,
+  availability, frequency, difficulty,
+  includes, excludes, itinerary, gallery, faq, wetravelUuid,
+} = entry.data;
+const { Content } = await render(entry);
+
+const actIcon = "🎨";
+const itineraryImages = [
+  "/itinerario/CUZCO/cusco03.webp",
+  "/itinerario/CUZCO/cusco07.webp",
+  image,
+];
+---
+
+<Layout
+  title={`${title} – Peru Beyond`}
+  description={description ?? 'Vive la experiencia artística y cultural en Cusco con Peru Beyond.'}
+  ogImage={image}
+>
+  <Header />
+
+  <!-- ═══════════════════════════════════
+        HERO: IMAGEN OSCURA + LAYOUT 2 COLUMNAS
+  ═══════════════════════════════════ -->
+  <section class="relative min-h-[92vh] flex items-center overflow-hidden pt-24">
+
+    <!-- FONDO: imagen oscura y borrosa -->
+    <div class="absolute inset-0">
+      <img src={image} alt={title} class="w-full h-full object-cover scale-105 blur-sm brightness-[0.35]" />
+      <!-- Overlay de color esmeralda suave para darle identidad -->
+      <div class="absolute inset-0 bg-gradient-to-br from-emerald-950/60 via-transparent to-teal-900/40"></div>
+      <!-- Patrón andino sutil -->
+      <div class="absolute inset-0 andean-pattern opacity-[0.06]"></div>
+    </div>
+
+    <!-- CONTENIDO: grid 2 columnas -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Columna izquierda: Texto -->
+        <div class="lg:col-span-5 flex flex-col justify-center">
+
+          <nav class="flex items-center gap-2 text-white/45 text-xs uppercase tracking-widest mb-6 font-medium">
+            <a href="/" class="hover:text-emerald-300 transition-colors">Inicio</a>
+            <span>•</span>
+            <a href="/actividades" class="hover:text-emerald-300 transition-colors">Experiencias</a>
+            <span>•</span>
+            <span class="text-white/65 truncate">{title}</span>
+          </nav>
+
+          <div class="inline-flex items-center gap-2 bg-emerald-400/15 border border-emerald-300/30 backdrop-blur-sm rounded-full px-4 py-1.5 w-fit mb-5">
+            <span class="text-base">{actIcon}</span>
+            <span class="text-[10px] font-bold tracking-widest text-emerald-200 uppercase">Arte & Gastronomía Peruana</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl font-serif text-white leading-[1.1] tracking-tight mb-5 drop-shadow-xl">
+            {title}
+          </h1>
+
+          <p class="text-white/70 text-base leading-relaxed mb-8 font-light">
+            {description}
+          </p>
+
+          <!-- Stats en tarjetas glassmorphism -->
+          <div class="grid grid-cols-3 gap-3 mb-8">
+            <div class="glass-stat-col">
+              <span class="stat-col-label">Duración</span>
+              <span class="stat-col-value">{duration ?? "2 Horas"}</span>
+            </div>
+            <div class="glass-stat-col">
+              <span class="stat-col-label">Horario</span>
+              <span class="stat-col-value">3:00 pm</span>
+            </div>
+            <div class="glass-stat-col emerald-highlight">
+              <span class="stat-col-label">Desde</span>
+              <span class="stat-col-value price-em">${price ?? "65"} USD</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="#reservar" class="btn-hero-primary text-center">
+              ✨ Vivir la experiencia
+            </a>
+            <a
+              href={`https://wa.me/51943491959?text=Hola, me interesa la experiencia de: ${title}`}
+              target="_blank"
+              class="btn-hero-secondary flex items-center justify-center gap-2"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna derecha: composición de imágenes -->
+        <div class="lg:col-span-7 grid grid-cols-12 gap-4 relative h-[500px] md:h-[580px]">
+          <!-- Imagen principal grande -->
+          <div class="col-span-8 h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/40 relative group">
+            <img
+              src={image}
+              alt={title}
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+            <!-- Badge sobre la imagen principal -->
+            <div class="absolute bottom-4 left-4 right-4">
+              <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2.5">
+                <p class="text-white text-xs font-semibold">{title}</p>
+                <p class="text-emerald-300 text-[10px] tracking-wide">Arte ancestral andino • Cusco, Perú</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imágenes secundarias apiladas -->
+          <div class="col-span-4 flex flex-col gap-4 h-full">
+            <div class="h-[48%] rounded-xl overflow-hidden shadow-xl shadow-black/30 group relative">
+              <img
+                src="/itinerario/CUZCO/cusco03.webp"
+                alt="Taller cultural"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-emerald-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="text-white text-xl font-light drop-shadow">＋</span>
+              </div>
+            </div>
+            <div class="h-[48%] rounded-xl overflow-hidden shadow-xl shadow-black/30 group relative">
+              <img
+                src="/itinerario/CUZCO/cusco07.webp"
+                alt="Gastronomía peruana"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-emerald-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="text-white text-xl font-light drop-shadow">＋</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Flecha abajo -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+      <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+        STICKY NAV
+  ═══════════════════════════════════ -->
+  <nav class="sticky top-0 z-40 bg-emerald-50/95 backdrop-blur-md border-b border-emerald-200/50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-8 h-full overflow-x-auto no-scrollbar">
+          <a href="#experiencia" class="nav-link active">La Experiencia</a>
+          <a href="#itinerario" class="nav-link">El Taller</a>
+          <a href="#detalles" class="nav-link">¿Qué Incluye?</a>
+          <a href="#faq" class="nav-link">Preguntas</a>
+        </div>
+        <a href="#reservar" class="hidden sm:inline-block bg-emerald-600 text-white text-xs font-bold tracking-widest uppercase px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors shadow-md">
+          Reservar Cupo
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════
+        SECCIÓN: EXPERIENCIA (Alegre e interactiva)
+  ═══════════════════════════════════ -->
+  <section id="experiencia" class="bg-gradient-to-b from-amber-50 to-orange-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Encabezado -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Taller Inmersivo</span>
+        <h2 class="text-4xl font-serif-display text-stone-900 mb-4">Más que un recuerdo,<br/>una obra de arte tuya</h2>
+        <p class="text-stone-600 text-base leading-relaxed font-light">El Torito de Pucará ha protegido hogares andinos por siglos. Hoy, tú creas el tuyo.</p>
+      </div>
+
+      <!-- Tarjetas de experiencia con íconos grandes y colores festivos -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div class="exp-card exp-card-orange">
+          <div class="exp-icon">🎨</div>
+          <h3 class="exp-title">Arte Ancestral</h3>
+          <p class="exp-desc">Aprende las técnicas de pintura artesanal andina y los significados de cada color y trazo en la cerámica del altiplano peruano.</p>
+        </div>
+        <div class="exp-card exp-card-amber">
+          <div class="exp-icon">🍽️</div>
+          <h3 class="exp-title">Gastronomía en Vivo</h3>
+          <p class="exp-desc">Un chef y bartender profesionales preparan lomo saltado, causita limeña y el mejor pisco sour mientras tú pintas tu obra.</p>
+        </div>
+        <div class="exp-card exp-card-terracota">
+          <div class="exp-icon">🏺</div>
+          <h3 class="exp-title">Tu Obra para Siempre</h3>
+          <p class="exp-desc">Te llevas a casa una pieza de cerámica pintada con tus propias manos: un recuerdo único e irrepetible de tu paso por el Perú.</p>
+        </div>
+      </div>
+
+      <!-- Bloque descriptivo con imagen lateral -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-amber-900/15 h-[400px]">
+          <img src={image} alt={title} class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-amber-900/40 to-transparent"></div>
+          <!-- Badge flotante sobre la imagen -->
+          <div class="absolute bottom-6 left-6 right-6">
+            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
+              <div class="flex items-center gap-3">
+                <span class="text-3xl">🐂</span>
+                <div>
+                  <p class="font-semibold text-stone-900 text-sm">El Torito de Pucará</p>
+                  <p class="text-stone-500 text-xs">Símbolo andino de protección y prosperidad</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest block mb-3">¿Qué representa este símbolo?</span>
+          <h3 class="text-3xl font-serif-display text-stone-900 mb-6">Una tradición milenaria en tus manos</h3>
+          
+          <div class="space-y-5">
+            <div class="symbol-card">
+              <div class="symbol-icon bg-amber-100 text-amber-600">🏠</div>
+              <div>
+                <h4 class="font-semibold text-stone-800 text-sm mb-1">Protección del Hogar</h4>
+                <p class="text-stone-500 text-sm leading-relaxed">Defensa espiritual contra las adversidades. El torito en el techo del hogar protege a toda la familia.</p>
+              </div>
+            </div>
+            <div class="symbol-card">
+              <div class="symbol-icon bg-orange-100 text-orange-600">🌟</div>
+              <div>
+                <h4 class="font-semibold text-stone-800 text-sm mb-1">Prosperidad & Abundancia</h4>
+                <p class="text-stone-500 text-sm leading-relaxed">Atrae la buena fortuna y el éxito. Sus colores vivos son un canto a la alegría andina.</p>
+              </div>
+            </div>
+            <div class="symbol-card">
+              <div class="symbol-icon bg-red-100 text-red-600">🏔️</div>
+              <div>
+                <h4 class="font-semibold text-stone-800 text-sm mb-1">Conexión con el Altiplano</h4>
+                <p class="text-stone-500 text-sm leading-relaxed">Originario de Pucará, Puno. Una pieza que conecta directamente con las técnicas milenarias de cerámica andina.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 p-5 bg-white rounded-2xl border border-amber-100 shadow-sm">
+            <div class="prose prose-sm text-stone-600 prose-p:leading-relaxed">
+              <Content />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+        ITINERARIO COMO CARRUSEL
+  ═══════════════════════════════════ -->
+  <section id="itinerario" class="bg-gradient-to-br from-emerald-600 via-teal-500 to-cyan-400 py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="inline-block bg-white/20 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 backdrop-blur-sm">Tu Tarde en el Taller</span>
+        <h2 class="text-4xl font-serif-display text-white drop-shadow-md mb-3">¿Cómo se vive esta experiencia?</h2>
+        <p class="text-white/80 text-base font-light">Una tarde perfecta entre arte, historia y la mejor gastronomía peruana.</p>
+      </div>
+
+      <!-- Carrusel container -->
+      <div class="relative">
+        <!-- Track deslizable -->
+        <div id="carousel-track" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4">
+
+          <!-- Slide 1 -->
+          <div class="carousel-slide snap-start">
+            <div class="slide-image-container">
+              <img src="/itinerario/CUZCO/cusco03.webp" alt="Llegada al taller" class="slide-img" />
+              <div class="slide-img-overlay"></div>
+              <div class="slide-time-badge">3:00 PM</div>
+            </div>
+            <div class="slide-content">
+              <div class="slide-step">Paso 1</div>
+              <h3 class="slide-title">Llegada & Bienvenida</h3>
+              <p class="slide-desc">Llegas al taller y eres recibido con un auténtico <strong>Pisco Sour</strong> preparado en vivo por nuestro bartender. El ambiente ya huele a cerámica y cultura.</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-slide snap-start">
+            <div class="slide-image-container">
+              <img src="/itinerario/CUZCO/cusco07.webp" alt="Historia del Torito" class="slide-img" />
+              <div class="slide-img-overlay"></div>
+              <div class="slide-time-badge">3:20 PM</div>
+            </div>
+            <div class="slide-content">
+              <div class="slide-step">Paso 2</div>
+              <h3 class="slide-title">Historia & Simbolismo</h3>
+              <p class="slide-desc">Tu guía bilingüe te sumerge en el origen del Torito de Pucará: su viaje desde el altiplano hasta convertirse en ícono nacional, y el significado de cada color y forma.</p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-slide snap-start">
+            <div class="slide-image-container">
+              <img src={image} alt="Taller de pintura" class="slide-img" />
+              <div class="slide-img-overlay"></div>
+              <div class="slide-time-badge">3:45 PM</div>
+            </div>
+            <div class="slide-content">
+              <div class="slide-step">Paso 3</div>
+              <h3 class="slide-title">¡Manos a la Obra!</h3>
+              <p class="slide-desc">Con pinceles en mano y libertad total, decoras tu propio torito de cerámica. El guía te enseña las técnicas artesanales y te acompaña en cada trazo.</p>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="carousel-slide snap-start">
+            <div class="slide-image-container">
+              <img src="/itinerario/CUZCO/cusco03.webp" alt="Gastronomía peruana" class="slide-img" />
+              <div class="slide-img-overlay"></div>
+              <div class="slide-time-badge">4:30 PM</div>
+            </div>
+            <div class="slide-content">
+              <div class="slide-step">Paso 4</div>
+              <h3 class="slide-title">Festín Peruano en Vivo</h3>
+              <p class="slide-desc">Mientras tu obra toma forma, el chef prepara <strong>Causita Limeña</strong> y el icónico <strong>Lomo Saltado</strong> en vivo. Arte y gastronomía en perfecta sincronía.</p>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="carousel-slide snap-start">
+            <div class="slide-image-container">
+              <img src="/itinerario/CUZCO/cusco07.webp" alt="Tu obra lista" class="slide-img" />
+              <div class="slide-img-overlay"></div>
+              <div class="slide-time-badge">5:30 PM</div>
+            </div>
+            <div class="slide-content">
+              <div class="slide-step">Paso 5</div>
+              <h3 class="slide-title">Tu Obra Lista para Viajar</h3>
+              <p class="slide-desc">Empacamos tu torito con cuidado para que llegue sano y salvo a tu hogar. Te vas con las manos llenas de arte y el corazón lleno de Cusco.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Botones de navegación del carrusel -->
+        <button id="prev-slide" class="carousel-btn carousel-btn-left" aria-label="Anterior">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button id="next-slide" class="carousel-btn carousel-btn-right" aria-label="Siguiente">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Dots indicadores -->
+      <div id="carousel-dots" class="flex justify-center gap-2 mt-8">
+        {[0,1,2,3,4].map((i) => (
+          <button class={`carousel-dot ${i === 0 ? 'active' : ''}`} data-index={i} aria-label={`Ir al paso ${i+1}`}></button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+        INCLUYE / NO INCLUYE
+  ═══════════════════════════════════ -->
+  <section id="detalles" class="bg-gradient-to-b from-amber-50 to-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-xl mx-auto mb-14">
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Todo Detallado</span>
+        <h2 class="text-3xl font-serif-display text-stone-900">¿Qué incluye tu experiencia?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Incluye -->
+        <div class="bg-white rounded-3xl p-8 shadow-xl shadow-emerald-900/5 border border-emerald-100">
+          <div class="flex items-center gap-3 mb-7">
+            <div class="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center shadow-md">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="font-serif-display text-xl text-stone-900">Todo Incluido</h3>
+          </div>
+          <ul class="space-y-3">
+            {includes && includes.map((item) => (
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 w-5 h-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
+                <span class="text-stone-700 text-sm leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- No incluye -->
+        <div class="bg-white rounded-3xl p-8 shadow-xl shadow-stone-900/5 border border-stone-100">
+          <div class="flex items-center gap-3 mb-7">
+            <div class="w-10 h-10 bg-stone-200 rounded-xl flex items-center justify-center shadow-md">
+              <svg class="w-5 h-5 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+            </div>
+            <h3 class="font-serif-display text-xl text-stone-900">No Incluye</h3>
+          </div>
+          <ul class="space-y-3">
+            {excludes && excludes.map((item) => (
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 w-5 h-5 bg-stone-100 text-stone-400 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">✕</span>
+                <span class="text-stone-500 text-sm leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <!-- Info adicional -->
+          <div class="mt-8 p-4 bg-amber-50 rounded-2xl border border-amber-100">
+            <p class="text-amber-800 text-xs leading-relaxed">
+              💡 <strong>¿Necesitas transporte?</strong> Podemos indicarte cómo llegar fácilmente desde el centro de Cusco. ¡Pregúntanos!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+        FAQ
+  ═══════════════════════════════════ -->
+  {faq && faq.length > 0 && (
+    <section id="faq" class="bg-white py-24 border-t border-amber-100">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <span class="inline-block bg-amber-100 text-amber-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Resolvemos tus dudas</span>
+          <h2 class="text-3xl font-serif-display text-stone-900">Preguntas Frecuentes</h2>
+        </div>
+
+        <div class="space-y-4" id="faq-container">
+          {faq.map((item, i) => (
+            <div class="faq-item" data-index={i}>
+              <button class="faq-question w-full text-left" onclick={`toggleFaq(${i})`}>
+                <span class="text-stone-800 font-medium text-sm pr-8">{item.question}</span>
+                <svg class="faq-chevron w-4 h-4 text-amber-500 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p class="text-stone-600 text-sm leading-relaxed pt-3 pb-1">{item.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ═══════════════════════════════════
+        ZONA DE RESERVA
+  ═══════════════════════════════════ -->
+  <section id="reservar" class="relative py-24 overflow-hidden">
+    <!-- Fondo festivo tipo fiesta andina -->
+    <div class="absolute inset-0 bg-gradient-to-br from-amber-500 via-orange-500 to-red-500"></div>
+    <div class="absolute inset-0 andean-pattern opacity-10"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Lado izquierdo: Info de precios -->
+        <div class="lg:col-span-5 text-white">
+          <span class="inline-block bg-white/20 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">Reservas & Tarifas</span>
+          <h2 class="text-4xl font-serif-display text-white mb-6 leading-tight drop-shadow-md">
+            Asegura tu lugar en este taller cultural
+          </h2>
+          <p class="text-white/80 text-sm leading-relaxed mb-8">
+            Cupos limitados para garantizar una experiencia íntima y personalizada. ¡No te quedes sin el tuyo!
+          </p>
+
+          <!-- Tarjeta de precios -->
+          <div class="bg-white/15 backdrop-blur-md border border-white/30 rounded-2xl p-6 mb-6">
+            <span class="text-[10px] uppercase font-bold text-amber-200 tracking-wider block mb-4">Tarifas por Grupo</span>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center pb-3 border-b border-white/20">
+                <span class="text-white/80 text-xs">Precio Individual (Web)</span>
+                <span class="text-base font-bold text-white">$65 USD</span>
+              </div>
+              <div class="flex justify-between items-center pb-3 border-b border-white/20">
+                <span class="text-white/80 text-xs">Grupo 2 a 4 Personas</span>
+                <span class="text-sm font-semibold text-amber-200">55 Soles / pax</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-white/80 text-xs">Grupo 5 a 9 Personas</span>
+                <span class="text-sm font-semibold text-amber-200">50 Soles / pax</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Badges de confianza -->
+          <div class="flex flex-wrap gap-3">
+            <div class="trust-badge">🔒 Pago 100% Seguro</div>
+            <div class="trust-badge">✅ Guía Bilingüe</div>
+            <div class="trust-badge">🏺 Materiales Incluidos</div>
+            <div class="trust-badge">👨‍🍳 Chef Profesional</div>
+          </div>
+
+          {wetravelUuid && (
+            <div class="mt-6">
+              <a
+                class="wtrvl-checkout_button w-full sm:w-auto text-center font-bold tracking-widest text-xs uppercase bg-white text-amber-700 px-8 py-4 rounded-xl hover:bg-amber-100 transition-colors shadow-lg"
+                id="wetravel_button_widget"
+                data-env="https://www.wetravel.com"
+                data-version="v0.4"
+                data-uid="2226296"
+                data-uuid={wetravelUuid}
+                href={`https://www.wetravel.com/checkout_embed?uuid=${wetravelUuid}`}
+              >
+                Pagar Reserva Segura
+              </a>
+            </div>
+          )}
+        </div>
+
+        <!-- Formulario -->
+        <div class="lg:col-span-7 bg-white p-8 md:p-10 rounded-3xl shadow-2xl">
+          <h3 class="font-serif-display text-2xl text-stone-900 mb-2">Solicitar Reserva</h3>
+          <p class="text-stone-400 text-xs mb-7">Un asesor de experiencias se contactará contigo en menos de 2 horas.</p>
+          
+          <form class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[10px] uppercase text-stone-400 font-bold tracking-wider mb-1.5">Nombre</label>
+                <input type="text" class="input-bright" placeholder="Ej. Juan" />
+              </div>
+              <div>
+                <label class="block text-[10px] uppercase text-stone-400 font-bold tracking-wider mb-1.5">Apellido</label>
+                <input type="text" class="input-bright" placeholder="Ej. Pérez" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase text-stone-400 font-bold tracking-wider mb-1.5">Correo Electrónico *</label>
+              <input type="email" class="input-bright" placeholder="tu@email.com" required />
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase text-stone-400 font-bold tracking-wider mb-1.5">WhatsApp de Contacto</label>
+              <input type="tel" class="input-bright" placeholder="+51 943..." />
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase text-stone-400 font-bold tracking-wider mb-1.5">Número de Personas</label>
+              <select class="input-bright">
+                <option>1 persona</option>
+                <option>2 personas</option>
+                <option>3 personas</option>
+                <option>4 personas</option>
+                <option>5+ personas</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase text-stone-400 font-bold tracking-wider mb-1.5">Mensaje o Restricciones Alimentarias</label>
+              <textarea rows="3" class="input-bright resize-none" placeholder="Cuéntanos si tienes alguna restricción o pregunta especial..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-sm font-bold tracking-widest uppercase py-4 rounded-xl transition-all shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 hover:-translate-y-0.5">
+              Enviar Solicitud ✨
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <Testimonials />
+  <Footer />
+</Layout>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<script src="https://cdn.wetravel.com/widgets/embed_checkout.js" is:inline></script>
+
+<!-- Carrusel y FAQ scripts -->
+<script>
+  // ── CARRUSEL ──
+  const track = document.getElementById('carousel-track');
+  const dots = document.querySelectorAll('.carousel-dot');
+  let currentSlide = 0;
+
+  function getSlideWidth() {
+    const slide = document.querySelector('.carousel-slide');
+    return slide ? slide.offsetWidth + 24 : 0; // 24 = gap
+  }
+
+  function goToSlide(index) {
+    if (!track) return;
+    const slideWidth = getSlideWidth();
+    track.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    currentSlide = index;
+  }
+
+  document.getElementById('next-slide')?.addEventListener('click', () => {
+    const slides = document.querySelectorAll('.carousel-slide').length;
+    goToSlide((currentSlide + 1) % slides);
+  });
+
+  document.getElementById('prev-slide')?.addEventListener('click', () => {
+    const slides = document.querySelectorAll('.carousel-slide').length;
+    goToSlide((currentSlide - 1 + slides) % slides);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => goToSlide(i));
+  });
+
+  // Sincronizar dots al hacer scroll manual
+  track?.addEventListener('scroll', () => {
+    const slideWidth = getSlideWidth();
+    if (!slideWidth) return;
+    const newIndex = Math.round((track.scrollLeft) / slideWidth);
+    if (newIndex !== currentSlide) {
+      currentSlide = newIndex;
+      dots.forEach((d, i) => d.classList.toggle('active', i === newIndex));
+    }
+  });
+
+  // ── FAQ ACCORDION ──
+  (window as any).toggleFaq = function(index: number) {
+    const item = document.querySelector(`.faq-item[data-index="${index}"]`);
+    const answer = item?.querySelector('.faq-answer') as HTMLElement | null;
+    const chevron = item?.querySelector('.faq-chevron') as HTMLElement | null;
+    const isOpen = item?.classList.contains('open');
+    
+    // Cerrar todos
+    document.querySelectorAll('.faq-item').forEach(el => {
+      el.classList.remove('open');
+      const a = el.querySelector('.faq-answer') as HTMLElement | null;
+      const c = el.querySelector('.faq-chevron') as HTMLElement | null;
+      if (a) a.style.maxHeight = '0';
+      if (c) c.style.transform = 'rotate(0deg)';
+    });
+    
+    // Abrir el actual si estaba cerrado
+    if (!isOpen && item && answer && chevron) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      chevron.style.transform = 'rotate(180deg)';
+    }
+  };
+</script>
+
+<style is:global>
+  .font-serif-display {
+    font-family: 'Cinzel', Georgia, serif;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* Patrón andino decorativo */
+  .andean-pattern {
+    background-image:
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 0, transparent 50%),
+      repeating-linear-gradient(-45deg, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 0, transparent 50%);
+    background-size: 20px 20px;
+  }
+
+  /* Stats column en hero */
+  .glass-stat-col {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 14px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+  .glass-stat-col.emerald-highlight {
+    background: rgba(16,185,129,0.2);
+    border-color: rgba(52,211,153,0.35);
+  }
+  .stat-col-label {
+    display: block;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.5);
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  .stat-col-value {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+  }
+  .price-em { color: #6ee7b7; }
+
+  /* Botones hero */
+  .btn-hero-primary {
+    background: linear-gradient(135deg, #059669, #0d9488);
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(5,150,105,0.45);
+    transition: all 0.3s ease;
+  }
+  .btn-hero-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(5,150,105,0.55);
+    background: linear-gradient(135deg, #047857, #0f766e);
+  }
+  .btn-hero-secondary {
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.28);
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 1.75rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+  .btn-hero-secondary:hover {
+    background: rgba(255,255,255,0.18);
+    transform: translateY(-2px);
+  }
+
+  /* Nav links */
+  .nav-link {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #065f46;
+    position: relative;
+    padding: 1.35rem 0;
+    transition: color 0.3s;
+  }
+  .nav-link:hover, .nav-link.active {
+    color: #059669;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 2px;
+    background: #059669;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  .nav-link:hover::after, .nav-link.active::after {
+    transform: scaleX(1);
+  }
+
+  /* Tarjetas de experiencia */
+  .exp-card {
+    border-radius: 24px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .exp-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+  .exp-card-orange { background: linear-gradient(135deg, #fed7aa, #fdba74); }
+  .exp-card-amber  { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+  .exp-card-terracota { background: linear-gradient(135deg, #fee2e2, #fca5a5); }
+
+  .exp-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .exp-title { font-family: 'Cinzel', Georgia, serif; font-size: 1.1rem; color: #1c1917; margin-bottom: 0.75rem; font-weight: 600; }
+  .exp-desc  { font-size: 0.875rem; color: #44403c; line-height: 1.65; }
+
+  /* Símbolo cards */
+  .symbol-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 16px;
+    background: white;
+    border: 1px solid #fef3c7;
+    transition: box-shadow 0.2s;
+  }
+  .symbol-card:hover { box-shadow: 0 4px 20px rgba(217,119,6,0.1); }
+  .symbol-icon {
+    width: 2.5rem; height: 2.5rem;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  /* ── CARRUSEL ── */
+  .carousel-slide {
+    flex: 0 0 calc(100% - 2rem);
+    max-width: 380px;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    transition: transform 0.3s;
+  }
+  @media (min-width: 768px) {
+    .carousel-slide {
+      flex: 0 0 380px;
+    }
+  }
+
+  .slide-image-container {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+  }
+  .slide-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .carousel-slide:hover .slide-img { transform: scale(1.05); }
+  .slide-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.3));
+  }
+  .slide-time-badge {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: rgba(217,119,6,0.9);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    letter-spacing: 0.05em;
+  }
+  .slide-content { padding: 1.5rem; }
+  .slide-step {
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #f59e0b;
+    margin-bottom: 0.4rem;
+  }
+  .slide-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.05rem;
+    color: #1c1917;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+  }
+  .slide-desc {
+    font-size: 0.82rem;
+    color: #57534e;
+    line-height: 1.65;
+  }
+
+  /* Botones carrusel */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem; height: 3rem;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-center: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 10;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .carousel-btn:hover { background: #fff7ed; transform: translateY(-50%) scale(1.05); }
+  .carousel-btn-left  { left: -1.25rem; }
+  .carousel-btn-right { right: -1.25rem; }
+  @media (max-width: 768px) {
+    .carousel-btn-left  { left: 0.25rem; }
+    .carousel-btn-right { right: 0.25rem; }
+  }
+
+  /* Dots carrusel */
+  .carousel-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+  }
+  .carousel-dot.active {
+    background: white;
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  /* Trust badges en reserva */
+  .trust-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 6px 12px;
+    border-radius: 20px;
+  }
+
+  /* Inputs del formulario */
+  .input-bright {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 2px solid #f3f4f6;
+    border-radius: 10px;
+    background: #fafafa;
+    font-size: 0.875rem;
+    color: #1c1917;
+    transition: all 0.3s;
+    font-family: inherit;
+  }
+  .input-bright:focus {
+    outline: none;
+    border-color: #f59e0b;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(245,158,11,0.08);
+  }
+
+  /* FAQ */
+  .faq-item {
+    border: 1px solid #fef3c7;
+    border-radius: 16px;
+    background: white;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .faq-item.open { box-shadow: 0 4px 20px rgba(217,119,6,0.1); }
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    padding: 0 1.5rem;
+  }
+
+  /* Scroll sin scrollbar */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>

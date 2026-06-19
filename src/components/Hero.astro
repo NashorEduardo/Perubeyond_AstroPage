@@ -18,6 +18,7 @@
       playsinline
       preload="auto"
       poster="/images/Lima/pexels-icarus-7357663.webp"
+      aria-hidden="true"
       class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
     >
       <source src="/images/PeruBeyond/MachuPicchu-PerúBeyond.mp4" type="video/mp4" />
@@ -99,36 +100,61 @@
 
 <script is:inline>
   (function () {
-    var video  = document.getElementById('hero-video');
+    var video = document.getElementById('hero-video');
     var poster = document.getElementById('hero-poster');
     if (!video) return;
 
+    var hasShownVideo = false;
+
     function showVideo() {
+      hasShownVideo = true;
       video.style.opacity = '1';
       if (poster) poster.style.opacity = '0';
     }
 
-    // Cuando tiene suficientes datos para reproducir → mostrar
-    video.addEventListener('canplay', function () {
-      var p = video.play();
-      if (p !== undefined) {
-        p.then(showVideo).catch(function () {
-          // Autoplay bloqueado o error de carga → el poster se queda visible
+    function showPosterFallback() {
+      video.style.opacity = '0';
+      if (poster) poster.style.opacity = '1';
+    }
+
+    function playVideo() {
+      video.muted = true;
+      video.playsInline = true;
+
+      var playback = video.play();
+      if (playback !== undefined) {
+        playback.then(showVideo).catch(function () {
+          showPosterFallback();
         });
       } else {
         showVideo();
       }
-    }, { once: true });
+    }
 
-    // Si el video falla (error de red, servidor sin Range support, etc.)
+    video.addEventListener('loadeddata', playVideo, { once: true });
+    video.addEventListener('canplay', playVideo, { once: true });
+    video.addEventListener('playing', showVideo);
+
+    video.addEventListener('ended', function () {
+      video.currentTime = 0;
+      playVideo();
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden && video.paused && !video.error) {
+        playVideo();
+      }
+    });
+
     video.addEventListener('error', function () {
+      showPosterFallback();
       video.style.display = 'none';
     });
 
-    // Tiempo máximo de espera: si en 4s no cargó, el poster se queda
     setTimeout(function () {
-      if (video.readyState < 3) {
-        video.style.display = 'none';
+      if (!hasShownVideo && !video.error) {
+        video.load();
+        playVideo();
       }
     }, 4000);
   })();
