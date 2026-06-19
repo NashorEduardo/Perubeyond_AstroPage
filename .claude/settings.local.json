@@ -12,7 +12,13 @@
       "Bash(curl -s \"https://en.wikipedia.org/w/api.php?action=query&titles=Plaza_de_Armas,_Cusco&prop=pageimages&format=json&pithumbsize=1200\")",
       "Bash(node -e \"let d=''; process.stdin.on\\('data',c=>d+=c\\); process.stdin.on\\('end',\\(\\)=>{ try { const p=JSON.parse\\(d\\); const pages=p.query.pages; const img=Object.values\\(pages\\)[0]?.thumbnail?.source || 'NOT FOUND'; console.log\\('Cusco Plaza: '+img\\); } catch\\(e\\) { console.log\\('ERROR'\\); } }\\)\")",
       "Bash(curl -s \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=MINCETUR+Peru+logo&srnamespace=6&format=json&srlimit=5\")",
-      "Bash(curl -s \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Indecopi+Peru+logo&srnamespace=6&format=json&srlimit=5\")"
+      "Bash(curl -s \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Indecopi+Peru+logo&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(npx astro *)",
+      "PowerShell(npx astro build 2>&1 | Select-Object -Last 30)",
+      "PowerShell(npx astro build 2>&1 | Select-Object -Last 10)",
+      "PowerShell(npx astro build 2>&1 | Select-Object -Last 8)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }

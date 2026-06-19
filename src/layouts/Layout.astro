@@ -10,8 +10,8 @@ export interface Props {
 }
 
 const {
-  title = 'Peru Beyond - Más de lo que Imaginas',
-  description = 'Agencia de viajes en Cusco. Tours a Machu Picchu, Valle Sagrado y todo Perú.',
+  title = 'Peru Beyond — Agencia de Tours en Cusco | Machu Picchu, Valle Sagrado y todo Perú',
+  description = 'Agencia de viajes en Cusco con guías locales certificados. Tours a Machu Picchu, Valle Sagrado, Camino Inca y paquetes por todo Perú. Reserva segura y atención personalizada en español, inglés y portugués.',
   ogImage = '/images/PeruBeyond/Logo.png',
   langAlternates,
 } = Astro.props;
@@ -56,6 +56,51 @@ const ogImageAbs = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteB
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" /></noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+    <!-- Schema.org: Organization + LocalBusiness -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": ["TravelAgency", "LocalBusiness"],
+      "name": "Peru Beyond",
+      "alternateName": "MOTOANDES PERU E.I.R.L.",
+      "url": "https://www.perubeyond.com",
+      "logo": "https://www.perubeyond.com/images/PeruBeyond/Logo.webp",
+      "image": "https://www.perubeyond.com/images/PeruBeyond/Logo.webp",
+      "description": "Agencia de viajes en Cusco especializada en tours a Machu Picchu, Valle Sagrado, trekking y paquetes por todo el Perú. Guías locales certificados y experiencias personalizadas.",
+      "telephone": "+51943491959",
+      "email": "info@perubeyond.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Zetas 109",
+        "addressLocality": "Cusco",
+        "postalCode": "08002",
+        "addressCountry": "PE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -13.516,
+        "longitude": -71.978
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "95",
+        "bestRating": "5"
+      },
+      "sameAs": [
+        "https://www.facebook.com/perubeyond",
+        "https://www.instagram.com/perubeyond/",
+        "https://www.tiktok.com/@perubeyond_agency",
+        "https://www.youtube.com/@perubeyond",
+        "https://www.tripadvisor.com.pe/Attraction_Review-g294314-d33404487-Reviews-Peru_Beyond-Cusco_Cusco_Region.html"
+      ]
+    })} />
     <slot name="head" />
     <!-- i18n: embed translations & apply on load -->
     <script define:vars={{ i18nData: ui }} is:inline>
