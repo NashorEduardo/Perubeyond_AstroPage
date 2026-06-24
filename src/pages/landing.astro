@@ -1,0 +1,1107 @@
+---
+const certLogos = [
+  { src: 'https://gercetur.com.pe/wp-content/uploads/2025/11/LOGO-POSITIVO-scaled-e1763582114614.png', alt: 'Gercetur' },
+  { src: 'https://pirka.pe/wp-content/uploads/2025/07/Logo-Marca-Peru-jpeg.jpg', alt: 'Marca Perú' },
+  { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfG9ZFoYjpvD34XX1veRJ3nEbPqrMrCPI1Aw&s', alt: 'TripAdvisor' },
+  { src: 'https://mocatravelperu.com/wp-content/uploads/2021/09/protegeme.png', alt: 'Protegeme' },
+  { src: 'https://www.wayraqperu.com/wp-content/uploads/mincetur.png', alt: 'Mincetur' },
+];
+
+const reviews = [
+  {
+    name: 'Daniela Britsia', initials: 'DB', color: '#8B7355',
+    text: 'Reservamos nuestros tours con esta agencia y fue la mejor decisión. Todo estuvo perfectamente organizado. ¡Definitivamente volveremos!',
+  },
+  {
+    name: 'Gaby Caso', initials: 'GC', color: '#5B8A6F',
+    text: 'Experiencia excelente con Peru Beyond. La gira al Lago Titicaca estuvo muy bien organizada, interesante y muy agradable.',
+  },
+  {
+    name: 'Carlos Deza', initials: 'CD', color: '#2E7D6B',
+    text: '¡Una joya culinaria en Cusco! Nos llevaron a los mejores restaurantes locales. Superó todas nuestras expectativas.',
+  },
+  {
+    name: 'María Rodríguez', initials: 'MR', color: '#C0392B',
+    text: 'El tour por el Valle Sagrado fue simplemente mágico. Los paisajes son impresionantes. Altamente recomendado.',
+  },
+  {
+    name: 'Sofía Fernández', initials: 'SF', color: '#6C3483',
+    text: 'Peru Beyond organizó nuestro tour de 10 días y fue impecable. ¡Gracias por el viaje de nuestras vidas!',
+  },
+];
+
+const blogs = [
+  {
+    slug: '/blog/inti-raymi',
+    image: '/images/PeruBeyond/Inti_raymi.webp',
+    category: 'Historia & Cultura',
+    title: 'Inti Raymi: La Fiesta del Sol',
+    excerpt: 'La celebración más importante del mundo andino en Cusco.',
+  },
+  {
+    slug: '/blog/machu-picchu',
+    image: '/images/Machupicchu/FT 7.webp',
+    category: 'Destinos',
+    title: 'Machu Picchu: Maravilla Inca',
+    excerpt: 'Todo lo que necesitas saber antes de visitar la ciudadela.',
+  },
+  {
+    slug: '/blog/valle-sagrado',
+    image: '/images/Ollantaytambo/FT 18.webp',
+    category: 'Experiencias',
+    title: 'Valle Sagrado: Ruinas y Espíritu',
+    excerpt: 'Ollantaytambo, Chinchero y ceremonias andinas.',
+  },
+  {
+    slug: '/blog/montana-7-colores',
+    image: '/images/Montaña_de_7_colores/DSC03326.webp',
+    category: 'Aventura',
+    title: 'Montaña de 7 Colores: Vinicunca',
+    excerpt: 'Una caminata épica hacia uno de los paisajes más surrealistas del Perú.',
+  },
+  {
+    slug: '/blog/laguna-humantay',
+    image: '/images/Laguna_Humantay/DSC04400.webp',
+    category: 'Naturaleza',
+    title: 'Laguna Humantay: Espejo Turquesa',
+    excerpt: 'La laguna glaciar más impresionante de la cordillera de los Andes.',
+  },
+  {
+    slug: '/blog/cusco-ciudad-imperial',
+    image: '/images/Cuzco/cusco.webp',
+    category: 'Ciudad',
+    title: 'Cusco: La Ciudad Imperial',
+    excerpt: 'Calles empedradas, historia viva y la esencia del mundo inca.',
+  },
+  {
+    slug: '/blog/salineras-maras',
+    image: '/images/Maras/F1.webp',
+    category: 'Cultura',
+    title: 'Salineras de Maras',
+    excerpt: 'Miles de pozas de sal talladas en la montaña desde tiempos incas.',
+  },
+  {
+    slug: '/blog/islas-uros',
+    image: '/images/Isla_de_los_uros/FT 1.webp',
+    category: 'Tradiciones',
+    title: 'Islas de los Uros en Puno',
+    excerpt: 'Islas flotantes de totora y una cultura milenaria en el Titicaca.',
+  },
+];
+
+const socials = [
+  { icon: 'bi-facebook',  href: 'https://www.facebook.com/perubeyond',          label: 'Facebook' },
+  { icon: 'bi-instagram', href: 'https://www.instagram.com/perubeyond/',         label: 'Instagram' },
+  { icon: 'bi-tiktok',    href: 'https://www.tiktok.com/@perubeyond_agency',     label: 'TikTok' },
+  { icon: 'bi-youtube',   href: 'https://www.youtube.com/@perubeyond',           label: 'YouTube' },
+];
+---
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Peru Beyond — Agencia de tours en Cusco, Perú. Tours a Machu Picchu, Valle Sagrado, Montaña de 7 Colores y más. Guías locales certificados, reseñas 4.9/5 en Google. Reserva segura y atención 24/7." />
+  <meta name="keywords" content="tours cusco, agencia de viajes cusco, machu picchu tours, valle sagrado tour, montaña 7 colores, peru beyond, tours peru, guias locales cusco, viajes cusco peru, paquetes turisticos cusco" />
+  <title>Peru Beyond — Agencia de Tours en Cusco | Machu Picchu, Valle Sagrado y más</title>
+  <link rel="canonical" href="https://www.perubeyond.com/landing" />
+  <meta property="og:title" content="Peru Beyond — Agencia de Tours en Cusco, Perú" />
+  <meta property="og:description" content="Tours a Machu Picchu, Valle Sagrado, Montaña de 7 Colores y todo Perú. Guías locales certificados con 128+ reseñas de 5 estrellas." />
+  <meta property="og:image" content="https://www.perubeyond.com/images/PeruBeyond/Logo.png" />
+  <meta property="og:url" content="https://www.perubeyond.com/landing" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_PE" />
+  <meta property="og:site_name" content="Peru Beyond" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Peru Beyond — Tours en Cusco con Guías Locales" />
+  <meta name="twitter:description" content="Agencia de tours en Cusco con guías certificados. Machu Picchu, Valle Sagrado y experiencias auténticas por todo el Perú." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp" type="image/webp" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Peru Beyond",
+    "image": "https://www.perubeyond.com/images/PeruBeyond/Logo.png",
+    "url": "https://www.perubeyond.com",
+    "telephone": "+51943491959",
+    "email": "info@perubeyond.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cusco",
+      "addressCountry": "PE"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "128",
+      "bestRating": "5"
+    },
+    "priceRange": "$$",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://www.facebook.com/perubeyond",
+      "https://www.instagram.com/perubeyond/",
+      "https://www.tiktok.com/@perubeyond_agency",
+      "https://www.youtube.com/@perubeyond"
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+<body>
+
+  <!-- Video Background (fixed) -->
+  <div class="lt-bg">
+    <img
+      id="lt-poster"
+      src="/images/Machupicchu/IMG_7715.webp"
+      alt=""
+      aria-hidden="true"
+      class="lt-bg__media"
+    />
+    <video
+      id="lt-video"
+      autoplay muted loop playsinline preload="auto"
+      poster="/images/Machupicchu/IMG_7715.webp"
+      aria-hidden="true"
+      class="lt-bg__media lt-bg__video"
+    >
+      <source src="/images/PeruBeyond/MachuPicchu-PerúBeyond.mp4" type="video/mp4" />
+    </video>
+    <div class="lt-bg__overlay"></div>
+    <div class="lt-bg__sides-l"></div>
+    <div class="lt-bg__sides-r"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="lt-main">
+    <div class="lt-container">
+
+      <!-- ── PROFILE ── -->
+      <div class="lt-profile">
+        <a href="/" class="lt-logo-link"><img src="/images/PeruBeyond/Logo.webp" alt="Peru Beyond — Agencia de Tours en Cusco" class="lt-logo-big" /></a>
+        <h1 class="lt-name">Peru Beyond</h1>
+        <p class="lt-tagline">Agencia de Tours en Cusco, Perú</p>
+        <div class="lt-rating">
+          <div class="lt-rating__stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+          </div>
+          <span class="lt-rating__text">4.9 &middot; 128+ reseñas</span>
+        </div>
+      </div>
+
+      <!-- ── BIENVENIDA + IMAGEN GRUPAL ── -->
+      <div class="lt-welcome">
+        <div class="lt-welcome__photo">
+          <img src="/images/Laguna_Humantay/DSC04385.webp" alt="Equipo Peru Beyond" />
+        </div>
+        <p class="lt-welcome__text">
+          Somos una agencia peruana dedicada a ofrecer tours auténticos, seguros y diseñados a medida.
+          Viajamos con alma, guiamos con pasión.
+        </p>
+      </div>
+
+      <!-- ── VIDEO YOUTUBE ── -->
+      <div class="lt-section">
+        <p class="lt-section__label">Conócenos</p>
+        <div class="lt-video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/HjTJtS7r8do?start=1&autoplay=1&mute=1"
+            title="Peru Beyond — Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- ── RESEÑAS CARRUSEL ── -->
+      <div class="lt-section">
+        <p class="lt-section__label">Reseñas de Google</p>
+        <div class="lt-carousel-wrap">
+          <div class="lt-carousel-track" id="reviewsTrack">
+            {reviews.map((r) => (
+              <div class="lt-review">
+                <div class="lt-review__head">
+                  <div class="lt-review__avatar" style={`background:${r.color}`}>
+                    <span>{r.initials}</span>
+                  </div>
+                  <div class="lt-review__meta">
+                    <span class="lt-review__name">{r.name}</span>
+                    <div class="lt-review__stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="lt-review__text">{r.text}</p>
+              </div>
+            ))}
+          </div>
+          <div class="lt-carousel-dots" id="reviewsDots">
+            {reviews.map((_, i) => (
+              <button class={`lt-blog-dot ${i === 0 ? 'lt-blog-dot--active' : ''}`} data-index={i} aria-label={`Reseña ${i + 1}`}></button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PREGUNTAS FRECUENTES (SEO) ── -->
+      <div class="lt-section">
+        <p class="lt-section__label">Preguntas Frecuentes</p>
+        <div class="lt-faq">
+          <details class="lt-faq__item">
+            <summary>¿Por qué elegir Peru Beyond para tours en Cusco?</summary>
+            <p>Somos una agencia local con guías certificados por MINCETUR, más de 128 reseñas de 5 estrellas en Google y experiencias 100% personalizadas. Conocemos cada sendero, historia y secreto de Cusco y Machu Picchu.</p>
+          </details>
+          <details class="lt-faq__item">
+            <summary>¿Qué tours ofrecen en Cusco y Machu Picchu?</summary>
+            <p>Ofrecemos tours a Machu Picchu, Valle Sagrado, Montaña de 7 Colores, Laguna Humantay, Salineras de Maras, City Tour Cusco, Camino Inca y paquetes completos por todo el Perú adaptados a tus tiempos.</p>
+          </details>
+          <details class="lt-faq__item">
+            <summary>¿Cómo puedo reservar un tour con Peru Beyond?</summary>
+            <p>Puedes reservar directamente por WhatsApp al +51 943 491 959, por email a info@perubeyond.com o a través de nuestra página web. Respondemos en minutos y sin compromiso.</p>
+          </details>
+          <details class="lt-faq__item">
+            <summary>¿Los tours incluyen transporte y guía en español?</summary>
+            <p>Sí, todos nuestros tours incluyen transporte, guía profesional certificado en español (también disponible en inglés y portugués), entradas según el tour y asistencia 24/7 durante tu viaje.</p>
+          </details>
+          <details class="lt-faq__item">
+            <summary>¿Es seguro viajar con una agencia local en Cusco?</summary>
+            <p>Absolutamente. Peru Beyond está registrada en MINCETUR, respaldada por Marca Perú y cuenta con el seguro de viaje Protegeme. Operamos con grupos reducidos para máxima seguridad y atención personalizada.</p>
+          </details>
+        </div>
+      </div>
+
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Por qué elegir Peru Beyond para tours en Cusco?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Somos una agencia local con guías certificados por MINCETUR, más de 128 reseñas de 5 estrellas en Google y experiencias 100% personalizadas. Conocemos cada sendero, historia y secreto de Cusco y Machu Picchu."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué tours ofrecen en Cusco y Machu Picchu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ofrecemos tours a Machu Picchu, Valle Sagrado, Montaña de 7 Colores, Laguna Humantay, Salineras de Maras, City Tour Cusco, Camino Inca y paquetes completos por todo el Perú adaptados a tus tiempos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo puedo reservar un tour con Peru Beyond?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Puedes reservar directamente por WhatsApp al +51 943 491 959, por email a info@perubeyond.com o a través de nuestra página web. Respondemos en minutos y sin compromiso."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Los tours incluyen transporte y guía en español?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, todos nuestros tours incluyen transporte, guía profesional certificado en español (también disponible en inglés y portugués), entradas según el tour y asistencia 24/7 durante tu viaje."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Es seguro viajar con una agencia local en Cusco?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutamente. Peru Beyond está registrada en MINCETUR, respaldada por Marca Perú y cuenta con el seguro de viaje Protegeme. Operamos con grupos reducidos para máxima seguridad y atención personalizada."
+            }
+          }
+        ]
+      }
+      </script>
+
+      <!-- ── CERTIFICACIONES ── -->
+      <div class="lt-section">
+        <p class="lt-section__label">Avales & Certificaciones</p>
+        <div class="lt-certs">
+          {certLogos.map((logo) => (
+            <div class="lt-cert">
+              <img src={logo.src} alt={logo.alt} loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- ── BLOG CARRUSEL ── -->
+      <div class="lt-section">
+        <p class="lt-section__label">Blog de Viajes</p>
+        <div class="lt-carousel-wrap">
+          <div class="lt-carousel-track" id="blogTrack">
+            {blogs.map((post) => (
+              <a href={post.slug} class="lt-blog-card">
+                <div class="lt-blog-card__img">
+                  <img src={post.image} alt={post.title} loading="lazy" />
+                  <span class="lt-blog-card__cat">{post.category}</span>
+                </div>
+                <div class="lt-blog-card__body">
+                  <h3>{post.title}</h3>
+                  <p>{post.excerpt}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+          <div class="lt-carousel-dots" id="blogDots">
+            {blogs.map((_, i) => (
+              <button class={`lt-blog-dot ${i === 0 ? 'lt-blog-dot--active' : ''}`} data-index={i} aria-label={`Blog ${i + 1}`}></button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- ── REDES SOCIALES ── -->
+      <div class="lt-socials">
+        {socials.map(s => (
+          <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} class="lt-social">
+            <i class={`bi ${s.icon}`}></i>
+          </a>
+        ))}
+      </div>
+
+      <!-- ── CONTACTO ── -->
+      <div class="lt-contact">
+        <a href="tel:+51943491959" class="lt-contact__item">
+          <i class="bi bi-telephone-fill"></i> +51 943 491 959
+        </a>
+        <span class="lt-contact__dot">&middot;</span>
+        <a href="mailto:info@perubeyond.com" class="lt-contact__item">
+          <i class="bi bi-envelope-fill"></i> info@perubeyond.com
+        </a>
+      </div>
+
+      <!-- ── WHATSAPP CTA ── -->
+      <a href="https://wa.me/51943491959" target="_blank" rel="noopener noreferrer" class="lt-wa-btn">
+        <i class="bi bi-whatsapp"></i>
+        <span>Chatea con Nosotros</span>
+      </a>
+
+      <!-- ── FOOTER ── -->
+      <footer class="lt-footer">
+        <div class="lt-footer__certs">
+          <span>Operador autorizado</span>
+          <span class="lt-footer__sep">|</span>
+          <span>MINCETUR</span>
+          <span class="lt-footer__sep">|</span>
+          <span>Marca Perú</span>
+        </div>
+        <p class="lt-footer__copy">&copy; 2026 Peru Beyond. Todos los derechos reservados.</p>
+      </footer>
+
+    </div>
+  </main>
+
+</body>
+</html>
+
+<style>
+  /* ═══════════════════════════════
+     RESET & BASE
+  ═══════════════════════════════ */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html {
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    color: #fff;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  /* ═══════════════════════════════
+     VIDEO BACKGROUND
+  ═══════════════════════════════ */
+  .lt-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+  }
+  .lt-bg__media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+  }
+  .lt-bg__video {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+  }
+  .lt-bg__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(8, 6, 3, 0.55) 0%,
+      rgba(8, 6, 3, 0.40) 30%,
+      rgba(8, 6, 3, 0.50) 60%,
+      rgba(8, 6, 3, 0.70) 100%
+    );
+    backdrop-filter: blur(1px);
+  }
+  .lt-bg__sides-l,
+  .lt-bg__sides-r {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .lt-bg__sides-l,
+    .lt-bg__sides-r {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 30%;
+      z-index: 1;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .lt-bg__sides-l {
+      left: 0;
+      background: linear-gradient(to right, rgba(8,6,3,0.75), transparent);
+    }
+    .lt-bg__sides-r {
+      right: 0;
+      background: linear-gradient(to left, rgba(8,6,3,0.75), transparent);
+    }
+  }
+  @media (min-width: 1200px) {
+    .lt-bg__sides-l,
+    .lt-bg__sides-r {
+      width: 35%;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+  }
+
+  /* ═══════════════════════════════
+     MAIN LAYOUT
+  ═══════════════════════════════ */
+  .lt-main {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem 1.25rem;
+    padding-top: max(4.5rem, env(safe-area-inset-top, 0px));
+    padding-bottom: max(2rem, env(safe-area-inset-bottom, 0px));
+  }
+  .lt-container {
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  /* ═══════════════════════════════
+     PROFILE
+  ═══════════════════════════════ */
+  .lt-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .lt-logo-link {
+    display: block;
+    transition: transform 0.3s;
+  }
+  .lt-logo-link:hover { transform: scale(1.05); }
+  .lt-logo-big {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    animation: avatarIn 0.8s ease-out both;
+  }
+  .lt-name {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    animation: fadeUp 0.6s ease-out 0.15s both;
+  }
+  .lt-tagline {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.06em;
+    animation: fadeUp 0.6s ease-out 0.25s both;
+  }
+  .lt-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+    animation: fadeUp 0.6s ease-out 0.35s both;
+  }
+  .lt-rating__stars {
+    display: flex;
+    gap: 1px;
+    color: #FFBC00;
+    font-size: 0.7rem;
+  }
+  .lt-rating__text {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.45);
+    font-weight: 500;
+  }
+
+  /* ═══════════════════════════════
+     WELCOME (imagen + texto)
+  ═══════════════════════════════ */
+  .lt-welcome {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    animation: fadeUp 0.6s ease-out 0.4s both;
+  }
+  .lt-welcome__photo {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+  .lt-welcome__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+  .lt-welcome__text {
+    padding: 1rem 1.15rem;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  /* ═══════════════════════════════
+     SECTIONS (glass cards)
+  ═══════════════════════════════ */
+  .lt-section {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    animation: fadeUp 0.6s ease-out 0.5s both;
+  }
+  .lt-section__label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(201,168,76,0.8);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  /* ═══════════════════════════════
+     VIDEO YOUTUBE
+  ═══════════════════════════════ */
+  .lt-video-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  .lt-video-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* ═══════════════════════════════
+     GENERIC CAROUSEL (reviews + blogs)
+  ═══════════════════════════════ */
+  .lt-carousel-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+  }
+  .lt-carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    will-change: transform;
+  }
+  .lt-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.65rem 0 0.15rem;
+  }
+
+  /* ═══════════════════════════════
+     REVIEWS
+  ═══════════════════════════════ */
+  .lt-review {
+    flex: 0 0 100%;
+    background: rgba(255,255,255,0.06);
+    border-radius: 0.75rem;
+    padding: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .lt-review__head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .lt-review__avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+  .lt-review__meta { display: flex; flex-direction: column; }
+  .lt-review__name {
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: #fff;
+  }
+  .lt-review__stars {
+    display: flex;
+    gap: 1px;
+    color: #FFBC00;
+    font-size: 0.55rem;
+  }
+  .lt-review__text {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+  }
+
+  /* ═══════════════════════════════
+     CERTIFICATIONS
+  ═══════════════════════════════ */
+  .lt-certs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .lt-cert {
+    width: 56px;
+    height: 56px;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    transition: transform 0.3s;
+  }
+  .lt-cert:hover { transform: scale(1.1); }
+  .lt-cert img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  /* ═══════════════════════════════
+     FAQ
+  ═══════════════════════════════ */
+  .lt-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .lt-faq__item {
+    background: rgba(255,255,255,0.06);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+  .lt-faq__item[open] {
+    background: rgba(255,255,255,0.1);
+  }
+  .lt-faq__item summary {
+    padding: 0.8rem 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    line-height: 1.4;
+  }
+  .lt-faq__item summary::-webkit-details-marker { display: none; }
+  .lt-faq__item summary::after {
+    content: '+';
+    font-size: 1.1rem;
+    color: #c9a84c;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+  .lt-faq__item[open] summary::after {
+    transform: rotate(45deg);
+  }
+  .lt-faq__item p {
+    padding: 0 0.85rem 0.85rem;
+    font-size: 0.76rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+  }
+
+  /* ═══════════════════════════════
+     BLOG CARDS
+  ═══════════════════════════════ */
+  .lt-blog-card {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+  }
+  .lt-blog-card__img {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+  }
+  .lt-blog-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .lt-blog-card__cat {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    background: rgba(0,0,0,0.6);
+    color: #f6d06a;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    backdrop-filter: blur(4px);
+  }
+  .lt-blog-card__body {
+    padding: 0.85rem;
+    text-align: left;
+  }
+  .lt-blog-card__body h3 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.35rem;
+    line-height: 1.35;
+  }
+  .lt-blog-card__body p {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.55;
+  }
+
+  /* Dots */
+  .lt-blog-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.25);
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+  }
+  .lt-blog-dot--active {
+    background: #c9a84c;
+    width: 18px;
+    border-radius: 3px;
+  }
+
+  /* ═══════════════════════════════
+     SOCIALS
+  ═══════════════════════════════ */
+  .lt-socials {
+    display: flex;
+    gap: 0.75rem;
+    animation: fadeUp 0.6s ease-out 1s both;
+  }
+  .lt-social {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    transition: all 0.3s;
+  }
+  .lt-social:hover {
+    background: rgba(201,168,76,0.2);
+    border-color: rgba(201,168,76,0.4);
+    color: #c9a84c;
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+
+  /* ═══════════════════════════════
+     WHATSAPP CTA
+  ═══════════════════════════════ */
+  .lt-wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+    padding: 0.9rem 1.15rem;
+    border-radius: 1rem;
+    background: rgba(37, 211, 102, 0.15);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(37, 211, 102, 0.25);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.3s;
+    animation: fadeUp 0.6s ease-out 1.1s both;
+  }
+  .lt-wa-btn i { color: #25D366; font-size: 1.15rem; }
+  .lt-wa-btn:hover {
+    background: rgba(37,211,102,0.25);
+    border-color: rgba(37,211,102,0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(37,211,102,0.15);
+  }
+
+  /* ═══════════════════════════════
+     CONTACT
+  ═══════════════════════════════ */
+  .lt-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeUp 0.6s ease-out 1.1s both;
+  }
+  .lt-contact__item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.4);
+    transition: color 0.25s;
+    font-weight: 500;
+  }
+  .lt-contact__item:hover { color: rgba(201,168,76,0.8); }
+  .lt-contact__item i { font-size: 0.65rem; }
+  .lt-contact__dot { color: rgba(255,255,255,0.15); font-size: 0.6rem; }
+
+  /* ═══════════════════════════════
+     FOOTER
+  ═══════════════════════════════ */
+  .lt-footer {
+    text-align: center;
+    animation: fadeUp 0.6s ease-out 1.2s both;
+  }
+  .lt-footer__certs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.5rem;
+  }
+  .lt-footer__sep { opacity: 0.3; }
+  .lt-footer__copy {
+    font-size: 0.62rem;
+    color: rgba(255,255,255,0.18);
+    font-weight: 400;
+  }
+
+  /* ═══════════════════════════════
+     ANIMATIONS
+  ═══════════════════════════════ */
+  @keyframes avatarIn {
+    from { opacity: 0; transform: scale(0.7); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ═══════════════════════════════
+     RESPONSIVE
+  ═══════════════════════════════ */
+  @media (min-width: 480px) {
+    .lt-logo-big { width: 220px; }
+    .lt-name { font-size: 2rem; }
+    .lt-welcome__photo { height: 220px; }
+  }
+  @media (min-width: 768px) {
+    .lt-main { align-items: center; }
+    .lt-container { max-width: 420px; }
+  }
+  @media (min-height: 900px) {
+    .lt-main { align-items: center; padding-top: 0; }
+  }
+  @media (max-width: 360px) {
+    .lt-logo-big { width: 140px; }
+    .lt-name { font-size: 1.5rem; }
+    .lt-welcome__photo { height: 140px; }
+    .lt-contact { flex-direction: column; gap: 0.3rem; }
+    .lt-contact__dot { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
+<script is:inline>
+(function () {
+  // ── Video background ──
+  var video = document.getElementById('lt-video');
+  var poster = document.getElementById('lt-poster');
+  if (video) {
+    function showVideo() {
+      video.style.opacity = '1';
+      if (poster) poster.style.opacity = '0';
+    }
+    function playVideo() {
+      video.muted = true;
+      video.playsInline = true;
+      var p = video.play();
+      if (p !== undefined) {
+        p.then(showVideo).catch(function () {
+          video.style.opacity = '0';
+          if (poster) poster.style.opacity = '1';
+        });
+      } else {
+        showVideo();
+      }
+    }
+    video.addEventListener('loadeddata', playVideo, { once: true });
+    video.addEventListener('canplay', playVideo, { once: true });
+    video.addEventListener('playing', showVideo);
+    video.addEventListener('error', function () {
+      video.style.display = 'none';
+      if (poster) poster.style.opacity = '1';
+    });
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden && video.paused && !video.error) playVideo();
+    });
+    setTimeout(function () {
+      if (video.style.opacity !== '1' && !video.error) {
+        video.load();
+        playVideo();
+      }
+    }, 4000);
+  }
+
+  // ── Generic carousel factory ──
+  function initCarousel(trackId, dotsId, autoMs) {
+    var track = document.getElementById(trackId);
+    var dotsWrap = document.getElementById(dotsId);
+    if (!track || !dotsWrap) return;
+    var dots = dotsWrap.querySelectorAll('.lt-blog-dot');
+    var current = 0;
+    var total = track.children.length;
+    var interval;
+
+    function goTo(i) {
+      current = i;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function (d, idx) {
+        d.classList.toggle('lt-blog-dot--active', idx === current);
+      });
+    }
+
+    function next() { goTo((current + 1) % total); }
+
+    function startAuto() {
+      clearInterval(interval);
+      interval = setInterval(next, autoMs);
+    }
+
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        goTo(parseInt(dot.dataset.index));
+        startAuto();
+      });
+    });
+
+    var startX = 0;
+    track.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) goTo((current + 1) % total);
+        else goTo((current - 1 + total) % total);
+        startAuto();
+      }
+    });
+
+    startAuto();
+  }
+
+  initCarousel('reviewsTrack', 'reviewsDots', 5000);
+  initCarousel('blogTrack', 'blogDots', 5000);
+})();
+</script>
