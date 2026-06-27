@@ -30,6 +30,76 @@ const reviews = [
   },
 ];
 
+const advisors = [
+  {
+    name: 'Camille Arres',
+    role: 'Asesora de Viajes',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/camille-arres-perubeyond.webp',
+    wa: 'https://wa.me/51943491959',
+  },
+  {
+    name: 'Shirley Tinta',
+    role: 'Asesora de Viajes',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/shirley-tinta-perubeyond.webp',
+    wa: 'https://wa.me/51943491959',
+  },
+  {
+    name: 'Roxana Cruz',
+    role: 'Asesora de Viajes',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/roxana-cruz-perubeyond.webp',
+    wa: 'https://wa.me/51943491959',
+  },
+  {
+    name: 'Scott Diaz',
+    role: 'Asesor de Viajes',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/scott-diaz-perubeyond.webp',
+    wa: 'https://wa.me/51943491959',
+  },
+  {
+    name: 'Melody Huayllasi',
+    role: 'Asesora de Viajes',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/melody-huayllasi-perubeyond.webp',
+    wa: 'https://wa.me/51943491959',
+  },
+  {
+    name: 'Juan Carlos',
+    role: 'Asesor de Viajes',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/juan-carlos-perubeyond.webp',
+    wa: 'https://wa.me/51943491959',
+  },
+];
+
+const packages = [
+  {
+    title: 'Machu Picchu',
+    desc: 'La ciudadela inca más majestuosa del mundo',
+    img: '/images/Machupicchu/IMG_7715.webp',
+    href: '/tours/machu-picchu',
+    badge: 'Más popular',
+  },
+  {
+    title: 'Valle Sagrado',
+    desc: 'Ruinas incas, mercados y tradición viva',
+    img: '/images/Ollantaytambo/FT 18.webp',
+    href: '/tours/cusco',
+    badge: 'Emblemático',
+  },
+  {
+    title: 'Montaña 7 Colores',
+    desc: 'Una caminata hacia paisajes surrealistas',
+    img: '/images/Montaña_de_7_colores/DSC03326.webp',
+    href: '/tours/cusco',
+    badge: 'Aventura',
+  },
+  {
+    title: 'Laguna Humantay',
+    desc: 'El espejo turquesa de los Andes',
+    img: '/images/Laguna_Humantay/DSC04400.webp',
+    href: '/tours/cusco',
+    badge: 'Naturaleza',
+  },
+];
+
 const blogs = [
   {
     slug: '/blog/inti-raymi',
@@ -200,15 +270,28 @@ const socials = [
         </div>
       </div>
 
-      <!-- ── BIENVENIDA + IMAGEN GRUPAL ── -->
-      <div class="lt-welcome">
-        <div class="lt-welcome__photo">
-          <img src="/images/Laguna_Humantay/DSC04385.webp" alt="Equipo Peru Beyond" />
+      <!-- ── CTA: ASESORES DE VIAJES ── -->
+      <div class="lt-section">
+        <p class="lt-section__label">¿Quieres cotizar y armar tu viaje?</p>
+        <p class="lt-advisors-intro">Habla directamente con uno de nuestros asesores especializados</p>
+        <div class="lt-advisors-grid">
+          {advisors.map((a) => (
+            <a href={a.wa} target="_blank" rel="noopener noreferrer" class="lt-advisor">
+              <img
+                src={a.photo}
+                alt={a.name}
+                class="lt-advisor__img"
+                loading="lazy"
+                onerror="this.src='/images/Laguna_Humantay/DSC04385.webp'"
+              />
+              <div class="lt-advisor__info">
+                <span class="lt-advisor__name">{a.name}</span>
+                <span class="lt-advisor__role">{a.role}</span>
+              </div>
+              <i class="bi bi-whatsapp lt-advisor__icon"></i>
+            </a>
+          ))}
         </div>
-        <p class="lt-welcome__text">
-          Somos una agencia peruana dedicada a ofrecer tours auténticos, seguros y diseñados a medida.
-          Viajamos con alma, guiamos con pasión.
-        </p>
       </div>
 
       <!-- ── VIDEO YOUTUBE ── -->
@@ -224,6 +307,57 @@ const socials = [
             loading="lazy"
           ></iframe>
         </div>
+      </div>
+
+      <!-- ── SECOND CTA: COTIZA TU VIAJE ── -->
+      <a href="https://wa.me/51943491959?text=Hola%2C%20quiero%20cotizar%20mi%20viaje%20a%20Per%C3%BA" target="_blank" rel="noopener noreferrer" class="lt-cta-gold">
+        <i class="bi bi-calendar-check-fill"></i>
+        <span>Cotiza tu viaje ahora — es gratis</span>
+        <i class="bi bi-arrow-right lt-cta-gold__arrow"></i>
+      </a>
+
+      <!-- ── PAQUETES MÁS EMBLEMÁTICOS ── -->
+      <div class="lt-section">
+        <p class="lt-section__label">Paquetes más emblemáticos</p>
+        <div class="lt-carousel-wrap">
+          <div class="lt-carousel-track" id="pkgTrack">
+            {packages.map((p) => (
+              <a href={p.href} class="lt-pkg-card">
+                <div class="lt-pkg-card__img">
+                  <img src={p.img} alt={p.title} loading="lazy" />
+                  <span class="lt-pkg-card__badge">{p.badge}</span>
+                  <div class="lt-pkg-card__overlay">
+                    <h3 class="lt-pkg-card__title">{p.title}</h3>
+                    <p class="lt-pkg-card__desc">{p.desc}</p>
+                    <span class="lt-pkg-card__cta">Ver paquete <i class="bi bi-arrow-right"></i></span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+          <div class="lt-carousel-dots" id="pkgDots">
+            {packages.map((_, i) => (
+              <button class={`lt-blog-dot ${i === 0 ? 'lt-blog-dot--active' : ''}`} data-index={i} aria-label={`Paquete ${i + 1}`}></button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- ── ¿ERES INFLUENCER? TRABAJA CON NOSOTROS ── -->
+      <div class="lt-influencer-hero">
+        <div class="lt-influencer-hero__icon">
+          <i class="bi bi-camera-video-fill"></i>
+        </div>
+        <h2 class="lt-influencer-hero__title">¿Eres Influencer?</h2>
+        <p class="lt-influencer-hero__sub">Trabaja con nosotros</p>
+        <p class="lt-influencer-hero__text">
+          Colaboramos con creadores de contenido para mostrar las maravillas del Perú al mundo.
+          Experiencias únicas, contenido increíble.
+        </p>
+        <a href="https://wa.link/eu33el" target="_blank" rel="noopener noreferrer" class="lt-influencer-hero__btn">
+          <i class="bi bi-whatsapp"></i>
+          Quiero colaborar
+        </a>
       </div>
 
       <!-- ── RESEÑAS CARRUSEL ── -->
@@ -253,6 +387,68 @@ const socials = [
               <button class={`lt-blog-dot ${i === 0 ? 'lt-blog-dot--active' : ''}`} data-index={i} aria-label={`Reseña ${i + 1}`}></button>
             ))}
           </div>
+        </div>
+      </div>
+
+      <!-- ── RESPONSABILIDAD SOCIAL ── -->
+      <div class="lt-section lt-social-resp">
+        <div class="lt-social-resp__header">
+          <div class="lt-social-resp__icon">
+            <i class="bi bi-heart-fill"></i>
+          </div>
+          <div>
+            <p class="lt-section__label" style="text-align:left; margin-bottom:0.25rem;">Responsabilidad Social</p>
+            <h3 class="lt-social-resp__title">Fundación Sueños Mágicos</h3>
+          </div>
+        </div>
+        <p class="lt-social-resp__text">
+          Comprometidos con el desarrollo sostenible y las comunidades locales del Perú.
+          Cada tour que realizas contribuye a nuestras iniciativas sociales y educativas.
+        </p>
+        <div class="lt-social-resp__badges">
+          <span><i class="bi bi-check-circle-fill"></i> Turismo sostenible</span>
+          <span><i class="bi bi-check-circle-fill"></i> Comunidades locales</span>
+          <span><i class="bi bi-check-circle-fill"></i> Educación</span>
+        </div>
+        <a href="https://www.magicexperiencesperu.com/social-responsability" target="_blank" rel="noopener noreferrer" class="lt-social-resp__link">
+          Conoce nuestra fundación <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- ── INFLUENCER & MARKETING ── -->
+      <div class="lt-section">
+        <p class="lt-section__label">Influencer & Marketing</p>
+        <div class="lt-marketing-grid">
+          <a href="https://wa.link/eu33el" target="_blank" rel="noopener noreferrer" class="lt-marketing-item">
+            <div class="lt-marketing-item__icon lt-marketing-item__icon--cam">
+              <i class="bi bi-camera-video-fill"></i>
+            </div>
+            <div class="lt-marketing-item__info">
+              <span class="lt-marketing-item__title">¿Eres Influencer?</span>
+              <span class="lt-marketing-item__sub">Collab con nosotros</span>
+            </div>
+            <i class="bi bi-whatsapp lt-marketing-item__wa"></i>
+          </a>
+          <a href="https://wa.link/xgqs5t" target="_blank" rel="noopener noreferrer" class="lt-marketing-item">
+            <div class="lt-marketing-item__icon lt-marketing-item__icon--mega">
+              <i class="bi bi-megaphone-fill"></i>
+            </div>
+            <div class="lt-marketing-item__info">
+              <span class="lt-marketing-item__title">Marketing & PR</span>
+              <span class="lt-marketing-item__sub">Contacto general</span>
+            </div>
+            <i class="bi bi-whatsapp lt-marketing-item__wa"></i>
+          </a>
+          <a href="https://www.instagram.com/perubeyond/" target="_blank" rel="noopener noreferrer" class="lt-marketing-item">
+            <div class="lt-marketing-item__icon lt-marketing-item__icon--insta">
+              <i class="bi bi-instagram"></i>
+            </div>
+            <div class="lt-marketing-item__info">
+              <span class="lt-marketing-item__title">@perubeyond</span>
+              <span class="lt-marketing-item__sub">Síguenos en Instagram</span>
+            </div>
+            <i class="bi bi-arrow-right lt-marketing-item__wa"></i>
+          </a>
         </div>
       </div>
 
@@ -579,38 +775,6 @@ const socials = [
   }
 
   /* ═══════════════════════════════
-     WELCOME (imagen + texto)
-  ═══════════════════════════════ */
-  .lt-welcome {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    overflow: hidden;
-    animation: fadeUp 0.6s ease-out 0.4s both;
-  }
-  .lt-welcome__photo {
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-  }
-  .lt-welcome__photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30%;
-  }
-  .lt-welcome__text {
-    padding: 1rem 1.15rem;
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.75);
-    line-height: 1.7;
-    text-align: center;
-  }
-
-  /* ═══════════════════════════════
      SECTIONS (glass cards)
   ═══════════════════════════════ */
   .lt-section {
@@ -634,6 +798,72 @@ const socials = [
   }
 
   /* ═══════════════════════════════
+     ASESORES DE VIAJES
+  ═══════════════════════════════ */
+  .lt-advisors-intro {
+    font-size: 0.77rem;
+    color: rgba(255,255,255,0.55);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .lt-advisors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+  .lt-advisor {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 0.75rem;
+    padding: 0.55rem 0.6rem;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+  .lt-advisor:hover {
+    background: rgba(37,211,102,0.12);
+    border-color: rgba(37,211,102,0.3);
+    transform: translateY(-2px);
+  }
+  .lt-advisor__img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    flex-shrink: 0;
+    border: 1.5px solid rgba(201,168,76,0.4);
+  }
+  .lt-advisor__info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+  }
+  .lt-advisor__name {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .lt-advisor__role {
+    font-size: 0.58rem;
+    color: rgba(201,168,76,0.75);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .lt-advisor__icon {
+    font-size: 0.9rem;
+    color: #25D366;
+    flex-shrink: 0;
+  }
+
+  /* ═══════════════════════════════
      VIDEO YOUTUBE
   ═══════════════════════════════ */
   .lt-video-wrap {
@@ -652,7 +882,180 @@ const socials = [
   }
 
   /* ═══════════════════════════════
-     GENERIC CAROUSEL (reviews + blogs)
+     SECOND CTA (GOLD)
+  ═══════════════════════════════ */
+  .lt-cta-gold {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, rgba(201,168,76,0.2) 0%, rgba(201,168,76,0.1) 100%);
+    backdrop-filter: blur(16px);
+    border: 1.5px solid rgba(201,168,76,0.45);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.02em;
+    transition: all 0.3s;
+    animation: fadeUp 0.6s ease-out 0.55s both;
+  }
+  .lt-cta-gold i:first-child { color: #c9a84c; font-size: 1.1rem; }
+  .lt-cta-gold__arrow {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+    margin-left: auto;
+  }
+  .lt-cta-gold:hover {
+    background: linear-gradient(135deg, rgba(201,168,76,0.32) 0%, rgba(201,168,76,0.18) 100%);
+    border-color: rgba(201,168,76,0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(201,168,76,0.18);
+  }
+
+  /* ═══════════════════════════════
+     PACKAGES CAROUSEL
+  ═══════════════════════════════ */
+  .lt-pkg-card {
+    flex: 0 0 100%;
+    display: block;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .lt-pkg-card__img {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  .lt-pkg-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .lt-pkg-card:hover .lt-pkg-card__img img { transform: scale(1.05); }
+  .lt-pkg-card__badge {
+    position: absolute;
+    top: 0.65rem;
+    left: 0.65rem;
+    background: rgba(201,168,76,0.9);
+    color: #000;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.18rem 0.55rem;
+    border-radius: 2px;
+  }
+  .lt-pkg-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  .lt-pkg-card__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.2rem;
+  }
+  .lt-pkg-card__desc {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.4;
+    margin-bottom: 0.55rem;
+  }
+  .lt-pkg-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #c9a84c;
+    letter-spacing: 0.04em;
+  }
+
+  /* ═══════════════════════════════
+     INFLUENCER HERO
+  ═══════════════════════════════ */
+  .lt-influencer-hero {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(130,80,200,0.15) 0%, rgba(80,130,220,0.12) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(180,120,255,0.2);
+    border-radius: 1rem;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.65rem;
+    animation: fadeUp 0.6s ease-out 0.6s both;
+  }
+  .lt-influencer-hero__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(180,120,255,0.25), rgba(80,130,220,0.2));
+    border: 1px solid rgba(180,120,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #b47bff;
+  }
+  .lt-influencer-hero__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+  }
+  .lt-influencer-hero__sub {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(180,120,255,0.8);
+  }
+  .lt-influencer-hero__text {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.65;
+    max-width: 340px;
+  }
+  .lt-influencer-hero__btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 9999px;
+    background: rgba(37,211,102,0.15);
+    border: 1.5px solid rgba(37,211,102,0.3);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.3s;
+    margin-top: 0.25rem;
+  }
+  .lt-influencer-hero__btn i { color: #25D366; font-size: 1rem; }
+  .lt-influencer-hero__btn:hover {
+    background: rgba(37,211,102,0.25);
+    border-color: rgba(37,211,102,0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37,211,102,0.15);
+  }
+
+  /* ═══════════════════════════════
+     GENERIC CAROUSEL (reviews + blogs + packages)
   ═══════════════════════════════ */
   .lt-carousel-wrap {
     position: relative;
@@ -716,6 +1119,142 @@ const socials = [
     font-size: 0.78rem;
     color: rgba(255,255,255,0.6);
     line-height: 1.6;
+  }
+
+  /* ═══════════════════════════════
+     RESPONSABILIDAD SOCIAL
+  ═══════════════════════════════ */
+  .lt-social-resp { }
+  .lt-social-resp__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+  }
+  .lt-social-resp__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(231,76,60,0.15);
+    border: 1px solid rgba(231,76,60,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #e74c3c;
+    flex-shrink: 0;
+  }
+  .lt-social-resp__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .lt-social-resp__text {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.65;
+    margin-bottom: 0.85rem;
+  }
+  .lt-social-resp__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  .lt-social-resp__badges span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 9999px;
+    padding: 0.2rem 0.6rem;
+  }
+  .lt-social-resp__badges span i { color: #2ecc71; font-size: 0.62rem; }
+  .lt-social-resp__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #c9a84c;
+    transition: gap 0.2s;
+  }
+  .lt-social-resp__link:hover { gap: 0.55rem; }
+
+  /* ═══════════════════════════════
+     MARKETING GRID
+  ═══════════════════════════════ */
+  .lt-marketing-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .lt-marketing-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0.85rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 0.75rem;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+  .lt-marketing-item:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.15);
+    transform: translateX(3px);
+  }
+  .lt-marketing-item__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .lt-marketing-item__icon--cam {
+    background: rgba(180,120,255,0.15);
+    border: 1px solid rgba(180,120,255,0.25);
+    color: #b47bff;
+  }
+  .lt-marketing-item__icon--mega {
+    background: rgba(255,160,50,0.15);
+    border: 1px solid rgba(255,160,50,0.25);
+    color: #ffa032;
+  }
+  .lt-marketing-item__icon--insta {
+    background: rgba(225,48,108,0.12);
+    border: 1px solid rgba(225,48,108,0.2);
+    color: #e1306c;
+  }
+  .lt-marketing-item__info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.1rem;
+  }
+  .lt-marketing-item__title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .lt-marketing-item__sub {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.45);
+    font-weight: 500;
+  }
+  .lt-marketing-item__wa {
+    font-size: 1.05rem;
+    color: #25D366;
+    flex-shrink: 0;
   }
 
   /* ═══════════════════════════════
@@ -988,7 +1527,6 @@ const socials = [
   @media (min-width: 480px) {
     .lt-logo-big { width: 220px; }
     .lt-name { font-size: 2rem; }
-    .lt-welcome__photo { height: 220px; }
   }
   @media (min-width: 768px) {
     .lt-main { align-items: center; }
@@ -1000,7 +1538,7 @@ const socials = [
   @media (max-width: 360px) {
     .lt-logo-big { width: 140px; }
     .lt-name { font-size: 1.5rem; }
-    .lt-welcome__photo { height: 140px; }
+    .lt-advisors-grid { grid-template-columns: 1fr; }
     .lt-contact { flex-direction: column; gap: 0.3rem; }
     .lt-contact__dot { display: none; }
   }
@@ -1102,6 +1640,7 @@ const socials = [
   }
 
   initCarousel('reviewsTrack', 'reviewsDots', 5000);
+  initCarousel('pkgTrack', 'pkgDots', 4000);
   initCarousel('blogTrack', 'blogDots', 5000);
 })();
 </script>
