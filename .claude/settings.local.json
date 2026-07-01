@@ -18,7 +18,12 @@
       "PowerShell(npx astro build 2>&1 | Select-Object -Last 10)",
       "PowerShell(npx astro build 2>&1 | Select-Object -Last 8)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(magick --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(python -c \"from PIL import Image; print\\('pillow ok'\\)\")",
+      "Bash(pip install *)",
+      "Bash(xargs sed -i 's|/images/Huacachina/ica\\\\.jpg|/images/Huacachina/ica.webp|g')"
     ]
   }
 }

@@ -14,6 +14,7 @@ import BlogPreview from '../components/BlogPreview.astro';
 import Footer from '../components/Footer.astro';
 ---
 <Layout>
+  <link slot="head" rel="preload" as="image" href="/images/Lima/pexels-icarus-7357663.webp" />
   <link slot="head" rel="preload" as="video" href="/images/PeruBeyond/MachuPicchu-PerúBeyond.mp4" type="video/mp4" />
   <Header />
   <Hero />
@@ -34,6 +35,9 @@ import Footer from '../components/Footer.astro';
       src="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp"
       alt="Gallito Peru Beyond"
       class="w-full drop-shadow-2xl scale-x-[-1]"
+      width="186"
+      height="265"
+      loading="lazy"
     />
     <a
       href="https://wa.me/51943491959"

@@ -144,6 +144,6 @@ const ogImageAbs = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteB
   </head>
   <body class="bg-white">
     <slot />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" is:inline></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   </body>
 </html>
