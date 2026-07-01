@@ -216,9 +216,10 @@ const langAlternates = {
   </section>
   
   <!-- ═══════════════════════════════════════════
-       MENÚ SUPERIOR STICKY (CAMBIO DE POSICIÓN)
+       MENÚ SUPERIOR STICKY (reemplaza al header al hacer scroll)
   ═══════════════════════════════════════════ -->
-  <nav id="floating-menu" class="sticky top-0 z-50 w-full bg-navy/95 backdrop-blur border-b border-white/10 shadow-lg transition-all duration-300">
+  <div id="floating-menu-spacer" class="hidden"></div>
+  <nav id="floating-menu" class="relative z-40 w-full bg-navy/95 backdrop-blur border-b border-white/10 shadow-lg transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-center gap-4 md:gap-8 overflow-x-auto no-scrollbar">
     
       <a href="#itinerario" class="menu-link group flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors relative py-2">
@@ -834,6 +835,60 @@ const langAlternates = {
         
     
 <!-------------------------------------------------- SECCION PARA LOS SCRIPTS -------------------------------------------------- -->
+
+  <!-- FUNCIÓN: el menú secundario reemplaza al header al hacer scroll.
+       Se controla todo por JS (position:fixed) en vez de usar CSS "sticky",
+       porque "sticky" se rompe si algún elemento padre en el layout tiene
+       overflow-hidden (muy común en este tipo de sitios). "fixed" no tiene
+       ese problema. -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header  = document.getElementById('main-header');
+      const nav     = document.getElementById('floating-menu');
+      const spacer  = document.getElementById('floating-menu-spacer');
+      if (!header || !nav || !spacer) return;
+
+      let navOffsetTop = 0;
+
+      // Guarda la posición natural del menú en el documento (solo cuando
+      // NO está fijado, para no medir mal su propia posición fija).
+      function measure() {
+        if (!nav.classList.contains('is-fixed')) {
+          navOffsetTop = nav.getBoundingClientRect().top + window.scrollY;
+        }
+      }
+      measure();
+      window.addEventListener('resize', measure);
+
+      function onScroll() {
+        const shouldStick = window.scrollY >= navOffsetTop;
+        const isFixed = nav.classList.contains('is-fixed');
+
+        if (shouldStick && !isFixed) {
+          // Fijamos el menú secundario arriba y dejamos un spacer para
+          // que el contenido de abajo no salte.
+          spacer.style.height = nav.offsetHeight + 'px';
+          spacer.classList.remove('hidden');
+          nav.classList.add('is-fixed', 'fixed', 'top-0', 'left-0', 'right-0');
+          nav.classList.remove('relative');
+
+          // Ocultamos el header principal: el menú secundario lo reemplaza.
+          header.classList.add('-translate-y-full', 'pointer-events-none');
+        } else if (!shouldStick && isFixed) {
+          nav.classList.remove('is-fixed', 'fixed', 'top-0', 'left-0', 'right-0');
+          nav.classList.add('relative');
+          spacer.classList.add('hidden');
+          spacer.style.height = '0px';
+
+          // Volvemos a mostrar el header principal.
+          header.classList.remove('-translate-y-full', 'pointer-events-none');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    });
+  </script>
 
   <!-- FUNCION PARA LA FUNCION DEL CARRUCEL DE LOS ITINERARIOS  -->
   <script>
