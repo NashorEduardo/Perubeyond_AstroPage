@@ -34,37 +34,7 @@ const advisors = [
   {
     name: 'Camille Arres',
     role: 'Asesora de Viajes',
-    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/camille-arres-perubeyond.webp',
-    wa: 'https://wa.me/51943491959',
-  },
-  {
-    name: 'Shirley Tinta',
-    role: 'Asesora de Viajes',
-    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/shirley-tinta-perubeyond.webp',
-    wa: 'https://wa.me/51943491959',
-  },
-  {
-    name: 'Roxana Cruz',
-    role: 'Asesora de Viajes',
-    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/roxana-cruz-perubeyond.webp',
-    wa: 'https://wa.me/51943491959',
-  },
-  {
-    name: 'Scott Diaz',
-    role: 'Asesor de Viajes',
-    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/scott-diaz-perubeyond.webp',
-    wa: 'https://wa.me/51943491959',
-  },
-  {
-    name: 'Melody Huayllasi',
-    role: 'Asesora de Viajes',
-    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/melody-huayllasi-perubeyond.webp',
-    wa: 'https://wa.me/51943491959',
-  },
-  {
-    name: 'Juan Carlos',
-    role: 'Asesor de Viajes',
-    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/juan-carlos-perubeyond.webp',
+    photo: '/images/PeruBeyond/FOTO PERFIL.png',
     wa: 'https://wa.me/51943491959',
   },
 ];
@@ -266,7 +236,7 @@ const socials = [
           <div class="lt-rating__stars">
             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
           </div>
-          <span class="lt-rating__text">4.9 &middot; 128+ reseñas</span>
+          <span class="lt-rating__text">4.9 &middot; 192 reseñas</span>
         </div>
       </div>
 
@@ -276,20 +246,25 @@ const socials = [
         <p class="lt-advisors-intro">Habla directamente con uno de nuestros asesores especializados</p>
         <div class="lt-advisors-grid">
           {advisors.map((a) => (
-            <a href={a.wa} target="_blank" rel="noopener noreferrer" class="lt-advisor">
-              <img
-                src={a.photo}
-                alt={a.name}
-                class="lt-advisor__img"
-                loading="lazy"
-                onerror="this.src='/images/Laguna_Humantay/DSC04385.webp'"
-              />
-              <div class="lt-advisor__info">
-                <span class="lt-advisor__name">{a.name}</span>
-                <span class="lt-advisor__role">{a.role}</span>
+            <div class="lt-advisor-card">
+              <div class="lt-advisor-card__photo-wrap">
+                <img
+                  src={a.photo}
+                  alt={a.name}
+                  class="lt-advisor-card__photo"
+                  loading="lazy"
+                  onerror="this.src='/images/Laguna_Humantay/DSC04385.webp'"
+                />
               </div>
-              <i class="bi bi-whatsapp lt-advisor__icon"></i>
-            </a>
+              <div class="lt-advisor-card__body">
+                <span class="lt-advisor-card__name">{a.name}</span>
+                <span class="lt-advisor-card__role">{a.role}</span>
+                <a href={a.wa} target="_blank" rel="noopener noreferrer" class="lt-advisor-card__wa">
+                  <i class="bi bi-whatsapp"></i>
+                  Contactar por WhatsApp
+                </a>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -404,6 +379,9 @@ const socials = [
         <p class="lt-social-resp__text">
           Comprometidos con el desarrollo sostenible y las comunidades locales del Perú.
           Cada tour que realizas contribuye a nuestras iniciativas sociales y educativas.
+        </p>
+        <p class="lt-social-resp__highlight">
+          Viajando con nosotros apoyas a los niños de las alturas.
         </p>
         <div class="lt-social-resp__badges">
           <span><i class="bi bi-check-circle-fill"></i> Turismo sostenible</span>
@@ -808,59 +786,74 @@ const socials = [
     line-height: 1.5;
   }
   .lt-advisors-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
-  }
-  .lt-advisor {
-    display: flex;
-    align-items: center;
-    gap: 0.55rem;
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.09);
-    border-radius: 0.75rem;
-    padding: 0.55rem 0.6rem;
-    transition: all 0.25s;
-    cursor: pointer;
-  }
-  .lt-advisor:hover {
-    background: rgba(37,211,102,0.12);
-    border-color: rgba(37,211,102,0.3);
-    transform: translateY(-2px);
-  }
-  .lt-advisor__img {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: top;
-    flex-shrink: 0;
-    border: 1.5px solid rgba(201,168,76,0.4);
-  }
-  .lt-advisor__info {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    min-width: 0;
+    align-items: center;
+    gap: 1rem;
   }
-  .lt-advisor__name {
-    font-size: 0.72rem;
+  .lt-advisor-card {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .lt-advisor-card__photo-wrap {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+  }
+  .lt-advisor-card__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+  .lt-advisor-card__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 1rem 1.25rem 1.25rem;
+    text-align: center;
+  }
+  .lt-advisor-card__name {
+    font-size: 1rem;
     font-weight: 700;
     color: #fff;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .lt-advisor__role {
-    font-size: 0.58rem;
-    color: rgba(201,168,76,0.75);
-    font-weight: 500;
     letter-spacing: 0.02em;
   }
-  .lt-advisor__icon {
-    font-size: 0.9rem;
-    color: #25D366;
-    flex-shrink: 0;
+  .lt-advisor-card__role {
+    font-size: 0.7rem;
+    color: rgba(201,168,76,0.85);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .lt-advisor-card__wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 9999px;
+    background: rgba(37,211,102,0.15);
+    border: 1.5px solid rgba(37,211,102,0.35);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.25s;
+  }
+  .lt-advisor-card__wa i { color: #25D366; font-size: 1rem; }
+  .lt-advisor-card__wa:hover {
+    background: rgba(37,211,102,0.28);
+    border-color: rgba(37,211,102,0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37,211,102,0.15);
   }
 
   /* ═══════════════════════════════
@@ -1155,6 +1148,18 @@ const socials = [
     color: rgba(255,255,255,0.6);
     line-height: 1.65;
     margin-bottom: 0.85rem;
+  }
+  .lt-social-resp__highlight {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    border-left: 3px solid #e74c3c;
+    padding: 0.5rem 0.75rem;
+    background: rgba(231,76,60,0.08);
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin-bottom: 0.85rem;
+    line-height: 1.5;
   }
   .lt-social-resp__badges {
     display: flex;
