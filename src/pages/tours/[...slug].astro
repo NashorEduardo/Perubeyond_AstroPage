@@ -645,10 +645,6 @@ const langAlternates = {
         )}
 
 
-        <div class="bg-orange-500 text-white text-center py-5 font-bold text-lg tracking-widest uppercase">
-          {t['tour.contact_title']}
-        </div>
-
         <div class="p-8">
           <div class="text-center mb-6">
             <span class="text-gray-400 text-xs uppercase tracking-widest block mb-1">{t['tour.price_from']}</span>
@@ -843,18 +839,21 @@ const langAlternates = {
        ese problema. -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const header  = document.getElementById('main-header');
-      const nav     = document.getElementById('floating-menu');
-      const spacer  = document.getElementById('floating-menu-spacer');
+      const header  = document.getElementById('main-header') as HTMLElement | null;
+      const nav     = document.getElementById('floating-menu') as HTMLElement | null;
+      const spacer  = document.getElementById('floating-menu-spacer') as HTMLElement | null;
       if (!header || !nav || !spacer) return;
+      const headerEl = header;
+      const navEl = nav;
+      const spacerEl = spacer;
 
       let navOffsetTop = 0;
 
       // Guarda la posición natural del menú en el documento (solo cuando
       // NO está fijado, para no medir mal su propia posición fija).
       function measure() {
-        if (!nav.classList.contains('is-fixed')) {
-          navOffsetTop = nav.getBoundingClientRect().top + window.scrollY;
+        if (!navEl.classList.contains('is-fixed')) {
+          navOffsetTop = navEl.getBoundingClientRect().top + window.scrollY;
         }
       }
       measure();
@@ -862,26 +861,26 @@ const langAlternates = {
 
       function onScroll() {
         const shouldStick = window.scrollY >= navOffsetTop;
-        const isFixed = nav.classList.contains('is-fixed');
+        const isFixed = navEl.classList.contains('is-fixed');
 
         if (shouldStick && !isFixed) {
           // Fijamos el menú secundario arriba y dejamos un spacer para
           // que el contenido de abajo no salte.
-          spacer.style.height = nav.offsetHeight + 'px';
-          spacer.classList.remove('hidden');
-          nav.classList.add('is-fixed', 'fixed', 'top-0', 'left-0', 'right-0');
-          nav.classList.remove('relative');
+          spacerEl.style.height = navEl.offsetHeight + 'px';
+          spacerEl.classList.remove('hidden');
+          navEl.classList.add('is-fixed', 'fixed', 'top-0', 'left-0', 'right-0');
+          navEl.classList.remove('relative');
 
           // Ocultamos el header principal: el menú secundario lo reemplaza.
-          header.classList.add('-translate-y-full', 'pointer-events-none');
+          headerEl.classList.add('-translate-y-full', 'pointer-events-none');
         } else if (!shouldStick && isFixed) {
-          nav.classList.remove('is-fixed', 'fixed', 'top-0', 'left-0', 'right-0');
-          nav.classList.add('relative');
-          spacer.classList.add('hidden');
-          spacer.style.height = '0px';
+          navEl.classList.remove('is-fixed', 'fixed', 'top-0', 'left-0', 'right-0');
+          navEl.classList.add('relative');
+          spacerEl.classList.add('hidden');
+          spacerEl.style.height = '0px';
 
           // Volvemos a mostrar el header principal.
-          header.classList.remove('-translate-y-full', 'pointer-events-none');
+          headerEl.classList.remove('-translate-y-full', 'pointer-events-none');
         }
       }
 
