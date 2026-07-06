@@ -216,9 +216,10 @@ const langAlternates = {
   </section>
   
   <!-- ═══════════════════════════════════════════
-       MENÚ SUPERIOR STICKY (CAMBIO DE POSICIÓN)
+       MENÚ SUPERIOR STICKY (reemplaza al header al hacer scroll)
   ═══════════════════════════════════════════ -->
-  <nav id="floating-menu" class="sticky top-0 z-50 w-full bg-navy/95 backdrop-blur border-b border-white/10 shadow-lg transition-all duration-300">
+  <div id="floating-menu-spacer" class="hidden"></div>
+  <nav id="floating-menu" class="relative z-40 w-full bg-navy/95 backdrop-blur border-b border-white/10 shadow-lg transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-center gap-4 md:gap-8 overflow-x-auto no-scrollbar">
     
       <a href="#itinerario" class="menu-link group flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors relative py-2">
@@ -644,10 +645,6 @@ const langAlternates = {
         )}
 
 
-        <div class="bg-orange-500 text-white text-center py-5 font-bold text-lg tracking-widest uppercase">
-          {t['tour.contact_title']}
-        </div>
-
         <div class="p-8">
           <div class="text-center mb-6">
             <span class="text-gray-400 text-xs uppercase tracking-widest block mb-1">{t['tour.price_from']}</span>
@@ -834,6 +831,63 @@ const langAlternates = {
         
     
 <!-------------------------------------------------- SECCION PARA LOS SCRIPTS -------------------------------------------------- -->
+
+  <!-- FUNCIÓN: el menú secundario reemplaza al header al hacer scroll.
+       Se controla todo por JS (position:fixed) en vez de usar CSS "sticky",
+       porque "sticky" se rompe si algún elemento padre en el layout tiene
+       overflow-hidden (muy común en este tipo de sitios). "fixed" no tiene
+       ese problema. -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header  = document.getElementById('main-header') as HTMLElement | null;
+      const nav     = document.getElementById('floating-menu') as HTMLElement | null;
+      const spacer  = document.getElementById('floating-menu-spacer') as HTMLElement | null;
+      if (!header || !nav || !spacer) return;
+      const headerEl = header;
+      const navEl = nav;
+      const spacerEl = spacer;
+
+      let navOffsetTop = 0;
+
+      // Guarda la posición natural del menú en el documento (solo cuando
+      // NO está fijado, para no medir mal su propia posición fija).
+      function measure() {
+        if (!navEl.classList.contains('is-fixed')) {
+          navOffsetTop = navEl.getBoundingClientRect().top + window.scrollY;
+        }
+      }
+      measure();
+      window.addEventListener('resize', measure);
+
+      function onScroll() {
+        const shouldStick = window.scrollY >= navOffsetTop;
+        const isFixed = navEl.classList.contains('is-fixed');
+
+        if (shouldStick && !isFixed) {
+          // Fijamos el menú secundario arriba y dejamos un spacer para
+          // que el contenido de abajo no salte.
+          spacerEl.style.height = navEl.offsetHeight + 'px';
+          spacerEl.classList.remove('hidden');
+          navEl.classList.add('is-fixed', 'fixed', 'top-0', 'left-0', 'right-0');
+          navEl.classList.remove('relative');
+
+          // Ocultamos el header principal: el menú secundario lo reemplaza.
+          headerEl.classList.add('-translate-y-full', 'pointer-events-none');
+        } else if (!shouldStick && isFixed) {
+          navEl.classList.remove('is-fixed', 'fixed', 'top-0', 'left-0', 'right-0');
+          navEl.classList.add('relative');
+          spacerEl.classList.add('hidden');
+          spacerEl.style.height = '0px';
+
+          // Volvemos a mostrar el header principal.
+          headerEl.classList.remove('-translate-y-full', 'pointer-events-none');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    });
+  </script>
 
   <!-- FUNCION PARA LA FUNCION DEL CARRUCEL DE LOS ITINERARIOS  -->
   <script>

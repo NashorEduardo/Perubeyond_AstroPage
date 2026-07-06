@@ -46,7 +46,7 @@ const itineraryImages = [
 
 <Layout
   title={`${title} – Peru Beyond`}
-  description={description ?? 'Vive la experiencia artística y cultural en Cusco con Peru Beyond.'}
+  description={description ?? 'Vive la experiencia artística y cultural en Lima con Peru Beyond.'}
   ogImage={image}
 >
   <Header />
@@ -138,7 +138,7 @@ const itineraryImages = [
             <div class="absolute bottom-4 left-4 right-4">
               <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2.5">
                 <p class="text-white text-xs font-semibold">{title}</p>
-                <p class="text-emerald-300 text-[10px] tracking-wide">Arte ancestral andino • Cusco, Perú</p>
+                <p class="text-emerald-300 text-[10px] tracking-wide">Arte ancestral andino • Lima, Perú</p>
               </div>
             </div>
           </div>
@@ -367,7 +367,7 @@ const itineraryImages = [
             <div class="slide-content">
               <div class="slide-step">Paso 5</div>
               <h3 class="slide-title">Tu Obra Lista para Viajar</h3>
-              <p class="slide-desc">Empacamos tu torito con cuidado para que llegue sano y salvo a tu hogar. Te vas con las manos llenas de arte y el corazón lleno de Cusco.</p>
+              <p class="slide-desc">Empacamos tu torito con cuidado para que llegue sano y salvo a tu hogar. Te vas con las manos llenas de arte y el corazón lleno de Lima.</p>
             </div>
           </div>
 
@@ -440,7 +440,7 @@ const itineraryImages = [
           <!-- Info adicional -->
           <div class="mt-8 p-4 bg-amber-50 rounded-2xl border border-amber-100">
             <p class="text-amber-800 text-xs leading-relaxed">
-              💡 <strong>¿Necesitas transporte?</strong> Podemos indicarte cómo llegar fácilmente desde el centro de Cusco. ¡Pregúntanos!
+              💡 <strong>¿Necesitas transporte?</strong> Podemos indicarte cómo llegar fácilmente desde el centro de Lima. ¡Pregúntanos!
             </p>
           </div>
         </div>
@@ -604,11 +604,11 @@ const itineraryImages = [
   let currentSlide = 0;
 
   function getSlideWidth() {
-    const slide = document.querySelector('.carousel-slide');
+    const slide = document.querySelector<HTMLElement>('.carousel-slide');
     return slide ? slide.offsetWidth + 24 : 0; // 24 = gap
   }
 
-  function goToSlide(index) {
+  function goToSlide(index: number) {
     if (!track) return;
     const slideWidth = getSlideWidth();
     track.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
