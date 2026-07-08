@@ -419,6 +419,8 @@ const socials = [
           </div>
         </div>
 
+        <p class="lt-social-resp__intro">Viajando con nosotros aportas de esta manera:</p>
+
         <div class="lt-social-resp__block">
           <p class="lt-social-resp__block-title"><i class="bi bi-tree-fill"></i> Raíces que vuelven al suelo</p>
           <p class="lt-social-resp__text">
@@ -625,6 +627,29 @@ const socials = [
 
     </div>
   </main>
+
+  <!-- ── MASCOTA WHATSAPP FLOTANTE ── -->
+  <div class="lt-mascot-float lorito-float">
+    <a
+      href="https://wa.me/51943491959"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por WhatsApp"
+      class="lt-mascot-float__link"
+    >
+      <img
+        src="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp"
+        alt="Gallito Peru Beyond"
+        class="lt-mascot-float__img"
+        width="140"
+        height="199"
+        loading="lazy"
+      />
+      <span class="lt-mascot-float__badge">
+        <i class="bi bi-whatsapp"></i>
+      </span>
+    </a>
+  </div>
 
 </body>
 </html>
@@ -1209,6 +1234,13 @@ const socials = [
     font-weight: 700;
     color: #fff;
   }
+  .lt-social-resp__intro {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.85rem;
+  }
   .lt-social-resp__block {
     margin-bottom: 0.75rem;
   }
@@ -1631,6 +1663,57 @@ const socials = [
       animation-duration: 0.01ms !important;
       transition-duration: 0.01ms !important;
     }
+  }
+
+  /* ═══════════════════════════════
+     MASCOTA WHATSAPP FLOTANTE
+  ═══════════════════════════════ */
+  @keyframes loritoFloat {
+    0%, 100% { transform: translateY(0px); }
+    50%      { transform: translateY(-12px); }
+  }
+  .lorito-float { animation: loritoFloat 3s ease-in-out infinite; }
+  .lt-mascot-float {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 30;
+    width: 90px;
+    pointer-events: none;
+  }
+  .lt-mascot-float__link {
+    position: relative;
+    display: block;
+    pointer-events: auto;
+  }
+  .lt-mascot-float__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: scaleX(-1);
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));
+    transition: transform 0.3s;
+  }
+  .lt-mascot-float__link:hover .lt-mascot-float__img {
+    transform: scaleX(-1) scale(1.05);
+  }
+  .lt-mascot-float__badge {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    color: #fff;
+    font-size: 0.85rem;
+  }
+  @media (min-width: 480px) {
+    .lt-mascot-float { width: 120px; }
   }
 </style>
 
