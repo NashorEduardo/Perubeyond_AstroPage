@@ -7,32 +7,49 @@ const certLogos = [
   { src: 'https://www.wayraqperu.com/wp-content/uploads/mincetur.png', alt: 'Mincetur' },
 ];
 
+const socialImages = [
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Suttoc_Paccha_Private_Conservation_Area_%28PCA%29_01.jpg', alt: 'Bosque de queuñas nativas en Cusco', caption: 'Reforestación con especies nativas' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Suttoc_Paccha_Private_Conservation_Area_%28PCA%29_02.jpg', alt: 'Bosque andino nativo en Cusco', caption: 'Reforestación con especies nativas' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Suttoc_pacchac_%28PCA%29_15.jpg', alt: 'Sendero entre queuñales en los Andes', caption: 'Reforestación con especies nativas' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/1/17/Quechua_Children%2C_Cuzco_%286974675076%29.jpg', alt: 'Niños de comunidades altoandinas de Cusco', caption: 'Salud para comunidades altoandinas' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Quechua_children_in_traditional_dress_Andes_Peru.jpg', alt: 'Niños quechua de los Andes peruanos', caption: 'Salud para comunidades altoandinas' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Ni%C3%B1os_del_Cuzco.JPG', alt: 'Niños del Cusco', caption: 'Salud para comunidades altoandinas' },
+];
+
 const reviews = [
   {
-    name: 'Daniela Britsia', initials: 'DB', color: '#8B7355',
-    text: 'Reservamos nuestros tours con esta agencia y fue la mejor decisión. Todo estuvo perfectamente organizado. ¡Definitivamente volveremos!',
+    name: 'Jhadira Ccahuana', initials: 'JC', color: '#8B7355',
+    text: 'Para mi viaje a Sillustani, en Puno, elegí Peru Beyond y fue mi mejor decisión. Tienen un servicio excelente y transmiten mucha confianza con su trato cálido y amable.',
   },
   {
-    name: 'Gaby Caso', initials: 'GC', color: '#5B8A6F',
-    text: 'Experiencia excelente con Peru Beyond. La gira al Lago Titicaca estuvo muy bien organizada, interesante y muy agradable.',
+    name: 'Tony MCh', initials: 'TM', color: '#1A5276',
+    text: '¡Excelente experiencia con Peru Beyond! Viajé con ellos por Cusco y fue una de las mejores decisiones que tomé. Desde el primer contacto todo estuvo muy bien organizado.',
   },
   {
-    name: 'Carlos Deza', initials: 'CD', color: '#2E7D6B',
-    text: '¡Una joya culinaria en Cusco! Nos llevaron a los mejores restaurantes locales. Superó todas nuestras expectativas.',
+    name: 'José PC', initials: 'JP', color: '#2E7D6B',
+    text: 'Tuve una excelente experiencia con Peru Beyond en mi viaje a Arequipa. La agencia organizó todo de forma muy profesional: visitamos la Plaza de Armas, el Mirador de Yanahuara y los principales atractivos de la ciudad.',
   },
   {
-    name: 'María Rodríguez', initials: 'MR', color: '#C0392B',
-    text: 'El tour por el Valle Sagrado fue simplemente mágico. Los paisajes son impresionantes. Altamente recomendado.',
+    name: 'Milton Caceres Quispe', initials: 'MC', color: '#C0392B',
+    text: 'Mi experiencia con Peru Beyond en el tour a las Salineras de Maras fue excepcional. Cuidaron cada detalle, desde la reserva hasta el final de la actividad, con un servicio amable y claro. El guía conocía muy bien la zona.',
   },
   {
-    name: 'Sofía Fernández', initials: 'SF', color: '#6C3483',
-    text: 'Peru Beyond organizó nuestro tour de 10 días y fue impecable. ¡Gracias por el viaje de nuestras vidas!',
+    name: 'Williams Morocco Gutierrez', initials: 'WM', color: '#6C3483',
+    text: '¡Un viaje absolutamente inolvidable con Peru Beyond a las Salineras de Maras! El equipo manejó cada detalle del tour a la perfección, desde la reserva hasta el retorno, siempre con un trato cálido y claro.',
+  },
+  {
+    name: 'Maria Camila Pancca Huaman', initials: 'MP', color: '#5B8A6F',
+    text: 'Tuve una experiencia muy agradable con Peru Beyond en mi viaje a Cusco. El servicio fue puntual y con un alto nivel de profesionalismo. Visitamos lugares increíbles como Sacsayhuamán, Qorikancha y la encantadora Plaza de Armas.',
+  },
+  {
+    name: 'Jhoans Yampier Quispe Mamani', initials: 'JQ', color: '#A9762C',
+    text: 'Peru Beyond me dio una experiencia de viaje maravillosa. Desde el inicio, el equipo me hizo sentir bienvenido y bien atendido. El personal fue muy amable, profesional y siempre dispuesto a ayudar.',
   },
 ];
 
 const advisors = [
   {
-    name: 'Camille Arres',
+    name: 'Milena García',
     role: 'Asesora de Viajes',
     photo: '/images/PeruBeyond/FOTO PERFIL.webp',
     wa: 'https://wa.me/51943491959',
@@ -240,6 +257,15 @@ const socials = [
         </div>
       </div>
 
+      <!-- ── REDES SOCIALES ── -->
+      <div class="lt-socials">
+        {socials.map(s => (
+          <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} class="lt-social">
+            <i class={`bi ${s.icon}`}></i>
+          </a>
+        ))}
+      </div>
+
       <!-- ── CTA: ASESORES DE VIAJES ── -->
       <div class="lt-section">
         <p class="lt-section__label">¿Quieres cotizar y armar tu viaje?</p>
@@ -318,23 +344,6 @@ const socials = [
         </div>
       </div>
 
-      <!-- ── ¿ERES INFLUENCER? TRABAJA CON NOSOTROS ── -->
-      <div class="lt-influencer-hero">
-        <div class="lt-influencer-hero__icon">
-          <i class="bi bi-camera-video-fill"></i>
-        </div>
-        <h2 class="lt-influencer-hero__title">¿Eres Influencer?</h2>
-        <p class="lt-influencer-hero__sub">Trabaja con nosotros</p>
-        <p class="lt-influencer-hero__text">
-          Colaboramos con creadores de contenido para mostrar las maravillas del Perú al mundo.
-          Experiencias únicas, contenido increíble.
-        </p>
-        <a href="https://wa.link/eu33el" target="_blank" rel="noopener noreferrer" class="lt-influencer-hero__btn">
-          <i class="bi bi-whatsapp"></i>
-          Quiero colaborar
-        </a>
-      </div>
-
       <!-- ── RESEÑAS CARRUSEL ── -->
       <div class="lt-section">
         <p class="lt-section__label">Reseñas de Google</p>
@@ -365,32 +374,75 @@ const socials = [
         </div>
       </div>
 
-      <!-- ── RESPONSABILIDAD SOCIAL ── -->
+      <!-- ── ¿ERES INFLUENCER? TRABAJA CON NOSOTROS ── -->
+      <div class="lt-influencer-hero">
+        <div class="lt-influencer-hero__icon">
+          <i class="bi bi-camera-video-fill"></i>
+        </div>
+        <h2 class="lt-influencer-hero__title">¿Eres Influencer?</h2>
+        <p class="lt-influencer-hero__sub">Trabaja con nosotros</p>
+        <p class="lt-influencer-hero__text">
+          Colaboramos con creadores de contenido para mostrar las maravillas del Perú al mundo.
+          Experiencias únicas, contenido increíble.
+        </p>
+        <a href="https://wa.link/eu33el" target="_blank" rel="noopener noreferrer" class="lt-influencer-hero__btn">
+          <i class="bi bi-whatsapp"></i>
+          Quiero colaborar
+        </a>
+      </div>
+
+      <!-- ── ACCIÓN SOCIAL ── -->
       <div class="lt-section lt-social-resp">
         <div class="lt-social-resp__header">
           <div class="lt-social-resp__icon">
             <i class="bi bi-heart-fill"></i>
           </div>
           <div>
-            <p class="lt-section__label" style="text-align:left; margin-bottom:0.25rem;">Responsabilidad Social</p>
-            <h3 class="lt-social-resp__title">Fundación Sueños Mágicos</h3>
+            <p class="lt-section__label" style="text-align:left; margin-bottom:0.25rem;">Acción Social</p>
+            <h3 class="lt-social-resp__title">Viajar que deja huella</h3>
           </div>
         </div>
-        <p class="lt-social-resp__text">
-          Comprometidos con el desarrollo sostenible y las comunidades locales del Perú.
-          Cada tour que realizas contribuye a nuestras iniciativas sociales y educativas.
-        </p>
+
+        <div class="lt-carousel-wrap lt-social-gallery">
+          <div class="lt-carousel-track" id="socialTrack">
+            {socialImages.map((img) => (
+              <div class="lt-social-slide">
+                <img src={img.src} alt={img.alt} loading="lazy" />
+                <span class="lt-social-slide__caption">{img.caption}</span>
+              </div>
+            ))}
+          </div>
+          <div class="lt-carousel-dots" id="socialDots">
+            {socialImages.map((_, i) => (
+              <button class={`lt-blog-dot ${i === 0 ? 'lt-blog-dot--active' : ''}`} data-index={i} aria-label={`Imagen ${i + 1}`}></button>
+            ))}
+          </div>
+        </div>
+
+        <p class="lt-social-resp__intro">Viajando con nosotros aportas de esta manera:</p>
+
+        <div class="lt-social-resp__block">
+          <p class="lt-social-resp__block-title"><i class="bi bi-tree-fill"></i> Raíces que vuelven al suelo</p>
+          <p class="lt-social-resp__text">
+            Campañas de reforestación con especies nativas. Junto a comunidades campesinas de Cusco plantamos queuñas, alisos y queñoales que protegen las fuentes de agua y devuelven refugio a la fauna andina.
+          </p>
+        </div>
+
+        <div class="lt-social-resp__block">
+          <p class="lt-social-resp__block-title"><i class="bi bi-heart-pulse-fill"></i> Salud que llega donde más se necesita</p>
+          <p class="lt-social-resp__text">
+            Campañas de salud para comunidades altoandinas: controles de crecimiento, atención odontológica y tamizaje visual, sin costo y sin que nadie tenga que bajar a la ciudad.
+          </p>
+        </div>
+
         <p class="lt-social-resp__highlight">
-          Viajando con nosotros apoyas a los niños de las alturas.
+          Viajando con nosotros colaboras con 2 árboles plantados en comunidades altoandinas.
         </p>
         <div class="lt-social-resp__badges">
-          <span><i class="bi bi-check-circle-fill"></i> Turismo sostenible</span>
-          <span><i class="bi bi-check-circle-fill"></i> Comunidades locales</span>
-          <span><i class="bi bi-check-circle-fill"></i> Educación</span>
+          <span><i class="bi bi-check-circle-fill"></i> Reforestación nativa</span>
+          <span><i class="bi bi-check-circle-fill"></i> Salud comunitaria</span>
+          <span><i class="bi bi-check-circle-fill"></i> Comunidades altoandinas</span>
         </div>
-        <a href="https://www.magicexperiencesperu.com/social-responsability" target="_blank" rel="noopener noreferrer" class="lt-social-resp__link">
-          Conoce nuestra fundación <i class="bi bi-arrow-right"></i>
-        </a>
       </div>
 
       <!-- ── INFLUENCER & MARKETING ── -->
@@ -544,15 +596,6 @@ const socials = [
         </div>
       </div>
 
-      <!-- ── REDES SOCIALES ── -->
-      <div class="lt-socials">
-        {socials.map(s => (
-          <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} class="lt-social">
-            <i class={`bi ${s.icon}`}></i>
-          </a>
-        ))}
-      </div>
-
       <!-- ── CONTACTO ── -->
       <div class="lt-contact">
         <a href="tel:+51943491959" class="lt-contact__item">
@@ -584,6 +627,29 @@ const socials = [
 
     </div>
   </main>
+
+  <!-- ── MASCOTA WHATSAPP FLOTANTE ── -->
+  <div class="lt-mascot-float lorito-float">
+    <a
+      href="https://wa.me/51943491959"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por WhatsApp"
+      class="lt-mascot-float__link"
+    >
+      <img
+        src="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp"
+        alt="Gallito Peru Beyond"
+        class="lt-mascot-float__img"
+        width="140"
+        height="199"
+        loading="lazy"
+      />
+      <span class="lt-mascot-float__badge">
+        <i class="bi bi-whatsapp"></i>
+      </span>
+    </a>
+  </div>
 
 </body>
 </html>
@@ -793,7 +859,7 @@ const socials = [
   }
   .lt-advisor-card {
     width: 100%;
-    max-width: 280px;
+    max-width: 200px;
     border-radius: 1.25rem;
     overflow: hidden;
     background: rgba(255,255,255,0.07);
@@ -803,7 +869,7 @@ const socials = [
   }
   .lt-advisor-card__photo-wrap {
     width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
   }
   .lt-advisor-card__photo {
@@ -1118,6 +1184,31 @@ const socials = [
      RESPONSABILIDAD SOCIAL
   ═══════════════════════════════ */
   .lt-social-resp { }
+  .lt-social-gallery {
+    margin-bottom: 1rem;
+  }
+  .lt-social-slide {
+    flex: 0 0 100%;
+    position: relative;
+    aspect-ratio: 4 / 3;
+  }
+  .lt-social-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .lt-social-slide__caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.7));
+  }
   .lt-social-resp__header {
     display: flex;
     align-items: center;
@@ -1143,6 +1234,26 @@ const socials = [
     font-weight: 700;
     color: #fff;
   }
+  .lt-social-resp__intro {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.85rem;
+  }
+  .lt-social-resp__block {
+    margin-bottom: 0.75rem;
+  }
+  .lt-social-resp__block-title {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.3rem;
+  }
+  .lt-social-resp__block-title i { color: #2ecc71; font-size: 0.78rem; }
   .lt-social-resp__text {
     font-size: 0.78rem;
     color: rgba(255,255,255,0.6);
@@ -1553,6 +1664,57 @@ const socials = [
       transition-duration: 0.01ms !important;
     }
   }
+
+  /* ═══════════════════════════════
+     MASCOTA WHATSAPP FLOTANTE
+  ═══════════════════════════════ */
+  @keyframes loritoFloat {
+    0%, 100% { transform: translateY(0px); }
+    50%      { transform: translateY(-12px); }
+  }
+  .lorito-float { animation: loritoFloat 3s ease-in-out infinite; }
+  .lt-mascot-float {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 30;
+    width: 90px;
+    pointer-events: none;
+  }
+  .lt-mascot-float__link {
+    position: relative;
+    display: block;
+    pointer-events: auto;
+  }
+  .lt-mascot-float__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: scaleX(-1);
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));
+    transition: transform 0.3s;
+  }
+  .lt-mascot-float__link:hover .lt-mascot-float__img {
+    transform: scaleX(-1) scale(1.05);
+  }
+  .lt-mascot-float__badge {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    color: #fff;
+    font-size: 0.85rem;
+  }
+  @media (min-width: 480px) {
+    .lt-mascot-float { width: 120px; }
+  }
 </style>
 
 <script is:inline>
@@ -1647,5 +1809,6 @@ const socials = [
   initCarousel('reviewsTrack', 'reviewsDots', 5000);
   initCarousel('pkgTrack', 'pkgDots', 4000);
   initCarousel('blogTrack', 'blogDots', 5000);
+  initCarousel('socialTrack', 'socialDots', 4000);
 })();
 </script>

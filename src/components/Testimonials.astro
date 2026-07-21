@@ -3,51 +3,59 @@ const PLACE_ID = 'ChIJK_vMJWBfiioRH9_2oYWbNhY';
 
 const reviews = [
   {
-    name: 'Daniela Britsia',
-    initials: 'DB',
+    name: 'Jhadira Ccahuana',
+    initials: 'JC',
     color: '#8B7355',
-    time: 'Hace 2 días',
-    text: 'Reservamos nuestros tours con esta agencia y fue la mejor decisión. Todo estuvo perfectamente organizado, las guías fueron muy profesionales y conocedoras. Machu Picchu superó todas nuestras expectativas. ¡Definitivamente volveremos con Peru Beyond!',
+    time: 'Hace 4 meses',
+    text: 'Para mi viaje a Sillustani, en Puno, elegí Peru Beyond y fue mi mejor decisión. Tienen un servicio excelente y transmiten mucha confianza con su trato cálido y amable.',
     photo: null,
   },
   {
-    name: 'Gaby Caso',
-    initials: 'GC',
-    color: '#5B8A6F',
-    time: 'Hace 3 días',
-    text: 'Tuve una experiencia excelente con Peru Beyond. La gira al Lago Titicaca estuvo muy bien organizada, fue interesante y muy agradable. El guía habló perfecto inglés y español, explicando cada detalle histórico con gran pasión.',
-    photo: null,
-  },
-  {
-    name: 'Carlos Deza',
-    initials: 'CD',
-    color: '#2E7D6B',
-    time: 'Hace 1 semana',
-    text: '¡Una joya culinaria en Cusco! Nos llevaron a los mejores restaurantes locales y mercados tradicionales. La experiencia gastronómica fue increíble, combinada perfectamente con el tour cultural. Superó todas nuestras expectativas.',
-    photo: null,
-  },
-  {
-    name: 'María Rodríguez',
-    initials: 'MR',
-    color: '#C0392B',
-    time: 'Hace 2 semanas',
-    text: 'El tour por el Valle Sagrado fue simplemente mágico. Los paisajes son impresionantes y la guía nos contó historias fascinantes sobre la civilización inca. El transporte fue cómodo y puntual en todo momento. Altamente recomendado.',
-    photo: null,
-  },
-  {
-    name: 'Javier Morales',
-    initials: 'JM',
+    name: 'Tony MCh',
+    initials: 'TM',
     color: '#1A5276',
-    time: 'Hace 3 semanas',
-    text: 'Elegimos Peru Beyond para nuestra aventura en la Amazonía y fue una elección perfecta. El lodge fue cómodo, la fauna increíble y nuestro guía, Carlos, un experto apasionado. Una experiencia transformadora que no olvidaremos nunca.',
+    time: 'Hace 3 meses',
+    text: '¡Excelente experiencia con Peru Beyond! Viajé con ellos por Cusco y fue una de las mejores decisiones que tomé. Desde el primer contacto todo estuvo muy bien organizado.',
     photo: null,
   },
   {
-    name: 'Sofía Fernández',
-    initials: 'SF',
+    name: 'José PC',
+    initials: 'JP',
+    color: '#2E7D6B',
+    time: 'Hace 3 meses',
+    text: 'Tuve una excelente experiencia con Peru Beyond en mi viaje a Arequipa. La agencia organizó todo de forma muy profesional: visitamos la Plaza de Armas, el Mirador de Yanahuara y los principales atractivos de la ciudad.',
+    photo: null,
+  },
+  {
+    name: 'Milton Caceres Quispe',
+    initials: 'MC',
+    color: '#C0392B',
+    time: 'Hace 6 meses',
+    text: 'Mi experiencia con Peru Beyond en el tour a las Salineras de Maras fue excepcional. Cuidaron cada detalle, desde la reserva hasta el final de la actividad, con un servicio amable y claro. El guía conocía muy bien la zona.',
+    photo: null,
+  },
+  {
+    name: 'Williams Morocco Gutierrez',
+    initials: 'WM',
     color: '#6C3483',
-    time: 'Hace 1 mes',
-    text: 'Peru Beyond organizó nuestro tour de 10 días por todo el país y fue impecable. Desde Lima hasta Cusco, cada detalle fue cuidado. Los hoteles seleccionados fueron excelentes y las experiencias culturales únicas. ¡Gracias por el viaje de nuestras vidas!',
+    time: 'Hace 2 meses',
+    text: '¡Un viaje absolutamente inolvidable con Peru Beyond a las Salineras de Maras! El equipo manejó cada detalle del tour a la perfección, desde la reserva hasta el retorno, siempre con un trato cálido y claro.',
+    photo: null,
+  },
+  {
+    name: 'Maria Camila Pancca Huaman',
+    initials: 'MP',
+    color: '#5B8A6F',
+    time: 'Hace 3 meses',
+    text: 'Tuve una experiencia muy agradable con Peru Beyond en mi viaje a Cusco. El servicio fue puntual y con un alto nivel de profesionalismo. Visitamos lugares increíbles como Sacsayhuamán, Qorikancha y la encantadora Plaza de Armas.',
+    photo: null,
+  },
+  {
+    name: 'Jhoans Yampier Quispe Mamani',
+    initials: 'JQ',
+    color: '#A9762C',
+    time: 'Hace 4 meses',
+    text: 'Peru Beyond me dio una experiencia de viaje maravillosa. Desde el inicio, el equipo me hizo sentir bienvenido y bien atendido. El personal fue muy amable, profesional y siempre dispuesto a ayudar.',
     photo: null,
   },
 ];
@@ -406,7 +414,8 @@ const totalReviews = 128;
     }
 
     function maxIndex(): number {
-      return Math.max(0, 6 - visibleCount());
+      const total = track.querySelectorAll('.grev-card').length;
+      return Math.max(0, total - visibleCount());
     }
 
     function update() {
