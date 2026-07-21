@@ -1,7 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
 
 const faqSections = [
   {
@@ -35,8 +44,8 @@ const collageImages = [
 ];
 ---
 
-<Layout>
-  <Header />
+<Layout lang={lang}>
+  <Header lang={lang} />
 
   <main class="bg-white">
 
@@ -55,7 +64,7 @@ const collageImages = [
         </h1>
         <p class="faq-hero-sub">Todo lo que necesitas saber antes de tu aventura peruana.</p>
         <nav class="flex items-center justify-center gap-2 text-xs text-white/50 mt-5">
-          <a href="/" class="hover:text-white transition-colors">Inicio</a>
+          <a href={`/${lang}`} class="hover:text-white transition-colors">Inicio</a>
           <span class="text-white/30">›</span>
           <span class="text-white/80">FAQ</span>
         </nav>
@@ -188,7 +197,7 @@ const collageImages = [
 
   </main>
 
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <style>

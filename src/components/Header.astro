@@ -1,6 +1,29 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
+interface Props {
+  lang?: 'es' | 'en' | 'pt';
+}
+const { lang = 'es' } = Astro.props;
+
+// Prefija con /{lang} cualquier href/h interno (que empiece con "/" y no sea un asset)
+// dentro de una estructura de datos anidada (arrays/objetos), en el lugar.
+function localizeLinks(node: unknown, lang: string): void {
+  if (Array.isArray(node)) {
+    node.forEach((item) => localizeLinks(item, lang));
+  } else if (node && typeof node === 'object') {
+    const obj = node as Record<string, unknown>;
+    for (const key of Object.keys(obj)) {
+      const val = obj[key];
+      if ((key === 'href' || key === 'h') && typeof val === 'string' && val.startsWith('/') && !val.startsWith('/images')) {
+        obj[key] = val === '/' ? `/${lang}` : `/${lang}${val}`;
+      } else if (val && typeof val === 'object') {
+        localizeLinks(val, lang);
+      }
+    }
+  }
+}
+
 interface PeruLink  { n: string; h: string }
 interface MachuTour { name: string; duration: string; img: string; href: string }
 interface CuscoTour { name: string; href: string }
@@ -190,13 +213,14 @@ const menu: MenuItem[] = [
     },
   },
 ];
+localizeLinks(menu, lang);
 ---
 
 <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
   <div class="w-full max-w-[1560px] mx-auto px-5 xl:px-8 2xl:px-10 flex items-center justify-between py-6 relative">
 
     <!-- Logo -->
-    <a href="/" class="flex items-center flex-shrink-0">
+    <a href={`/${lang}`} class="flex items-center flex-shrink-0">
       <img id="header-logo"
            src="/images/PeruBeyond/Logo.webp"
            alt="Peru Beyond"
@@ -260,7 +284,7 @@ const menu: MenuItem[] = [
                         {m.details.desc}
                       </p>
 
-                      <a href="/tours" class="inline-flex items-center gap-2 text-gold text-xs font-bold hover:gap-4 transition-all">
+                      <a href={`/${lang}/tours`} class="inline-flex items-center gap-2 text-gold text-xs font-bold hover:gap-4 transition-all">
                         <span data-i18n="mega.peru.discover">Descubrir</span>
                         <i class="bi bi-arrow-right"></i>
                       </a>
@@ -317,8 +341,8 @@ const menu: MenuItem[] = [
                     </div>
 
                     <div class="mt-4 pt-4 border-t border-gray-100">
-                      <a 
-                        href="/tours" 
+                      <a
+                        href={`/${lang}/tours`}
                         class="flex items-center justify-between text-sm text-gray-500 hover:text-gold transition-colors font-medium group"
                       >
                         <span data-i18n="mega.peru.cta">Ver todos los paquetes a Perú</span>
@@ -351,7 +375,7 @@ const menu: MenuItem[] = [
                     <h3 class="text-white text-xl font-extrabold leading-tight">{m.details.title}</h3>
                     <p class="text-white/55 text-xs mt-0.5">{m.details.desc}</p>
                   </div>
-                  <a href="/actividades"
+                  <a href={`/${lang}/actividades`}
                      class="bg-gold/15 border border-gold/40 text-gold text-xs font-bold px-4 py-2 rounded-full hover:bg-gold hover:text-navy transition-all whitespace-nowrap">
                     VER TODAS →
                   </a>
@@ -360,7 +384,7 @@ const menu: MenuItem[] = [
                 <!-- 3 image cards -->
                 <div class="grid grid-cols-3 gap-0">
                   {m.details.categories.map((cat, i) => (
-                    <a href={cat.href || '/actividades'}
+                    <a href={cat.href || `/${lang}/actividades`}
                        class={`relative h-[250px] overflow-hidden group/card cursor-pointer ${i < 2 ? 'border-r border-white/20' : ''}`}>
                       {cat.img && (
                         <img src={cat.img}
@@ -392,7 +416,7 @@ const menu: MenuItem[] = [
                     <i class="bi bi-geo-alt text-gold text-sm"></i>
                     Todas las actividades disponibles en Lima, Perú
                   </span>
-                  <a href="/actividades"
+                  <a href={`/${lang}/actividades`}
                      class="text-gold text-xs font-bold flex items-center gap-1 hover:gap-2.5 transition-all">
                     VER TODAS <i class="bi bi-arrow-right"></i>
                   </a>
@@ -416,7 +440,7 @@ const menu: MenuItem[] = [
                       Explora Cusco
                     </h3>
                   </div>
-                  <a href="/tours/cusco"
+                  <a href={`/${lang}/tours/cusco`}
                     class="text-gray-400 hover:text-gold text-xs font-semibold flex items-center gap-1.5 transition-colors">
                     <span data-i18n="mega.cusco.see_all">Ver todos</span>
                     <i class="bi bi-arrow-right"></i>
@@ -519,7 +543,7 @@ const menu: MenuItem[] = [
                     </div>
 
                     <div class="mt-4 pt-4 border-t border-gray-100">
-                      <a href="/tours/machu-picchu"
+                      <a href={`/${lang}/tours/machu-picchu`}
                         class="flex items-center justify-between text-sm text-gray-500 hover:text-gold transition-colors font-medium">
                         <span data-i18n="mega.machu.see_all">Ver todos los tours a Machu Picchu</span>
                         <i class="bi bi-arrow-right"></i>
@@ -598,13 +622,13 @@ const menu: MenuItem[] = [
         </span>
         <span class="hidden lg:inline text-sm">+51 943 491 959</span>
       </a>
-      <a href="/contacto"
+      <a href={`/${lang}/contacto`}
          class="hidden lg:inline-flex items-center gap-2 bg-gold hover:bg-yellow-400 text-navy font-bold text-xs px-5 py-2.5 rounded-full transition-all shadow-lg shadow-gold/20 hover:shadow-gold/40 hover:-translate-y-0.5 uppercase tracking-wider">
         <span data-i18n="cta.reserve">Reservar</span>
       </a>
 
       <!-- Selector de idioma -->
-      <LanguageSwitcher />
+      <LanguageSwitcher lang={lang} />
 
       <button id="mobile-menu-btn"
               class="header-burger lg:hidden text-2xl text-white transition-colors duration-300 focus:outline-none p-2"
@@ -660,7 +684,7 @@ const menu: MenuItem[] = [
               </div>
             ))}
             {m.type === 'mega-activities' && m.details.categories.map((cat: ActivityCategory) => (
-              <a href={cat.href || '/actividades'} class="flex items-center gap-3 text-white/60 hover:text-gold text-sm py-2 pl-2 transition-colors">
+              <a href={cat.href || `/${lang}/actividades`} class="flex items-center gap-3 text-white/60 hover:text-gold text-sm py-2 pl-2 transition-colors">
                 <i class={`bi ${cat.icon} text-xs text-gold`}></i>
                 <span class="flex-1">{cat.activities[0]?.name}</span>
                 <span class="text-xs text-white/30">{cat.activities[0]?.price}</span>

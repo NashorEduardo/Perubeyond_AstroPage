@@ -1,7 +1,7 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
 
 export function getStaticPaths() {
   const blogsData = {
@@ -1031,18 +1031,23 @@ export function getStaticPaths() {
     conclusion: 'La gastronomía cusqueña es un viaje dentro del viaje. Cada plato te cuenta una historia de pisos ecológicos, tradiciones milenarias y familias que preservan recetas con orgullo. Desde un cuy crujiente en San Jerónimo hasta un adobo humeante en una fría madrugada dominical, comer en Cusco es conectar con la esencia más profunda del Perú. En Peru Beyond, nuestros tours incluyen experiencias gastronómicas locales porque creemos que la mejor forma de conocer un lugar es a través de sus sabores.',
   },
   };
-  return Object.entries(blogsData).map(([slug, blog]) => ({
-    params: { slug },
-    props: { blog },
-  }));
+  const langs = ['es', 'en', 'pt'];
+  const entries = Object.entries(blogsData);
+  const paths = [];
+  for (const lang of langs) {
+    for (const [slug, blog] of entries) {
+      paths.push({ params: { lang, slug }, props: { blog } });
+    }
+  }
+  return paths;
 }
 
 const { blog } = Astro.props;
-const { slug } = Astro.params;
+const { slug, lang } = Astro.params as { slug: string; lang: 'es' | 'en' | 'pt' };
 ---
 
-<Layout title={`${blog.title} | Perú Beyond`} description={blog.sections[0].paragraphs[0]}>
-  <Header />
+<Layout title={`${blog.title} | Perú Beyond`} description={blog.sections[0].paragraphs[0]} lang={lang}>
+  <Header lang={lang} />
 
   <main>
     <!-- ── Hero ── -->
@@ -1050,9 +1055,9 @@ const { slug } = Astro.params;
       <div class="hero-overlay">
         <div class="hero-inner">
           <nav class="breadcrumb">
-            <a href="/">Inicio</a>
+            <a href={`/${lang}`}>Inicio</a>
             <span>›</span>
-            <a href="/blog">Blog</a>
+            <a href={`/${lang}/blog`}>Blog</a>
             <span>›</span>
             <span class="current">{blog.title}</span>
           </nav>
@@ -1148,7 +1153,7 @@ const { slug } = Astro.params;
 
         <!-- Back link -->
         <div class="back-row">
-          <a href="/blog" class="back-link">
+          <a href={`/${lang}/blog`} class="back-link">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/></svg>
             Volver al Blog
           </a>
@@ -1168,14 +1173,14 @@ const { slug } = Astro.params;
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-4.988-1.365l-.357-.212-3.758.9.946-3.658-.232-.376A9.818 9.818 0 012.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
             Reservar por WhatsApp
           </a>
-          <a href="/blog" class="btn-secondary">Ver más artículos</a>
+          <a href={`/${lang}/blog`} class="btn-secondary">Ver más artículos</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <style>

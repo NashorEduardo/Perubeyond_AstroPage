@@ -1,9 +1,15 @@
 ---
+interface Props {
+  lang?: 'es' | 'en' | 'pt';
+}
+const { lang = 'es' } = Astro.props;
+
 const langs = [
   { code: 'es', flag: '🇵🇪', label: 'Español' },
   { code: 'en', flag: '🇺🇸', label: 'English' },
   { code: 'pt', flag: '🇧🇷', label: 'Português' },
 ];
+const current = langs.find((l) => l.code === lang) ?? langs[0];
 ---
 
 <div class="lang-switcher relative" id="lang-switcher">
@@ -13,8 +19,8 @@ const langs = [
     aria-haspopup="true"
     aria-expanded="false"
   >
-    <span id="lang-flag">🇵🇪</span>
-    <span id="lang-code" class="tracking-wider">ES</span>
+    <span id="lang-flag">{current.flag}</span>
+    <span id="lang-code" class="tracking-wider">{current.code.toUpperCase()}</span>
     <i class="bi bi-chevron-down text-[8px] opacity-60 transition-transform duration-300" id="lang-chevron"></i>
   </button>
 
@@ -67,8 +73,8 @@ const langs = [
     btn.setAttribute('aria-expanded', 'false');
   }
 
-  // Init display
-  setDisplay(localStorage.getItem('pb_lang') || 'es');
+  // Init display: usa el lang que ya viene del servidor (URL), si está disponible
+  setDisplay(window.__pb_lang || localStorage.getItem('pb_lang') || 'es');
 
   btn?.addEventListener('click', function (e) {
     e.stopPropagation();
@@ -84,28 +90,11 @@ const langs = [
       localStorage.setItem('pb_lang', lang);
       setDisplay(lang);
       closeDropdown();
-      // Change URL
-      var currentPath = window.location.pathname;
-      var isTourPage = currentPath.startsWith('/tours/') && currentPath.split('/').length > 2;
-      if (isTourPage) {
-        // For tour pages, change the path
-        var newPath = currentPath;
-        if (lang === 'es') {
-          newPath = currentPath.replace(/^\/tours\/(en|pt)\//, '/tours/');
-        } else {
-          if (currentPath.startsWith('/tours/en/') || currentPath.startsWith('/tours/pt/')) {
-            newPath = currentPath.replace(/^\/tours\/(en|pt)\//, '/tours/' + lang + '/');
-          } else {
-            newPath = currentPath.replace('/tours/', '/tours/' + lang + '/');
-          }
-        }
-        window.location.href = newPath;
-      } else {
-        // For other pages, add ?lang=
-        var url = new URL(window.location);
-        url.searchParams.set('lang', lang);
-        window.location.href = url.toString();
-      }
+      // Todas las páginas viven bajo /es|en|pt/..., así que basta con
+      // reemplazar el primer segmento de la ruta actual.
+      var parts = window.location.pathname.split('/');
+      parts[1] = lang;
+      window.location.href = parts.join('/') || ('/' + lang);
     });
   });
 })();

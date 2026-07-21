@@ -1,7 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
 
 const teamMembers = [
   {
@@ -96,8 +105,8 @@ const tabs = [
 ];
 ---
 
-<Layout>
-  <Header />
+<Layout lang={lang}>
+  <Header lang={lang} />
 
   <!-- ══ PORTADA / COVER HERO ══ -->
   <section class="cover-hero">
@@ -119,7 +128,7 @@ const tabs = [
         <div class="divider-line divider-line--rev"></div>
       </div>
       <nav class="cover-breadcrumb">
-        <a href="/">Inicio</a>
+        <a href={`/${lang}`}>Inicio</a>
         <i class="bi bi-chevron-right"></i>
         <span>Nuestro Equipo</span>
       </nav>
@@ -214,7 +223,7 @@ const tabs = [
                     <i class="bi bi-whatsapp"></i>
                   </a>
                   <a
-                    href="/sobre-nosotros"
+                    href={`/${lang}/sobre-nosotros`}
                     class="action-btn action-btn--more"
                     title="Ver más"
                   >
@@ -231,7 +240,7 @@ const tabs = [
     </div>
   </div>
 
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <script is:inline>

@@ -1,4 +1,10 @@
 ---
+interface Props {
+  lang?: 'es' | 'en' | 'pt';
+}
+const { lang = 'es' } = Astro.props;
+const withLang = (path: string) => `/${lang}${path}`;
+
 const payments = [
   { name: 'Visa',         img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Visa_Inc._logo_%282005%E2%80%932014%29.svg/250px-Visa_Inc._logo_%282005%E2%80%932014%29.svg.png' },
   { name: 'PayPal',       img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/250px-PayPal.svg.png' },
@@ -11,23 +17,23 @@ const payments = [
 ];
 
 const companyLinks = [
-  { label: 'Operador de tours Perú', href: '/tours',           i18n: 'footer.link.operator' },
-  { label: 'Sobre Nosotros',         href: '/sobre-nosotros',  i18n: 'footer.link.about'    },
-  { label: '¿Por qué PerúBeyond?',  href: '/sobre-nosotros',  i18n: 'footer.link.why'      },
-  { label: 'Proyecto Social',        href: '/equipo',          i18n: 'footer.link.social'   },
-  { label: 'Blog de Viajes',         href: '/blog',            i18n: 'footer.link.blog'     },
-  { label: 'Contáctanos',            href: '/contacto',        i18n: 'footer.link.contact'  },
-  { label: 'Términos y Condiciones', href: '/terminos',             i18n: 'footer.link.terms'    },
-  { label: 'Nuestras Licencias',     href: '/sobre-nosotros',  i18n: 'footer.link.licenses' },
+  { label: 'Operador de tours Perú', href: withLang('/tours'),           i18n: 'footer.link.operator' },
+  { label: 'Sobre Nosotros',         href: withLang('/sobre-nosotros'),  i18n: 'footer.link.about'    },
+  { label: '¿Por qué PerúBeyond?',  href: withLang('/sobre-nosotros'),  i18n: 'footer.link.why'      },
+  { label: 'Proyecto Social',        href: withLang('/equipo'),          i18n: 'footer.link.social'   },
+  { label: 'Blog de Viajes',         href: withLang('/blog'),            i18n: 'footer.link.blog'     },
+  { label: 'Contáctanos',            href: withLang('/contacto'),        i18n: 'footer.link.contact'  },
+  { label: 'Términos y Condiciones', href: withLang('/terminos'),        i18n: 'footer.link.terms'    },
+  { label: 'Nuestras Licencias',     href: withLang('/sobre-nosotros'),  i18n: 'footer.link.licenses' },
 ];
 
 const quickLinks = [
-  { label: 'Tours en Cusco',         href: '/tours/cusco',        i18n: 'footer.link.cusco'    },
-  { label: 'Tours a Machu Picchu',   href: '/tours/machu-picchu', i18n: 'footer.link.machu'    },
-  { label: 'Camino Inca 2026',       href: '/tours/machu-picchu', i18n: 'footer.link.inca'     },
-  { label: 'Tours de Trekking',      href: '/tours',              i18n: 'footer.link.trekking' },
-  { label: 'Experiencia Cusco',      href: '/tours/cusco',        i18n: 'footer.link.exp'      },
-  { label: 'Política de Privacidad', href: '/terminos#privacidad', i18n: 'footer.link.privacy'  },
+  { label: 'Tours en Cusco',         href: withLang('/tours/cusco'),        i18n: 'footer.link.cusco'    },
+  { label: 'Tours a Machu Picchu',   href: withLang('/tours/machu-picchu'), i18n: 'footer.link.machu'    },
+  { label: 'Camino Inca 2026',       href: withLang('/tours/machu-picchu'), i18n: 'footer.link.inca'     },
+  { label: 'Tours de Trekking',      href: withLang('/tours'),              i18n: 'footer.link.trekking' },
+  { label: 'Experiencia Cusco',      href: withLang('/tours/cusco'),        i18n: 'footer.link.exp'      },
+  { label: 'Política de Privacidad', href: withLang('/terminos#privacidad'), i18n: 'footer.link.privacy'  },
 ];
 
 const socials = [

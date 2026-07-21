@@ -1,33 +1,25 @@
 ---
 import { getCollection, render } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import Testimonials from '../../components/Testimonials.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import Testimonials from '../../../components/Testimonials.astro';
 
 export async function getStaticPaths() {
   const allEntries = await getCollection('tours');
   const paths = [];
   for (const entry of allEntries) {
     const parts = entry.id.split('/');
-    const lang = parts[0];
+    const entryLang = parts[0];
     const slug = parts.slice(1).join('/');
     if (!slug.startsWith('actividades/')) continue;
     const actSlug = slug.replace('actividades/', '');
-    if (lang === 'es') {
-      paths.push({ params: { slug: actSlug }, props: { entry } });
-    }
-    paths.push({ params: { slug: `${lang}/${actSlug}` }, props: { entry } });
+    paths.push({ params: { lang: entryLang, slug: actSlug }, props: { entry } });
   }
   return paths;
 }
 
-const slugParam = Astro.params.slug ?? '';
-let lang = 'es';
-if (slugParam.startsWith('en/') || slugParam.startsWith('pt/')) {
-  lang = slugParam.split('/')[0];
-}
-
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
 const { entry } = Astro.props;
 const {
   title, image, price, duration, description,
@@ -48,8 +40,9 @@ const itineraryImages = [
   title={`${title} – Peru Beyond`}
   description={description ?? 'Vive la experiencia artística y cultural en Cusco con Peru Beyond.'}
   ogImage={image}
+  lang={lang}
 >
-  <Header />
+  <Header lang={lang} />
 
   <!-- ═══════════════════════════════════
         HERO: IMAGEN OSCURA + LAYOUT 2 COLUMNAS
@@ -73,9 +66,9 @@ const itineraryImages = [
         <div class="lg:col-span-5 flex flex-col justify-center">
 
           <nav class="flex items-center gap-2 text-white/45 text-xs uppercase tracking-widest mb-6 font-medium">
-            <a href="/" class="hover:text-emerald-300 transition-colors">Inicio</a>
+            <a href={`/${lang}`} class="hover:text-emerald-300 transition-colors">Inicio</a>
             <span>•</span>
-            <a href="/actividades" class="hover:text-emerald-300 transition-colors">Experiencias</a>
+            <a href={`/${lang}/actividades`} class="hover:text-emerald-300 transition-colors">Experiencias</a>
             <span>•</span>
             <span class="text-white/65 truncate">{title}</span>
           </nav>
@@ -590,7 +583,7 @@ const itineraryImages = [
   </section>
 
   <Testimonials />
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />

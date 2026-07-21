@@ -1,46 +1,40 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
 
-const dishes = [
-  {
-    icon: 'bi-layers',
-    iconBg: 'bg-amber-100',
-    iconColor: 'text-amber-600',
-    name: 'Causita Limeña',
-    desc: 'Capas de puré de papa amarilla aliñado con sal, pimienta y limón, rellenas de pollo, vegetales o quinua. Un clásico de la gastronomía peruana.',
-  },
-  {
-    icon: 'bi-fire',
-    iconBg: 'bg-red-100',
-    iconColor: 'text-red-500',
-    name: 'Lomo Saltado',
-    desc: 'Carne de lomo fino salteada en wok con cebolla, tomates y ají amarillo, servida sobre papas fritas y acompañada de arroz.',
-  },
-  {
-    icon: 'bi-egg-fried',
-    iconBg: 'bg-yellow-100',
-    iconColor: 'text-yellow-600',
-    name: 'Crepe de Quinua y Kiwicha',
-    desc: 'Delicioso crepe en base de quinua y kiwicha acompañado de crema de durazno o mango.',
-  },
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
+
+const highlights = [
+  'Historia del Pisco Sour: origen en Lima, años 1920',
+  'Ingredientes clave: pisco, limón, clara de huevo y almíbar',
+  'Demostración profesional por bartender experto',
+  'Prepara tu propio cóctel: sencillo, doble o "Catedral"',
+  'Degustación de variedades de piscos peruanos',
+  'Sesión de preguntas y respuestas al final',
 ];
 
 const otherActivities = [
   {
-    name: 'Making Sour + Pisco Tasting',
-    desc: 'Coctelería artesanal · 2–3 horas · Cusco',
-    img: '/images/Actividades/Pisco.webp',
-    href: '/actividades/pisco',
-    icon: 'bi-cup-straw',
-    color: 'bg-gold',
+    name: 'Clásicos de la Gastronomía Peruana',
+    desc: 'Taller gastronómico · 2 horas · Cusco',
+    img: '/images/Actividades/Platillo_01.webp',
+    href: `/${lang}/actividades/gastronomia`,
+    icon: 'bi-stars',
+    color: 'bg-amber-500',
   },
   {
     name: 'Pintado de Toritos de Pucará',
     desc: 'Arte & Cultura andina · 1.5–2 horas · Cusco',
     img: '/images/Actividades/Toritos_01.webp',
-    href: '/actividades/toritos',
+    href: `/${lang}/actividades/toritos`,
     icon: 'bi-palette',
     color: 'bg-red-500',
   },
@@ -48,38 +42,39 @@ const otherActivities = [
 ---
 
 <Layout
-  title="Clásicos de la Gastronomía Peruana | PeruBeyond"
-  description="Vive un taller gastronómico auténtico en Cusco: aprende a preparar Causita Limeña, Lomo Saltado y Crepe de Quinua de la mano de un chef experto. Reserva con PeruBeyond."
+  title="Making Sour + Pisco Tasting | PeruBeyond"
+  description="Aprende a preparar el auténtico Pisco Sour y degusta variedades de pisco peruano de la mano de un bartender experto en Cusco. Reserva con PeruBeyond."
+  lang={lang}
 >
-  <Header />
+  <Header lang={lang} />
 
   <main class="min-h-screen">
 
     <!-- Hero -->
     <section class="act-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20">
-      <img src="/images/Actividades/Platillo_01.webp" alt="Gastronomía peruana" class="hero-bg-img" />
+      <img src="/images/Actividades/Pisco.webp" alt="Pisco Sour peruano" class="hero-bg-img" />
       <div class="hero-overlay"></div>
       <div class="relative z-10 max-w-3xl">
         <span class="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-gold mb-4 bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full">
-          Taller Gastronómico
+          Coctelería Artesanal
         </span>
         <h1 class="act-hero-title">
-          Clásicos de la <span class="text-gold">Gastronomía Peruana</span>
+          Making Sour + <span class="text-gold">Pisco Tasting</span>
         </h1>
         <p class="act-hero-sub">
-          Aprende a preparar los platos más emblemáticos del Perú de la mano de un chef experto. Una experiencia culinaria que despertará todos tus sentidos.
+          Descubre la historia y los secretos del cóctel más emblemático del Perú. Prepara tu propio Pisco Sour y degusta variedades de piscos artesanales.
         </p>
 
         <!-- Stats -->
         <div class="flex items-center justify-center gap-8 mt-8">
           <div class="text-center">
-            <span class="text-gold text-3xl font-black block leading-none">2</span>
+            <span class="text-gold text-3xl font-black block leading-none">2-3</span>
             <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Horas</span>
           </div>
           <div class="w-px h-10 bg-white/20"></div>
           <div class="text-center">
-            <span class="text-gold text-3xl font-black block leading-none">3</span>
-            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Platos</span>
+            <span class="text-gold text-3xl font-black block leading-none">1920</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Origen</span>
           </div>
           <div class="w-px h-10 bg-white/20"></div>
           <div class="text-center">
@@ -90,16 +85,16 @@ const otherActivities = [
 
         <!-- Breadcrumb -->
         <nav class="flex items-center justify-center gap-2 text-xs text-white/40 mt-8">
-          <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+          <a href={`/${lang}`} class="hover:text-white transition-colors flex items-center gap-1">
             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10.707 2.293a1 1 0 0 0-1.414 0l-7 7A1 1 0 0 0 3 11h1v6a1 1 0 0 0 1 1h4v-4h2v4h4a1 1 0 0 0 1-1v-6h1a1 1 0 0 0 .707-1.707l-7-7z"/>
             </svg>
             Inicio
           </a>
           <span class="text-white/20">›</span>
-          <a href="/actividades" class="hover:text-white transition-colors">Actividades</a>
+          <a href={`/${lang}/actividades`} class="hover:text-white transition-colors">Actividades</a>
           <span class="text-white/20">›</span>
-          <span class="text-white/70">Gastronomía</span>
+          <span class="text-white/70">Making Sour</span>
         </nav>
       </div>
     </section>
@@ -111,76 +106,65 @@ const otherActivities = [
         <!-- Layout principal -->
         <section>
           <div class="flex items-center gap-4 mb-10">
-            <div class="w-12 h-12 rounded-2xl bg-amber-500 flex items-center justify-center shadow-lg flex-shrink-0">
-              <i class="bi bi-stars text-white text-xl"></i>
+            <div class="w-12 h-12 rounded-2xl bg-gold flex items-center justify-center shadow-lg flex-shrink-0">
+              <i class="bi bi-cup-straw text-navy text-xl"></i>
             </div>
             <div>
-              <h2 class="act-section-title">Clásicos de la Gastronomía Peruana</h2>
-              <p class="act-section-sub">Taller gastronómico · 2 horas · Cusco</p>
+              <h2 class="act-section-title">Making Sour + Pisco Tasting</h2>
+              <p class="act-section-sub">Coctelería artesanal · 2–3 horas · Cusco</p>
             </div>
           </div>
 
-          <div class="grid lg:grid-cols-2 gap-12 items-start mb-14">
-
-            <!-- Imágenes -->
-            <div class="grid grid-cols-2 gap-3">
-              <img
-                src="/images/Actividades/Platillo_01.webp"
-                alt="Platillos de la gastronomía peruana"
-                class="act-img col-span-2 h-72 object-cover rounded-2xl"
-                loading="lazy"
-              />
-              <img
-                src="/images/Actividades/Platillo_02.webp"
-                alt="Preparación de causa limeña"
-                class="act-img h-48 object-cover rounded-2xl"
-                loading="lazy"
-              />
-              <div class="bg-amber-50 border border-amber-100 rounded-2xl h-48 flex flex-col items-center justify-center p-6">
-                <i class="bi bi-clock text-amber-500 text-3xl mb-2"></i>
-                <span class="text-navy font-bold text-xl">2 horas</span>
-                <span class="text-gray-400 text-sm text-center mt-1">de experiencia gastronómica</span>
-              </div>
-            </div>
+          <div class="grid lg:grid-cols-2 gap-12 items-start">
 
             <!-- Texto -->
-            <div>
+            <div class="order-2 lg:order-1">
               <p class="act-desc mb-4">
-                Nuestro evento comienza con una bienvenida seguida de una introducción al pisco, explorando su historia y variedades. Los participantes aprenderán a preparar un auténtico pisco sour bajo la guía de nuestro experto bartender, con la oportunidad de degustar su propia creación.
+                En la clase "Making Sour", los participantes comenzarán con una cálida bienvenida en nuestra ubicación designada. Nuestro experto bartender introducirá la historia del Pisco Sour, destacando su origen en Cusco los años 1920 y cómo se ha convertido en uno de los cócteles más emblemáticos de Perú.
               </p>
-              <p class="act-desc mb-4">
-                Continuaremos con un taller práctico de causa limeña, donde cada uno personalizará y preparará su versión de este plato tradicional. La experiencia culminará con una sesión interactiva de cocina para preparar lomo saltado, aprendiendo técnicas de salteado antes de disfrutar del plato que han cocinado.
+              <p class="act-desc mb-6">
+                Se explicará a los asistentes los componentes clave del Pisco Sour: pisco, jugo de limón, clara de huevo y almíbar de azúcar. Los participantes tendrán la oportunidad de preparar su propio cóctel eligiendo entre sencillo, doble o "Catedral", y posteriormente compartirán impresiones con el grupo. La actividad cierra con degustación de variedades de piscos peruanos.
               </p>
-              <p class="act-desc mb-8">
-                El evento concluye con una sesión de preguntas y respuestas, proporcionando una oportunidad para discutir lo aprendido y compartir impresiones sobre la experiencia gastronómica.
-              </p>
+
+              <!-- Highlights -->
+              <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Incluye</p>
+              <ul class="space-y-3 mb-8">
+                {highlights.map(item => (
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center mt-0.5">
+                      <i class="bi bi-check text-gold text-xs font-bold"></i>
+                    </span>
+                    <span class="text-sm text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
 
               <!-- Info rápida -->
               <div class="grid grid-cols-2 gap-3 mb-8">
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-clock text-amber-500 text-lg mb-1 block"></i>
+                  <i class="bi bi-clock text-yellow-500 text-lg mb-1 block"></i>
                   <span class="text-navy font-bold text-sm block">Duración</span>
-                  <span class="text-gray-500 text-xs">2 horas</span>
+                  <span class="text-gray-500 text-xs">2 a 3 horas</span>
                 </div>
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-geo-alt text-amber-500 text-lg mb-1 block"></i>
+                  <i class="bi bi-geo-alt text-yellow-500 text-lg mb-1 block"></i>
                   <span class="text-navy font-bold text-sm block">Ubicación</span>
                   <span class="text-gray-500 text-xs">Cusco, Perú</span>
                 </div>
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-people text-amber-500 text-lg mb-1 block"></i>
+                  <i class="bi bi-people text-yellow-500 text-lg mb-1 block"></i>
                   <span class="text-navy font-bold text-sm block">Grupos</span>
                   <span class="text-gray-500 text-xs">Pequeños y privados</span>
                 </div>
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-translate text-amber-500 text-lg mb-1 block"></i>
+                  <i class="bi bi-translate text-yellow-500 text-lg mb-1 block"></i>
                   <span class="text-navy font-bold text-sm block">Idioma</span>
                   <span class="text-gray-500 text-xs">Español / Inglés</span>
                 </div>
               </div>
 
               <a
-                href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: Clásicos de la Gastronomía Peruana')}`}
+                href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: Making Sour + Pisco Tasting')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="act-main-cta"
@@ -189,28 +173,44 @@ const otherActivities = [
                 Reservar experiencia
               </a>
             </div>
-          </div>
 
-          <!-- Tarjetas de platos -->
-          <div>
-            <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-5">Qué se prepara</p>
-            <div class="grid sm:grid-cols-3 gap-5">
-              {dishes.map(dish => (
-                <div class="dish-card">
-                  <div class={`dish-icon ${dish.iconBg} ${dish.iconColor}`}>
-                    <i class={`bi ${dish.icon} text-xl`}></i>
-                  </div>
-                  <h4 class="dish-name">{dish.name}</h4>
-                  <p class="dish-desc">{dish.desc}</p>
-                </div>
-              ))}
+            <!-- Imagen -->
+            <div class="order-1 lg:order-2">
+              <img
+                src="/images/Actividades/Pisco.webp"
+                alt="Pisco Sour peruano"
+                class="act-img w-full h-[480px] object-cover rounded-2xl"
+                loading="lazy"
+              />
             </div>
+          </div>
+        </section>
+
+        <!-- Cómo prepararlo -->
+        <section>
+          <div class="act-divider mb-14"></div>
+          <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Ingredientes del Pisco Sour</p>
+          <div class="grid sm:grid-cols-4 gap-4">
+            {[
+              { icon: 'bi-droplet', color: 'bg-yellow-50 text-yellow-600', name: 'Pisco', desc: 'Uva quebranta o italia' },
+              { icon: 'bi-circle', color: 'bg-green-50 text-green-600', name: 'Limón', desc: 'Jugo fresco natural' },
+              { icon: 'bi-egg', color: 'bg-white text-gray-500', name: 'Clara de huevo', desc: 'Para la espuma' },
+              { icon: 'bi-cup-hot', color: 'bg-amber-50 text-amber-600', name: 'Almíbar', desc: 'Azúcar derretida' },
+            ].map(item => (
+              <div class="dish-card text-center items-center">
+                <div class={`dish-icon ${item.color} mx-auto`}>
+                  <i class={`bi ${item.icon} text-xl`}></i>
+                </div>
+                <h4 class="dish-name">{item.name}</h4>
+                <p class="dish-desc">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
         <!-- Otras actividades -->
         <section>
-          <div class="act-divider mb-16"></div>
+          <div class="act-divider mb-14"></div>
           <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Otras experiencias</p>
           <div class="grid sm:grid-cols-2 gap-5">
             {otherActivities.map(act => (
@@ -231,7 +231,7 @@ const otherActivities = [
 
         <!-- CTA Banner -->
         <section class="act-cta-banner relative overflow-hidden rounded-3xl">
-          <img src="/images/Actividades/Platillo_02.webp" alt="Platillo de gastronomía cusqueña tradicional" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+          <img src="/images/Actividades/Pisco.webp" alt="Degustación de pisco sour — experiencia peruana" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
           <div class="absolute inset-0 bg-navy/80"></div>
           <div class="relative z-10 text-center py-16 px-6">
             <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">¿Listo para vivir el Perú?</span>
@@ -241,7 +241,7 @@ const otherActivities = [
             </p>
             <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
               <a
-                href="https://wa.me/51943491959?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20actividades%20culturales%20y%20gastron%C3%B3micas"
+                href="https://wa.me/51943491959?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20clase%20de%20Pisco%20Sour"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
@@ -250,7 +250,7 @@ const otherActivities = [
                 WhatsApp directo
               </a>
               <a
-                href="/contacto"
+                href={`/${lang}/contacto`}
                 class="inline-flex items-center gap-2 bg-gold hover:bg-yellow-400 text-navy font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
               >
                 Consultar ahora
@@ -264,16 +264,14 @@ const otherActivities = [
     </div>
   </main>
 
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <style>
   :root { --navy: #0d1b2e; --gold: #f6d06a; }
 
   .act-hero {
-    height: 70vh;
-    min-height: 560px;
-    overflow: hidden;
+    height: 70vh; min-height: 560px; overflow: hidden;
   }
   .hero-bg-img {
     position: absolute; inset: 0;
