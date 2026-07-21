@@ -1,15 +1,39 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
 
-const highlights = [
-  'Historia del Pisco Sour: origen en Lima, años 1920',
-  'Ingredientes clave: pisco, limón, clara de huevo y almíbar',
-  'Demostración profesional por bartender experto',
-  'Prepara tu propio cóctel: sencillo, doble o "Catedral"',
-  'Degustación de variedades de piscos peruanos',
-  'Sesión de preguntas y respuestas al final',
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
+
+const experience = [
+  'Conocer la historia y el significado del Torito de Pucará',
+  'Aprender técnicas básicas de pintura artesanal',
+  'Decorar tu propio torito con colores y diseños personalizados',
+  'Llevarte una pieza creada por ti como recuerdo especial',
+];
+
+const symbols = [
+  { label: 'Protección', desc: 'del hogar',            icon: 'bi-shield-check' },
+  { label: 'Prosperidad', desc: 'y abundancia',         icon: 'bi-stars'        },
+  { label: 'Fertilidad',  desc: 'y crecimiento',        icon: 'bi-flower1'      },
+  { label: 'Conexión',    desc: 'con la cultura andina', icon: 'bi-heart'       },
+];
+
+const gallery = [
+  '/images/Actividades/Toritos_01.webp',
+  '/images/Actividades/Toritos_02.webp',
+  '/images/Actividades/Toritos_03.webp',
+  '/images/Actividades/Toritos_04.webp',
+  '/images/Actividades/Toritos_05.webp',
+  '/images/Actividades/Toritos_06.webp',
+  '/images/Actividades/Toritos_07.webp',
 ];
 
 const otherActivities = [
@@ -22,49 +46,50 @@ const otherActivities = [
     color: 'bg-amber-500',
   },
   {
-    name: 'Pintado de Toritos de Pucará',
-    desc: 'Arte & Cultura andina · 1.5–2 horas · Lima',
-    img: '/images/Actividades/Toritos_01.webp',
-    href: '/actividades/toritos',
-    icon: 'bi-palette',
-    color: 'bg-red-500',
+    name: 'Making Sour + Pisco Tasting',
+    desc: 'Coctelería artesanal · 2–3 horas · Lima',
+    img: '/images/Actividades/Pisco.webp',
+    href: '/actividades/pisco',
+    icon: 'bi-cup-straw',
+    color: 'bg-yellow-400',
   },
 ];
 ---
 
 <Layout
-  title="Making Sour + Pisco Tasting | PeruBeyond"
-  description="Aprende a preparar el auténtico Pisco Sour y degusta variedades de pisco peruano de la mano de un bartender experto en Lima. Reserva con PeruBeyond."
+  title="Pintado de Toritos de Pucará | PeruBeyond"
+  description="Descubre el arte andino peruano pintando tu propio Torito de Pucará. Un taller cultural único en Lima donde te llevas tu creación como recuerdo. Reserva con PeruBeyond."
+  lang={lang}
 >
-  <Header />
+  <Header lang={lang} />
 
   <main class="min-h-screen">
 
     <!-- Hero -->
     <section class="act-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20">
-      <img src="/images/Actividades/Pisco.webp" alt="Pisco Sour peruano" class="hero-bg-img" />
+      <img src="/images/Actividades/Toritos_01.webp" alt="Torito de Pucará" class="hero-bg-img" />
       <div class="hero-overlay"></div>
       <div class="relative z-10 max-w-3xl">
         <span class="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-gold mb-4 bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full">
-          Coctelería Artesanal
+          Arte & Cultura Andina
         </span>
         <h1 class="act-hero-title">
-          Making Sour + <span class="text-gold">Pisco Tasting</span>
+          Pintado de <span class="text-gold">Toritos de Pucará</span>
         </h1>
         <p class="act-hero-sub">
-          Descubre la historia y los secretos del cóctel más emblemático del Perú. Prepara tu propio Pisco Sour y degusta variedades de piscos artesanales.
+          Sumérgete en el arte andino peruano y pinta tu propio Torito de Pucará. Una experiencia creativa que conecta con las tradiciones del altiplano peruano.
         </p>
 
         <!-- Stats -->
         <div class="flex items-center justify-center gap-8 mt-8">
           <div class="text-center">
-            <span class="text-gold text-3xl font-black block leading-none">2-3</span>
+            <span class="text-gold text-3xl font-black block leading-none">1.5</span>
             <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Horas</span>
           </div>
           <div class="w-px h-10 bg-white/20"></div>
           <div class="text-center">
-            <span class="text-gold text-3xl font-black block leading-none">1920</span>
-            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Origen</span>
+            <span class="text-gold text-3xl font-black block leading-none">Arte</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Andino</span>
           </div>
           <div class="w-px h-10 bg-white/20"></div>
           <div class="text-center">
@@ -75,16 +100,16 @@ const otherActivities = [
 
         <!-- Breadcrumb -->
         <nav class="flex items-center justify-center gap-2 text-xs text-white/40 mt-8">
-          <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+          <a href={`/${lang}`} class="hover:text-white transition-colors flex items-center gap-1">
             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10.707 2.293a1 1 0 0 0-1.414 0l-7 7A1 1 0 0 0 3 11h1v6a1 1 0 0 0 1 1h4v-4h2v4h4a1 1 0 0 0 1-1v-6h1a1 1 0 0 0 .707-1.707l-7-7z"/>
             </svg>
             Inicio
           </a>
           <span class="text-white/20">›</span>
-          <a href="/actividades" class="hover:text-white transition-colors">Actividades</a>
+          <a href={`/${lang}/actividades`} class="hover:text-white transition-colors">Actividades</a>
           <span class="text-white/20">›</span>
-          <span class="text-white/70">Making Sour</span>
+          <span class="text-white/70">Toritos de Pucará</span>
         </nav>
       </div>
     </section>
@@ -93,68 +118,87 @@ const otherActivities = [
     <div class="act-content-bg">
       <div class="max-w-6xl mx-auto px-4 md:px-8 py-16 space-y-20">
 
-        <!-- Layout principal -->
+        <!-- Introducción -->
         <section>
           <div class="flex items-center gap-4 mb-10">
-            <div class="w-12 h-12 rounded-2xl bg-gold flex items-center justify-center shadow-lg flex-shrink-0">
-              <i class="bi bi-cup-straw text-navy text-xl"></i>
+            <div class="w-12 h-12 rounded-2xl bg-red-500 flex items-center justify-center shadow-lg flex-shrink-0">
+              <i class="bi bi-palette text-white text-xl"></i>
             </div>
             <div>
-              <h2 class="act-section-title">Making Sour + Pisco Tasting</h2>
-              <p class="act-section-sub">Coctelería artesanal · 2–3 horas · Lima</p>
+              <h2 class="act-section-title">Pintado de Toritos de Pucará</h2>
+              <p class="act-section-sub">Arte & Cultura andina · 1.5–2 horas · Lima</p>
             </div>
           </div>
 
+          <p class="act-desc max-w-3xl mb-10">
+            El Torito de Pucará es una de las expresiones más representativas del arte andino peruano. Elaborado en cerámica y decorado a mano, simboliza protección, prosperidad, fertilidad y buena fortuna para los hogares. Esta emblemática artesanía tiene sus raíces en las tradiciones del altiplano peruano y, con el paso del tiempo, se convirtió en un símbolo cultural reconocido en todo el país.
+          </p>
+
+          <!-- Galería + Contenido -->
           <div class="grid lg:grid-cols-2 gap-12 items-start">
 
-            <!-- Texto -->
-            <div class="order-2 lg:order-1">
-              <p class="act-desc mb-4">
-                En la clase "Making Sour", los participantes comenzarán con una cálida bienvenida en nuestra ubicación designada. Nuestro experto bartender introducirá la historia del Pisco Sour, destacando su origen en Lima los años 1920 y cómo se ha convertido en uno de los cócteles más emblemáticos de Perú.
-              </p>
-              <p class="act-desc mb-6">
-                Se explicará a los asistentes los componentes clave del Pisco Sour: pisco, jugo de limón, clara de huevo y almíbar de azúcar. Los participantes tendrán la oportunidad de preparar su propio cóctel eligiendo entre sencillo, doble o "Catedral", y posteriormente compartirán impresiones con el grupo. La actividad cierra con degustación de variedades de piscos peruanos.
-              </p>
+            <!-- Galería -->
+            <div class="grid grid-cols-2 gap-2">
+              <img src={gallery[0]} alt="Torito de Pucará" class="act-img col-span-2 h-64 object-cover rounded-xl" loading="lazy" />
+              {gallery.slice(1).map(img => (
+                <img src={img} alt="Torito de Pucará" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              ))}
+            </div>
 
-              <!-- Highlights -->
-              <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Incluye</p>
+            <!-- Contenido -->
+            <div>
+
+              <!-- Tu experiencia -->
+              <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Tu experiencia</p>
               <ul class="space-y-3 mb-8">
-                {highlights.map(item => (
+                {experience.map(item => (
                   <li class="flex items-start gap-3">
-                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center mt-0.5">
-                      <i class="bi bi-check text-gold text-xs font-bold"></i>
+                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                      <i class="bi bi-check text-red-500 text-xs font-bold"></i>
                     </span>
                     <span class="text-sm text-gray-600">{item}</span>
                   </li>
                 ))}
               </ul>
 
+              <!-- ¿Qué representa? -->
+              <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">¿Qué representa?</p>
+              <div class="grid grid-cols-2 gap-3 mb-8">
+                {symbols.map(sym => (
+                  <div class="symbol-card">
+                    <i class={`bi ${sym.icon} text-red-500 text-2xl mb-1`}></i>
+                    <span class="font-bold text-navy text-sm">{sym.label}</span>
+                    <span class="text-gray-400 text-xs">{sym.desc}</span>
+                  </div>
+                ))}
+              </div>
+
               <!-- Info rápida -->
               <div class="grid grid-cols-2 gap-3 mb-8">
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-clock text-yellow-500 text-lg mb-1 block"></i>
+                  <i class="bi bi-clock text-red-400 text-lg mb-1 block"></i>
                   <span class="text-navy font-bold text-sm block">Duración</span>
-                  <span class="text-gray-500 text-xs">2 a 3 horas</span>
+                  <span class="text-gray-500 text-xs">1.5 a 2 horas</span>
                 </div>
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-geo-alt text-yellow-500 text-lg mb-1 block"></i>
+                  <i class="bi bi-geo-alt text-red-400 text-lg mb-1 block"></i>
                   <span class="text-navy font-bold text-sm block">Ubicación</span>
                   <span class="text-gray-500 text-xs">Lima, Perú</span>
                 </div>
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-people text-yellow-500 text-lg mb-1 block"></i>
-                  <span class="text-navy font-bold text-sm block">Grupos</span>
-                  <span class="text-gray-500 text-xs">Pequeños y privados</span>
+                  <i class="bi bi-gift text-red-400 text-lg mb-1 block"></i>
+                  <span class="text-navy font-bold text-sm block">Recuerdo</span>
+                  <span class="text-gray-500 text-xs">Te lo llevas pintado</span>
                 </div>
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-translate text-yellow-500 text-lg mb-1 block"></i>
-                  <span class="text-navy font-bold text-sm block">Idioma</span>
-                  <span class="text-gray-500 text-xs">Español / Inglés</span>
+                  <i class="bi bi-people text-red-400 text-lg mb-1 block"></i>
+                  <span class="text-navy font-bold text-sm block">Grupos</span>
+                  <span class="text-gray-500 text-xs">Pequeños y privados</span>
                 </div>
               </div>
 
               <a
-                href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: Making Sour + Pisco Tasting')}`}
+                href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: Pintado de Toritos de Pucará')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="act-main-cta"
@@ -163,38 +207,6 @@ const otherActivities = [
                 Reservar experiencia
               </a>
             </div>
-
-            <!-- Imagen -->
-            <div class="order-1 lg:order-2">
-              <img
-                src="/images/Actividades/Pisco.webp"
-                alt="Pisco Sour peruano"
-                class="act-img w-full h-[480px] object-cover rounded-2xl"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </section>
-
-        <!-- Cómo prepararlo -->
-        <section>
-          <div class="act-divider mb-14"></div>
-          <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Ingredientes del Pisco Sour</p>
-          <div class="grid sm:grid-cols-4 gap-4">
-            {[
-              { icon: 'bi-droplet', color: 'bg-yellow-50 text-yellow-600', name: 'Pisco', desc: 'Uva quebranta o italia' },
-              { icon: 'bi-circle', color: 'bg-green-50 text-green-600', name: 'Limón', desc: 'Jugo fresco natural' },
-              { icon: 'bi-egg', color: 'bg-white text-gray-500', name: 'Clara de huevo', desc: 'Para la espuma' },
-              { icon: 'bi-cup-hot', color: 'bg-amber-50 text-amber-600', name: 'Almíbar', desc: 'Azúcar derretida' },
-            ].map(item => (
-              <div class="dish-card text-center items-center">
-                <div class={`dish-icon ${item.color} mx-auto`}>
-                  <i class={`bi ${item.icon} text-xl`}></i>
-                </div>
-                <h4 class="dish-name">{item.name}</h4>
-                <p class="dish-desc">{item.desc}</p>
-              </div>
-            ))}
           </div>
         </section>
 
@@ -221,17 +233,17 @@ const otherActivities = [
 
         <!-- CTA Banner -->
         <section class="act-cta-banner relative overflow-hidden rounded-3xl">
-          <img src="/images/Actividades/Pisco.webp" alt="Degustación de pisco sour — experiencia peruana" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+          <img src="/images/Actividades/Toritos_01.webp" alt="Toritos de Pucará — artesanía tradicional peruana" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
           <div class="absolute inset-0 bg-navy/80"></div>
           <div class="relative z-10 text-center py-16 px-6">
             <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">¿Listo para vivir el Perú?</span>
             <h2 class="cta-banner-title">Diseñamos tu experiencia a medida</h2>
             <p class="cta-banner-sub">
-              Nuestro equipo te asesora sin costo para combinar las actividades culturales y gastronómicas que más te apasionen.
+              Nuestro equipo te asesora sin costo para combinar las actividades culturales y artísticas que más te apasionen.
             </p>
             <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
               <a
-                href="https://wa.me/51943491959?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20clase%20de%20Pisco%20Sour"
+                href="https://wa.me/51943491959?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20taller%20de%20Toritos%20de%20Pucar%C3%A1"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
@@ -240,7 +252,7 @@ const otherActivities = [
                 WhatsApp directo
               </a>
               <a
-                href="/contacto"
+                href={`/${lang}/contacto`}
                 class="inline-flex items-center gap-2 bg-gold hover:bg-yellow-400 text-navy font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
               >
                 Consultar ahora
@@ -254,7 +266,7 @@ const otherActivities = [
     </div>
   </main>
 
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <style>
@@ -303,19 +315,11 @@ const otherActivities = [
     text-decoration: none;
   }
   .act-main-cta:hover { background: #c9a84c; color: #0d1b2e; transform: translateY(-2px); }
-  .dish-card {
-    background: #fff; border-radius: 1.25rem; padding: 1.5rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    display: flex; flex-direction: column; gap: 0.5rem;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  .symbol-card {
+    background: #fff; border-radius: 1rem; padding: 1.1rem;
+    display: flex; flex-direction: column; align-items: flex-start; gap: 0.15rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06); border: 1px solid #fde8e8;
   }
-  .dish-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.12); }
-  .dish-icon {
-    width: 3rem; height: 3rem; border-radius: 0.75rem;
-    display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;
-  }
-  .dish-name { font-family: Georgia, serif; font-size: 1rem; font-weight: 700; color: #0d1b2e; }
-  .dish-desc { font-size: 0.8rem; color: #6b7280; line-height: 1.65; }
   .act-divider { height: 1px; background: linear-gradient(to right, transparent, #e5e7eb, transparent); }
   .act-cta-banner { margin-top: 2rem; }
   .cta-banner-title {

@@ -1,0 +1,27 @@
+{
+  "redirects": [
+    { "source": "/", "destination": "/es", "permanent": true },
+
+    { "source": "/tours/en/:slug*", "destination": "/en/tours/:slug*", "permanent": true },
+    { "source": "/tours/pt/:slug*", "destination": "/pt/tours/:slug*", "permanent": true },
+    { "source": "/tours/cusco", "destination": "/es/tours/cusco", "permanent": true },
+    { "source": "/tours/machu-picchu", "destination": "/es/tours/machu-picchu", "permanent": true },
+    { "source": "/tours", "destination": "/es/tours", "permanent": true },
+    { "source": "/tours/:slug*", "destination": "/es/tours/:slug*", "permanent": true },
+
+    { "source": "/actividades/gastronomia", "destination": "/es/actividades/gastronomia", "permanent": true },
+    { "source": "/actividades/pisco", "destination": "/es/actividades/pisco", "permanent": true },
+    { "source": "/actividades/toritos", "destination": "/es/actividades/toritos", "permanent": true },
+    { "source": "/actividades", "destination": "/es/actividades", "permanent": true },
+
+    { "source": "/blog/:slug", "destination": "/es/blog/:slug", "permanent": true },
+    { "source": "/blog", "destination": "/es/blog", "permanent": true },
+
+    { "source": "/contacto", "destination": "/es/contacto", "permanent": true },
+    { "source": "/equipo", "destination": "/es/equipo", "permanent": true },
+    { "source": "/faq", "destination": "/es/faq", "permanent": true },
+    { "source": "/galeria", "destination": "/es/galeria", "permanent": true },
+    { "source": "/sobre-nosotros", "destination": "/es/sobre-nosotros", "permanent": true },
+    { "source": "/terminos", "destination": "/es/terminos", "permanent": true }
+  ]
+}

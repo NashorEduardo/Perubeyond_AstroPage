@@ -1,7 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
 
 const featuredPost = {
   date: '14 de Junio, 2026',
@@ -94,8 +103,8 @@ const gridPosts = [
 ];
 ---
 
-<Layout>
-  <Header />
+<Layout lang={lang}>
+  <Header lang={lang} />
 
   <main class="blog-bg min-h-screen">
 
@@ -116,7 +125,7 @@ const gridPosts = [
           Historias, consejos y destinos para inspirar tu próxima aventura peruana.
         </p>
         <nav class="flex items-center justify-center gap-2 text-xs text-white/50 mt-5">
-          <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+          <a href={`/${lang}`} class="hover:text-white transition-colors flex items-center gap-1">
             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10.707 2.293a1 1 0 0 0-1.414 0l-7 7A1 1 0 0 0 3 11h1v6a1 1 0 0 0 1 1h4v-4h2v4h4a1 1 0 0 0 1-1v-6h1a1 1 0 0 0 .707-1.707l-7-7z"/>
             </svg>
@@ -152,7 +161,7 @@ const gridPosts = [
             <div class="label-line"></div>
           </div>
 
-          <a href={featuredPost.slug} class="featured-main group block overflow-hidden">
+          <a href={`/${lang}${featuredPost.slug}`} class="featured-main group block overflow-hidden">
             <div class="featured-inner">
               <!-- Imagen -->
               <div class="featured-img-wrap">
@@ -190,7 +199,7 @@ const gridPosts = [
         <!-- ── Grid de artículos ── -->
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {gridPosts.map(post => (
-            <a href={post.slug} class="grid-card group block overflow-hidden relative" style="height: 380px;">
+            <a href={`/${lang}${post.slug}`} class="grid-card group block overflow-hidden relative" style="height: 380px;">
               <img
                 src={post.image}
                 alt={post.title}
@@ -214,7 +223,7 @@ const gridPosts = [
     </div>
   </main>
 
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <style>

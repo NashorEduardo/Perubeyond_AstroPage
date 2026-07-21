@@ -6,9 +6,7 @@ const currentLang = validLangs.includes(lang) ? lang : 'es';
 
 // helper
 const getTourLink = (slug: string, category: string): string => {
-  return currentLang === 'es'
-    ? `/tours/${category}/${slug}`
-    : `/tours/${currentLang}/${category}/${slug}`;
+  return `/${currentLang}/tours/${category}/${slug}`;
 };
 
 

@@ -25,8 +25,8 @@ const {
   category
 } = Astro.props;
 
-// detectar idioma actual
-const lang = Astro.url.pathname.split('/')[2];
+// detectar idioma actual (primer segmento de la ruta: /es|en|pt/...)
+const lang = Astro.url.pathname.split('/')[1];
 
 const validLangs = ['es', 'en', 'pt'];
 
@@ -36,9 +36,7 @@ const currentLang = validLangs.includes(lang)
 
 // usar href directo si se provee, sino generarlo desde slug+category
 const href = hrefProp
-  ?? (currentLang === 'es'
-    ? `/tours/${category}/${slug}`
-    : `/tours/${currentLang}/${category}/${slug}`);
+  ?? `/${currentLang}/tours/${category}/${slug}`;
 ---
 
 <a href={href} class="tour-card group">

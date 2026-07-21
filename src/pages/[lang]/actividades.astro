@@ -1,7 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
 
 const piscoHighlights = [
   'Historia del Pisco Sour: origen en Lima, años 1920',
@@ -30,8 +39,9 @@ const toritosSymbols = [
 <Layout
   title="Actividades Culturales y Gastronómicas | PeruBeyond"
   description="Vive la auténtica cultura peruana con talleres de gastronomía, clases de Pisco Sour y arte andino. Experiencias únicas con PeruBeyond en Lima."
+  lang={lang}
 >
-  <Header />
+  <Header lang={lang} />
 
   <main class="min-h-screen">
 
@@ -70,7 +80,7 @@ const toritosSymbols = [
 
         <!-- Breadcrumb -->
         <nav class="flex items-center justify-center gap-2 text-xs text-white/40 mt-8">
-          <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+          <a href={`/${lang}`} class="hover:text-white transition-colors flex items-center gap-1">
             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10.707 2.293a1 1 0 0 0-1.414 0l-7 7A1 1 0 0 0 3 11h1v6a1 1 0 0 0 1 1h4v-4h2v4h4a1 1 0 0 0 1-1v-6h1a1 1 0 0 0 .707-1.707l-7-7z"/>
             </svg>
@@ -148,7 +158,7 @@ const toritosSymbols = [
                   <i class="bi bi-whatsapp text-base"></i>
                   Reservar experiencia
                 </a>
-                <a href="/actividades/gastronomia" class="act-secondary-cta">
+                <a href={`/${lang}/actividades/gastronomia`} class="act-secondary-cta">
                   Ver página completa
                   <i class="bi bi-arrow-right text-sm"></i>
                 </a>
@@ -242,7 +252,7 @@ const toritosSymbols = [
                   <i class="bi bi-whatsapp text-base"></i>
                   Reservar experiencia
                 </a>
-                <a href="/actividades/pisco" class="act-secondary-cta">
+                <a href={`/${lang}/actividades/pisco`} class="act-secondary-cta">
                   Ver página completa
                   <i class="bi bi-arrow-right text-sm"></i>
                 </a>
@@ -337,7 +347,7 @@ const toritosSymbols = [
                   <i class="bi bi-whatsapp text-base"></i>
                   Reservar experiencia
                 </a>
-                <a href="/actividades/toritos" class="act-secondary-cta">
+                <a href={`/${lang}/actividades/toritos`} class="act-secondary-cta">
                   Ver página completa
                   <i class="bi bi-arrow-right text-sm"></i>
                 </a>
@@ -367,7 +377,7 @@ const toritosSymbols = [
                 WhatsApp directo
               </a>
               <a
-                href="/contacto"
+                href={`/${lang}/contacto`}
                 class="inline-flex items-center gap-2 bg-gold hover:bg-yellow-400 text-navy font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
               >
                 Consultar ahora
@@ -382,7 +392,7 @@ const toritosSymbols = [
 
   </main>
 
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <style>

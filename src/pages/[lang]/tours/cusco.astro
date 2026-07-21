@@ -1,11 +1,19 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import TourCard from '../../components/TourCard.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import TourCard from '../../../components/TourCard.astro';
 
-const lang = Astro.url.searchParams.get('lang') || 'es';
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
+
 const allTours = await getCollection('tours');
 const cuscoTours = allTours.filter(t => t.id.startsWith(`${lang}/cusco/`));
 
@@ -21,8 +29,8 @@ const naturaleza = cuscoTours.filter(t =>
 );
 ---
 
-<Layout title="Tours en Cusco – Peru Beyond" description="Descubre los mejores tours en Cusco: city tour, Montaña de 7 Colores, Valle Sagrado, Laguna Humantay, Machu Picchu y más. Guías expertos, salidas diarias.">
-  <Header />
+<Layout title="Tours en Cusco – Peru Beyond" description="Descubre los mejores tours en Cusco: city tour, Montaña de 7 Colores, Valle Sagrado, Laguna Humantay, Machu Picchu y más. Guías expertos, salidas diarias." lang={lang}>
+  <Header lang={lang} />
 
   <!-- ═══════════════════════════════════════════
        HERO
@@ -46,9 +54,9 @@ const naturaleza = cuscoTours.filter(t =>
 
       <!-- Breadcrumb -->
       <nav class="text-white/60 text-xs uppercase tracking-widest mb-5 flex items-center gap-2 hero-fade" style="animation-delay:0.1s">
-        <a href="/" class="hover:text-gold transition-colors">Inicio</a>
+        <a href={`/${lang}`} class="hover:text-gold transition-colors">Inicio</a>
         <span class="text-white/30">›</span>
-        <a href="/tours" class="hover:text-gold transition-colors">Tours</a>
+        <a href={`/${lang}/tours`} class="hover:text-gold transition-colors">Tours</a>
         <span class="text-white/30">›</span>
         <span class="text-white/80">Cusco</span>
       </nav>
@@ -99,7 +107,7 @@ const naturaleza = cuscoTours.filter(t =>
           Cultura & Valle Sagrado
         </button>
       </nav>
-      <a href="/tours" class="hidden md:flex items-center gap-1 text-xs text-gray-400 hover:text-navy transition-colors flex-shrink-0 ml-4">
+      <a href={`/${lang}/tours`} class="hidden md:flex items-center gap-1 text-xs text-gray-400 hover:text-navy transition-colors flex-shrink-0 ml-4">
         <i class="bi bi-arrow-left"></i> Todos los tours
       </a>
     </div>
@@ -121,7 +129,7 @@ const naturaleza = cuscoTours.filter(t =>
             price={tour.data.price}
             description={tour.data.description ?? ''}
             location="Cusco"
-            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+            href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
           />
         ))}
       </div>
@@ -137,7 +145,7 @@ const naturaleza = cuscoTours.filter(t =>
                 price={tour.data.price}
                 description={tour.data.description ?? ''}
                 location="Cusco"
-                href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+                href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
               />
             ))
           : cuscoTours.filter(t => t.id.toLowerCase().includes('trekking')).map(tour => (
@@ -148,7 +156,7 @@ const naturaleza = cuscoTours.filter(t =>
                 price={tour.data.price}
                 description={tour.data.description ?? ''}
                 location="Cusco"
-                href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+                href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
               />
             ))
         }
@@ -165,7 +173,7 @@ const naturaleza = cuscoTours.filter(t =>
                 price={tour.data.price}
                 description={tour.data.description ?? ''}
                 location="Cusco"
-                href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+                href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
               />
             ))
           : cuscoTours.filter(t => !t.id.toLowerCase().includes('trekking')).map(tour => (
@@ -176,7 +184,7 @@ const naturaleza = cuscoTours.filter(t =>
                 price={tour.data.price}
                 description={tour.data.description ?? ''}
                 location="Cusco"
-                href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+                href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
               />
             ))
         }
@@ -245,7 +253,7 @@ const naturaleza = cuscoTours.filter(t =>
           WhatsApp
         </a>
         <a
-          href="/contacto"
+          href={`/${lang}/contacto`}
           class="inline-flex items-center gap-2 border border-[#c9a84c] text-[#c9a84c] text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-[#c9a84c] hover:text-navy transition-all"
         >
           Cotizar
@@ -254,7 +262,7 @@ const naturaleza = cuscoTours.filter(t =>
     </div>
   </section>
 
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <style>

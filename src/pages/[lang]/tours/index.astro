@@ -1,18 +1,27 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import TourCard from '../../components/TourCard.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import TourCard from '../../../components/TourCard.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
 
 const allTours = await getCollection('tours');
-const peruTours   = allTours.filter(t => t.id.startsWith('es/peru/'));
-const cuscoTours  = allTours.filter(t => t.id.startsWith('es/cusco/'));
-const machuTours  = allTours.filter(t => t.id.startsWith('es/machupicchu/'));
+const peruTours   = allTours.filter(t => t.id.startsWith(`${lang}/peru/`));
+const cuscoTours  = allTours.filter(t => t.id.startsWith(`${lang}/cusco/`));
+const machuTours  = allTours.filter(t => t.id.startsWith(`${lang}/machupicchu/`));
 ---
 
-<Layout title="Tours Perú – Peru Beyond" description="Descubre todos nuestros tours y paquetes por Perú: Cusco, Machu Picchu, Lima, Paracas y más. Experiencias únicas con guías expertos.">
-  <Header />
+<Layout title="Tours Perú – Peru Beyond" description="Descubre todos nuestros tours y paquetes por Perú: Cusco, Machu Picchu, Lima, Paracas y más. Experiencias únicas con guías expertos." lang={lang}>
+  <Header lang={lang} />
 
   <!-- ═══════════════════════════════════════════
        HERO
@@ -30,7 +39,7 @@ const machuTours  = allTours.filter(t => t.id.startsWith('es/machupicchu/'));
 
       <!-- Breadcrumb -->
       <nav class="text-white/60 text-xs uppercase tracking-widest mb-5 flex items-center gap-2 hero-fade" style="animation-delay:0.1s">
-        <a href="/" class="hover:text-gold transition-colors">Inicio</a>
+        <a href={`/${lang}`} class="hover:text-gold transition-colors">Inicio</a>
         <span class="text-white/30">›</span>
         <span class="text-white/80">Tours Perú</span>
       </nav>
@@ -98,7 +107,7 @@ const machuTours  = allTours.filter(t => t.id.startsWith('es/machupicchu/'));
           </p>
         </div>
         <a
-          href="/tours/peru"
+          href={`/${lang}/tours/peru`}
           class="ml-auto flex-shrink-0 hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#c9a84c] hover:gap-3 transition-all duration-200"
         >
           Ver todos
@@ -117,7 +126,7 @@ const machuTours  = allTours.filter(t => t.id.startsWith('es/machupicchu/'));
             price={tour.data.price}
             description={tour.data.description ?? ''}
             location="Perú"
-            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+            href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
           />
         ))}
       </div>
@@ -143,7 +152,7 @@ const machuTours  = allTours.filter(t => t.id.startsWith('es/machupicchu/'));
           </p>
         </div>
         <a
-          href="/tours/cusco"
+          href={`/${lang}/tours/cusco`}
           class="ml-auto flex-shrink-0 hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#c9a84c] hover:gap-3 transition-all duration-200"
         >
           Ver todos
@@ -162,7 +171,7 @@ const machuTours  = allTours.filter(t => t.id.startsWith('es/machupicchu/'));
             price={tour.data.price}
             description={tour.data.description ?? ''}
             location="Cusco"
-            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+            href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
           />
         ))}
       </div>
@@ -188,7 +197,7 @@ const machuTours  = allTours.filter(t => t.id.startsWith('es/machupicchu/'));
           </p>
         </div>
         <a
-          href="/tours/machu-picchu"
+          href={`/${lang}/tours/machu-picchu`}
           class="ml-auto flex-shrink-0 hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#c9a84c] hover:gap-3 transition-all duration-200"
         >
           Ver todos
@@ -207,7 +216,7 @@ const machuTours  = allTours.filter(t => t.id.startsWith('es/machupicchu/'));
             price={tour.data.price}
             description={tour.data.description ?? ''}
             location="Machu Picchu"
-            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+            href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
           />
         ))}
       </div>
@@ -236,7 +245,7 @@ const machuTours  = allTours.filter(t => t.id.startsWith('es/machupicchu/'));
           Contactar por WhatsApp
         </a>
         <a
-          href="/contacto"
+          href={`/${lang}/contacto`}
           class="inline-flex items-center gap-2 border border-[#c9a84c] text-[#c9a84c] text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#c9a84c] hover:text-navy transition-all duration-200"
         >
           Solicitar cotización
@@ -245,7 +254,7 @@ const machuTours  = allTours.filter(t => t.id.startsWith('es/machupicchu/'));
     </div>
   </section>
 
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <style>

@@ -43,6 +43,9 @@ const proyectos = [
     h: 'h-52 md:h-60',
   },
 ];
+
+const lang = Astro.url.pathname.split('/')[1];
+const currentLang = ['es', 'en', 'pt'].includes(lang) ? lang : 'es';
 ---
 <section id="proyectos-sociales" class="section cusco-slider-bg">
   <span class="deco-line-top"></span>
@@ -55,7 +58,7 @@ const proyectos = [
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       {proyectos.map(p => (
-        <a href={p.slug} class={`block overflow-hidden shadow-lg relative group ${p.col}`}>
+        <a href={`/${currentLang}${p.slug}`} class={`block overflow-hidden shadow-lg relative group ${p.col}`}>
           <img
             src={p.image}
             alt={p.titulo}

@@ -24,7 +24,17 @@
       "Bash(python -c \"from PIL import Image; print\\('pillow ok'\\)\")",
       "Bash(pip install *)",
       "Bash(xargs sed -i 's|/images/Huacachina/ica\\\\.jpg|/images/Huacachina/ica.webp|g')",
-      "PowerShell(npx astro check 2>&1 | Select-Object -Last 80)"
+      "PowerShell(npx astro check 2>&1 | Select-Object -Last 80)",
+      "Bash(awk '/^---$/{c++; next} c==1' cusco/city-tour-cusco-qoricancha-4-ruinas.md)",
+      "Bash(python3 -c \"import openpyxl; print\\('ok'\\)\")",
+      "Bash(py --version)",
+      "Bash(where python *)",
+      "Bash(awk '/^  es:/{f=\"es\"} /^  en:/{f=\"en\"} /^  pt:/{f=\"pt\"} /^  [a-z]+:.*:/{if\\(f\\)c[f]++} END{for\\(k in c\\) print k, c[k]}' src/i18n/ui.ts)",
+      "Bash(grep -n 'href=\"/\\\\|<Header\\\\|<Footer\\\\|<Layout' \"src/pages/[lang]/blog/[slug].astro\")",
+      "Bash(grep -n 'href=\"/\\\\|<Header\\\\|<Footer\\\\|<Layout' \"src/pages/[lang]/actividades/[...slug].astro\")",
+      "Bash(grep -n \"href=\\\\`\\\\|href={\\\\`\" \"src/pages/[lang]/tours/index.astro\" \"src/pages/[lang]/tours/cusco.astro\" \"src/pages/[lang]/tours/machu-picchu.astro\")",
+      "Bash(grep -n 'href=\"/\\\\|href={`/tours\\\\|<Footer' \"src/pages/[lang]/tours/index.astro\")",
+      "Bash(grep -n '<Layout>\\\\|<Header \\\\/>\\\\|<Footer \\\\/>\\\\|href=\"/\"\\\\|href=\"/sobre-nosotros\"' \"src/pages/[lang]/equipo.astro\")"
     ]
   }
 }

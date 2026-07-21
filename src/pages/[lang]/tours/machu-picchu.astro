@@ -1,11 +1,19 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import TourCard from '../../components/TourCard.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import TourCard from '../../../components/TourCard.astro';
 
-const lang = Astro.url.searchParams.get('lang') || 'es';
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
+
 const allTours = await getCollection('tours');
 const machuTours = allTours.filter(t => t.id.startsWith(`${lang}/machupicchu/`));
 
@@ -15,8 +23,8 @@ const medios  = machuTours.filter(t => t.data.duration.includes('4 D') || t.data
 const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data.duration.includes('7 D'));
 ---
 
-<Layout title="Tours Machu Picchu – Peru Beyond" description="Paquetes a Machu Picchu desde Cusco: 3, 4, 5, 6 y 7 días. Incluye tren, bus, guía y alojamiento. La maravilla del mundo te espera.">
-  <Header />
+<Layout title="Tours Machu Picchu – Peru Beyond" description="Paquetes a Machu Picchu desde Cusco: 3, 4, 5, 6 y 7 días. Incluye tren, bus, guía y alojamiento. La maravilla del mundo te espera." lang={lang}>
+  <Header lang={lang} />
 
   <!-- ═══════════════════════════════════════════
        HERO
@@ -44,9 +52,9 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
 
       <!-- Breadcrumb -->
       <nav class="text-white/60 text-xs uppercase tracking-widest mb-5 flex items-center gap-2 hero-fade" style="animation-delay:0.1s">
-        <a href="/" class="hover:text-gold transition-colors">Inicio</a>
+        <a href={`/${lang}`} class="hover:text-gold transition-colors">Inicio</a>
         <span class="text-white/30">›</span>
-        <a href="/tours" class="hover:text-gold transition-colors">Tours</a>
+        <a href={`/${lang}/tours`} class="hover:text-gold transition-colors">Tours</a>
         <span class="text-white/30">›</span>
         <span class="text-white/80">Machu Picchu</span>
       </nav>
@@ -100,7 +108,7 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
           6–7 Días ({largos.length})
         </button>
       </nav>
-      <a href="/tours" class="hidden md:flex items-center gap-1 text-xs text-gray-400 hover:text-navy transition-colors flex-shrink-0 ml-4">
+      <a href={`/${lang}/tours`} class="hidden md:flex items-center gap-1 text-xs text-gray-400 hover:text-navy transition-colors flex-shrink-0 ml-4">
         <i class="bi bi-arrow-left"></i> Todos los tours
       </a>
     </div>
@@ -162,7 +170,7 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
             price={tour.data.price}
             description={tour.data.description ?? ''}
             location="Machu Picchu"
-            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+            href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
           />
         ))}
       </div>
@@ -177,7 +185,7 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
             price={tour.data.price}
             description={tour.data.description ?? ''}
             location="Machu Picchu"
-            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+            href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
           />
         ))}
       </div>
@@ -192,7 +200,7 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
             price={tour.data.price}
             description={tour.data.description ?? ''}
             location="Machu Picchu"
-            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+            href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
           />
         ))}
       </div>
@@ -207,7 +215,7 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
             price={tour.data.price}
             description={tour.data.description ?? ''}
             location="Machu Picchu"
-            href={`/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+            href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
           />
         ))}
       </div>
@@ -278,7 +286,7 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
           Reservar por WhatsApp
         </a>
         <a
-          href="/contacto"
+          href={`/${lang}/contacto`}
           class="inline-flex items-center gap-2 border border-[#c9a84c] text-[#c9a84c] text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#c9a84c] hover:text-navy transition-all"
         >
           Solicitar cotización
@@ -287,7 +295,7 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
     </div>
   </section>
 
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <style>

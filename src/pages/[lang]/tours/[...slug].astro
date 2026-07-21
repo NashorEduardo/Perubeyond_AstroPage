@@ -1,49 +1,28 @@
 ---
 import { getCollection, render } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { ui } from '../../i18n/ui';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { ui } from '../../../i18n/ui';
 
 // Otros tipos de Esperiencias
-import ToursPeru from '../../components/ToursPeru.astro';
-import Testimonials from '../../components/Testimonials.astro';
+import ToursPeru from '../../../components/ToursPeru.astro';
+import Testimonials from '../../../components/Testimonials.astro';
 
 export async function getStaticPaths() {
   const tourEntries = await getCollection('tours');
-  const paths = [];
-  for (const entry of tourEntries) {
+  return tourEntries.map((entry) => {
     const parts = entry.id.split('/');
     const lang = parts[0];
     const slug = parts.slice(1).join('/');
-    if (lang === 'es') {
-      // Ruta sin lang para español
-      paths.push({
-        params: { slug },
-        props: { entry },
-      });
-    }
-    // Ruta con lang para todos
-    paths.push({
-      params: { slug: `${lang}/${slug}` },
+    return {
+      params: { lang, slug },
       props: { entry },
-    });
-  }
-  return paths;
+    };
+  });
 }
 
-const slugParam = Astro.params.slug;
-let lang = 'es';
-let slug = slugParam;
-if (slugParam.startsWith('en/') || slugParam.startsWith('pt/')) {
-  const parts = slugParam.split('/');
-  lang = parts[0];
-  slug = parts.slice(1).join('/');
-} else {
-  lang = 'es';
-  slug = slugParam;
-}
-
+const { lang, slug } = Astro.params as { lang: 'es' | 'en' | 'pt'; slug: string };
 const { entry } = Astro.props;
 const t = ui[lang as keyof typeof ui] ?? ui.es;
 const { title, image, price, duration, description, availability, frequency, difficulty, includes, excludes, itinerary, gallery, videoUrl, faq, wetravelUuid } = entry.data;
@@ -51,9 +30,9 @@ const { Content } = await render(entry);
 
 const siteOrigin = (Astro.site ?? new URL('https://www.perubeyond.com')).origin;
 const langAlternates = {
-  es: `${siteOrigin}/tours/${slug}`,
-  en: `${siteOrigin}/tours/en/${slug}`,
-  pt: `${siteOrigin}/tours/pt/${slug}`,
+  es: `${siteOrigin}/es/tours/${slug}`,
+  en: `${siteOrigin}/en/tours/${slug}`,
+  pt: `${siteOrigin}/pt/tours/${slug}`,
 };
 ---
 
@@ -61,6 +40,7 @@ const langAlternates = {
   title={`${title} | Peru Beyond — Agencia de Tours en Cusco`}
   description={`${title} desde $${price} · ${duration} · ${description ?? 'Tour en Perú con Peru Beyond - Guías certificados en Cusco.'}`}
   ogImage={image}
+  lang={lang}
   langAlternates={langAlternates}
 >
   <!-- Schema.org: TouristTrip -->
@@ -141,7 +121,7 @@ const langAlternates = {
     })} />
   )}
 
-  <Header />
+  <Header lang={lang} />
 
   
 
@@ -163,9 +143,9 @@ const langAlternates = {
 
       <!-- Breadcrumb -->
       <nav class="text-white/60 text-xs uppercase tracking-widest mb-5 flex items-center gap-2 hero-fade" style="animation-delay: 0.1s">
-        <a href="/" class="hover:text-gold transition-colors">{t['tour.home']}</a>
+        <a href={`/${lang}`} class="hover:text-gold transition-colors">{t['tour.home']}</a>
         <span class="text-white/30">›</span>
-        <a href="/tours" class="hover:text-gold transition-colors">{t['tour.tours']}</a>
+        <a href={`/${lang}/tours`} class="hover:text-gold transition-colors">{t['tour.tours']}</a>
         <span class="text-white/30">›</span>
         <span class="text-gold">{title}</span>
       </nav>
@@ -789,7 +769,7 @@ const langAlternates = {
           <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4" data-i18n="social.tour_title">{t['social.tour_title']}</h2>
           <p class="text-gray-400 text-sm leading-relaxed mb-6" data-i18n="social.tour_desc">{t['social.tour_desc']}</p>
           <a
-            href="/equipo"
+            href={`/${lang}/equipo`}
             class="inline-flex items-center gap-2 bg-gold hover:bg-amber-400 text-navy font-bold text-sm px-6 py-3 rounded-xl transition-all"
             data-i18n="social.tour_cta"
           >
@@ -1065,7 +1045,7 @@ const langAlternates = {
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
   <script src="https://cdn.wetravel.com/widgets/embed_checkout.js" is:inline></script>
 
-  <Footer />
+  <Footer lang={lang} />
   <a href="https://wa.me/51943491959" target="_blank" rel="noopener" class="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-green-500 text-white text-3xl flex items-center justify-center shadow-xl hover:scale-110 transition z-50" aria-label="WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>

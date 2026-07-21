@@ -6,6 +6,7 @@ export interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  lang?: 'es' | 'en' | 'pt';
   langAlternates?: { es?: string; en?: string; pt?: string };
 }
 
@@ -13,15 +14,30 @@ const {
   title = 'Peru Beyond — Agencia de Tours en Cusco | Machu Picchu, Valle Sagrado y todo Perú',
   description = 'Agencia de viajes en Cusco con guías locales certificados. Tours a Machu Picchu, Valle Sagrado, Camino Inca y paquetes por todo Perú. Reserva segura y atención personalizada en español, inglés y portugués.',
   ogImage = '/images/PeruBeyond/Logo.png',
+  lang = 'es',
   langAlternates,
 } = Astro.props;
 
 const siteBase = Astro.site ?? new URL('https://www.perubeyond.com');
 const canonicalURL = new URL(Astro.url.pathname, siteBase);
 const ogImageAbs = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteBase).href;
+
+// Si la página no provee alternates explícitos, los derivamos reemplazando
+// el primer segmento (de idioma) de la URL actual. No aplica a páginas fuera
+// del esquema /es|en|pt/... (ej. /landing).
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const firstSegment = pathSegments[0];
+const isLocalized = firstSegment === 'es' || firstSegment === 'en' || firstSegment === 'pt';
+const restPath = isLocalized ? pathSegments.slice(1).join('/') : '';
+const resolvedAlternates = langAlternates ?? (isLocalized ? {
+  es: `${siteBase.origin}/es${restPath ? `/${restPath}` : ''}`,
+  en: `${siteBase.origin}/en${restPath ? `/${restPath}` : ''}`,
+  pt: `${siteBase.origin}/pt${restPath ? `/${restPath}` : ''}`,
+} : undefined);
+const htmlLang = lang === 'pt' ? 'pt-BR' : lang;
 ---
 <!doctype html>
-<html lang="es">
+<html lang={htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,11 +55,11 @@ const ogImageAbs = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteB
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageAbs} />
-    <!-- hreflang para tours multilingüe -->
-    {langAlternates?.es && <link rel="alternate" hreflang="es" href={langAlternates.es} />}
-    {langAlternates?.en && <link rel="alternate" hreflang="en" href={langAlternates.en} />}
-    {langAlternates?.pt && <link rel="alternate" hreflang="pt-BR" href={langAlternates.pt} />}
-    {langAlternates && <link rel="alternate" hreflang="x-default" href={langAlternates.es ?? canonicalURL.href} />}
+    <!-- hreflang para el sitio multilingüe -->
+    {resolvedAlternates?.es && <link rel="alternate" hreflang="es" href={resolvedAlternates.es} />}
+    {resolvedAlternates?.en && <link rel="alternate" hreflang="en" href={resolvedAlternates.en} />}
+    {resolvedAlternates?.pt && <link rel="alternate" hreflang="pt-BR" href={resolvedAlternates.pt} />}
+    {resolvedAlternates && <link rel="alternate" hreflang="x-default" href={resolvedAlternates.es ?? canonicalURL.href} />}
     <link rel="icon" href="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp" type="image/webp" />
     <link rel="apple-touch-icon" href="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -103,8 +119,9 @@ const ogImageAbs = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteB
     })} />
     <slot name="head" />
     <!-- i18n: embed translations & apply on load -->
-    <script define:vars={{ i18nData: ui }} is:inline>
+    <script define:vars={{ i18nData: ui, currentLang: lang }} is:inline>
       window.__pb_i18n = i18nData;
+      window.__pb_lang = currentLang;
 
       window.__pb_applyLang = function (lang) {
         var t = window.__pb_i18n[lang] || window.__pb_i18n['es'];
@@ -112,33 +129,18 @@ const ogImageAbs = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteB
           var key = el.getAttribute('data-i18n');
           if (t[key] !== undefined) el.textContent = t[key];
         });
-        document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
         var flagEl = document.getElementById('lang-flag');
         var codeEl = document.getElementById('lang-code');
         var map = { es: { flag: '🇵🇪', code: 'ES' }, en: { flag: '🇺🇸', code: 'EN' }, pt: { flag: '🇧🇷', code: 'PT' } };
         if (flagEl && map[lang]) flagEl.textContent = map[lang].flag;
         if (codeEl && map[lang]) codeEl.textContent = map[lang].code;
-        // Rewrite tour detail links to include the correct language prefix.
-        // Only rewrite if the path has at least 2 segments after /tours/
-        // (e.g. /tours/cusco/some-tour), skipping category pages (/tours/cusco).
-        document.querySelectorAll('a[href^="/tours/"]').forEach(function (a) {
-          var href = a.getAttribute('href');
-          if (!href) return;
-          var clean = href.replace(/^\/tours\/(en|pt)\//, '/tours/');
-          var afterTours = clean.replace(/^\/tours\//, '').replace(/\/$/, '');
-          if (!afterTours || afterTours.indexOf('/') === -1) return;
-          a.setAttribute('href', lang === 'es' ? clean : clean.replace('/tours/', '/tours/' + lang + '/'));
-        });
       };
 
       document.addEventListener('DOMContentLoaded', function () {
-        // If we're on a tour page the language is encoded in the URL — sync it to localStorage
-        var pathMatch = window.location.pathname.match(/^\/tours\/(en|pt)\//);
-        var urlLang = pathMatch ? pathMatch[1] : null;
-        if (urlLang) localStorage.setItem('pb_lang', urlLang);
-        var urlParams = new URLSearchParams(window.location.search);
-        var lang = urlLang || urlParams.get('lang') || localStorage.getItem('pb_lang') || 'es';
-        window.__pb_applyLang(lang);
+        // El idioma ya viene fijado por la URL (/es|en|pt/...), lo persistimos
+        // solo para que el selector recuerde la preferencia en /landing.
+        localStorage.setItem('pb_lang', currentLang);
+        window.__pb_applyLang(currentLang);
       });
     </script>
   </head>

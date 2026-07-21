@@ -1,85 +1,95 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
 
-const experience = [
-  'Conocer la historia y el significado del Torito de Pucará',
-  'Aprender técnicas básicas de pintura artesanal',
-  'Decorar tu propio torito con colores y diseños personalizados',
-  'Llevarte una pieza creada por ti como recuerdo especial',
-];
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
 
-const symbols = [
-  { label: 'Protección', desc: 'del hogar',            icon: 'bi-shield-check' },
-  { label: 'Prosperidad', desc: 'y abundancia',         icon: 'bi-stars'        },
-  { label: 'Fertilidad',  desc: 'y crecimiento',        icon: 'bi-flower1'      },
-  { label: 'Conexión',    desc: 'con la cultura andina', icon: 'bi-heart'       },
-];
-
-const gallery = [
-  '/images/Actividades/Toritos_01.webp',
-  '/images/Actividades/Toritos_02.webp',
-  '/images/Actividades/Toritos_03.webp',
-  '/images/Actividades/Toritos_04.webp',
-  '/images/Actividades/Toritos_05.webp',
-  '/images/Actividades/Toritos_06.webp',
-  '/images/Actividades/Toritos_07.webp',
+const dishes = [
+  {
+    icon: 'bi-layers',
+    iconBg: 'bg-amber-100',
+    iconColor: 'text-amber-600',
+    name: 'Causita Limeña',
+    desc: 'Capas de puré de papa amarilla aliñado con sal, pimienta y limón, rellenas de pollo, vegetales o quinua. Un clásico de la gastronomía peruana.',
+  },
+  {
+    icon: 'bi-fire',
+    iconBg: 'bg-red-100',
+    iconColor: 'text-red-500',
+    name: 'Lomo Saltado',
+    desc: 'Carne de lomo fino salteada en wok con cebolla, tomates y ají amarillo, servida sobre papas fritas y acompañada de arroz.',
+  },
+  {
+    icon: 'bi-egg-fried',
+    iconBg: 'bg-yellow-100',
+    iconColor: 'text-yellow-600',
+    name: 'Crepe de Quinua y Kiwicha',
+    desc: 'Delicioso crepe en base de quinua y kiwicha acompañado de crema de durazno o mango.',
+  },
 ];
 
 const otherActivities = [
-  {
-    name: 'Clásicos de la Gastronomía Peruana',
-    desc: 'Taller gastronómico · 2 horas · Lima',
-    img: '/images/Actividades/Platillo_01.webp',
-    href: '/actividades/gastronomia',
-    icon: 'bi-stars',
-    color: 'bg-amber-500',
-  },
   {
     name: 'Making Sour + Pisco Tasting',
     desc: 'Coctelería artesanal · 2–3 horas · Lima',
     img: '/images/Actividades/Pisco.webp',
     href: '/actividades/pisco',
     icon: 'bi-cup-straw',
-    color: 'bg-yellow-400',
+    color: 'bg-gold',
+  },
+  {
+    name: 'Pintado de Toritos de Pucará',
+    desc: 'Arte & Cultura andina · 1.5–2 horas · Lima',
+    img: '/images/Actividades/Toritos_01.webp',
+    href: '/actividades/toritos',
+    icon: 'bi-palette',
+    color: 'bg-red-500',
   },
 ];
 ---
 
 <Layout
-  title="Pintado de Toritos de Pucará | PeruBeyond"
-  description="Descubre el arte andino peruano pintando tu propio Torito de Pucará. Un taller cultural único en Lima donde te llevas tu creación como recuerdo. Reserva con PeruBeyond."
+  title="Clásicos de la Gastronomía Peruana | PeruBeyond"
+  description="Vive un taller gastronómico auténtico en Lima: aprende a preparar Causita Limeña, Lomo Saltado y Crepe de Quinua de la mano de un chef experto. Reserva con PeruBeyond."
+  lang={lang}
 >
-  <Header />
+  <Header lang={lang} />
 
   <main class="min-h-screen">
 
     <!-- Hero -->
     <section class="act-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20">
-      <img src="/images/Actividades/Toritos_01.webp" alt="Torito de Pucará" class="hero-bg-img" />
+      <img src="/images/Actividades/Platillo_01.webp" alt="Gastronomía peruana" class="hero-bg-img" />
       <div class="hero-overlay"></div>
       <div class="relative z-10 max-w-3xl">
         <span class="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-gold mb-4 bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full">
-          Arte & Cultura Andina
+          Taller Gastronómico
         </span>
         <h1 class="act-hero-title">
-          Pintado de <span class="text-gold">Toritos de Pucará</span>
+          Clásicos de la <span class="text-gold">Gastronomía Peruana</span>
         </h1>
         <p class="act-hero-sub">
-          Sumérgete en el arte andino peruano y pinta tu propio Torito de Pucará. Una experiencia creativa que conecta con las tradiciones del altiplano peruano.
+          Aprende a preparar los platos más emblemáticos del Perú de la mano de un chef experto. Una experiencia culinaria que despertará todos tus sentidos.
         </p>
 
         <!-- Stats -->
         <div class="flex items-center justify-center gap-8 mt-8">
           <div class="text-center">
-            <span class="text-gold text-3xl font-black block leading-none">1.5</span>
+            <span class="text-gold text-3xl font-black block leading-none">2</span>
             <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Horas</span>
           </div>
           <div class="w-px h-10 bg-white/20"></div>
           <div class="text-center">
-            <span class="text-gold text-3xl font-black block leading-none">Arte</span>
-            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Andino</span>
+            <span class="text-gold text-3xl font-black block leading-none">3</span>
+            <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Platos</span>
           </div>
           <div class="w-px h-10 bg-white/20"></div>
           <div class="text-center">
@@ -90,16 +100,16 @@ const otherActivities = [
 
         <!-- Breadcrumb -->
         <nav class="flex items-center justify-center gap-2 text-xs text-white/40 mt-8">
-          <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+          <a href={`/${lang}`} class="hover:text-white transition-colors flex items-center gap-1">
             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10.707 2.293a1 1 0 0 0-1.414 0l-7 7A1 1 0 0 0 3 11h1v6a1 1 0 0 0 1 1h4v-4h2v4h4a1 1 0 0 0 1-1v-6h1a1 1 0 0 0 .707-1.707l-7-7z"/>
             </svg>
             Inicio
           </a>
           <span class="text-white/20">›</span>
-          <a href="/actividades" class="hover:text-white transition-colors">Actividades</a>
+          <a href={`/${lang}/actividades`} class="hover:text-white transition-colors">Actividades</a>
           <span class="text-white/20">›</span>
-          <span class="text-white/70">Toritos de Pucará</span>
+          <span class="text-white/70">Gastronomía</span>
         </nav>
       </div>
     </section>
@@ -108,87 +118,79 @@ const otherActivities = [
     <div class="act-content-bg">
       <div class="max-w-6xl mx-auto px-4 md:px-8 py-16 space-y-20">
 
-        <!-- Introducción -->
+        <!-- Layout principal -->
         <section>
           <div class="flex items-center gap-4 mb-10">
-            <div class="w-12 h-12 rounded-2xl bg-red-500 flex items-center justify-center shadow-lg flex-shrink-0">
-              <i class="bi bi-palette text-white text-xl"></i>
+            <div class="w-12 h-12 rounded-2xl bg-amber-500 flex items-center justify-center shadow-lg flex-shrink-0">
+              <i class="bi bi-stars text-white text-xl"></i>
             </div>
             <div>
-              <h2 class="act-section-title">Pintado de Toritos de Pucará</h2>
-              <p class="act-section-sub">Arte & Cultura andina · 1.5–2 horas · Lima</p>
+              <h2 class="act-section-title">Clásicos de la Gastronomía Peruana</h2>
+              <p class="act-section-sub">Taller gastronómico · 2 horas · Lima</p>
             </div>
           </div>
 
-          <p class="act-desc max-w-3xl mb-10">
-            El Torito de Pucará es una de las expresiones más representativas del arte andino peruano. Elaborado en cerámica y decorado a mano, simboliza protección, prosperidad, fertilidad y buena fortuna para los hogares. Esta emblemática artesanía tiene sus raíces en las tradiciones del altiplano peruano y, con el paso del tiempo, se convirtió en un símbolo cultural reconocido en todo el país.
-          </p>
+          <div class="grid lg:grid-cols-2 gap-12 items-start mb-14">
 
-          <!-- Galería + Contenido -->
-          <div class="grid lg:grid-cols-2 gap-12 items-start">
-
-            <!-- Galería -->
-            <div class="grid grid-cols-2 gap-2">
-              <img src={gallery[0]} alt="Torito de Pucará" class="act-img col-span-2 h-64 object-cover rounded-xl" loading="lazy" />
-              {gallery.slice(1).map(img => (
-                <img src={img} alt="Torito de Pucará" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
-              ))}
+            <!-- Imágenes -->
+            <div class="grid grid-cols-2 gap-3">
+              <img
+                src="/images/Actividades/Platillo_01.webp"
+                alt="Platillos de la gastronomía peruana"
+                class="act-img col-span-2 h-72 object-cover rounded-2xl"
+                loading="lazy"
+              />
+              <img
+                src="/images/Actividades/Platillo_02.webp"
+                alt="Preparación de causa limeña"
+                class="act-img h-48 object-cover rounded-2xl"
+                loading="lazy"
+              />
+              <div class="bg-amber-50 border border-amber-100 rounded-2xl h-48 flex flex-col items-center justify-center p-6">
+                <i class="bi bi-clock text-amber-500 text-3xl mb-2"></i>
+                <span class="text-navy font-bold text-xl">2 horas</span>
+                <span class="text-gray-400 text-sm text-center mt-1">de experiencia gastronómica</span>
+              </div>
             </div>
 
-            <!-- Contenido -->
+            <!-- Texto -->
             <div>
-
-              <!-- Tu experiencia -->
-              <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Tu experiencia</p>
-              <ul class="space-y-3 mb-8">
-                {experience.map(item => (
-                  <li class="flex items-start gap-3">
-                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
-                      <i class="bi bi-check text-red-500 text-xs font-bold"></i>
-                    </span>
-                    <span class="text-sm text-gray-600">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <!-- ¿Qué representa? -->
-              <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">¿Qué representa?</p>
-              <div class="grid grid-cols-2 gap-3 mb-8">
-                {symbols.map(sym => (
-                  <div class="symbol-card">
-                    <i class={`bi ${sym.icon} text-red-500 text-2xl mb-1`}></i>
-                    <span class="font-bold text-navy text-sm">{sym.label}</span>
-                    <span class="text-gray-400 text-xs">{sym.desc}</span>
-                  </div>
-                ))}
-              </div>
+              <p class="act-desc mb-4">
+                Nuestro evento comienza con una bienvenida seguida de una introducción al pisco, explorando su historia y variedades. Los participantes aprenderán a preparar un auténtico pisco sour bajo la guía de nuestro experto bartender, con la oportunidad de degustar su propia creación.
+              </p>
+              <p class="act-desc mb-4">
+                Continuaremos con un taller práctico de causa limeña, donde cada uno personalizará y preparará su versión de este plato tradicional. La experiencia culminará con una sesión interactiva de cocina para preparar lomo saltado, aprendiendo técnicas de salteado antes de disfrutar del plato que han cocinado.
+              </p>
+              <p class="act-desc mb-8">
+                El evento concluye con una sesión de preguntas y respuestas, proporcionando una oportunidad para discutir lo aprendido y compartir impresiones sobre la experiencia gastronómica.
+              </p>
 
               <!-- Info rápida -->
               <div class="grid grid-cols-2 gap-3 mb-8">
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-clock text-red-400 text-lg mb-1 block"></i>
+                  <i class="bi bi-clock text-amber-500 text-lg mb-1 block"></i>
                   <span class="text-navy font-bold text-sm block">Duración</span>
-                  <span class="text-gray-500 text-xs">1.5 a 2 horas</span>
+                  <span class="text-gray-500 text-xs">2 horas</span>
                 </div>
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-geo-alt text-red-400 text-lg mb-1 block"></i>
+                  <i class="bi bi-geo-alt text-amber-500 text-lg mb-1 block"></i>
                   <span class="text-navy font-bold text-sm block">Ubicación</span>
                   <span class="text-gray-500 text-xs">Lima, Perú</span>
                 </div>
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-gift text-red-400 text-lg mb-1 block"></i>
-                  <span class="text-navy font-bold text-sm block">Recuerdo</span>
-                  <span class="text-gray-500 text-xs">Te lo llevas pintado</span>
-                </div>
-                <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <i class="bi bi-people text-red-400 text-lg mb-1 block"></i>
+                  <i class="bi bi-people text-amber-500 text-lg mb-1 block"></i>
                   <span class="text-navy font-bold text-sm block">Grupos</span>
                   <span class="text-gray-500 text-xs">Pequeños y privados</span>
+                </div>
+                <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                  <i class="bi bi-translate text-amber-500 text-lg mb-1 block"></i>
+                  <span class="text-navy font-bold text-sm block">Idioma</span>
+                  <span class="text-gray-500 text-xs">Español / Inglés</span>
                 </div>
               </div>
 
               <a
-                href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: Pintado de Toritos de Pucará')}`}
+                href={`https://wa.me/51943491959?text=${encodeURIComponent('Hola, me interesa la actividad: Clásicos de la Gastronomía Peruana')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="act-main-cta"
@@ -198,11 +200,27 @@ const otherActivities = [
               </a>
             </div>
           </div>
+
+          <!-- Tarjetas de platos -->
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-5">Qué se prepara</p>
+            <div class="grid sm:grid-cols-3 gap-5">
+              {dishes.map(dish => (
+                <div class="dish-card">
+                  <div class={`dish-icon ${dish.iconBg} ${dish.iconColor}`}>
+                    <i class={`bi ${dish.icon} text-xl`}></i>
+                  </div>
+                  <h4 class="dish-name">{dish.name}</h4>
+                  <p class="dish-desc">{dish.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         <!-- Otras actividades -->
         <section>
-          <div class="act-divider mb-14"></div>
+          <div class="act-divider mb-16"></div>
           <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Otras experiencias</p>
           <div class="grid sm:grid-cols-2 gap-5">
             {otherActivities.map(act => (
@@ -223,17 +241,17 @@ const otherActivities = [
 
         <!-- CTA Banner -->
         <section class="act-cta-banner relative overflow-hidden rounded-3xl">
-          <img src="/images/Actividades/Toritos_01.webp" alt="Toritos de Pucará — artesanía tradicional peruana" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+          <img src="/images/Actividades/Platillo_02.webp" alt="Platillo de gastronomía cusqueña tradicional" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
           <div class="absolute inset-0 bg-navy/80"></div>
           <div class="relative z-10 text-center py-16 px-6">
             <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">¿Listo para vivir el Perú?</span>
             <h2 class="cta-banner-title">Diseñamos tu experiencia a medida</h2>
             <p class="cta-banner-sub">
-              Nuestro equipo te asesora sin costo para combinar las actividades culturales y artísticas que más te apasionen.
+              Nuestro equipo te asesora sin costo para combinar las actividades culturales y gastronómicas que más te apasionen.
             </p>
             <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
               <a
-                href="https://wa.me/51943491959?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20taller%20de%20Toritos%20de%20Pucar%C3%A1"
+                href="https://wa.me/51943491959?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20actividades%20culturales%20y%20gastron%C3%B3micas"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
@@ -242,7 +260,7 @@ const otherActivities = [
                 WhatsApp directo
               </a>
               <a
-                href="/contacto"
+                href={`/${lang}/contacto`}
                 class="inline-flex items-center gap-2 bg-gold hover:bg-yellow-400 text-navy font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
               >
                 Consultar ahora
@@ -256,14 +274,16 @@ const otherActivities = [
     </div>
   </main>
 
-  <Footer />
+  <Footer lang={lang} />
 </Layout>
 
 <style>
   :root { --navy: #0d1b2e; --gold: #f6d06a; }
 
   .act-hero {
-    height: 70vh; min-height: 560px; overflow: hidden;
+    height: 70vh;
+    min-height: 560px;
+    overflow: hidden;
   }
   .hero-bg-img {
     position: absolute; inset: 0;
@@ -305,11 +325,19 @@ const otherActivities = [
     text-decoration: none;
   }
   .act-main-cta:hover { background: #c9a84c; color: #0d1b2e; transform: translateY(-2px); }
-  .symbol-card {
-    background: #fff; border-radius: 1rem; padding: 1.1rem;
-    display: flex; flex-direction: column; align-items: flex-start; gap: 0.15rem;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06); border: 1px solid #fde8e8;
+  .dish-card {
+    background: #fff; border-radius: 1.25rem; padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    display: flex; flex-direction: column; gap: 0.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
+  .dish-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.12); }
+  .dish-icon {
+    width: 3rem; height: 3rem; border-radius: 0.75rem;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;
+  }
+  .dish-name { font-family: Georgia, serif; font-size: 1rem; font-weight: 700; color: #0d1b2e; }
+  .dish-desc { font-size: 0.8rem; color: #6b7280; line-height: 1.65; }
   .act-divider { height: 1px; background: linear-gradient(to right, transparent, #e5e7eb, transparent); }
   .act-cta-banner { margin-top: 2rem; }
   .cta-banner-title {
