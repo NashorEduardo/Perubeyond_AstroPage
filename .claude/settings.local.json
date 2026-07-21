@@ -24,7 +24,6 @@
       "Bash(python -c \"from PIL import Image; print\\('pillow ok'\\)\")",
       "Bash(pip install *)",
       "Bash(xargs sed -i 's|/images/Huacachina/ica\\\\.jpg|/images/Huacachina/ica.webp|g')",
-<<<<<<< HEAD
       "PowerShell(npx astro check 2>&1 | Select-Object -Last 80)",
       "Bash(awk '/^---$/{c++; next} c==1' cusco/city-tour-cusco-qoricancha-4-ruinas.md)",
       "Bash(python3 -c \"import openpyxl; print\\('ok'\\)\")",
@@ -35,12 +34,9 @@
       "Bash(grep -n 'href=\"/\\\\|<Header\\\\|<Footer\\\\|<Layout' \"src/pages/[lang]/actividades/[...slug].astro\")",
       "Bash(grep -n \"href=\\\\`\\\\|href={\\\\`\" \"src/pages/[lang]/tours/index.astro\" \"src/pages/[lang]/tours/cusco.astro\" \"src/pages/[lang]/tours/machu-picchu.astro\")",
       "Bash(grep -n 'href=\"/\\\\|href={`/tours\\\\|<Footer' \"src/pages/[lang]/tours/index.astro\")",
-      "Bash(grep -n '<Layout>\\\\|<Header \\\\/>\\\\|<Footer \\\\/>\\\\|href=\"/\"\\\\|href=\"/sobre-nosotros\"' \"src/pages/[lang]/equipo.astro\")"
-=======
+      "Bash(grep -n '<Layout>\\\\|<Header \\\\/>\\\\|<Footer \\\\/>\\\\|href=\"/\"\\\\|href=\"/sobre-nosotros\"' \"src/pages/[lang]/equipo.astro\")",
       "Bash(git commit *)",
-      "Bash(git push *)",
-      "PowerShell(npx astro check 2>&1 | Select-Object -Last 80)"
->>>>>>> 2d36ef343a82c6120d8ba5db8cd0b9d86df28925
+      "Bash(git push *)"
     ]
   }
 }
