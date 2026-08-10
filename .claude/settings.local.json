@@ -36,7 +36,13 @@
       "Bash(grep -n 'href=\"/\\\\|href={`/tours\\\\|<Footer' \"src/pages/[lang]/tours/index.astro\")",
       "Bash(grep -n '<Layout>\\\\|<Header \\\\/>\\\\|<Footer \\\\/>\\\\|href=\"/\"\\\\|href=\"/sobre-nosotros\"' \"src/pages/[lang]/equipo.astro\")",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Read(//c/Users/CHRISTIAN/AppData/Local/Temp/claude/**)",
+      "Read(//c/Users/CHRISTIAN/**)",
+      "Bash(py -c ' *)",
+      "Bash(py \"scripts_temp/actualizar_tabla.py\")",
+      "Bash(grep -n \"^h[1-6]\\\\|^h[1-6][,{ ]\\\\| h[1-6][,{ ]\\\\|h1,\\\\|h2,\\\\|h3,\\\\|h4,\" src/styles/global.css)",
+      "Bash(grep -n 'href={p\\\\.href}\\\\|href={post\\\\.slug}\\\\|href=\"/\\\\|packages = \\\\[' src/pages/landing.astro)"
     ]
   }
 }

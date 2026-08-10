@@ -210,7 +210,7 @@ const otherActivities = [
                   <div class={`dish-icon ${dish.iconBg} ${dish.iconColor}`}>
                     <i class={`bi ${dish.icon} text-xl`}></i>
                   </div>
-                  <h4 class="dish-name">{dish.name}</h4>
+                  <h3 class="dish-name">{dish.name}</h3>
                   <p class="dish-desc">{dish.desc}</p>
                 </div>
               ))}
@@ -221,7 +221,7 @@ const otherActivities = [
         <!-- Otras actividades -->
         <section>
           <div class="act-divider mb-16"></div>
-          <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Otras experiencias</p>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Otras experiencias</h2>
           <div class="grid sm:grid-cols-2 gap-5">
             {otherActivities.map(act => (
               <a href={act.href} class="group relative overflow-hidden rounded-2xl h-52 block">
