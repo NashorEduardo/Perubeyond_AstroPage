@@ -27,13 +27,13 @@ const symbols = [
 ];
 
 const gallery = [
-  '/images/Actividades/Toritos_01.webp',
-  '/images/Actividades/Toritos_02.webp',
-  '/images/Actividades/Toritos_03.webp',
-  '/images/Actividades/Toritos_04.webp',
-  '/images/Actividades/Toritos_05.webp',
-  '/images/Actividades/Toritos_06.webp',
-  '/images/Actividades/Toritos_07.webp',
+  { src: '/images/Actividades/Toritos_01.webp', alt: 'Toritos de Pucará artesanales pintados a mano, cerámica peruana' },
+  { src: '/images/Actividades/Toritos_02.webp', alt: 'Toritos de Pucará de cerámica pintados en rojo y negro con motivos florales' },
+  { src: '/images/Actividades/Toritos_03.webp', alt: 'Colección de toritos de Pucará artesanales de distintos colores' },
+  { src: '/images/Actividades/Toritos_04.webp', alt: 'Turistas pintando su propio torito de Pucará en el taller de cerámica andina' },
+  { src: '/images/Actividades/Toritos_05.webp', alt: 'Miniaturas de toritos de Pucará pintadas a mano en varios colores' },
+  { src: '/images/Actividades/Toritos_06.webp', alt: 'Mujer pintando un torito de Pucará de cerámica azul en el taller' },
+  { src: '/images/Actividades/Toritos_07.webp', alt: 'Participante mostrando su torito de Pucará recién pintado en el taller' },
 ];
 
 const otherActivities = [
@@ -139,9 +139,9 @@ const otherActivities = [
 
             <!-- Galería -->
             <div class="grid grid-cols-2 gap-2">
-              <img src={gallery[0]} alt="Torito de Pucará" class="act-img col-span-2 h-64 object-cover rounded-xl" loading="lazy" />
+              <img src={gallery[0].src} alt={gallery[0].alt} class="act-img col-span-2 h-64 object-cover rounded-xl" loading="lazy" />
               {gallery.slice(1).map(img => (
-                <img src={img} alt="Torito de Pucará" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+                <img src={img.src} alt={img.alt} class="act-img h-40 object-cover rounded-xl" loading="lazy" />
               ))}
             </div>
 
