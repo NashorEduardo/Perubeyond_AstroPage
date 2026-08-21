@@ -1,3 +1,12 @@
+---
+import { imageAlts } from '../i18n/imageAlts';
+
+interface Props {
+  lang?: 'es' | 'en' | 'pt';
+}
+const { lang = 'es' } = Astro.props;
+---
+
 <section class="relative h-screen flex items-center overflow-hidden">
 
   <!-- Video de fondo -->
@@ -6,7 +15,7 @@
     <img
       id="hero-poster"
       src="/images/Lima/pexels-icarus-7357663.webp"
-      alt="Plaza Mayor de Lima con arquitectura colonial, Perú"
+      alt={imageAlts.limaPlazaMayor[lang]}
       aria-hidden="true"
       class="absolute inset-0 w-full h-full object-cover"
       fetchpriority="high"

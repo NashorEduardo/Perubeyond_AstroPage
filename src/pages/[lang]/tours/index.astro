@@ -4,6 +4,7 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import TourCard from '../../../components/TourCard.astro';
+import { imageAlts } from '../../../i18n/imageAlts';
 
 export function getStaticPaths() {
   return [
@@ -29,7 +30,7 @@ const machuTours  = allTours.filter(t => t.id.startsWith(`${lang}/machupicchu/`)
   <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
     <img
       src="/images/Lima/pexels-icarus-7357663.webp"
-      alt="Plaza Mayor de Lima con arquitectura colonial, Perú"
+      alt={imageAlts.limaPlazaMayor[lang]}
       class="absolute inset-0 w-full h-full object-cover scale-105 hero-img"
     />
     <div class="absolute inset-0 bg-black/50"></div>

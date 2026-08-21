@@ -4,6 +4,7 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import TourCard from '../../../components/TourCard.astro';
+import { imageAlts } from '../../../i18n/imageAlts';
 
 export function getStaticPaths() {
   return [
@@ -32,7 +33,7 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
   <section class="relative h-[75vh] min-h-[480px] w-full overflow-hidden">
     <img
       src="/images/Machupicchu/FT 8.webp"
-      alt="Ciudadela inca de Machu Picchu con el Huayna Picchu y terrazas de piedra, Cusco"
+      alt={imageAlts.machuPicchuHuaynaPicchu[lang]}
       class="absolute inset-0 w-full h-full object-cover scale-105 hero-img"
     />
     <div class="absolute inset-0 bg-black/40"></div>
@@ -267,7 +268,7 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
   ═══════════════════════════════════════════ -->
   <section class="relative overflow-hidden py-20">
     <div class="absolute inset-0">
-      <img src="/images/Machupicchu/IMG_7709.webp" alt="Vista panorámica de Machu Picchu al amanecer" class="w-full h-full object-cover" />
+      <img src="/images/Machupicchu/IMG_7709.webp" alt={imageAlts.machuPicchuTrailSign[lang]} class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-navy/85"></div>
     </div>
     <div class="relative container-pb text-center">

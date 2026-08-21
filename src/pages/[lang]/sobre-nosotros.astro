@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { imageAlts } from '../../i18n/imageAlts';
 
 export function getStaticPaths() {
   return [
@@ -37,7 +38,7 @@ const reasons = [
   <section class="cover-hero">
     <img
       src="/images/Machupicchu/IMG_7715.webp"
-      alt="Sobre Nosotros — Peru Beyond"
+      alt={imageAlts.machuPicchuCitadel[lang]}
       class="cover-img"
     />
     <div class="cover-overlay"></div>
@@ -104,7 +105,7 @@ const reasons = [
           <div class="media-frame"></div>
           <img
             src="/images/Laguna_Humantay/DSC04385.webp"
-            alt="Equipo de Peru Beyond en la Laguna Humantay, Cusco"
+            alt={imageAlts.teamHumantay[lang]}
             class="media-img"
           />
           <div class="media-badge">
