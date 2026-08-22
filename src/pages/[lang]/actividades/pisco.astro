@@ -25,19 +25,19 @@ const highlights = [
 const otherActivities = [
   {
     name: 'Clásicos de la Gastronomía Peruana',
-    desc: 'Taller gastronómico · 2 horas · Lima',
+    desc: 'Taller gastronómico · 2 horas · Cusco',
     img: '/images/Actividades/Platillo_01.webp',
     alt: imageAlts.andeanPlate[lang],
-    href: '/actividades/gastronomia',
+    href: `/${lang}/actividades/gastronomia`,
     icon: 'bi-stars',
     color: 'bg-amber-500',
   },
   {
     name: 'Pintado de Toritos de Pucará',
-    desc: 'Arte & Cultura andina · 1.5–2 horas · Lima',
+    desc: 'Arte & Cultura andina · 1.5–2 horas · Cusco',
     img: '/images/Actividades/Toritos_01.webp',
     alt: imageAlts.toritos01[lang],
-    href: '/actividades/toritos',
+    href: `/${lang}/actividades/toritos`,
     icon: 'bi-palette',
     color: 'bg-red-500',
   },
@@ -46,7 +46,7 @@ const otherActivities = [
 
 <Layout
   title="Making Sour + Pisco Tasting | PeruBeyond"
-  description="Aprende a preparar el auténtico Pisco Sour y degusta variedades de pisco peruano de la mano de un bartender experto en Lima. Reserva con PeruBeyond."
+  description="Aprende a preparar el auténtico Pisco Sour y degusta variedades de pisco peruano de la mano de un bartender experto en Cusco. Reserva con PeruBeyond."
   lang={lang}
 >
   <Header lang={lang} />
@@ -81,7 +81,7 @@ const otherActivities = [
           </div>
           <div class="w-px h-10 bg-white/20"></div>
           <div class="text-center">
-            <span class="text-gold text-3xl font-black block leading-none">Lima</span>
+            <span class="text-gold text-3xl font-black block leading-none">Cusco</span>
             <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Ubicación</span>
           </div>
         </div>
@@ -114,7 +114,7 @@ const otherActivities = [
             </div>
             <div>
               <h2 class="act-section-title">Making Sour + Pisco Tasting</h2>
-              <p class="act-section-sub">Coctelería artesanal · 2–3 horas · Lima</p>
+              <p class="act-section-sub">Coctelería artesanal · 2–3 horas · Cusco</p>
             </div>
           </div>
 
@@ -123,7 +123,7 @@ const otherActivities = [
             <!-- Texto -->
             <div class="order-2 lg:order-1">
               <p class="act-desc mb-4">
-                En la clase "Making Sour", los participantes comenzarán con una cálida bienvenida en nuestra ubicación designada. Nuestro experto bartender introducirá la historia del Pisco Sour, destacando su origen en Lima los años 1920 y cómo se ha convertido en uno de los cócteles más emblemáticos de Perú.
+                En la clase "Making Sour", los participantes comenzarán con una cálida bienvenida en nuestra ubicación designada. Nuestro experto bartender introducirá la historia del Pisco Sour, destacando su origen en Cusco los años 1920 y cómo se ha convertido en uno de los cócteles más emblemáticos de Perú.
               </p>
               <p class="act-desc mb-6">
                 Se explicará a los asistentes los componentes clave del Pisco Sour: pisco, jugo de limón, clara de huevo y almíbar de azúcar. Los participantes tendrán la oportunidad de preparar su propio cóctel eligiendo entre sencillo, doble o "Catedral", y posteriormente compartirán impresiones con el grupo. La actividad cierra con degustación de variedades de piscos peruanos.
@@ -152,7 +152,7 @@ const otherActivities = [
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
                   <i class="bi bi-geo-alt text-yellow-500 text-lg mb-1 block"></i>
                   <span class="text-navy font-bold text-sm block">Ubicación</span>
-                  <span class="text-gray-500 text-xs">Lima, Perú</span>
+                  <span class="text-gray-500 text-xs">Cusco, Perú</span>
                 </div>
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
                   <i class="bi bi-people text-yellow-500 text-lg mb-1 block"></i>
@@ -204,7 +204,7 @@ const otherActivities = [
                 <div class={`dish-icon ${item.color} mx-auto`}>
                   <i class={`bi ${item.icon} text-xl`}></i>
                 </div>
-                <h4 class="dish-name">{item.name}</h4>
+                <h3 class="dish-name">{item.name}</h3>
                 <p class="dish-desc">{item.desc}</p>
               </div>
             ))}
@@ -214,7 +214,7 @@ const otherActivities = [
         <!-- Otras actividades -->
         <section>
           <div class="act-divider mb-14"></div>
-          <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Otras experiencias</p>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Otras experiencias</h2>
           <div class="grid sm:grid-cols-2 gap-5">
             {otherActivities.map(act => (
               <a href={act.href} class="group relative overflow-hidden rounded-2xl h-52 block">
