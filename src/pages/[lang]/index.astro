@@ -26,12 +26,12 @@ const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
   <link slot="head" rel="preload" as="image" href="/images/Lima/pexels-icarus-7357663.webp" />
   <link slot="head" rel="preload" as="video" href="/images/PeruBeyond/MachuPicchu-PerúBeyond.mp4" type="video/mp4" />
   <Header lang={lang} />
-  <Hero />
-  <About />
+  <Hero lang={lang} />
+  <About lang={lang} />
   <FavoriteTours />
   <MachuPicchuTours />
-  <DestinationsSlider />
-  <ToursPeru />
+  <DestinationsSlider lang={lang} />
+  <ToursPeru lang={lang} />
   <ToursCuscoSlider />
   <Testimonials />
   <WhyChooseUs />

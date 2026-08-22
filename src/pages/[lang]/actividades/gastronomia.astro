@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
+import { imageAlts } from '../../../i18n/imageAlts';
 
 export function getStaticPaths() {
   return [
@@ -41,6 +42,7 @@ const otherActivities = [
     name: 'Making Sour + Pisco Tasting',
     desc: 'Coctelería artesanal · 2–3 horas · Cusco',
     img: '/images/Actividades/Pisco.webp',
+    alt: imageAlts.piscoSour[lang],
     href: `/${lang}/actividades/pisco`,
     icon: 'bi-cup-straw',
     color: 'bg-gold',
@@ -49,6 +51,7 @@ const otherActivities = [
     name: 'Pintado de Toritos de Pucará',
     desc: 'Arte & Cultura andina · 1.5–2 horas · Cusco',
     img: '/images/Actividades/Toritos_01.webp',
+    alt: imageAlts.toritos01[lang],
     href: `/${lang}/actividades/toritos`,
     icon: 'bi-palette',
     color: 'bg-red-500',
@@ -67,7 +70,7 @@ const otherActivities = [
 
     <!-- Hero -->
     <section class="act-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20">
-      <img src="/images/Actividades/Platillo_01.webp" alt="Gastronomía peruana" class="hero-bg-img" />
+      <img src="/images/Actividades/Platillo_01.webp" alt={imageAlts.andeanPlate[lang]} class="hero-bg-img" />
       <div class="hero-overlay"></div>
       <div class="relative z-10 max-w-3xl">
         <span class="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-gold mb-4 bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full">
@@ -136,13 +139,13 @@ const otherActivities = [
             <div class="grid grid-cols-2 gap-3">
               <img
                 src="/images/Actividades/Platillo_01.webp"
-                alt="Platillos de la gastronomía peruana"
+                alt={imageAlts.andeanPlate[lang]}
                 class="act-img col-span-2 h-72 object-cover rounded-2xl"
                 loading="lazy"
               />
               <img
                 src="/images/Actividades/Platillo_02.webp"
-                alt="Plato de carne a la parrilla con chimichurri y ensalada, gastronomía peruana"
+                alt={imageAlts.grilledMeatDish[lang]}
                 class="act-img h-48 object-cover rounded-2xl"
                 loading="lazy"
               />
@@ -225,7 +228,7 @@ const otherActivities = [
           <div class="grid sm:grid-cols-2 gap-5">
             {otherActivities.map(act => (
               <a href={act.href} class="group relative overflow-hidden rounded-2xl h-52 block">
-                <img src={act.img} alt={act.name} class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                <img src={act.img} alt={act.alt} class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                 <div class="absolute inset-0 flex flex-col justify-end p-6">
                   <div class={`w-8 h-8 rounded-lg ${act.color} flex items-center justify-center mb-2`}>
@@ -241,7 +244,7 @@ const otherActivities = [
 
         <!-- CTA Banner -->
         <section class="act-cta-banner relative overflow-hidden rounded-3xl">
-          <img src="/images/Actividades/Platillo_02.webp" alt="Plato de carne a la parrilla con chimichurri, gastronomía peruana" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+          <img src="/images/Actividades/Platillo_02.webp" alt={imageAlts.grilledMeatDish[lang]} class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
           <div class="absolute inset-0 bg-navy/80"></div>
           <div class="relative z-10 text-center py-16 px-6">
             <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">¿Listo para vivir el Perú?</span>

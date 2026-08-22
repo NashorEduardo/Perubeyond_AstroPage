@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { imageAlts } from '../../i18n/imageAlts';
 
 export function getStaticPaths() {
   return [
@@ -47,7 +48,7 @@ const toritosSymbols = [
 
     <!-- ── Hero ── -->
     <section class="act-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20">
-      <img src="/images/Actividades/Platillo_01.webp" alt="Gastronomía peruana" class="hero-bg-img" />
+      <img src="/images/Actividades/Platillo_01.webp" alt={imageAlts.andeanPlate[lang]} class="hero-bg-img" />
       <div class="hero-overlay"></div>
       <div class="relative z-10 max-w-3xl">
         <span class="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-gold mb-4 bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full">
@@ -120,13 +121,13 @@ const toritosSymbols = [
             <div class="grid grid-cols-2 gap-3">
               <img
                 src="/images/Actividades/Platillo_01.webp"
-                alt="Platillos de la gastronomía peruana"
+                alt={imageAlts.andeanPlate[lang]}
                 class="act-img col-span-2 h-72 object-cover rounded-2xl"
                 loading="lazy"
               />
               <img
                 src="/images/Actividades/Platillo_02.webp"
-                alt="Plato de carne a la parrilla con chimichurri y ensalada, gastronomía peruana"
+                alt={imageAlts.grilledMeatDish[lang]}
                 class="act-img h-48 object-cover rounded-2xl"
                 loading="lazy"
               />
@@ -263,7 +264,7 @@ const toritosSymbols = [
             <div class="order-1 lg:order-2">
               <img
                 src="/images/Actividades/Pisco.webp"
-                alt="Pisco Sour peruano"
+                alt={imageAlts.piscoSour[lang]}
                 class="act-img w-full h-[460px] object-cover rounded-2xl"
                 loading="lazy"
               />
@@ -300,13 +301,13 @@ const toritosSymbols = [
 
             <!-- Galería de imágenes -->
             <div class="grid grid-cols-2 gap-2">
-              <img src="/images/Actividades/Toritos_01.webp" alt="Toritos de Pucará artesanales pintados a mano, cerámica peruana" class="act-img col-span-2 h-64 object-cover rounded-xl" loading="lazy" />
-              <img src="/images/Actividades/Toritos_02.webp" alt="Toritos de Pucará de cerámica pintados en rojo y negro con motivos florales" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
-              <img src="/images/Actividades/Toritos_03.webp" alt="Colección de toritos de Pucará artesanales de distintos colores" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
-              <img src="/images/Actividades/Toritos_04.webp" alt="Turistas pintando su propio torito de Pucará en el taller de cerámica andina" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
-              <img src="/images/Actividades/Toritos_05.webp" alt="Miniaturas de toritos de Pucará pintadas a mano en varios colores" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
-              <img src="/images/Actividades/Toritos_06.webp" alt="Mujer pintando un torito de Pucará de cerámica azul en el taller" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
-              <img src="/images/Actividades/Toritos_07.webp" alt="Participante mostrando su torito de Pucará recién pintado en el taller" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_01.webp" alt={imageAlts.toritos01[lang]} class="act-img col-span-2 h-64 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_02.webp" alt={imageAlts.toritos02[lang]} class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_03.webp" alt={imageAlts.toritos03[lang]} class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_04.webp" alt={imageAlts.toritos04[lang]} class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_05.webp" alt={imageAlts.toritos05[lang]} class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_06.webp" alt={imageAlts.toritos06[lang]} class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+              <img src="/images/Actividades/Toritos_07.webp" alt={imageAlts.toritos07[lang]} class="act-img h-40 object-cover rounded-xl" loading="lazy" />
             </div>
 
             <!-- Contenido -->
@@ -358,7 +359,7 @@ const toritosSymbols = [
 
         <!-- ── CTA Banner ── -->
         <section class="act-cta-banner relative overflow-hidden rounded-3xl">
-          <img src="/images/Actividades/Platillo_02.webp" alt="Plato de carne a la parrilla con chimichurri — experiencia culinaria Peru Beyond" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+          <img src="/images/Actividades/Platillo_02.webp" alt={imageAlts.grilledMeatDish[lang]} class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
           <div class="absolute inset-0 bg-navy/80"></div>
           <div class="relative z-10 text-center py-16 px-6">
             <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">¿Listo para vivir el Perú?</span>

@@ -1,13 +1,19 @@
 ---
+import { imageAlts } from '../i18n/imageAlts';
+
+interface Props {
+  lang?: 'es' | 'en' | 'pt';
+}
+
 const lang = Astro.url.pathname.split('/')[1];
-const currentLang = ['es', 'en', 'pt'].includes(lang) ? lang : 'es';
+const currentLang = ['es', 'en', 'pt'].includes(lang) ? (lang as 'es' | 'en' | 'pt') : 'es';
 
 const destinos = [
-  { name: 'Tours en Cusco', tours: 26, image: '/images/Cuzco/cusco.webp', href: `/${currentLang}/tours/cusco` },
-  { name: 'Tours en Lima', tours: 10, image: '/images/Lima/lima.webp', href: `/${currentLang}/tours` },
-  { name: 'Tours en Arequipa', tours: 7, image: '/images/Montaña_de_7_colores/DSC03311.webp', href: `/${currentLang}/tours` },
-  { name: 'Tours en Ica', tours: 7, image: '/images/Huacachina/ica.webp', href: `/${currentLang}/tours` },
-  { name: 'Tours en Puno', tours: 2, image: '/images/Isla_de_los_uros/FT%201.webp', href: `/${currentLang}/tours` },
+  { name: 'Tours en Cusco', tours: 26, image: '/images/Cuzco/cusco.webp', href: `/${currentLang}/tours/cusco`, alt: imageAlts.destinationCusco[currentLang] },
+  { name: 'Tours en Lima', tours: 10, image: '/images/Lima/lima.webp', href: `/${currentLang}/tours`, alt: imageAlts.miraflores[currentLang] },
+  { name: 'Tours en Arequipa', tours: 7, image: '/images/Montaña_de_7_colores/DSC03311.webp', href: `/${currentLang}/tours`, alt: imageAlts.destinationArequipa[currentLang] },
+  { name: 'Tours en Ica', tours: 7, image: '/images/Huacachina/ica.webp', href: `/${currentLang}/tours`, alt: imageAlts.huacachinaOasis[currentLang] },
+  { name: 'Tours en Puno', tours: 2, image: '/images/Isla_de_los_uros/FT%201.webp', href: `/${currentLang}/tours`, alt: imageAlts.destinationPuno[currentLang] },
 ];
 ---
 <section class="section destinations-section">
@@ -22,7 +28,7 @@ const destinos = [
         {destinos.map(d => (
           <div class="swiper-slide">
             <a href={d.href} class="block relative overflow-hidden group" style="height: 420px; border-radius: 1rem;">
-              <img src={d.image} alt={d.name} class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+              <img src={d.image} alt={d.alt} class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
               <div class="absolute bottom-0 left-0 right-0 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.20) 50%, transparent 100%); padding: 4rem 1.5rem 1.5rem;">
                 <h3 class="text-xl font-bold text-white mb-1">{d.name}</h3>
                 <span class="text-sm font-bold text-white/80">{d.tours} Tours</span>

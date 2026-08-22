@@ -1,9 +1,10 @@
 ---
+import { imageAlts } from '../i18n/imageAlts';
 
-/// LOGICA DE LAS DIRECCIONES DE LOS TOURS EN LOS DIFERENTES LENGUAJES 
+/// LOGICA DE LAS DIRECCIONES DE LOS TOURS EN LOS DIFERENTES LENGUAJES
 const lang = Astro.url.pathname.split('/')[1];
 const validLangs = ['es', 'en', 'pt'];
-const currentLang = validLangs.includes(lang) ? lang : 'es';
+const currentLang = (validLangs.includes(lang) ? lang : 'es') as 'es' | 'en' | 'pt';
 
 // helper
 const getTourLink = (slug: string, category: string): string => {
@@ -16,6 +17,7 @@ const tours = [
   {
     image: '/images/Huacachina/ica.webp',
     title: 'Lima, Paracas, Huacachina, Cusco y Machu Picchu',
+    alt: imageAlts.huacachinaOasis[currentLang],
     duration: '7 Días / 6 Noches',
     price: '407',
     description: 'El gran circuito de la costa y sierra: dunas gigantes de Huacachina, la Reserva de Paracas y la magia inca de Cusco con Machu Picchu en un solo viaje.',
@@ -26,6 +28,7 @@ const tours = [
   {
     image: '/images/Machupicchu/IMG_7709.webp',
     title: 'Lima, Paracas, Huacachina y Machu Picchu',
+    alt: imageAlts.machuPicchuTrailSign[currentLang],
     duration: '6 Días / 5 Noches',
     price: '348',
     description: 'Combina el desierto costero de Huacachina y las aguas turquesas de Paracas con la ciudadela de Machu Picchu, la maravilla del mundo moderno.',
@@ -35,16 +38,18 @@ const tours = [
   {
     image: '/images/Lima/lima.webp',
     title: 'Lima Colonial, Ica, Cusco y Machu Picchu',
+    alt: imageAlts.miraflores[currentLang],
     duration: '7 Días / 6 Noches',
     price: '449',
     description: 'Recorre el centro histórico de Lima, el oasis de Ica, las ruinas del Cusco imperial y culmina con la impresionante ciudadela de Machu Picchu.',
     slug : 'tour-lima-huacachina-valle-sagrado-machu-picchu-7-dias',
-    category : 'peru'  
-  
+    category : 'peru'
+
   },
   {
     image: '/images/Montaña_de_7_colores/IMG_5940.webp',
     title: 'Lima, Paracas, Machu Picchu y Montaña de Colores',
+    alt: imageAlts.andesSnowAlpacas[currentLang],
     duration: '8 Días / 7 Noches',
     price: '416',
     description: 'Desde la costa de Paracas hasta los Andes más coloridos del mundo. Naturaleza, cultura y los paisajes más únicos del Perú.',
@@ -54,6 +59,7 @@ const tours = [
   {
     image: '/images/Paracas/pexels-gilmerdiaz-14097704.webp',
     title: 'Lima, Paracas, Ica, Machu Picchu y Montaña de Colores',
+    alt: imageAlts.paracasBoat[currentLang],
     duration: '9 Días / 8 Noches',
     price: '690',
     description: 'La ruta completa de la costa sur con la profundidad andina: Paracas, las dunas de Ica, Machu Picchu y la Montaña Arcoíris.',
@@ -63,6 +69,7 @@ const tours = [
   {
     image: '/images/ValleSagrado/ollantaytambo.webp',
     title: 'Lima, Ica, Cusco y Machu Picchu',
+    alt: imageAlts.ollantaytambo[currentLang],
     duration: '10 Días / 9 Noches',
     price: '723',
     description: 'El viaje más completo: gastronomía limeña, aventura en las dunas de Ica, el Valle Sagrado y la maravilla de Machu Picchu en 10 días.',
@@ -97,7 +104,7 @@ const tours = [
                 <div class="overflow-hidden mb-5">
                   <img
                     src={t.image}
-                    alt={t.title}
+                    alt={t.alt}
                     class="w-full h-[260px] object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />

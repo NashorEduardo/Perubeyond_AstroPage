@@ -28,6 +28,8 @@ const t = ui[lang as keyof typeof ui] ?? ui.es;
 const { title, image, price, duration, description, availability, frequency, difficulty, includes, excludes, itinerary, gallery, videoUrl, faq, wetravelUuid } = entry.data;
 const { Content } = await render(entry);
 
+const countrySuffix = lang === 'es' ? ', Perú' : ', Peru';
+
 // Alt descriptivo por imagen: usa la actividad del itinerario que corresponde a esa
 // foto (por posición dentro del día) para no repetir el mismo alt genérico en toda la galería.
 const imageDescriptions = new Map<string, string>();
@@ -143,7 +145,7 @@ const langAlternates = {
   <section class="relative h-[80vh] w-full overflow-hidden">
     <img
       src={image}
-      alt={`${title}, Perú`}
+      alt={`${title}${countrySuffix}`}
       class="absolute inset-0 w-full h-full object-cover scale-105 hero-img"
     />
     <!-- Overlay en dos capas: oscuridad base + degradado hacia abajo -->
@@ -693,7 +695,7 @@ const langAlternates = {
             onclick={`openLightbox(0)`}>
           <img
             src={gallery[0]}
-            alt={altFor(gallery[0], `${title}, Perú`)}
+            alt={altFor(gallery[0], `${title}${countrySuffix}`)}
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
@@ -704,7 +706,7 @@ const langAlternates = {
               onclick={`openLightbox(1)`}>
             <img
               src={gallery[1]}
-              alt={altFor(gallery[1], `${title}, Perú`)}
+              alt={altFor(gallery[1], `${title}${countrySuffix}`)}
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
@@ -716,7 +718,7 @@ const langAlternates = {
               onclick={`openLightbox(2)`}>
             <img
               src={gallery[2]}
-              alt={altFor(gallery[2], `${title}, Perú`)}
+              alt={altFor(gallery[2], `${title}${countrySuffix}`)}
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
@@ -728,7 +730,7 @@ const langAlternates = {
               onclick={`openLightbox(3)`}>
             <img
               src={gallery[3]}
-              alt={altFor(gallery[3], `${title}, Perú`)}
+              alt={altFor(gallery[3], `${title}${countrySuffix}`)}
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-2 opacity-100">

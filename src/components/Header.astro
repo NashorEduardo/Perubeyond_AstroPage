@@ -1,5 +1,6 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import { imageAlts } from '../i18n/imageAlts';
 
 interface Props {
   lang?: 'es' | 'en' | 'pt';
@@ -262,7 +263,7 @@ localizeLinks(menu, lang);
                       <img
                         src={m.details.images[0].src}
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/feat:scale-105"
-                        alt={`Tours en ${m.details.images[0].label} - Peru Beyond`}
+                        alt={imageAlts.toursInCity[lang](m.details.images[0].label)}
                         loading="lazy"
                       />
                     )}
@@ -596,7 +597,7 @@ localizeLinks(menu, lang);
                   <div class="relative overflow-hidden">
                     <img src={m.details.image}
                          class="absolute inset-0 w-full h-full object-cover"
-                         alt="Ciudadela inca de Machu Picchu, Perú"
+                         alt={imageAlts.machuPicchuCitadel[lang]}
                          loading="lazy" />
                     <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 right-0 p-6">
