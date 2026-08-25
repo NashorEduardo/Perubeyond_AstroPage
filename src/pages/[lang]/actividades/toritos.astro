@@ -21,10 +21,10 @@ const experience = [
 ];
 
 const symbols = [
-  { label: 'Protección', desc: 'del hogar',            icon: 'bi-shield-check' },
+  { label: 'Protección', desc: 'del hogar',             icon: 'bi-shield-check' },
   { label: 'Prosperidad', desc: 'y abundancia',         icon: 'bi-stars'        },
   { label: 'Fertilidad',  desc: 'y crecimiento',        icon: 'bi-flower1'      },
-  { label: 'Conexión',    desc: 'con la cultura andina', icon: 'bi-heart'       },
+  { label: 'Conexión',    desc: 'con la cultura andina', icon: 'bi-heart'        },
 ];
 
 const gallery = [
@@ -40,7 +40,7 @@ const gallery = [
 const otherActivities = [
   {
     name: 'Clásicos de la Gastronomía Peruana',
-    desc: 'Taller gastronómico · 2 horas · Lima',
+    desc: 'Taller gastronómico · 2 horas · Cusco',
     img: '/images/Actividades/Platillo_01.webp',
     alt: imageAlts.andeanPlate[lang],
     href: `/${lang}/actividades/gastronomia`,
@@ -49,7 +49,7 @@ const otherActivities = [
   },
   {
     name: 'Making Sour + Pisco Tasting',
-    desc: 'Coctelería artesanal · 2–3 horas · Lima',
+    desc: 'Coctelería artesanal · 2–3 horas · Cusco',
     img: '/images/Actividades/Pisco.webp',
     alt: imageAlts.piscoSour[lang],
     href: `/${lang}/actividades/pisco`,
@@ -61,7 +61,7 @@ const otherActivities = [
 
 <Layout
   title="Pintado de Toritos de Pucará | PeruBeyond"
-  description="Descubre el arte andino peruano pintando tu propio Torito de Pucará. Un taller cultural único en Lima donde te llevas tu creación como recuerdo. Reserva con PeruBeyond."
+  description="Descubre el arte andino peruano pintando tu propio Torito de Pucará. Un taller cultural único en Cusco donde te llevas tu creación como recuerdo. Reserva con PeruBeyond."
   lang={lang}
 >
   <Header lang={lang} />
@@ -96,7 +96,7 @@ const otherActivities = [
           </div>
           <div class="w-px h-10 bg-white/20"></div>
           <div class="text-center">
-            <span class="text-gold text-3xl font-black block leading-none">Lima</span>
+            <span class="text-gold text-3xl font-black block leading-none">Cusco</span>
             <span class="text-white/55 text-xs uppercase tracking-wider mt-1 block">Ubicación</span>
           </div>
         </div>
@@ -129,7 +129,7 @@ const otherActivities = [
             </div>
             <div>
               <h2 class="act-section-title">Pintado de Toritos de Pucará</h2>
-              <p class="act-section-sub">Arte & Cultura andina · 1.5–2 horas · Lima</p>
+              <p class="act-section-sub">Arte & Cultura andina · 1.5–2 horas · Cusco</p>
             </div>
           </div>
 
@@ -186,7 +186,7 @@ const otherActivities = [
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
                   <i class="bi bi-geo-alt text-red-400 text-lg mb-1 block"></i>
                   <span class="text-navy font-bold text-sm block">Ubicación</span>
-                  <span class="text-gray-500 text-xs">Lima, Perú</span>
+                  <span class="text-gray-500 text-xs">Cusco, Perú</span>
                 </div>
                 <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
                   <i class="bi bi-gift text-red-400 text-lg mb-1 block"></i>
@@ -216,7 +216,7 @@ const otherActivities = [
         <!-- Otras actividades -->
         <section>
           <div class="act-divider mb-14"></div>
-          <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Otras experiencias</p>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Otras experiencias</h2>
           <div class="grid sm:grid-cols-2 gap-5">
             {otherActivities.map(act => (
               <a href={act.href} class="group relative overflow-hidden rounded-2xl h-52 block">
