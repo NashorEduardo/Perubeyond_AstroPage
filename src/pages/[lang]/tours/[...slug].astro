@@ -14,17 +14,28 @@ export async function getStaticPaths() {
   return tourEntries.map((entry) => {
     const parts = entry.id.split('/');
     const lang = parts[0];
+    const category = parts[1];
     const slug = parts.slice(1).join('/');
     return {
       params: { lang, slug },
-      props: { entry },
+      props: { entry, category },
     };
   });
 }
 
 const { lang, slug } = Astro.params as { lang: 'es' | 'en' | 'pt'; slug: string };
-const { entry } = Astro.props;
+const { entry, category } = Astro.props as { entry: any; category: string };
 const t = ui[lang as keyof typeof ui] ?? ui.es;
+
+// Etiqueta de destino en la cabecera del tour, según la categoría real
+// (antes decía "Valle Sagrado de los Incas" fijo en las 78 páginas de tour,
+// sin importar el destino real ni el idioma).
+const categoryLabels: Record<string, Record<'es' | 'en' | 'pt', string>> = {
+  cusco: { es: 'Cusco', en: 'Cusco', pt: 'Cusco' },
+  machupicchu: { es: 'Machu Picchu', en: 'Machu Picchu', pt: 'Machu Picchu' },
+  peru: { es: 'Perú', en: 'Peru', pt: 'Peru' },
+};
+const locationLabel = categoryLabels[category]?.[lang] ?? categoryLabels.cusco[lang];
 const { title, image, price, duration, description, availability, frequency, difficulty, includes, excludes, itinerary, gallery, videoUrl, faq, wetravelUuid } = entry.data;
 const { Content } = await render(entry);
 
@@ -170,7 +181,7 @@ const langAlternates = {
       <div class="hero-fade mb-4" style="animation-delay: 0.2s">
         <span class="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 backdrop-blur-sm text-gold text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
           <span class="w-1.5 h-1.5 bg-gold rounded-full animate-pulse"></span>
-          Valle Sagrado de los Incas
+          {locationLabel}
         </span>
       </div>
 
