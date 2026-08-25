@@ -23,16 +23,21 @@ const canonicalURL = new URL(Astro.url.pathname, siteBase);
 const ogImageAbs = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteBase).href;
 
 // Si la página no provee alternates explícitos, los derivamos reemplazando
-// el primer segmento (de idioma) de la URL actual. No aplica a páginas fuera
+// solo el segmento de idioma dentro de Astro.url.pathname (mismo patrón que
+// LanguageSwitcher.astro), así heredamos la barra final tal cual la sirve
+// Astro y coincide byte a byte con canonicalURL. No aplica a páginas fuera
 // del esquema /es|en|pt/... (ej. /landing).
-const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
-const firstSegment = pathSegments[0];
-const isLocalized = firstSegment === 'es' || firstSegment === 'en' || firstSegment === 'pt';
-const restPath = isLocalized ? pathSegments.slice(1).join('/') : '';
+const pathParts = Astro.url.pathname.split('/');
+const isLocalized = pathParts[1] === 'es' || pathParts[1] === 'en' || pathParts[1] === 'pt';
+const buildAlternate = (code: string) => {
+  const parts = [...pathParts];
+  parts[1] = code;
+  return `${siteBase.origin}${parts.join('/')}`;
+};
 const resolvedAlternates = langAlternates ?? (isLocalized ? {
-  es: `${siteBase.origin}/es${restPath ? `/${restPath}` : ''}`,
-  en: `${siteBase.origin}/en${restPath ? `/${restPath}` : ''}`,
-  pt: `${siteBase.origin}/pt${restPath ? `/${restPath}` : ''}`,
+  es: buildAlternate('es'),
+  en: buildAlternate('en'),
+  pt: buildAlternate('pt'),
 } : undefined);
 const htmlLang = lang === 'pt' ? 'pt-BR' : lang;
 ---
@@ -103,12 +108,6 @@ const htmlLang = lang === 'pt' ? 'pt-BR' : lang;
         "closes": "20:00"
       },
       "priceRange": "$$",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "95",
-        "bestRating": "5"
-      },
       "sameAs": [
         "https://www.facebook.com/perubeyond",
         "https://www.instagram.com/perubeyond/",
