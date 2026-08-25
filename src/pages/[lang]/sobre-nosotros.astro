@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { imageAlts } from '../../i18n/imageAlts';
+import { pageMeta } from '../../i18n/pageMeta';
 
 export function getStaticPaths() {
   return [
@@ -31,7 +32,11 @@ const reasons = [
 ];
 ---
 
-<Layout lang={lang}>
+<Layout
+  title={pageMeta.sobreNosotros[lang].title}
+  description={pageMeta.sobreNosotros[lang].description}
+  lang={lang}
+>
   <Header lang={lang} />
 
   <!-- ══ PORTADA / COVER HERO ══ -->

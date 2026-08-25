@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { imageAlts } from '../../i18n/imageAlts';
+import { pageMeta } from '../../i18n/pageMeta';
 
 export function getStaticPaths() {
   return [
@@ -38,8 +39,8 @@ const toritosSymbols = [
 ---
 
 <Layout
-  title="Actividades Culturales y Gastronómicas | PeruBeyond"
-  description="Vive la auténtica cultura peruana con talleres de gastronomía, clases de Pisco Sour y arte andino. Experiencias únicas con PeruBeyond en Cusco."
+  title={pageMeta.actividades[lang].title}
+  description={pageMeta.actividades[lang].description}
   lang={lang}
 >
   <Header lang={lang} />

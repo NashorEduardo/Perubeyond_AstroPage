@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import { imageAlts } from '../../../i18n/imageAlts';
+import { pageMeta } from '../../../i18n/pageMeta';
 
 export function getStaticPaths() {
   return [
@@ -45,8 +46,8 @@ const otherActivities = [
 ---
 
 <Layout
-  title="Making Sour + Pisco Tasting | PeruBeyond"
-  description="Aprende a preparar el auténtico Pisco Sour y degusta variedades de pisco peruano de la mano de un bartender experto en Cusco. Reserva con PeruBeyond."
+  title={pageMeta.actividadPisco[lang].title}
+  description={pageMeta.actividadPisco[lang].description}
   lang={lang}
 >
   <Header lang={lang} />

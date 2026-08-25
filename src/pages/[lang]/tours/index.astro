@@ -5,6 +5,7 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import TourCard from '../../../components/TourCard.astro';
 import { imageAlts } from '../../../i18n/imageAlts';
+import { pageMeta } from '../../../i18n/pageMeta';
 
 export function getStaticPaths() {
   return [
@@ -21,7 +22,7 @@ const cuscoTours  = allTours.filter(t => t.id.startsWith(`${lang}/cusco/`));
 const machuTours  = allTours.filter(t => t.id.startsWith(`${lang}/machupicchu/`));
 ---
 
-<Layout title="Tours Perú – Peru Beyond" description="Descubre todos nuestros tours y paquetes por Perú: Cusco, Machu Picchu, Lima, Paracas y más. Experiencias únicas con guías expertos." lang={lang}>
+<Layout title={pageMeta.toursIndex[lang].title} description={pageMeta.toursIndex[lang].description} lang={lang}>
   <Header lang={lang} />
 
   <!-- ═══════════════════════════════════════════

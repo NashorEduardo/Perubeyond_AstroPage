@@ -51,8 +51,8 @@ const langAlternates = {
 ---
 
 <Layout
-  title={`${title} | Peru Beyond — Agencia de Tours en Cusco`}
-  description={`${title} desde $${price} · ${duration} · ${description ?? 'Tour en Perú con Peru Beyond - Guías certificados en Cusco.'}`}
+  title={`${title} | Peru Beyond — ${t['tour.agency_tagline']}`}
+  description={`${title} ${t['tour.from'].toLowerCase()} $${price} · ${duration} · ${description ?? t['tour.fallback_desc']}`}
   ogImage={image}
   lang={lang}
   langAlternates={langAlternates}

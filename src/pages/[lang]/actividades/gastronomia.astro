@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import { imageAlts } from '../../../i18n/imageAlts';
+import { pageMeta } from '../../../i18n/pageMeta';
 
 export function getStaticPaths() {
   return [
@@ -60,8 +61,8 @@ const otherActivities = [
 ---
 
 <Layout
-  title="Clásicos de la Gastronomía Peruana | PeruBeyond"
-  description="Vive un taller gastronómico auténtico en Cusco: aprende a preparar Causita Limeña, Lomo Saltado y Crepe de Quinua de la mano de un chef experto. Reserva con PeruBeyond."
+  title={pageMeta.actividadGastronomia[lang].title}
+  description={pageMeta.actividadGastronomia[lang].description}
   lang={lang}
 >
   <Header lang={lang} />
