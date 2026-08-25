@@ -5,6 +5,7 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import TourCard from '../../../components/TourCard.astro';
 import { imageAlts } from '../../../i18n/imageAlts';
+import { pageMeta } from '../../../i18n/pageMeta';
 
 export function getStaticPaths() {
   return [
@@ -30,7 +31,7 @@ const naturaleza = cuscoTours.filter(t =>
 );
 ---
 
-<Layout title="Tours en Cusco – Peru Beyond" description="Descubre los mejores tours en Cusco: city tour, Montaña de 7 Colores, Valle Sagrado, Laguna Humantay, Machu Picchu y más. Guías expertos, salidas diarias." lang={lang}>
+<Layout title={pageMeta.toursCusco[lang].title} description={pageMeta.toursCusco[lang].description} lang={lang}>
   <Header lang={lang} />
 
   <!-- ═══════════════════════════════════════════

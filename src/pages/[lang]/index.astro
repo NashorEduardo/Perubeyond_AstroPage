@@ -12,6 +12,7 @@ import Testimonials from '../../components/Testimonials.astro';
 import WhyChooseUs from '../../components/WhyChooseUs.astro';
 import BlogPreview from '../../components/BlogPreview.astro';
 import Footer from '../../components/Footer.astro';
+import { pageMeta } from '../../i18n/pageMeta';
 
 export function getStaticPaths() {
   return [
@@ -22,7 +23,11 @@ export function getStaticPaths() {
 }
 const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
 ---
-<Layout lang={lang}>
+<Layout
+  title={pageMeta.home[lang].title}
+  description={pageMeta.home[lang].description}
+  lang={lang}
+>
   <link slot="head" rel="preload" as="image" href="/images/Lima/pexels-icarus-7357663.webp" />
   <link slot="head" rel="preload" as="video" href="/images/PeruBeyond/MachuPicchu-PerúBeyond.mp4" type="video/mp4" />
   <Header lang={lang} />

@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { imageAlts } from '../../i18n/imageAlts';
+import { pageMeta } from '../../i18n/pageMeta';
 
 export function getStaticPaths() {
   return [
@@ -106,7 +107,11 @@ const tabs = [
 ];
 ---
 
-<Layout lang={lang}>
+<Layout
+  title={pageMeta.equipo[lang].title}
+  description={pageMeta.equipo[lang].description}
+  lang={lang}
+>
   <Header lang={lang} />
 
   <!-- ══ PORTADA / COVER HERO ══ -->

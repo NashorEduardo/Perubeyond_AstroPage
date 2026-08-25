@@ -14,17 +14,28 @@ export async function getStaticPaths() {
   return tourEntries.map((entry) => {
     const parts = entry.id.split('/');
     const lang = parts[0];
+    const category = parts[1];
     const slug = parts.slice(1).join('/');
     return {
       params: { lang, slug },
-      props: { entry },
+      props: { entry, category },
     };
   });
 }
 
 const { lang, slug } = Astro.params as { lang: 'es' | 'en' | 'pt'; slug: string };
-const { entry } = Astro.props;
+const { entry, category } = Astro.props as { entry: any; category: string };
 const t = ui[lang as keyof typeof ui] ?? ui.es;
+
+// Etiqueta de destino en la cabecera del tour, según la categoría real
+// (antes decía "Valle Sagrado de los Incas" fijo en las 78 páginas de tour,
+// sin importar el destino real ni el idioma).
+const categoryLabels: Record<string, Record<'es' | 'en' | 'pt', string>> = {
+  cusco: { es: 'Cusco', en: 'Cusco', pt: 'Cusco' },
+  machupicchu: { es: 'Machu Picchu', en: 'Machu Picchu', pt: 'Machu Picchu' },
+  peru: { es: 'Perú', en: 'Peru', pt: 'Peru' },
+};
+const locationLabel = categoryLabels[category]?.[lang] ?? categoryLabels.cusco[lang];
 const { title, image, price, duration, description, availability, frequency, difficulty, includes, excludes, itinerary, gallery, videoUrl, faq, wetravelUuid } = entry.data;
 const { Content } = await render(entry);
 
@@ -44,15 +55,15 @@ const altFor = (imgPath: string, fallback: string) => imageDescriptions.get(imgP
 
 const siteOrigin = (Astro.site ?? new URL('https://www.perubeyond.com')).origin;
 const langAlternates = {
-  es: `${siteOrigin}/es/tours/${slug}`,
-  en: `${siteOrigin}/en/tours/${slug}`,
-  pt: `${siteOrigin}/pt/tours/${slug}`,
+  es: `${siteOrigin}/es/tours/${slug}/`,
+  en: `${siteOrigin}/en/tours/${slug}/`,
+  pt: `${siteOrigin}/pt/tours/${slug}/`,
 };
 ---
 
 <Layout
-  title={`${title} | Peru Beyond — Agencia de Tours en Cusco`}
-  description={`${title} desde $${price} · ${duration} · ${description ?? 'Tour en Perú con Peru Beyond - Guías certificados en Cusco.'}`}
+  title={`${title} | Peru Beyond — ${t['tour.agency_tagline']}`}
+  description={`${title} ${t['tour.from'].toLowerCase()} $${price} · ${duration} · ${description ?? t['tour.fallback_desc']}`}
   ogImage={image}
   lang={lang}
   langAlternates={langAlternates}
@@ -63,20 +74,22 @@ const langAlternates = {
     "@type": "TouristTrip",
     "name": title,
     "description": description,
-    "image": image?.startsWith('http') ? image : `https://www.perubeyond.com${image}`,
+    "image": image?.startsWith('http') ? image : `${siteOrigin}${image}`,
     "touristType": "Adventure travelers",
     "offers": {
       "@type": "Offer",
       "price": price,
       "priceCurrency": "USD",
+      // Todos los tours publicados están confirmados como disponibles para
+      // reserva (decisión del negocio, verificada 2026-08-25) — no hay campo
+      // de inventario/cupos en el content collection que lo determine.
       "availability": "https://schema.org/InStock",
-      "validFrom": "2026-01-01",
-      "url": `https://www.perubeyond.com/tours/${slug}`
+      "url": `${siteOrigin}/${lang}/tours/${slug}/`
     },
     "provider": {
       "@type": "TravelAgency",
       "name": "Peru Beyond",
-      "url": "https://www.perubeyond.com",
+      "url": `${siteOrigin}/`,
       "telephone": "+51943491959"
     },
     ...(itinerary && itinerary.length > 0 ? {
@@ -101,20 +114,20 @@ const langAlternates = {
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Inicio",
-        "item": "https://www.perubeyond.com/"
+        "name": t['tour.home'],
+        "item": `${siteOrigin}/${lang}/`
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Tours",
-        "item": "https://www.perubeyond.com/tours/"
+        "name": t['tour.tours'],
+        "item": `${siteOrigin}/${lang}/tours/`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": title,
-        "item": `https://www.perubeyond.com/tours/${slug}`
+        "item": `${siteOrigin}/${lang}/tours/${slug}/`
       }
     ]
   })} />
@@ -168,7 +181,7 @@ const langAlternates = {
       <div class="hero-fade mb-4" style="animation-delay: 0.2s">
         <span class="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 backdrop-blur-sm text-gold text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
           <span class="w-1.5 h-1.5 bg-gold rounded-full animate-pulse"></span>
-          Valle Sagrado de los Incas
+          {locationLabel}
         </span>
       </div>
 

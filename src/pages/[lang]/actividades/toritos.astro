@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import { imageAlts } from '../../../i18n/imageAlts';
+import { pageMeta } from '../../../i18n/pageMeta';
 
 export function getStaticPaths() {
   return [
@@ -60,8 +61,8 @@ const otherActivities = [
 ---
 
 <Layout
-  title="Pintado de Toritos de Pucará | PeruBeyond"
-  description="Descubre el arte andino peruano pintando tu propio Torito de Pucará. Un taller cultural único en Cusco donde te llevas tu creación como recuerdo. Reserva con PeruBeyond."
+  title={pageMeta.actividadToritos[lang].title}
+  description={pageMeta.actividadToritos[lang].description}
   lang={lang}
 >
   <Header lang={lang} />
