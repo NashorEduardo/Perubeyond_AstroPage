@@ -1,0 +1,209 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Testimonials from '../../components/Testimonials.astro';
+import { ui } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
+const t = ui[lang] ?? ui.es;
+
+const copy = {
+  es: {
+    metaTitle: 'Testimonios y Reseñas de Viajeros | Peru Beyond',
+    metaDesc: 'Lee las experiencias reales de viajeros que reservaron con Peru Beyond en Cusco, Machu Picchu y todo Perú. 4.9/5 en Google con más de 190 reseñas.',
+    kicker: 'Reseñas verificadas',
+    title1: 'Lo que dicen nuestros',
+    title2: 'viajeros',
+    sub: 'Cada viaje es una historia. Estas son algunas de las experiencias reales que nuestros clientes compartieron después de recorrer Perú con nosotros.',
+    breadcrumbHome: 'Inicio',
+    breadcrumbSelf: 'Testimonios',
+    statReviews: 'reseñas en Google',
+    statRating: 'de calificación',
+    ctaTitle: '¿Listo para vivir tu propia experiencia?',
+    ctaDesc: 'Cuéntanos qué tienes en mente y diseñamos tu viaje ideal por Perú.',
+    ctaBtn: 'Planifica tu viaje',
+  },
+  en: {
+    metaTitle: 'Traveler Testimonials & Reviews | Peru Beyond',
+    metaDesc: 'Read real experiences from travelers who booked with Peru Beyond in Cusco, Machu Picchu and across Peru. 4.9/5 on Google with 190+ reviews.',
+    kicker: 'Verified reviews',
+    title1: 'What our',
+    title2: 'travelers say',
+    sub: 'Every trip is a story. Here are some of the real experiences our clients shared after exploring Peru with us.',
+    breadcrumbHome: 'Home',
+    breadcrumbSelf: 'Testimonials',
+    statReviews: 'Google reviews',
+    statRating: 'average rating',
+    ctaTitle: 'Ready to live your own experience?',
+    ctaDesc: 'Tell us what you have in mind and we\'ll design your ideal trip through Peru.',
+    ctaBtn: 'Plan your trip',
+  },
+  pt: {
+    metaTitle: 'Depoimentos e Avaliações de Viajantes | Peru Beyond',
+    metaDesc: 'Leia experiências reais de viajantes que reservaram com a Peru Beyond em Cusco, Machu Picchu e em todo o Peru. 4.9/5 no Google com mais de 190 avaliações.',
+    kicker: 'Avaliações verificadas',
+    title1: 'O que dizem nossos',
+    title2: 'viajantes',
+    sub: 'Cada viagem é uma história. Estas são algumas das experiências reais que nossos clientes compartilharam depois de explorar o Peru conosco.',
+    breadcrumbHome: 'Início',
+    breadcrumbSelf: 'Depoimentos',
+    statReviews: 'avaliações no Google',
+    statRating: 'de avaliação média',
+    ctaTitle: 'Pronto para viver sua própria experiência?',
+    ctaDesc: 'Conte-nos o que você tem em mente e desenhamos sua viagem ideal pelo Peru.',
+    ctaBtn: 'Planeje sua viagem',
+  },
+} as const;
+
+const c = copy[lang] ?? copy.es;
+---
+
+<Layout title={c.metaTitle} description={c.metaDesc} lang={lang}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: c.breadcrumbHome, item: `https://www.perubeyond.com/${lang}` },
+      { '@type': 'ListItem', position: 2, name: c.breadcrumbSelf, item: `https://www.perubeyond.com/${lang}/testimonios` },
+    ],
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'TravelAgency',
+    name: 'Peru Beyond',
+    url: 'https://www.perubeyond.com',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '95',
+      bestRating: '5',
+    },
+  })} />
+
+  <Header lang={lang} />
+
+  <main class="bg-white">
+    <!-- ══ HERO ══ -->
+    <section class="tst-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20" style="height: 52vh;">
+      <img
+        src="/images/Machupicchu/IMG_7715.webp"
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%);"></div>
+      <div class="relative z-10">
+        <p class="script-title text-white/75 mb-3 text-lg">{c.kicker}</p>
+        <h1 class="tst-hero-title">
+          {c.title1} <span class="text-gold">{c.title2}</span>
+        </h1>
+        <p class="tst-hero-sub">{c.sub}</p>
+        <nav class="flex items-center justify-center gap-2 text-xs text-white/50 mt-5">
+          <a href={`/${lang}`} class="hover:text-white transition-colors">{c.breadcrumbHome}</a>
+          <span class="text-white/30">›</span>
+          <span class="text-white/80">{c.breadcrumbSelf}</span>
+        </nav>
+
+        <div class="tst-stats">
+          <div class="tst-stat">
+            <span class="tst-stat-num">4.9<span class="tst-stat-star">★</span></span>
+            <span class="tst-stat-label">{c.statRating}</span>
+          </div>
+          <div class="tst-stat-sep"></div>
+          <div class="tst-stat">
+            <span class="tst-stat-num">190+</span>
+            <span class="tst-stat-label">{c.statReviews}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ TESTIMONIOS ══ -->
+    <div class="pt-16">
+      <Testimonials lang={lang} showPageLink={false} />
+    </div>
+
+    <!-- ══ CTA FINAL ══ -->
+    <section class="relative overflow-hidden py-20 mt-4">
+      <div class="absolute inset-0 bg-navy"></div>
+      <div class="relative container-pb text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{c.ctaTitle}</h2>
+        <p class="text-white/60 max-w-xl mx-auto text-sm leading-relaxed mb-8">{c.ctaDesc}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/51943491959"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-[#25D366] text-white text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#1db954] transition-colors duration-200"
+          >
+            <i class="bi bi-whatsapp text-base"></i>
+            {t['cta.whatsapp']}
+          </a>
+          <a
+            href={`/${lang}/tours`}
+            class="inline-flex items-center gap-2 border border-[#c9a84c] text-[#c9a84c] text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#c9a84c] hover:text-navy transition-all duration-200"
+          >
+            {c.ctaBtn}
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} />
+</Layout>
+
+<style>
+  .tst-hero-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.2rem, 5.5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+  .tst-hero-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.72);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .tst-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.75rem;
+  }
+  .tst-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tst-stat-num {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #fff;
+  }
+  .tst-stat-star { color: #FFBC00; font-size: 1.2rem; margin-left: 2px; }
+  .tst-stat-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.55);
+    margin-top: 0.15rem;
+  }
+  .tst-stat-sep {
+    width: 1px;
+    height: 32px;
+    background: rgba(255,255,255,0.2);
+  }
+</style>

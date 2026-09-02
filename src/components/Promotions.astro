@@ -1,0 +1,151 @@
+---
+import { promotions } from '../data/promotions';
+
+interface Props {
+  lang?: 'es' | 'en' | 'pt';
+}
+const { lang = 'es' } = Astro.props;
+const withLang = (path: string) => `/${lang}${path}`;
+
+const active = promotions.filter((p) => p.active);
+const sectionTitle = {
+  es: 'Promociones y Descuentos',
+  en: 'Promotions & Discounts',
+  pt: 'Promoções e Descontos',
+}[lang];
+const sectionKicker = {
+  es: 'Ofertas Peru Beyond',
+  en: 'Peru Beyond Deals',
+  pt: 'Ofertas Peru Beyond',
+}[lang];
+---
+
+{active.length > 0 && (
+  <section class="section white">
+    <div class="container-pb">
+      <div class="text-center mb-10">
+        <span class="script-title">{sectionKicker}</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">{sectionTitle}</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {active.map((promo) => {
+          const c = promo.i18n[lang] ?? promo.i18n.es;
+          return (
+            <a href={withLang(promo.href)} class="promo-card">
+              <div class="promo-card__img-wrap">
+                <img src={promo.image} alt={c.title} loading="lazy" class="promo-card__img" />
+                <span class="promo-card__discount">{promo.discountLabel}</span>
+              </div>
+              <div class="promo-card__body">
+                <span class="promo-card__badge">{c.badge}</span>
+                <h3 class="promo-card__title">{c.title}</h3>
+                <p class="promo-card__desc">{c.desc}</p>
+                <div class="promo-card__prices">
+                  {promo.originalPrice && <span class="promo-card__price-old">{promo.originalPrice}</span>}
+                  {promo.promoPrice && <span class="promo-card__price-new">{promo.promoPrice}</span>}
+                </div>
+                <span class="promo-card__cta">
+                  {c.cta}
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+  .promo-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 12px rgba(0,0,0,.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .promo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.1);
+  }
+  .promo-card__img-wrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  .promo-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .promo-card:hover .promo-card__img { transform: scale(1.05); }
+  .promo-card__discount {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: #c9a84c;
+    color: #0d1b2e;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+  }
+  .promo-card__body {
+    padding: 1.25rem 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .promo-card__badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #c9a84c;
+  }
+  .promo-card__title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0d1b2e;
+    line-height: 1.3;
+  }
+  .promo-card__desc {
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+  }
+  .promo-card__prices {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .promo-card__price-old {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    text-decoration: line-through;
+  }
+  .promo-card__price-new {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0d1b2e;
+  }
+  .promo-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0d1b2e;
+    margin-top: 0.3rem;
+  }
+  .promo-card:hover .promo-card__cta { color: #c9a84c; }
+</style>

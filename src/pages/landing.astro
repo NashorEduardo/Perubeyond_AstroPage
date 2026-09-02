@@ -173,7 +173,9 @@ const socials = [
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Peru Beyond — Tours en Cusco con Guías Locales" />
   <meta name="twitter:description" content="Agencia de tours en Cusco con guías certificados. Machu Picchu, Valle Sagrado y experiencias auténticas por todo el Perú." />
-  <meta name="robots" content="index, follow" />
+  <!-- Landing tipo "link-in-bio" para redes sociales: no debe competir en
+       buscadores con la Home ni indexarse como contenido propio. -->
+  <meta name="robots" content="noindex, follow" />
   <link rel="icon" href="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp" type="image/webp" />
   <script type="application/ld+json">
   {
@@ -255,6 +257,10 @@ const socials = [
           </div>
           <span class="lt-rating__text">4.9 &middot; 192 reseñas</span>
         </div>
+        <a href="https://www.perubeyond.com/es" class="lt-website-link">
+          <i class="bi bi-globe2"></i>
+          <span>www.perubeyond.com</span>
+        </a>
       </div>
 
       <!-- ── REDES SOCIALES ── -->
@@ -816,6 +822,26 @@ const socials = [
     font-size: 0.7rem;
     color: rgba(255,255,255,0.45);
     font-weight: 500;
+  }
+  .lt-website-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.06);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.8);
+    transition: all 0.25s;
+  }
+  .lt-website-link i { color: #c9a84c; font-size: 0.85rem; }
+  .lt-website-link:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.32);
+    color: #fff;
   }
 
   /* ═══════════════════════════════

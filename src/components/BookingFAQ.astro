@@ -1,0 +1,108 @@
+---
+import { ui } from '../i18n/ui';
+
+interface Props {
+  lang?: 'es' | 'en' | 'pt';
+}
+const { lang = 'es' } = Astro.props;
+const t = ui[lang] ?? ui.es;
+
+const items = [
+  { q: t['booking_faq.q1'], a: t['booking_faq.a1'] },
+  { q: t['booking_faq.q2'], a: t['booking_faq.a2'] },
+  { q: t['booking_faq.q3'], a: t['booking_faq.a3'] },
+  { q: t['booking_faq.q4'], a: t['booking_faq.a4'] },
+  { q: t['booking_faq.q5'], a: t['booking_faq.a5'] },
+  { q: t['booking_faq.q6'], a: t['booking_faq.a6'] },
+  { q: t['booking_faq.q7'], a: t['booking_faq.a7'] },
+];
+---
+
+<section class="booking-faq" aria-labelledby="booking-faq-title">
+  <div class="flex items-center gap-4 mb-8">
+    <div class="w-1 h-10 bg-gold rounded-full"></div>
+    <div>
+      <span class="block text-xs font-bold uppercase tracking-widest text-gold mb-1">{t['booking_faq.badge']}</span>
+      <h2 id="booking-faq-title" class="text-3xl font-extrabold text-navy">{t['booking_faq.title']}</h2>
+    </div>
+  </div>
+
+  <div class="divide-y divide-gray-100" id="booking-faq-list">
+    {items.map((item, index) => (
+      <div class="booking-faq-item py-5" data-index={String(index)}>
+        <button
+          class="booking-faq-trigger w-full flex items-center justify-between gap-4 text-left group"
+          data-index={String(index)}
+          aria-expanded="false"
+        >
+          <span class="text-base font-bold text-navy group-hover:text-gold transition-colors">
+            {item.q}
+          </span>
+          <span class="booking-faq-icon flex-shrink-0 w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-gold group-hover:text-gold transition-all text-lg font-light">
+            +
+          </span>
+        </button>
+        <div class="booking-faq-answer overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+          <p class="text-gray-500 text-sm leading-relaxed pt-4 pb-2 pl-0">
+            {item.a}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <a href={`/${lang}/politica-cancelacion`} class="booking-faq-policy-link">
+    <i class="bi bi-shield-check"></i>
+    {t['booking_faq.policy_link']}
+    <i class="bi bi-arrow-right"></i>
+  </a>
+</section>
+
+<style>
+  .booking-faq-policy-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0d1b2e;
+    border-bottom: 1.5px solid rgba(201, 168, 76, 0.5);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .booking-faq-policy-link i:first-child { color: #c9a84c; }
+  .booking-faq-policy-link:hover {
+    color: #c9a84c;
+    border-color: #c9a84c;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.booking-faq-trigger').forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const index = (trigger as HTMLElement).dataset.index!;
+        const item = document.querySelector(`.booking-faq-item[data-index="${index}"]`);
+        if (!item) return;
+
+        const answer = item.querySelector('.booking-faq-answer') as HTMLElement;
+        const icon = item.querySelector('.booking-faq-icon') as HTMLElement;
+        const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+        document.querySelectorAll('.booking-faq-item').forEach((el) => {
+          const a = el.querySelector('.booking-faq-answer') as HTMLElement;
+          const ic = el.querySelector('.booking-faq-icon') as HTMLElement;
+          if (a) a.style.maxHeight = '0px';
+          if (ic) { ic.textContent = '+'; ic.classList.remove('bg-gold', 'text-white', 'border-gold'); }
+        });
+
+        if (!isOpen) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.textContent = '−';
+          icon.classList.add('bg-gold', 'text-white', 'border-gold');
+        }
+      });
+    });
+  });
+</script>

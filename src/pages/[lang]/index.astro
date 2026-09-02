@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
+import Promotions from '../../components/Promotions.astro';
 import About from '../../components/About.astro';
 import FavoriteTours from '../../components/FavoriteTours.astro';
 import MachuPicchuTours from '../../components/MachuPicchuTours.astro';
@@ -27,13 +28,14 @@ const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
   <link slot="head" rel="preload" as="video" href="/images/PeruBeyond/MachuPicchu-PerúBeyond.mp4" type="video/mp4" />
   <Header lang={lang} />
   <Hero />
+  <Promotions lang={lang} />
   <About />
   <FavoriteTours />
   <MachuPicchuTours />
   <DestinationsSlider />
   <ToursPeru />
   <ToursCuscoSlider />
-  <Testimonials />
+  <Testimonials lang={lang} />
   <WhyChooseUs />
   <BlogPreview />
   <Footer lang={lang} />

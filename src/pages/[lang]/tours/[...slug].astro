@@ -8,6 +8,7 @@ import { ui } from '../../../i18n/ui';
 // Otros tipos de Esperiencias
 import ToursPeru from '../../../components/ToursPeru.astro';
 import Testimonials from '../../../components/Testimonials.astro';
+import BookingFAQ from '../../../components/BookingFAQ.astro';
 
 export async function getStaticPaths() {
   const tourEntries = await getCollection('tours');
@@ -525,6 +526,9 @@ const langAlternates = {
         </div>
       </section>
 
+      <!-- ── SECCIÓN: CÓMO RESERVAR CON NOSOTROS ── -->
+      <BookingFAQ lang={lang} />
+
       <!-- ── LIGHTBOX ── -->
       {gallery && gallery.length > 0 && (
         <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 hidden items-center justify-center">
@@ -803,7 +807,7 @@ const langAlternates = {
 
  <!-- COMENTARIOS  -->
   <div id="comentarios">
-    <Testimonials />
+    <Testimonials lang={lang} showPageLink={false} />
   </div>
 
   <!-- OTROS TIPOS DE EXPERIENCIAS  -->

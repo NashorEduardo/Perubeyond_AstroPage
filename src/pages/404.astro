@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { ui } from '../i18n/ui';
+
+const t = ui.es;
+---
+
+<Layout
+  title="Página no encontrada | Peru Beyond"
+  description="La página que buscas no existe o fue movida. Vuelve al inicio o explora nuestros tours en Cusco, Machu Picchu y todo Perú."
+  lang="es"
+>
+  <meta slot="head" name="robots" content="noindex, follow" />
+  <Header lang="es" />
+
+  <main class="notfound-main relative flex flex-col items-center justify-center text-center text-white px-4 pt-24">
+    <img
+      src="/images/Machupicchu/IMG_7726.webp"
+      alt=""
+      aria-hidden="true"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.75) 100%);"></div>
+
+    <div class="relative z-10 flex flex-col items-center max-w-lg">
+      <img
+        src="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp"
+        alt="Gallito Peru Beyond"
+        class="w-28 md:w-36 drop-shadow-2xl mb-6"
+        width="140"
+        height="199"
+      />
+
+      <span class="notfound-badge" data-i18n="404.badge">{t['404.badge']}</span>
+      <h1 class="notfound-title" data-i18n="404.title">{t['404.title']}</h1>
+      <p class="notfound-desc" data-i18n="404.desc">{t['404.desc']}</p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
+        <a id="notfound-home" href="/es" class="notfound-btn notfound-btn--gold" data-i18n="404.cta_home">
+          {t['404.cta_home']}
+        </a>
+        <a id="notfound-tours" href="/es/tours" class="notfound-btn notfound-btn--outline" data-i18n="404.cta_tours">
+          {t['404.cta_tours']}
+        </a>
+      </div>
+
+      <a
+        href="https://wa.me/51943491959"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="notfound-whatsapp"
+      >
+        <i class="bi bi-whatsapp"></i>
+        <span data-i18n="404.cta_whatsapp">{t['404.cta_whatsapp']}</span>
+      </a>
+    </div>
+  </main>
+
+  <Footer lang="es" />
+
+  <script is:inline>
+    (function () {
+      var supported = ['es', 'en', 'pt'];
+      var seg = window.location.pathname.split('/').filter(Boolean)[0];
+      var lang = supported.indexOf(seg) !== -1 ? seg : 'es';
+
+      if (window.__pb_applyLang) window.__pb_applyLang(lang);
+
+      var home = document.getElementById('notfound-home');
+      var tours = document.getElementById('notfound-tours');
+      if (home) home.setAttribute('href', '/' + lang);
+      if (tours) tours.setAttribute('href', '/' + lang + '/tours');
+
+      document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : lang);
+    })();
+  </script>
+</Layout>
+
+<style>
+  .notfound-main {
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .notfound-badge {
+    display: inline-block;
+    background: rgba(201, 168, 76, 0.18);
+    border: 1px solid rgba(201, 168, 76, 0.45);
+    color: #f6d06a;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 9999px;
+    margin-bottom: 1.25rem;
+  }
+  .notfound-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+  .notfound-desc {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    max-width: 30rem;
+  }
+  .notfound-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 2rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: all 0.25s;
+  }
+  .notfound-btn--gold {
+    background: #c9a84c;
+    color: #0d1b2e;
+  }
+  .notfound-btn--gold:hover {
+    background: #f6d06a;
+    transform: translateY(-2px);
+  }
+  .notfound-btn--outline {
+    border: 1.5px solid rgba(255,255,255,0.4);
+    color: #fff;
+  }
+  .notfound-btn--outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: #fff;
+  }
+  .notfound-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.65);
+    transition: color 0.2s;
+  }
+  .notfound-whatsapp i { color: #25D366; font-size: 1.1rem; }
+  .notfound-whatsapp:hover { color: #fff; }
+</style>
