@@ -1,5 +1,6 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import { imageAlts } from '../i18n/imageAlts';
 
 interface Props {
   lang?: 'es' | 'en' | 'pt';
@@ -260,10 +261,10 @@ localizeLinks(menu, lang);
                   <div class="col-span-2 relative h-full min-h-[340px] group/feat overflow-hidden">
                     {/* Tomamos la primera imagen del array para el fondo */}
                     {m.details.images && m.details.images.length > 0 && (
-                      <img 
-                        src={m.details.images[0].src} 
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/feat:scale-105" 
-                        alt="Tours Perú"
+                      <img
+                        src={m.details.images[0].src}
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/feat:scale-105"
+                        alt={imageAlts.toursInCity[lang](m.details.images[0].label)}
                         loading="lazy"
                       />
                     )}
@@ -597,7 +598,7 @@ localizeLinks(menu, lang);
                   <div class="relative overflow-hidden">
                     <img src={m.details.image}
                          class="absolute inset-0 w-full h-full object-cover"
-                         alt="Peru Beyond Team"
+                         alt={imageAlts.machuPicchuCitadel[lang]}
                          loading="lazy" />
                     <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 right-0 p-6">

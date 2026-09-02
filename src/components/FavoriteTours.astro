@@ -1,8 +1,10 @@
 ---
 
+import { imageAlts } from '../i18n/imageAlts';
+
 const lang = Astro.url.pathname.split('/')[1];
 const validLangs = ['es', 'en', 'pt'];
-const currentLang = validLangs.includes(lang) ? lang : 'es';
+const currentLang = (validLangs.includes(lang) ? lang : 'es') as 'es' | 'en' | 'pt';
 
 // helper
 const getTourLink = (slug: string, category: string): string => {
@@ -15,6 +17,7 @@ const tours = [
   {
     image: '/images/Cuzco/FT7.webp',
     title: 'Cusco + Valle Sagrado + Machu Picchu',
+    alt: imageAlts.kachampaDance[currentLang],
     duration: '4 Días / 3 Noches',
     price: '462',
     description: 'Explora la capital del Imperio Inca, el místico Valle Sagrado y la maravilla del mundo: Machu Picchu.',
@@ -25,6 +28,7 @@ const tours = [
   {
     image: '/images/Lima/lima.webp',
     title: 'Lima + Paracas + Ica',
+    alt: imageAlts.miraflores[currentLang],
     duration: '9 Días / 8 Noches',
     price: '690',
     description: 'Desde la vibrante capital peruana hasta las dunas de Ica y la magia de la Reserva Nacional de Paracas.',
@@ -36,6 +40,7 @@ const tours = [
   {
     image: '/images/Montaña_de_7_colores/DSC03130.webp',
     title: 'Cusco + Machu Picchu + Montaña 7 Colores',
+    alt: imageAlts.vinicunca[currentLang],
     duration: '4 Días / 3 Noches',
     price: '447',
     description: 'Machu Picchu y el espectáculo natural de la Montaña Arcoíris, uno de los paisajes más únicos del mundo.',
@@ -46,6 +51,7 @@ const tours = [
   {
     image: '/images/ValleSagrado/ollantaytambo.webp',
     title: 'Tour Valle Sagrado de los Incas',
+    alt: imageAlts.ollantaytambo[currentLang],
     duration: 'Full Day',
     price: '39',
     description: 'Recorre Pisac, Ollantaytambo y los mercados artesanales del corazón del Valle Sagrado inca.',
@@ -56,33 +62,13 @@ const tours = [
   {
     image: '/images/Huacachina/ica.webp',
     title: 'Lima + Paracas + Huacachina',
+    alt: imageAlts.huacachinaOasis[currentLang],
     duration: '7 Días / 6 Noches',
     price: '589',
     description: 'El oasis de Huacachina, sandboard en las dunas gigantes y la biodiversidad única de Paracas.',
     slug: 'tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias',
     category: 'peru',
     row: 'mid',
-  },
-  // Fila 3 (2 tarjetas - más altas)
-  {
-    image: '/images/Laguna_Humantay/DSC04361.webp',
-    title: 'Cusco + Machu Picchu + Laguna Humantay',
-    duration: '5 Días / 4 Noches',
-    price: '486',
-    description: 'Cultura, historia y naturaleza: ruinas incas, la ciudadela de Machu Picchu y la turquesa laguna Humantay.',
-    slug: 'cusco-valle-sagrado-machu-picchu-4d-3n',
-    category: 'machupicchu',
-    row: 'bottom',
-  },
-  {
-    image: '/images/Paracas/pexels-gilmerdiaz-14097704.webp',
-    title: 'Lima + Paracas',
-    duration: '8 Días / 7 Noches',
-    price: '653',
-    description: 'Lima colonial y moderna, combinada con la riqueza natural y marina de la Reserva Nacional de Paracas.',
-    slug: 'cusco-valle-sagrado-machu-picchu-4d-3n',
-    category: 'peru',
-    row: 'bottom',
   },
 ];
 
@@ -134,7 +120,7 @@ const midTours = tours.filter(t => t.row === 'mid');
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
       {topTours.map(t => (
         <a href={getTourLink(t.slug, t.category)} class="group relative block overflow-hidden">
-          <img src={t.image} alt={t.title} class="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <img src={t.image} alt={t.alt} class="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
           <div class="absolute bottom-0 left-0 right-0 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 50%, transparent 100%); padding: 4rem 1.5rem 1.5rem;">
             <div class="flex items-center justify-between mb-2">
               <span class="text-sm font-bold tracking-widest uppercase text-white/90">{t.duration}</span>
@@ -151,7 +137,7 @@ const midTours = tours.filter(t => t.row === 'mid');
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {midTours.map(t => (
         <a href={getTourLink(t.slug, t.category)} class="group relative block overflow-hidden">
-          <img src={t.image} alt={t.title} class="w-full h-[380px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <img src={t.image} alt={t.alt} class="w-full h-[380px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
           <div class="absolute bottom-0 left-0 right-0 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 50%, transparent 100%); padding: 3rem 1.25rem 1.25rem;">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs font-bold tracking-widest uppercase text-white/90">{t.duration}</span>

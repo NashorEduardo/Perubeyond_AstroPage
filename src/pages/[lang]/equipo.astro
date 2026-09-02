@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { imageAlts } from '../../i18n/imageAlts';
+import { pageMeta } from '../../i18n/pageMeta';
 
 export function getStaticPaths() {
   return [
@@ -105,14 +107,18 @@ const tabs = [
 ];
 ---
 
-<Layout lang={lang}>
+<Layout
+  title={pageMeta.equipo[lang].title}
+  description={pageMeta.equipo[lang].description}
+  lang={lang}
+>
   <Header lang={lang} />
 
   <!-- ══ PORTADA / COVER HERO ══ -->
   <section class="cover-hero">
     <img
       src="/images/Laguna_Humantay/DSC04361.webp"
-      alt="Nuestro Equipo — Peru Beyond"
+      alt={imageAlts.humantaySnowPeak[lang]}
       class="cover-img"
     />
     <div class="cover-overlay"></div>
@@ -161,7 +167,7 @@ const tabs = [
         <div class="team-photo-wrap">
           <img
             src="/images/Laguna_Humantay/DSC04385.webp"
-            alt="Equipo Peru Beyond"
+            alt={imageAlts.teamHumantay[lang]}
             class="team-photo-img"
           />
           <div class="team-photo-badge">

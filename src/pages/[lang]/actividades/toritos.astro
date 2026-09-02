@@ -2,6 +2,8 @@
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
+import { imageAlts } from '../../../i18n/imageAlts';
+import { pageMeta } from '../../../i18n/pageMeta';
 
 export function getStaticPaths() {
   return [
@@ -20,20 +22,20 @@ const experience = [
 ];
 
 const symbols = [
-  { label: 'Protección', desc: 'del hogar',            icon: 'bi-shield-check' },
+  { label: 'Protección', desc: 'del hogar',             icon: 'bi-shield-check' },
   { label: 'Prosperidad', desc: 'y abundancia',         icon: 'bi-stars'        },
   { label: 'Fertilidad',  desc: 'y crecimiento',        icon: 'bi-flower1'      },
-  { label: 'Conexión',    desc: 'con la cultura andina', icon: 'bi-heart'       },
+  { label: 'Conexión',    desc: 'con la cultura andina', icon: 'bi-heart'        },
 ];
 
 const gallery = [
-  '/images/Actividades/Toritos_01.webp',
-  '/images/Actividades/Toritos_02.webp',
-  '/images/Actividades/Toritos_03.webp',
-  '/images/Actividades/Toritos_04.webp',
-  '/images/Actividades/Toritos_05.webp',
-  '/images/Actividades/Toritos_06.webp',
-  '/images/Actividades/Toritos_07.webp',
+  { src: '/images/Actividades/Toritos_01.webp', alt: imageAlts.toritos01[lang] },
+  { src: '/images/Actividades/Toritos_02.webp', alt: imageAlts.toritos02[lang] },
+  { src: '/images/Actividades/Toritos_03.webp', alt: imageAlts.toritos03[lang] },
+  { src: '/images/Actividades/Toritos_04.webp', alt: imageAlts.toritos04[lang] },
+  { src: '/images/Actividades/Toritos_05.webp', alt: imageAlts.toritos05[lang] },
+  { src: '/images/Actividades/Toritos_06.webp', alt: imageAlts.toritos06[lang] },
+  { src: '/images/Actividades/Toritos_07.webp', alt: imageAlts.toritos07[lang] },
 ];
 
 const otherActivities = [
@@ -41,6 +43,7 @@ const otherActivities = [
     name: 'Clásicos de la Gastronomía Peruana',
     desc: 'Taller gastronómico · 2 horas · Cusco',
     img: '/images/Actividades/Platillo_01.webp',
+    alt: imageAlts.andeanPlate[lang],
     href: `/${lang}/actividades/gastronomia`,
     icon: 'bi-stars',
     color: 'bg-amber-500',
@@ -49,6 +52,7 @@ const otherActivities = [
     name: 'Making Sour + Pisco Tasting',
     desc: 'Coctelería artesanal · 2–3 horas · Cusco',
     img: '/images/Actividades/Pisco.webp',
+    alt: imageAlts.piscoSour[lang],
     href: `/${lang}/actividades/pisco`,
     icon: 'bi-cup-straw',
     color: 'bg-yellow-400',
@@ -57,8 +61,8 @@ const otherActivities = [
 ---
 
 <Layout
-  title="Pintado de Toritos de Pucará | PeruBeyond"
-  description="Descubre el arte andino peruano pintando tu propio Torito de Pucará. Un taller cultural único en Cusco donde te llevas tu creación como recuerdo. Reserva con PeruBeyond."
+  title={pageMeta.actividadToritos[lang].title}
+  description={pageMeta.actividadToritos[lang].description}
   lang={lang}
 >
   <Header lang={lang} />
@@ -67,7 +71,7 @@ const otherActivities = [
 
     <!-- Hero -->
     <section class="act-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20">
-      <img src="/images/Actividades/Toritos_01.webp" alt="Torito de Pucará" class="hero-bg-img" />
+      <img src="/images/Actividades/Toritos_01.webp" alt={imageAlts.toritos01[lang]} class="hero-bg-img" />
       <div class="hero-overlay"></div>
       <div class="relative z-10 max-w-3xl">
         <span class="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-gold mb-4 bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full">
@@ -139,9 +143,9 @@ const otherActivities = [
 
             <!-- Galería -->
             <div class="grid grid-cols-2 gap-2">
-              <img src={gallery[0]} alt="Torito de Pucará" class="act-img col-span-2 h-64 object-cover rounded-xl" loading="lazy" />
+              <img src={gallery[0].src} alt={gallery[0].alt} class="act-img col-span-2 h-64 object-cover rounded-xl" loading="lazy" />
               {gallery.slice(1).map(img => (
-                <img src={img} alt="Torito de Pucará" class="act-img h-40 object-cover rounded-xl" loading="lazy" />
+                <img src={img.src} alt={img.alt} class="act-img h-40 object-cover rounded-xl" loading="lazy" />
               ))}
             </div>
 
@@ -217,7 +221,7 @@ const otherActivities = [
           <div class="grid sm:grid-cols-2 gap-5">
             {otherActivities.map(act => (
               <a href={act.href} class="group relative overflow-hidden rounded-2xl h-52 block">
-                <img src={act.img} alt={act.name} class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                <img src={act.img} alt={act.alt} class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                 <div class="absolute inset-0 flex flex-col justify-end p-6">
                   <div class={`w-8 h-8 rounded-lg ${act.color} flex items-center justify-center mb-2`}>
@@ -233,7 +237,7 @@ const otherActivities = [
 
         <!-- CTA Banner -->
         <section class="act-cta-banner relative overflow-hidden rounded-3xl">
-          <img src="/images/Actividades/Toritos_01.webp" alt="Toritos de Pucará — artesanía tradicional peruana" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+          <img src="/images/Actividades/Toritos_01.webp" alt={imageAlts.toritos01[lang]} class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
           <div class="absolute inset-0 bg-navy/80"></div>
           <div class="relative z-10 text-center py-16 px-6">
             <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">¿Listo para vivir el Perú?</span>

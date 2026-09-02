@@ -1,4 +1,11 @@
 ---
+import { imageAlts } from '../i18n/imageAlts';
+
+interface Props {
+  lang?: 'es' | 'en' | 'pt';
+}
+const { lang = 'es' } = Astro.props;
+
 const certLogos = [
   { src: '/images/PeruBeyond/gercetur.webp', alt: 'Gercetur' },
   { src: '/images/PeruBeyond/marca_peru.webp', alt: 'Marca Perú' },
@@ -19,7 +26,7 @@ const certLogos = [
           <div class="ig-header">
             <div class="ig-avatar">
               <div class="ig-avatar-inner">
-                <img src="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp" alt="perubeyond" />
+                <img src="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp" alt={imageAlts.mascot[lang]} />
               </div>
             </div>
             <div class="ig-user">
@@ -35,7 +42,7 @@ const certLogos = [
           <div class="ig-image-wrap">
             <img
               src="/images/Huacachina/pexels-romero-gonzales-miocid-king-piero-2152488445-32543951.webp"
-              alt="Huacachina oasis, Ica - Peru Beyond"
+              alt={imageAlts.huacachinaOasis[lang]}
               loading="lazy"
             />
           </div>

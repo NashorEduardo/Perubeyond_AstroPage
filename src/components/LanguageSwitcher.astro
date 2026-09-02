@@ -10,6 +10,15 @@ const langs = [
   { code: 'pt', flag: '🇧🇷', label: 'Português' },
 ];
 const current = langs.find((l) => l.code === lang) ?? langs[0];
+
+// href real por idioma (reemplaza el primer segmento /es|en|pt/... de la ruta actual)
+// para que el selector sea un enlace rastreable por buscadores, no solo un botón con JS.
+const pathParts = Astro.url.pathname.split('/');
+const getLangHref = (code: string) => {
+  const parts = [...pathParts];
+  parts[1] = code;
+  return parts.join('/') || `/${code}`;
+};
 ---
 
 <div class="lang-switcher relative" id="lang-switcher">
@@ -32,13 +41,14 @@ const current = langs.find((l) => l.code === lang) ?? langs[0];
     style="min-width:140px; z-index:200;"
   >
     {langs.map(l => (
-      <button
+      <a
+        href={getLangHref(l.code)}
         class="lang-option w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 text-navy text-sm font-semibold transition-colors text-left"
         data-lang={l.code}
       >
         <span class="text-base">{l.flag}</span>
         <span>{l.label}</span>
-      </button>
+      </a>
     ))}
   </div>
 </div>
@@ -85,16 +95,12 @@ const current = langs.find((l) => l.code === lang) ?? langs[0];
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDropdown(); });
 
   document.querySelectorAll('.lang-option').forEach(function (opt) {
+    // El <a href> ya navega al idioma correcto; aquí solo guardamos la preferencia.
     opt.addEventListener('click', function () {
       var lang = opt.getAttribute('data-lang');
       localStorage.setItem('pb_lang', lang);
       setDisplay(lang);
       closeDropdown();
-      // Todas las páginas viven bajo /es|en|pt/..., así que basta con
-      // reemplazar el primer segmento de la ruta actual.
-      var parts = window.location.pathname.split('/');
-      parts[1] = lang;
-      window.location.href = parts.join('/') || ('/' + lang);
     });
   });
 })();

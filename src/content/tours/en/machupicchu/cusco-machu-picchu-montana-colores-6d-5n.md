@@ -1,5 +1,5 @@
 ﻿---
-title: "Cusco, Machu Picchu and Rainbow Mountain"
+title: "Cusco, Machu Picchu, Humantay Lake and Rainbow Mountain"
 price: "524"
 duration: "6 Days / 5 Nights"
 image: "/images/Cuzco/cusco.webp"
