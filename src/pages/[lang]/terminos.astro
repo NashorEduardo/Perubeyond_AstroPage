@@ -330,7 +330,7 @@ const sections = [
           <!-- Columna derecha: artículos -->
           <div>
             {sections.map((section) => (
-              <div class="terms-item">
+              <div class="terms-item" id={section.title.startsWith('19.') ? 'privacidad' : undefined}>
                 <h3 class="text-base md:text-lg font-bold text-navy mb-3 flex items-start gap-3">
                   <span class="terms-bullet"></span>
                   {section.title}

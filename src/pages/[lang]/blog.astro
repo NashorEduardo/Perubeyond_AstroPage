@@ -14,6 +14,12 @@ export function getStaticPaths() {
 }
 const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
 
+const searchCopy = {
+  es: { placeholder: 'Buscar artículos por título...', noResults: 'No encontramos artículos que coincidan con tu búsqueda.' },
+  en: { placeholder: 'Search articles by title...', noResults: 'No articles match your search.' },
+  pt: { placeholder: 'Buscar artigos por título...', noResults: 'Nenhum artigo encontrado para sua busca.' },
+}[lang];
+
 const featuredPost = {
   date: '14 de Junio, 2026',
   category: 'Historia & Cultura',
@@ -158,8 +164,25 @@ const gridPosts = [
           </p>
         </div>
 
+        <!-- ── Buscador de artículos ── -->
+        <div class="blog-search-wrap">
+          <div class="blog-search-box">
+            <svg class="blog-search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
+            </svg>
+            <input
+              type="search"
+              id="blog-search-input"
+              class="blog-search-input"
+              placeholder={searchCopy.placeholder}
+              aria-label={searchCopy.placeholder}
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
         <!-- ── ARTÍCULO DESTACADO ── -->
-        <div class="mb-10">
+        <div class="mb-10" id="blog-featured-block" data-title={featuredPost.title.toLowerCase()}>
           <!-- Separador con etiqueta -->
           <div class="featured-label-row mb-5">
             <div class="label-line"></div>
@@ -196,16 +219,16 @@ const gridPosts = [
         </div>
 
         <!-- Separador grid -->
-        <div class="featured-label-row mb-6">
+        <div class="featured-label-row mb-6" id="blog-grid-label">
           <div class="label-line"></div>
           <span class="label-text">Más Artículos</span>
           <div class="label-line"></div>
         </div>
 
         <!-- ── Grid de artículos ── -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="blog-grid">
           {gridPosts.map(post => (
-            <a href={`/${lang}${post.slug}`} class="grid-card group block overflow-hidden relative" style="height: 380px;">
+            <a href={`/${lang}${post.slug}`} class="grid-card group block overflow-hidden relative" style="height: 380px;" data-title={post.title.toLowerCase()}>
               <img
                 src={post.image}
                 alt={post.title}
@@ -225,9 +248,51 @@ const gridPosts = [
           ))}
         </div>
 
+        <!-- ── Sin resultados ── -->
+        <p id="blog-no-results" class="blog-no-results" hidden>{searchCopy.noResults}</p>
+
       </div>
     </div>
   </main>
+
+  <script define:vars={{ noResultsText: searchCopy.noResults }}>
+    (function () {
+      const input = document.getElementById('blog-search-input');
+      if (!input) return;
+      const featured = document.getElementById('blog-featured-block');
+      const gridLabel = document.getElementById('blog-grid-label');
+      const cards = Array.from(document.querySelectorAll('#blog-grid .grid-card'));
+      const noResults = document.getElementById('blog-no-results');
+
+      const accentMap = { 'á':'a','é':'e','í':'i','ó':'o','ú':'u','ü':'u','ñ':'n','ã':'a','õ':'o','â':'a','ê':'e','ô':'o','à':'a','ç':'c' };
+      const normalize = (s) => (s || '').toLowerCase().trim().replace(/[áéíóúüñãõâêôàç]/g, (ch) => accentMap[ch] || ch);
+
+      input.addEventListener('input', () => {
+        const query = normalize(input.value);
+
+        if (!query) {
+          if (featured) featured.hidden = false;
+          if (gridLabel) gridLabel.hidden = false;
+          cards.forEach((card) => { card.hidden = false; });
+          if (noResults) noResults.hidden = true;
+          return;
+        }
+
+        const featuredMatch = featured ? normalize(featured.dataset.title).includes(query) : false;
+        if (featured) featured.hidden = !featuredMatch;
+
+        let visibleCount = featuredMatch ? 1 : 0;
+        cards.forEach((card) => {
+          const match = normalize(card.dataset.title).includes(query);
+          card.hidden = !match;
+          if (match) visibleCount++;
+        });
+
+        if (gridLabel) gridLabel.hidden = visibleCount === (featuredMatch ? 1 : 0) && cards.every(c => c.hidden);
+        if (noResults) noResults.hidden = visibleCount !== 0;
+      });
+    })();
+  </script>
 
   <Footer lang={lang} />
 </Layout>
@@ -289,6 +354,52 @@ const gridPosts = [
     line-height: 1.75;
     max-width: 600px;
     margin: 0 auto;
+  }
+
+  /* ── Buscador ── */
+  .blog-search-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  .blog-search-box {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+  }
+  .blog-search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.05rem;
+    height: 1.05rem;
+    color: #c9a84c;
+    pointer-events: none;
+  }
+  .blog-search-input {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.75rem;
+    border: 1px solid #e8dfc9;
+    border-radius: 999px;
+    background: #ffffff;
+    font-size: 0.875rem;
+    color: #0d1b2e;
+    outline: none;
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+  .blog-search-input::placeholder {
+    color: #9ca3af;
+  }
+  .blog-search-input:focus {
+    border-color: #c9a84c;
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+  }
+  .blog-no-results {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    padding: 3rem 1rem;
   }
 
   /* ── Etiqueta separadora ── */
