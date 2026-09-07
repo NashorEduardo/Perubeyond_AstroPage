@@ -1,19 +1,19 @@
 ---
 const certLogos = [
-  { src: 'https://gercetur.com.pe/wp-content/uploads/2025/11/LOGO-POSITIVO-scaled-e1763582114614.png', alt: 'Gercetur' },
-  { src: 'https://pirka.pe/wp-content/uploads/2025/07/Logo-Marca-Peru-jpeg.jpg', alt: 'Marca Perú' },
-  { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfG9ZFoYjpvD34XX1veRJ3nEbPqrMrCPI1Aw&s', alt: 'TripAdvisor' },
-  { src: 'https://mocatravelperu.com/wp-content/uploads/2021/09/protegeme.png', alt: 'Protegeme' },
-  { src: 'https://www.wayraqperu.com/wp-content/uploads/mincetur.png', alt: 'Mincetur' },
+  { src: '/images/PeruBeyond/gercetur.webp', alt: 'Gercetur' },
+  { src: '/images/PeruBeyond/marca_peru.webp', alt: 'Marca Perú' },
+  { src: '/images/PeruBeyond/tripadvisor_2025.webp', alt: 'TripAdvisor' },
+  { src: '/images/PeruBeyond/protegeme.webp', alt: 'Protegeme' },
+  { src: '/images/PeruBeyond/mincetur.webp', alt: 'Mincetur' },
 ];
 
 const socialImages = [
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Suttoc_Paccha_Private_Conservation_Area_%28PCA%29_01.jpg', alt: 'Bosque de queuñas nativas en Cusco', caption: 'Reforestación con especies nativas' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Suttoc_Paccha_Private_Conservation_Area_%28PCA%29_02.jpg', alt: 'Bosque andino nativo en Cusco', caption: 'Reforestación con especies nativas' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Suttoc_pacchac_%28PCA%29_15.jpg', alt: 'Sendero entre queuñales en los Andes', caption: 'Reforestación con especies nativas' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/1/17/Quechua_Children%2C_Cuzco_%286974675076%29.jpg', alt: 'Niños de comunidades altoandinas de Cusco', caption: 'Salud para comunidades altoandinas' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Quechua_children_in_traditional_dress_Andes_Peru.jpg', alt: 'Niños quechua de los Andes peruanos', caption: 'Salud para comunidades altoandinas' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Ni%C3%B1os_del_Cuzco.JPG', alt: 'Niños del Cusco', caption: 'Salud para comunidades altoandinas' },
+  { src: '/images/PeruBeyond/accion-social/reforestacion-1.webp', alt: 'Bosque de queuñas nativas en Cusco', caption: 'Reforestación con especies nativas' },
+  { src: '/images/PeruBeyond/accion-social/reforestacion-2.webp', alt: 'Bosque andino nativo en Cusco', caption: 'Reforestación con especies nativas' },
+  { src: '/images/PeruBeyond/accion-social/reforestacion-3.webp', alt: 'Sendero entre queuñales en los Andes', caption: 'Reforestación con especies nativas' },
+  { src: '/images/PeruBeyond/accion-social/salud-1.webp', alt: 'Niños de comunidades altoandinas de Cusco', caption: 'Salud para comunidades altoandinas' },
+  { src: '/images/PeruBeyond/accion-social/salud-2.webp', alt: 'Niños quechua de los Andes peruanos', caption: 'Salud para comunidades altoandinas' },
+  { src: '/images/PeruBeyond/accion-social/salud-3.webp', alt: 'Niños del Cusco', caption: 'Salud para comunidades altoandinas' },
 ];
 
 const reviews = [
@@ -311,16 +311,31 @@ const socials = [
         </div>
       </div>
 
-      <!-- ── SECOND CTA: COTIZA TU VIAJE ── -->
-      <a href="https://wa.me/51943491959?text=Hola%2C%20quiero%20cotizar%20mi%20viaje%20a%20Per%C3%BA" target="_blank" rel="noopener noreferrer" class="lt-cta-gold">
-        <i class="bi bi-calendar-check-fill"></i>
-        <span>Cotiza tu viaje ahora — es gratis</span>
-        <i class="bi bi-arrow-right lt-cta-gold__arrow"></i>
-      </a>
+      <!-- ── FORMULARIO: COTIZA TU VIAJE (CAPTURA DE LEADS) ── -->
+      <div class="lt-section lt-quote" id="cotizar">
+        <p class="lt-section__label">Cotiza tu viaje ahora — es gratis</p>
+        <form id="quoteForm" class="lt-quote__form" novalidate>
+          <input type="text" name="nombre" placeholder="Nombre" required class="lt-quote__input" />
+          <input type="tel" name="whatsapp" placeholder="Tu WhatsApp (con código de país)" required class="lt-quote__input" />
+          <div class="lt-quote__row">
+            <input type="text" name="pais" placeholder="País" class="lt-quote__input" />
+            <input type="number" name="viajeros" placeholder="N.º viajeros" min="1" class="lt-quote__input" />
+          </div>
+          <input type="text" name="fecha" placeholder="Fecha aproximada de viaje" class="lt-quote__input" />
+          <button type="submit" class="lt-quote__submit">
+            <i class="bi bi-send-fill"></i>
+            <span>Recibir cotización</span>
+          </button>
+        </form>
+        <a href="https://wa.me/51943491959?text=Hola%2C%20quiero%20cotizar%20mi%20viaje%20a%20Per%C3%BA" target="_blank" rel="noopener noreferrer" class="lt-quote__alt">
+          <i class="bi bi-whatsapp"></i> o escríbenos directo por WhatsApp
+        </a>
+      </div>
 
       <!-- ── PAQUETES MÁS EMBLEMÁTICOS ── -->
       <div class="lt-section">
         <h2 class="lt-section__label">Paquetes más emblemáticos</h2>
+        <p class="lt-section__sub">Cupos sujetos a disponibilidad — consulta tu fecha por WhatsApp</p>
         <div class="lt-carousel-wrap">
           <div class="lt-carousel-track" id="pkgTrack">
             {packages.map((p) => (
@@ -507,6 +522,18 @@ const socials = [
             <summary>¿Es seguro viajar con una agencia local en Cusco?</summary>
             <p>Absolutamente. Peru Beyond está registrada en MINCETUR, respaldada por Marca Perú y cuenta con el seguro de viaje Protegeme. Operamos con grupos reducidos para máxima seguridad y atención personalizada.</p>
           </details>
+          <details class="lt-faq__item">
+            <summary>¿Cómo confirmo mi reserva?</summary>
+            <p>Tu reserva queda confirmada al abonar un depósito mínimo del 30% del valor del servicio y recibir de nuestra parte un voucher o correo de confirmación. El saldo restante se cancela antes del inicio del tour.</p>
+          </details>
+          <details class="lt-faq__item">
+            <summary>¿Qué métodos de pago aceptan?</summary>
+            <p>Aceptamos transferencias bancarias nacionales e internacionales, tarjetas Visa y Mastercard, WeTravel, Western Union / MoneyGram y depósitos en efectivo.</p>
+          </details>
+          <details class="lt-faq__item">
+            <summary>¿Qué pasa si necesito cancelar o cambiar la fecha de mi viaje?</summary>
+            <p>Puedes modificar tu reserva según disponibilidad, siempre que no existan saldos pendientes. Si necesitas cancelar, aplicamos penalidades escalonadas según la anticipación con la que canceles. Consulta el detalle completo en nuestra política de reservas y cancelación.</p>
+          </details>
         </div>
       </div>
 
@@ -553,6 +580,30 @@ const socials = [
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Absolutamente. Peru Beyond está registrada en MINCETUR, respaldada por Marca Perú y cuenta con el seguro de viaje Protegeme. Operamos con grupos reducidos para máxima seguridad y atención personalizada."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo confirmo mi reserva?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tu reserva queda confirmada al abonar un depósito mínimo del 30% del valor del servicio y recibir de nuestra parte un voucher o correo de confirmación. El saldo restante se cancela antes del inicio del tour."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué métodos de pago aceptan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aceptamos transferencias bancarias nacionales e internacionales, tarjetas Visa y Mastercard, WeTravel, Western Union / MoneyGram y depósitos en efectivo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué pasa si necesito cancelar o cambiar la fecha de mi viaje?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Puedes modificar tu reserva según disponibilidad, siempre que no existan saldos pendientes. Si necesitas cancelar, aplicamos penalidades escalonadas según la anticipación con la que canceles. Consulta el detalle completo en nuestra política de reservas y cancelación."
             }
           }
         ]
@@ -649,6 +700,18 @@ const socials = [
       <span class="lt-mascot-float__badge">
         <i class="bi bi-whatsapp"></i>
       </span>
+    </a>
+  </div>
+
+  <!-- ── BARRA INFERIOR STICKY (SOLO MÓVIL) ── -->
+  <div class="lt-sticky-bar">
+    <a href="https://wa.me/51943491959" target="_blank" rel="noopener noreferrer" class="lt-sticky-bar__btn lt-sticky-bar__btn--wa">
+      <i class="bi bi-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#cotizar" class="lt-sticky-bar__btn lt-sticky-bar__btn--cta">
+      <i class="bi bi-calendar-check-fill"></i>
+      <span>Cotizar</span>
     </a>
   </div>
 
@@ -962,38 +1025,88 @@ const socials = [
   }
 
   /* ═══════════════════════════════
-     SECOND CTA (GOLD)
+     SECTION SUBTITLE (urgencia/disponibilidad)
   ═══════════════════════════════ */
-  .lt-cta-gold {
+  .lt-section__sub {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    text-align: center;
+    margin-top: -0.6rem;
+    margin-bottom: 0.85rem;
+  }
+
+  /* ═══════════════════════════════
+     QUOTE FORM (CAPTURA DE LEADS)
+  ═══════════════════════════════ */
+  .lt-quote {
+    animation: fadeUp 0.6s ease-out 0.55s both;
+  }
+  .lt-quote__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .lt-quote__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+  .lt-quote__input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border-radius: 0.65rem;
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    font-size: 0.82rem;
+    font-family: inherit;
+    transition: all 0.25s;
+  }
+  .lt-quote__input::placeholder { color: rgba(255,255,255,0.4); }
+  .lt-quote__input:focus {
+    outline: none;
+    border-color: rgba(201,168,76,0.6);
+    background: rgba(255,255,255,0.1);
+  }
+  .lt-quote__submit {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
+    gap: 0.55rem;
     width: 100%;
-    padding: 1rem 1.25rem;
-    border-radius: 1rem;
-    background: linear-gradient(135deg, rgba(201,168,76,0.2) 0%, rgba(201,168,76,0.1) 100%);
-    backdrop-filter: blur(16px);
+    padding: 0.85rem 1.25rem;
+    margin-top: 0.15rem;
     border: 1.5px solid rgba(201,168,76,0.45);
-    font-size: 0.9rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, rgba(201,168,76,0.28) 0%, rgba(201,168,76,0.14) 100%);
+    font-size: 0.85rem;
     font-weight: 700;
     color: #fff;
     letter-spacing: 0.02em;
+    cursor: pointer;
     transition: all 0.3s;
-    animation: fadeUp 0.6s ease-out 0.55s both;
   }
-  .lt-cta-gold i:first-child { color: #c9a84c; font-size: 1.1rem; }
-  .lt-cta-gold__arrow {
-    color: rgba(255,255,255,0.5);
-    font-size: 0.8rem;
-    margin-left: auto;
-  }
-  .lt-cta-gold:hover {
-    background: linear-gradient(135deg, rgba(201,168,76,0.32) 0%, rgba(201,168,76,0.18) 100%);
+  .lt-quote__submit i { color: #c9a84c; }
+  .lt-quote__submit:hover {
+    background: linear-gradient(135deg, rgba(201,168,76,0.4) 0%, rgba(201,168,76,0.2) 100%);
     border-color: rgba(201,168,76,0.7);
     transform: translateY(-2px);
     box-shadow: 0 8px 32px rgba(201,168,76,0.18);
   }
+  .lt-quote__alt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.85rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    transition: color 0.25s;
+  }
+  .lt-quote__alt i { color: #25D366; }
+  .lt-quote__alt:hover { color: #fff; }
 
   /* ═══════════════════════════════
      PACKAGES CAROUSEL
@@ -1149,9 +1262,10 @@ const socials = [
   }
   .lt-carousel-dots {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.4rem;
-    padding: 0.65rem 0 0.15rem;
+    gap: 0.15rem;
+    padding: 0.5rem 0 0.15rem;
   }
 
   /* ═══════════════════════════════
@@ -1521,18 +1635,29 @@ const socials = [
     line-height: 1.55;
   }
 
-  /* Dots */
+  /* Dots — visual mark is small, but the tappable button is enlarged for touch */
   .lt-blog-dot {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lt-blog-dot::before {
+    content: '';
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    border: none;
     background: rgba(255,255,255,0.25);
-    cursor: pointer;
     transition: all 0.3s;
-    padding: 0;
   }
-  .lt-blog-dot--active {
+  .lt-blog-dot--active::before {
     background: #c9a84c;
     width: 18px;
     border-radius: 3px;
@@ -1736,6 +1861,46 @@ const socials = [
   @media (min-width: 480px) {
     .lt-mascot-float { width: 120px; }
   }
+
+  /* ═══════════════════════════════
+     BARRA INFERIOR STICKY (SOLO MÓVIL)
+  ═══════════════════════════════ */
+  .lt-sticky-bar { display: none; }
+  @media (max-width: 767px) {
+    .lt-main { padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px)); }
+    .lt-mascot-float { display: none; }
+    .lt-sticky-bar {
+      display: flex;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 40;
+      background: rgba(8,6,3,0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    .lt-sticky-bar__btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.9rem 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .lt-sticky-bar__btn--wa { background: rgba(37,211,102,0.16); }
+    .lt-sticky-bar__btn--wa i { color: #25D366; }
+    .lt-sticky-bar__btn--cta {
+      background: rgba(201,168,76,0.16);
+      border-left: 1px solid rgba(255,255,255,0.1);
+    }
+    .lt-sticky-bar__btn--cta i { color: #c9a84c; }
+  }
 </style>
 
 <script is:inline>
@@ -1831,5 +1996,36 @@ const socials = [
   initCarousel('pkgTrack', 'pkgDots', 4000);
   initCarousel('blogTrack', 'blogDots', 5000);
   initCarousel('socialTrack', 'socialDots', 4000);
+
+  // ── Quote form → WhatsApp (no CRM connected yet) ──
+  var quoteForm = document.getElementById('quoteForm');
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = new FormData(quoteForm);
+      var get = function (k) { return (data.get(k) || '').toString().trim(); };
+      var nombre = get('nombre');
+      var wa = get('whatsapp');
+      var pais = get('pais');
+      var fecha = get('fecha');
+      var viajeros = get('viajeros');
+
+      if (!nombre || !wa) {
+        quoteForm.reportValidity();
+        return;
+      }
+
+      var lines = [
+        'Hola, quiero cotizar mi viaje a Perú.',
+        'Nombre: ' + nombre,
+        'País: ' + (pais || '-'),
+        'Fecha aproximada: ' + (fecha || '-'),
+        'N.º de viajeros: ' + (viajeros || '-'),
+        'Mi WhatsApp: ' + wa
+      ];
+      var text = encodeURIComponent(lines.join('\n'));
+      window.open('https://wa.me/51943491959?text=' + text, '_blank', 'noopener');
+    });
+  }
 })();
 </script>
