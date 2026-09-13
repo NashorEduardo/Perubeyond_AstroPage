@@ -26,7 +26,7 @@ const certLogos = [
           <div class="ig-header">
             <div class="ig-avatar">
               <div class="ig-avatar-inner">
-                <img src="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp" alt={imageAlts.mascot[lang]} />
+                <img src="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp" alt={imageAlts.mascot[lang]} loading="lazy" decoding="async" />
               </div>
             </div>
             <div class="ig-user">
@@ -90,6 +90,8 @@ const certLogos = [
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Tripadvisor_2025_Logo.svg/500px-Tripadvisor_2025_Logo.svg.png"
             alt="Tripadvisor"
             class="h-8 object-contain"
+            loading="lazy"
+            decoding="async"
           />
           <div>
             <div class="flex text-[#34E0A1] text-lg">★★★★✬</div>
@@ -103,7 +105,7 @@ const certLogos = [
     <div class="flex flex-wrap justify-center items-center gap-8 pt-6 border-t border-gray-200">
       {certLogos.map((c, i) => (
         <div class={`flex items-center justify-center ${i >= 1 && i <= 3 ? 'w-36 h-28' : 'w-28 h-20'}`}>
-          <img src={c.src} alt={c.alt} class="max-w-full max-h-full object-contain" />
+          <img src={c.src} alt={c.alt} class="max-w-full max-h-full object-contain" loading="lazy" decoding="async" />
         </div>
       ))}
     </div>

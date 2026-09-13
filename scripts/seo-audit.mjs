@@ -3,11 +3,11 @@
 //
 // No hace requests de red: analiza directamente los archivos en dist/,
 // que es la fuente de verdad de lo que Astro realmente sirve. Genera
-// SEO_URL_AUDIT.md en la raíz del repo.
+// docs/SEO_URL_AUDIT.md.
 //
 // Uso: npm run seo:audit  (corre `astro build` primero)
 
-import { readFileSync, writeFileSync, existsSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, statSync, mkdirSync } from 'node:fs';
 import { readdirSync } from 'node:fs';
 import { join, relative, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -261,9 +261,11 @@ for (const r of rows) {
 }
 lines.push('');
 
-writeFileSync(join(ROOT, 'SEO_URL_AUDIT.md'), lines.join('\n'), 'utf8');
+const DOCS_DIR = join(ROOT, 'docs');
+mkdirSync(DOCS_DIR, { recursive: true });
+writeFileSync(join(DOCS_DIR, 'SEO_URL_AUDIT.md'), lines.join('\n'), 'utf8');
 
-console.log(`SEO_URL_AUDIT.md generado con ${rows.length} páginas.`);
+console.log(`docs/SEO_URL_AUDIT.md generado con ${rows.length} páginas.`);
 console.log(`Enlaces internos rotos: ${brokenLinksTotal.length}`);
 console.log(`Mismatches canonical/hreflang: ${selfRefMismatches.length}`);
 console.log(`Titles duplicados: ${dupTitles.length} | Descriptions duplicadas: ${dupDescriptions.length} | Canonicals duplicados: ${dupCanonicals.length}`);

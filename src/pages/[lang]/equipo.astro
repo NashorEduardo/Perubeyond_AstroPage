@@ -120,6 +120,9 @@ const tabs = [
       src="/images/Laguna_Humantay/DSC04361.webp"
       alt={imageAlts.humantaySnowPeak[lang]}
       class="cover-img"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
     />
     <div class="cover-overlay"></div>
 
@@ -169,6 +172,8 @@ const tabs = [
             src="/images/Laguna_Humantay/DSC04385.webp"
             alt={imageAlts.teamHumantay[lang]}
             class="team-photo-img"
+            loading="lazy"
+            decoding="async"
           />
           <div class="team-photo-badge">
             <div class="badge-dot"></div>
@@ -211,6 +216,8 @@ const tabs = [
                   alt={member.name}
                   class="member-photo"
                   onerror="this.src='/images/Laguna_Humantay/DSC04385.webp'"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="member-info">

@@ -126,6 +126,9 @@ const gridPosts = [
         src="/images/Maras/F4.webp"
         alt={imageAlts.marasSalineras[lang]}
         class="hero-img"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
       />
       <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 100%);"></div>
       <div class="relative z-10">
@@ -198,6 +201,8 @@ const gridPosts = [
                   src={featuredPost.image}
                   alt={featuredPost.title}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="featured-img-shade"></div>
               </div>
@@ -233,6 +238,8 @@ const gridPosts = [
                 src={post.image}
                 alt={post.title}
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
               />
               <div class="grid-overlay">
                 <time class="post-date">{post.date}</time>

@@ -227,6 +227,8 @@ localizeLinks(menu, lang);
            src="/images/PeruBeyond/Logo.webp"
            alt="Peru Beyond"
            width="160"
+           loading="eager"
+           decoding="async"
            class="transition-all duration-300" />
     </a>
 
@@ -651,7 +653,7 @@ localizeLinks(menu, lang);
 
   <div class="flex justify-between items-center px-8 py-6 border-b border-white/10">
     <img src="/images/PeruBeyond/Logo.webp"
-         alt="Peru Beyond" width="120" class="brightness-0 invert" />
+         alt="Peru Beyond" width="120" loading="lazy" decoding="async" class="brightness-0 invert" />
     <button id="close-menu-btn" class="text-white text-3xl p-1" aria-label="Cerrar menú">
       <i class="bi bi-x" aria-hidden="true"></i>
     </button>

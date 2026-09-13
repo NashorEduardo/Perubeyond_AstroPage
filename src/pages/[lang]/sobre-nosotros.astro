@@ -45,6 +45,9 @@ const reasons = [
       src="/images/Machupicchu/IMG_7715.webp"
       alt={imageAlts.machuPicchuCitadel[lang]}
       class="cover-img"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
     />
     <div class="cover-overlay"></div>
 
@@ -112,6 +115,8 @@ const reasons = [
             src="/images/Laguna_Humantay/DSC04385.webp"
             alt={imageAlts.teamHumantay[lang]}
             class="media-img"
+            loading="lazy"
+            decoding="async"
           />
           <div class="media-badge">
             <div class="badge-rule"></div>
@@ -188,6 +193,8 @@ const reasons = [
                 src={logo.src}
                 alt={logo.alt}
                 class="cert-logo"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           ))}

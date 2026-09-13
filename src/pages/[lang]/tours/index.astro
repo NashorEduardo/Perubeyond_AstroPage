@@ -33,6 +33,9 @@ const machuTours  = allTours.filter(t => t.id.startsWith(`${lang}/machupicchu/`)
       src="/images/Lima/pexels-icarus-7357663.webp"
       alt={imageAlts.limaPlazaMayor[lang]}
       class="absolute inset-0 w-full h-full object-cover scale-105 hero-img"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
     />
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>

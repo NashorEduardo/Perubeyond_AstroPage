@@ -42,6 +42,9 @@ const naturaleza = cuscoTours.filter(t =>
       src="/images/Cuzco/cusco.webp"
       alt={imageAlts.cuscoPlazaSunset[lang]}
       class="absolute inset-0 w-full h-full object-cover scale-105 hero-img"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
     />
     <div class="absolute inset-0 bg-black/45"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent"></div>

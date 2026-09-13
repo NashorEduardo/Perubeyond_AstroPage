@@ -8,6 +8,10 @@ export interface Props {
   ogImage?: string;
   lang?: 'es' | 'en' | 'pt';
   langAlternates?: { es?: string; en?: string; pt?: string };
+  /** Excluye la página del índice de Google (etiqueta meta robots). Default: indexable. */
+  noindex?: boolean;
+  /** Evita que Google siga los enlaces de la página. Default: los sigue. */
+  nofollow?: boolean;
 }
 
 const {
@@ -16,7 +20,11 @@ const {
   ogImage = '/images/PeruBeyond/Logo.png',
   lang = 'es',
   langAlternates,
+  noindex = false,
+  nofollow = false,
 } = Astro.props;
+
+const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
 
 const siteBase = Astro.site ?? new URL('https://www.perubeyond.com');
 const canonicalURL = new URL(Astro.url.pathname, siteBase);
@@ -47,6 +55,7 @@ const htmlLang = lang === 'pt' ? 'pt-BR' : lang;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="robots" content={robotsContent} />
     <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     <!-- Open Graph -->

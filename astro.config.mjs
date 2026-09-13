@@ -65,8 +65,10 @@ export default defineConfig({
     sitemap({
       // La landing tipo "link-in-bio" (uso exclusivo para redes sociales) no
       // debe indexarse: es contenido delgado/duplicado de la Home y no está
-      // pensada para tráfico de búsqueda orgánica.
-      filter: (page) => !page.includes('/landing') && !page.includes('/404'),
+      // pensada para tráfico de búsqueda orgánica. La raíz "/" solo hace un
+      // redirect 301 (ver vercel.json) a "/es/", así que no aporta nada al
+      // sitemap incluirla aparte.
+      filter: (page) => !page.includes('/landing') && !page.includes('/404') && page !== `${SITE_URL}/`,
       serialize(item) {
         const images = tourImages.get(item.url);
         if (images) {

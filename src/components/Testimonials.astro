@@ -83,7 +83,7 @@ const totalReviews = 128;
       <!-- Panel izquierdo -->
       <div class="grev-left">
         <div class="grev-logo-row">
-          <img src="/images/PeruBeyond/Logo.webp" alt="Peru Beyond" class="grev-logo" onerror="this.style.display='none'" />
+          <img src="/images/PeruBeyond/Logo.webp" alt="Peru Beyond" class="grev-logo" onerror="this.style.display='none'" loading="lazy" decoding="async" />
           <span class="grev-biz-name">Perú más allá</span>
         </div>
         <div class="grev-stars-row">
@@ -116,7 +116,7 @@ const totalReviews = 128;
                 <div class="grev-card-top">
                   <div class="grev-avatar" style={`background:${r.color}`}>
                     {r.photo
-                      ? <img src={r.photo} alt={r.name} class="grev-avatar-img" />
+                      ? <img src={r.photo} alt={r.name} class="grev-avatar-img" loading="lazy" decoding="async" />
                       : <span>{r.initials}</span>
                     }
                   </div>

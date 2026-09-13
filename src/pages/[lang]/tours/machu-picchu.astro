@@ -36,6 +36,9 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
       src="/images/Machupicchu/FT 8.webp"
       alt={imageAlts.machuPicchuHuaynaPicchu[lang]}
       class="absolute inset-0 w-full h-full object-cover scale-105 hero-img"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
     />
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
@@ -269,7 +272,7 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
   ═══════════════════════════════════════════ -->
   <section class="relative overflow-hidden py-20">
     <div class="absolute inset-0">
-      <img src="/images/Machupicchu/IMG_7709.webp" alt={imageAlts.machuPicchuTrailSign[lang]} class="w-full h-full object-cover" />
+      <img src="/images/Machupicchu/IMG_7709.webp" alt={imageAlts.machuPicchuTrailSign[lang]} class="w-full h-full object-cover" loading="lazy" decoding="async" />
       <div class="absolute inset-0 bg-navy/85"></div>
     </div>
     <div class="relative container-pb text-center">

@@ -51,7 +51,7 @@ const itineraryImages = [
 
     <!-- FONDO: imagen oscura y borrosa -->
     <div class="absolute inset-0">
-      <img src={image} alt={title} class="w-full h-full object-cover scale-105 blur-sm brightness-[0.35]" />
+      <img src={image} alt={title} class="w-full h-full object-cover scale-105 blur-sm brightness-[0.35]" loading="eager" decoding="async" />
       <!-- Overlay de color esmeralda suave para darle identidad -->
       <div class="absolute inset-0 bg-gradient-to-br from-emerald-950/60 via-transparent to-teal-900/40"></div>
       <!-- Patrón andino sutil -->
@@ -125,6 +125,9 @@ const itineraryImages = [
               src={image}
               alt={title}
               class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
             <!-- Badge sobre la imagen principal -->
@@ -143,6 +146,8 @@ const itineraryImages = [
                 src="/itinerario/CUZCO/cusco03.webp"
                 alt="Taller cultural"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="eager"
+                decoding="async"
               />
               <div class="absolute inset-0 bg-emerald-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span class="text-white text-xl font-light drop-shadow">＋</span>
@@ -153,6 +158,8 @@ const itineraryImages = [
                 src="/itinerario/CUZCO/cusco07.webp"
                 alt="Gastronomía peruana"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="eager"
+                decoding="async"
               />
               <div class="absolute inset-0 bg-emerald-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span class="text-white text-xl font-light drop-shadow">＋</span>
@@ -224,7 +231,7 @@ const itineraryImages = [
       <!-- Bloque descriptivo con imagen lateral -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-amber-900/15 h-[400px]">
-          <img src={image} alt={title} class="w-full h-full object-cover" />
+          <img src={image} alt={title} class="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-amber-900/40 to-transparent"></div>
           <!-- Badge flotante sobre la imagen -->
           <div class="absolute bottom-6 left-6 right-6">
@@ -297,7 +304,7 @@ const itineraryImages = [
           <!-- Slide 1 -->
           <div class="carousel-slide snap-start">
             <div class="slide-image-container">
-              <img src="/itinerario/CUZCO/cusco03.webp" alt="Llegada al taller" class="slide-img" />
+              <img src="/itinerario/CUZCO/cusco03.webp" alt="Llegada al taller" class="slide-img" loading="lazy" decoding="async" />
               <div class="slide-img-overlay"></div>
               <div class="slide-time-badge">3:00 PM</div>
             </div>
@@ -311,7 +318,7 @@ const itineraryImages = [
           <!-- Slide 2 -->
           <div class="carousel-slide snap-start">
             <div class="slide-image-container">
-              <img src="/itinerario/CUZCO/cusco07.webp" alt="Historia del Torito" class="slide-img" />
+              <img src="/itinerario/CUZCO/cusco07.webp" alt="Historia del Torito" class="slide-img" loading="lazy" decoding="async" />
               <div class="slide-img-overlay"></div>
               <div class="slide-time-badge">3:20 PM</div>
             </div>
@@ -325,7 +332,7 @@ const itineraryImages = [
           <!-- Slide 3 -->
           <div class="carousel-slide snap-start">
             <div class="slide-image-container">
-              <img src={image} alt="Taller de pintura" class="slide-img" />
+              <img src={image} alt="Taller de pintura" class="slide-img" loading="lazy" decoding="async" />
               <div class="slide-img-overlay"></div>
               <div class="slide-time-badge">3:45 PM</div>
             </div>
@@ -339,7 +346,7 @@ const itineraryImages = [
           <!-- Slide 4 -->
           <div class="carousel-slide snap-start">
             <div class="slide-image-container">
-              <img src="/itinerario/CUZCO/cusco03.webp" alt="Gastronomía peruana" class="slide-img" />
+              <img src="/itinerario/CUZCO/cusco03.webp" alt="Gastronomía peruana" class="slide-img" loading="lazy" decoding="async" />
               <div class="slide-img-overlay"></div>
               <div class="slide-time-badge">4:30 PM</div>
             </div>
@@ -353,7 +360,7 @@ const itineraryImages = [
           <!-- Slide 5 -->
           <div class="carousel-slide snap-start">
             <div class="slide-image-container">
-              <img src="/itinerario/CUZCO/cusco07.webp" alt="Tu obra lista" class="slide-img" />
+              <img src="/itinerario/CUZCO/cusco07.webp" alt="Tu obra lista" class="slide-img" loading="lazy" decoding="async" />
               <div class="slide-img-overlay"></div>
               <div class="slide-time-badge">5:30 PM</div>
             </div>
