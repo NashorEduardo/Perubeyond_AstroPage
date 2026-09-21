@@ -2,8 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import BlogCategories from '../../components/BlogCategories.astro';
 import { imageAlts } from '../../i18n/imageAlts';
 import { pageMeta } from '../../i18n/pageMeta';
+import { ui } from '../../i18n/ui';
+import { getBlogList, getUsedBlogCategories } from '../../data/blogIndex';
+import { blogCategoryCopy } from '../../data/blogCategories';
 
 export function getStaticPaths() {
   return [
@@ -14,101 +18,54 @@ export function getStaticPaths() {
 }
 const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
 
-const searchCopy = {
-  es: { placeholder: 'Buscar artículos por título...', noResults: 'No encontramos artículos que coincidan con tu búsqueda.' },
-  en: { placeholder: 'Search articles by title...', noResults: 'No articles match your search.' },
-  pt: { placeholder: 'Buscar artigos por título...', noResults: 'Nenhum artigo encontrado para sua busca.' },
+const copy = {
+  es: {
+    placeholder: 'Buscar artículos por título...',
+    noResults: 'No encontramos artículos que coincidan con tu búsqueda.',
+    subtitle: 'Historias, consejos y destinos para inspirar tu próxima aventura peruana.',
+    tagline: 'La diversidad natural, cultural e histórica del Perú te brindará una experiencia auténtica e inolvidable.',
+    desc: 'En el blog de PeruBeyond encontrarás información valiosa sobre los destinos más icónicos del Perú: consejos de viaje, actividades destacadas, sugerencias de atracciones y mucho más.',
+    featuredLabel: 'Artículo Destacado',
+    moreLabel: 'Más Artículos',
+    readArticle: 'LEER ARTÍCULO',
+    readMore: 'LEER MÁS',
+  },
+  en: {
+    placeholder: 'Search articles by title...',
+    noResults: 'No articles match your search.',
+    subtitle: 'Stories, tips and destinations to inspire your next Peruvian adventure.',
+    tagline: "Peru's natural, cultural and historical diversity will give you an authentic and unforgettable experience.",
+    desc: "On the PeruBeyond blog you'll find valuable information about Peru's most iconic destinations: travel tips, featured activities, attraction suggestions and much more.",
+    featuredLabel: 'Featured Article',
+    moreLabel: 'More Articles',
+    readArticle: 'READ ARTICLE',
+    readMore: 'READ MORE',
+  },
+  pt: {
+    placeholder: 'Buscar artigos por título...',
+    noResults: 'Nenhum artigo encontrado para sua busca.',
+    subtitle: 'Histórias, dicas e destinos para inspirar sua próxima aventura peruana.',
+    tagline: 'A diversidade natural, cultural e histórica do Peru proporcionará a você uma experiência autêntica e inesquecível.',
+    desc: 'No blog da PeruBeyond você encontrará informações valiosas sobre os destinos mais icônicos do Peru: dicas de viagem, atividades em destaque, sugestões de atrações e muito mais.',
+    featuredLabel: 'Artigo em Destaque',
+    moreLabel: 'Mais Artigos',
+    readArticle: 'LER ARTIGO',
+    readMore: 'LER MAIS',
+  },
 }[lang];
 
-const featuredPost = {
-  date: '14 de Junio, 2026',
-  category: 'Historia & Cultura',
-  title: 'Inti Raymi: La Fiesta del Sol en el Cusco',
-  excerpt: 'El Inti Raymi es la celebración más importante del Imperio Inca. Cada 24 de junio, Cusco se transforma en el corazón del Tahuantinsuyo con música, danzas y una teatralización que reúne a miles en la explanada de Sacsayhuamán.',
-  image: '/images/PeruBeyond/Inti_raymi.webp',
-  slug: '/blog/inti-raymi',
-};
+const t = ui[lang];
+const catCopy = blogCategoryCopy[lang];
 
-const gridPosts = [
-  {
-    date: '21 de Junio, 2026',
-    title: 'Mal de altura en Cusco: cómo prepararse y prevenirlo en 2026',
-    image: '/images/Cuzco/FT3.webp',
-    slug: '/blog/mal-de-altura-cusco',
-  },
-  {
-    date: '20 de Junio, 2026',
-    title: 'Camino Inca vs Salkantay Trek: cuál elegir en 2026',
-    image: '/images/Machupicchu/FT 7.webp',
-    slug: '/blog/camino-inca-vs-salkantay',
-  },
-  {
-    date: '19 de Junio, 2026',
-    title: 'Qué hacer en Cusco en 3 días: itinerario completo 2026',
-    image: '/images/Cuzco/FT4.webp',
-    slug: '/blog/que-hacer-en-cusco-3-dias',
-  },
-  {
-    date: '18 de Junio, 2026',
-    title: 'Mejor época para visitar Machu Picchu: guía mes a mes 2026',
-    image: '/images/Machupicchu/FT 2.webp',
-    slug: '/blog/mejor-epoca-machu-picchu',
-  },
-  {
-    date: '17 de Junio, 2026',
-    title: 'Gastronomía cusqueña: 10 platos que no puedes perderte en Cusco',
-    image: '/images/Cuzco/FT7.webp',
-    slug: '/blog/gastronomia-cusquena',
-  },
-  {
-    date: '4 de Junio, 2026',
-    title: 'Corpus Christi Cusqueño: La Fiesta de los Santos que Viste de Oro al Cusco',
-    image: '/images/PeruBeyond/carroza.webp',
-    slug: '/blog/corpus-christi-cusqueno',
-  },
-  {
-    date: '11 de Septiembre, 2025',
-    title: 'Descubre el Valle Sagrado: Ruinas y Espíritu Inca',
-    image: '/images/ValleSagrado/ollantaytambo.webp',
-    slug: '/blog/valle-sagrado',
-  },
-  {
-    date: '10 de Octubre, 2025',
-    title: 'Machu Picchu: La Maravilla del Mundo Inca',
-    image: '/images/Machupicchu/IMG_7711.webp',
-    slug: '/blog/machu-picchu',
-  },
-  {
-    date: '27 de Agosto, 2025',
-    title: 'Sacsayhuamán, donde las piedras cuentan historias',
-    image: '/images/Cuzco/cusco.webp',
-    slug: '/blog/sacsayhuaman',
-  },
-  {
-    date: '16 de Abril, 2026',
-    title: 'Laguna Humantay: el tesoro turquesa del Cusco que no te puedes perder',
-    image: '/images/Laguna_Humantay/DSC04361.webp',
-    slug: '/blog/laguna-humantay',
-  },
-  {
-    date: '14 de Abril, 2026',
-    title: 'Maras, Moray y las Salineras: tres joyas que revelan la sabiduría del Valle Sagrado',
-    image: '/images/ValleSagrado/moray.webp',
-    slug: '/blog/maras-moray-salineras',
-  },
-  {
-    date: '14 de Abril, 2026',
-    title: 'Pikillaqta, el sitio que revela el Cusco antes de los Incas',
-    image: '/images/Cuzco/FT1.webp',
-    slug: '/blog/pikillaqta',
-  },
-  {
-    date: '11 de Abril, 2026',
-    title: 'Cerro de 7 Colores (Vinicunca): la joya natural más sorprendente del Cusco',
-    image: '/images/Montaña_de_7_colores/DSC02961.webp',
-    slug: '/blog/vinicunca-7-colores',
-  },
-];
+// Título del hero: la última palabra va en dorado ("Blog de <Viajes>")
+const titleWords = t['blog.title'].split(' ');
+const heroTitleLast = titleWords.pop();
+const heroTitleFirst = titleWords.join(' ');
+
+const blogList = getBlogList(lang);
+const featuredPost = blogList.find((p) => p.isFeatured)!;
+const gridPosts = blogList.filter((p) => !p.isFeatured);
+const categories = getUsedBlogCategories(lang);
 ---
 
 <Layout
@@ -134,17 +91,17 @@ const gridPosts = [
       <div class="relative z-10">
         <p class="script-title text-white/80 mb-3 text-lg">Peru Beyond</p>
         <h1 class="hero-title">
-          Blog de <span class="text-gold">Viajes</span>
+          {heroTitleFirst} <span class="text-gold">{heroTitleLast}</span>
         </h1>
         <p class="hero-subtitle">
-          Historias, consejos y destinos para inspirar tu próxima aventura peruana.
+          {copy.subtitle}
         </p>
         <nav class="flex items-center justify-center gap-2 text-xs text-white/50 mt-5">
           <a href={`/${lang}`} class="hover:text-white transition-colors flex items-center gap-1">
             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10.707 2.293a1 1 0 0 0-1.414 0l-7 7A1 1 0 0 0 3 11h1v6a1 1 0 0 0 1 1h4v-4h2v4h4a1 1 0 0 0 1-1v-6h1a1 1 0 0 0 .707-1.707l-7-7z"/>
             </svg>
-            Inicio
+            {t['blog.home']}
           </a>
           <span class="text-white/30">›</span>
           <span class="text-white/80">Blog</span>
@@ -159,11 +116,10 @@ const gridPosts = [
         <!-- Descripción -->
         <div class="text-center max-w-2xl mx-auto mb-12">
           <p class="blog-tagline">
-            La diversidad natural, cultural e histórica del Perú te brindará una experiencia auténtica e inolvidable.
+            {copy.tagline}
           </p>
           <p class="blog-desc">
-            En el blog de PeruBeyond encontrarás información valiosa sobre los destinos más icónicos del Perú:
-            consejos de viaje, actividades destacadas, sugerencias de atracciones y mucho más.
+            {copy.desc}
           </p>
         </div>
 
@@ -177,23 +133,29 @@ const gridPosts = [
               type="search"
               id="blog-search-input"
               class="blog-search-input"
-              placeholder={searchCopy.placeholder}
-              aria-label={searchCopy.placeholder}
+              placeholder={copy.placeholder}
+              aria-label={copy.placeholder}
               autocomplete="off"
             />
           </div>
         </div>
 
+        <!-- ── Mapa de categorías (filtro) ── -->
+        <div class="blog-cats-wrap">
+          <BlogCategories lang={lang} categories={categories} mode="filter" />
+          <p id="blog-filter-status" class="blog-filter-status" role="status" aria-live="polite"></p>
+        </div>
+
         <!-- ── ARTÍCULO DESTACADO ── -->
-        <div class="mb-10" id="blog-featured-block" data-title={featuredPost.title.toLowerCase()}>
+        <div class="mb-10" id="blog-featured-block" data-title={featuredPost.title.toLowerCase()} data-category={featuredPost.categorySlug}>
           <!-- Separador con etiqueta -->
           <div class="featured-label-row mb-5">
             <div class="label-line"></div>
-            <span class="label-text">Artículo Destacado</span>
+            <span class="label-text">{copy.featuredLabel}</span>
             <div class="label-line"></div>
           </div>
 
-          <a href={`/${lang}${featuredPost.slug}`} class="featured-main group block overflow-hidden">
+          <a href={featuredPost.href} class="featured-main group block overflow-hidden">
             <div class="featured-inner">
               <!-- Imagen -->
               <div class="featured-img-wrap">
@@ -213,7 +175,7 @@ const gridPosts = [
                 <h2 class="featured-headline">{featuredPost.title}</h2>
                 <p class="featured-excerpt">{featuredPost.excerpt}</p>
                 <span class="featured-cta">
-                  LEER ARTÍCULO
+                  {copy.readArticle}
                   <svg class="w-4 h-4 inline ml-1.5 group-hover:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0-5 5m5-5H6"/>
                   </svg>
@@ -226,14 +188,14 @@ const gridPosts = [
         <!-- Separador grid -->
         <div class="featured-label-row mb-6" id="blog-grid-label">
           <div class="label-line"></div>
-          <span class="label-text">Más Artículos</span>
+          <span class="label-text">{copy.moreLabel}</span>
           <div class="label-line"></div>
         </div>
 
         <!-- ── Grid de artículos ── -->
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="blog-grid">
           {gridPosts.map(post => (
-            <a href={`/${lang}${post.slug}`} class="grid-card group block overflow-hidden relative" style="height: 380px;" data-title={post.title.toLowerCase()}>
+            <a href={post.href} class="grid-card group block overflow-hidden relative" style="height: 380px;" data-title={post.title.toLowerCase()} data-category={post.categorySlug}>
               <img
                 src={post.image}
                 alt={post.title}
@@ -242,10 +204,11 @@ const gridPosts = [
                 decoding="async"
               />
               <div class="grid-overlay">
+                <span class="grid-category">{post.category}</span>
                 <time class="post-date">{post.date}</time>
                 <h3 class="grid-title">{post.title}</h3>
                 <span class="read-more-btn read-more-sm">
-                  LEER MÁS
+                  {copy.readMore}
                   <svg class="w-3 h-3 inline ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0-5 5m5-5H6"/>
                   </svg>
@@ -256,48 +219,82 @@ const gridPosts = [
         </div>
 
         <!-- ── Sin resultados ── -->
-        <p id="blog-no-results" class="blog-no-results" hidden>{searchCopy.noResults}</p>
+        <p id="blog-no-results" class="blog-no-results" hidden>{copy.noResults}</p>
 
       </div>
     </div>
   </main>
 
-  <script define:vars={{ noResultsText: searchCopy.noResults }}>
+  <script define:vars={{ countOne: catCopy.countOne, countMany: catCopy.countMany }}>
     (function () {
       const input = document.getElementById('blog-search-input');
-      if (!input) return;
       const featured = document.getElementById('blog-featured-block');
       const gridLabel = document.getElementById('blog-grid-label');
       const cards = Array.from(document.querySelectorAll('#blog-grid .grid-card'));
       const noResults = document.getElementById('blog-no-results');
+      const status = document.getElementById('blog-filter-status');
+      const chips = Array.from(document.querySelectorAll('[data-category-filter]'));
+      const validSlugs = chips.map((c) => c.dataset.categoryFilter);
+      let category = 'all';
 
       const accentMap = { 'á':'a','é':'e','í':'i','ó':'o','ú':'u','ü':'u','ñ':'n','ã':'a','õ':'o','â':'a','ê':'e','ô':'o','à':'a','ç':'c' };
       const normalize = (s) => (s || '').toLowerCase().trim().replace(/[áéíóúüñãõâêôàç]/g, (ch) => accentMap[ch] || ch);
 
-      input.addEventListener('input', () => {
-        const query = normalize(input.value);
+      function categoryFromHash() {
+        const slug = decodeURIComponent(location.hash.slice(1));
+        return validSlugs.includes(slug) && slug !== 'all' ? slug : 'all';
+      }
 
-        if (!query) {
-          if (featured) featured.hidden = false;
-          if (gridLabel) gridLabel.hidden = false;
-          cards.forEach((card) => { card.hidden = false; });
-          if (noResults) noResults.hidden = true;
-          return;
+      function apply() {
+        const query = normalize(input ? input.value : '');
+        const matches = (el) =>
+          (category === 'all' || el.dataset.category === category) &&
+          (!query || normalize(el.dataset.title).includes(query));
+
+        let visible = 0;
+        let gridVisible = 0;
+        if (featured) {
+          const ok = matches(featured);
+          featured.hidden = !ok;
+          if (ok) visible++;
         }
-
-        const featuredMatch = featured ? normalize(featured.dataset.title).includes(query) : false;
-        if (featured) featured.hidden = !featuredMatch;
-
-        let visibleCount = featuredMatch ? 1 : 0;
         cards.forEach((card) => {
-          const match = normalize(card.dataset.title).includes(query);
-          card.hidden = !match;
-          if (match) visibleCount++;
+          const ok = matches(card);
+          card.hidden = !ok;
+          if (ok) { visible++; gridVisible++; }
+        });
+        if (gridLabel) gridLabel.hidden = gridVisible === 0;
+        if (noResults) noResults.hidden = visible !== 0;
+
+        chips.forEach((chip) => {
+          const on = chip.dataset.categoryFilter === category;
+          chip.setAttribute('aria-pressed', on ? 'true' : 'false');
+          chip.classList.toggle('is-active', on);
         });
 
-        if (gridLabel) gridLabel.hidden = visibleCount === (featuredMatch ? 1 : 0) && cards.every(c => c.hidden);
-        if (noResults) noResults.hidden = visibleCount !== 0;
+        if (status) {
+          status.textContent = (category === 'all' && !query) ? '' : (visible === 1 ? countOne : countMany.replace('{n}', String(visible)));
+        }
+      }
+
+      function selectCategory(slug) {
+        category = slug;
+        history.replaceState(null, '', slug === 'all' ? location.pathname + location.search : '#' + slug);
+        apply();
+      }
+
+      chips.forEach((chip) => {
+        chip.addEventListener('click', () => selectCategory(chip.dataset.categoryFilter));
       });
+      if (input) input.addEventListener('input', apply);
+      window.addEventListener('hashchange', () => { category = categoryFromHash(); apply(); });
+
+      category = categoryFromHash();
+      apply();
+      if (category !== 'all') {
+        const nav = document.getElementById('blog-categories');
+        if (nav) nav.scrollIntoView({ block: 'start' });
+      }
     })();
   </script>
 
@@ -407,6 +404,35 @@ const gridPosts = [
     color: #9ca3af;
     font-size: 0.9rem;
     padding: 3rem 1rem;
+  }
+  .blog-no-results[hidden],
+  #blog-featured-block[hidden],
+  #blog-grid-label[hidden],
+  .grid-card[hidden] {
+    display: none !important;
+  }
+
+  /* ── Mapa de categorías ── */
+  .blog-cats-wrap {
+    margin-bottom: 3rem;
+  }
+  .blog-filter-status {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin: 0.85rem 0 0;
+    min-height: 1.1rem;
+  }
+  .grid-category {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0d1b2e;
+    background: #f6d06a;
+    padding: 0.2rem 0.65rem;
+    margin-bottom: 0.7rem;
   }
 
   /* ── Etiqueta separadora ── */

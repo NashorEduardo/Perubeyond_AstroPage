@@ -5,6 +5,8 @@ import Footer from '../../../components/Footer.astro';
 import { blogPostsEs } from '../../../data/blogPosts.es';
 import { blogPostsEn } from '../../../data/blogPosts.en';
 import { blogPostsPt } from '../../../data/blogPosts.pt';
+import BlogCategories from '../../../components/BlogCategories.astro';
+import { getCategorySlug } from '../../../data/blogCategories';
 import { ui } from '../../../i18n/ui';
 
 export function getStaticPaths() {
@@ -22,6 +24,7 @@ export function getStaticPaths() {
 const { blog } = Astro.props;
 const { slug, lang } = Astro.params as { slug: string; lang: 'es' | 'en' | 'pt' };
 const t = ui[lang as keyof typeof ui] ?? ui.es;
+const categorySlug = getCategorySlug(lang, blog.category);
 ---
 
 <Layout title={`${blog.title} | Perú Beyond`} description={blog.sections[0].paragraphs[0]} lang={lang}>
@@ -127,6 +130,11 @@ const t = ui[lang as keyof typeof ui] ?? ui.es;
         <div class="conclusion-section">
           <div class="conclusion-line"></div>
           <p class="conclusion-text">{blog.conclusion}</p>
+        </div>
+
+        <!-- Mapa de categorías -->
+        <div class="explore-categories">
+          <BlogCategories lang={lang} current={categorySlug} mode="links" />
         </div>
 
         <!-- Back link -->
@@ -465,6 +473,13 @@ const t = ui[lang as keyof typeof ui] ?? ui.es;
     line-height: 1.85;
     color: #3a3a3a;
     font-style: italic;
+  }
+
+  /* ── Mapa de categorías ── */
+  .explore-categories {
+    margin-top: 2.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid #ece7de;
   }
 
   /* ── Back link ── */

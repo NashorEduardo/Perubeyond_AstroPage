@@ -1,0 +1,100 @@
+---
+import { blogCategories, blogCategoryCopy, type BlogLang } from '../data/blogCategories';
+
+interface Props {
+  lang: BlogLang;
+  /** Categorías a mostrar; por defecto todas las definidas en blogCategories. */
+  categories?: { slug: string; label: string }[];
+  /** Slug de la categoría activa (opcional). */
+  current?: string;
+  /** "filter": botones que filtran la página del blog (JS en la página). "links": enlaces al blog ya filtrado. */
+  mode?: 'filter' | 'links';
+  heading?: string;
+}
+
+const { lang, categories, current, mode = 'links', heading } = Astro.props;
+const copy = blogCategoryCopy[lang];
+const items = categories ?? blogCategories.map((c) => ({ slug: c.slug, label: c.label[lang] }));
+const activeSlug = current ?? 'all';
+const blogUrl = `/${lang}/blog`;
+const title = heading ?? (mode === 'links' ? copy.explore : copy.title);
+---
+
+<nav class="blog-cats" id="blog-categories" aria-label={copy.navLabel}>
+  <h2 class="blog-cats__title">{title}</h2>
+  <ul class="blog-cats__list">
+    <li>
+      {mode === 'filter' ? (
+        <button type="button" class:list={['blog-cat', { 'is-active': activeSlug === 'all' }]} data-category-filter="all" aria-pressed={activeSlug === 'all' ? 'true' : 'false'}>
+          {copy.all}
+        </button>
+      ) : (
+        <a href={blogUrl} class="blog-cat">{copy.all}</a>
+      )}
+    </li>
+    {items.map((c) => (
+      <li>
+        {mode === 'filter' ? (
+          <button type="button" class:list={['blog-cat', { 'is-active': activeSlug === c.slug }]} data-category-filter={c.slug} aria-pressed={activeSlug === c.slug ? 'true' : 'false'}>
+            {c.label}
+          </button>
+        ) : (
+          <a href={`${blogUrl}#${c.slug}`} class:list={['blog-cat', { 'is-active': activeSlug === c.slug }]} aria-current={activeSlug === c.slug ? 'true' : undefined}>
+            {c.label}
+          </a>
+        )}
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .blog-cats { scroll-margin-top: 6rem; }
+  .blog-cats__title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    text-align: center;
+    margin: 0 0 1rem;
+  }
+  .blog-cats__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  .blog-cat {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.1rem;
+    border: 1px solid #e8dfc9;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #0d1b2e;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .blog-cat:hover {
+    border-color: #c9a84c;
+    color: #a07830;
+  }
+  .blog-cat:focus-visible {
+    outline: 2px solid #c9a84c;
+    outline-offset: 2px;
+  }
+  .blog-cat.is-active {
+    background: #0d1b2e;
+    border-color: #0d1b2e;
+    color: #f6d06a;
+  }
+</style>

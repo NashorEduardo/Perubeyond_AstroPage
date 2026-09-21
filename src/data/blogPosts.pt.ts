@@ -477,6 +477,7 @@ export const blogPostsPt = {
     views: '0',
     author: 'Perú Beyond',
     category: 'História & Cultura',
+    excerpt: 'O Inti Raymi é a celebração mais importante do Império Inca. Todo dia 24 de junho, Cusco se transforma no coração do Tahuantinsuyo com música, danças e uma encenação que reúne milhares de pessoas na esplanada de Sacsayhuamán.',
     heroImage: '/images/PeruBeyond/Inti_raymi.webp',
     heroPosition: 'center 50%',
     sections: [
