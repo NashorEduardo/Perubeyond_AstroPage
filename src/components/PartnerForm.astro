@@ -1,0 +1,313 @@
+---
+// Reutiliza el mismo endpoint de Formspree que ya usa /[lang]/contacto.astro
+// (form action="https://formspree.io/f/info@perubeyond.com"), pero enviado
+// via fetch para poder mostrar estados de enviando/éxito/error sin recargar.
+interface Props {
+  lang: 'es' | 'en' | 'pt';
+}
+const { lang } = Astro.props;
+
+const copy = {
+  es: {
+    eyebrow: 'Alianzas',
+    title: 'Conviértete en nuestro Partner',
+    desc: 'Peru Beyond está abierto a trabajar con empresas y profesionales del sector turístico interesados en desarrollar alianzas y experiencias en conjunto. Cuéntanos sobre tu empresa y con gusto te contactaremos.',
+    name: 'Nombre *',
+    namePh: 'Tu nombre completo',
+    company: 'Empresa',
+    companyPh: 'Nombre de tu empresa',
+    email: 'Email *',
+    emailPh: 'tu@empresa.com',
+    phone: 'Teléfono / WhatsApp',
+    phonePh: '+51 ...',
+    location: 'País o ciudad',
+    locationPh: 'Ej. Cusco, Perú',
+    type: 'Tipo de empresa o relación',
+    typeOptions: ['Agencia de viajes', 'Operador turístico', 'Hotel / alojamiento', 'Guía / profesional turístico', 'Empresa', 'Creador / afiliado', 'Otro'],
+    typePlaceholder: 'Selecciona una opción',
+    website: 'Sitio web',
+    websitePh: 'https://...',
+    message: 'Mensaje o propuesta *',
+    messagePh: 'Cuéntanos sobre tu empresa y qué tipo de alianza te interesa...',
+    submit: 'Enviar propuesta',
+    sending: 'Enviando...',
+    success: 'Gracias por contactarnos. Nuestro equipo revisará tu propuesta.',
+    error: 'Hubo un problema al enviar el formulario. Intenta nuevamente.',
+    required: 'Completa los campos obligatorios con un email válido.',
+  },
+  en: {
+    eyebrow: 'Partnerships',
+    title: 'Become our Partner',
+    desc: 'Peru Beyond is open to working with companies and tourism professionals interested in building partnerships and experiences together. Tell us about your company and we\'ll gladly get in touch.',
+    name: 'Name *',
+    namePh: 'Your full name',
+    company: 'Company',
+    companyPh: 'Your company name',
+    email: 'Email *',
+    emailPh: 'you@company.com',
+    phone: 'Phone / WhatsApp',
+    phonePh: '+1 ...',
+    location: 'Country or city',
+    locationPh: 'E.g. Cusco, Peru',
+    type: 'Type of company or relationship',
+    typeOptions: ['Travel agency', 'Tour operator', 'Hotel / lodging', 'Guide / tourism professional', 'Company', 'Creator / affiliate', 'Other'],
+    typePlaceholder: 'Select an option',
+    website: 'Website',
+    websitePh: 'https://...',
+    message: 'Message or proposal *',
+    messagePh: 'Tell us about your company and what kind of partnership you have in mind...',
+    submit: 'Send proposal',
+    sending: 'Sending...',
+    success: 'Thanks for reaching out. Our team will review your proposal.',
+    error: 'There was a problem sending the form. Please try again.',
+    required: 'Please complete the required fields with a valid email.',
+  },
+  pt: {
+    eyebrow: 'Parcerias',
+    title: 'Torne-se nosso Partner',
+    desc: 'A Peru Beyond está aberta a trabalhar com empresas e profissionais do turismo interessados em desenvolver parcerias e experiências em conjunto. Conte-nos sobre sua empresa e teremos prazer em entrar em contato.',
+    name: 'Nome *',
+    namePh: 'Seu nome completo',
+    company: 'Empresa',
+    companyPh: 'Nome da sua empresa',
+    email: 'Email *',
+    emailPh: 'voce@empresa.com',
+    phone: 'Telefone / WhatsApp',
+    phonePh: '+55 ...',
+    location: 'País ou cidade',
+    locationPh: 'Ex. Cusco, Peru',
+    type: 'Tipo de empresa ou relação',
+    typeOptions: ['Agência de viagens', 'Operadora turística', 'Hotel / hospedagem', 'Guia / profissional de turismo', 'Empresa', 'Criador / afiliado', 'Outro'],
+    typePlaceholder: 'Selecione uma opção',
+    website: 'Site',
+    websitePh: 'https://...',
+    message: 'Mensagem ou proposta *',
+    messagePh: 'Conte-nos sobre sua empresa e que tipo de parceria você tem em mente...',
+    submit: 'Enviar proposta',
+    sending: 'Enviando...',
+    success: 'Obrigado por entrar em contato. Nossa equipe irá revisar sua proposta.',
+    error: 'Houve um problema ao enviar o formulário. Tente novamente.',
+    required: 'Preencha os campos obrigatórios com um email válido.',
+  },
+}[lang];
+---
+
+<section class="partner-section" id="partners">
+  <div class="partner-inner">
+    <div class="partner-header">
+      <span class="script-title">{copy.eyebrow}</span>
+      <h2 class="partner-title">{copy.title}</h2>
+      <p class="partner-desc">{copy.desc}</p>
+    </div>
+
+    <form class="partner-form" id="partner-form" novalidate>
+      <input type="text" name="_gotcha" class="partner-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <input type="hidden" name="_subject" value="Nueva propuesta de Partner — Peru Beyond" />
+
+      <div class="partner-grid">
+        <div class="partner-field">
+          <label for="partner-name">{copy.name}</label>
+          <input id="partner-name" type="text" name="nombre" required placeholder={copy.namePh} />
+        </div>
+        <div class="partner-field">
+          <label for="partner-company">{copy.company}</label>
+          <input id="partner-company" type="text" name="empresa" placeholder={copy.companyPh} />
+        </div>
+      </div>
+
+      <div class="partner-grid">
+        <div class="partner-field">
+          <label for="partner-email">{copy.email}</label>
+          <input id="partner-email" type="email" name="email" required placeholder={copy.emailPh} />
+        </div>
+        <div class="partner-field">
+          <label for="partner-phone">{copy.phone}</label>
+          <input id="partner-phone" type="tel" name="telefono" placeholder={copy.phonePh} />
+        </div>
+      </div>
+
+      <div class="partner-grid">
+        <div class="partner-field">
+          <label for="partner-location">{copy.location}</label>
+          <input id="partner-location" type="text" name="ubicacion" placeholder={copy.locationPh} />
+        </div>
+        <div class="partner-field">
+          <label for="partner-type">{copy.type}</label>
+          <select id="partner-type" name="tipo">
+            <option value="">{copy.typePlaceholder}</option>
+            {copy.typeOptions.map((opt) => <option value={opt}>{opt}</option>)}
+          </select>
+        </div>
+      </div>
+
+      <div class="partner-field">
+        <label for="partner-website">{copy.website}</label>
+        <input id="partner-website" type="url" name="sitio_web" placeholder={copy.websitePh} />
+      </div>
+
+      <div class="partner-field">
+        <label for="partner-message">{copy.message}</label>
+        <textarea id="partner-message" name="mensaje" required rows="4" placeholder={copy.messagePh}></textarea>
+      </div>
+
+      <button type="submit" class="partner-submit">
+        <span class="partner-submit-label">{copy.submit}</span>
+      </button>
+
+      <p class="partner-status" id="partner-status" role="status" aria-live="polite" hidden></p>
+    </form>
+  </div>
+</section>
+
+<script define:vars={{ copy }}>
+  (function () {
+    const form = document.getElementById('partner-form');
+    if (!form) return;
+    const status = document.getElementById('partner-status');
+    const button = form.querySelector('.partner-submit');
+    const label = form.querySelector('.partner-submit-label');
+
+    function setStatus(text, kind) {
+      if (!status) return;
+      status.textContent = text;
+      status.hidden = !text;
+      status.className = 'partner-status' + (kind ? ' partner-status--' + kind : '');
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) {
+        setStatus(copy.required, 'error');
+        return;
+      }
+
+      button.disabled = true;
+      label.textContent = copy.sending;
+      setStatus('', '');
+
+      try {
+        const response = await fetch('https://formspree.io/f/info@perubeyond.com', {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form),
+        });
+
+        if (response.ok) {
+          setStatus(copy.success, 'success');
+          form.reset();
+        } else {
+          setStatus(copy.error, 'error');
+        }
+      } catch {
+        setStatus(copy.error, 'error');
+      } finally {
+        button.disabled = false;
+        label.textContent = copy.submit;
+      }
+    });
+  })();
+</script>
+
+<style>
+  .partner-section {
+    background: #faf9f7;
+    border-radius: 1.5rem;
+    padding: clamp(2.5rem, 5vw, 4rem);
+  }
+  .partner-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+  }
+  .partner-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+    font-weight: 800;
+    color: #0D1B2E;
+    margin: 0.5rem 0 1rem;
+  }
+  .partner-desc {
+    color: #9ca3af;
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+
+  .partner-form {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+  .partner-hp {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .partner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+  }
+  @media (max-width: 640px) {
+    .partner-grid { grid-template-columns: 1fr; }
+  }
+  .partner-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .partner-field label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0D1B2E;
+  }
+  .partner-field input,
+  .partner-field select,
+  .partner-field textarea {
+    width: 100%;
+    border: 1px solid #e5e0d6;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: #0D1B2E;
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .partner-field textarea { resize: vertical; min-height: 110px; }
+  .partner-field input:focus,
+  .partner-field select:focus,
+  .partner-field textarea:focus {
+    outline: none;
+    border-color: #c9a84c;
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+  }
+  .partner-field select { color: #0D1B2E; }
+
+  .partner-submit {
+    align-self: flex-start;
+    background: #0D1B2E;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    padding: 0.9rem 2rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.2s;
+  }
+  .partner-submit:hover { background: #c9a84c; color: #0D1B2E; transform: translateY(-1px); }
+  .partner-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  .partner-status {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  .partner-status--success { color: #2E7D6B; }
+  .partner-status--error { color: #C0392B; }
+</style>

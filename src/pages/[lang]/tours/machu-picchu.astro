@@ -6,6 +6,7 @@ import Footer from '../../../components/Footer.astro';
 import TourCard from '../../../components/TourCard.astro';
 import { imageAlts } from '../../../i18n/imageAlts';
 import { pageMeta } from '../../../i18n/pageMeta';
+import { sortToursByDuration } from '../../../utils/tourDuration';
 
 export function getStaticPaths() {
   return [
@@ -17,12 +18,18 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: 'es' | 'en' | 'pt' };
 
 const allTours = await getCollection('tours');
-const machuTours = allTours.filter(t => t.id.startsWith(`${lang}/machupicchu/`));
+const machuTours = sortToursByDuration(allTours.filter(t => t.id.startsWith(`${lang}/machupicchu/`)));
 
-// Agrupar por duración
+// Agrupar por duración (cada grupo hereda el orden ascendente de machuTours)
 const cortos  = machuTours.filter(t => t.data.duration.includes('3 D'));
 const medios  = machuTours.filter(t => t.data.duration.includes('4 D') || t.data.duration.includes('5 D'));
 const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data.duration.includes('7 D'));
+
+const introCopy = {
+  es: 'Cada paquete recorre la ciudadela inca a un ritmo distinto: escapadas cortas de 3 días para quienes tienen poco tiempo, itinerarios de 4 a 5 días que suman el Valle Sagrado, Humantay o la Montaña de Colores, y aventuras de 6 a 7 días para combinar varios destinos en un solo viaje. Compara duración, actividades incluidas y elige la experiencia que mejor se ajuste a tu tiempo.',
+  en: 'Each package explores the Inca citadel at a different pace: short 3-day getaways for those with limited time, 4-to-5-day itineraries that add the Sacred Valley, Humantay or Rainbow Mountain, and 6-to-7-day adventures combining several destinations in one trip. Compare duration and included activities, then choose the experience that best fits your time.',
+  pt: 'Cada pacote percorre a cidadela inca em um ritmo diferente: escapadas curtas de 3 dias para quem tem pouco tempo, roteiros de 4 a 5 dias que somam o Vale Sagrado, Humantay ou a Montanha de Cores, e aventuras de 6 a 7 dias para combinar vários destinos em uma só viagem. Compare duração e atividades incluídas, e escolha a experiência que melhor se encaixa no seu tempo.',
+}[lang];
 ---
 
 <Layout title={pageMeta.toursMachuPicchu[lang].title} description={pageMeta.toursMachuPicchu[lang].description} lang={lang}>
@@ -164,6 +171,8 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
           <p class="text-gray-500 text-sm mt-1">Incluyen traslados, tren, bus, guía, alojamiento y desayunos.</p>
         </div>
       </div>
+
+      <p class="mp-intro">{introCopy}</p>
 
       <!-- Todos -->
       <div id="grid-todos" class="tour-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -322,6 +331,14 @@ const largos  = machuTours.filter(t => t.data.duration.includes('6 D') || t.data
   }
   .tab-btn:hover { color: #0D1B2E; border-bottom-color: #e5e7eb; }
   .tab-btn.active { color: #0D1B2E; border-bottom-color: #c9a84c; }
+
+  .mp-intro {
+    color: #6b7280;
+    font-size: 0.92rem;
+    line-height: 1.75;
+    max-width: 64ch;
+    margin: -0.5rem 0 2rem;
+  }
 
   .tour-grid { display: grid; }
   .tour-grid.hidden { display: none; }

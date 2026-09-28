@@ -1,0 +1,191 @@
+---
+import { tripadvisorProfile, tripadvisorReviews } from '../data/tripadvisorReviews';
+
+interface Props {
+  lang?: 'es' | 'en' | 'pt';
+}
+const { lang = 'es' } = Astro.props;
+
+const copy = {
+  es: {
+    badge: 'TripAdvisor',
+    title: 'Reseñas en TripAdvisor',
+    viewProfile: 'Ver perfil en TripAdvisor',
+    empty: 'Estamos incorporando aquí nuestras reseñas verificadas de TripAdvisor. Mientras tanto, puedes ver todas las opiniones directamente en nuestro perfil oficial.',
+  },
+  en: {
+    badge: 'TripAdvisor',
+    title: 'TripAdvisor Reviews',
+    viewProfile: 'View profile on TripAdvisor',
+    empty: "We're adding our verified TripAdvisor reviews here. In the meantime, you can see all reviews directly on our official profile.",
+  },
+  pt: {
+    badge: 'TripAdvisor',
+    title: 'Avaliações no TripAdvisor',
+    viewProfile: 'Ver perfil no TripAdvisor',
+    empty: 'Estamos incorporando aqui nossas avaliações verificadas do TripAdvisor. Enquanto isso, você pode ver todas as avaliações diretamente em nosso perfil oficial.',
+  },
+}[lang];
+
+const hasReviews = tripadvisorReviews.length > 0;
+const hasAggregate = tripadvisorProfile.rating != null && tripadvisorProfile.reviewCount != null;
+---
+
+<section class="section white ta-section">
+  <div class="container-pb">
+
+    <div class="text-center mb-3">
+      <span class="script-title">{copy.badge}</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-10">{copy.title}</h2>
+    </div>
+
+    <div class="ta-widget">
+
+      <!-- Panel izquierdo: identidad TripAdvisor -->
+      <div class="ta-left">
+        <div class="ta-logo-row">
+          <img src="/images/PeruBeyond/tripadvisor_2025.webp" alt="TripAdvisor" class="ta-logo" loading="lazy" decoding="async" />
+        </div>
+
+        {hasAggregate && (
+          <>
+            <div class="ta-stars-row">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <svg viewBox="0 0 24 24" class={`ta-star-icon ${i < Math.round(tripadvisorProfile.rating!) ? 'is-filled' : ''}`}>
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              ))}
+            </div>
+            <p class="ta-count">{tripadvisorProfile.rating} · {tripadvisorProfile.reviewCount}</p>
+          </>
+        )}
+
+        <a
+          href={tripadvisorProfile.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ta-profile-btn"
+        >
+          {copy.viewProfile}
+        </a>
+      </div>
+
+      <!-- Panel derecho: reseñas o estado vacío -->
+      <div class="ta-right">
+        {hasReviews ? (
+          <div class="ta-grid">
+            {tripadvisorReviews.map((r) => (
+              <div class="ta-card">
+                <div class="ta-card-top">
+                  <div class="ta-avatar">
+                    {r.avatar ? <img src={r.avatar} alt={r.name} class="ta-avatar-img" loading="lazy" decoding="async" /> : <span>{r.name.charAt(0)}</span>}
+                  </div>
+                  <div class="ta-meta">
+                    <span class="ta-name">{r.name}</span>
+                    {r.country && <span class="ta-country">{r.country}</span>}
+                  </div>
+                </div>
+                <div class="ta-rating-row">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <svg viewBox="0 0 24 24" class={`ta-star-sm ${i < r.rating ? 'is-filled' : ''}`}><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  ))}
+                  <span class="ta-date">{r.date}</span>
+                </div>
+                <p class="ta-text">{r.text}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p class="ta-empty">{copy.empty}</p>
+        )}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .ta-widget {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  }
+  @media (max-width: 640px) {
+    .ta-widget { flex-direction: column; align-items: center; padding: 1.5rem 1rem; }
+  }
+
+  .ta-left {
+    flex-shrink: 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  @media (max-width: 640px) { .ta-left { width: 100%; } }
+
+  .ta-logo { width: 150px; height: auto; object-fit: contain; }
+
+  .ta-stars-row { display: flex; gap: 2px; }
+  .ta-star-icon { width: 22px; height: 22px; fill: #dfe3e6; }
+  .ta-star-icon.is-filled { fill: #00aa6c; }
+  .ta-count { font-size: 0.85rem; color: #555; font-weight: 600; }
+
+  .ta-profile-btn {
+    display: inline-block;
+    border: 1.5px solid #00aa6c;
+    border-radius: 9999px;
+    padding: 0.55rem 1.2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #00aa6c;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .ta-profile-btn:hover { background: #00aa6c; color: #fff; }
+
+  .ta-right { flex: 1; min-width: 0; width: 100%; }
+
+  .ta-empty {
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.7;
+    text-align: center;
+    padding: 1rem 0.5rem;
+  }
+
+  .ta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  .ta-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.1rem 1.2rem 1rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .ta-card-top { display: flex; align-items: center; gap: 0.7rem; }
+  .ta-avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: #00aa6c; color: #fff; font-weight: 700; font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;
+  }
+  .ta-avatar-img { width: 100%; height: 100%; object-fit: cover; }
+  .ta-meta { display: flex; flex-direction: column; min-width: 0; }
+  .ta-name { font-weight: 700; font-size: 0.88rem; color: #0D1B2E; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ta-country { font-size: 0.72rem; color: #888; }
+  .ta-rating-row { display: flex; align-items: center; gap: 2px; }
+  .ta-star-sm { width: 15px; height: 15px; fill: #dfe3e6; }
+  .ta-star-sm.is-filled { fill: #00aa6c; }
+  .ta-date { font-size: 0.72rem; color: #888; margin-left: 0.4rem; }
+  .ta-text { font-size: 0.82rem; color: #444; line-height: 1.55; }
+</style>

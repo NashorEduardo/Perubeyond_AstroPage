@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { imageAlts } from '../../i18n/imageAlts';
 import { pageMeta } from '../../i18n/pageMeta';
+import PartnerForm from '../../components/PartnerForm.astro';
 
 export function getStaticPaths() {
   return [
@@ -200,6 +201,9 @@ const reasons = [
           ))}
         </div>
       </section>
+
+      <!-- ── SECCIÓN 5: Partners ── -->
+      <PartnerForm lang={lang} />
 
     </div>
   </div>
