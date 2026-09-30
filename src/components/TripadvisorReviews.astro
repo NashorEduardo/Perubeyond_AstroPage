@@ -12,18 +12,24 @@ const copy = {
     title: 'Reseñas en TripAdvisor',
     viewProfile: 'Ver perfil en TripAdvisor',
     empty: 'Estamos incorporando aquí nuestras reseñas verificadas de TripAdvisor. Mientras tanto, puedes ver todas las opiniones directamente en nuestro perfil oficial.',
+    prev: 'Anterior',
+    next: 'Siguiente',
   },
   en: {
     badge: 'TripAdvisor',
     title: 'TripAdvisor Reviews',
     viewProfile: 'View profile on TripAdvisor',
     empty: "We're adding our verified TripAdvisor reviews here. In the meantime, you can see all reviews directly on our official profile.",
+    prev: 'Previous',
+    next: 'Next',
   },
   pt: {
     badge: 'TripAdvisor',
     title: 'Avaliações no TripAdvisor',
     viewProfile: 'Ver perfil no TripAdvisor',
     empty: 'Estamos incorporando aqui nossas avaliações verificadas do TripAdvisor. Enquanto isso, você pode ver todas as avaliações diretamente em nosso perfil oficial.',
+    prev: 'Anterior',
+    next: 'Próxima',
   },
 }[lang];
 
@@ -70,30 +76,42 @@ const hasAggregate = tripadvisorProfile.rating != null && tripadvisorProfile.rev
         </a>
       </div>
 
-      <!-- Panel derecho: reseñas o estado vacío -->
+      <!-- Panel derecho: carrusel de reseñas o estado vacío -->
       <div class="ta-right">
         {hasReviews ? (
-          <div class="ta-grid">
-            {tripadvisorReviews.map((r) => (
-              <div class="ta-card">
-                <div class="ta-card-top">
-                  <div class="ta-avatar">
-                    {r.avatar ? <img src={r.avatar} alt={r.name} class="ta-avatar-img" loading="lazy" decoding="async" /> : <span>{r.name.charAt(0)}</span>}
+          <div class="ta-carousel-wrap">
+            <button class="ta-nav ta-nav-prev" aria-label={copy.prev}>
+              <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+
+            <div class="ta-track-outer">
+              <div class="ta-track" id="taTrack">
+                {tripadvisorReviews.map((r) => (
+                  <div class="ta-card">
+                    <div class="ta-card-top">
+                      <div class="ta-avatar">
+                        {r.avatar ? <img src={r.avatar} alt={r.name} class="ta-avatar-img" loading="lazy" decoding="async" /> : <span>{r.name.charAt(0)}</span>}
+                      </div>
+                      <div class="ta-meta">
+                        <span class="ta-name">{r.name}</span>
+                        {r.country && <span class="ta-country">{r.country}</span>}
+                      </div>
+                    </div>
+                    <div class="ta-rating-row">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <svg viewBox="0 0 24 24" class={`ta-star-sm ${i < r.rating ? 'is-filled' : ''}`}><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      ))}
+                      <span class="ta-date">{r.date}</span>
+                    </div>
+                    <p class="ta-text">{r.text}</p>
                   </div>
-                  <div class="ta-meta">
-                    <span class="ta-name">{r.name}</span>
-                    {r.country && <span class="ta-country">{r.country}</span>}
-                  </div>
-                </div>
-                <div class="ta-rating-row">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <svg viewBox="0 0 24 24" class={`ta-star-sm ${i < r.rating ? 'is-filled' : ''}`}><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  ))}
-                  <span class="ta-date">{r.date}</span>
-                </div>
-                <p class="ta-text">{r.text}</p>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <button class="ta-nav ta-nav-next" aria-label={copy.next}>
+              <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
           </div>
         ) : (
           <p class="ta-empty">{copy.empty}</p>
@@ -159,12 +177,48 @@ const hasAggregate = tripadvisorProfile.rating != null && tripadvisorProfile.rev
     padding: 1rem 0.5rem;
   }
 
-  .ta-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  .ta-carousel-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .ta-track-outer {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .ta-track {
+    display: flex;
     gap: 1rem;
+    transition: transform 0.2s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
+  }
+  .ta-nav {
+    background: #fff;
+    border: 1.5px solid #ddd;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .ta-nav:hover { background: #00aa6c; border-color: #00aa6c; }
+  .ta-nav:hover svg { stroke: #fff; }
+  .ta-nav svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #333;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
   .ta-card {
+    flex: 0 0 calc(33.333% - .67rem);
     background: #fff;
     border-radius: 12px;
     padding: 1.1rem 1.2rem 1rem;
@@ -172,6 +226,13 @@ const hasAggregate = tripadvisorProfile.rating != null && tripadvisorProfile.rev
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+    min-height: 170px;
+  }
+  @media (max-width: 900px) {
+    .ta-card { flex: 0 0 calc(50% - .5rem); }
+  }
+  @media (max-width: 640px) {
+    .ta-card { flex: 0 0 90vw; }
   }
   .ta-card-top { display: flex; align-items: center; gap: 0.7rem; }
   .ta-avatar {
@@ -189,3 +250,52 @@ const hasAggregate = tripadvisorProfile.rating != null && tripadvisorProfile.rev
   .ta-date { font-size: 0.72rem; color: #888; margin-left: 0.4rem; }
   .ta-text { font-size: 0.82rem; color: #444; line-height: 1.55; }
 </style>
+
+<script>
+  const track   = document.getElementById('taTrack') as HTMLElement | null;
+  const prevBtn = document.querySelector('.ta-nav-prev') as HTMLButtonElement | null;
+  const nextBtn = document.querySelector('.ta-nav-next') as HTMLButtonElement | null;
+
+  if (track && prevBtn && nextBtn) {
+    let current = 0;
+
+    function visibleCount(): number {
+      const w = track!.parentElement!.clientWidth;
+      if (w < 640) return 1;
+      if (w < 900) return 2;
+      return 3;
+    }
+
+    function cardWidth(): number {
+      const card = track!.querySelector('.ta-card') as HTMLElement;
+      if (!card) return 0;
+      const gap = 16;
+      return card.offsetWidth + gap;
+    }
+
+    function maxIndex(): number {
+      const total = track!.querySelectorAll('.ta-card').length;
+      return Math.max(0, total - visibleCount());
+    }
+
+    function update() {
+      track!.style.transform = `translateX(-${current * cardWidth()}px)`;
+      prevBtn!.style.opacity = current === 0 ? '0.35' : '1';
+      nextBtn!.style.opacity = current >= maxIndex() ? '0.35' : '1';
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (current > 0) { current--; update(); }
+    });
+    nextBtn.addEventListener('click', () => {
+      if (current < maxIndex()) { current++; update(); }
+    });
+
+    window.addEventListener('resize', () => {
+      current = Math.min(current, maxIndex());
+      update();
+    });
+
+    update();
+  }
+</script>
