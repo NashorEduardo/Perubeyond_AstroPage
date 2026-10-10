@@ -1,6 +1,6 @@
 ﻿---
 title: "Lima, Paracas, Huacachina, Cusco e Machu Picchu"
-price: "589"
+price: "909"
 duration: "7 Dias / 6 Noites"
 image: "/images/Laguna_Humantay/DSC04368.webp"
 wetravelUuid: "6065343374"

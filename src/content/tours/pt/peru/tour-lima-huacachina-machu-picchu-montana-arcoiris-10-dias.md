@@ -1,6 +1,6 @@
 ﻿---
 title: "Lima, Ica, Cusco e Machu Picchu – 10 Dias / 9 Noites"
-price: "723"
+price: "1109"
 duration: "10 Dias / 9 Noites"
 image: "/images/Moray/F1.webp"
 wetravelUuid: "4505133607"

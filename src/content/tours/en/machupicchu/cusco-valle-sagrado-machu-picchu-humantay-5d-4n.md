@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Sacred Valley, Machu Picchu & Humantay Lake"
-price: "486"
+price: "589"
 duration: "5 Days / 4 Nights"
 image: "/images/Ollantaytambo/DSC03970.webp"
 wetravelUuid: "4627043050"

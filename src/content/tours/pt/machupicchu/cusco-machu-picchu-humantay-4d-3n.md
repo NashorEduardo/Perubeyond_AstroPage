@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Machu Picchu e Lagoa Humantay "
-price: "444"
+price: "519"
 duration: "4 Dias / 3 Noites"
 image: "/images/Laguna_Humantay/DSC04361.webp"
 wetravelUuid: "8829497736"

@@ -1,6 +1,6 @@
 ﻿---
 title: "South Valley Cusco Tour"
-price: "20"
+price: "25"
 duration: "1/2 Day"
 image: "/images/Cuzco/FT2.webp"
 wetravelUuid: "1205667237"

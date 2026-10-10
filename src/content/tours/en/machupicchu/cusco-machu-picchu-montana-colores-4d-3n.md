@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Machu Picchu and Rainbow Mountain"
-price: "447"
+price: "519"
 duration: "4 Days / 3 Nights"
 image: "/images/Montaña_de_7_colores/DSC02961.webp"
 wetravelUuid: "4100765464"

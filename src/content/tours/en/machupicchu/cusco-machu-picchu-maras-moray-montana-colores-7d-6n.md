@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Machu Picchu, Maras Moray and Rainbow Mountain"
-price: "550"
+price: "709"
 duration: "7 Days / 6 Nights"
 image: "/images/Maras/F2.webp"
 wetravelUuid: "1505998548"

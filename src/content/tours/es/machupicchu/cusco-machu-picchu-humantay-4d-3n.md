@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Machu Picchu y Laguna Humantay "
-price: "444"
+price: "519"
 duration: "4 Días / 3 Noches"
 image: "/images/Laguna_Humantay/DSC04361.webp"
 wetravelUuid: "8829497736"

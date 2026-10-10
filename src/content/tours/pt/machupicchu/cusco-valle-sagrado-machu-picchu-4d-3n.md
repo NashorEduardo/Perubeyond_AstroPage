@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Vale Sagrado e Machu Picchu "
-price: "462"
+price: "529"
 duration: "4 Dias / 3 Noites"
 image: "/images/ValleSagrado/ollantaytambo.webp"
 wetravelUuid: "5213665025"

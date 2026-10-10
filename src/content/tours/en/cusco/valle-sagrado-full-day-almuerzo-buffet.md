@@ -1,6 +1,6 @@
 ﻿---
 title: "Sacred Valley of the Incas Tour"
-price: "39"
+price: "40"
 duration: "1 Day"
 image: "/images/ValleSagrado/ollantaytambo.webp"
 wetravelUuid: "8753295249"

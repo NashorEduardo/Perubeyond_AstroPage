@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Machu Picchu e Montanha das Cores "
-price: "524"
+price: "649"
 duration: "6 Dias / 5 Noites"
 image: "/images/Cuzco/cusco.webp"
 wetravelUuid: "8533779408"

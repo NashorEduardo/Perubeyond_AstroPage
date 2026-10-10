@@ -1,6 +1,6 @@
 ﻿---
 title: "City Tour Cusco"
-price: "17"
+price: "20"
 duration: "1/2 Día"
 image: "/images/Cuzco/FT1.webp"
 wetravelUuid: "0054202088"

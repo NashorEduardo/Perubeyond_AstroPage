@@ -1,6 +1,6 @@
 ﻿---
 title: "Tour Vale Sul Cusco"
-price: "20"
+price: "25"
 duration: "Meio Dia"
 image: "/images/Cuzco/FT2.webp"
 wetravelUuid: "1205667237"

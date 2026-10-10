@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Machu Picchu, Maras Moray e Montanha das Cores"
-price: "550"
+price: "709"
 duration: "7 Dias / 6 Noites"
 image: "/images/Maras/F2.webp"
 wetravelUuid: "1505998548"

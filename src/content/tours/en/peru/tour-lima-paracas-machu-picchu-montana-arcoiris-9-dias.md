@@ -1,6 +1,6 @@
 ﻿---
 title: "Lima, Paracas, Ica, Machu Picchu & Rainbow Mountain – 9 Days / 8 Nights"
-price: "690"
+price: "1049"
 duration: "9 Days / 8 Nights"
 image: "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
 wetravelUuid: "0857343783"

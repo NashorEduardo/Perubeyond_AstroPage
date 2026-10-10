@@ -1,6 +1,6 @@
----
+﻿---
 title: "Palcoyo Mountain Tour"
-price: "40"
+price: "50"
 duration: "1 Day"
 image: "/images/ValleSagrado/moray.webp"
 wetravelUuid: ""

@@ -1,6 +1,6 @@
 ﻿---
 title: "Lima, Paracas, Machu Picchu y Montaña de Colores – 8 Días / 7 Noches"
-price: "653"
+price: "989"
 duration: "8 Días / 7 Noches"
 image: "/images/Montaña_de_7_colores/DSC02961.webp"
 wetravelUuid: "9617129442"

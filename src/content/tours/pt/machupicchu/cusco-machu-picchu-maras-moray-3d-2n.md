@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Machu Picchu, Maras e Moray "
-price: "445"
+price: "469"
 duration: "3 Dias / 2 Noites"
 image: "/images/ValleSagrado/moray.webp"
 wetravelUuid: "8312785026"

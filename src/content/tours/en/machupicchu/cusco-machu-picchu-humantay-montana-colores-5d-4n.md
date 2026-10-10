@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Machu Picchu, Humantay and Rainbow Mountain"
-price: "471"
+price: "579"
 duration: "5 Days / 4 Nights"
 image: "/images/Montaña_de_7_colores/DSC02961.webp"
 wetravelUuid: "7669373007"

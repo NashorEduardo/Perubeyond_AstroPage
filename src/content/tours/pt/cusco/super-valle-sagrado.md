@@ -1,6 +1,6 @@
----
+﻿---
 title: "Tour Super Vale Sagrado"
-price: "42"
+price: "50"
 duration: "1 Dia"
 image: "/images/ValleSagrado/moray.webp"
 wetravelUuid: "6951137229" 

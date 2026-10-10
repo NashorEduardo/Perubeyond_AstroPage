@@ -1,6 +1,6 @@
 ﻿---
 title: "Tour Trekking 7 Lagunas"
-price: "49"
+price: "50"
 duration: "1 Día"
 image: "/images/Laguna_Humantay/DSC04361.webp"
 wetravelUuid: "4979000171"

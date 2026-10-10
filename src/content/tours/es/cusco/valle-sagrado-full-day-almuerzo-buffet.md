@@ -1,6 +1,6 @@
 ﻿---
 title: "Tour Valle Sagrado de los Incas"
-price: "39"
+price: "40"
 duration: "1 Día"
 image: "/images/ValleSagrado/ollantaytambo.webp"
 wetravelUuid: "8753295249"

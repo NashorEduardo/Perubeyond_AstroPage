@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Machu Picchu, Humantay e Montanha das Cores "
-price: "471"
+price: "579"
 duration: "5 Dias / 4 Noites"
 image: "/images/Montaña_de_7_colores/DSC02961.webp"
 wetravelUuid: "7669373007"

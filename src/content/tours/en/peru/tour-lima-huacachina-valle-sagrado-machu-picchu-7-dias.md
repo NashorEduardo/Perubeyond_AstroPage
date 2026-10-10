@@ -1,6 +1,6 @@
 ﻿---
 title: "Colonial Lima, Ica, Cusco & Machu Picchu"
-price: "625"
+price: "929"
 duration: "7 Days / 6 Nights"
 image: "/images/Machupicchu/IMG_7711.webp"
 wetravelUuid: "9883062403"

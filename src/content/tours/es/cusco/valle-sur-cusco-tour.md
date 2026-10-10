@@ -1,6 +1,6 @@
 ﻿---
 title: "Tour Valle Sur Cusco"
-price: "20"
+price: "25"
 duration: "1/2 Día"
 image: "itinerario/WAKRAPUKARA/wakrapukara09.webp"
 wetravelUuid: "1205667237"

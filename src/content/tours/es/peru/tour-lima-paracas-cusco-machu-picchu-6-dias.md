@@ -1,6 +1,6 @@
 ﻿---
 title: "Lima, Paracas, Huacachina y Machu Picchu"
-price: "563"
+price: "859"
 duration: "6 Días / 5 Noches"
 image: "/images/Machupicchu/IMG_7711.webp"
 wetravelUuid: "5833040421"

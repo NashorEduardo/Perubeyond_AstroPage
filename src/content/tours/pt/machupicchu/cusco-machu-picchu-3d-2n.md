@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco e Machu Picchu"
-price: "410"
+price: "449"
 duration: "3 Dias / 2 Noites"
 image: "/images/Machupicchu/IMG_7709.webp"
 wetravelUuid: "5604780400"

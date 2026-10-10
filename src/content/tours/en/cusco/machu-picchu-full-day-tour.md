@@ -1,6 +1,6 @@
 ﻿---
 title: "Machu Picchu Full Day Tour"
-price: "50"
+price: "320"
 duration: "1 Day"
 image: "/images/Machupicchu/IMG_7709.webp"
 wetravelUuid: "6710388859"

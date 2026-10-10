@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Valle Sagrado, Machu Picchu y Laguna Humantay "
-price: "486"
+price: "589"
 duration: "5 Días / 4 Noches"
 image: "/images/Ollantaytambo/DSC03970.webp"
 wetravelUuid: "4627043050"

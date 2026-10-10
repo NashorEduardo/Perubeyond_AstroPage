@@ -1,6 +1,6 @@
 ﻿---
 title: "Cusco, Machu Picchu y Montaña de 7 Colores "
-price: "447"
+price: "519"
 duration: "4 Días / 3 Noches"
 image: "/images/Montaña_de_7_colores/DSC02961.webp"
 wetravelUuid: "4100765464"
