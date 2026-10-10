@@ -1,0 +1,109 @@
+---
+export interface BreadcrumbItem {
+  name: string;
+  href?: string;
+}
+
+export interface Props {
+  items: BreadcrumbItem[];
+  lang?: 'es' | 'en' | 'pt';
+  variant?: 'hero' | 'cover' | 'light';
+  class?: string;
+}
+
+const {
+  items,
+  lang = 'es',
+  variant = 'hero',
+  class: className = '',
+} = Astro.props;
+
+const siteOrigin = (Astro.site ?? new URL('https://www.perubeyond.com')).origin;
+
+// Construir JSON-LD Schema.org BreadcrumbList para Google y otros motores de búsqueda
+const schemaData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, index) => {
+    const isCurrent = index === items.length - 1;
+    const resolvedUrl = item.href
+      ? (item.href.startsWith('http') ? item.href : `${siteOrigin}${item.href}`)
+      : `${siteOrigin}${Astro.url.pathname}`;
+
+    return {
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: resolvedUrl,
+    };
+  }),
+};
+
+// Estilos según la variante
+const variantStyles = {
+  hero: {
+    nav: 'text-white/70 text-xs uppercase tracking-widest',
+    link: 'text-white/80 hover:text-[#f6d06a] transition-colors duration-200',
+    separator: 'text-white/40 text-[10px]',
+    current: 'text-white font-medium',
+  },
+  cover: {
+    nav: 'text-white/80 text-xs uppercase tracking-widest',
+    link: 'text-white/80 hover:text-white transition-colors duration-200',
+    separator: 'text-[#f6d06a]/70 text-[10px]',
+    current: 'text-white font-semibold',
+  },
+  light: {
+    nav: 'text-gray-500 text-xs tracking-wide',
+    link: 'text-navy hover:text-[#c9a84c] transition-colors duration-200',
+    separator: 'text-gray-300 text-[10px]',
+    current: 'text-navy font-semibold',
+  },
+}[variant];
+---
+
+<!-- Datos estructurados Schema.org: Rich Snippet de Breadcrumbs para Google -->
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+<!-- Render visual accesible de migas de pan -->
+<nav aria-label="Breadcrumb" class={`breadcrumb-nav ${variantStyles.nav} ${className}`}>
+  <ol class={`flex items-center flex-wrap gap-2 list-none p-0 m-0 ${variant === 'cover' || className.includes('justify-center') ? 'justify-center' : ''}`}>
+    {items.map((item, index) => {
+      const isLast = index === items.length - 1;
+      return (
+        <li class="inline-flex items-center gap-2">
+          {index > 0 && (
+            <svg
+              class={`w-2.5 h-2.5 flex-shrink-0 ${variantStyles.separator}`}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          )}
+
+          {isLast || !item.href ? (
+            <span
+              class={`truncate max-w-[280px] sm:max-w-none ${variantStyles.current}`}
+              aria-current="page"
+            >
+              {item.name}
+            </span>
+          ) : (
+            <a
+              href={item.href}
+              class={`transition-colors duration-200 ${variantStyles.link}`}
+            >
+              {item.name}
+            </a>
+          )}
+        </li>
+      );
+    })}
+  </ol>
+</nav>

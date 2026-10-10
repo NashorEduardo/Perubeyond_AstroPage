@@ -5,6 +5,8 @@ import Footer from '../../components/Footer.astro';
 import { imageAlts } from '../../i18n/imageAlts';
 import { pageMeta } from '../../i18n/pageMeta';
 import PartnerForm from '../../components/PartnerForm.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
 
 export function getStaticPaths() {
   return [
@@ -62,11 +64,15 @@ const reasons = [
         <div class="divider-dot"></div>
         <div class="divider-line divider-line--rev"></div>
       </div>
-      <nav class="cover-breadcrumb">
-        <a href={`/${lang}`}>Inicio</a>
-        <i class="bi bi-chevron-right"></i>
-        <span>Sobre Nosotros</span>
-      </nav>
+      <Breadcrumb
+        items={[
+          { name: lang === 'es' ? 'Inicio' : lang === 'en' ? 'Home' : 'Início', href: `/${lang}` },
+          { name: lang === 'es' ? 'Sobre Nosotros' : lang === 'en' ? 'About Us' : 'Sobre Nós' },
+        ]}
+        lang={lang}
+        variant="cover"
+        class="cover-breadcrumb"
+      />
     </div>
 
     <div class="cover-scroll">
@@ -127,7 +133,10 @@ const reasons = [
         </div>
       </section>
 
-      <!-- ── SECCIÓN 2: Filosofía ── -->
+      <!-- ── SECCIÓN 2: Formulario de Partners ── -->
+      <PartnerForm lang={lang} />
+
+      <!-- ── SECCIÓN 3: Filosofía ── -->
       <section class="section-philosophy">
         <div class="philosophy-inner">
           <div class="philosophy-bg-glow"></div>
@@ -202,13 +211,11 @@ const reasons = [
         </div>
       </section>
 
-      <!-- ── SECCIÓN 5: Partners ── -->
-      <PartnerForm lang={lang} />
-
     </div>
   </div>
 
   <Footer lang={lang} />
+  <WhatsAppFloat />
 </Layout>
 
 <style>

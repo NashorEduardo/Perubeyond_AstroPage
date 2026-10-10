@@ -4,6 +4,8 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import TourCard from '../../../components/TourCard.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
 import { imageAlts } from '../../../i18n/imageAlts';
 import { pageMeta } from '../../../i18n/pageMeta';
 import { sortToursByDuration } from '../../../utils/tourDuration';
@@ -62,14 +64,18 @@ const introCopy = {
 
     <div class="relative max-w-7xl mx-auto h-full flex flex-col justify-end pb-16 px-6">
 
-      <!-- Breadcrumb -->
-      <nav class="text-white/60 text-xs uppercase tracking-widest mb-5 flex items-center gap-2 hero-fade" style="animation-delay:0.1s">
-        <a href={`/${lang}`} class="hover:text-gold transition-colors">Inicio</a>
-        <span class="text-white/30">›</span>
-        <a href={`/${lang}/tours`} class="hover:text-gold transition-colors">Tours</a>
-        <span class="text-white/30">›</span>
-        <span class="text-white/80">Machu Picchu</span>
-      </nav>
+      <!-- Breadcrumb con Schema.org JSON-LD -->
+      <div class="mb-5 hero-fade" style="animation-delay:0.1s">
+        <Breadcrumb
+          items={[
+            { name: lang === 'es' ? 'Inicio' : lang === 'en' ? 'Home' : 'Início', href: `/${lang}` },
+            { name: 'Tours', href: `/${lang}/tours` },
+            { name: 'Machu Picchu' },
+          ]}
+          lang={lang}
+          variant="hero"
+        />
+      </div>
 
       <span class="script-title text-[#f6d06a] hero-fade" style="animation-delay:0.2s; font-size:1.5rem;">
         La Ciudadela Inca
@@ -310,6 +316,7 @@ const introCopy = {
   </section>
 
   <Footer lang={lang} />
+  <WhatsAppFloat />
 </Layout>
 
 <style>

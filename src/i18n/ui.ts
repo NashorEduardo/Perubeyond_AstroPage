@@ -132,6 +132,7 @@ export const ui = {
     'machu_sec.badge':      'Machu Picchu',
     'machu_sec.title':      'Machu Picchu y Cusco – Lo esencial en tu viaje',
     'machu_sec.desc':       'Encuentre aquí los Tours a Machu Picchu más solicitados, no lo dude y pregunte por la opción que más le convenga.',
+    'machu_sec.btn_all':    'Ver todos los tours a Machu Picchu',
     // ── Social Projects ──────────────────────────────
     'social.badge':         'Proyectos sociales',
     'social.title':         'Al viajar con nosotros, contribuyes así',
@@ -338,6 +339,7 @@ export const ui = {
     'machu_sec.badge':      'Machu Picchu',
     'machu_sec.title':      'Machu Picchu & Cusco – The Essentials for Your Trip',
     'machu_sec.desc':       'Find here the most requested Machu Picchu Tours. Don\'t hesitate to ask about the option that best suits you.',
+    'machu_sec.btn_all':    'View all Machu Picchu tours',
     // ── Social Projects ──────────────────────────────
     'social.badge':         'Social Projects',
     'social.title':         'By traveling with us, you contribute like this',
@@ -544,6 +546,7 @@ export const ui = {
     'machu_sec.badge':      'Machu Picchu',
     'machu_sec.title':      'Machu Picchu e Cusco – O essencial na sua viagem',
     'machu_sec.desc':       'Encontre aqui os Tours para Machu Picchu mais solicitados. Não hesite em perguntar sobre a opção que mais lhe convém.',
+    'machu_sec.btn_all':    'Ver todos os passeios para Machu Picchu',
     // ── Social Projects ──────────────────────────────
     'social.badge':         'Projetos sociais',
     'social.title':         'Ao viajar conosco, você contribui assim',

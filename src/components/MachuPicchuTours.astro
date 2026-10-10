@@ -1,5 +1,16 @@
 ---
 import TourCard from './TourCard.astro';
+import { ui } from '../i18n/ui';
+
+interface Props {
+  lang?: 'es' | 'en' | 'pt';
+}
+
+const pathLang = Astro.url.pathname.split('/')[1];
+const validLangs = ['es', 'en', 'pt'];
+const currentLang = (Astro.props.lang || (validLangs.includes(pathLang) ? pathLang : 'es')) as 'es' | 'en' | 'pt';
+const t = ui[currentLang] ?? ui.es;
+
 const tours = [
   {
     image: '/images/Cuzco/FT7.webp',
@@ -51,6 +62,19 @@ const tours = [
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {tours.map(t => <TourCard {...t} />)}
+    </div>
+
+    <!-- Botón al medio que direcciona a todos los tours de Machu Picchu -->
+    <div class="mt-12 text-center">
+      <a
+        href={`/${currentLang}/tours/machu-picchu`}
+        class="inline-flex items-center justify-center gap-3 bg-[#c9a84c] hover:bg-[#b3933b] text-[#0D1B2E] font-bold text-xs md:text-sm tracking-widest uppercase px-8 py-4 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group"
+      >
+        <span data-i18n="machu_sec.btn_all">{t['machu_sec.btn_all']}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
     </div>
   </div>
 </section>
