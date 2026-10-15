@@ -1,0 +1,110 @@
+---
+import { getCollection } from 'astro:content';
+import TourCard from './TourCard.astro';
+import { sortToursByDuration } from '../utils/tourDuration';
+
+export interface Props {
+  lang?: 'es' | 'en' | 'pt';
+  excludeCategory?: 'cusco' | 'machupicchu' | 'peru' | string;
+  limit?: number;
+  customTitle?: string;
+  customSubtitle?: string;
+}
+
+const {
+  lang = 'es',
+  excludeCategory,
+  limit = 3,
+  customTitle,
+  customSubtitle,
+} = Astro.props;
+
+const copy = {
+  es: {
+    badge: 'Más Experiencias',
+    title: 'Otros Paquetes Recomendados',
+    desc: 'Combina tu viaje con otras de nuestras mejores rutas por Cusco, Machu Picchu y todo el Perú.',
+    viewAll: 'Ver todos los tours',
+  },
+  en: {
+    badge: 'More Experiences',
+    title: 'Other Recommended Packages',
+    desc: 'Combine your trip with other top routes through Cusco, Machu Picchu, and all across Peru.',
+    viewAll: 'View all tours',
+  },
+  pt: {
+    badge: 'Mais Experiências',
+    title: 'Outros Pacotes Recomendados',
+    desc: 'Combine sua viagem com outros dos nossos melhores roteiros por Cusco, Machu Picchu e todo o Peru.',
+    viewAll: 'Ver todos os passeios',
+  },
+}[lang];
+
+const allTours = await getCollection('tours');
+const langTours = allTours.filter((t) => t.id.startsWith(`${lang}/`));
+
+// Filtrado inteligente según la categoría a excluir
+let filtered = langTours;
+if (excludeCategory) {
+  filtered = langTours.filter((t) => !t.id.startsWith(`${lang}/${excludeCategory}/`));
+}
+
+// Ordenar y seleccionar los mejores tours sugeridos
+const suggestedTours = sortToursByDuration(filtered).slice(0, limit);
+
+// Función auxiliar para determinar la etiqueta de ubicación
+function getTourLocation(id: string): string {
+  if (id.includes('/machupicchu/')) return 'Machu Picchu';
+  if (id.includes('/cusco/')) return 'Cusco';
+  return 'Perú';
+}
+---
+
+<section class="section py-16 bg-[#faf9f6] border-t border-gray-100">
+  <div class="container-pb max-w-7xl mx-auto px-4 sm:px-6">
+
+    <!-- Encabezado de sección con estilo característico de la marca -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div class="flex items-start gap-4">
+        <div class="w-1 bg-gradient-to-b from-[#c9a84c] to-[#f6d06a] self-stretch flex-shrink-0 rounded-full min-h-[50px]"></div>
+        <div>
+          <span class="script-title text-[#c9a84c] text-lg block mb-1">
+            {copy.badge}
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold text-navy">
+            {customTitle ?? copy.title}
+          </h2>
+          <p class="text-gray-500 text-sm mt-2 max-w-2xl leading-relaxed">
+            {customSubtitle ?? copy.desc}
+          </p>
+        </div>
+      </div>
+
+      <a
+        href={`/${lang}/tours`}
+        class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#c9a84c] hover:text-navy hover:gap-3 transition-all duration-200 self-start md:self-end"
+      >
+        <span>{copy.viewAll}</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Grid responsivo con Tailwind CSS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {suggestedTours.map((tour) => (
+        <TourCard
+          image={tour.data.image}
+          title={tour.data.title}
+          duration={tour.data.duration}
+          price={tour.data.price}
+          description={tour.data.description ?? ''}
+          location={getTourLocation(tour.id)}
+          href={`/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}`}
+        />
+      ))}
+    </div>
+
+  </div>
+</section>

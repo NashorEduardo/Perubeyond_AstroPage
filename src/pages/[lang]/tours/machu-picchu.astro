@@ -6,6 +6,9 @@ import Footer from '../../../components/Footer.astro';
 import TourCard from '../../../components/TourCard.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
+import TripadvisorReviews from '../../../components/TripadvisorReviews.astro';
+import Testimonials from '../../../components/Testimonials.astro';
+import RelatedTours from '../../../components/RelatedTours.astro';
 import { imageAlts } from '../../../i18n/imageAlts';
 import { pageMeta } from '../../../i18n/pageMeta';
 import { sortToursByDuration } from '../../../utils/tourDuration';
@@ -32,9 +35,42 @@ const introCopy = {
   en: 'Each package explores the Inca citadel at a different pace: short 3-day getaways for those with limited time, 4-to-5-day itineraries that add the Sacred Valley, Humantay or Rainbow Mountain, and 6-to-7-day adventures combining several destinations in one trip. Compare duration and included activities, then choose the experience that best fits your time.',
   pt: 'Cada pacote percorre a cidadela inca em um ritmo diferente: escapadas curtas de 3 dias para quem tem pouco tempo, roteiros de 4 a 5 dias que somam o Vale Sagrado, Humantay ou a Montanha de Cores, e aventuras de 6 a 7 dias para combinar vários destinos em uma só viagem. Compare duração e atividades incluídas, e escolha a experiência que melhor se encaixa no seu tempo.',
 }[lang];
+
+const siteOrigin = (Astro.site ?? new URL('https://www.perubeyond.com')).origin;
+const ogImage = '/images/Machupicchu/FT 8.webp';
 ---
 
-<Layout title={pageMeta.toursMachuPicchu[lang].title} description={pageMeta.toursMachuPicchu[lang].description} lang={lang}>
+<Layout
+  title={pageMeta.toursMachuPicchu[lang].title}
+  description={pageMeta.toursMachuPicchu[lang].description}
+  ogImage={ogImage}
+  lang={lang}
+>
+  <!-- Schema.org: ItemList de Paquetes Machu Picchu -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": pageMeta.toursMachuPicchu[lang].title,
+    "description": pageMeta.toursMachuPicchu[lang].description,
+    "numberOfItems": machuTours.length,
+    "itemListElement": machuTours.map((tour, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "TouristTrip",
+        "name": tour.data.title,
+        "description": tour.data.description ?? '',
+        "image": tour.data.image?.startsWith('http') ? tour.data.image : `${siteOrigin}${tour.data.image}`,
+        "offers": {
+          "@type": "Offer",
+          "price": tour.data.price,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": `${siteOrigin}/${lang}/tours/${tour.id.replace(/^(?:es|en|pt)\//, '')}/`
+        }
+      }
+    }))
+  })} />
   <Header lang={lang} />
 
   <!-- ═══════════════════════════════════════════
@@ -281,6 +317,17 @@ const introCopy = {
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+       OPINIONES Y PRUEBA SOCIAL
+  ═══════════════════════════════════════════ -->
+  <TripadvisorReviews lang={lang} />
+  <Testimonials lang={lang} showPageLink={true} />
+
+  <!-- ═══════════════════════════════════════════
+       OTROS PAQUETES RECOMENDADOS
+  ═══════════════════════════════════════════ -->
+  <RelatedTours lang={lang} excludeCategory="machupicchu" limit={3} />
 
   <!-- ═══════════════════════════════════════════
        CTA

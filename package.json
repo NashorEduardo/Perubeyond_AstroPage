@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
     "@astrojs/tailwind": "^5.1.2",
+    "@astrojs/vercel": "^8.2.11",
     "astro": "^5.18.1",
     "bootstrap-icons": "^1.13.1",
     "boxicons": "^2.1.4",

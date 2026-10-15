@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
-const DIST = join(ROOT, 'dist');
+const DIST = existsSync(join(ROOT, 'dist', 'client')) ? join(ROOT, 'dist', 'client') : join(ROOT, 'dist');
 
 if (!existsSync(DIST)) {
   console.error('No existe dist/. Corré "npm run build" antes de "npm run seo:audit" (o usá el script "seo:audit" que ya lo hace por vos).');
