@@ -17,6 +17,7 @@ includes:
   - "3 breakfasts + 1 buffet lunch"
 
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Personal expenses"
   - "Tips"

@@ -2,7 +2,7 @@
 title: "Palcoyo Mountain Tour"
 price: "50"
 duration: "1 Day"
-image: "/images/ValleSagrado/moray.webp"
+image: "/images/Montaña_de_7_colores/DSC02974.webp"
 wetravelUuid: ""
 description: "Full Day Tour to Palcoyo Mountain from Cusco. Discover the Rainbow Mountain Range, the Stone Forest, and breathtaking Andean landscapes with breakfast and buffet lunch included."
 availability: "Every Day"
@@ -19,6 +19,7 @@ includes:
   - "Permanent assistance during the tour"
 
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "Service tips"
   - "Dinner"
   - "Extra expenses not mentioned"

@@ -443,64 +443,146 @@ const langAlternates = {
         </section>
       )}
 
-      <!-- ── SECCIÓN: INCLUYE / NO INCLUYE (MODIFICADO - DISEÑO MÁS LIMPIO) ── -->
+      <!-- ── SECCIÓN: INCLUYE / NO INCLUYE (REDISEÑO MODERNO Y ELEGANTE) ── -->
       {(includes || excludes) && (
-        <section id = "incluye" >
+        <section id="incluye" class="scroll-mt-28">
           <div class="flex items-center gap-4 mb-8">
-            <div class="w-1 h-10 bg-gold rounded-full"></div>
-            <h2 class="text-3xl font-extrabold text-navy">{t['tour.what_includes']}</h2>
+            <div class="w-1.5 h-10 bg-gold rounded-full"></div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-gold block mb-1">
+                {lang === 'en' ? 'Package Transparency' : lang === 'pt' ? 'Transparência do Pacote' : 'Transparencia del Paquete'}
+              </span>
+              <h2 class="text-3xl font-extrabold text-navy">{t['tour.what_includes']}</h2>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
-            <!-- Incluye -->
-            {includes && (
-              <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <div class="bg-emerald-50 px-6 py-4 border-b border-emerald-100">
-                  <h3 class="text-lg font-bold text-emerald-800 flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    {t['tour.includes']}
-                  </h3>
+            <!-- Incluye Card -->
+            {includes && includes.length > 0 && (
+              <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-xl shadow-slate-100/70 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-300 relative overflow-hidden group">
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-400"></div>
+                
+                <div class="flex items-center justify-between pb-6 mb-6 border-b border-slate-100">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 flex items-center justify-center font-bold shadow-sm">
+                      <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-black text-slate-900 leading-tight">
+                        {t['tour.includes']}
+                      </h3>
+                      <p class="text-xs font-semibold text-emerald-700">
+                        {lang === 'en' ? 'Included in your experience' : lang === 'pt' ? 'Incluído em sua experiência' : 'Incluido en tu experiencia'}
+                      </p>
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">
+                    {includes.length} {lang === 'en' ? 'items' : 'ítems'}
+                  </span>
                 </div>
-                <ul class="p-6 space-y-4">
-                  {includes.map((item) => (
-                    <li class="flex items-start gap-3 text-sm text-gray-700">
-                      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center">
-                        <svg class="w-3 h-3 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+
+                <ul class="space-y-3">
+                  {includes.map((item: string) => (
+                    <li class="flex items-start gap-3.5 p-3 rounded-2xl bg-slate-50/70 hover:bg-emerald-50/40 border border-slate-100/60 hover:border-emerald-200/50 transition-all duration-200 text-slate-700 text-[15px]">
+                      <span class="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-sm shadow-emerald-500/30">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
                         </svg>
                       </span>
-                      <span class="leading-relaxed">{item}</span>
+                      <span class="leading-relaxed font-medium">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             )}
 
-            <!-- No incluye -->
-            {excludes && (
-              <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <div class="bg-red-50 px-6 py-4 border-b border-red-100">
-                  <h3 class="text-lg font-bold text-red-800 flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                    {t['tour.not_included']}
-                  </h3>
+            <!-- No incluye Card -->
+            {excludes && excludes.length > 0 && (
+              <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-xl shadow-slate-100/70 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-300 relative overflow-hidden group">
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300"></div>
+
+                <div class="flex items-center justify-between pb-6 mb-6 border-b border-slate-100">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-2xl bg-slate-100 border border-slate-200 text-slate-500 flex items-center justify-center font-bold shadow-sm">
+                      <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-black text-slate-900 leading-tight">
+                        {t['tour.not_included']}
+                      </h3>
+                      <p class="text-xs font-semibold text-slate-500">
+                        {lang === 'en' ? 'Direct expenses & optional extras' : lang === 'pt' ? 'Despesas diretas e extras opcionais' : 'Gastos directos y extras opcionales'}
+                      </p>
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">
+                    {excludes.length} {lang === 'en' ? 'items' : 'ítems'}
+                  </span>
                 </div>
-                <ul class="p-6 space-y-4">
-                  {excludes.map((item) => (
-                    <li class="flex items-start gap-3 text-sm text-gray-700">
-                      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center">
-                        <svg class="w-3 h-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                      </span>
-                      <span class="leading-relaxed">{item}</span>
-                    </li>
-                  ))}
+
+                <ul class="space-y-3">
+                  {excludes.map((item: string) => {
+                    const isTicketNotice = item.toLowerCase().includes('recintos') || item.toLowerCase().includes('archaeological') || item.toLowerCase().includes('sítios');
+                    return (
+                      <li class={`flex items-start gap-3.5 p-3 rounded-2xl transition-all duration-200 text-[15px] ${
+                        isTicketNotice 
+                          ? 'bg-amber-50/70 border border-amber-200/80 text-amber-950 font-medium' 
+                          : 'bg-slate-50/70 hover:bg-slate-100/70 border border-slate-100/60 hover:border-slate-200 text-slate-600'
+                      }`}>
+                        <span class={`mt-0.5 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center ${
+                          isTicketNotice
+                            ? 'bg-amber-200/90 text-amber-900 shadow-sm'
+                            : 'bg-slate-200/80 text-slate-500'
+                        }`}>
+                          <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                          </svg>
+                        </span>
+                        <div class="leading-relaxed">
+                          <span>{item}</span>
+                          {isTicketNotice && (
+                            <span class="block mt-1 text-xs text-amber-700/90 font-normal">
+                              {lang === 'en' 
+                                ? '💡 Archaeological tickets (Boleto Turístico) are purchased in cash (PEN) directly at official checkpoints.' 
+                                : lang === 'pt'
+                                ? '💡 Os ingressos arqueológicos (Boleto Turístico) são adquiridos em dinheiro (PEN) diretamente nos postos oficiais.'
+                                : '💡 Los boletos arqueológicos (Boleto Turístico) se abonan en efectivo (PEN) directamente en los accesos oficiales.'}
+                            </span>
+                          )}
+                        </div>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             )}
 
+          </div>
+
+          <!-- Banner Informativo Recomendación Viajera -->
+          <div class="mt-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-amber-50/70 via-orange-50/40 to-slate-50 border border-amber-200/60 flex flex-col sm:flex-row items-start sm:items-center gap-4 text-slate-700">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-400/30 text-amber-700 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="text-sm leading-relaxed">
+              <strong class="text-slate-900 block font-semibold mb-0.5">
+                {lang === 'en' ? 'Traveler Advice & Transparency' : lang === 'pt' ? 'Conselho ao Viajante e Transparência' : 'Consejo para Viajeros y Transparencia'}
+              </strong>
+              <span>
+                {lang === 'en' 
+                  ? 'Our local guides provide full accompaniment and assistance for purchasing any direct entry ticket on site, ensuring you pay only the official governmental rate with your valid ID/passport.'
+                  : lang === 'pt'
+                  ? 'Nossos guias locais prestam acompanhamento e auxílio integral para a compra de qualquer ingresso direto no local, garantindo que você pague apenas o valor oficial com seu documento.'
+                  : 'Nuestros guías locales te acompañan y asesoran en todo momento para la adquisición de cualquier entrada directa en cada recinto, garantizando que abones únicamente la tarifa oficial con tu documento o pasaporte.'}
+              </span>
+            </div>
           </div>
         </section>
       )}

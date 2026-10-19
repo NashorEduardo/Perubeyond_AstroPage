@@ -2,7 +2,7 @@
 title: "Tour Montanha de 7 Cores"
 price: "28"
 duration: "1 Dia"
-image: "/images/Montaña_de_7_colores/DSC02961.webp"
+image: "/itinerario/7COLORES/7colores22.webp"
 wetravelUuid: "3652466176"
 description: "Trekking até a impressionante Montanha de 7 Cores (Vinicunca), desfrutando paisagens andinas, fauna local e vistas para o nevado Ausangate, com café da manhã e almoço buffet incluídos."
 availability: "Todos os dias"
@@ -17,6 +17,7 @@ includes:
   - "Bastões de trekking"
   - "Guia profissional"
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Gorjetas"
   - "Jantar"
   - "Gastos pessoais extras"

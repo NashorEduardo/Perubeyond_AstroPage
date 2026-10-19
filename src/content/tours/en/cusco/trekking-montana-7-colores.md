@@ -2,7 +2,7 @@
 title: "Rainbow Mountain Tour"
 price: "28"
 duration: "1 Day"
-image: "/images/Montaña_de_7_colores/DSC02961.webp"
+image: "/itinerario/7COLORES/7colores22.webp"
 wetravelUuid: "3652466176"
 description: "Trekking to the impressive Rainbow Mountain (Vinicunca), enjoying Andean landscapes, local wildlife and views of the Ausangate glacier, with breakfast and buffet lunch included."
 availability: "Every day"
@@ -17,6 +17,7 @@ includes:
   - "Trekking poles"
   - "Professional guide"
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "Tips"
   - "Dinner"
   - "Personal extra expenses"

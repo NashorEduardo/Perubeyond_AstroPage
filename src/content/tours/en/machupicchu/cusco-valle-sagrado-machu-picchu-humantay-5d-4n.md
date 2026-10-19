@@ -2,7 +2,7 @@
 title: "Cusco, Sacred Valley, Machu Picchu & Humantay Lake"
 price: "589"
 duration: "5 Days / 4 Nights"
-image: "/images/Ollantaytambo/DSC03970.webp"
+image: "/images/Laguna_Humantay/FT 37.webp"
 wetravelUuid: "4627043050"
 description: "Explore Cusco, the Sacred Valley, Machu Picchu and Humantay Lake in 5 days, combining Inca history, living culture and impressive Andean landscapes."
 availability: "Every day"
@@ -18,6 +18,7 @@ includes:
   - "4 breakfasts + 2 lunches"
 
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Personal expenses"
   - "Tips"

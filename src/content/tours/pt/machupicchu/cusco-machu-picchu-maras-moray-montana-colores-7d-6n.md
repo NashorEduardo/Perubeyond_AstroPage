@@ -21,6 +21,7 @@ includes:
   - "Excursão à Montanha das Cores"
 
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Voos internacionais"
   - "Alimentação não mencionada"
   - "Despesas pessoais e gorjetas"

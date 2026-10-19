@@ -2,7 +2,7 @@
 title: "7 Lakes Trekking Tour"
 price: "50"
 duration: "1 Day"
-image: "/images/Laguna_Humantay/DSC04361.webp"
+image: "/itinerario/7COLORES/7colores21.webp"
 wetravelUuid: "4979000171"
 description: "Trekking to the 7 lakes of Ausangate, surrounded by Andean landscapes, local wildlife and ending with relaxation in hot springs."
 availability: "Every day"
@@ -14,6 +14,7 @@ includes:
   - "Professional tourism guide"
   - "Round-trip tourist transport"
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "Tips for service"
   - "Dinner"
   - "Extra expenses"

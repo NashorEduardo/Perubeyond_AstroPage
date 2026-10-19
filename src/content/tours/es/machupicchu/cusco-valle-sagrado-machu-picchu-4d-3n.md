@@ -17,6 +17,7 @@ includes:
   - "3 desayunos + 1 almuerzo buffet"
 
 excludes:
+  - "No incluye entradas a los recintos o centros arqueológicos."
   - "Vuelos internacionales"
   - "Gastos personales"
   - "Propinas"

@@ -2,7 +2,7 @@
 title: "Lima, Paracas, Machu Picchu e Montanha das Cores – 8 Dias / 7 Noites"
 price: "989"
 duration: "8 Dias / 7 Noites"
-image: "/images/Montaña_de_7_colores/DSC02961.webp"
+image: "/images/Lima/pexels-cristianloayza-16195563.webp"
 wetravelUuid: "9617129442"
 description: "Explore o melhor do Peru em 8 dias: Lima, Paracas, Huacachina, Cusco, Vale Sagrado, Machu Picchu, Laguna Humantay e Montanha das Cores, combinando aventura, cultura e paisagens únicos."
 availability: "Todos os dias"
@@ -21,6 +21,7 @@ includes:
   - "Passeio de buggy em Huacachina"
 
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Voos internacionais"
   - "Alimentação não mencionada"
   - "Despesas pessoais e gorjetas"

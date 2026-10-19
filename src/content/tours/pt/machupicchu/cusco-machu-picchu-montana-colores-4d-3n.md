@@ -2,7 +2,7 @@
 title: "Cusco, Machu Picchu e Montanha das 7 Cores "
 price: "519"
 duration: "4 Dias / 3 Noites"
-image: "/images/Montaña_de_7_colores/DSC02961.webp"
+image: "/images/Montaña_de_7_colores/DSC03130.webp"
 wetravelUuid: "4100765464"
 description: "Descubra Cusco, Machu Picchu e a Montanha das Cores em 4 dias, combinando história, cultura e paisagens andinas únicas em uma experiência inesquecível."
 availability: "Todos os dias"
@@ -17,6 +17,7 @@ includes:
   - "3 café da manhã + 1 almoço"
 
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Voos internacionais"
   - "Despesas pessoais"
   - "Gorjetas"

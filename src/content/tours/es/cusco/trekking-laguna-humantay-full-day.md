@@ -2,7 +2,7 @@
 title: "Tour Laguna Humantay"
 price: "28"
 duration: "1 Día"
-image: "/images/Laguna_Humantay/DSC04361.webp"
+image: "/images/Laguna_Humantay/FT 36.webp"
 wetravelUuid: "5367644562"
 description: "Trekking hacia la impresionante Laguna Humantay, famosa por sus aguas turquesa y rodeada de nevados, con desayuno y almuerzo buffet incluidos."
 availability: "Todos los días"
@@ -16,6 +16,7 @@ includes:
   - "Ingresos a la Laguna Humantay"
   - "Guía profesional"
 excludes:
+  - "No incluye entradas a los recintos o centros arqueológicos."
   - "Propinas"
   - "Cena"
   - "Gastos extras personales"

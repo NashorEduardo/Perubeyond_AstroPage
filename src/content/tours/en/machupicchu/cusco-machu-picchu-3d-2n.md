@@ -17,6 +17,7 @@ includes:
   - "2 breakfasts"
 
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Personal expenses"
   - "Tips"

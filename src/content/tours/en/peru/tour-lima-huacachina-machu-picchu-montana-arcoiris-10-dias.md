@@ -21,6 +21,7 @@ includes:
   - "Buggy ride in Huacachina"
 
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Meals not mentioned"
   - "Personal expenses and tips"

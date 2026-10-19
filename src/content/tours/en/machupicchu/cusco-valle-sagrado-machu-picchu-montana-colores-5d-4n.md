@@ -2,7 +2,7 @@
 title: "Cusco, Sacred Valley, Machu Picchu & Rainbow Mountain"
 price: "489"
 duration: "5 Days / 4 Nights"
-image: "/images/Ollantaytambo/DSC03970.webp"
+image: "/images/Ollantaytambo/DSC03974.webp"
 wetravelUuid: "6812954636"
 description: "Discover Cusco, the Sacred Valley, Machu Picchu and Rainbow Mountain in 5 days, combining Inca history, Andean culture and impressive natural landscapes."
 availability: "Every day"
@@ -17,6 +17,7 @@ includes:
   - "4 breakfasts + 2 lunches"
 
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Personal expenses"
   - "Tips"

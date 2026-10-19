@@ -2,7 +2,7 @@
 title: "Cusco, Valle Sagrado, Machu Picchu y Montaña de Colores "
 price: "489"
 duration: "5 Días / 4 Noches"
-image: "/images/Ollantaytambo/DSC03970.webp"
+image: "/images/Ollantaytambo/DSC03974.webp"
 wetravelUuid: "6812954636"
 description: "Descubre Cusco, el Valle Sagrado, Machu Picchu y la Montaña de Colores en 5 días, combinando historia inca, cultura andina y paisajes naturales impresionantes."
 availability: "Todos los días"
@@ -17,6 +17,7 @@ includes:
   - "4 desayunos + 2 almuerzos"
 
 excludes:
+  - "No incluye entradas a los recintos o centros arqueológicos."
   - "Vuelos internacionales"
   - "Gastos personales"
   - "Propinas"

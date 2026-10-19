@@ -2,7 +2,7 @@
 title: "Lima, Paracas, Huacachina, Cusco e Machu Picchu"
 price: "909"
 duration: "7 Dias / 6 Noites"
-image: "/images/Laguna_Humantay/DSC04368.webp"
+image: "/images/Paracas/pexels-alex-abregu-2157012503-34507993.webp"
 wetravelUuid: "6065343374"
 description: "Tour de 7 dias que combina Lima, Paracas, Huacachina e Cusco, incluindo Machu Picchu, Laguna Humantay e a Montanha das Cores."
 availability: "Todos os dias"
@@ -19,6 +19,7 @@ includes:
   - "Almoços buffet x2"
   - "Passeio de buggy em Huacachina"
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Voos internacionais"
   - "Alimentação não mencionada"
   - "Despesas pessoais e gorjetas"

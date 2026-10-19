@@ -17,6 +17,7 @@ includes:
   - "2 desayunos"
 
 excludes:
+  - "No incluye entradas a los recintos o centros arqueológicos."
   - "Vuelos internacionales"
   - "Gastos personales"
   - "Propinas"

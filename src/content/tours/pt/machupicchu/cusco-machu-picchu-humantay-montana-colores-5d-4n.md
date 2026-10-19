@@ -2,7 +2,7 @@
 title: "Cusco, Machu Picchu, Humantay e Montanha das Cores "
 price: "579"
 duration: "5 Dias / 4 Noites"
-image: "/images/Montaña_de_7_colores/DSC02961.webp"
+image: "/images/Montaña_de_7_colores/DSC03001.webp"
 wetravelUuid: "7669373007"
 description: "Descubra Cusco, Machu Picchu, a Lagoa Humantay e a Montanha das Cores em 5 dias, combinando cultura inca, aventura e paisagens andinas impressionantes."
 availability: "Todos os dias"
@@ -17,6 +17,7 @@ includes:
   - "4 café da manhã + 2 almoços"
 
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Voos internacionais"
   - "Despesas pessoais"
   - "Gorjetas"

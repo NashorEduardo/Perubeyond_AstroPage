@@ -2,7 +2,7 @@
 title: "Cusco, Valle Sagrado, Machu Picchu y Laguna Humantay "
 price: "589"
 duration: "5 Días / 4 Noches"
-image: "/images/Ollantaytambo/DSC03970.webp"
+image: "/images/Laguna_Humantay/FT 37.webp"
 wetravelUuid: "4627043050"
 description: "Explora Cusco, el Valle Sagrado, Machu Picchu y la Laguna Humantay en 5 días, combinando historia inca, cultura viva y paisajes andinos impresionantes."
 availability: "Todos los días"
@@ -18,6 +18,7 @@ includes:
   - "4 desayunos + 2 almuerzos"
 
 excludes:
+  - "No incluye entradas a los recintos o centros arqueológicos."
   - "Vuelos internacionales"
   - "Gastos personales"
   - "Propinas"

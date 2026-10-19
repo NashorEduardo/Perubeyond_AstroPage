@@ -2,7 +2,7 @@
 title: "Cusco, Machu Picchu, Humantay and Rainbow Mountain"
 price: "579"
 duration: "5 Days / 4 Nights"
-image: "/images/Montaña_de_7_colores/DSC02961.webp"
+image: "/images/Montaña_de_7_colores/DSC03001.webp"
 wetravelUuid: "7669373007"
 description: "Discover Cusco, Machu Picchu, Humantay Lake and Rainbow Mountain in 5 days, combining Inca culture, adventure and impressive Andean landscapes."
 availability: "Every day"
@@ -17,6 +17,7 @@ includes:
   - "4 breakfasts + 2 lunches"
 
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Personal expenses"
   - "Tips"

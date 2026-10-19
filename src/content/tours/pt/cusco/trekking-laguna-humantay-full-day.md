@@ -2,7 +2,7 @@
 title: "Tour Lagoa Humantay"
 price: "28"
 duration: "1 Dia"
-image: "/images/Laguna_Humantay/DSC04361.webp"
+image: "/images/Laguna_Humantay/FT 36.webp"
 wetravelUuid: "5367644562"
 description: "Trekking até a impressionante Lagoa Humantay, famosa pelas suas águas turquesa e rodeada de nevados, com café da manhã e almoço buffet incluídos."
 availability: "Todos os dias"
@@ -16,6 +16,7 @@ includes:
   - "Ingressos para a Lagoa Humantay"
   - "Guia profissional"
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Gorjetas"
   - "Jantar"
   - "Despesas extras pessoais"

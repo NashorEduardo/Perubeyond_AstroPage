@@ -2,7 +2,7 @@
 title: "Cusco, Machu Picchu, Humantay y Montaña de Colores "
 price: "579"
 duration: "5 Días / 4 Noches"
-image: "/images/Montaña_de_7_colores/DSC02961.webp"
+image: "/images/Montaña_de_7_colores/DSC03001.webp"
 wetravelUuid: "7669373007"
 description: "Descubre Cusco, Machu Picchu, la Laguna Humantay y la Montaña de Colores en 5 días, combinando cultura inca, aventura y paisajes andinos impresionantes."
 availability: "Todos los días"
@@ -17,6 +17,7 @@ includes:
   - "4 desayunos + 2 almuerzos"
 
 excludes:
+  - "No incluye entradas a los recintos o centros arqueológicos."
   - "Vuelos internacionales"
   - "Gastos personales"
   - "Propinas"

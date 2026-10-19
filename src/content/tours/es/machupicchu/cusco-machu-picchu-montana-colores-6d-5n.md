@@ -20,6 +20,7 @@ includes:
   - "Excursión a Montaña de Colores"
 
 excludes:
+  - "No incluye entradas a los recintos o centros arqueológicos."
   - "Vuelos internacionales"
   - "Alimentación no mencionada"
   - "Gastos personales y propinas"

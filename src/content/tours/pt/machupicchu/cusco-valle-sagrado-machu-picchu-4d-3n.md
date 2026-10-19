@@ -17,6 +17,7 @@ includes:
   - "3 café da manhã + 1 almoço buffet"
 
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Voos internacionais"
   - "Despesas pessoais"
   - "Gorjetas"

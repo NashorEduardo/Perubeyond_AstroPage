@@ -2,7 +2,7 @@
 title: "Lima Colonial, Ica, Cusco y Machu Picchu"
 price: "929"
 duration: "7 Días / 6 Noches"
-image: "/images/Machupicchu/IMG_7711.webp"
+image: "/images/Huacachina/pexels-gilmerdiaz-30151118.webp"
 wetravelUuid: "9883062403"
 description: "Tour de 7 días que combina Lima colonial, Paracas, Huacachina y Cusco, incluyendo Valle Sagrado y Machu Picchu."
 availability: "Todos los días"
@@ -19,6 +19,7 @@ includes:
   - "Almuerzo buffet x1"
   - "Paseo en buggy en Huacachina"
 excludes:
+  - "No incluye entradas a los recintos o centros arqueológicos."
   - "Vuelos internacionales"
   - "Alimentación no mencionada"
   - "Gastos personales y propinas"

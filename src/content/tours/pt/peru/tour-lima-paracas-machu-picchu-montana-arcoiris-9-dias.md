@@ -21,6 +21,7 @@ includes:
   - "Passeio de buggy em Huacachina"
 
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Voos internacionais"
   - "Alimentação não mencionada"
   - "Despesas pessoais e gorjetas"

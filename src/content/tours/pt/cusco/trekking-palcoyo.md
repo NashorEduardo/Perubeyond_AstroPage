@@ -2,7 +2,7 @@
 title: "Tour Montanha Palcoyo"
 price: "50"
 duration: "1 Dia"
-image: "/images/ValleSagrado/moray.webp"
+image: "/images/Montaña_de_7_colores/DSC02974.webp"
 wetravelUuid: ""
 description: "Tour Full Day para a Montanha Palcoyo saindo de Cusco. Descubra a Cordilheira Colorida, a Floresta de Pedra e incríveis paisagens andinas com café da manhã e almoço buffet incluídos."
 availability: "Todos os dias"
@@ -19,6 +19,7 @@ includes:
   - "Assistência permanente durante o passeio"
 
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Gorjetas"
   - "Jantar"
   - "Despesas extras não mencionadas"

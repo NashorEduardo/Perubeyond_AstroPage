@@ -2,7 +2,7 @@
 title: "Lima, Paracas, Machu Picchu & Rainbow Mountain – 8 Days / 7 Nights"
 price: "989"
 duration: "8 Days / 7 Nights"
-image: "/images/Montaña_de_7_colores/DSC02961.webp"
+image: "/images/Lima/pexels-cristianloayza-16195563.webp"
 wetravelUuid: "9617129442"
 description: "Explore the best of Peru in 8 days: Lima, Paracas, Huacachina, Cusco, Sacred Valley, Machu Picchu, Humantay Lake and Rainbow Mountain, combining adventure, culture and unique landscapes."
 availability: "Every day"
@@ -21,6 +21,7 @@ includes:
   - "Buggy ride in Huacachina"
 
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Meals not mentioned"
   - "Personal expenses and tips"

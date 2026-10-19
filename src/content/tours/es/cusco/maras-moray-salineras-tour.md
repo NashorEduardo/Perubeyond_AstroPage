@@ -12,9 +12,9 @@ includes:
   - "Recojo desde el hotel en Cusco"
   - "Transporte turístico"
   - "Guía profesional bilingüe"
-  - "Tickets de ingreso (Boleto parcial + Salineras)"
   - "Asesoramiento constante durante el tour"
 excludes:
+  - "No incluye entradas a los recintos o centros arqueológicos."
   - "Propinas por servicio"
   - "Alimentación"
   - "Gastos extras no mencionados"

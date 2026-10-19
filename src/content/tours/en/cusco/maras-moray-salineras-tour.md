@@ -12,9 +12,9 @@ includes:
   - "Hotel pickup in Cusco"
   - "Tourist transport"
   - "Professional bilingual guide"
-  - "Entrance tickets (Partial ticket + Salt Mines)"
   - "Constant assistance throughout the tour"
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "Tips for service"
   - "Meals"
   - "Extra expenses not mentioned"

@@ -2,7 +2,7 @@
 title: "Machu Picchu Full Day Tour"
 price: "320"
 duration: "1 Day"
-image: "/images/Machupicchu/IMG_7709.webp"
+image: "/images/Machupicchu/FT 8.webp"
 wetravelUuid: "6710388859"
 description: "Discover Machu Picchu on a full day tour from Cusco, with bimodal transport, tourist train, Consettur bus, professional guide and lunch included."
 availability: "Every day"
@@ -17,6 +17,7 @@ includes:
   - "Professional guide"
   - "Tourist lunch in Aguas Calientes"
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "Breakfast and dinner"
   - "Tips for service"
   - "Extra expenses not mentioned"

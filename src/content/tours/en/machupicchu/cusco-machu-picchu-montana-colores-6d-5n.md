@@ -20,6 +20,7 @@ includes:
   - "Excursion to Rainbow Mountain"
 
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Unmentioned meals"
   - "Personal expenses and tips"

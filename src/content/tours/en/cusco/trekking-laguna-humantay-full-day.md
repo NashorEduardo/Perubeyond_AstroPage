@@ -2,7 +2,7 @@
 title: "Humantay Lake Tour"
 price: "28"
 duration: "1 Day"
-image: "/images/Laguna_Humantay/DSC04361.webp"
+image: "/images/Laguna_Humantay/FT 36.webp"
 wetravelUuid: "5367644562"
 description: "Trekking to the impressive Humantay Lake, famous for its turquoise waters and surrounded by snow-capped peaks, with breakfast and buffet lunch included."
 availability: "Every day"
@@ -16,6 +16,7 @@ includes:
   - "Entrance to Humantay Lake"
   - "Professional guide"
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "Tips"
   - "Dinner"
   - "Personal extra expenses"

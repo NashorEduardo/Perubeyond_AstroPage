@@ -2,7 +2,7 @@
 title: "Tour Trekking 7 Lagoas"
 price: "50"
 duration: "1 Dia"
-image: "/images/Laguna_Humantay/DSC04361.webp"
+image: "/itinerario/7COLORES/7colores21.webp"
 wetravelUuid: "4979000171"
 description: "Trekking até as 7 lagoas de Ausangate, cercado de paisagens andinas, fauna local e finalizando com relaxamento em águas termais."
 availability: "Todos os dias"
@@ -14,6 +14,7 @@ includes:
   - "Guia profissional em turismo"
   - "Transporte turístico de ida e volta"
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Gorjetas pelo serviço"
   - "Jantar"
   - "Despesas extras"

@@ -2,7 +2,7 @@
 title: "Cusco, Machu Picchu and Humantay Lake"
 price: "519"
 duration: "4 Days / 3 Nights"
-image: "/images/Laguna_Humantay/DSC04361.webp"
+image: "/images/Laguna_Humantay/DSC04385.webp"
 wetravelUuid: "8829497736"
 description: "Explore Cusco, Machu Picchu and Humantay Lake in 4 days, combining Inca history, Andean landscapes and unforgettable experiences in a single trip."
 availability: "Every day"
@@ -17,6 +17,7 @@ includes:
   - "3 breakfasts + 1 lunch"
 
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Personal expenses"
   - "Tips"

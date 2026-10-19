@@ -2,7 +2,7 @@
 title: "Cusco, Machu Picchu and Rainbow Mountain"
 price: "519"
 duration: "4 Days / 3 Nights"
-image: "/images/Montaña_de_7_colores/DSC02961.webp"
+image: "/images/Montaña_de_7_colores/DSC03130.webp"
 wetravelUuid: "4100765464"
 description: "Discover Cusco, Machu Picchu and Rainbow Mountain in 4 days, combining history, culture and unique Andean landscapes in an unforgettable experience."
 availability: "Every day"
@@ -17,6 +17,7 @@ includes:
   - "3 breakfasts + 1 lunch"
 
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Personal expenses"
   - "Tips"

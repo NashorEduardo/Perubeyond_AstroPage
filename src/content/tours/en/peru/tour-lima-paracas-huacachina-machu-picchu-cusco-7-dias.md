@@ -2,7 +2,7 @@
 title: "Lima, Paracas, Huacachina, Cusco & Machu Picchu"
 price: "909"
 duration: "7 Days / 6 Nights"
-image: "/images/Laguna_Humantay/DSC04368.webp"
+image: "/images/Paracas/pexels-alex-abregu-2157012503-34507993.webp"
 wetravelUuid: "6065343374"
 description: "7-day tour combining Lima, Paracas, Huacachina and Cusco, including Machu Picchu, Humantay Lake and Rainbow Mountain."
 availability: "Every day"
@@ -19,6 +19,7 @@ includes:
   - "Buffet lunches x2"
   - "Buggy ride in Huacachina"
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Meals not mentioned"
   - "Personal expenses and tips"

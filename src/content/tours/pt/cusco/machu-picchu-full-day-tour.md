@@ -2,7 +2,7 @@
 title: "Tour Machu Picchu Full Day"
 price: "320"
 duration: "1 Dia"
-image: "/images/Machupicchu/IMG_7709.webp"
+image: "/images/Machupicchu/FT 8.webp"
 wetravelUuid: "6710388859"
 description: "Descubra Machu Picchu em um full day saindo de Cusco, com transporte bimodal, trem turístico, ônibus Consettur, guia profissional e almoço incluído."
 availability: "Todos os dias"
@@ -17,6 +17,7 @@ includes:
   - "Guia profissional"
   - "Almoço turístico em Aguas Calientes"
 excludes:
+  - "Não inclui ingressos para os sítios ou centros arqueológicos."
   - "Café da manhã e jantar"
   - "Gorjetas pelo serviço"
   - "Despesas extras não mencionadas"

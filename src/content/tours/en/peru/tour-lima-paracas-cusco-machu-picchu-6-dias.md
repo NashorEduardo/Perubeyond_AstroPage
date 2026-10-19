@@ -2,7 +2,7 @@
 title: "Lima, Paracas, Huacachina & Machu Picchu"
 price: "859"
 duration: "6 Days / 5 Nights"
-image: "/images/Machupicchu/IMG_7711.webp"
+image: "/images/Machupicchu/IMG_7715.webp"
 wetravelUuid: "5833040421"
 description: "6-day tour combining Lima, Paracas, Huacachina and Cusco, including Machu Picchu, with experiences of nature, culture and adventure."
 availability: "Every day"
@@ -18,6 +18,7 @@ includes:
   - "1 buffet lunch in the Sacred Valley"
   - "Buggy ride in Huacachina"
 excludes:
+  - "Does not include entrance tickets to archaeological sites or monuments."
   - "International flights"
   - "Meals not mentioned"
   - "Personal expenses and tips"
