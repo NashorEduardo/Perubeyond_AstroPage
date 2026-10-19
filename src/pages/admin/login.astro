@@ -1,0 +1,166 @@
+---
+import '../../styles/global.css';
+
+export const prerender = false;
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Iniciar Sesión — Peru Beyond Admin</title>
+    <link rel="icon" href="/images/PeruBeyond/Gallito_PeruBeyond_nobg.webp" type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  </head>
+  <body class="bg-[#0B1320] text-slate-100 font-['Jost',sans-serif] min-h-screen flex items-center justify-center p-4 selection:bg-[#c9a84c] selection:text-slate-900 relative overflow-hidden">
+    
+    <!-- Background glow decoration -->
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-[#c9a84c]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="w-full max-w-md relative z-10">
+      
+      <!-- Card Container -->
+      <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl shadow-black/60">
+        
+        <!-- Brand & Heading -->
+        <div class="text-center mb-8">
+          <div class="inline-flex items-center justify-center p-3 rounded-2xl bg-[#0B1320] border border-slate-800 mb-4 shadow-inner">
+            <img src="/images/PeruBeyond/Logo.png" alt="Peru Beyond" class="h-12 w-auto object-contain" />
+          </div>
+          <h1 class="text-2xl font-bold text-white tracking-wide">Panel Administrativo</h1>
+          <p class="text-xs text-slate-400 mt-1">Ingresa tu clave maestra para gestionar Tours y Blogs</p>
+        </div>
+
+        <!-- Error Alert -->
+        <div id="error-box" class="hidden mb-6 p-3.5 rounded-xl bg-red-950/80 border border-red-500/40 text-red-200 text-sm flex items-center gap-3">
+          <i class="bi bi-exclamation-triangle-fill text-red-400 text-lg flex-shrink-0"></i>
+          <span id="error-message" class="text-xs sm:text-sm">Contraseña incorrecta</span>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form" class="space-y-5">
+          <div>
+            <label for="password" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+              Contraseña de Acceso
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                <i class="bi bi-shield-lock text-base"></i>
+              </span>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                autocomplete="current-password"
+                placeholder="••••••••••••"
+                class="w-full pl-10 pr-12 py-3 rounded-xl bg-[#09111C] border border-slate-700/80 text-white placeholder-slate-600 focus:outline-none focus:border-[#c9a84c] focus:ring-1 focus:ring-[#c9a84c] text-sm transition-all"
+              />
+              <button
+                type="button"
+                id="toggle-password"
+                class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-500 hover:text-slate-300 transition-colors"
+                aria-label="Mostrar u ocultar contraseña"
+              >
+                <i class="bi bi-eye text-base" id="eye-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            id="submit-btn"
+            class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#c9a84c] to-[#f6d06a] hover:from-[#d8b556] hover:to-[#fae086] text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-[#c9a84c]/20 hover:shadow-[#c9a84c]/40 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <span id="btn-text">Ingresar al Panel</span>
+            <i class="bi bi-arrow-right text-base" id="btn-icon"></i>
+            <span id="btn-spinner" class="hidden animate-spin inline-block w-4 h-4 border-2 border-slate-950 border-t-transparent rounded-full"></span>
+          </button>
+        </form>
+
+        <!-- Back to site link -->
+        <div class="mt-8 pt-6 border-t border-slate-800 text-center">
+          <a href="/es" class="text-xs text-slate-400 hover:text-[#c9a84c] transition-colors inline-flex items-center gap-1.5">
+            <i class="bi bi-arrow-left"></i>
+            <span>Volver a la página principal de Peru Beyond</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script is:inline>
+      const form = document.getElementById('login-form');
+      const passwordInput = document.getElementById('password');
+      const toggleBtn = document.getElementById('toggle-password');
+      const eyeIcon = document.getElementById('eye-icon');
+      const errorBox = document.getElementById('error-box');
+      const errorMessage = document.getElementById('error-message');
+      const submitBtn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnIcon = document.getElementById('btn-icon');
+      const btnSpinner = document.getElementById('btn-spinner');
+
+      // Toggle show/hide password
+      toggleBtn?.addEventListener('click', () => {
+        const isPassword = passwordInput.getAttribute('type') === 'password';
+        passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+        eyeIcon.className = isPassword ? 'bi bi-eye-slash text-base' : 'bi bi-eye text-base';
+      });
+
+      // Submit handler
+      form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        errorBox?.classList.add('hidden');
+
+        const password = passwordInput?.value?.trim();
+        if (!password) return;
+
+        // Set loading state
+        submitBtn.disabled = true;
+        btnText.textContent = 'Verificando...';
+        btnIcon.classList.add('hidden');
+        btnSpinner.classList.remove('hidden');
+
+        try {
+          const res = await fetch('/api/admin/auth', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ action: 'login', password }),
+          });
+
+          const data = await res.json();
+
+          if (res.ok && data.success) {
+            btnText.textContent = '¡Acceso concedido!';
+            // Redirigir al dashboard
+            window.location.href = '/admin';
+          } else {
+            errorMessage.textContent = data.error || 'Contraseña incorrecta. Inténtalo nuevamente.';
+            errorBox.classList.remove('hidden');
+            passwordInput.focus();
+            passwordInput.select();
+            submitBtn.disabled = false;
+            btnText.textContent = 'Ingresar al Panel';
+            btnIcon.classList.remove('hidden');
+            btnSpinner.classList.add('hidden');
+          }
+        } catch (err) {
+          errorMessage.textContent = 'Ocurrió un error al conectar con el servidor. Inténtalo de nuevo.';
+          errorBox.classList.remove('hidden');
+          submitBtn.disabled = false;
+          btnText.textContent = 'Ingresar al Panel';
+          btnIcon.classList.remove('hidden');
+          btnSpinner.classList.add('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>

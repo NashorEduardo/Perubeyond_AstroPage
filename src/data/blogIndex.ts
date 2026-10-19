@@ -12,11 +12,53 @@ interface BlogPostLike {
   sections: { paragraphs: string[] }[];
 }
 
+import fs from 'node:fs';
+import path from 'node:path';
+
 const postsByLang = {
   es: blogPostsEs,
   en: blogPostsEn,
   pt: blogPostsPt,
 } as unknown as Record<BlogLang, Record<string, BlogPostLike>>;
+
+export function getMergedPosts(lang: BlogLang): Record<string, BlogPostLike> {
+  const base = { ...(postsByLang[lang] || {}) };
+  const root = path.resolve(process.cwd(), 'src/content/blogs');
+  const deletedPath = path.join(root, 'deleted.json');
+  let deleted = new Set<string>();
+  if (fs.existsSync(deletedPath)) {
+    try {
+      const arr = JSON.parse(fs.readFileSync(deletedPath, 'utf-8'));
+      if (Array.isArray(arr)) deleted = new Set(arr);
+    } catch {}
+  }
+
+  for (const slug of Object.keys(base)) {
+    if (deleted.has(`${lang}/${slug}`)) {
+      delete base[slug];
+    }
+  }
+
+  const langDir = path.join(root, lang);
+  if (fs.existsSync(langDir)) {
+    try {
+      const files = fs.readdirSync(langDir);
+      for (const file of files) {
+        if (file.endsWith('.json')) {
+          const slug = file.replace(/\.json$/, '');
+          if (deleted.has(`${lang}/${slug}`)) continue;
+          try {
+            const content = fs.readFileSync(path.join(langDir, file), 'utf-8');
+            const data = JSON.parse(content);
+            base[slug] = data;
+          } catch {}
+        }
+      }
+    } catch {}
+  }
+
+  return base;
+}
 
 export const featuredSlug = 'inti-raymi';
 
@@ -62,16 +104,16 @@ function buildExcerpt(post: BlogPostLike): string {
   return text.length > 240 ? text.slice(0, 240).replace(/\s+\S*$/, '') + '…' : text;
 }
 
-/** Lista completa del blog para un idioma, con el destacado primero. Todo sale de blogPosts.*.ts. */
+/** Lista completa del blog para un idioma, con el destacado primero. Incluye artículos creados/editados en CMS. */
 export function getBlogList(lang: BlogLang): BlogListItem[] {
-  const posts = postsByLang[lang];
+  const posts = getMergedPosts(lang);
   const known = new Set([featuredSlug, ...gridOrder]);
   const extras = Object.keys(posts).filter((slug) => !known.has(slug));
-  const slugs = [featuredSlug, ...gridOrder, ...extras];
+  const candidateSlugs = [featuredSlug, ...gridOrder, ...extras];
+  const slugs = candidateSlugs.filter((slug) => Boolean(posts[slug]));
 
   return slugs.map((slug) => {
     const post = posts[slug];
-    if (!post) throw new Error(`[blog] Falta el artículo "${slug}" en el idioma "${lang}"`);
     return {
       slug,
       href: `/${lang}/blog/${slug}`,

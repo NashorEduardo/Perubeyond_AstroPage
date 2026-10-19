@@ -1,0 +1,333 @@
+---
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { listAllTours } from '../../lib/tours';
+import { listAllBlogs } from '../../lib/blogs';
+import { getStorageStatus } from '../../lib/cms-storage';
+
+export const prerender = false;
+
+const [tours, blogs] = await Promise.all([
+  listAllTours(),
+  listAllBlogs(),
+]);
+
+const storage = getStorageStatus();
+
+// Estadísticas de tours
+const totalTours = tours.length;
+const toursEs = tours.filter((t) => t.lang === 'es').length;
+const toursEn = tours.filter((t) => t.lang === 'en').length;
+const toursPt = tours.filter((t) => t.lang === 'pt').length;
+const tourCategories = Array.from(new Set(tours.map((t) => t.category))).filter(Boolean);
+
+// Estadísticas de blogs
+const totalBlogs = blogs.length;
+const blogsEs = blogs.filter((b) => b.lang === 'es').length;
+const blogsEn = blogs.filter((b) => b.lang === 'en').length;
+const blogsPt = blogs.filter((b) => b.lang === 'pt').length;
+
+// Tours recientes / muestra
+const recentTours = tours.slice(0, 6);
+const recentBlogs = blogs.slice(0, 6);
+---
+
+<AdminLayout title="Dashboard General" activeTab="dashboard">
+  
+  <!-- Welcome Banner -->
+  <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0D1B2E] via-[#10243E] to-[#0D1B2E] border border-slate-800 p-6 md:p-8 mb-8 shadow-xl">
+    <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c9a84c]/20 border border-[#c9a84c]/40 text-[#f6d06a] text-xs font-semibold mb-3">
+          <i class="bi bi-stars"></i>
+          <span>Panel de Gestión Centralizado</span>
+        </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-wide">
+          Bienvenido al CMS de Peru Beyond
+        </h2>
+        <p class="text-slate-300 text-sm mt-1 max-w-2xl leading-relaxed">
+          Administra de forma segura todos los tours, paquetes turísticos, artículos de blog, itinerarios y galerías optimizadas en WebP.
+        </p>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap sm:flex-nowrap items-center gap-3">
+        <a
+          href="/admin/tours/editor?new=1"
+          class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#c9a84c] to-[#f6d06a] hover:from-[#d8b556] hover:to-[#fae086] text-slate-950 font-bold text-xs tracking-wide shadow-lg shadow-[#c9a84c]/20 transition-all cursor-pointer"
+        >
+          <i class="bi bi-plus-circle-fill text-sm"></i>
+          <span>Nuevo Tour</span>
+        </a>
+
+        <a
+          href="/admin/blogs/editor?new=1"
+          class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs border border-slate-700 transition-all cursor-pointer"
+        >
+          <i class="bi bi-pencil-square text-sm text-[#f6d06a]"></i>
+          <span>Nuevo Artículo</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Decorative ambient gradient -->
+    <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#c9a84c]/10 rounded-full blur-3xl pointer-events-none"></div>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+    
+    <!-- Total Tours -->
+    <div class="bg-[#0D1B2E] border border-slate-800 rounded-2xl p-5 shadow-sm hover:border-slate-700 transition-all">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-xs font-semibold tracking-wider uppercase text-slate-400">Total Tours</span>
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg">
+          <i class="bi bi-compass"></i>
+        </div>
+      </div>
+      <div class="text-3xl font-bold text-white mb-2">{totalTours}</div>
+      <div class="flex items-center gap-3 text-xs text-slate-400">
+        <span><strong class="text-slate-200">{toursEs}</strong> ES</span>
+        <span>&bull;</span>
+        <span><strong class="text-slate-200">{toursEn}</strong> EN</span>
+        <span>&bull;</span>
+        <span><strong class="text-slate-200">{toursPt}</strong> PT</span>
+      </div>
+    </div>
+
+    <!-- Total Blogs -->
+    <div class="bg-[#0D1B2E] border border-slate-800 rounded-2xl p-5 shadow-sm hover:border-slate-700 transition-all">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-xs font-semibold tracking-wider uppercase text-slate-400">Total Artículos</span>
+        <div class="w-10 h-10 rounded-xl bg-[#c9a84c]/10 text-[#f6d06a] flex items-center justify-center text-lg">
+          <i class="bi bi-newspaper"></i>
+        </div>
+      </div>
+      <div class="text-3xl font-bold text-white mb-2">{totalBlogs}</div>
+      <div class="flex items-center gap-3 text-xs text-slate-400">
+        <span><strong class="text-slate-200">{blogsEs}</strong> ES</span>
+        <span>&bull;</span>
+        <span><strong class="text-slate-200">{blogsEn}</strong> EN</span>
+        <span>&bull;</span>
+        <span><strong class="text-slate-200">{blogsPt}</strong> PT</span>
+      </div>
+    </div>
+
+    <!-- Categorías de Tours -->
+    <div class="bg-[#0D1B2E] border border-slate-800 rounded-2xl p-5 shadow-sm hover:border-slate-700 transition-all">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-xs font-semibold tracking-wider uppercase text-slate-400">Destinos / Categorías</span>
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
+          <i class="bi bi-geo-alt"></i>
+        </div>
+      </div>
+      <div class="text-3xl font-bold text-white mb-2">{tourCategories.length}</div>
+      <div class="text-xs text-slate-400 truncate">
+        {tourCategories.slice(0, 3).join(', ')}...
+      </div>
+    </div>
+
+    <!-- Estado de Persistencia -->
+    <div class="bg-[#0D1B2E] border border-slate-800 rounded-2xl p-5 shadow-sm hover:border-slate-700 transition-all">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-xs font-semibold tracking-wider uppercase text-slate-400">Modo Persistencia</span>
+        <div class={`w-10 h-10 rounded-xl flex items-center justify-center text-lg ${
+          storage.mode === 'github' ? 'bg-amber-500/10 text-amber-400' : 'bg-emerald-500/10 text-emerald-400'
+        }`}>
+          <i class={`bi ${storage.mode === 'github' ? 'bi-github' : 'bi-hdd-fill'}`}></i>
+        </div>
+      </div>
+      <div class="text-base font-bold text-white mb-1">
+        {storage.mode === 'github' ? 'GitHub REST API' : 'Disco Local (Dev)'}
+      </div>
+      <div class="text-xs text-slate-400 truncate">
+        {storage.mode === 'github' ? `${storage.repo} (${storage.branch})` : 'node:fs/promises local'}
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Two Column Tables: Recent Tours & Recent Blogs -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    
+    <!-- Recent Tours Card -->
+    <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6 flex flex-col">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-base">
+            <i class="bi bi-compass"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white">Tours Registrados</h3>
+            <span class="text-xs text-slate-400">{totalTours} paquetes en el sistema</span>
+          </div>
+        </div>
+        <a
+          href="/admin/tours"
+          class="text-xs font-semibold text-[#c9a84c] hover:text-[#f6d06a] inline-flex items-center gap-1 transition-colors"
+        >
+          <span>Ver todos</span>
+          <i class="bi bi-chevron-right text-[10px]"></i>
+        </a>
+      </div>
+
+      <div class="space-y-3 flex-1 overflow-y-auto max-h-[420px] pr-1">
+        {recentTours.map((t) => (
+          <div class="flex items-center justify-between p-3 rounded-xl bg-[#09111C]/80 hover:bg-[#09111C] border border-slate-800/80 transition-all group">
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <img
+                src={t.data.image || '/images/PeruBeyond/Logo.png'}
+                alt={t.data.title}
+                class="w-12 h-12 rounded-lg object-cover bg-slate-800 flex-shrink-0 border border-slate-700/60"
+                loading="lazy"
+              />
+              <div class="min-w-0">
+                <div class="text-sm font-semibold text-white truncate group-hover:text-[#c9a84c] transition-colors">
+                  {t.data.title}
+                </div>
+                <div class="flex items-center gap-2 mt-1">
+                  <span class="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">
+                    {t.lang}
+                  </span>
+                  <span class="text-xs text-slate-400 capitalize">{t.category}</span>
+                  <span class="text-xs text-[#c9a84c] font-semibold">${t.data.price}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <a
+                href={`/admin/tours/editor?id=${t.id}`}
+                class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors"
+                title="Editar Tour"
+              >
+                <i class="bi bi-pencil"></i>
+              </a>
+              <a
+                href={`/${t.lang}/tours/${t.category}/${t.slug}`}
+                target="_blank"
+                rel="noopener"
+                class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white text-xs font-medium transition-colors"
+                title="Ver en la web"
+              >
+                <i class="bi bi-box-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Recent Blogs Card -->
+    <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6 flex flex-col">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-[#c9a84c]/10 text-[#f6d06a] flex items-center justify-center text-base">
+            <i class="bi bi-newspaper"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white">Artículos de Blog</h3>
+            <span class="text-xs text-slate-400">{totalBlogs} publicaciones registradas</span>
+          </div>
+        </div>
+        <a
+          href="/admin/blogs"
+          class="text-xs font-semibold text-[#c9a84c] hover:text-[#f6d06a] inline-flex items-center gap-1 transition-colors"
+        >
+          <span>Ver todos</span>
+          <i class="bi bi-chevron-right text-[10px]"></i>
+        </a>
+      </div>
+
+      <div class="space-y-3 flex-1 overflow-y-auto max-h-[420px] pr-1">
+        {recentBlogs.map((b) => (
+          <div class="flex items-center justify-between p-3 rounded-xl bg-[#09111C]/80 hover:bg-[#09111C] border border-slate-800/80 transition-all group">
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <img
+                src={b.data.heroImage || '/images/PeruBeyond/Logo.png'}
+                alt={b.data.title}
+                class="w-12 h-12 rounded-lg object-cover bg-slate-800 flex-shrink-0 border border-slate-700/60"
+                loading="lazy"
+              />
+              <div class="min-w-0">
+                <div class="text-sm font-semibold text-white truncate group-hover:text-[#c9a84c] transition-colors">
+                  {b.data.title}
+                </div>
+                <div class="flex items-center gap-2 mt-1">
+                  <span class="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">
+                    {b.lang}
+                  </span>
+                  <span class="text-xs text-slate-400 truncate max-w-[130px]">{b.data.category}</span>
+                  <span class="text-xs text-slate-400">{b.data.readTime}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <a
+                href={`/admin/blogs/editor?id=${b.id}`}
+                class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors"
+                title="Editar Artículo"
+              >
+                <i class="bi bi-pencil"></i>
+              </a>
+              <a
+                href={`/${b.lang}/blog/${b.slug}`}
+                target="_blank"
+                rel="noopener"
+                class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white text-xs font-medium transition-colors"
+                title="Ver en la web"
+              >
+                <i class="bi bi-box-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Persistence & Server Info Box -->
+  <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6">
+    <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+      <div class="flex items-center gap-2.5">
+        <i class="bi bi-info-circle-fill text-[#c9a84c] text-lg"></i>
+        <h3 class="text-base font-bold text-white">Configuración del Entorno & Persistencia</h3>
+      </div>
+      <span class="text-xs text-slate-400">Vercel Serverless Ready</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-300">
+      <div class="bg-[#09111C] p-3.5 rounded-xl border border-slate-800">
+        <div class="text-slate-400 uppercase text-[10px] font-semibold mb-1">Repositorio GitHub</div>
+        <div class="font-mono text-white text-sm">{storage.owner}/{storage.repo}</div>
+        <div class="text-[11px] text-slate-400 mt-1">Rama activa: <strong class="text-slate-200">{storage.branch}</strong></div>
+      </div>
+
+      <div class="bg-[#09111C] p-3.5 rounded-xl border border-slate-800">
+        <div class="text-slate-400 uppercase text-[10px] font-semibold mb-1">Token de GitHub (PAT)</div>
+        <div class="flex items-center gap-2 text-sm font-semibold">
+          {storage.hasToken ? (
+            <span class="text-emerald-400 inline-flex items-center gap-1.5">
+              <i class="bi bi-check-circle-fill"></i> Configurado
+            </span>
+          ) : (
+            <span class="text-amber-400 inline-flex items-center gap-1.5">
+              <i class="bi bi-exclamation-triangle-fill"></i> No detectado (usando disco local)
+            </span>
+          )}
+        </div>
+        <div class="text-[11px] text-slate-400 mt-1">Variable de entorno: <code>GITHUB_TOKEN</code></div>
+      </div>
+
+      <div class="bg-[#09111C] p-3.5 rounded-xl border border-slate-800">
+        <div class="text-slate-400 uppercase text-[10px] font-semibold mb-1">Optimizador WebP (Sharp)</div>
+        <div class="flex items-center gap-2 text-sm font-semibold text-emerald-400">
+          <i class="bi bi-check-circle-fill"></i> Activo &bull; Calidad 80 &bull; Máx 1920px
+        </div>
+        <div class="text-[11px] text-slate-400 mt-1">Directorio: <code>public/images/</code></div>
+      </div>
+    </div>
+  </div>
+
+</AdminLayout>

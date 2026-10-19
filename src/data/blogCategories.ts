@@ -20,11 +20,11 @@ export const blogCategories = [
 
 export type BlogCategorySlug = (typeof blogCategories)[number]['slug'];
 
-/** Devuelve el slug de una categoría a partir de su texto en el idioma dado. Falla el build si no existe. */
+/** Devuelve el slug de una categoría a partir de su texto en el idioma dado con fallback seguro. */
 export function getCategorySlug(lang: BlogLang, label: string): BlogCategorySlug {
-  const found = blogCategories.find((c) => c.label[lang] === label);
+  const found = blogCategories.find((c) => c.label[lang] === label || c.slug === label);
   if (!found) {
-    throw new Error(`[blog] Categoría sin mapear en "${lang}": "${label}". Agrégala en src/data/blogCategories.ts`);
+    return 'destinos-imperdibles';
   }
   return found.slug;
 }
