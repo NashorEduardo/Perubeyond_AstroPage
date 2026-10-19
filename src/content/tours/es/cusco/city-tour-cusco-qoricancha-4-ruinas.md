@@ -1,48 +1,36 @@
 ---
-title: City Tour Cusco
+title: "City Tour Cusco"
 price: '20'
-duration: 1/2 Día
+duration: "1/2 Día"
 image: /images/Cuzco/FT1.webp
 wetravelUuid: '0054202088'
 description: 'Recorrido por los principales atractivos de Cusco: Qoricancha, Sacsayhuamán, Q’enqo, Puka Pukará y Tambomachay, ideal para conocer la historia inca en medio día.'
-availability: Todos los días
-frequency: Todo el año
-difficulty: Grado I – caminatas cortas
+availability: "Todos los días"
+frequency: "Todo el año"
+difficulty: "Grado I – caminatas cortas"
 includes:
-<<<<<<< HEAD
   - "Recojo desde el hotel en Cusco"
   - "Transporte turístico"
   - "Guía profesional bilingüe"
+  - "Tickets de ingreso (Boleto parcial + Qoricancha)"
   - "Asesoramiento constante durante el tour"
 excludes:
-  - "No incluye entradas a los recintos o centros arqueológicos."
+  - "No incluye entradas adicionales a los recintos o centros arqueológicos."
   - "Propinas por servicio"
   - "Alimentación"
   - "Gastos extras no mencionados"
-
-=======
-  - Recojo desde el hotel en Cusco
-  - Transporte turístico
-  - Guía profesional bilingüe
-  - Tickets de ingreso (Boleto parcial + Qoricancha)
-  - Asesoramiento constante durante el tour
-excludes:
-  - Propinas por servicio
-  - Alimentación
-  - Gastos extras no mencionados
->>>>>>> 44d5b3af97818020160a9b84c4e42c1cf8c8bb50
 itinerary:
   - day: 1
-    title: City Tour Cusco + Qoricancha & 4 Ruinas
-    description: Historia y cultura viva en la capital del Imperio Inca.
+    title: "City Tour Cusco + Qoricancha & 4 Ruinas"
+    description: "Historia y cultura viva en la capital del Imperio Inca."
     activities:
-      - Recojo desde el hotel en Cusco (turno mañana o tarde)
-      - Visita al Templo de Qoricancha
-      - Recorrido por la fortaleza de Sacsayhuamán
-      - Exploración de Q’enqo
-      - Visita a Puka Pukará
-      - Descubrimiento de Tambomachay
-      - Retorno a Cusco
+      - "Recojo desde el hotel en Cusco (turno mañana o tarde)"
+      - "Visita al Templo de Qoricancha"
+      - "Recorrido por la fortaleza de Sacsayhuamán"
+      - "Exploración de Q’enqo"
+      - "Visita a Puka Pukará"
+      - "Descubrimiento de Tambomachay"
+      - "Retorno a Cusco"
 gallery:
   - /itinerario/CUZCO/cusco03.webp
   - /itinerario/CUZCO/cusco04.webp
