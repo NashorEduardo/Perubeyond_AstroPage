@@ -52,7 +52,7 @@ const initialData = blog
       views: '850',
       author: 'Equipo Peru Beyond',
       category: 'Destinos Imperdibles',
-      heroImage: '/images/Blog/sacsayhuaman.webp',
+      heroImage: '',
       heroPosition: 'center',
       excerpt: '',
       sections: [
@@ -268,12 +268,13 @@ const initialData = blog
             Imagen Destacada (Hero) *
           </label>
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <div class="relative w-28 h-20 rounded-2xl overflow-hidden bg-slate-900 border border-slate-700 flex-shrink-0">
+            <div class="relative w-28 h-20 rounded-2xl overflow-hidden bg-slate-900 border border-slate-700 flex-shrink-0 flex items-center justify-center">
               <img
                 id="hero-preview"
-                src={initialData.heroImage || '/images/PeruBeyond/Logo.png'}
+                src={initialData.heroImage || '/images/PeruBeyond/Logo.webp'}
                 alt="Preview"
                 class="w-full h-full object-cover"
+                onerror="this.src='/images/PeruBeyond/Logo.webp'"
               />
             </div>
             <div class="flex-1 space-y-2">
@@ -283,7 +284,7 @@ const initialData = blog
                   id="blog-hero-image"
                   required
                   value={initialData.heroImage}
-                  placeholder="/images/Blog/mi-foto.webp"
+                  placeholder="/images/Blog/[slug]/portada.webp"
                   class="flex-1 px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 font-mono text-white text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
                 />
                 <label class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-[#f6d06a] border border-slate-700 text-xs font-bold flex items-center gap-1.5 cursor-pointer flex-shrink-0">
@@ -293,7 +294,7 @@ const initialData = blog
                 </label>
               </div>
               <p class="text-[11px] text-slate-400">
-                Guarda en <code>public/images/Blog/</code> optimizada a WebP.
+                Guarda en <code>public/images/Blog/[slug]/</code> optimizada a WebP.
               </p>
             </div>
           </div>
@@ -583,6 +584,34 @@ const initialData = blog
         .slice(0, 80);
     }
 
+    // Obtener o autogenerar slug para nombrar la carpeta exclusiva del blog
+    function getOrGenerateSlug() {
+      let slug = slugInput.value?.trim();
+      const title = titleInput.value?.trim();
+
+      if (!slug && title) {
+        slug = slugify(title);
+        slugInput.value = slug;
+        updateUrlPreview();
+      }
+
+      if (!slug) {
+        const promptTitle = prompt('Para organizar las fotos en su propia carpeta, escribe el título o slug del artículo de blog:');
+        if (promptTitle && promptTitle.trim()) {
+          titleInput.value = promptTitle.trim();
+          slug = slugify(promptTitle);
+          slugInput.value = slug;
+          updateUrlPreview();
+        } else {
+          slug = 'blog-' + Date.now().toString(36);
+          slugInput.value = slug;
+          updateUrlPreview();
+        }
+      }
+
+      return slug;
+    }
+
     function updateUrlPreview() {
       const lang = langSelect.value || 'es';
       const slug = slugInput.value.trim() || '[slug]';
@@ -625,28 +654,39 @@ const initialData = blog
       const file = e.target.files?.[0];
       if (!file) return;
 
-      window.showToast?.('Optimizando imagen para Blog...', 'info');
+      const currentSlug = getOrGenerateSlug();
+
+      window.showToast?.('Optimizando y subiendo imagen para Blog...', 'info');
 
       const formData = new FormData();
       formData.append('file', file);
+      formData.append('type', 'blogs');
       formData.append('folder', 'Blog');
+      formData.append('slug', currentSlug);
 
       try {
         const res = await fetch('/api/admin/upload', {
           method: 'POST',
           body: formData,
+          credentials: 'same-origin',
         });
         const data = await res.json();
+        const imageUrl = data.url || data.path || data.file?.path;
 
-        if (res.ok && data.success && data.file) {
-          heroImageInput.value = data.file.path;
-          heroPreview.src = data.file.path;
-          window.showToast?.('Imagen optimizada en WebP exitosamente.', 'success');
+        if (res.ok && (data.success || data.ok) && imageUrl) {
+          heroImageInput.value = imageUrl;
+          if (heroPreview) {
+            heroPreview.src = imageUrl;
+          }
+          window.showToast?.(`Imagen guardada en /images/Blog/${currentSlug}/`, 'success');
         } else {
           window.showToast?.(data.error || 'Error al subir la imagen.', 'error');
         }
-      } catch (err) {
-        window.showToast?.('Error al conectar con el servidor.', 'error');
+      } catch (err: any) {
+        console.error('[BLOG HERO UPLOAD ERROR]:', err);
+        window.showToast?.(err?.message || 'Error al conectar con el servidor.', 'error');
+      } finally {
+        heroUploadInput.value = '';
       }
     });
 
