@@ -62,6 +62,9 @@ const tourImages = buildTourImageMap();
 
 export default defineConfig({
   adapter: vercel(),
+  security: {
+    checkOrigin: false,
+  },
   integrations: [
     tailwind(),
     sitemap({
