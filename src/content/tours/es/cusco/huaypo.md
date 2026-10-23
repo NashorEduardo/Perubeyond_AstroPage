@@ -21,6 +21,9 @@ itinerary:
       - Visita guiada
 gallery:
   - /images/Tours/huaypo/captura-desde-2026-10-21-19-37-52.webp
+  - /images/Tours/huaypo/ticktock_perubeyond.webp
+  - /images/Tours/huaypo/huaypo.webp
+  - /images/Tours/huaypo/the-witcher-game-art-4k-wallpaper-uhdpaper-com-144-0-i.webp
 ---
 
 
