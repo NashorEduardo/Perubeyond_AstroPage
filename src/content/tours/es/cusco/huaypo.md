@@ -19,6 +19,8 @@ itinerary:
     activities:
       - Recojo en hotel
       - Visita guiada
+gallery:
+  - /images/Tours/huaypo/captura-desde-2026-10-21-19-37-52.webp
 ---
 
 
