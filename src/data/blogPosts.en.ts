@@ -762,6 +762,16 @@ export const blogPostsEn = {
         highlight: '"If the Inca Trail is a living open-air museum, the Salkantay is a National Geographic documentary in the first person."',
       },
       {
+        heading: 'Frequently Asked Questions About the Inca Trail and Salkantay Trek',
+        paragraphs: [
+          'Do I need a permit for the Salkantay Trek? You don\'t need the limited Inca Trail permit, but you must do the trek with an authorized operator and a guide. Even so, book in advance during high season.',
+          'Can I do the Inca Trail if I\'ve never hiked at altitude? Yes, if you prepare. The route has long climbs and sections above 4,000 meters. Walking several times a week during the two months before your trip and acclimatizing for at least two days in Cusco make a real difference.',
+          'When is the best time to do these treks? May to September, during the dry season. In April and October there are fewer people and the weather is usually acceptable. In February the Inca Trail closes for maintenance.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
         heading: 'Which One Should You Choose? Our Recommendation',
         paragraphs: [
           "Choose the Inca Trail if: it's your first time in Peru and you want the complete iconic experience, you're passionate about history and archaeology, you can book 4-6 months in advance, and you want to enter Machu Picchu through the Sun Gate at sunrise (a once-in-a-lifetime experience).",
@@ -875,6 +885,7 @@ export const blogPostsEn = {
         paragraphs: [
           "What's the best time to visit Machu Picchu? It's the number one question travel agencies in Cusco receive, and the answer isn't as simple as it seems. The Inca citadel is open year-round, but the experience varies enormously depending on the month you choose. Weather, crowd levels, prices, and ticket availability all change dramatically between the dry season and the rainy season.",
           "In this guide, we break it down month by month so you can plan your trip wisely and get the most out of one of the Seven Wonders of the Modern World.",
+          "The short answer to the best time to visit Machu Picchu: May to September for dry weather and clear views, or April and October if you want a balance between good weather and fewer crowds. If you prefer lush green scenery and lower prices, November to March works too, with the Inca Trail closed in February.",
         ],
         image: null,
         highlight: null,

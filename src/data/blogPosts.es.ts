@@ -763,6 +763,16 @@ export const blogPostsEs = {
         highlight: '"Si el Camino Inca es un museo viviente al aire libre, el Salkantay es un documental de National Geographic en primera persona."',
       },
       {
+        heading: 'Preguntas frecuentes sobre el Camino Inca y el Salkantay Trek',
+        paragraphs: [
+          '¿Necesito permiso para el Salkantay Trek? No necesitas el permiso limitado del Camino Inca, pero sí debes hacer el trekking con un operador autorizado y con guía. Aun así, reserva con anticipación en temporada alta.',
+          '¿Puedo hacer el Camino Inca si nunca he caminado en montaña? Sí, si te preparas. La ruta tiene subidas largas y tramos por encima de los 4,000 msnm. Caminar varias veces por semana durante los dos meses previos y aclimatarte al menos dos días en Cusco marcan la diferencia.',
+          '¿Cuál es la mejor época para hacer estos treks? De mayo a septiembre, durante la temporada seca. En abril y octubre hay menos gente y el clima suele ser aceptable. En febrero el Camino Inca cierra por mantenimiento.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
         heading: '¿Cuál elegir? Nuestra recomendación',
         paragraphs: [
           'Elige el Camino Inca si: es tu primera vez en Perú y quieres la experiencia icónica completa, te apasiona la historia y la arqueología, puedes reservar con 4-6 meses de anticipación, y quieres entrar a Machu Picchu por la Puerta del Sol al amanecer (una experiencia irrepetible).',
@@ -1027,5 +1037,80 @@ export const blogPostsEs = {
       'No dejes de probar la chicha de jora (cerveza de maíz): es la bebida ancestral de los incas.',
     ],
     conclusion: 'La gastronomía cusqueña es un viaje dentro del viaje. Cada plato te cuenta una historia de pisos ecológicos, tradiciones milenarias y familias que preservan recetas con orgullo. Desde un cuy crujiente en San Jerónimo hasta un adobo humeante en una fría madrugada dominical, comer en Cusco es conectar con la esencia más profunda del Perú. En Peru Beyond, nuestros tours incluyen experiencias gastronómicas locales porque creemos que la mejor forma de conocer un lugar es a través de sus sabores.',
+  },
+
+  'choquequirao-trek': {
+    title: 'Choquequirao Trek: guía completa de la "hermana" perdida de Machu Picchu',
+    date: '24 de Octubre, 2026',
+    readTime: '7 Min de lectura',
+    views: '0',
+    author: 'Perú Beyond',
+    category: 'Trekking & Aventura',
+    heroImage: '/images/Machupicchu/FT 10.webp',
+    heroPosition: 'center 50%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'Si ya recorriste el Camino Inca o quieres algo menos concurrido, el Choquequirao Trek es la opción que más viajeros experimentados están descubriendo. Es un trekking de varios días hacia una ciudadela inca comparable a Machu Picchu en tamaño y misterio, pero con una fracción de los visitantes.',
+          'En esta guía te explicamos qué es Choquequirao, qué rutas existen, cuánto dura cada una, qué esperar en el camino y cómo prepararte para el trekking.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: '¿Qué es Choquequirao?',
+        paragraphs: [
+          'Choquequirao, cuyo nombre en quechua se traduce como "cuna de oro", es un complejo arqueológico inca ubicado en la región de Apurímac, en el límite con Cusco. Se encuentra a unos 3,000 msnm, en lo alto de un cañón profundo formado por el río Apurímac.',
+          'Las excavaciones han revelado terrazas agrícolas, templos y plazas. Su fama viene en parte de sus terrazas decoradas con figuras de llamas talladas en piedra blanca, uno de los detalles que más llama la atención de quien lo visita.',
+        ],
+        image: null,
+        highlight: '"Choquequirao es Machu Picchu antes de que el mundo la descubriera: la misma escala, la misma historia, y casi nadie alrededor."',
+      },
+      {
+        heading: 'Rutas y duración del trek',
+        paragraphs: [
+          'Choquequirao no tiene carretera ni tren: se llega únicamente caminando. Según la ruta, el trekking dura entre 4 y 7 días. La opción más corta es un ida y vuelta desde el pueblo de Cachora hasta el sitio arqueológico. La ruta más larga conecta Choquequirao con Machu Picchu, un trekking exigente que cruza montañas, valles y zonas de selva.',
+          'Si tu objetivo es llegar a Machu Picchu, considera que la ruta completa suele tomar alrededor de una semana y que el último tramo hasta la ciudadela incluye ascensos largos y calurosos. Pregunta a tu operador por el itinerario exacto antes de reservar.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Dificultad: por qué no es un trek para cualquiera',
+        paragraphs: [
+          'Choquequirao es un trekking de dificultad alta. Hay descensos y ascensos muy pronunciados, varios tramos con temperaturas altas por la diferencia de altitud, y el terreno suele ser irregular. A diferencia del Camino Inca, no hay refugios de lujo ni señal de celular durante buena parte del recorrido.',
+          'Antes de reservar, evalúa tu condición física y tu experiencia en montaña. Si nunca has hecho un trekking de varios días, es mejor empezar con una ruta más corta, como el Camino Inca de 2 días o una excursión de un día a la Montaña de 7 Colores.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Qué esperar en el camino',
+        paragraphs: [
+          'Durante el trek atraviesas varios pisos ecológicos: del bosque seco en los primeros tramos a la selva nublada en los siguientes. Es común ver aves, mariposas y, con suerte, cóndores sobrevolando los cañones.',
+          'Las noches se pasan en campamentos, con carpas, comida preparada por el equipo y porteadores que cargan la mayor parte del equipaje. Este detalle es importante para elegir operador: pregunta por el trato a los porteadores, el tamaño de los grupos y la calidad de la comida.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Mejor época para hacer Choquequirao',
+        paragraphs: [
+          'La temporada seca, de mayo a septiembre, es la más recomendable: los caminos están en mejores condiciones, hay menos lluvia y las vistas desde los cañones son más despejadas. Entre junio y agosto las noches son frías, así que lleva ropa de abrigo.',
+          'De noviembre a marzo, en plena temporada de lluvias, el trekking se vuelve más difícil por el lodo y el riesgo de derrumbes en algunos tramos. Evita esas fechas si no tienes experiencia en condiciones húmedas.',
+        ],
+        image: null,
+        highlight: null,
+      },
+    ],
+    tips: [
+      'Contrata un operador autorizado y con guía. Pregunta qué permisos y entradas están vigentes antes de reservar.',
+      'Llega a Cusco al menos dos días antes para aclimatarte, y considera pasar una noche en Cachora antes del inicio del trek.',
+      'Lleva bastones de trekking, protector solar, repelente y al menos 3 litros de agua por día en los tramos secos.',
+      'Empaca capas: las mañanas en el cañón son frías y las tardes en el fondo del valle son calurosas.',
+      'Si planeas llegar a Machu Picchu, reserva el ingreso y el tren con anticipación en temporada alta.',
+    ],
+    conclusion: 'Choquequirao no es para todos, y esa es precisamente su mayor virtud. Es un trekking exigente que recompensa con silencio, ruinas casi intactas y paisajes que parecen de otro mundo. Si buscas un trek que se sienta como un descubrimiento y no como una fila de turistas, es una de las mejores decisiones que puedes tomar en Cusco.',
   },
 };

@@ -762,6 +762,16 @@ export const blogPostsPt = {
         highlight: '"Se o Caminho Inca é um museu vivo ao ar livre, o Salkantay é um documentário da National Geographic em primeira pessoa."',
       },
       {
+        heading: 'Perguntas frequentes sobre o Caminho Inca e o Salkantay Trek',
+        paragraphs: [
+          'Preciso de autorização para o Salkantay Trek? Você não precisa da autorização limitada do Caminho Inca, mas deve fazer o trekking com uma operadora autorizada e com guia. Mesmo assim, reserve com antecedência na alta temporada.',
+          'Posso fazer o Caminho Inca se nunca caminhei em montanha? Sim, se você se preparar. A rota tem subidas longas e trechos acima de 4.000 m. Caminhar várias vezes por semana nos dois meses anteriores e se aclimatar pelo menos dois dias em Cusco fazem muita diferença.',
+          'Qual é a melhor época para fazer esses treks? De maio a setembro, na temporada seca. Em abril e outubro há menos gente e o clima costuma ser aceitável. Em fevereiro o Caminho Inca fecha para manutenção.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
         heading: 'Qual escolher? Nossa recomendação',
         paragraphs: [
           'Escolha o Caminho Inca se: é sua primeira vez no Peru e você quer a experiência icônica completa, você é apaixonado por história e arqueologia, pode reservar com 4 a 6 meses de antecedência, e quer entrar em Machu Picchu pela Porta do Sol ao amanhecer (uma experiência irrepetível).',
