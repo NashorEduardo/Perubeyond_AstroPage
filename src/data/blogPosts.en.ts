@@ -206,7 +206,7 @@ export const blogPostsEn = {
   },
 
   'laguna-humantay': {
-    title: "Humantay Lake: Cusco's Turquoise Treasure You Can't Miss",
+    title: 'Humantay Lake: Everything You Need to Know Before You Go in 2026',
     date: 'April 16, 2026',
     readTime: '3 Min Read',
     views: '150',
@@ -260,6 +260,17 @@ export const blogPostsEn = {
         ],
         image: '/images/Laguna_Humantay/DSC04368.webp',
         imageCaption: "The turquoise waters of Humantay Lake at 4,200 meters above sea level, guarded by the Salkantay glacier.",
+        highlight: null,
+      },
+      {
+        heading: 'Frequently Asked Questions About Humantay Lake',
+        paragraphs: [
+          'How long is the trip? A full-day tour from Cusco usually takes 12 to 13 hours, including about three and a half hours of travel to Soraypampa and the round-trip hike.',
+          'Is the hike hard? It is moderate. The distance is short, but the altitude of 4,200 meters is noticeable. If you are not used to it, a horse is a good option.',
+          'Should I go with a tour? Most visitors go with an agency, since transport leaves very early from Cusco and the final stretch is easier to coordinate. Check what is included before you book.',
+          'What should I bring? Layered clothing, a windbreaker, a hat, sunscreen, lip balm, water, snacks, and coca leaves.',
+        ],
+        image: null,
         highlight: null,
       },
     ],
@@ -404,7 +415,7 @@ export const blogPostsEn = {
   },
 
   'vinicunca-7-colores': {
-    title: 'Rainbow Mountain (Vinicunca): Cusco\'s Most Astonishing Natural Jewel',
+    title: 'Vinicunca Rainbow Mountain: Complete 2026 Guide to the Montaña de 7 Colores',
     date: 'April 11, 2026',
     readTime: '4 Min Read',
     views: '202',
@@ -459,6 +470,17 @@ export const blogPostsEn = {
         image: null,
         highlight: null,
       },
+      {
+        heading: 'Frequently Asked Questions About the Montaña de 7 Colores',
+        paragraphs: [
+          'What is the best time to visit? The dry season, from April to October, offers clearer skies and more vivid colors. In the rainy season the trail can be muddy.',
+          'How long is the tour? It is a full day. Departure is between 4:00 and 5:00 a.m., the hike up takes 1.5 to 2 hours, and the return to Cusco is usually at sunset.',
+          'Can I go without acclimatizing? It is not recommended. The viewpoint is above 5,000 meters. Arrive in Cusco at least two days early and climb at your own pace.',
+          'What should I wear? Thermal layers, a windbreaker, gloves, a hat, and a scarf. Mornings are very cold, even when the sun is strong.',
+        ],
+        image: null,
+        highlight: null,
+      },
     ],
     tips: [
       'Acclimatize for at least 2 days in Cusco before heading up to 5,000 meters.',
@@ -468,6 +490,138 @@ export const blogPostsEn = {
       'Avoid plastic: bring a reusable bottle and leave no trash behind.',
     ],
     conclusion: "Visiting Rainbow Mountain is much more than seeing a spectacular landscape: it's feeling the energy of the Andes and understanding why Peru remains one of the most magical destinations in the world. Get ready, breathe deep, and let the mountain speak to you.",
+  },
+
+  'entradas-machu-picchu': {
+    title: 'Machu Picchu Tickets and Circuits 2026: Prices, Entry Times, and How to Buy',
+    date: 'October 24, 2026',
+    readTime: '6 Min Read',
+    views: '0',
+    author: 'Perú Beyond',
+    category: 'Must-See Destinations',
+    heroImage: '/images/Machupicchu/IMG_7709.webp',
+    heroPosition: 'center 50%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'Buying a Machu Picchu ticket sounds simple, but first you need to decide which circuit to visit, what time to enter, and whether you want to climb one of the mountains on the site. This guide explains your options so you can buy with confidence and spend your time at the citadel, not in line.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'The General Entrance: What It Includes',
+        paragraphs: [
+          'The general entrance gives you access to the citadel along one of the visiting circuits, with an assigned entry time. Circuits change over time and follow different routes: some focus on the panoramic view, others on walking through the citadel and its terraces.',
+          'As a reference we use 152 soles for the general entrance for foreign visitors, but prices can change. Confirm them on the official Ministry of Culture website before you pay.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Huayna Picchu and Machu Picchu Mountain',
+        paragraphs: [
+          'The mountains around the citadel have limited daily quotas and sell out first. If you want to climb Huayna Picchu, book that ticket together with your entrance, several months ahead in high season.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Entry Times',
+        paragraphs: [
+          'Entry is organized in time slots. The 6:00 to 8:00 a.m. slots are the most in demand. If you prefer fewer people, slots after 1:00 p.m. usually have fewer visitors, although the light changes.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'How to Buy Without Mistakes',
+        paragraphs: [
+          'Buy only through official channels or authorized agencies. The name on the ticket must match your identity document, because it is checked at entry. Save your confirmation and bring your original document.',
+          'To reach Aguas Calientes you can take the train from Cusco or Ollantaytambo, then a bus of about 25 minutes up to the citadel. Book the train well in advance in high season.',
+        ],
+        image: null,
+        highlight: null,
+      },
+    ],
+    tips: [
+      'Buy your ticket 2 to 3 months ahead if you travel between May and September.',
+      'Check the circuit and entry time on your confirmation before leaving Cusco.',
+      'Bring your original identity document; copies and photos are not accepted.',
+      'Arrive at the entrance early: ticket checks and the queue can take longer than you expect.',
+      'Hire a guide inside the citadel: the historical context completely changes the visit.',
+    ],
+    conclusion: 'With the right ticket, a well-chosen entry time, and your document ready, your Machu Picchu visit becomes stress-free. Check the official conditions before you buy, since circuits and prices can change, and plan with a margin in high season.',
+  },
+
+  'mejor-epoca-viajar-peru': {
+    title: 'Best Time to Travel to Peru in 2026: Weather by Region and Month',
+    date: 'October 24, 2026',
+    readTime: '6 Min Read',
+    views: '0',
+    author: 'Perú Beyond',
+    category: 'Travel Guides',
+    heroImage: '/images/Cuzco/FT1.webp',
+    heroPosition: 'center 50%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'Peru has three regions with very different climates: the desert coast, the Andean highlands, and the Amazon jungle. That is why there is no single answer to when you should travel. This guide helps you choose based on your route and priorities.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'The Dry Season: May to October',
+        paragraphs: [
+          'In the highlands, such as Cusco and the Sacred Valley, this is the most recommended time: sunny days, cold nights, and trails in better condition for trekking. It is also high season, with more tourists and higher prices.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'The Rainy Season: November to March',
+        paragraphs: [
+          'In the highlands it rains mostly in the afternoon, with short showers and very green vegetation. Trails can be muddy, and some routes, such as the Inca Trail, close in February for maintenance.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'The Coast: Mild Weather All Year',
+        paragraphs: [
+          'Lima and the coast have mild temperatures year-round. From June to September a gray mist known as garúa is common, without heavy rain. If you want sun on the coast, the summer months from December to March are the warmest.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'The Jungle: Rain Is Not Always Predictable',
+        paragraphs: [
+          'The Amazon is humid all year. The dry season, especially June to August, is usually the most comfortable for river trips and hikes, although it can always rain.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Our Recommendation',
+        paragraphs: [
+          'If it is your first time and you want to combine Lima, Cusco, and Machu Picchu, April, May, September, or October offer good weather and fewer people than peak July. If your route includes the Amazon, consider June to August.',
+        ],
+        image: null,
+        highlight: null,
+      },
+    ],
+    tips: [
+      'If you travel to Cusco in the dry season, bring thermal clothing: nights can be very cold.',
+      'Book domestic flights and trains well in advance for July and August.',
+      'Pack in layers: the weather changes a lot between the coast, the highlands, and the jungle.',
+      'Check festival dates before you travel, such as Inti Raymi in June: there are more tourists and higher prices.',
+      'Bring sunscreen and insect repellent, especially if you are going to the jungle.',
+    ],
+    conclusion: 'There is no bad month to visit Peru; it depends on the region you want to see. The highlands shine in the dry season, the coast is pleasant almost all year, and the jungle has its best window in the dry months. Choose your route first, then your month.',
   },
 
   'inti-raymi': {

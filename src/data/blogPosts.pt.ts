@@ -206,7 +206,7 @@ export const blogPostsPt = {
   },
 
   'laguna-humantay': {
-    title: 'Lagoa Humantay: o tesouro turquesa de Cusco que você não pode perder',
+    title: 'Lagoa Humantay: tudo o que você precisa saber antes de ir em 2026',
     date: '16 de abril de 2026',
     readTime: '3 Min de leitura',
     views: '150',
@@ -260,6 +260,17 @@ export const blogPostsPt = {
         ],
         image: '/images/Laguna_Humantay/DSC04368.webp',
         imageCaption: 'As águas turquesa da Lagoa Humantay a 4.200 metros de altitude, guardadas pelo Nevado Salkantay.',
+        highlight: null,
+      },
+      {
+        heading: 'Perguntas frequentes sobre a Lagoa Humantay',
+        paragraphs: [
+          'Quanto tempo dura o passeio? Um tour de dia inteiro saindo de Cusco costuma levar de 12 a 13 horas, incluindo cerca de três horas e meia de viagem até Soraypampa e a caminhada de ida e volta.',
+          'A caminhada é difícil? É de dificuldade média. A distância é curta, mas a altitude de 4.200 metros se sente. Se você não está acostumado, o cavalo é uma boa opção.',
+          'Vale a pena ir com agência? A maioria dos viajantes vai com agência, porque o transporte sai muito cedo de Cusco e o trecho final fica mais fácil de organizar. Confira o que está incluído antes de reservar.',
+          'O que levar? Roupas em camadas, corta-vento, chapéu, protetor solar, protetor labial, água, lanches e folhas de coca.',
+        ],
+        image: null,
         highlight: null,
       },
     ],
@@ -404,7 +415,7 @@ export const blogPostsPt = {
   },
 
   'vinicunca-7-colores': {
-    title: 'Montanha de 7 Cores (Vinicunca): a joia natural mais surpreendente de Cusco',
+    title: 'Montanha de 7 Cores (Vinicunca): guia completo para visitar em 2026',
     date: '11 de abril de 2026',
     readTime: '4 Min de leitura',
     views: '202',
@@ -459,6 +470,17 @@ export const blogPostsPt = {
         image: null,
         highlight: null,
       },
+      {
+        heading: 'Perguntas frequentes sobre a Montanha de 7 Cores',
+        paragraphs: [
+          'Qual é a melhor época para visitar? A temporada seca, de abril a outubro, oferece céus mais limpos e cores mais intensas. Na temporada de chuvas a trilha pode ficar enlameada.',
+          'Quanto tempo dura o passeio? É um dia inteiro. A saída é entre 4h e 5h da manhã, a subida dura de 1h30 a 2h, e o retorno a Cusco costuma ser no fim da tarde.',
+          'Dá para ir sem aclimatação? Não é recomendado. O mirante fica acima de 5.000 metros. Chegue a Cusco com pelo menos dois dias de antecedência e suba no seu ritmo.',
+          'O que vestir? Roupas térmicas em camadas, corta-vento, luvas, gorro e cachecol. A manhã é muito fria, mesmo com sol forte.',
+        ],
+        image: null,
+        highlight: null,
+      },
     ],
     tips: [
       'Aclimate-se pelo menos 2 dias em Cusco antes de subir aos 5.000 metros.',
@@ -468,6 +490,138 @@ export const blogPostsPt = {
       'Evite plástico: leve uma garrafa reutilizável e não deixe lixo.',
     ],
     conclusion: 'Visitar a Montanha de 7 Cores é muito mais do que ver uma paisagem espetacular: é sentir a energia dos Andes e entender por que o Peru continua sendo um dos destinos mais mágicos do mundo. Prepare-se, respire fundo e deixe a montanha falar com você.',
+  },
+
+  'entradas-machu-picchu': {
+    title: 'Ingressos e circuitos de Machu Picchu 2026: preços, horários e como comprar',
+    date: '24 de outubro de 2026',
+    readTime: '6 Min de leitura',
+    views: '0',
+    author: 'Perú Beyond',
+    category: 'Destinos Imperdíveis',
+    heroImage: '/images/Machupicchu/IMG_7709.webp',
+    heroPosition: 'center 50%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'Comprar o ingresso para Machu Picchu parece simples, mas antes é preciso decidir qual circuito visitar, em que horário entrar e se você quer subir a uma das montanhas do sítio. Este guia explica as opções para comprar com segurança e sem perder tempo na cidadela.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Ingresso geral: o que inclui',
+        paragraphs: [
+          'O ingresso geral dá acesso à cidadela por um dos circuitos de visita, com horário de entrada definido. Os circuitos mudam com o tempo e têm trajetos diferentes: alguns priorizam a vista panorâmica e outros o percurso pela cidadela e seus terraços.',
+          'Como referência usamos 152 soles para o ingresso geral de estrangeiros, mas os preços podem mudar. Confirme no site oficial do Ministério da Cultura antes de pagar.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Huayna Picchu e Montanha Machu Picchu',
+        paragraphs: [
+          'As montanhas ao redor da cidadela têm cotas diárias limitadas e esgotam primeiro. Se você quer subir ao Huayna Picchu, reserve esse ingresso junto com o seu, com vários meses de antecedência na alta temporada.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Horários de entrada',
+        paragraphs: [
+          'A entrada é organizada por turnos. Os horários de 6h às 8h da manhã são os mais procurados. Se você prefere menos gente, os turnos depois das 13h costumam ter menos visitantes, embora a luz mude.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Como comprar sem erros',
+        paragraphs: [
+          'Compre apenas por canais oficiais ou com agências autorizadas. O nome no ingresso deve coincidir com seu documento de identidade, porque é verificado na entrada. Guarde a confirmação e leve o documento original.',
+          'Para chegar a Aguas Calientes, você pode ir de trem saindo de Cusco ou Ollantaytambo e depois pegar o ônibus de cerca de 25 minutos até a cidadela. Reserve o trem com antecedência na alta temporada.',
+        ],
+        image: null,
+        highlight: null,
+      },
+    ],
+    tips: [
+      'Compre o ingresso com 2 a 3 meses de antecedência se viajar entre maio e setembro.',
+      'Confira o circuito e o horário de entrada na sua confirmação antes de sair de Cusco.',
+      'Leve seu documento de identidade original; cópias e fotos não são aceitas.',
+      'Chegue cedo à entrada: a conferência dos ingressos e a fila podem demorar mais do que você espera.',
+      'Contrate um guia dentro da cidadela: o contexto histórico muda completamente a visita.',
+    ],
+    conclusion: 'Com o ingresso certo, um horário bem escolhido e o documento em mãos, a visita a Machu Picchu fica tranquila. Confira as condições oficiais antes de comprar, porque circuitos e preços podem mudar, e planeje com folga na alta temporada.',
+  },
+
+  'mejor-epoca-viajar-peru': {
+    title: 'Melhor época para viajar ao Peru em 2026: clima por região e mês',
+    date: '24 de outubro de 2026',
+    readTime: '6 Min de leitura',
+    views: '0',
+    author: 'Perú Beyond',
+    category: 'Guias de Viagem',
+    heroImage: '/images/Cuzco/FT1.webp',
+    heroPosition: 'center 50%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'O Peru tem três regiões com climas muito diferentes: a costa desértica, a serra andina e a selva amazônica. Por isso não existe uma única resposta sobre quando viajar. Este guia ajuda você a escolher de acordo com seu roteiro e suas prioridades.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'A temporada seca: maio a outubro',
+        paragraphs: [
+          'Na serra, como Cusco e o Vale Sagrado, é a época mais recomendada: dias ensolarados, noites frias e trilhas em melhores condições para o trekking. Também é alta temporada, com mais turistas e preços mais altos.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'A temporada de chuvas: novembro a março',
+        paragraphs: [
+          'Na serra chove sobretudo à tarde, com pancadas curtas e vegetação muito verde. As trilhas podem ficar enlameadas, e algumas rotas, como o Caminho Inca, fecham em fevereiro para manutenção.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'A costa: clima ameno o ano todo',
+        paragraphs: [
+          'Lima e a costa têm temperaturas amenas durante todo o ano. De junho a setembro predomina a neblina cinzenta conhecida como garúa, sem chuvas fortes. Se você busca sol na costa, os meses de verão, de dezembro a março, são os mais quentes.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'A selva: a chuva nem sempre é previsível',
+        paragraphs: [
+          'A Amazônia é úmida o ano todo. A temporada seca, sobretudo de junho a agosto, costuma ser a mais confortável para passeios de barco e caminhadas, embora sempre possa chover.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Nossa recomendação',
+        paragraphs: [
+          'Se é sua primeira vez e você quer combinar Lima, Cusco e Machu Picchu, abril, maio, setembro ou outubro oferecem bom clima e menos gente do que em julho. Se seu roteiro inclui a Amazônia, considere junho a agosto.',
+        ],
+        image: null,
+        highlight: null,
+      },
+    ],
+    tips: [
+      'Se viajar para Cusco na temporada seca, leve roupas térmicas: as noites podem ser muito frias.',
+      'Reserve voos internos e trens com antecedência em julho e agosto.',
+      'Leve roupas em camadas: o clima muda bastante entre a costa, a serra e a selva.',
+      'Confira as datas festivas antes de viajar, como o Inti Raymi em junho: há mais turistas e preços mais altos.',
+      'Leve protetor solar e repelente, sobretudo se for à selva.',
+    ],
+    conclusion: 'Não há um mês ruim para viajar ao Peru; depende da região que você quer conhecer. A serra brilha na temporada seca, a costa é agradável quase o ano todo e a selva tem sua melhor janela nos meses secos. Escolha primeiro o roteiro e depois o mês.',
   },
 
   'inti-raymi': {
