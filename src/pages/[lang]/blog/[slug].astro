@@ -1,572 +1,838 @@
 ---
+import { getCollection, render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
-import { getMergedPosts } from '../../../data/blogIndex';
+import { getMergedPosts, getBlogList } from '../../../data/blogIndex';
 import BlogCategories from '../../../components/BlogCategories.astro';
 import { getCategorySlug } from '../../../data/blogCategories';
 import { ui } from '../../../i18n/ui';
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
   const langs = ['es', 'en', 'pt'] as const;
   const paths = [];
+
+  // 1. Obtener entradas de la colección blog (Markdown en src/content/blog)
+  let mdEntries: any[] = [];
+  try {
+    mdEntries = await getCollection('blog');
+  } catch (e) {
+    console.warn('Colección blog vacía o no inicializada aún:', e);
+  }
+
+  const mdMap = new Map<string, any>();
+  for (const entry of mdEntries) {
+    // entry.id tiene formato "es/slug" o "en/slug"
+    mdMap.set(entry.id, entry);
+  }
+
   for (const lang of langs) {
     const posts = getMergedPosts(lang);
     for (const [slug, blog] of Object.entries(posts)) {
-      paths.push({ params: { lang, slug }, props: { blog } });
+      const entryKey = `${lang}/${slug}`;
+      const mdEntry = mdMap.get(entryKey) || null;
+
+      paths.push({
+        params: { lang, slug },
+        props: {
+          blog,
+          mdEntry,
+          hasMarkdown: Boolean(mdEntry || blog.contentMarkdown),
+        },
+      });
     }
   }
   return paths;
 }
 
-const { blog } = Astro.props;
+const { blog, mdEntry } = Astro.props;
 const { slug, lang } = Astro.params as { slug: string; lang: 'es' | 'en' | 'pt' };
 const t = ui[lang as keyof typeof ui] ?? ui.es;
 const categorySlug = getCategorySlug(lang, blog.category);
+
+// Renderizar Markdown si existe entrada en Content Collections
+let Content: any = null;
+let headings: { depth: number; slug: string; text: string }[] = [];
+
+if (mdEntry) {
+  try {
+    const rendered = await render(mdEntry);
+    Content = rendered.Content;
+    headings = rendered.headings || [];
+  } catch (err) {
+    console.error('Error al renderizar mdEntry:', err);
+  }
+} else if (blog.sections && blog.sections.length > 0) {
+  // Generar encabezados para blogs clásicos basados en secciones
+  headings = blog.sections
+    .filter((s: any) => s.heading)
+    .map((s: any, idx: number) => ({
+      depth: 2,
+      slug: `seccion-${idx + 1}`,
+      text: s.heading,
+    }));
+}
+
+// Numerar encabezados estilo Salkantay Trekking y Viagens Machu Picchu: 1., 1.1., 1.2., 2., etc.
+let h2Count = 0;
+let h3Count = 0;
+const numberedHeadings = headings
+  .filter((h) => h.depth === 2 || h.depth === 3)
+  .map((h) => {
+    if (h.depth === 2) {
+      h2Count++;
+      h3Count = 0;
+      return { ...h, number: `${h2Count}. ` };
+    } else {
+      h3Count++;
+      return { ...h, number: `${h2Count}.${h3Count} ` };
+    }
+  });
+
+const hasToc = numberedHeadings.length > 0;
+
+// Obtener tours relacionados de la colección 'tours'
+const allTours = await getCollection('tours');
+const langTours = allTours.filter((t) => t.id.startsWith(`${lang}/`));
+
+const relatedSlugs = blog.relatedTours && blog.relatedTours.length > 0
+  ? blog.relatedTours
+  : ['machu-picchu-full-day-tour', 'cusco-machu-picchu-3d-2n', 'trekking-montana-7-colores'];
+
+const matchedTours = relatedSlugs
+  .map((slugOrId: string) => {
+    return langTours.find((t) => t.id.endsWith(`/${slugOrId}`) || t.id.includes(slugOrId));
+  })
+  .filter(Boolean)
+  .slice(0, 3);
+
+// Artículos relacionados (del mismo idioma, excluyendo el actual)
+const allPostsList = getBlogList(lang);
+const relatedPosts = allPostsList
+  .filter((p) => p.slug !== slug)
+  .slice(0, 3);
+
+const siteBase = Astro.site ?? new URL('https://www.perubeyond.com');
+const canonicalURL = new URL(Astro.url.pathname, siteBase);
+const ogImageAbs = blog.heroImage?.startsWith('http')
+  ? blog.heroImage
+  : new URL(blog.heroImage || '/images/PeruBeyond/Logo.webp', siteBase).href;
+
+const updatedText = {
+  es: `Actualizado en ${blog.updatedDate || 'Octubre 2026'}`,
+  en: `Updated on ${blog.updatedDate || 'October 2026'}`,
+  pt: `Atualizado em ${blog.updatedDate || 'Outubro 2026'}`,
+}[lang];
+
+const tocTitle = {
+  es: 'Tabla de Contenidos',
+  en: 'Table of Contents',
+  pt: 'Tabela de Conteúdo',
+}[lang];
+
+const relatedToursTitle = {
+  es: 'Vive esta Aventura con Peru Beyond',
+  en: 'Experience This Adventure with Peru Beyond',
+  pt: 'Viva Esta Aventura com a Peru Beyond',
+}[lang];
+
+const relatedPostsTitle = {
+  es: 'Artículos Relacionados',
+  en: 'Related Articles',
+  pt: 'Artigos Relacionados',
+}[lang];
+
+const faqsTitle = {
+  es: 'Preguntas Frecuentes',
+  en: 'Frequently Asked Questions',
+  pt: 'Perguntas Frequentes',
+}[lang];
+
+// Schema JSON-LD BlogPosting
+const blogPostingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  'headline': blog.title,
+  'description': blog.description || blog.excerpt || '',
+  'image': ogImageAbs,
+  'datePublished': blog.pubDate || blog.date || '2026-10-26',
+  'dateModified': blog.updatedDate || '2026-10-26',
+  'author': {
+    '@type': 'Person',
+    'name': blog.author || 'Peru Beyond Team',
+  },
+  'publisher': {
+    '@type': 'Organization',
+    'name': 'Peru Beyond',
+    'logo': {
+      '@type': 'ImageObject',
+      'url': `${siteBase.origin}/images/PeruBeyond/Logo.webp`,
+    },
+  },
+  'mainEntityOfPage': {
+    '@type': 'WebPage',
+    '@id': canonicalURL.href,
+  },
+  'keywords': blog.targetKeyword || blog.keywords || '',
+};
+
+// Schema JSON-LD FAQPage
+const faqSchema = blog.faqs && blog.faqs.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': blog.faqs.map((f: any) => ({
+    '@type': 'Question',
+    'name': f.question,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': f.answer,
+    },
+  })),
+} : null;
+
+// Schema JSON-LD BreadcrumbList
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    {
+      '@type': 'ListItem',
+      'position': 1,
+      'name': t['blog.home'] || 'Inicio',
+      'item': `${siteBase.origin}/${lang}`,
+    },
+    {
+      '@type': 'ListItem',
+      'position': 2,
+      'name': 'Blog',
+      'item': `${siteBase.origin}/${lang}/blog`,
+    },
+    {
+      '@type': 'ListItem',
+      'position': 3,
+      'name': blog.category,
+      'item': `${siteBase.origin}/${lang}/blog`,
+    },
+    {
+      '@type': 'ListItem',
+      'position': 4,
+      'name': blog.title,
+      'item': canonicalURL.href,
+    },
+  ],
+};
 ---
 
-<Layout title={`${blog.title} | Perú Beyond`} description={blog.sections[0].paragraphs[0]} lang={lang}>
+<Layout
+  title={`${blog.title} | Peru Beyond`}
+  description={blog.description || blog.excerpt || blog.title}
+  ogImage={blog.heroImage}
+  lang={lang}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
   <Header lang={lang} />
 
-  <main>
-    <!-- ── Hero ── -->
-    <section class="blog-hero" style={`background-image: url('${blog.heroImage}'); background-position: ${blog.heroPosition};`}>
-      <div class="hero-overlay">
-        <div class="hero-inner">
-          <nav class="breadcrumb">
-            <a href={`/${lang}`}>{t['blog.home']}</a>
-            <span>›</span>
-            <a href={`/${lang}/blog`}>Blog</a>
-            <span>›</span>
-            <span class="current">{blog.title}</span>
-          </nav>
-          <span class="category-badge">{blog.category}</span>
-          <h1 class="hero-title">{blog.title}</h1>
-          <div class="hero-meta">
-            <span>
-              <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-              {blog.date}
-            </span>
-            <span class="meta-dot">·</span>
-            <span>
-              <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              {blog.readTime}
-            </span>
-            <span class="meta-dot">·</span>
-            <span>
-              <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-              {blog.views} {t['blog.views']}
-            </span>
+  <main class="bg-[#faf8f5] min-h-screen text-slate-800 antialiased selection:bg-[#f6d06a] selection:text-slate-900">
+
+    <!-- ── Hero Editorial ── -->
+    <header class="relative bg-slate-950 text-white pt-28 pb-16 overflow-hidden">
+      <!-- Fondo difuminado + Hero Image -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src={blog.heroImage}
+          alt={blog.title}
+          class="w-full h-full object-cover object-center opacity-40 filter brightness-75 scale-105 transform duration-700 ease-out"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0D1B2E] via-[#0D1B2E]/70 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-2 text-xs text-white/70 mb-4 flex-wrap" aria-label="Breadcrumb">
+          <a href={`/${lang}`} class="hover:text-[#f6d06a] transition-colors">{t['blog.home'] || 'Inicio'}</a>
+          <span class="text-white/40">›</span>
+          <a href={`/${lang}/blog`} class="hover:text-[#f6d06a] transition-colors">Blog</a>
+          <span class="text-white/40">›</span>
+          <span class="text-white/90 font-medium truncate max-w-xs">{blog.category}</span>
+        </nav>
+
+        <!-- Category Badge -->
+        <div class="mb-4">
+          <span class="inline-block px-3 py-1 rounded bg-[#c9a84c] text-slate-950 text-xs font-bold uppercase tracking-wider shadow">
+            {blog.category}
+          </span>
+        </div>
+
+        <!-- Title H1 -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-tight mb-6 max-w-4xl drop-shadow-md">
+          {blog.title}
+        </h1>
+
+        <!-- Editorial Meta Row -->
+        <div class="flex flex-wrap items-center gap-y-3 gap-x-6 text-xs sm:text-sm text-white/80 pb-6 border-b border-white/15">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#c9a84c] to-[#f6d06a] text-slate-950 font-bold flex items-center justify-center text-xs shadow">
+              {(blog.author || 'PB').charAt(0)}
+            </div>
+            <div>
+              <span class="text-white/50 text-[11px] block">{t['blog.by'] || 'Por'}</span>
+              <span class="font-semibold text-white">{blog.author || 'Peru Beyond'}</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-1.5 text-amber-300 font-medium">
+            <i class="bi bi-clock-history"></i>
+            <span>{updatedText}</span>
+          </div>
+
+          <div class="flex items-center gap-1.5 text-white/70">
+            <i class="bi bi-book"></i>
+            <span>{blog.readingTime || blog.readTime || '10 min de lectura'}</span>
+          </div>
+
+          <!-- Share buttons -->
+          <div class="ml-auto flex items-center gap-2">
+            <span class="text-xs uppercase font-semibold text-white/50 mr-1 hidden sm:inline">{t['blog.share'] || 'Compartir'}:</span>
+            <a
+              href={`https://wa.me/?text=${encodeURIComponent(`${blog.title} - ${canonicalURL.href}`)}`}
+              target="_blank"
+              rel="noopener"
+              class="w-8 h-8 rounded-full bg-emerald-600/80 hover:bg-emerald-600 text-white flex items-center justify-center transition-colors shadow"
+              title="WhatsApp"
+            >
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonicalURL.href)}`}
+              target="_blank"
+              rel="noopener"
+              class="w-8 h-8 rounded-full bg-blue-600/80 hover:bg-blue-600 text-white flex items-center justify-center transition-colors shadow"
+              title="Facebook"
+            >
+              <i class="bi bi-facebook"></i>
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- ── Article ── -->
-    <div class="article-wrapper">
-      <article class="article-card">
+    <!-- ── Contenedor Principal (Grid: Sidebar Sticky TOC + Contenido) ── -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
-        <!-- Author row -->
-        <div class="author-row">
-          <div class="author-avatar">{blog.author.charAt(0)}</div>
-          <div>
-            <p class="author-label">{t['blog.by']}</p>
-            <p class="author-name">{blog.author}</p>
-          </div>
-          <div class="author-divider"></div>
-          <div class="share-row">
-            <span class="share-label">{t['blog.share']}</span>
-            <a href={`https://wa.me/?text=${encodeURIComponent(blog.title)}`} class="share-btn" aria-label="WhatsApp" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-4.988-1.365l-.357-.212-3.758.9.946-3.658-.232-.376A9.818 9.818 0 012.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+        <!-- ── SIDEBAR TOC (Escritorio Sticky) ── -->
+        {hasToc && (
+          <aside class="hidden lg:block lg:col-span-4 w-full min-w-0 sticky top-24 space-y-6">
+            <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm">
+              <div class="flex items-center gap-2 pb-3 mb-4 border-b border-slate-100">
+                <i class="bi bi-list-nested text-[#c9a84c] text-lg"></i>
+                <h2 class="text-sm font-bold uppercase tracking-wider text-slate-800">
+                  {tocTitle}
+                </h2>
+              </div>
+              <nav class="space-y-1.5 text-xs max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
+                {numberedHeadings.map((h) => (
+                  <a
+                    href={`#${h.slug}`}
+                    class={`block py-1.5 px-2.5 rounded-lg transition-colors leading-snug ${
+                      h.depth === 2
+                        ? 'font-bold text-slate-800 hover:bg-amber-50 hover:text-[#9a7625]'
+                        : 'pl-6 text-slate-500 hover:text-slate-800 hover:bg-slate-50'
+                    }`}
+                  >
+                    <span class="text-[#c9a84c] font-semibold mr-1">{h.number}</span>
+                    {h.text}
+                  </a>
+                ))}
+                {blog.faqs && blog.faqs.length > 0 && (
+                  <a
+                    href="#faqs-section"
+                    class="block py-1.5 px-2.5 rounded-lg font-bold text-slate-800 hover:bg-amber-50 hover:text-[#9a7625] transition-colors"
+                  >
+                    <span class="text-[#c9a84c] font-semibold mr-1">★ </span>
+                    {faqsTitle}
+                  </a>
+                )}
+              </nav>
+            </div>
+
+            <!-- Mini CTA en sidebar -->
+            <div class="bg-gradient-to-br from-[#0D1B2E] to-[#152843] rounded-2xl p-5 text-white shadow-lg border border-slate-800">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#f6d06a]">Peru Beyond Travel</span>
+              <h4 class="text-base font-bold mt-1 mb-2">¿Planeando tu viaje a Perú?</h4>
+              <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+                Asesoría 100% personalizada por guías locales en español, inglés y portugués.
+              </p>
+              <a
+                href="https://wa.me/51943491959"
+                target="_blank"
+                rel="noopener"
+                class="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-[#c9a84c] to-[#f6d06a] hover:from-[#d8b556] hover:to-[#fae086] text-slate-950 font-bold text-xs tracking-wide inline-flex items-center justify-center gap-2 transition-all shadow"
+              >
+                <i class="bi bi-whatsapp"></i> Hablar con un Experto
+              </a>
+            </div>
+          </aside>
+        )}
+
+        <!-- ── ARTÍCULO PRINCIPAL ── -->
+        <article class:list={[
+          "w-full min-w-0 bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200/80 shadow-sm",
+          hasToc ? "lg:col-span-8" : "lg:col-span-12"
+        ]}>
+
+          <!-- TOC Colapsable en Móvil -->
+          {hasToc && (
+            <div class="block lg:hidden mb-8">
+              <details class="bg-amber-50/60 border border-amber-200/80 rounded-2xl p-4">
+                <summary class="font-bold text-sm text-slate-900 cursor-pointer flex items-center justify-between">
+                  <span class="flex items-center gap-2">
+                    <i class="bi bi-list-nested text-[#c9a84c]"></i>
+                    {tocTitle}
+                  </span>
+                  <span class="text-xs text-[#9a7625] font-semibold">Mostrar / Ocultar</span>
+                </summary>
+                <nav class="mt-3 pt-3 border-t border-amber-200/60 space-y-1.5 text-xs">
+                  {numberedHeadings.map((h) => (
+                    <a
+                      href={`#${h.slug}`}
+                      class={`block py-1 ${
+                        h.depth === 2
+                          ? 'font-bold text-slate-900'
+                          : 'pl-4 text-slate-600'
+                      }`}
+                    >
+                      <span class="text-[#c9a84c] mr-1">{h.number}</span>
+                      {h.text}
+                    </a>
+                  ))}
+                </nav>
+              </details>
+            </div>
+          )}
+
+          <!-- Quick Stats / Trail Stats Summary Card (Estilo Salkantay Trekking) -->
+          {blog.quickStats && (
+            <section class="mb-10 bg-gradient-to-br from-[#fbf9f4] to-[#f5eedf] border border-[#e8d9b0] rounded-2xl p-6 shadow-sm">
+              <div class="flex items-center gap-2 pb-3 mb-4 border-b border-[#e5d5a7]">
+                <i class="bi bi-card-checklist text-xl text-[#9a7625]"></i>
+                <h3 class="font-serif text-lg font-bold text-[#1a1208]">
+                  {lang === 'pt' ? 'Resumo da Rota · Ficha Técnica' : lang === 'en' ? 'Trail Stats · At a Glance' : 'Ficha Técnica · Resumen de la Ruta'}
+                </h3>
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs">
+                {typeof blog.quickStats === 'object' && !Array.isArray(blog.quickStats) ? (
+                  Object.entries(blog.quickStats).map(([key, val]) => (
+                    <div class="bg-white/80 p-3 rounded-xl border border-[#ece0c3]">
+                      <span class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-0.5">
+                        {key === 'duracion' ? '⏱️ Duración' :
+                         key === 'altitud' ? '⛰️ Altitud Máx.' :
+                         key === 'dificultad' ? '⚡ Dificultad' :
+                         key === 'mejorEpoca' ? '☀️ Mejor Época' :
+                         key === 'ubicacion' ? '📍 Ubicación' :
+                         key === 'precio' ? '🎟️ Precio / Entradas' : key}
+                      </span>
+                      <span class="font-bold text-slate-900 text-sm">{val}</span>
+                    </div>
+                  ))
+                ) : Array.isArray(blog.quickStats) ? (
+                  blog.quickStats.map((item: any) => (
+                    <div class="bg-white/80 p-3 rounded-xl border border-[#ece0c3]">
+                      <span class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-0.5">
+                        {item.label}
+                      </span>
+                      <span class="font-bold text-slate-900 text-sm">{item.value}</span>
+                    </div>
+                  ))
+                ) : null}
+              </div>
+            </section>
+          )}
+
+          <!-- Contenido Renderizado: Markdown o Secciones -->
+          {Content ? (
+            <div class="prose-blog w-full">
+              <Content />
+            </div>
+          ) : (
+            <div class="space-y-8 w-full">
+              {blog.sections?.map((section: any, idx: number) => (
+                <div id={`seccion-${idx + 1}`} class="scroll-mt-24 space-y-4">
+                  {section.heading && (
+                    <h2 class="text-2xl font-serif font-bold text-slate-900 border-l-4 border-[#c9a84c] pl-3.5 py-0.5 mt-8 mb-4">
+                      {section.heading}
+                    </h2>
+                  )}
+                  {section.paragraphs?.map((p: string) => (
+                    <p class="text-slate-700 leading-relaxed text-base sm:text-lg font-normal mb-4">
+                      {p}
+                    </p>
+                  ))}
+                  {section.highlight && (
+                    <blockquote class="bg-amber-50/70 border-l-4 border-[#c9a84c] p-4 sm:p-5 rounded-r-xl my-6 text-slate-800 font-serif italic text-base">
+                      {section.highlight}
+                    </blockquote>
+                  )}
+                  {section.image && (
+                    <figure class="my-6 rounded-2xl overflow-hidden shadow-md">
+                      <img src={section.image} alt={section.imageCaption || ''} class="w-full h-auto object-cover max-h-[460px]" loading="lazy" />
+                      {section.imageCaption && (
+                        <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">
+                          {section.imageCaption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  )}
+                </div>
+              ))}
+
+              {blog.tips && blog.tips.length > 0 && (
+                <div class="bg-amber-50/80 border border-amber-200/80 rounded-2xl p-6 my-8">
+                  <h3 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                    <i class="bi bi-lightbulb-fill text-amber-500"></i>
+                    {t['blog.tips_heading'] || 'Consejos para el Viajero'}
+                  </h3>
+                  <ul class="space-y-2 text-sm text-slate-700">
+                    {blog.tips.map((tip: string) => (
+                      <li class="flex items-start gap-2">
+                        <i class="bi bi-check2 text-emerald-600 font-bold mt-0.5"></i>
+                        <span>{tip}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {blog.conclusion && (
+                <div class="mt-8 pt-6 border-t border-slate-200 text-slate-800 text-base leading-relaxed italic">
+                  <p>{blog.conclusion}</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          <!-- In-Content CTA Banner -->
+          <div class="my-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#0D1B2E] via-[#152843] to-[#0D1B2E] text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="space-y-2 text-center sm:text-left">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#f6d06a]">¿Listo para vivirlo en persona?</span>
+              <h3 class="text-xl sm:text-2xl font-serif font-bold text-white">
+                Reserva tu experiencia garantizada con Peru Beyond
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 max-w-lg">
+                Boletos oficiales, traslados privados, guías certificados y asistencia 24/7 en español, inglés y portugués.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/51943491959?text=Hola,%20leí%20su%20guía%20y%20deseo%20organizar%20mi%20viaje%20a%20Perú"
+              target="_blank"
+              rel="noopener"
+              class="px-6 py-3 rounded-2xl bg-gradient-to-r from-[#c9a84c] to-[#f6d06a] hover:from-[#d8b556] hover:to-[#fae086] text-slate-950 font-bold text-sm tracking-wide shadow-lg inline-flex items-center gap-2 flex-shrink-0 transition-transform transform hover:-translate-y-0.5"
+            >
+              <i class="bi bi-whatsapp text-lg"></i>
+              <span>Consultar por WhatsApp</span>
             </a>
-            <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://perubeyond.com/blog/' + slug)}`} class="share-btn" aria-label="Facebook" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+
+          <!-- Acordeón de FAQs -->
+          {blog.faqs && blog.faqs.length > 0 && (
+            <section id="faqs-section" class="my-12 scroll-mt-24 pt-8 border-t border-slate-200">
+              <div class="flex items-center gap-2 mb-6">
+                <i class="bi bi-question-circle-fill text-[#c9a84c] text-2xl"></i>
+                <h2 class="text-2xl font-serif font-bold text-slate-900">
+                  {faqsTitle}
+                </h2>
+              </div>
+
+              <div class="space-y-3">
+                {blog.faqs.map((faq: any, idx: number) => (
+                  <details class="group bg-slate-50 border border-slate-200/80 rounded-2xl overflow-hidden transition-all duration-200 hover:border-[#c9a84c]/50">
+                    <summary class="flex items-center justify-between p-4 sm:p-5 font-semibold text-sm sm:text-base text-slate-900 cursor-pointer list-none select-none">
+                      <span class="flex items-center gap-2.5 pr-4">
+                        <span class="w-6 h-6 rounded-full bg-amber-100 text-[#9a7625] text-xs font-bold flex items-center justify-center flex-shrink-0">
+                          {idx + 1}
+                        </span>
+                        {faq.question}
+                      </span>
+                      <i class="bi bi-chevron-down text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
+                    </summary>
+                    <div class="px-5 pb-5 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100 bg-white">
+                      {faq.answer}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <!-- Categorías para explorar -->
+          <div class="mt-12 pt-8 border-t border-slate-200">
+            <BlogCategories lang={lang} current={categorySlug} mode="links" />
+          </div>
+
+        </article>
+      </div>
+
+      <!-- ── BLOQUE DE TOURS RELACIONADOS (CONVERSIÓN DIRECTA) ── -->
+      {matchedTours.length > 0 && (
+        <section class="mt-16 pt-12 border-t border-slate-200">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#c9a84c]">{t['blog.home'] || 'Peru Beyond'}</span>
+            <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-1">
+              {relatedToursTitle}
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-2">
+              Tours diseñados por locales para que disfrutes cada rincón sin preocupaciones de logística ni entradas.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {matchedTours.map((tItem: any) => {
+              const parts = tItem.id.split('/');
+              const cat = parts[1];
+              const tSlug = parts.slice(2).join('/');
+              const tourUrl = `/${lang}/tours/${cat}/${tSlug}`;
+              return (
+                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group">
+                  <div class="relative h-48 overflow-hidden">
+                    <img
+                      src={tItem.data.image}
+                      alt={tItem.data.title}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 text-white font-bold text-xs backdrop-blur-sm">
+                      {tItem.data.price}
+                    </div>
+                    {tItem.data.duration && (
+                      <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-black/60 text-white text-[11px] backdrop-blur-sm flex items-center gap-1">
+                        <i class="bi bi-clock"></i> {tItem.data.duration}
+                      </div>
+                    )}
+                  </div>
+                  <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-slate-900 text-base group-hover:text-[#9a7625] transition-colors leading-snug line-clamp-2">
+                        {tItem.data.title}
+                      </h3>
+                      {tItem.data.difficulty && (
+                        <p class="text-xs text-slate-400 mt-2 flex items-center gap-1">
+                          <i class="bi bi-activity text-[#c9a84c]"></i>
+                          Dificultad: <span class="font-medium text-slate-600">{tItem.data.difficulty}</span>
+                        </p>
+                      )}
+                    </div>
+                    <a
+                      href={tourUrl}
+                      class="mt-4 w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-[#c9a84c] text-white hover:text-slate-950 text-xs font-bold text-center transition-colors inline-flex items-center justify-center gap-1.5"
+                    >
+                      <span>Ver Detalles del Tour</span>
+                      <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      <!-- ── BLOQUE DE ARTÍCULOS RELACIONADOS ── -->
+      {relatedPosts.length > 0 && (
+        <section class="mt-16 pt-12 border-t border-slate-200">
+          <div class="flex items-center justify-between mb-8">
+            <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900">
+              {relatedPostsTitle}
+            </h2>
+            <a href={`/${lang}/blog`} class="text-xs font-bold text-[#9a7625] hover:underline flex items-center gap-1">
+              Ver todos <i class="bi bi-arrow-right"></i>
             </a>
           </div>
-        </div>
 
-        <div class="gold-separator"></div>
-
-        <!-- Content sections -->
-        {blog.sections.map((section) => (
-          <div class={section.heading ? 'content-section' : 'intro-section'}>
-            {section.heading && <h2 class="section-heading">{section.heading}</h2>}
-            {section.paragraphs.map((p) => (
-              <p class={section.heading ? 'body-text' : 'intro-text'}>{p}</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {relatedPosts.map((p) => (
+              <a href={p.href} class="group bg-white rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-lg transition-all flex flex-col">
+                <div class="h-40 overflow-hidden relative">
+                  <img src={p.image} alt={p.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-slate-950/80 text-white text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm">
+                    {p.category}
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-bold text-slate-900 text-sm leading-snug group-hover:text-[#9a7625] transition-colors line-clamp-2">
+                    {p.title}
+                  </h3>
+                  <span class="text-[11px] text-slate-400 mt-3 block">{p.date}</span>
+                </div>
+              </a>
             ))}
-            {section.highlight && (
-              <blockquote class="pull-quote">
-                <p>{section.highlight}</p>
-              </blockquote>
-            )}
-            {section.image && (
-              <figure class="article-figure">
-                <img src={section.image} alt={section.imageCaption ?? ''} loading="lazy" />
-                {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
-              </figure>
-            )}
           </div>
-        ))}
+        </section>
+      )}
 
-        <!-- Tips box -->
-        <div class="tips-box">
-          <div class="tips-header">
-            <svg class="tips-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-            <h3>{t['blog.tips_heading']}</h3>
-          </div>
-          <ul class="tips-list">
-            {blog.tips.map((tip) => (
-              <li>
-                <svg class="tip-check" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                <span>{tip}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <!-- Conclusion -->
-        <div class="conclusion-section">
-          <div class="conclusion-line"></div>
-          <p class="conclusion-text">{blog.conclusion}</p>
-        </div>
-
-        <!-- Mapa de categorías -->
-        <div class="explore-categories">
-          <BlogCategories lang={lang} current={categorySlug} mode="links" />
-        </div>
-
-        <!-- Back link -->
-        <div class="back-row">
-          <a href={`/${lang}/blog`} class="back-link">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/></svg>
-            {t['blog.back_to_blog']}
-          </a>
-        </div>
-
-      </article>
     </div>
-
-    <!-- ── CTA ── -->
-    <section class="cta-section">
-      <div class="cta-inner">
-        <p class="cta-tag">¿Listo para la aventura?</p>
-        <h2 class="cta-title">Vive esta experiencia con <span>Perú Beyond</span></h2>
-        <p class="cta-desc">Nuestro equipo de expertos locales diseña viajes únicos, seguros y auténticos. Contáctanos y planifica tu próxima aventura peruana.</p>
-        <div class="cta-buttons">
-          <a href="https://wa.me/51943491959" class="btn-primary" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-4.988-1.365l-.357-.212-3.758.9.946-3.658-.232-.376A9.818 9.818 0 012.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
-            Reservar por WhatsApp
-          </a>
-          <a href={`/${lang}/blog`} class="btn-secondary">Ver más artículos</a>
-        </div>
-      </div>
-    </section>
 
   </main>
 
   <Footer lang={lang} />
 </Layout>
 
-<style>
-  /* ── Hero ── */
-  .blog-hero {
-    position: relative;
-    height: 70vh;
-    min-height: 480px;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.25) 0%,
-      rgba(0,0,0,0.55) 60%,
-      rgba(0,0,0,0.78) 100%
-    );
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 3.5rem;
-  }
-  .hero-inner {
-    width: 100%;
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-  .breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.5);
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-  }
-  .breadcrumb a {
-    color: rgba(255,255,255,0.5);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .breadcrumb a:hover { color: #f6d06a; }
-  .breadcrumb .current {
-    color: rgba(255,255,255,0.75);
-    max-width: 300px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .category-badge {
-    display: inline-block;
-    background: #c9a84c;
-    color: #fff;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.28rem 0.85rem;
-    border-radius: 2px;
-    margin-bottom: 0.9rem;
-  }
-  .hero-title {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(1.7rem, 4.5vw, 3rem);
-    font-weight: 800;
-    color: #fff;
-    line-height: 1.25;
-    margin-bottom: 1.1rem;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.45);
-    max-width: 780px;
-  }
-  .hero-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    flex-wrap: wrap;
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.65);
-  }
-  .hero-meta span {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-  .meta-icon {
-    width: 0.9rem;
-    height: 0.9rem;
-    flex-shrink: 0;
-  }
-  .meta-dot { color: rgba(255,255,255,0.3); }
-
-  /* ── Article wrapper ── */
-  .article-wrapper {
-    background: #f8f6f3;
-    padding: 0 1rem 5rem;
-  }
-  .article-card {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 4px 4px 0 0;
-    box-shadow: 0 4px 40px rgba(0,0,0,0.08);
-    padding: 2.5rem 2.5rem 3rem;
-    position: relative;
-    top: -3rem;
-  }
-  @media (max-width: 640px) {
-    .article-card { padding: 1.75rem 1.25rem 2rem; }
-  }
-
-  /* ── Author row ── */
-  .author-row {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-  }
-  .author-avatar {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 9999px;
-    background: linear-gradient(135deg, #c9a84c, #f6d06a);
-    color: #fff;
-    font-weight: 800;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .author-label { font-size: 0.7rem; color: #9ca3af; margin: 0; line-height: 1.2; }
-  .author-name  { font-size: 0.85rem; font-weight: 700; color: #1a1208; margin: 0; }
-  .author-divider {
-    flex: 1;
-    height: 1px;
-    background: #ece7de;
-    min-width: 1rem;
-  }
-  .share-row {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .share-label { font-size: 0.68rem; color: #9ca3af; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
-  .share-btn {
-    width: 1.75rem;
-    height: 1.75rem;
-    border-radius: 9999px;
-    background: #f3ede3;
-    color: #c9a84c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s, color 0.2s;
-  }
-  .share-btn svg { width: 0.85rem; height: 0.85rem; }
-  .share-btn:hover { background: #c9a84c; color: #fff; }
-
-  /* ── Gold separator ── */
-  .gold-separator {
-    height: 2px;
-    background: linear-gradient(to right, #c9a84c, #f6d06a, transparent);
-    margin-bottom: 2rem;
-    border-radius: 1px;
-  }
-
-  /* ── Intro ── */
-  .intro-section { margin-bottom: 2rem; }
-  .intro-text {
-    font-family: Georgia, serif;
-    font-size: 1.125rem;
+<style is:global>
+  /* ── Estilos Prose Avanzados para Markdown (Salkantay Trekking & TreXperience) ── */
+  .prose-blog {
+    font-size: 1.05rem;
     line-height: 1.85;
-    color: #2d2d2d;
-    margin-bottom: 1.1rem;
+    color: #334155;
   }
-
-  /* ── Sections ── */
-  .content-section { margin-bottom: 2.25rem; }
-  .section-heading {
+  .prose-blog p {
+    margin-bottom: 1.4rem;
+  }
+  .prose-blog h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 2.75rem;
+    margin-bottom: 1.1rem;
+    border-left: 4px solid #c9a84c;
+    padding-left: 0.85rem;
+    scroll-margin-top: 6rem;
+    line-height: 1.35;
+  }
+  .prose-blog h3 {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.3rem;
     font-weight: 700;
-    color: #0d1b2e;
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-    border-left: 3px solid #c9a84c;
+    color: #1e293b;
+    margin-top: 2rem;
+    margin-bottom: 0.85rem;
+    scroll-margin-top: 6rem;
     line-height: 1.4;
   }
-  .body-text {
-    font-size: 0.97rem;
-    line-height: 1.85;
-    color: #4b4b4b;
-    margin-bottom: 0.9rem;
-  }
-
-  /* ── Pull quote ── */
-  .pull-quote {
-    border-left: 4px solid #c9a84c;
-    margin: 1.75rem 0;
-    padding: 1rem 1.5rem;
-    background: #faf7f0;
-    border-radius: 0 4px 4px 0;
-  }
-  .pull-quote p {
-    font-family: Georgia, serif;
-    font-style: italic;
+  .prose-blog h4 {
     font-size: 1.05rem;
-    color: #5a4a2a;
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  /* ── Article figure ── */
-  .article-figure {
-    margin: 2rem 0;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  .article-figure img {
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-    display: block;
-  }
-  .article-figure figcaption {
-    padding: 0.6rem 1rem;
-    font-size: 0.78rem;
-    color: #9ca3af;
-    font-style: italic;
-    background: #faf7f0;
-    border-top: 1px solid #ece7de;
-    text-align: center;
-  }
-
-  /* ── Tips box ── */
-  .tips-box {
-    background: #fdf9f0;
-    border: 1px solid #e8d9b0;
-    border-left: 4px solid #c9a84c;
-    border-radius: 4px;
-    padding: 1.5rem 1.75rem;
-    margin: 2.5rem 0;
-  }
-  .tips-header {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 1rem;
-  }
-  .tips-icon {
-    width: 1.2rem;
-    height: 1.2rem;
-    color: #c9a84c;
-    flex-shrink: 0;
-  }
-  .tips-header h3 {
-    font-family: Georgia, serif;
-    font-size: 1rem;
     font-weight: 700;
-    color: #5a4a2a;
-    margin: 0;
+    color: #334155;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
   }
-  .tips-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+  .prose-blog ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.4rem;
   }
-  .tips-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.6rem;
-    font-size: 0.9rem;
-    color: #4b4b4b;
-    line-height: 1.55;
+  .prose-blog ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+    margin-bottom: 1.4rem;
   }
-  .tip-check {
-    width: 1rem;
-    height: 1rem;
+  .prose-blog li {
+    margin-bottom: 0.4rem;
+  }
+  .prose-blog strong {
+    color: #0f172a;
+    font-weight: 700;
+  }
+  .prose-blog a {
+    color: #9a7625;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+  }
+  .prose-blog a:hover {
     color: #c9a84c;
-    flex-shrink: 0;
-    margin-top: 0.15rem;
   }
 
-  /* ── Conclusion ── */
-  .conclusion-section { margin-top: 2rem; }
-  .conclusion-line {
-    width: 3rem;
-    height: 2px;
-    background: #c9a84c;
-    margin-bottom: 1.25rem;
-    border-radius: 1px;
+  /* ── Tablas Markdown Comparativas Responsivas ── */
+  .prose-blog table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
-  .conclusion-text {
-    font-family: Georgia, serif;
-    font-size: 1rem;
-    line-height: 1.85;
-    color: #3a3a3a;
-    font-style: italic;
+  .prose-blog thead {
+    background-color: #0D1B2E;
   }
-
-  /* ── Mapa de categorías ── */
-  .explore-categories {
-    margin-top: 2.5rem;
-    padding-top: 1.75rem;
-    border-top: 1px solid #ece7de;
-  }
-
-  /* ── Back link ── */
-  .back-row {
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #ece7de;
-  }
-  .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
+  .prose-blog th {
+    padding: 0.85rem 1.1rem;
     font-size: 0.8rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #c9a84c;
-    text-decoration: none;
-    transition: gap 0.2s;
-  }
-  .back-link svg { width: 1rem; height: 1rem; }
-  .back-link:hover { gap: 0.7rem; }
-
-  /* ── CTA section ── */
-  .cta-section {
-    background: #0d1b2e;
-    padding: 5rem 1.5rem;
-    text-align: center;
-  }
-  .cta-inner { max-width: 620px; margin: 0 auto; }
-  .cta-tag {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: #f6d06a;
-    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #1e293b;
+    white-space: nowrap;
+    text-align: left;
   }
-  .cta-title {
-    font-family: Georgia, serif;
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
-    font-weight: 800;
-    color: #fff;
-    line-height: 1.3;
-    margin-bottom: 1rem;
+  .prose-blog td {
+    padding: 0.85rem 1.1rem;
+    font-size: 0.9rem;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: top;
   }
-  .cta-title span { color: #f6d06a; }
-  .cta-desc {
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.6);
-    line-height: 1.7;
-    margin-bottom: 2.25rem;
+  .prose-blog tr:nth-child(even) td {
+    background-color: #f8fafc;
   }
-  .cta-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+  .prose-blog tr:hover td {
+    background-color: #fefce8;
   }
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: #c9a84c;
-    color: #fff;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 0.85rem 1.75rem;
-    border-radius: 2px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.2s;
+
+  /* ── Cajas Callouts (Blockquote) con Iconos e Impacto Visual ── */
+  .prose-blog blockquote {
+    background: #fdfaf2;
+    border-left: 5px solid #c9a84c;
+    border-radius: 0 16px 16px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 16px rgba(201, 168, 76, 0.08);
+    font-style: normal;
+    color: #453414;
+    position: relative;
   }
-  .btn-primary svg { width: 1.1rem; height: 1.1rem; }
-  .btn-primary:hover { background: #a07830; transform: translateY(-2px); }
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    padding-bottom: 2px;
-    transition: color 0.2s, border-color 0.2s;
+  .prose-blog blockquote p:last-child {
+    margin-bottom: 0;
   }
-  .btn-secondary:hover { color: #f6d06a; border-color: #f6d06a; }
+
+  /* ── Imágenes con Figcaption Elegante ── */
+  .prose-blog img {
+    border-radius: 16px;
+    margin: 2rem auto 0.5rem;
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+  .prose-blog img + em,
+  .prose-blog p > em:only-child {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 0.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── Scrollbar sutil para el índice TOC ── */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
 </style>

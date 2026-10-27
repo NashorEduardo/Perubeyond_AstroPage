@@ -1,0 +1,8 @@
+---
+import Layout, { type Props } from './Layout.astro';
+export type { Props };
+---
+<Layout {...Astro.props}>
+  <slot name="head" slot="head" />
+  <slot />
+</Layout>

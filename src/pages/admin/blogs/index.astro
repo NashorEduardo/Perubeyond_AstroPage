@@ -137,7 +137,11 @@ const blogs = await listAllBlogs();
                       <span class="text-[11px] font-mono text-slate-400 truncate" title={b.id}>
                         {b.id}
                       </span>
-                      {b.isCustom ? (
+                      {b.data.isMarkdownPost ? (
+                        <span class="px-1.5 py-0.2 rounded bg-amber-500/20 text-[#f6d06a] border border-amber-500/40 text-[9px] font-bold">
+                          Guía Pilar
+                        </span>
+                      ) : b.isCustom ? (
                         <span class="px-1.5 py-0.2 rounded bg-[#c9a84c]/20 text-[#f6d06a] border border-[#c9a84c]/40 text-[9px] font-bold">
                           CMS
                         </span>

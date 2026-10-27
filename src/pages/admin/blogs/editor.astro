@@ -20,27 +20,46 @@ const todayFormatted = new Date().toLocaleDateString('es-ES', {
   day: 'numeric',
 });
 
+const defaultQuickStats = {
+  duracion: '',
+  altitud: '',
+  dificultad: '',
+  mejorEpoca: '',
+  ubicacion: '',
+  precio: '',
+};
+
 const initialData = blog
   ? {
       id: blog.id,
       lang: blog.lang || 'es',
       slug: blog.slug || '',
       title: blog.data.title || '',
-      date: blog.data.date || todayFormatted,
-      readTime: blog.data.readTime || '5 min de lectura',
-      views: blog.data.views || '1.1k',
+      date: blog.data.date || blog.data.pubDate || todayFormatted,
+      pubDate: blog.data.pubDate || blog.data.date || todayFormatted,
+      updatedDate: blog.data.updatedDate || 'Octubre 2026',
+      readTime: blog.data.readTime || blog.data.readingTime || '10 min de lectura',
+      readingTime: blog.data.readingTime || blog.data.readTime || '10 min de lectura',
+      views: blog.data.views || '1.8k',
       author: blog.data.author || 'Equipo Peru Beyond',
       category: blog.data.category || 'Destinos Imperdibles',
       heroImage: blog.data.heroImage || '',
       heroPosition: blog.data.heroPosition || 'center',
-      excerpt: blog.data.excerpt || '',
+      excerpt: blog.data.excerpt || blog.data.description || '',
+      description: blog.data.description || blog.data.excerpt || '',
+      targetKeyword: blog.data.targetKeyword || blog.data.keywords || '',
       sections: blog.data.sections || [],
       tips: blog.data.tips || [],
       conclusion: blog.data.conclusion || '',
+      contentMarkdown: blog.data.contentMarkdown || '',
+      quickStats: blog.data.quickStats || defaultQuickStats,
+      faqs: blog.data.faqs || [],
+      relatedTours: blog.data.relatedTours || [],
       metaTitle: blog.data.metaTitle || '',
       metaDescription: blog.data.metaDescription || '',
       keywords: blog.data.keywords || '',
       isCustom: blog.isCustom,
+      isMarkdownPost: blog.data.isMarkdownPost ?? Boolean(blog.data.contentMarkdown),
     }
   : {
       id: '',
@@ -48,13 +67,18 @@ const initialData = blog
       slug: '',
       title: '',
       date: todayFormatted,
-      readTime: '5 min de lectura',
-      views: '850',
+      pubDate: todayFormatted,
+      updatedDate: 'Octubre 2026',
+      readTime: '10 min de lectura',
+      readingTime: '10 min de lectura',
+      views: '1.2k',
       author: 'Equipo Peru Beyond',
       category: 'Destinos Imperdibles',
       heroImage: '',
       heroPosition: 'center',
       excerpt: '',
+      description: '',
+      targetKeyword: '',
       sections: [
         {
           heading: 'Introducción y contexto histórico',
@@ -72,11 +96,40 @@ const initialData = blog
       ],
       conclusion:
         'Visitar este lugar es una experiencia enriquecedora que transformará tu visión de los Andes.',
+      contentMarkdown: '',
+      quickStats: defaultQuickStats,
+      faqs: [
+        {
+          question: '¿Cuál es la mejor época para visitar este destino?',
+          answer: 'La mejor temporada es durante los meses secos de mayo a octubre, cuando los días son soleados y las lluvias son escasas.',
+        },
+      ],
+      relatedTours: ['machu-picchu-full-day-tour', 'cusco-machu-picchu-3d-2n'],
       metaTitle: '',
       metaDescription: '',
       keywords: '',
       isCustom: true,
+      isMarkdownPost: true,
     };
+
+const availableTours = [
+  { slug: 'machu-picchu-full-day-tour', title: 'Machu Picchu Full Day' },
+  { slug: 'cusco-machu-picchu-3d-2n', title: 'Cusco & Machu Picchu 3D/2N' },
+  { slug: 'cusco-valle-sagrado-machu-picchu-4d-3n', title: 'Cusco, Valle Sagrado & Machu Picchu 4D/3N' },
+  { slug: 'trekking-montana-7-colores', title: 'Trekking Montaña 7 Colores (Vinicunca)' },
+  { slug: 'trekking-palcoyo', title: 'Trekking Montaña Palcoyo' },
+  { slug: 'trekking-laguna-humantay-full-day', title: 'Trekking Laguna Humantay Full Day' },
+  { slug: 'cusco-machu-picchu-humantay-4d-3n', title: 'Cusco, Machu Picchu & Humantay 4D/3N' },
+  { slug: 'cusco-machu-picchu-humantay-montana-colores-5d-4n', title: 'Cusco, Humantay & 7 Colores 5D/4N' },
+  { slug: 'tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias', title: 'Lima, Paracas, Huacachina & Cusco 7D' },
+  { slug: 'tour-lima-huacachina-machu-picchu-montana-arcoiris-10-dias', title: 'Lima, Huacachina, Machu Picchu & 7 Colores 10D' },
+  { slug: 'super-valle-sagrado', title: 'Súper Valle Sagrado' },
+  { slug: 'city-tour-cusco-qoricancha-4-ruinas', title: 'City Tour Cusco & 4 Ruinas' },
+];
+
+const quickStatsObject = typeof initialData.quickStats === 'object' && !Array.isArray(initialData.quickStats)
+  ? initialData.quickStats
+  : defaultQuickStats;
 ---
 
 <AdminLayout title={isNew ? 'Nuevo Artículo de Blog' : `Editar: ${initialData.title}`} activeTab="blogs">
@@ -93,10 +146,10 @@ const initialData = blog
       </a>
       <div>
         <h2 class="text-xl sm:text-2xl font-bold text-white tracking-wide">
-          {isNew ? 'Publicar Nuevo Artículo' : 'Editar Artículo de Blog'}
+          {isNew ? 'Publicar Nueva Mega-Guía / Artículo' : 'Editar Artículo de Blog'}
         </h2>
         <div class="text-xs text-slate-400 mt-0.5">
-          {isNew ? 'Crea contenido con secciones dinámicas, optimización WebP y metadatos SEO' : `ID: ${initialData.id}`}
+          {isNew ? 'Crea contenido con arquitectura SEO pilar, WebP automático en /images/Blog/[slug]/ y FAQs estructuradas' : `ID: ${initialData.id}`}
         </div>
       </div>
     </div>
@@ -131,11 +184,11 @@ const initialData = blog
     <input type="hidden" id="blog-original-id" value={initialData.id} />
     <input type="hidden" id="is-new" value={isNew ? 'true' : 'false'} />
 
-    <!-- SECCIÓN 1: DATOS PRINCIPALES -->
+    <!-- SECCIÓN 1: DATOS PRINCIPALES Y KEYWORD SEO -->
     <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xl">
       <div class="flex items-center gap-2.5 pb-4 border-b border-slate-800 mb-6">
         <i class="bi bi-journal-text text-[#c9a84c] text-xl"></i>
-        <h3 class="text-base font-bold text-white">1. Información del Artículo y URL</h3>
+        <h3 class="text-base font-bold text-white">1. Información del Artículo, URL y Keyword Principal</h3>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
@@ -149,7 +202,7 @@ const initialData = blog
             id="blog-title"
             required
             value={initialData.title}
-            placeholder="Ej: Guía Completa de Sacsayhuamán: Historia y Cómo Llegar"
+            placeholder="Ej: Entradas y Circuitos de Machu Picchu (Guía Completa 2026)"
             class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#c9a84c]"
           />
         </div>
@@ -163,29 +216,45 @@ const initialData = blog
             id="blog-lang"
             class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white text-sm focus:outline-none focus:border-[#c9a84c]"
           >
-            <option value="es" selected={initialData.lang === 'es'}>Español (es)</option>
-            <option value="en" selected={initialData.lang === 'en'}>Inglés (en)</option>
-            <option value="pt" selected={initialData.lang === 'pt'}>Portugués (pt)</option>
+            <option value="es" selected={initialData.lang === 'es'}>Español (ES)</option>
+            <option value="en" selected={initialData.lang === 'en'}>Inglés (EN)</option>
+            <option value="pt" selected={initialData.lang === 'pt'}>Portugués (PT)</option>
           </select>
         </div>
 
-        <!-- Slug -->
+        <!-- Keyword Principal SEO -->
+        <div class="md:col-span-6">
+          <label for="blog-target-keyword" class="block text-xs font-semibold uppercase tracking-wider text-amber-400 mb-2 flex items-center gap-1.5">
+            <i class="bi bi-bullseye"></i> Keyword Principal (SEO Target) *
+          </label>
+          <input
+            type="text"
+            id="blog-target-keyword"
+            value={initialData.targetKeyword}
+            placeholder="Ej: entradas machu picchu"
+            class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-amber-500/50 text-white text-sm focus:outline-none focus:border-[#c9a84c]"
+          />
+          <p class="text-[11px] text-slate-400 mt-1">Palabra clave objetivo para posicionar en Google (se incluirá en Schema y análisis SERP).</p>
+        </div>
+
+        <!-- Slug (Carpeta automática) -->
         <div class="md:col-span-6">
           <label for="blog-slug" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-            Slug de la URL *
+            Slug / Identificador URL *
           </label>
           <input
             type="text"
             id="blog-slug"
             required
             value={initialData.slug}
-            placeholder="guia-sacsayhuaman-cusco"
-            class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 font-mono text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#c9a84c]"
+            placeholder="entradas-y-circuitos-de-machu-picchu-guia-completa"
+            class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white font-mono text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
           />
+          <p class="text-[11px] text-slate-400 mt-1">Las fotos se guardarán automáticamente en: <code class="text-[#f6d06a]">public/images/Blog/[slug]/</code></p>
         </div>
 
         <!-- Categoría -->
-        <div class="md:col-span-6">
+        <div class="md:col-span-4">
           <label for="blog-category" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
             Categoría *
           </label>
@@ -210,26 +279,11 @@ const initialData = blog
             type="text"
             id="blog-author"
             value={initialData.author}
-            placeholder="Equipo Peru Beyond"
             class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white text-sm focus:outline-none focus:border-[#c9a84c]"
           />
         </div>
 
-        <!-- Fecha -->
-        <div class="md:col-span-4">
-          <label for="blog-date" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-            Fecha de Publicación
-          </label>
-          <input
-            type="text"
-            id="blog-date"
-            value={initialData.date}
-            placeholder="15 de Mayo, 2025"
-            class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white text-sm focus:outline-none focus:border-[#c9a84c]"
-          />
-        </div>
-
-        <!-- Tiempo de Lectura -->
+        <!-- Tiempo de lectura -->
         <div class="md:col-span-4">
           <label for="blog-read-time" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
             Tiempo de Lectura
@@ -237,17 +291,44 @@ const initialData = blog
           <input
             type="text"
             id="blog-read-time"
-            value={initialData.readTime}
-            placeholder="6 min de lectura"
+            value={initialData.readingTime}
+            placeholder="12 min de lectura"
             class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white text-sm focus:outline-none focus:border-[#c9a84c]"
           />
         </div>
 
-        <!-- URL Preview -->
-        <div class="md:col-span-12 p-3 rounded-xl bg-[#09111C]/60 border border-slate-800 text-xs font-mono text-slate-400 flex items-center gap-2">
-          <i class="bi bi-link-45deg text-base text-[#c9a84c]"></i>
-          <span>Ruta web pública:</span>
-          <span id="url-preview" class="text-white font-semibold">
+        <!-- Fechas -->
+        <div class="md:col-span-6">
+          <label for="blog-pub-date" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+            Fecha de Publicación
+          </label>
+          <input
+            type="text"
+            id="blog-pub-date"
+            value={initialData.pubDate}
+            placeholder="26 de Octubre, 2026"
+            class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white text-sm focus:outline-none focus:border-[#c9a84c]"
+          />
+        </div>
+
+        <div class="md:col-span-6">
+          <label for="blog-updated-date" class="block text-xs font-semibold uppercase tracking-wider text-[#f6d06a] mb-2">
+            Fecha de Actualización ("Actualizado en...")
+          </label>
+          <input
+            type="text"
+            id="blog-updated-date"
+            value={initialData.updatedDate}
+            placeholder="Octubre 2026"
+            class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white text-sm focus:outline-none focus:border-[#c9a84c]"
+          />
+        </div>
+
+        <!-- Vista previa URL -->
+        <div class="md:col-span-12 p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+          <i class="bi bi-link-45deg text-lg text-[#c9a84c]"></i>
+          <span>URL pública canónica:</span>
+          <span id="url-preview" class="text-white font-mono font-semibold">
             /{initialData.lang}/blog/{initialData.slug || '[slug]'}
           </span>
         </div>
@@ -258,7 +339,7 @@ const initialData = blog
     <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xl">
       <div class="flex items-center gap-2.5 pb-4 border-b border-slate-800 mb-6">
         <i class="bi bi-image text-[#c9a84c] text-xl"></i>
-        <h3 class="text-base font-bold text-white">2. Imagen de Cabecera y Resumen</h3>
+        <h3 class="text-base font-bold text-white">2. Imagen de Cabecera (Hero) y Resumen Editorial</h3>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-5">
@@ -268,14 +349,17 @@ const initialData = blog
             Imagen Destacada (Hero) *
           </label>
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <div class="relative w-28 h-20 rounded-2xl overflow-hidden bg-slate-900 border border-slate-700 flex-shrink-0 flex items-center justify-center">
+            <div class="relative w-36 h-24 rounded-2xl overflow-hidden bg-slate-900 border border-slate-700 flex-shrink-0 flex items-center justify-center shadow-md">
               <img
                 id="hero-preview"
-                src={initialData.heroImage || '/images/PeruBeyond/Logo.webp'}
-                alt="Preview"
-                class="w-full h-full object-cover"
+                src={initialData.heroImage || '/images/Machupicchu/IMG_7709.webp'}
+                alt="Preview Hero"
+                class="w-full h-full object-cover transition-opacity duration-300"
                 onerror="this.src='/images/PeruBeyond/Logo.webp'"
               />
+              <div id="hero-upload-spinner" class="hidden absolute inset-0 bg-black/60 flex items-center justify-center text-amber-400">
+                <i class="bi bi-arrow-repeat animate-spin text-2xl"></i>
+              </div>
             </div>
             <div class="flex-1 space-y-2">
               <div class="flex gap-2">
@@ -287,179 +371,280 @@ const initialData = blog
                   placeholder="/images/Blog/[slug]/portada.webp"
                   class="flex-1 px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 font-mono text-white text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
                 />
-                <label class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-[#f6d06a] border border-slate-700 text-xs font-bold flex items-center gap-1.5 cursor-pointer flex-shrink-0">
+                <label class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-[#f6d06a] border border-slate-700 text-xs font-bold flex items-center gap-1.5 cursor-pointer flex-shrink-0 transition-colors">
                   <i class="bi bi-cloud-arrow-up-fill text-sm"></i>
-                  <span>Subir WebP</span>
+                  <span>Subir Foto Hero</span>
                   <input type="file" id="hero-upload-input" accept="image/*" class="hidden" />
                 </label>
               </div>
               <p class="text-[11px] text-slate-400">
-                Guarda en <code>public/images/Blog/[slug]/</code> optimizada a WebP.
+                Organización automática: Al subir, se guarda en <code class="text-amber-400">public/images/Blog/[slug]/[archivo].webp</code> con preview instantáneo.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Extracto / Resumen -->
+        <!-- Extracto / Meta Description -->
         <div class="md:col-span-12">
-          <label for="blog-excerpt" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-            Extracto o Resumen Breve
+          <label for="blog-description" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+            Descripción SEO & Extracto de Tarjeta *
           </label>
           <textarea
-            id="blog-excerpt"
-            rows="2"
-            placeholder="Breve resumen del artículo para las tarjetas de previsualización..."
+            id="blog-description"
+            rows="3"
+            placeholder="Meta description optimizada para Google con la keyword principal..."
             class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
-          >{initialData.excerpt}</textarea>
+          >{initialData.description}</textarea>
         </div>
       </div>
     </div>
 
-    <!-- SECCIÓN 3: CONSTRUCTOR DE SECCIONES -->
+    <!-- SECCIÓN 3: FICHA RESUMEN / TRAIL STATS -->
+    <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xl">
+      <div class="flex items-center gap-2.5 pb-4 border-b border-slate-800 mb-6">
+        <i class="bi bi-speedometer2 text-[#c9a84c] text-xl"></i>
+        <div>
+          <h3 class="text-base font-bold text-white">3. Ficha de Estadísticas Rápidas (Quick Stats / Trail Stats)</h3>
+          <p class="text-xs text-slate-400">Tabla resumen destacada que aparece al inicio del artículo (estilo Salkantay Trekking & TreXperience)</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div>
+          <label class="block text-[11px] font-semibold uppercase text-slate-300 mb-1">⏱️ Duración</label>
+          <input
+            type="text"
+            id="stat-duracion"
+            value={quickStatsObject.duracion || ''}
+            placeholder="Ej: 1 Día / 2.5 Horas de visita"
+            class="w-full px-3 py-2 rounded-xl bg-[#09111C] border border-slate-700 text-white text-xs focus:border-[#c9a84c]"
+          />
+        </div>
+        <div>
+          <label class="block text-[11px] font-semibold uppercase text-slate-300 mb-1">⛰️ Altitud Máxima</label>
+          <input
+            type="text"
+            id="stat-altitud"
+            value={quickStatsObject.altitud || ''}
+            placeholder="Ej: 2,430 m s. n. m. / 7,972 ft"
+            class="w-full px-3 py-2 rounded-xl bg-[#09111C] border border-slate-700 text-white text-xs focus:border-[#c9a84c]"
+          />
+        </div>
+        <div>
+          <label class="block text-[11px] font-semibold uppercase text-slate-300 mb-1">⚡ Dificultad</label>
+          <input
+            type="text"
+            id="stat-dificultad"
+            value={quickStatsObject.dificultad || ''}
+            placeholder="Ej: Fácil a Moderada"
+            class="w-full px-3 py-2 rounded-xl bg-[#09111C] border border-slate-700 text-white text-xs focus:border-[#c9a84c]"
+          />
+        </div>
+        <div>
+          <label class="block text-[11px] font-semibold uppercase text-slate-300 mb-1">☀️ Mejor Época</label>
+          <input
+            type="text"
+            id="stat-mejor-epoca"
+            value={quickStatsObject.mejorEpoca || ''}
+            placeholder="Ej: Mayo a Octubre (Temporada Seca)"
+            class="w-full px-3 py-2 rounded-xl bg-[#09111C] border border-slate-700 text-white text-xs focus:border-[#c9a84c]"
+          />
+        </div>
+        <div>
+          <label class="block text-[11px] font-semibold uppercase text-slate-300 mb-1">📍 Ubicación</label>
+          <input
+            type="text"
+            id="stat-ubicacion"
+            value={quickStatsObject.ubicacion || ''}
+            placeholder="Ej: Aguas Calientes, Urubamba, Cusco"
+            class="w-full px-3 py-2 rounded-xl bg-[#09111C] border border-slate-700 text-white text-xs focus:border-[#c9a84c]"
+          />
+        </div>
+        <div>
+          <label class="block text-[11px] font-semibold uppercase text-slate-300 mb-1">🎟️ Precio / Entradas</label>
+          <input
+            type="text"
+            id="stat-precio"
+            value={quickStatsObject.precio || ''}
+            placeholder="Ej: Desde 152 PEN (~$40 USD) Extranjeros"
+            class="w-full px-3 py-2 rounded-xl bg-[#09111C] border border-slate-700 text-white text-xs focus:border-[#c9a84c]"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 4: EDITOR DE CONTENIDO MARKDOWN & BARRA DE HERRAMIENTAS SEO -->
+    <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xl">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-800 mb-4">
+        <div class="flex items-center gap-2.5">
+          <i class="bi bi-file-earmark-richtext text-[#c9a84c] text-xl"></i>
+          <div>
+            <h3 class="text-base font-bold text-white">4. Cuerpo del Artículo (Markdown & Snippets SEO de 1 Clic)</h3>
+            <p class="text-xs text-slate-400">Estructura editorial de alta retención: TOC automática, H2/H3, tablas comparativas y callouts</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-slate-400 font-mono" id="md-word-count">0 palabras</span>
+        </div>
+      </div>
+
+      <!-- Barra de Herramientas SEO de 1 Clic -->
+      <div class="p-3 bg-[#09111C] border border-slate-800 rounded-2xl mb-3 flex flex-wrap items-center gap-2">
+        <span class="text-[11px] uppercase font-bold text-slate-400 mr-1 flex items-center gap-1">
+          <i class="bi bi-magic text-amber-400"></i> Insertar Bloque:
+        </span>
+
+        <button
+          type="button"
+          id="btn-insert-table"
+          class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-300 text-xs font-semibold flex items-center gap-1.5 border border-slate-700 hover:border-amber-400 transition-colors"
+          title="Insertar Tabla Comparativa"
+        >
+          <span>📊 Tabla Comparativa</span>
+        </button>
+
+        <button
+          type="button"
+          id="btn-insert-callout"
+          class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-yellow-300 text-xs font-semibold flex items-center gap-1.5 border border-slate-700 hover:border-yellow-400 transition-colors"
+          title="Insertar Callout Tip o Fun Fact"
+        >
+          <span>💡 Callout (Tip / Fact)</span>
+        </button>
+
+        <button
+          type="button"
+          id="btn-insert-quickfacts"
+          class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-emerald-300 text-xs font-semibold flex items-center gap-1.5 border border-slate-700 hover:border-emerald-400 transition-colors"
+          title="Insertar Ficha Quick Facts + Pros y Contras"
+        >
+          <span>📋 Quick Facts + Pros/Contras</span>
+        </button>
+
+        <button
+          type="button"
+          id="btn-insert-packing"
+          class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-sky-300 text-xs font-semibold flex items-center gap-1.5 border border-slate-700 hover:border-sky-400 transition-colors"
+          title="Insertar Packing List"
+        >
+          <span>🎒 Packing List</span>
+        </button>
+
+        <label class="px-2.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-500/20 to-yellow-500/20 hover:from-amber-500/30 hover:to-yellow-500/30 text-[#f6d06a] text-xs font-semibold flex items-center gap-1.5 border border-amber-500/40 cursor-pointer transition-colors">
+          <span>🏞️ Subir e Insertar Foto</span>
+          <input type="file" id="content-image-upload" accept="image/*" class="hidden" />
+        </label>
+      </div>
+
+      <!-- Textarea Markdown Principal -->
+      <div class="relative">
+        <textarea
+          id="blog-content-markdown"
+          rows="22"
+          placeholder="Escribe tu artículo en formato Markdown aquí. Usa ## para H2, ### para H3, > para callouts y tablas Markdown..."
+          class="w-full p-4 rounded-2xl bg-[#070D15] border border-slate-800 text-slate-100 font-mono text-xs sm:text-sm leading-relaxed focus:outline-none focus:border-[#c9a84c] shadow-inner"
+        >{initialData.contentMarkdown}</textarea>
+      </div>
+      <p class="text-[11px] text-slate-400 mt-2">
+        💡 <strong>Tip SEO:</strong> La Tabla de Contenidos (TOC) se genera automáticamente a partir de los encabezados <code class="text-amber-400">## H2</code> y <code class="text-amber-400">### H3</code> numerándose (1., 1.1., etc.) igual que en las guías de Salkantay Trekking y TreXperience.
+      </p>
+    </div>
+
+    <!-- SECCIÓN 5: GESTOR DINÁMICO DE PREGUNTAS FRECUENTES (FAQS) -->
     <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xl">
       <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
         <div class="flex items-center gap-2.5">
-          <i class="bi bi-card-list text-[#c9a84c] text-xl"></i>
+          <i class="bi bi-question-diamond-fill text-[#c9a84c] text-xl"></i>
           <div>
-            <h3 class="text-base font-bold text-white">3. Secciones de Contenido</h3>
-            <p class="text-xs text-slate-400">Estructura el cuerpo del artículo en bloques con subtítulos, imágenes y citas</p>
+            <h3 class="text-base font-bold text-white">5. Preguntas Frecuentes (FAQs & Schema FAQPage)</h3>
+            <p class="text-xs text-slate-400">Genera automáticamente el acordeón interactivo y el schema JSON-LD para Google Rich Snippets</p>
           </div>
         </div>
 
         <button
           type="button"
-          id="add-section-btn"
-          class="px-3.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-[#f6d06a] border border-slate-700 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+          id="add-faq-btn"
+          class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-[#f6d06a] border border-slate-700 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
         >
           <i class="bi bi-plus-lg"></i>
-          <span>Agregar Sección</span>
+          <span>Agregar Pregunta</span>
         </button>
       </div>
 
-      <div id="sections-container" class="space-y-6">
-        {initialData.sections.map((section, idx) => (
-          <div class="section-card bg-[#09111C] border border-slate-800 rounded-2xl p-5 relative group">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-[#c9a84c]/20 text-[#f6d06a] border border-[#c9a84c]/40">
-                Sección {idx + 1}
+      <div id="faqs-container" class="space-y-4">
+        {initialData.faqs.map((faq, idx) => (
+          <div class="faq-item bg-[#09111C] border border-slate-800 rounded-2xl p-4 relative group">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">
+                Pregunta #{idx + 1}
               </span>
               <button
                 type="button"
-                class="remove-section-btn text-slate-400 hover:text-red-400 p-1 text-sm transition-colors"
-                title="Eliminar sección"
+                class="remove-faq-btn text-slate-500 hover:text-red-400 p-1 text-xs transition-colors"
+                title="Eliminar pregunta"
               >
                 <i class="bi bi-trash"></i>
               </button>
             </div>
-
-            <div class="space-y-4">
-              <div>
-                <label class="block text-[11px] font-semibold uppercase text-slate-400 mb-1">Subtítulo de la Sección</label>
-                <input
-                  type="text"
-                  class="section-heading-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700/80 text-white font-semibold text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
-                  placeholder="Ej: Historia y arquitectura del complejo"
-                  value={section.heading || ''}
-                />
-              </div>
-
-              <div>
-                <label class="block text-[11px] font-semibold uppercase text-slate-400 mb-1">Párrafos (separa cada párrafo con una línea en blanco)</label>
-                <textarea
-                  rows="4"
-                  class="section-paragraphs-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700/80 text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
-                  placeholder="Escribe el contenido detallado de esta sección..."
-                >{(section.paragraphs || []).join('\n\n')}</textarea>
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                <div>
-                  <label class="block text-[11px] font-semibold uppercase text-slate-400 mb-1">Imagen de la Sección (opcional)</label>
-                  <input
-                    type="text"
-                    class="section-image-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700/80 text-slate-300 font-mono text-xs focus:outline-none focus:border-[#c9a84c]"
-                    placeholder="/images/Blog/seccion.webp"
-                    value={section.image || ''}
-                  />
-                </div>
-                <div>
-                  <label class="block text-[11px] font-semibold uppercase text-slate-400 mb-1">Cita Destacada / Resaltado (opcional)</label>
-                  <input
-                    type="text"
-                    class="section-highlight-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700/80 text-slate-300 text-xs focus:outline-none focus:border-[#c9a84c]"
-                    placeholder="Frase inspiradora o dato curioso"
-                    value={section.highlight || ''}
-                  />
-                </div>
-              </div>
+            <div class="space-y-3">
+              <input
+                type="text"
+                class="faq-question-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700 text-white font-medium text-xs sm:text-sm focus:border-[#c9a84c]"
+                placeholder="¿Pregunta frecuente?"
+                value={faq.question}
+              />
+              <textarea
+                rows="2"
+                class="faq-answer-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700 text-slate-200 text-xs sm:text-sm focus:border-[#c9a84c]"
+                placeholder="Respuesta concisa y directa..."
+              >{faq.answer}</textarea>
             </div>
           </div>
         ))}
       </div>
     </div>
 
-    <!-- SECCIÓN 4: CONSEJOS Y CONCLUSIÓN -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      
-      <!-- Tips -->
-      <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6 shadow-xl">
-        <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
-          <div class="flex items-center gap-2">
-            <i class="bi bi-lightbulb-fill text-amber-400 text-lg"></i>
-            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Consejos para el Viajero</h3>
-          </div>
-          <button
-            type="button"
-            id="add-tip-btn"
-            class="text-xs text-[#c9a84c] hover:text-[#f6d06a] font-semibold flex items-center gap-1 cursor-pointer"
-          >
-            <i class="bi bi-plus-lg"></i> Agregar Tip
-          </button>
+    <!-- SECCIÓN 6: TOURS RELACIONADOS (CONVERSIÓN DIRECTA) -->
+    <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xl">
+      <div class="flex items-center gap-2.5 pb-4 border-b border-slate-800 mb-6">
+        <i class="bi bi-compass-fill text-[#c9a84c] text-xl"></i>
+        <div>
+          <h3 class="text-base font-bold text-white">6. Tours Relacionados de Peru Beyond (Conversión)</h3>
+          <p class="text-xs text-slate-400">Selecciona los tours que se mostrarán como tarjetas interactivas de reserva al final del artículo</p>
         </div>
+      </div>
 
-        <div id="tips-list" class="space-y-2">
-          {initialData.tips.map((tip) => (
-            <div class="tip-item flex items-center gap-2">
-              <i class="bi bi-check2-circle text-amber-400 text-sm"></i>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+        {availableTours.map((t) => {
+          const isChecked = initialData.relatedTours.includes(t.slug);
+          return (
+            <label class="flex items-start gap-2.5 p-3 rounded-xl bg-[#09111C] border border-slate-800 hover:border-slate-700 cursor-pointer transition-colors">
               <input
-                type="text"
-                class="tip-input flex-1 px-3 py-1.5 rounded-lg bg-[#09111C] border border-slate-700/80 text-white text-xs focus:outline-none focus:border-[#c9a84c]"
-                value={tip}
+                type="checkbox"
+                name="related-tours"
+                value={t.slug}
+                checked={isChecked}
+                class="mt-1 rounded bg-slate-900 border-slate-700 text-amber-500 focus:ring-amber-400"
               />
-              <button type="button" class="remove-tip-btn text-slate-500 hover:text-red-400 p-1 text-xs">
-                <i class="bi bi-x-lg"></i>
-              </button>
-            </div>
-          ))}
-        </div>
+              <div class="text-xs">
+                <p class="text-white font-medium">{t.title}</p>
+                <p class="text-slate-400 text-[10px] font-mono">{t.slug}</p>
+              </div>
+            </label>
+          );
+        })}
       </div>
-
-      <!-- Conclusión -->
-      <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6 shadow-xl flex flex-col">
-        <div class="flex items-center gap-2 pb-4 border-b border-slate-800 mb-4">
-          <i class="bi bi-flag-fill text-emerald-400 text-lg"></i>
-          <h3 class="text-sm font-bold text-white uppercase tracking-wider">Conclusión / Cierre</h3>
-        </div>
-
-        <textarea
-          id="blog-conclusion"
-          rows="6"
-          placeholder="Reflexión final, invitación a viajar o llamado a la acción..."
-          class="flex-1 w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
-        >{initialData.conclusion}</textarea>
-      </div>
-
     </div>
 
-    <!-- SECCIÓN 5: METADATOS SEO Y VISTA PREVIA -->
+    <!-- SECCIÓN 7: METADATOS SEO Y VISTA PREVIA SERP -->
     <div class="bg-[#0D1B2E] border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xl">
       <div class="flex items-center gap-2.5 pb-4 border-b border-slate-800 mb-6">
         <i class="bi bi-google text-[#c9a84c] text-xl"></i>
-        <h3 class="text-base font-bold text-white">5. Optimización SEO para Motores de Búsqueda</h3>
+        <h3 class="text-base font-bold text-white">7. Snippet SERP Google & Metadatos Avanzados</h3>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <!-- Inputs SEO -->
         <div class="lg:col-span-7 space-y-4">
           <div>
             <div class="flex items-center justify-between mb-1.5">
@@ -472,7 +657,7 @@ const initialData = blog
               type="text"
               id="blog-meta-title"
               value={initialData.metaTitle}
-              placeholder="Ej: Guía de Viaje a Cusco 2025 | Blog Peru Beyond"
+              placeholder="Ej: Entradas a Machu Picchu 2026: Circuitos y Precios | Peru Beyond"
               class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
             />
           </div>
@@ -487,20 +672,20 @@ const initialData = blog
             <textarea
               id="blog-meta-desc"
               rows="3"
-              placeholder="Descripción atractiva para los resultados de Google..."
+              placeholder="Descripción atractiva para los resultados de Google que invite al clic..."
               class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
             >{initialData.metaDescription}</textarea>
           </div>
 
           <div>
             <label for="blog-keywords" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
-              Palabras Clave (Keywords)
+              Variantes Semánticas y Keywords Secundarias
             </label>
             <input
               type="text"
               id="blog-keywords"
               value={initialData.keywords}
-              placeholder="cusco, sacsayhuaman, viaje a peru, consejos cusco"
+              placeholder="circuitos machu picchu 2026, boletos machu picchu, huayna picchu"
               class="w-full px-4 py-2.5 rounded-xl bg-[#09111C] border border-slate-700/80 text-white text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
             />
           </div>
@@ -508,21 +693,21 @@ const initialData = blog
 
         <!-- Google SERP Preview -->
         <div class="lg:col-span-5 flex flex-col justify-center">
-          <div class="text-[11px] uppercase font-semibold text-slate-400 mb-2">Simulación de Búsqueda (Google)</div>
-          <div class="bg-white rounded-2xl p-4 shadow text-left font-sans">
-            <div class="flex items-center gap-2 mb-1">
-              <div class="w-4 h-4 rounded-full bg-slate-200 flex items-center justify-center text-[10px] text-slate-700 font-bold">
-                P
+          <div class="text-[11px] uppercase font-semibold text-slate-400 mb-2">Simulación de Búsqueda en Google</div>
+          <div class="bg-white rounded-2xl p-4 shadow-md text-left font-sans border border-slate-200">
+            <div class="flex items-center gap-2 mb-1.5">
+              <div class="w-5 h-5 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-[11px] text-slate-700 font-bold">
+                PB
               </div>
               <div class="text-xs text-[#202124] leading-none">
                 perubeyond.com &rsaquo; {initialData.lang} &rsaquo; blog &rsaquo; <span id="serp-slug">{initialData.slug || 'articulo'}</span>
               </div>
             </div>
-            <div id="serp-title" class="text-[#1a0dab] text-sm font-medium hover:underline cursor-pointer leading-snug line-clamp-1">
+            <div id="serp-title" class="text-[#1a0dab] text-base font-medium hover:underline cursor-pointer leading-snug line-clamp-2">
               {initialData.metaTitle || initialData.title || 'Título del artículo en Google'}
             </div>
-            <div id="serp-desc" class="text-[#4d5156] text-xs mt-1 leading-relaxed line-clamp-2">
-              {initialData.metaDescription || initialData.excerpt || 'Descripción optimizada para motores de búsqueda de Google y redes sociales...'}
+            <div id="serp-desc" class="text-[#4d5156] text-xs mt-1 leading-relaxed line-clamp-3">
+              {initialData.metaDescription || initialData.description || 'Descripción optimizada para motores de búsqueda de Google y redes sociales...'}
             </div>
           </div>
         </div>
@@ -543,7 +728,7 @@ const initialData = blog
         class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#c9a84c] to-[#f6d06a] hover:from-[#d8b556] hover:to-[#fae086] text-slate-950 font-bold text-xs tracking-wide shadow-lg shadow-[#c9a84c]/20 transition-all inline-flex items-center gap-2 cursor-pointer"
       >
         <i class="bi bi-floppy-fill"></i>
-        <span>Guardar y Publicar Artículo</span>
+        <span>Guardar y Publicar Mega-Guía</span>
       </button>
     </div>
 
@@ -556,12 +741,18 @@ const initialData = blog
     const titleInput = document.getElementById('blog-title');
     const langSelect = document.getElementById('blog-lang');
     const slugInput = document.getElementById('blog-slug');
+    const targetKeywordInput = document.getElementById('blog-target-keyword');
     const categorySelect = document.getElementById('blog-category');
     const urlPreview = document.getElementById('url-preview');
 
     const heroImageInput = document.getElementById('blog-hero-image');
     const heroPreview = document.getElementById('hero-preview');
     const heroUploadInput = document.getElementById('hero-upload-input');
+    const heroUploadSpinner = document.getElementById('hero-upload-spinner');
+
+    const mdEditor = document.getElementById('blog-content-markdown');
+    const mdWordCount = document.getElementById('md-word-count');
+    const contentImageUpload = document.getElementById('content-image-upload');
 
     const metaTitleInput = document.getElementById('blog-meta-title');
     const metaDescInput = document.getElementById('blog-meta-desc');
@@ -581,10 +772,9 @@ const initialData = blog
         .replace(/[\u0300-\u036f]/g, '')
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '')
-        .slice(0, 80);
+        .slice(0, 90);
     }
 
-    // Obtener o autogenerar slug para nombrar la carpeta exclusiva del blog
     function getOrGenerateSlug() {
       let slug = slugInput.value?.trim();
       const title = titleInput.value?.trim();
@@ -596,9 +786,8 @@ const initialData = blog
       }
 
       if (!slug) {
-        const promptTitle = prompt('Para organizar las fotos en su propia carpeta, escribe el título o slug del artículo de blog:');
+        const promptTitle = prompt('Escribe el slug o título para nombrar la carpeta de imágenes del blog:');
         if (promptTitle && promptTitle.trim()) {
-          titleInput.value = promptTitle.trim();
           slug = slugify(promptTitle);
           slugInput.value = slug;
           updateUrlPreview();
@@ -608,7 +797,6 @@ const initialData = blog
           updateUrlPreview();
         }
       }
-
       return slug;
     }
 
@@ -636,7 +824,7 @@ const initialData = blog
 
     function updateSerp() {
       const title = metaTitleInput.value.trim() || titleInput.value.trim() || 'Título del artículo en Google';
-      const desc = metaDescInput.value.trim() || document.getElementById('blog-excerpt')?.value?.trim() || 'Descripción del artículo...';
+      const desc = metaDescInput.value.trim() || document.getElementById('blog-description')?.value?.trim() || 'Descripción del artículo...';
 
       serpTitle.textContent = title;
       serpDesc.textContent = desc;
@@ -647,16 +835,30 @@ const initialData = blog
 
     metaTitleInput?.addEventListener('input', updateSerp);
     metaDescInput?.addEventListener('input', updateSerp);
+    document.getElementById('blog-description')?.addEventListener('input', updateSerp);
     updateSerp();
 
-    // Hero image upload
+    function updateWordCount() {
+      const text = mdEditor.value.trim();
+      const count = text ? text.split(/\s+/).length : 0;
+      mdWordCount.textContent = `${count.toLocaleString()} palabras`;
+    }
+    mdEditor?.addEventListener('input', updateWordCount);
+    updateWordCount();
+
+    // 1. Subida Hero con preview instantáneo createObjectURL y guardado en public/images/Blog/[slug]/
     heroUploadInput?.addEventListener('change', async (e) => {
       const file = e.target.files?.[0];
       if (!file) return;
 
       const currentSlug = getOrGenerateSlug();
 
-      window.showToast?.('Optimizando y subiendo imagen para Blog...', 'info');
+      // Vista previa instantánea sin esperar rebuild
+      const instantUrl = URL.createObjectURL(file);
+      if (heroPreview) heroPreview.src = instantUrl;
+      heroUploadSpinner?.classList.remove('hidden');
+
+      window.showToast?.('Optimizando y guardando imagen en /images/Blog/' + currentSlug + '/...', 'info');
 
       const formData = new FormData();
       formData.append('file', file);
@@ -675,123 +877,142 @@ const initialData = blog
 
         if (res.ok && (data.success || data.ok) && imageUrl) {
           heroImageInput.value = imageUrl;
-          if (heroPreview) {
-            heroPreview.src = imageUrl;
-          }
-          window.showToast?.(`Imagen guardada en /images/Blog/${currentSlug}/`, 'success');
+          window.showToast?.(`¡Imagen guardada en /images/Blog/${currentSlug}/!`, 'success');
         } else {
-          window.showToast?.(data.error || 'Error al subir la imagen.', 'error');
+          window.showToast?.(data.error || 'Error al subir la imagen en el servidor.', 'error');
         }
-      } catch (err: any) {
+      } catch (err) {
         console.error('[BLOG HERO UPLOAD ERROR]:', err);
-        window.showToast?.(err?.message || 'Error al conectar con el servidor.', 'error');
+        window.showToast?.('Error al conectar con el servidor.', 'error');
       } finally {
+        heroUploadSpinner?.classList.add('hidden');
         heroUploadInput.value = '';
       }
     });
 
-    // Sections builder
-    const sectionsContainer = document.getElementById('sections-container');
-    const addSectionBtn = document.getElementById('add-section-btn');
+    // 2. Barra de herramientas SEO: Insertar snippets en el editor Markdown
+    function insertAtCursor(textarea, textToInsert) {
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const before = textarea.value.substring(0, start);
+      const after = textarea.value.substring(end, textarea.value.length);
 
-    function bindSectionCard(card) {
-      card.querySelector('.remove-section-btn')?.addEventListener('click', () => {
+      textarea.value = before + textToInsert + after;
+      textarea.selectionStart = textarea.selectionEnd = start + textToInsert.length;
+      textarea.focus();
+      updateWordCount();
+    }
+
+    document.getElementById('btn-insert-table')?.addEventListener('click', () => {
+      const snippet = `\n| Circuito / Opción | Altitud Máx. | Dificultad | Tiempo Estimado | ¿Para quién es ideal? |\n| :--- | :--- | :--- | :--- | :--- |\n| **Circuito 1: Panorámico** | 2,430 m | Fácil | 2 horas | Fotógrafos y familias |\n| **Circuito 2: Clásico** | 2,430 m | Moderada | 3 horas | La experiencia más completa |\n| **Circuito 3: Realeza + Huayna Picchu** | 2,693 m | Exigente | 4 a 5 horas | Amantes de la aventura |\n\n`;
+      insertAtCursor(mdEditor, snippet);
+      window.showToast?.('Tabla comparativa insertada', 'success');
+    });
+
+    document.getElementById('btn-insert-callout')?.addEventListener('click', () => {
+      const snippet = `\n> **›› Tip Peru Beyond:** Llega a la puerta de acceso 20 minutos antes de tu turno oficial. Recuerda que no se permite el ingreso con plásticos de un solo uso.\n\n> **›› Fun Fact:** El nombre quechua "Machu Picchu" significa "Montaña Vieja", en contraste con Huayna Picchu ("Montaña Joven").\n\n`;
+      insertAtCursor(mdEditor, snippet);
+      window.showToast?.('Callout informativo insertado', 'success');
+    });
+
+    document.getElementById('btn-insert-quickfacts')?.addEventListener('click', () => {
+      const snippet = `\n### Quick Facts: Resumen de la Ruta\n- **Ubicación:** Cordillera de Vilcabamba, Cusco, Perú.\n- **Clima:** Subtropical de ceja de selva (12 °C a 24 °C).\n- **Reserva anticipada:** 3 a 5 meses antes en temporada alta.\n\n#### ¿Para quién es ideal?\n- Viajeros que visitan Perú por primera vez.\n- Familias y parejas que buscan fotos panorámicas inolvidables.\n\n#### Pros y Contras\n-  **Pros:** Paisajes sobrecogedores, historia viva y senderos bien señalizados.\n-  **Contras:** Cupos limitados por el Ministerio de Cultura; requiere reserva anticipada.\n\n`;
+      insertAtCursor(mdEditor, snippet);
+      window.showToast?.('Ficha Quick Facts insertada', 'success');
+    });
+
+    document.getElementById('btn-insert-packing')?.addEventListener('click', () => {
+      const snippet = `\n### ¿Qué llevar? (Packing List Esencial)\n- [ ] Pasaporte original vigente (físico obligatorio para ingresar).\n- [ ] Entrada impresa o descargada en tu celular.\n- [ ] Mochila ligera de día (máximo 20 litros según normativa).\n- [ ] Bloqueador solar biodegradable y repelente de insectos.\n- [ ] Botella de agua reutilizable (cantimplora).\n- [ ] Ropa por capas: cortavientos, polo transpirable y poncho de lluvia.\n- [ ] Calzado de trekking o zapatillas antideslizantes cómodas.\n\n`;
+      insertAtCursor(mdEditor, snippet);
+      window.showToast?.('Packing list insertado', 'success');
+    });
+
+    // 3. Subir e insertar imagen directamente en el cuerpo Markdown
+    contentImageUpload?.addEventListener('change', async (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+
+      const currentSlug = getOrGenerateSlug();
+      window.showToast?.('Optimizando y subiendo imagen para el contenido...', 'info');
+
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('type', 'blogs');
+      formData.append('folder', 'Blog');
+      formData.append('slug', currentSlug);
+
+      try {
+        const res = await fetch('/api/admin/upload', {
+          method: 'POST',
+          body: formData,
+          credentials: 'same-origin',
+        });
+        const data = await res.json();
+        const imageUrl = data.url || data.path || data.file?.path;
+
+        if (res.ok && (data.success || data.ok) && imageUrl) {
+          const altText = prompt('Escribe una descripción SEO para el pie de foto (Alt Text):', file.name.replace(/\.[^/.]+$/, '')) || 'Vista destacada';
+          const markdownImageSnippet = `\n![${altText}](${imageUrl})\n*${altText}*\n\n`;
+          insertAtCursor(mdEditor, markdownImageSnippet);
+          window.showToast?.('¡Imagen insertada en el texto!', 'success');
+        } else {
+          window.showToast?.(data.error || 'Error al subir imagen de contenido.', 'error');
+        }
+      } catch (err) {
+        window.showToast?.('Error al conectar con el servidor.', 'error');
+      } finally {
+        contentImageUpload.value = '';
+      }
+    });
+
+    // 4. Gestor visual dinámico de FAQs
+    const faqsContainer = document.getElementById('faqs-container');
+    const addFaqBtn = document.getElementById('add-faq-btn');
+
+    function bindFaqItem(card) {
+      card.querySelector('.remove-faq-btn')?.addEventListener('click', () => {
         card.remove();
       });
     }
 
-    sectionsContainer.querySelectorAll('.section-card').forEach(bindSectionCard);
+    faqsContainer?.querySelectorAll('.faq-item').forEach(bindFaqItem);
 
-    addSectionBtn?.addEventListener('click', () => {
-      const count = sectionsContainer.querySelectorAll('.section-card').length + 1;
+    addFaqBtn?.addEventListener('click', () => {
+      const count = faqsContainer.querySelectorAll('.faq-item').length + 1;
       const card = document.createElement('div');
-      card.className = 'section-card bg-[#09111C] border border-slate-800 rounded-2xl p-5 relative group';
+      card.className = 'faq-item bg-[#09111C] border border-slate-800 rounded-2xl p-4 relative group';
       card.innerHTML = `
-        <div class="flex items-center justify-between mb-4">
-          <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-[#c9a84c]/20 text-[#f6d06a] border border-[#c9a84c]/40">
-            Sección ${count}
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">
+            Pregunta #${count}
           </span>
           <button
             type="button"
-            class="remove-section-btn text-slate-400 hover:text-red-400 p-1 text-sm transition-colors"
-            title="Eliminar sección"
+            class="remove-faq-btn text-slate-500 hover:text-red-400 p-1 text-xs transition-colors"
+            title="Eliminar pregunta"
           >
             <i class="bi bi-trash"></i>
           </button>
         </div>
-        <div class="space-y-4">
-          <div>
-            <label class="block text-[11px] font-semibold uppercase text-slate-400 mb-1">Subtítulo de la Sección</label>
-            <input
-              type="text"
-              class="section-heading-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700/80 text-white font-semibold text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
-              placeholder="Subtítulo de la sección"
-            />
-          </div>
-          <div>
-            <label class="block text-[11px] font-semibold uppercase text-slate-400 mb-1">Párrafos (separa párrafos con doble enter)</label>
-            <textarea
-              rows="4"
-              class="section-paragraphs-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700/80 text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-[#c9a84c]"
-              placeholder="Contenido de la sección..."
-            ></textarea>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-            <div>
-              <label class="block text-[11px] font-semibold uppercase text-slate-400 mb-1">Imagen de la Sección (opcional)</label>
-              <input
-                type="text"
-                class="section-image-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700/80 text-slate-300 font-mono text-xs focus:outline-none focus:border-[#c9a84c]"
-                placeholder="/images/Blog/seccion.webp"
-              />
-            </div>
-            <div>
-              <label class="block text-[11px] font-semibold uppercase text-slate-400 mb-1">Cita Destacada / Resaltado (opcional)</label>
-              <input
-                type="text"
-                class="section-highlight-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700/80 text-slate-300 text-xs focus:outline-none focus:border-[#c9a84c]"
-                placeholder="Frase inspiradora o dato curioso"
-              />
-            </div>
-          </div>
+        <div class="space-y-3">
+          <input
+            type="text"
+            class="faq-question-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700 text-white font-medium text-xs sm:text-sm focus:border-[#c9a84c]"
+            placeholder="¿Pregunta frecuente?"
+          />
+          <textarea
+            rows="2"
+            class="faq-answer-input w-full px-3 py-2 rounded-xl bg-[#0D1B2E] border border-slate-700 text-slate-200 text-xs sm:text-sm focus:border-[#c9a84c]"
+            placeholder="Respuesta concisa y directa..."
+          ></textarea>
         </div>
       `;
-      sectionsContainer.appendChild(card);
-      bindSectionCard(card);
+      faqsContainer.appendChild(card);
+      bindFaqItem(card);
+      card.querySelector('input')?.focus();
     });
 
-    // Tips builder
-    const tipsList = document.getElementById('tips-list');
-    const addTipBtn = document.getElementById('add-tip-btn');
-
-    function bindTipItem(row) {
-      row.querySelector('.remove-tip-btn')?.addEventListener('click', () => {
-        row.remove();
-      });
-    }
-
-    tipsList.querySelectorAll('.tip-item').forEach(bindTipItem);
-
-    addTipBtn?.addEventListener('click', () => {
-      const row = document.createElement('div');
-      row.className = 'tip-item flex items-center gap-2';
-      row.innerHTML = `
-        <i class="bi bi-check2-circle text-amber-400 text-sm"></i>
-        <input
-          type="text"
-          class="tip-input flex-1 px-3 py-1.5 rounded-lg bg-[#09111C] border border-slate-700/80 text-white text-xs focus:outline-none focus:border-[#c9a84c]"
-          placeholder="Nuevo consejo para el viajero"
-        />
-        <button type="button" class="remove-tip-btn text-slate-500 hover:text-red-400 p-1 text-xs">
-          <i class="bi bi-x-lg"></i>
-        </button>
-      `;
-      tipsList.appendChild(row);
-      bindTipItem(row);
-      row.querySelector('input')?.focus();
-    });
-
-    // Submit blog
+    // 5. Guardado del artículo
     async function submitBlogForm() {
       const isNew = isNewInput.value === 'true';
       const originalId = originalIdInput.value;
@@ -811,33 +1032,33 @@ const initialData = blog
         return;
       }
 
-      // Secciones
-      const sections = [];
-      document.querySelectorAll('.section-card').forEach((card) => {
-        const heading = card.querySelector('.section-heading-input')?.value?.trim() || null;
-        const rawParas = card.querySelector('.section-paragraphs-input')?.value || '';
-        const paragraphs = rawParas
-          .split(/\n\s*\n/)
-          .map((p) => p.trim())
-          .filter(Boolean);
-
-        const image = card.querySelector('.section-image-input')?.value?.trim() || null;
-        const highlight = card.querySelector('.section-highlight-input')?.value?.trim() || null;
-
-        if (heading || paragraphs.length > 0 || image || highlight) {
-          sections.push({
-            heading,
-            paragraphs: paragraphs.length > 0 ? paragraphs : [''],
-            image,
-            highlight,
-          });
+      // FAQs
+      const faqs = [];
+      document.querySelectorAll('.faq-item').forEach((item) => {
+        const q = item.querySelector('.faq-question-input')?.value?.trim();
+        const a = item.querySelector('.faq-answer-input')?.value?.trim();
+        if (q && a) {
+          faqs.push({ question: q, answer: a });
         }
       });
 
-      // Tips
-      const tips = Array.from(document.querySelectorAll('.tip-input'))
-        .map((i) => i.value.trim())
-        .filter(Boolean);
+      // Quick Stats
+      const quickStats = {
+        duracion: document.getElementById('stat-duracion')?.value?.trim() || '',
+        altitud: document.getElementById('stat-altitud')?.value?.trim() || '',
+        dificultad: document.getElementById('stat-dificultad')?.value?.trim() || '',
+        mejorEpoca: document.getElementById('stat-mejor-epoca')?.value?.trim() || '',
+        ubicacion: document.getElementById('stat-ubicacion')?.value?.trim() || '',
+        precio: document.getElementById('stat-precio')?.value?.trim() || '',
+      };
+
+      // Related Tours
+      const relatedTours = Array.from(document.querySelectorAll('input[name="related-tours"]:checked'))
+        .map((cb) => cb.value);
+
+      const description = document.getElementById('blog-description')?.value?.trim() || '';
+      const targetKeyword = targetKeywordInput.value.trim();
+      const contentMarkdown = mdEditor.value.trim();
 
       const payload = {
         id: `${lang}/${slug}`,
@@ -845,20 +1066,27 @@ const initialData = blog
         slug,
         data: {
           title,
-          date: document.getElementById('blog-date')?.value?.trim() || '',
-          readTime: document.getElementById('blog-read-time')?.value?.trim() || '5 min de lectura',
-          views: '1.2k',
+          description,
+          targetKeyword,
+          date: document.getElementById('blog-pub-date')?.value?.trim() || '',
+          pubDate: document.getElementById('blog-pub-date')?.value?.trim() || '',
+          updatedDate: document.getElementById('blog-updated-date')?.value?.trim() || 'Octubre 2026',
+          readingTime: document.getElementById('blog-read-time')?.value?.trim() || '10 min de lectura',
+          readTime: document.getElementById('blog-read-time')?.value?.trim() || '10 min de lectura',
+          views: '2.5k',
           author: document.getElementById('blog-author')?.value?.trim() || 'Equipo Peru Beyond',
           category: categorySelect.value,
-          heroImage: heroImageInput.value.trim() || '/images/Blog/sacsayhuaman.webp',
+          heroImage: heroImageInput.value.trim() || '/images/Machupicchu/IMG_7709.webp',
           heroPosition: 'center',
-          excerpt: document.getElementById('blog-excerpt')?.value?.trim() || '',
-          sections,
-          tips,
-          conclusion: document.getElementById('blog-conclusion')?.value?.trim() || '',
+          excerpt: description,
+          contentMarkdown,
+          quickStats,
+          faqs,
+          relatedTours,
           metaTitle: metaTitleInput.value.trim() || '',
-          metaDescription: metaDescInput.value.trim() || '',
-          keywords: document.getElementById('blog-keywords')?.value?.trim() || '',
+          metaDescription: metaDescInput.value.trim() || description,
+          keywords: document.getElementById('blog-keywords')?.value?.trim() || targetKeyword,
+          isMarkdownPost: true,
         },
       };
 
@@ -879,7 +1107,7 @@ const initialData = blog
         const data = await res.json();
 
         if (res.ok && data.success) {
-          window.showToast?.('¡Artículo guardado exitosamente!', 'success');
+          window.showToast?.('¡Mega-Guía guardada exitosamente!', 'success');
           setTimeout(() => {
             window.location.href = `/admin/blogs/editor?id=${encodeURIComponent(payload.id)}`;
           }, 800);

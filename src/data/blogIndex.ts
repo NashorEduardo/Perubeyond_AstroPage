@@ -2,18 +2,35 @@ import { blogPostsEs } from './blogPosts.es';
 import { blogPostsEn } from './blogPosts.en';
 import { blogPostsPt } from './blogPosts.pt';
 import { blogCategories, getCategorySlug, type BlogLang, type BlogCategorySlug } from './blogCategories';
+import fs from 'node:fs';
+import path from 'node:path';
+import * as yaml from 'js-yaml';
 
-interface BlogPostLike {
+export interface BlogPostLike {
   title: string;
   date: string;
   category: string;
   heroImage: string;
   excerpt?: string;
-  sections: { paragraphs: string[] }[];
+  description?: string;
+  targetKeyword?: string;
+  pubDate?: string;
+  updatedDate?: string;
+  readingTime?: string;
+  readTime?: string;
+  views?: string;
+  author?: string;
+  heroPosition?: string;
+  imgAlbum?: string[];
+  quickStats?: Record<string, string> | { label: string; value: string }[];
+  faqs?: { question: string; answer: string }[];
+  relatedTours?: string[];
+  sections: { heading?: string | null; paragraphs: string[]; image?: string | null; imageCaption?: string | null; highlight?: string | null }[];
+  tips?: string[];
+  conclusion?: string;
+  contentMarkdown?: string;
+  isMarkdownPost?: boolean;
 }
-
-import fs from 'node:fs';
-import path from 'node:path';
 
 const postsByLang = {
   es: blogPostsEs,
@@ -39,6 +56,7 @@ export function getMergedPosts(lang: BlogLang): Record<string, BlogPostLike> {
     }
   }
 
+  // 1. Cargar blogs JSON personalizados
   const langDir = path.join(root, lang);
   if (fs.existsSync(langDir)) {
     try {
@@ -57,14 +75,63 @@ export function getMergedPosts(lang: BlogLang): Record<string, BlogPostLike> {
     } catch {}
   }
 
+  // 2. Cargar Mega-Guías Markdown desde src/content/blog/[lang]/[slug].md
+  const mdDir = path.resolve(process.cwd(), 'src/content/blog', lang);
+  if (fs.existsSync(mdDir)) {
+    try {
+      const files = fs.readdirSync(mdDir);
+      for (const file of files) {
+        if (file.endsWith('.md') || file.endsWith('.mdx')) {
+          const slug = file.replace(/\.(md|mdx)$/, '');
+          if (deleted.has(`${lang}/${slug}`)) continue;
+          try {
+            const raw = fs.readFileSync(path.join(mdDir, file), 'utf-8');
+            const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+            if (match) {
+              const data = (yaml.load(match[1]) as any) || {};
+              base[slug] = {
+                title: data.title || slug,
+                date: data.pubDate || data.date || 'Octubre 2026',
+                category: data.category || 'Destinos Imperdibles',
+                heroImage: data.heroImage || '/images/Machupicchu/IMG_7709.webp',
+                excerpt: data.description || '',
+                description: data.description || '',
+                targetKeyword: data.targetKeyword || '',
+                pubDate: data.pubDate || data.date || '',
+                updatedDate: data.updatedDate || '',
+                readingTime: data.readingTime || data.readTime || '10 min de lectura',
+                readTime: data.readTime || data.readingTime || '10 min de lectura',
+                views: data.views || '2.4k',
+                author: data.author || 'Peru Beyond',
+                heroPosition: data.heroPosition || 'center center',
+                imgAlbum: data.imgAlbum || [],
+                quickStats: data.quickStats,
+                faqs: data.faqs || [],
+                relatedTours: data.relatedTours || [],
+                sections: [],
+                contentMarkdown: match[2].trim(),
+                isMarkdownPost: true,
+              };
+            }
+          } catch (e) {
+            console.error('Error reading md blog in blogIndex:', e);
+          }
+        }
+      }
+    } catch {}
+  }
+
   return base;
 }
 
-export const featuredSlug = 'inti-raymi';
+export const featuredSlug = 'entradas-y-circuitos-de-machu-picchu-guia-completa';
 
-// Orden de aparición en el listado (debajo del destacado). Un artículo nuevo
-// que no esté aquí se agrega automáticamente al final de la grilla.
+// Orden de aparición en el listado (debajo del destacado).
 const gridOrder = [
+  'mejor-epoca-para-viajar-a-peru-guia-completa',
+  'montana-de-7-colores-guia-completa',
+  'laguna-humantay-todo-lo-que-tienes-que-saber',
+  'inti-raymi',
   'mal-de-altura-cusco',
   'camino-inca-vs-salkantay',
   'que-hacer-en-cusco-3-dias',
@@ -100,11 +167,12 @@ export interface BlogListItem {
 
 function buildExcerpt(post: BlogPostLike): string {
   if (post.excerpt) return post.excerpt;
-  const text = post.sections[0]?.paragraphs[0] ?? '';
+  if (post.description) return post.description;
+  const text = post.sections?.[0]?.paragraphs?.[0] ?? '';
   return text.length > 240 ? text.slice(0, 240).replace(/\s+\S*$/, '') + '…' : text;
 }
 
-/** Lista completa del blog para un idioma, con el destacado primero. Incluye artículos creados/editados en CMS. */
+/** Lista completa del blog para un idioma, con el destacado primero. Incluye artículos creados/editados en CMS y Markdown. */
 export function getBlogList(lang: BlogLang): BlogListItem[] {
   const posts = getMergedPosts(lang);
   const known = new Set([featuredSlug, ...gridOrder]);

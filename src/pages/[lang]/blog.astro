@@ -63,8 +63,8 @@ const heroTitleLast = titleWords.pop();
 const heroTitleFirst = titleWords.join(' ');
 
 const blogList = getBlogList(lang);
-const featuredPost = blogList.find((p) => p.isFeatured)!;
-const gridPosts = blogList.filter((p) => !p.isFeatured);
+const featuredPost = blogList.find((p) => p.isFeatured) || blogList[0];
+const gridPosts = blogList.filter((p) => p !== featuredPost);
 const categories = getUsedBlogCategories(lang);
 ---
 
