@@ -37,7 +37,8 @@ export const blogPostsPt = {
           'Caminhei devagar, tocando as paredes, imaginando o trabalho e a fé que os construtores incas devem ter tido. O guia me mostrou figuras ocultas entre as pedras: a serpente, o puma e o condor.',
           'Naquele momento entendi que Sacsayhuamán não foi construída apenas com força, mas com espiritualidade.',
         ],
-        image: null,
+        image: '/images/Blog/sacsayhuaman/muros-megaliticos.webp',
+        imageCaption: 'Os enormes blocos de pedra de Sacsayhuamán, encaixados com uma precisão que ainda surpreende a engenharia moderna.',
         highlight: '"Os três símbolos do mundo andino: a serpente, o puma e o condor. Cada pedra tem uma história para contar."',
       },
       {
@@ -46,7 +47,8 @@ export const blogPostsPt = {
           'Do alto, a vista de Cusco é simplesmente espetacular. Dá para ver a cidade inteira se estendendo em forma de puma —sim, foi desenhada assim originalmente— e entender por que os incas escolheram este lugar.',
           'O ar é frio, mas se sente puro, e o som do vento parece sussurrar histórias antigas. Fiquei sentado alguns minutos em silêncio, só olhando, respirando. Foi um daqueles momentos em que a viagem deixa de ser turismo e vira conexão.',
         ],
-        image: null,
+        image: '/images/Blog/sacsayhuaman/vista-valle-cusco.webp',
+        imageCaption: 'Da esplanada de Sacsayhuamán abre-se uma ampla vista do vale de Cusco e da cordilheira.',
         highlight: null,
       },
       {
@@ -105,7 +107,8 @@ export const blogPostsPt = {
           'Temporada verde (novembro a março): paisagens mais exuberantes, mas com chuvas frequentes.',
           'Evite feriados prolongados se preferir menos turistas.',
         ],
-        image: null,
+        image: '/images/Blog/machu-picchu/templo-tres-ventanas.webp',
+        imageCaption: 'O Templo das Três Janelas, uma das construções mais emblemáticas da cidadela.',
         highlight: null,
       },
       {
@@ -173,7 +176,8 @@ export const blogPostsPt = {
         paragraphs: [
           'Em Ollantaytambo, caminhei por ruas construídas há séculos, subi escadarias incas e senti a história em cada pedra. Nosso guia, Wilber, não só contava datas e batalhas: falava sobre o sentido espiritual da arquitetura inca, sobre como o sol, a água e as montanhas faziam parte do projeto.',
         ],
-        image: null,
+        image: '/images/Blog/valle-sagrado/ollantaytambo-fortaleza.webp',
+        imageCaption: 'Ollantaytambo e sua fortaleza inca, cercados pelas montanhas do Vale Sagrado.',
         highlight: '"A viagem deixou de ser turística e se tornou pessoal. As ruínas não são pedras mortas; são histórias vivas."',
       },
       {
@@ -229,7 +233,8 @@ export const blogPostsPt = {
           'A Lagoa Humantay fica no caminho até o Nevado Salkantay, dentro da cordilheira de mesmo nome, a 4.200 metros acima do nível do mar. Pertence ao distrito de Mollepata, na província de Anta, cerca de 3 horas e meia a noroeste de Cusco.',
           'O nome "Humantay" vem do quéchua e significa "cabeça sagrada". É um lugar venerado pelas comunidades andinas e símbolo de equilíbrio entre o ser humano e a natureza.',
         ],
-        image: null,
+        image: '/images/Blog/laguna-humantay/laguna-humantay-turquesa.webp',
+        imageCaption: 'A Laguna Humantay, a cerca de 4.200 m de altitude, aos pés da geleira Humantay.',
         highlight: null,
       },
       {
@@ -329,7 +334,8 @@ export const blogPostsPt = {
           'O melhor momento para visitar é entre maio e outubro, quando os poços estão mais brancos e secos, criando um contraste impressionante com as montanhas avermelhadas ao redor.',
           'Ali você pode observar como os moradores mantêm viva uma tradição ancestral de extração de sal que remonta a tempos pré-incas.',
         ],
-        image: null,
+        image: '/images/Blog/maras-moray-salineras/salineras-pozas.webp',
+        imageCaption: 'As salinas de Maras, milhares de poços de sal trabalhados desde a época inca.',
         highlight: '"Mais de 3.000 poços de sal que brilham sob o sol andino. Uma tradição viva que remonta a tempos pré-incas."',
       },
     ],
@@ -379,7 +385,8 @@ export const blogPostsPt = {
           'O sítio é composto por mais de 700 recintos, muros perfeitamente alinhados e ruas retas que demonstram um planejamento urbano avançado para a época.',
           'Os arqueólogos consideram Pikillaqta uma das cidades pré-incas mais bem preservadas do Peru, comparável em importância às ruínas de Tiahuanaco, na Bolívia.',
         ],
-        image: null,
+        image: '/images/Blog/pikillaqta/recintos-wari.webp',
+        imageCaption: 'Os extensos recintos de pedra de Pikillaqta, cidade administrativa da cultura Wari.',
         highlight: '"Aqui viveram administradores, guerreiros e sacerdotes. Pikillaqta foi um grande centro político e cerimonial Wari."',
       },
       {
@@ -439,7 +446,8 @@ export const blogPostsPt = {
           'A Montanha de 7 Cores fica na cordilheira do Vilcanota, cerca de 3 horas e meia a sudeste de Cusco, na província de Canchis. Faz parte de uma formação natural que ficou coberta de neve por séculos, até que o degelo revelasse seus minerais multicoloridos.',
           'Vinicunca se formou pela erosão de minerais como ferro, cobre e enxofre, que, ao oxidar, criaram seus tons característicos.',
         ],
-        image: null,
+        image: '/images/Blog/vinicunca-7-colores/franjas-de-colores.webp',
+        imageCaption: 'As faixas coloridas da Montanha de 7 Cores, formadas por minerais de diferentes tons.',
         highlight: null,
       },
       {
@@ -516,7 +524,8 @@ export const blogPostsPt = {
           'O ingresso geral dá acesso à cidadela por um dos circuitos de visita, com horário de entrada definido. Os circuitos mudam com o tempo e têm trajetos diferentes: alguns priorizam a vista panorâmica e outros o percurso pela cidadela e seus terraços.',
           'Como referência usamos 152 soles para o ingresso geral de estrangeiros, mas os preços podem mudar. Confirme no site oficial do Ministério da Cultura antes de pagar.',
         ],
-        image: null,
+        image: '/images/Blog/entradas-machu-picchu/vista-clasica-ciudadela.webp',
+        imageCaption: 'Vista clássica da cidadela de Machu Picchu com o Huayna Picchu ao fundo.',
         highlight: null,
       },
       {
@@ -524,7 +533,8 @@ export const blogPostsPt = {
         paragraphs: [
           'As montanhas ao redor da cidadela têm cotas diárias limitadas e esgotam primeiro. Se você quer subir ao Huayna Picchu, reserve esse ingresso junto com o seu, com vários meses de antecedência na alta temporada.',
         ],
-        image: null,
+        image: '/images/Blog/entradas-machu-picchu/huayna-picchu-neblina.webp',
+        imageCaption: 'O Huayna Picchu emergindo da neblina sobre a cidadela.',
         highlight: null,
       },
       {
@@ -578,7 +588,8 @@ export const blogPostsPt = {
         paragraphs: [
           'Na serra, como Cusco e o Vale Sagrado, é a época mais recomendada: dias ensolarados, noites frias e trilhas em melhores condições para o trekking. Também é alta temporada, com mais turistas e preços mais altos.',
         ],
-        image: null,
+        image: '/images/Blog/mejor-epoca-viajar-peru/sierra-temporada-seca.webp',
+        imageCaption: 'Na serra, a temporada seca traz céus limpos e vistas nítidas dos nevados.',
         highlight: null,
       },
       {
@@ -594,7 +605,8 @@ export const blogPostsPt = {
         paragraphs: [
           'Lima e a costa têm temperaturas amenas durante todo o ano. De junho a setembro predomina a neblina cinzenta conhecida como garúa, sem chuvas fortes. Se você busca sol na costa, os meses de verão, de dezembro a março, são os mais quentes.',
         ],
-        image: null,
+        image: '/images/Blog/mejor-epoca-viajar-peru/costa-lima-invierno.webp',
+        imageCaption: 'A costa de Lima, com seu céu cinzento e brisa fresca durante o inverno.',
         highlight: null,
       },
       {
@@ -743,7 +755,8 @@ export const blogPostsPt = {
           'As carroças são verdadeiras obras de arte em movimento: revestidas de prata e ouro, adornadas com flores e espelhos, iluminadas por velas que tremeluzem sob o sol dos Andes. Os artesãos cusquenhos trabalham durante meses para criar esses altares portáteis, que rivalizam em beleza com as melhores procissões do mundo.',
           'Durante a tarde e a noite do Corpus, os santos "convivem" na catedral de Cusco, e as famílias devotas se reúnem ao redor deles para rezar, cantar e compartilhar a festividade.',
         ],
-        image: null,
+        image: '/images/Blog/corpus-christi-cusqueno/procesion-santos-plaza.webp',
+        imageCaption: 'Os andores com as imagens dos santos percorrem a Praça de Armas de Cusco durante o Corpus Christi.',
         highlight: null,
       },
       {
@@ -1190,5 +1203,81 @@ export const blogPostsPt = {
       'Não deixe de provar a chicha de jora (cerveja de milho): é a bebida ancestral dos incas.',
     ],
     conclusion: 'A gastronomia cusquenha é uma viagem dentro da viagem. Cada prato conta uma história de andares ecológicos, tradições milenares e famílias que preservam receitas com orgulho. De um cuy crocante em San Jerónimo a um adobo fumegante em uma fria madrugada de domingo, comer em Cusco é se conectar com a essência mais profunda do Peru. Na Peru Beyond, nossos tours incluem experiências gastronômicas locais porque acreditamos que a melhor forma de conhecer um lugar é através de seus sabores.',
+  },
+  'choquequirao-trek': {
+    title: 'Choquequirao Trek: guia completo da "irmã" perdida de Machu Picchu',
+    date: '24 de outubro de 2026',
+    readTime: '7 Min de leitura',
+    views: '0',
+    author: 'Perú Beyond',
+    category: 'Trekking & Aventura',
+    heroImage: '/images/Machupicchu/FT 10.webp',
+    heroPosition: 'center 50%',
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          'Se você já fez o Caminho Inca ou quer algo menos concorrido, o Choquequirao Trek é a opção que mais viajantes experientes estão descobrindo. É uma trilha de vários dias até uma cidadela inca comparável a Machu Picchu em tamanho e mistério, mas com uma fração dos visitantes.',
+          'Neste guia explicamos o que é Choquequirao, quais rotas existem, quanto dura cada uma, o que esperar no caminho e como se preparar para a trilha.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'O que é Choquequirao?',
+        paragraphs: [
+          'Choquequirao, cujo nome em quéchua se traduz como "berço de ouro", é um complexo arqueológico inca localizado na região de Apurímac, no limite com Cusco. Fica a cerca de 3.000 m de altitude, no alto de um cânion profundo formado pelo rio Apurímac.',
+          'As escavações revelaram terraços agrícolas, templos e praças. Sua fama vem em parte dos terraços decorados com figuras de lhamas esculpidas em pedra branca, um dos detalhes que mais chamam a atenção de quem visita.',
+        ],
+        image: '/images/Blog/choquequirao-trek/terrazas-choquequirao.webp',
+        imageCaption: 'Os terraços de Choquequirao, sobre o cânion do rio Apurímac.',
+        highlight: '"Choquequirao é Machu Picchu antes de o mundo a descobrir: a mesma escala, a mesma história e quase ninguém por perto."',
+      },
+      {
+        heading: 'Rotas e duração da trilha',
+        paragraphs: [
+          'Choquequirao não tem estrada nem trem: só se chega caminhando. Dependendo da rota, a trilha dura entre 4 e 7 dias. A opção mais curta é uma ida e volta desde o povoado de Cachora até o sítio arqueológico. A rota mais longa liga Choquequirao a Machu Picchu, uma trilha exigente que cruza montanhas, vales e áreas de selva.',
+          'Se o seu objetivo é chegar a Machu Picchu, considere que a rota completa costuma levar cerca de uma semana e que o último trecho até a cidadela inclui subidas longas e quentes. Pergunte à operadora o itinerário exato antes de reservar.',
+        ],
+        image: '/images/Blog/choquequirao-trek/camino-inca-apurimac.webp',
+        imageCaption: 'O caminho até Choquequirao, suspenso sobre o cânion do Apurímac.',
+        highlight: null,
+      },
+      {
+        heading: 'Dificuldade: por que não é uma trilha para qualquer um',
+        paragraphs: [
+          'Choquequirao é uma trilha de dificuldade alta. Há descidas e subidas muito íngremes, vários trechos com temperaturas altas pela diferença de altitude, e o terreno costuma ser irregular. Ao contrário do Caminho Inca, não há refúgios de luxo nem sinal de celular durante boa parte do percurso.',
+          'Antes de reservar, avalie sua condição física e sua experiência em montanha. Se você nunca fez uma trilha de vários dias, é melhor começar por uma rota mais curta, como o Caminho Inca de 2 dias ou uma excursão de um dia à Montanha de 7 Cores.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'O que esperar no caminho',
+        paragraphs: [
+          'Durante a trilha você atravessa vários pisos ecológicos: da floresta seca nos primeiros trechos à floresta de neblina nos seguintes. É comum ver aves, borboletas e, com sorte, condores sobrevoando os cânions.',
+          'As noites são passadas em acampamentos, com barracas, refeições preparadas pela equipe e carregadores que levam a maior parte da bagagem. Esse detalhe é importante na hora de escolher a operadora: pergunte como os carregadores são tratados, qual o tamanho dos grupos e a qualidade da comida.',
+        ],
+        image: null,
+        highlight: null,
+      },
+      {
+        heading: 'Melhor época para fazer Choquequirao',
+        paragraphs: [
+          'A estação seca, de maio a setembro, é a mais recomendada: os caminhos estão em melhores condições, chove menos e as vistas dos cânions são mais limpas. Entre junho e agosto as noites são frias, por isso leve roupas de frio.',
+          'De novembro a março, em plena estação chuvosa, a trilha fica mais difícil pela lama e pelo risco de deslizamentos em alguns trechos. Evite essas datas se você não tem experiência em condições úmidas.',
+        ],
+        image: null,
+        highlight: null,
+      },
+    ],
+    tips: [
+      'Contrate uma operadora autorizada e com guia. Pergunte quais permissões e ingressos estão vigentes antes de reservar.',
+      'Chegue a Cusco pelo menos dois dias antes para se aclimatar e considere passar uma noite em Cachora antes do início da trilha.',
+      'Leve bastões de trekking, protetor solar, repelente e pelo menos 3 litros de água por dia nos trechos secos.',
+      'Leve roupas em camadas: as manhãs no cânion são frias e as tardes no fundo do vale são quentes.',
+      'Se você planeja chegar a Machu Picchu, reserve o ingresso e o trem com antecedência na alta temporada.',
+    ],
+    conclusion: 'Choquequirao não é para todos, e essa é justamente a sua maior virtude. É uma trilha exigente que recompensa com silêncio, ruínas quase intactas e paisagens que parecem de outro mundo. Se você procura uma trilha que pareça uma descoberta e não uma fila de turistas, é uma das melhores decisões que você pode tomar em Cusco.',
   },
 };
