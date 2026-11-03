@@ -750,46 +750,93 @@ const breadcrumbSchema = {
     color: #c9a84c;
   }
 
-  /* ── Tablas Markdown Comparativas Responsivas ── */
+  /* ── Tablas Markdown Comparativas (Completas en PC y apiladas/limpias en Móvil) ── */
   .prose-blog table {
     width: 100%;
+    display: table;
+    table-layout: auto;
     border-collapse: separate;
     border-spacing: 0;
-    margin: 2rem 0;
-    border-radius: 14px;
+    margin: 1.75rem 0 2.25rem;
+    border-radius: 16px;
     overflow: hidden;
     border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 6px 20px rgba(13, 27, 46, 0.06);
+    background: #ffffff;
   }
   .prose-blog thead {
     background-color: #0D1B2E;
   }
   .prose-blog th {
-    padding: 0.85rem 1.1rem;
-    font-size: 0.8rem;
+    padding: 0.9rem 1rem;
+    font-size: 0.78rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     color: #f6d06a;
-    border-bottom: 1px solid #1e293b;
-    white-space: nowrap;
+    border-bottom: 2px solid #c9a84c;
     text-align: left;
+    line-height: 1.35;
   }
   .prose-blog td {
-    padding: 0.85rem 1.1rem;
-    font-size: 0.9rem;
+    padding: 0.85rem 1rem;
+    font-size: 0.88rem;
     color: #334155;
     border-bottom: 1px solid #f1f5f9;
-    vertical-align: top;
+    vertical-align: middle;
+    line-height: 1.45;
+  }
+  .prose-blog tr:last-child td {
+    border-bottom: none;
   }
   .prose-blog tr:nth-child(even) td {
     background-color: #f8fafc;
   }
   .prose-blog tr:hover td {
     background-color: #fefce8;
+  }
+
+  /* Comportamiento en Móvil: Vista compacta tipo tarjetas sin desbordamiento */
+  @media (max-width: 768px) {
+    .prose-blog table {
+      display: block;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+    }
+    .prose-blog thead {
+      display: none;
+    }
+    .prose-blog tbody {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .prose-blog tr {
+      display: block;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 0.75rem 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    .prose-blog td {
+      display: block;
+      padding: 0.35rem 0;
+      border-bottom: 1px dashed #f1f5f9;
+      font-size: 0.85rem;
+    }
+    .prose-blog td:first-child {
+      font-weight: 700;
+      color: #0D1B2E;
+      font-size: 0.95rem;
+      border-bottom: 2px solid #f6d06a;
+      padding-bottom: 0.45rem;
+      margin-bottom: 0.35rem;
+    }
+    .prose-blog td:last-child {
+      border-bottom: none;
+    }
   }
 
   /* ── Cajas Callouts (Blockquote) con Iconos e Impacto Visual ── */

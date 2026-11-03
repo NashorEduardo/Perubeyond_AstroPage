@@ -47,7 +47,34 @@ Neste **guia completo da Laguna Humantay no Peru em 2026**, detalhamos tudo o qu
 
 ---
 
-## 1. O que é a Laguna Humantay e por que suas águas são turquesas?
+## 1. Quadro Resumo e Comparativa da Trilha ("At a Glance")
+
+Antes de começar a caminhada, confira o resumo técnico da rota e veja a comparação da Laguna Humantay com os outros grandes passeios de 1 dia a partir de Cusco:
+
+| Parâmetro / Trilha | Laguna Humantay | Montanha Colorida (Vinicunca) | Palcoyo (Montanha Arco-Íris) | 7 Lagoas de Ausangate |
+| :--- | :--- | :--- | :--- | :--- |
+| **Altitude Máxima:** | **4.200 m (13.779 pés)** | 5.200 m (17.060 pés) | 4.900 m (16.076 pés) | 4.650 m (15.255 pés) |
+| **Desnível Positivo:** | **+300 m (+984 pés)** | +570 m (+1.870 pés) | +150 m (+492 pés) | +380 m (+1.246 pés) |
+| **Distância a Pé:** | **4,5 km (2,8 mi) ida e volta** | 7,0 km (4,3 mi) | 3,5 km (2,1 mi) | 10,0 km (6,2 mi) |
+| **Tempo de Trilha:** | **1h30 a 2h subida / 1h descida**| 1h30 a 2h subida / 1h descida | 45 min caminhada suave | 4h30 a 5h circuito |
+| **Tipo de Terreno:** | Subida íngreme com pedras | Trilha de altitude moderada | Terreno plano / ondulado | Puna aberta e pedras |
+| **Exigência Física:** | **Moderada (cardio intenso)** | Exigente (pouco oxigênio) | Fácil a Suave | Moderada a Difícil |
+| **Aluguel de Cavalo:** | Sim (~80-90 PEN / ~$25 USD) | Sim (~80-100 PEN) | Não disponível | Sim em trechos parciais |
+| **Entrada Comunitária:**| 20 PEN (~$5,50 USD) | 25 PEN (~$7,00 USD) | 15 PEN (~$4,00 USD) | 20 PEN (~$5,50 USD) |
+
+### Ficha Técnica de Soraypampa até a Laguna Humantay
+
+| Dado Técnico | Valor Oficial |
+| :--- | :--- |
+| **Altitude de Partida (Soraypampa):** | 3.900 metros (12.795 pés) |
+| **Altitude da Lagoa (Chegada):** | 4.200 metros (13.779 pés) |
+| **Pico Tutelar (Glaciar):** | Nevado Humantay (5.473 metros / 17.956 pés) |
+| **Temperatura Média:** | 5 °C a 14 °C (com vento frio na margem) |
+| **Melhor Época:** | Maio a Outubro (Estação seca com céus limpos) |
+
+---
+
+## 2. O que é a Laguna Humantay e por que suas águas são turquesas?
 
 A lagoa é formada pelo degelo do **Glaciar Humantay**, uma montanha sagrada que se ergue a 5.473 metros de altitude na Cordilheira de Vilcabamba.
 
@@ -60,22 +87,6 @@ A tonalidade esmeralda e turquesa das águas decorre de um processo natural:
 
 ![Águas turquesas da Laguna Humantay sob o nevado](/images/Blog/laguna-humantay-todo-lo-que-tienes-que-saber/nevado-humantay-glaciar.webp)
 *A beleza indescritível da Laguna Humantay com o glaciar ao fundo.*
-
----
-
-## 2. Ficha Técnica da Trilha (Trail Stats)
-
-| Informação | Dado Oficial da Trilha |
-| :--- | :--- |
-| **Localização:** | Comunidade de Soraypampa, Distrito de Mollepata, Anta, Cusco |
-| **Altitude inicial (Soraypampa):** | 3.900 metros acima do mar |
-| **Altitude da lagoa (Chegada):** | 4.200 metros acima do mar |
-| **Desnível da subida:** | +300 metros de elevação |
-| **Distância total da caminhada:** | 4,5 km (ida e volta) |
-| **Tempo de subida:** | 1h30 a 2 horas (ritmo constante e suave) |
-| **Tempo de descida:** | 45 minutos a 1 hora |
-| **Dificuldade:** | Moderada (subida contínua e inclinada) |
-| **Temperatura média:** | 5 °C a 14 °C (com vento frio na margem) |
 
 ---
 

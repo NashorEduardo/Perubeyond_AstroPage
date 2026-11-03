@@ -128,6 +128,10 @@ export const featuredSlug = 'entradas-y-circuitos-de-machu-picchu-guia-completa'
 
 // Orden de aparición en el listado (debajo del destacado).
 const gridOrder = [
+  'como-llegar-a-machu-picchu-desde-cusco-paso-a-paso',
+  'que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje',
+  'entradas-a-machu-picchu-2027-como-comprarlas',
+  'machu-picchu-en-familia-consejos-para-viajar-con-ninos',
   'mejor-epoca-para-viajar-a-peru-guia-completa',
   'montana-de-7-colores-guia-completa',
   'laguna-humantay-todo-lo-que-tienes-que-saber',

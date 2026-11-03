@@ -49,35 +49,9 @@ Neste guia climático 2026, analisamos cada mês para você decidir a data ideal
 
 ---
 
-## 1. As 3 Grandes Regiões e Seus Climas
+## 1. Tabela Comparativa Mês a Mês no Peru ("At a Glance")
 
-### O Litoral (Lima, Paracas, Huacachina, Nazca)
-- **Verão Litorâneo (Dezembro a Abril):** Dias ensolarados e quentes (24 °C a 30 °C). Perfeito para os passeios de barco nas Ilhas Ballestas em Paracas, passeios de buggy no oásis de Huacachina e caminhadas pela orla de Miraflores em Lima.
-- **Inverno Litorâneo (Maio a Novembro):** Céu encoberto pela famosa névoa costeira (*garúa*) em Lima, com temperaturas amenas (15 °C a 19 °C). No entanto, Paracas e o deserto de Ica mantêm sol quase o ano todo.
-
-### A Região Andina (Cusco, Vale Sagrado, Machu Picchu, Lago Titicaca)
-- **Estação Seca (Maio a Outubro):** Céu de brigadeiro azul brilhante, dias ensolarados (20 °C) e noites geladas (0 °C a 3 °C). É a época favorita para trekkings e passeios arqueológicos.
-- **Estação Chuvosa (Novembro a Abril):** Chuvas passageiras (mais comuns à tarde), campos exuberantemente verdes, menos aglomerações e temperaturas noturnas mais agradáveis (8 °C).
-
----
-
-## 2. Estação Seca vs. Estação Chuvosa nos Andes
-
-### Estação Seca (Maio a Outubro) — A Favorita dos Viajantes
-- **Pontos Positivos:** Céu limpo e zero probabilidade de chuva estragar suas fotos em Machu Picchu ou na Montanha Colorida.
-- **Pontos Negativos:** Alta temporada com cidades e trens mais cheios; exige comprar ingressos com 3 a 5 meses de antecedência.
-
-### Estação Chuvosa (Novembro a Abril) — Paisagens Verdes e Tranquilidade
-- **Pontos Positivos:** Ruínas muito mais vazias e silenciosas, vegetação verde esmeralda deslumbrante e preços promocionais em voos e hotéis.
-- **Pontos Negativos:** Risco de pancadas de chuva à tarde e trilhas com lama.
-
-### Os Melhores Meses de Transição (Abril, Maio, Setembro e Outubro)
-- **Abril e Maio:** As chuvas cessam, as montanhas estão no ápice do verde e os dias voltam a ficar totalmente ensolarados, antes da superlotação de julho.
-- **Setembro e Outubro:** O frio extremo das noites de inverno diminui, o clima é agradável e a afluência de visitantes é moderada.
-
----
-
-## 3. Tabela Resumo Mês a Mês no Peru
+Para planejar sua viagem com facilidade, confira esta visão geral do clima, do volume de turistas e dos principais eventos ao longo de todo o ano no Peru:
 
 | Mês | Clima em Cusco & Machu Picchu | Chuvas nos Andes | Clima em Lima & Litoral | Movimento de Turistas | Festas Imperdíveis |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -93,6 +67,34 @@ Neste guia climático 2026, analisamos cada mês para você decidir a data ideal
 | **Out** | Quente de dia (22 °C), noite (6 °C) | Pancadas esporádicas | Primavera agradável (21 °C) | Médio | Senhor dos Milagres (Lima) |
 | **Nov** | Quente (21 °C), noite (7 °C) | Moderadas | Sol de primavera (23 °C) | Médio - Baixo | Dia de Todos os Santos |
 | **Dez** | Agradável (20 °C), noite (8 °C) | Altas | Verão de praias (25 °C) | Alto no fim de ano | Feira Santurantikuy em Cusco |
+
+---
+
+## 2. As 3 Grandes Regiões e Seus Climas
+
+### O Litoral (Lima, Paracas, Huacachina, Nazca)
+- **Verão Litorâneo (Dezembro a Abril):** Dias ensolarados e quentes (24 °C a 30 °C). Perfeito para os passeios de barco nas Ilhas Ballestas em Paracas, passeios de buggy no oásis de Huacachina e caminhadas pela orla de Miraflores em Lima.
+- **Inverno Litorâneo (Maio a Novembro):** Céu encoberto pela famosa névoa costeira (*garúa*) em Lima, com temperaturas amenas (15 °C a 19 °C). No entanto, Paracas e o deserto de Ica mantêm sol quase o ano todo.
+
+### A Região Andina (Cusco, Vale Sagrado, Machu Picchu, Lago Titicaca)
+- **Estação Seca (Maio a Outubro):** Céu de brigadeiro azul brilhante, dias ensolarados (20 °C) e noites geladas (0 °C a 3 °C). É a época favorita para trekkings e passeios arqueológicos.
+- **Estação Chuvosa (Novembro a Abril):** Chuvas passageiras (mais comuns à tarde), campos exuberantemente verdes, menos aglomerações e temperaturas noturnas mais agradáveis (8 °C).
+
+---
+
+## 3. Estação Seca vs. Estação Chuvosa nos Andes
+
+### Estação Seca (Maio a Outubro) — A Favorita dos Viajantes
+- **Pontos Positivos:** Céu limpo e zero probabilidade de chuva estragar suas fotos em Machu Picchu ou na Montanha Colorida.
+- **Pontos Negativos:** Alta temporada com cidades e trens mais cheios; exige comprar ingressos com 3 a 5 meses de antecedência.
+
+### Estação Chuvosa (Novembro a Abril) — Paisagens Verdes e Tranquilidade
+- **Pontos Positivos:** Ruínas muito mais vazias e silenciosas, vegetação verde esmeralda deslumbrante e preços promocionais em voos e hotéis.
+- **Pontos Negativos:** Risco de pancadas de chuva à tarde e trilhas com lama.
+
+### Os Melhores Meses de Transição (Abril, Maio, Setembro e Outubro)
+- **Abril e Maio:** As chuvas cessam, as montanhas estão no ápice do verde e os dias voltam a ficar totalmente ensolarados, antes da superlotação de julho.
+- **Setembro e Outubro:** O frio extremo das noites de inverno diminui, o clima é agradável e a afluência de visitantes é moderada.
 
 ---
 

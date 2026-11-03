@@ -47,25 +47,13 @@ If you are researching **Machu Picchu tickets and circuits**, this comprehensive
 
 ---
 
-## 1. Why Did the Machu Picchu Ticketing System Change?
+## 1. Quick Comparison Table: All Machu Picchu Circuits & Routes ("At a Glance")
 
-In years past, a single ticket granted unrestricted entry to roam almost all sectors of the citadel for several hours with re-entry privileges. Over time, high foot traffic caused structural strain on sensitive archaeological monuments like the Intihuatana stone, the Temple of the Sun, and the Guardian's House terrace.
-
-To guarantee conservation for generations to come, the Peruvian government introduced unidirectional flow rules and dynamic daily capacity limits:
-- **Regular Season:** Controlled maximum capacity of approximately 4,500 to 5,000 visitors per day.
-- **High Season (June 1 to October 15 and selected holiday weeks):** Expanded capacity of up to 5,600 visitors daily through dedicated overflow routes.
-
-> **›› Quechua History & Meaning:** In the ancestral Quechua language, *Machu* translates to "old" or "ancient," while *Pikchu* signifies "peak" or "pyramid." Built around 1450 CE under the reign of the visionary Inca Emperor **Pachacuti**, the citadel served as an elite royal estate, ceremonial sanctuary, and astronomical observatory.
-
----
-
-## 2. Comprehensive Comparison Table of All Circuits & Routes 2026
-
-Before choosing your ticket, compare the core specifications of all 10 official routes:
+Before diving into each circuit, compare the core specifications of all 10 official routes at a glance to determine which one best fits your travel style, fitness level, and photography goals:
 
 | Official Circuit | Included Sub-Route | Max Duration | Physical Level | Classic Postcard Photo? | Explores Stone Temples? | Advance Booking Window |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Circuit 1 (Panoramic)** | 1A: Machu Picchu Mountain | 4.0 - 4.5 hrs | Challenging / High | Yes (from the high summit) | No | 2 to 3 months |
+| **Circuit 1 (Panoramic)** | 1A: Machu Picchu Mountain | 4.0 - 4.5 hrs | Challenging / High | Yes (from 3,082 m / 10,111 ft) | No | 2 to 3 months |
 | **Circuit 1 (Panoramic)** | 1B: Upper Terrace | 2.0 hrs | Easy / Accessible | **Yes (100% Postcard)** | No | 3 to 4 months |
 | **Circuit 1 (Panoramic)** | 1C: Inti Punku (Sun Gate) | 2.5 hrs | Moderate | Yes | No | 2 months (High Season only) |
 | **Circuit 1 (Panoramic)** | 1D: Inca Bridge | 2.5 hrs | Easy to Moderate | Yes | No | 2 months (High Season only) |
@@ -78,6 +66,18 @@ Before choosing your ticket, compare the core specifications of all 10 official 
 
 ![Classic viewpoint over Machu Picchu with Huayna Picchu in the background](/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/circuito-clasico-foto.webp)
 *The legendary postcard perspective over Machu Picchu, captured via Circuit 1B, 2A, and 2B.*
+
+---
+
+## 2. Why Did the Machu Picchu Ticketing System Change?
+
+In years past, a single ticket granted unrestricted entry to roam almost all sectors of the citadel for several hours with re-entry privileges. Over time, high foot traffic caused structural strain on sensitive archaeological monuments like the Intihuatana stone, the Temple of the Sun, and the Guardian's House terrace.
+
+To guarantee conservation for generations to come, the Peruvian government introduced unidirectional flow rules and dynamic daily capacity limits:
+- **Regular Season:** Controlled maximum capacity of approximately 4,500 to 5,000 visitors per day.
+- **High Season (June 1 to October 15 and selected holiday weeks):** Expanded capacity of up to 5,600 visitors daily through dedicated overflow routes.
+
+> **›› Quechua History & Meaning:** In the ancestral Quechua language, *Machu* translates to "old" or "ancient," while *Pikchu* signifies "peak" or "pyramid." Built around 1450 CE under the reign of the visionary Inca Emperor **Pachacuti**, the citadel sits at an altitude of 2,430 m (7,972 ft) above sea level, perched dramatically between Andean peaks and the Amazon cloud forest.
 
 ---
 

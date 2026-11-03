@@ -47,9 +47,36 @@ En esta guía completa 2026 te contamos todo lo que necesitas saber antes de cal
 
 ---
 
-## 1. ¿Qué es la Laguna Humantay y por qué sus Aguas son Turquesas?
+## 1. Cuadro Resumen y Comparativa de la Ruta ("At a Glance")
 
-La laguna se formó por el deshielo natural del **Glaciar Humantay**, una montaña sagrada que alcanza los 5,473 m s. n. m. y que forma parte del macizo del Salkantay en la Cordillera de Vilcabamba.
+Antes de emprender la caminata, revisa de un vistazo las estadísticas oficiales de la ruta y compárala con las otras grandes excursiones de un día desde Cusco:
+
+| Parámetro / Ruta | Laguna Humantay | Montaña 7 Colores (Vinicunca) | Palcoyo (Cordillera Arcoíris) | 7 Lagunas de Ausangate |
+| :--- | :--- | :--- | :--- | :--- |
+| **Altitud Máxima:** | **4,200 m (13,779 ft)** | 5,200 m (17,060 ft) | 4,900 m (16,076 ft) | 4,650 m (15,255 ft) |
+| **Desnivel Positivo:** | **+300 m (+984 ft)** | +570 m (+1,870 ft) | +150 m (+492 ft) | +380 m (+1,246 ft) |
+| **Distancia a pie:** | **4.5 km (2.8 mi) ida y vuelta** | 7.0 km (4.3 mi) | 3.5 km (2.1 mi) | 10.0 km (6.2 mi) |
+| **Tiempo de caminata:** | **1.5 a 2h subida / 1h bajada** | 1.5 a 2h subida / 1.2h bajada | 45 min subida suave | 4.5 a 5h circuito |
+| **Tipo de Terreno:** | Pendiente empinada y piedras | Sendero de altura moderada | Sendero plano / ondulado | Puna abierta y rocas |
+| **Nivel de Exigencia:** | **Moderado (cardio intenso)** | Exigente (falta de oxígeno) | Fácil a Suave | Moderado a Exigente |
+| **Alquiler de Caballo:** | Sí (~80-90 PEN / ~$25 USD) | Sí (~80-100 PEN) | No disponible | Sí en tramos parciales |
+| **Entrada Comunal:** | 20 PEN (~$5.50 USD) | 25 PEN (~$7.00 USD) | 15 PEN (~$4.00 USD) | 20 PEN (~$5.50 USD) |
+
+### Ficha Técnica Detallada de Soraypampa a Laguna Humantay
+
+| Detalle Técnico | Valor Oficial |
+| :--- | :--- |
+| **Punto de Partida:** | Campamento Soraypampa (3,900 m s. n. m. / 12,795 ft) |
+| **Punto de Llegada:** | Orilla de la Laguna Humantay (4,200 m s. n. m. / 13,779 ft) |
+| **Cumbre Tutelar:** | Glaciar Nevado Humantay (5,473 m s. n. m. / 17,956 ft) |
+| **Temperatura Promedio:** | 4 °C a 14 °C (viento helado en la cima) |
+| **Mejor Temporada:** | Mayo a Octubre (Temporada seca con cielos turquesa) |
+
+---
+
+## 2. ¿Qué es la Laguna Humantay y por qué sus Aguas son Turquesas?
+
+La laguna se formó por el deshielo natural del **Glaciar Humantay**, una montaña sagrada que alcanza los 5,473 m s. n. m. (17,956 ft) y que forma parte del macizo del Salkantay en la Cordillera de Vilcabamba.
 
 ### El Secreto Científico de su Color Turquesa:
 Muchos viajeros se preguntan si el agua tiene algún colorante o si es un efecto de la luz. En realidad, la deslumbrante tonalidad turquesa y esmeralda se debe a un fenómeno físico-químico natural:
@@ -60,22 +87,6 @@ Muchos viajeros se preguntan si el agua tiene algún colorante o si es un efecto
 
 ![Laguna Humantay con el nevado y glaciar al fondo](/images/Blog/laguna-humantay-todo-lo-que-tienes-que-saber/nevado-humantay-glaciar.webp)
 *El contraste entre las aguas turquesas y las paredes de hielo del glaciar Humantay.*
-
----
-
-## 2. Ficha Técnica de la Ruta (Trail Stats)
-
-| Parámetro | Estadística Oficial de la Ruta |
-| :--- | :--- |
-| **Ubicación:** | Comunidad de Soraypampa, Distrito de Mollepata, Anta, Cusco |
-| **Altitud de partida (Soraypampa):** | 3,900 m s. n. m. (12,795 ft) |
-| **Altitud de la laguna (Llegada):** | 4,200 m s. n. m. (13,779 ft) |
-| **Desnivel positivo:** | +300 metros de ascenso |
-| **Distancia total a pie:** | 4.5 km (ida y vuelta) |
-| **Tiempo estimado de subida:** | 1 hora 30 min a 2 horas (ritmo pausado) |
-| **Tiempo estimado de bajada:** | 45 minutos a 1 hora |
-| **Nivel de dificultad:** | Moderado (ascenso corto pero continuo) |
-| **Temperatura ambiente:** | 5 °C a 14 °C (sensación térmica menor con viento) |
 
 ---
 

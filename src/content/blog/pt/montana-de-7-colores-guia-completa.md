@@ -47,7 +47,27 @@ No entanto, conquistar esse cume a mais de 5 mil metros exige preparo físico e 
 
 ---
 
-## 1. O que é Vinicunca e por que ela tem essas cores?
+## 1. Quadro Comparativo das Montanhas Coloridas de Cusco ("At a Glance")
+
+Antes de escolher o seu passeio, veja a comparação direta das montanhas com faixas minerais da região de Cusco para encontrar a opção perfeita para seu condicionamento e perfil de viagem:
+
+| Característica / Rota | Vinicunca (7 Cores Clássica) | Palcoyo (Cordilheira Suave) | Pallay Punchu (Apu Taqllo) | Vale Vermelho (Extensão Vinicunca) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Altitude Máxima:** | **5.200 m (17.060 pés)** | 4.900 m (16.076 pés) | 4.700 m (15.420 pés) | 5.050 m (16.568 pés) |
+| **Desnível da Subida:** | **+570 m (+1.870 pés)** | +150 m (+492 pés) | +260 m (+853 pés) | +120 m (+394 pés) |
+| **Tempo de Trilha:** | **1h30 a 2h subida / 1h descida** | 40 min suaves e planos | 1h30 subida íngreme | +25 min além de Vinicunca |
+| **Distância Total a Pé:** | **7,0 km (4,3 mi)** | 3,5 km (2,1 mi) | 5,0 km (3,1 mi) | +2,5 km (1,5 mi) |
+| **Cenário Visual:** | Pico piramidal policromático | 3 montanhas coloridas + Pedras | Crista afiada formato poncho | Cânion marciano avermelhado |
+| **Fluxo Diário de Visitantes:** | Intenso (mais de 1.500 pessoas/dia) | Tranquilo (100 a 200 pessoas/dia)| Mínimo / Fora da rota | Médio a calmo |
+| **Aluguel de Cavalos:** | Sim (80 a 100 PEN / ~$25 USD) | Desnecessário (trilha plana) | Parcial por moradores | Apenas caminhada |
+| **Entrada Comunitária:** | 25 PEN (~$7,00 USD) | 15 PEN (~$4,00 USD) | 20 PEN (~$5,50 USD) | 20 PEN (~$5,50 USD) |
+| **Recomendado para:** | **Quem busca a foto clássica famosa**| **Famílias, crianças e idosos** | **Aventureiros fora da rota comum** | **Amantes de cenários surreais** |
+
+> **›› Dica Peru Beyond:** Se você estiver viajando com crianças, pessoas idosas ou se tiver muito receio da altitude, escolha sem hesitar o [Trekking na Montanha Palcoyo](/pt/tours/cusco/trekking-palcoyo). Para quem faz questão do mirante clássico tradicional com vista para o Nevado Ausangate, reserve o [Trekking Montanha 7 Cores (Vinicunca)](/pt/tours/cusco/trekking-montana-7-colores).
+
+---
+
+## 2. O que é Vinicunca e por que ela tem essas cores?
 
 O nome nativo em quéchua é composto por dois termos:
 - **Wini:** Pequenas pedras pretas arredondadas comuns nos rios da região.
@@ -63,40 +83,25 @@ Por séculos, a montanha esteve totalmente oculta sob o gelo do glaciar Ausangat
 - **Marrom Terroso e Mostarda:** Arenitos calcários com limonita e compostos de enxofre.
 - **Amarelo Dourado:** Sedimentos arenosos ricos em enxofre e minerais de ferro.
 
-> **›› Significado Sagrado:** Para as comunidades andinas locais, a montanha é protegida pelo sagrado **Apu Ausangate** (6.384 metros de altitude), o nevado mais imponente de Cusco, reverenciado como o senhor das águas e protetor dos rebanhos de alpacas.
+> **›› Significado Sagrado:** Para as comunidades andinas locais, a montanha é protegida pelo sagrado **Apu Ausangate** (6.384 metros de altitude / 20.945 pés), o nevado mais imponente de Cusco, reverenciado como o senhor das águas e protetor dos rebanhos de alpacas.
 
 ![Faixas de minerais na Montanha Colorida Vinicunca](/images/Blog/montana-de-7-colores-guia-completa/franjas-minerales-colores.webp)
 *As fascinantes camadas minerais que compõem o arco-íris natural de Vinicunca.*
 
 ---
 
-## 2. Ficha Técnica da Trilha (Trail Stats)
+## 3. Ficha Técnica da Trilha (Trail Stats)
 
 | Informação | Dado Oficial |
 | :--- | :--- |
-| **Altitude inicial (Phulawasipata):** | 4.630 metros acima do mar |
-| **Altitude do Mirante Final:** | 5.200 metros acima do mar |
+| **Altitude inicial (Phulawasipata):** | 4.630 metros acima do mar (15.190 pés) |
+| **Altitude do Mirante Final:** | 5.200 metros acima do mar (17.060 pés) |
 | **Desnível da subida:** | +570 metros de subida contínua |
 | **Distância total a pé:** | 7 km (ida e volta pelo acesso Cusipata) |
 | **Tempo de subida:** | 1h30 a 2 horas (em ritmo calmo) |
 | **Tempo de descida:** | 1 hora a 1h15 |
-| **Nível de esforço:** | Exigente (pela falta de oxigênio) |
+| **Nivel de esforço:** | Exigente (pela falta de oxigênio) |
 | **Temperatura no topo:** | Entre 0 °C e 12 °C (sensação térmica negativa com vento) |
-
----
-
-## 3. Comparativo: Vinicunca vs. Palcoyo vs. Vale Vermelho
-
-| Comparativo | Vinicunca (Clássica 7 Cores) | Palcoyo (Cordilheira Suave) | Vale Vermelho |
-| :--- | :--- | :--- | :--- |
-| **Altitude máxima** | 5.200 m | 4.900 m | 5.050 m |
-| **Caminhada a pé** | 1h30 a 2h (subida íngreme) | 40 minutos (trilha quase plana) | +25 minutos após Vinicunca |
-| **Cenário visual** | Montanha triangular icônica | 3 montanhas coloridas + Pedras | Cânion marciano avermelhado |
-| **Movimento de pessoas** | Intenso (mais de 1.500 pessoas/dia) | Tranquilo (100 a 200 pessoas/dia) | Médio a calmo |
-| **Aluguel de cavalos** | Disponível no local | Desnecessário (caminhada curta) | Parcialmente a pé |
-| **Recomendado para** | Quem quer a foto clássica famosa | Famílias, idosos, fotos sem ninguém | Quem ama paisagens surreais |
-
-> **›› Dica Peru Beyond:** Se você estiver viajando com crianças, pessoas idosas ou se tiver muito receio da altitude, escolha sem hesitar o [Trekking na Montanha Palcoyo](/pt/tours/cusco/trekking-palcoyo). Para quem faz questão do mirante clássico tradicional, reserve o [Trekking Montanha 7 Cores (Vinicunca)](/pt/tours/cusco/trekking-montana-7-colores).
 
 ---
 

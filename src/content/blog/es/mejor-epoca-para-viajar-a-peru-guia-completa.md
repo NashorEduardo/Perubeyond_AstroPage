@@ -49,20 +49,44 @@ En esta mega-guía climática 2026 analizamos mes a mes cómo se comportan las t
 
 ---
 
-## 1. La Geografía Peruana: Tres Regiones con Climas Opuestos
+## 1. Cuadro Comparativo Mes a Mes en Perú ("At a Glance")
+
+Para planificar tu viaje rápidamente, consulta este resumen meteorológico, de afluencia turística y eventos mes a mes a lo largo del año en las tres grandes regiones del Perú:
+
+| Mes | Clima en Cusco & Machu Picchu | Lluvias en Andes | Clima en Lima & Costa | Afluencia Turística | Festividades Principales |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Enero** | Templado de día (19 °C / 66 °F), noche (8 °C) | Muy Altas | Soleado y caluroso (26 °C / 79 °F) | Media - Baja | Año Nuevo, Festival de la Marinera (Trujillo) |
+| **Febrero** | Días frescos (18 °C / 64 °F), noche (8 °C) | Máximas del año | Pleno verano costero (28 °C / 82 °F) | Baja (Camino Inca cerrado) | Fiesta de la Virgen de la Candelaria (Puno), Carnavales |
+| **Marzo** | Días agradables (19 °C), noche (7 °C) | Moderadas a Altas | Cálido y despejado (26 °C) | Media - Baja | Vendimia en Ica / Huacachina |
+| **Abril** | Soleado (20 °C / 68 °F), noche (5 °C) | Bajas (Fin de lluvias) | Templado de otoño (23 °C) | Media | Semana Santa (Procesiones en Cusco y Ayacucho) |
+| **Mayo** | Muy soleado (21 °C / 70 °F), noche (3 °C) | Mínimas | Inicio de garúa en Lima (20 °C) | Media - Alta | Cruz Velacuy (Fiesta de las Cruces en Cusco) |
+| **Junio** | Sol radiante (21 °C), noche (-1 °C / 30 °F) | Nulas (Cielo azul) | Nublado y fresco (17 °C) | **Muy Alta** | **Inti Raymi (24 de junio), Aniversario de Cusco** |
+| **Julio** | Sol radiante (21 °C), noche (-2 °C / 28 °F) | Nulas | Húmedo y frío (16 °C) | **Pico Máximo del Año** | **Fiestas Patrias de Perú (28 y 29 de julio), Virgen del Carmen** |
+| **Agosto** | Días soleados y ventosos (20 °C) | Casi nulas | Nublado (16 °C) | **Muy Alta** | Día de la Pachamama (Rituales a la Madre Tierra) |
+| **Septiembre**| Templado y agradable (21 °C) | Bajas | Empieza a despejar (18 °C) | Media - Alta | Festival Internacional de la Primavera |
+| **Octubre** | Días cálidos (22 °C / 72 °F), noche (6 °C) | Esporádicas | Agradable de primavera (21 °C) | Media | Señor de los Milagros (Lima), inicio de temporada |
+| **Noviembre** | Templado (21 °C), noche (7 °C) | Moderadas | Soleado de primavera (23 °C) | Media - Baja | Día de Todos los Santos (Panes wawa en Cusco) |
+| **Diciembre** | Días cálidos (20 °C), noche (8 °C) | Altas | Caluroso de verano (25 °C) | Alta por fiestas | Santurantikuy (Feria navideña de arte en Cusco) |
+
+![Machu Picchu con cielo despejado en temporada seca](/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/machu-picchu-temporada-seca.webp)
+*Cielos azules y sol radiante: el panorama habitual en Machu Picchu entre junio y agosto.*
+
+---
+
+## 2. La Geografía Peruana: Tres Regiones con Climas Opuestos
 
 Para entender el clima en Perú, primero hay que distinguir sus tres grandes regiones naturales:
 
 ### La Costa (Lima, Paracas, Huacachina, Nazca, Máncora)
-- **Verano Costero (Diciembre a Abril):** Días cálidos y despejados con temperaturas entre 24 °C y 30 °C. Es la época predilecta para disfrutar de los paseos en bote por las Islas Ballestas en Paracas, sandboarding en el oasis de Huacachina y la gastronomía marina en el Malecón de Miraflores en Lima.
-- **Invierno / Época Gris (Mayo a Noviembre):** Se forma un manto continuo de nubes bajas conocido como la "panza de burro", con lloviznas finas ("garúa") y temperaturas entre 14 °C y 18 °C. En Paracas e Ica, sin embargo, el sol brilla casi todo el año gracias a su microclima desértico.
+- **Verano Costero (Diciembre a Abril):** Días cálidos y despejados con temperaturas entre 24 °C y 30 °C (75 °F - 86 °F). Es la época predilecta para disfrutar de los paseos en bote por las Islas Ballestas en Paracas, sandboarding en el oasis de Huacachina y la gastronomía marina en el Malecón de Miraflores en Lima.
+- **Invierno / Época Gris (Mayo a Noviembre):** Se forma un manto continuo de nubes bajas conocido como la "panza de burro", con lloviznas finas ("garúa") y temperaturas entre 14 °C y 18 °C (57 °F - 64 °F). En Paracas e Ica, sin embargo, el sol brilla casi todo el año gracias a su microclima desértico.
 
 ### La Sierra Andina (Cusco, Valle Sagrado, Machu Picchu, Lago Titicaca, Arequipa)
-- **Temporada Seca (Mayo a Octubre):** Cielos azules impecables, casi nula probabilidad de lluvia y vistas despejadas de los nevados. Los días son templados (18 °C a 22 °C), pero las noches son muy frías (0 °C a 4 °C). Es la temporada alta del turismo mundial.
-- **Temporada de Lluvias (Noviembre a Abril):** Lluvias frecuentes pero intermitentes (suelen caer por las tardes), valles intensamente verdes, ríos caudalosos y temperaturas nocturnas más moderadas (7 °C a 10 °C).
+- **Temporada Seca (Mayo a Octubre):** Cielos azules impecables, casi nula probabilidad de lluvia y vistas despejadas de los nevados. Los días son templados (18 °C a 22 °C / 64 °F - 72 °F), pero las noches son muy frías (0 °C a 4 °C / 32 °F - 39 °F). Es la temporada alta del turismo mundial.
+- **Temporada de Lluvias (Noviembre a Abril):** Lluvias frecuentes pero intermitentes (suelen caer por las tardes), valles intensamente verdes, ríos caudalosos y temperaturas nocturnas más moderadas (7 °C a 10 °C / 45 °F - 50 °F).
 
 ### La Selva Amazónica (Iquitos, Puerto Maldonado, Tambopata)
-- Clima tropical cálido y húmedo durante todo el año (26 °C a 34 °C). Entre mayo y octubre llueve menos y los ríos bajan de nivel, facilitando las caminatas por la jungla.
+- Clima tropical cálido y húmedo durante todo el año (26 °C a 34 °C / 79 °F - 93 °F). Entre mayo y octubre llueve menos y los ríos bajan de nivel, facilitando las caminatas por la jungla y el avistamiento de fauna silvestre.
 
 > **›› Fun Fact Geográfico:** La Cordillera de los Andes actúa como un gigantesco biombo natural que bloquea las masas de humedad cargadas desde la Amazonía hacia la costa, creando el desierto costero más árido del hemisferio sur junto con la corriente marina helada de Humboldt.
 
@@ -71,7 +95,7 @@ Para entender el clima en Perú, primero hay que distinguir sus tres grandes reg
 
 ---
 
-## 2. Temporada Seca vs. Temporada de Lluvias en Cusco y Machu Picchu
+## 3. Temporada Seca vs. Temporada de Lluvias en Cusco y Machu Picchu
 
 Si tu viaje tiene como objetivo central visitar **Machu Picchu, el Valle Sagrado y la Montaña de 7 Colores**, debes considerar detalladamente estas dos grandes etapas del año:
 
@@ -88,30 +112,6 @@ Si tu viaje tiene como objetivo central visitar **Machu Picchu, el Valle Sagrado
 Para muchos expertos de **Peru Beyond**, los meses de transición representan el equilibrio perfecto:
 - **Abril y Mayo:** Las lluvias acaban de terminar, los campos están en su máximo esplendor verde y el sol vuelve a brillar con fuerza, antes de que lleguen las multitudes masivas de julio y agosto.
 - **Septiembre y Octubre:** El invierno frío ha quedado atrás, los días son templados, las lluvias aún no empiezan con fuerza y los aforos son más desahogados.
-
----
-
-## 3. Tabla Comparativa Mes a Mes en Perú (Enero a Diciembre)
-
-Esta tabla resume las condiciones meteorológicas y eventos destacados a lo largo del año:
-
-| Mes | Clima en Cusco & Machu Picchu | Lluvias en Andes | Clima en Lima & Costa | Afluencia Turística | Festividades Principales |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Enero** | Templado de día (19 °C), noche (8 °C) | Muy Altas | Soleado y caluroso (26 °C) | Media - Baja | Año Nuevo, Festival de la Marinera (Trujillo) |
-| **Febrero** | Días frescos (18 °C), noche (8 °C) | Máximas del año | Pleno verano costero (28 °C) | Baja (Camino Inca cerrado) | Fiesta de la Virgen de la Candelaria (Puno), Carnavales |
-| **Marzo** | Días agradables (19 °C), noche (7 °C) | Moderadas a Altas | Cálido y despejado (26 °C) | Media - Baja | Vendimia en Ica / Huacachina |
-| **Abril** | Soleado (20 °C), noche (5 °C) | Bajas (Fin de lluvias) | Templado de otoño (23 °C) | Media | Semana Santa (Procesiones en Cusco y Ayacucho) |
-| **Mayo** | Muy soleado (21 °C), noche (3 °C) | Mínimas | Inicio de garúa en Lima (20 °C) | Media - Alta | Cruz Velacuy (Fiesta de las Cruces en Cusco) |
-| **Junio** | Sol radiante (21 °C), noche (-1 °C) | Nulas (Cielo azul) | Nublado y fresco (17 °C) | **Muy Alta** | **Inti Raymi (24 de junio), Aniversario de Cusco** |
-| **Julio** | Sol radiante (21 °C), noche (-2 °C) | Nulas | Húmedo y frío (16 °C) | **Pico Máximo del Año** | **Fiestas Patrias de Perú (28 y 29 de julio), Virgen del Carmen** |
-| **Agosto** | Días soleados y ventosos (20 °C) | Casi nulas | Nublado (16 °C) | **Muy Alta** | Día de la Pachamama (Rituales a la Madre Tierra) |
-| **Septiembre**| Templado y agradable (21 °C) | Bajas | Empieza a despejar (18 °C) | Media - Alta | Festival Internacional de la Primavera |
-| **Octubre** | Días cálidos (22 °C), noche (6 °C) | Esporádicas | Agradable de primavera (21 °C) | Media | Señor de los Milagros (Lima), inicio de temporada |
-| **Noviembre** | Templado (21 °C), noche (7 °C) | Moderadas | Soleado de primavera (23 °C) | Media - Baja | Día de Todos los Santos (Panes wawa en Cusco) |
-| **Diciembre** | Días cálidos (20 °C), noche (8 °C) | Altas | Caluroso de verano (25 °C) | Alta por fiestas | Santurantikuy (Feria navideña de arte en Cusco) |
-
-![Machu Picchu con cielo despejado en temporada seca](/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/machu-picchu-temporada-seca.webp)
-*Cielos azules y sol radiante: el panorama habitual en Machu Picchu entre junio y agosto.*
 
 ---
 

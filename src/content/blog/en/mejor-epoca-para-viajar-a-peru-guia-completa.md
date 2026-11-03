@@ -49,38 +49,9 @@ This comprehensive 2026 weather guide analyzes rainfall patterns, temperatures, 
 
 ---
 
-## 1. Understanding Peru's 3 Distinct Climate Zones
+## 1. Month-by-Month Weather & Travel Comparison Table ("At a Glance")
 
-### The Pacific Coast (Lima, Paracas, Huacachina, Nazca, Máncora)
-- **Coastal Summer (December to April):** Radiant sunshine with temperatures averaging 24 °C to 30 °C (75 °F to 86 °F). Perfect for exploring the Ballestas Islands, dune buggy riding in Huacachina, and open-air seaside dining in Lima.
-- **Coastal Winter / Gray Season (May to November):** A pervasive marine fog bank called the *garúa* cools Lima (14 °C to 18 °C / 57 °F to 64 °F). In contrast, Paracas and the Ica Desert further south remain sunny year-round.
-
-### The Andean Highlands (Cusco, Sacred Valley, Machu Picchu, Lake Titicaca)
-- **Dry Season (May to October):** Brilliant azure skies, near-zero rainfall probability, and breathtaking mountain visibility. Daytime temperatures hover comfortably at 18 °C to 22 °C (64 °F to 72 °F), while nights dip sharply toward freezing (0 °C to 4 °C / 32 °F to 39 °F). This is the global peak travel season.
-- **Wet Season (November to April):** Intermittent afternoon showers, emerald green mountain slopes, and milder nighttime temperatures (7 °C to 10 °C / 45 °F to 50 °F).
-
-### The Amazon Rainforest (Iquitos, Puerto Maldonado, Tambopata)
-- Warm, humid tropical climate year-round (26 °C to 34 °C / 79 °F to 93 °F). Lower river levels from May to October make forest trail hiking more accessible.
-
----
-
-## 2. Dry Season vs. Rainy Season in Cusco & Machu Picchu
-
-### Dry Season (May to October) — The Hiker's Paradise
-- **Advantages:** Pristine skies with minimal risk of rain interrupting photography. Perfect for multi-day treks like the Classic Inca Trail, Salkantay Trek, and Huayna Picchu climb.
-- **Drawbacks:** Heightened tourist crowds; requires booking circuit tickets, trains, and boutique hotels 3 to 5 months in advance.
-
-### Rainy Season (November to April) — Emerald Landscapes & Tranquility
-- **Advantages:** Substantially fewer visitors at Inca ruins, allowing contemplative exploration. Reduced airfare and hotel pricing.
-- **Drawbacks:** Afternoon downpours, muddy trails, and occasional morning fog over the citadel.
-
-### The "Sweet Spot" Months (April, May, September, October)
-- **April & May:** The rains subside, leaving the valleys blanketed in lush vegetation under bright sunshine before peak crowds arrive.
-- **September & October:** Winter night chills moderate, daytime warmth persists, and crowd volume eases significantly.
-
----
-
-## 3. Month-by-Month Weather & Festivals in Peru
+To help you choose the best timing for your adventure, here is an executive overview of weather patterns, crowd levels, and regional highlights month by month across Peru:
 
 | Month | Cusco & Machu Picchu Weather | Andean Rain Level | Lima & Coastal Weather | Visitor Volume | Major Festivals |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -99,6 +70,37 @@ This comprehensive 2026 weather guide analyzes rainfall patterns, temperatures, 
 
 ![Machu Picchu in dry season with clear skies](/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/machu-picchu-temporada-seca.webp)
 *Crystal clear skies and vibrant colors at Machu Picchu during the June-to-August dry season.*
+
+---
+
+## 2. Understanding Peru's 3 Distinct Climate Zones
+
+### The Pacific Coast (Lima, Paracas, Huacachina, Nazca, Máncora)
+- **Coastal Summer (December to April):** Radiant sunshine with temperatures averaging 24 °C to 30 °C (75 °F to 86 °F). Perfect for exploring the Ballestas Islands, dune buggy riding in Huacachina, and open-air seaside dining in Lima.
+- **Coastal Winter / Gray Season (May to November):** A pervasive marine fog bank called the *garúa* cools Lima (14 °C to 18 °C / 57 °F to 64 °F). In contrast, Paracas and the Ica Desert further south remain sunny year-round.
+
+### The Andean Highlands (Cusco, Sacred Valley, Machu Picchu, Lake Titicaca)
+- **Dry Season (May to October):** Brilliant azure skies, near-zero rainfall probability, and breathtaking mountain visibility. Daytime temperatures hover comfortably at 18 °C to 22 °C (64 °F to 72 °F), while nights dip sharply toward freezing (0 °C to 4 °C / 32 °F to 39 °F). This is the global peak travel season.
+- **Wet Season (November to April):** Intermittent afternoon showers, emerald green mountain slopes, and milder nighttime temperatures (7 °C to 10 °C / 45 °F to 50 °F).
+
+### The Amazon Rainforest (Iquitos, Puerto Maldonado, Tambopata)
+- Warm, humid tropical climate year-round (26 °C to 34 °C / 79 °F to 93 °F). Lower river levels from May to October make forest trail hiking more accessible.
+
+---
+
+## 3. Dry Season vs. Rainy Season in Cusco & Machu Picchu
+
+### Dry Season (May to October) — The Hiker's Paradise
+- **Advantages:** Pristine skies with minimal risk of rain interrupting photography. Perfect for multi-day treks like the Classic Inca Trail, Salkantay Trek, and Huayna Picchu climb.
+- **Drawbacks:** Heightened tourist crowds; requires booking circuit tickets, trains, and boutique hotels 3 to 5 months in advance.
+
+### Rainy Season (November to April) — Emerald Landscapes & Tranquility
+- **Advantages:** Substantially fewer visitors at Inca ruins, allowing contemplative exploration. Reduced airfare and hotel pricing.
+- **Drawbacks:** Afternoon downpours, muddy trails, and occasional morning fog over the citadel.
+
+### The "Sweet Spot" Months (April, May, September, October)
+- **April & May:** The rains subside, leaving the valleys blanketed in lush vegetation under bright sunshine before peak crowds arrive.
+- **September & October:** Winter night chills moderate, daytime warmth persists, and crowd volume eases significantly.
 
 ---
 

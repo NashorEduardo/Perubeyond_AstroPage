@@ -47,7 +47,26 @@ However, conquering its high-altitude ridge requires knowledge and respect for t
 
 ---
 
-## 1. What is Vinicunca and Why Does It Have Rainbow Stripes?
+## 1. Quick Comparison Table: Rainbow Mountain Routes ("At a Glance")
+
+Before booking your trek, compare the primary characteristics of Cusco's colorful mountain destinations to select the ideal adventure for your stamina, schedule, and photography goals:
+
+| Feature / Destination | Vinicunca (Classic 7 Colors) | Palcoyo (Alternative Rainbow Range) | Pallay Punchu (Apu Taqllo) | Red Valley (Valle Rojo) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Maximum Elevation:** | **5,200 m (17,060 ft)** | 4,900 m (16,076 ft) | 4,700 m (15,420 ft) | 5,050 m (16,568 ft) |
+| **Hiking Duration:** | **1.5 to 2 hrs up / 1 hr down** | 40 mins (gentle & flat) | 1.5 hrs steep ascent | +25 mins from Vinicunca |
+| **Roundtrip Distance:** | **7.0 km (4.3 mi)** | 3.5 km (2.1 mi) | 5.0 km (3.1 mi) | +2.5 km (1.5 mi) |
+| **Visual Scenery:** | Iconic single pyramid peak | 3 rainbow mountains + stone forest | Sharp jagged ridge (Inca poncho) | Crimson Martian red canyon |
+| **Daily Foot Traffic:** | High (1,200 - 1,800 hikers/day) | Peaceful (100 - 200 hikers/day) | Very Low / Off-the-beaten-path | Moderate to light |
+| **Horse Rental:** | Yes (~80-100 PEN / ~$25 USD) | Unnecessary (flat walk) | Partial by locals | On foot |
+| **Community Fee:** | 25 PEN (~$7.00 USD) | 15 PEN (~$4.00 USD) | 20 PEN (~$5.50 USD) | 20 PEN (~$5.50 USD) |
+| **Best Suited For:** | **Iconic bucket-list summit seekers** | **Families, seniors, peaceful photos** | **Off-grid hikers & adventurers** | **Surreal landscape photographers** |
+
+> **›› Expert Tour Recommendation:** If you are traveling with children under 12, active seniors, or prefer a serene, less strenuous walk, reserve the [Palcoyo Rainbow Mountain Trek](/en/tours/cusco/trekking-palcoyo). If your lifelong dream is the iconic pointed summit overlooking Mount Ausangate, choose our [Rainbow Mountain Vinicunca Trek](/en/tours/cusco/trekking-montana-7-colores).
+
+---
+
+## 2. What is Vinicunca and Why Does It Have Rainbow Stripes?
 
 The indigenous Quechua name carries deep geographical meaning:
 - **Wini:** Small rounded black stones or pebbles abundant across the high riverbeds.
@@ -70,7 +89,7 @@ For centuries, this mountain remained hidden under thick perennial glaciers. Aro
 
 ---
 
-## 2. Trail Stats & Technical Snapshot
+## 3. Trail Stats & Technical Snapshot
 
 | Parameter | Official Trail Statistic |
 | :--- | :--- |
@@ -82,21 +101,6 @@ For centuries, this mountain remained hidden under thick perennial glaciers. Aro
 | **Descent Time:** | 1 hour to 1 hour 15 minutes |
 | **Difficulty Level:** | Strenuous (primarily due to thin air/hypoxia) |
 | **Summit Temperature:** | 0 °C to 12 °C (32 °F to 53 °F), sub-zero windchill |
-
----
-
-## 3. Trail Comparison: Vinicunca vs. Palcoyo vs. Red Valley
-
-| Feature | Vinicunca (Classic 7 Colors) | Palcoyo (Alternative Rainbow Range) | Red Valley (Valle Rojo) |
-| :--- | :--- | :--- | :--- |
-| **Maximum Elevation** | 5,200 m / 17,060 ft | 4,900 m / 16,076 ft | 5,050 m / 16,568 ft |
-| **Hiking Duration** | 1.5 to 2 hours (steep incline) | 40 minutes (gentle, mostly flat) | +25 mins from Vinicunca |
-| **Visual Scenery** | Iconic single pyramid peak | Panoramic chain of 3 rainbow hills | Crimson Martian red canyon |
-| **Daily Crowds** | High (1,200 - 1,800 hikers/day) | Peaceful (100 - 200 hikers/day) | Moderate to light |
-| **Horse Rental** | Widely available on site | Unnecessary (very gentle walk) | Partially on foot |
-| **Recommended For** | Iconic bucket-list summit seekers | Families, seniors, crowd-free photos | Surreal landscape lovers |
-
-> **›› Expert Tour Recommendation:** If you are traveling with children, seniors, or prefer a serene, less strenuous walk, reserve the [Palcoyo Rainbow Mountain Trek](/en/tours/cusco/trekking-palcoyo). If your lifelong dream is the iconic pointed summit overlooking Mount Ausangate, choose our [Rainbow Mountain Vinicunca Trek](/en/tours/cusco/trekking-montana-7-colores).
 
 ---
 

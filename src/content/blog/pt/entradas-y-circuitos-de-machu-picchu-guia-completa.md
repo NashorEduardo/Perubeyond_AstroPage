@@ -47,25 +47,13 @@ Se você está pesquisando sobre **ingressos e circuitos Machu Picchu**, este gu
 
 ---
 
-## 1. Por que as Regras de Ingressos de Machu Picchu Mudaram?
+## 1. Quadro Comparativo de Todos os Circuitos e Rotas de Machu Picchu ("At a Glance")
 
-No passado, quem comprava um ingresso podia circular livremente por praticamente toda a cidadela por várias horas e até mesmo sair e entrar novamente. Essa circulação desordenada causou sobrecarga em locais delicados, como o Templo do Sol, o Intihuatana e o Templo do Condor.
-
-Para assegurar a preservação do monumento para as próximas gerações, o governo peruano implementou circuitos em sentido único e controle rígido de capacidade diária:
-- **Temporada Regular:** Limite diário de aproximadamente 4.500 a 5.000 visitantes.
-- **Alta Temporada (1 de junho a 15 de outubro e datas festivas):** A capacidade é expandida para até 5.600 pessoas por dia por meio de rotas complementares.
-
-> **›› Significado em Quechua:** O nome *Machu Picchu* vem do Quechua, em que *Machu* significa "velho" e *Picchu* significa "montanha". O complexo foi erguido em meados do século XV sob o comando do nono imperador inca, **Pachacútec**, servindo como retiro cerimonial e observatório astronômico.
-
----
-
-## 2. Tabela Comparativa de Todos os Circuitos e Rotas em 2026
-
-Veja na tabela abaixo a comparação completa das 10 rotas oficiais para escolher a melhor opção para você:
+Veja na tabela abaixo a comparação completa das 10 rotas oficiais para escolher a melhor opção para você, seu ritmo e seus objetivos fotográficos:
 
 | Circuito Oficial | Rota Incluída | Tempo Estimado | Nível Físico | Foto Clássica de Cartão-Postal? | Percorre os Templos Centrais? | Antecedência Recomendada |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Circuito 1 (Panorâmico)** | 1A: Montanha Machu Picchu | 4h00 - 4h30 | Exigente / Difícil | Sim (do alto do cume) | Não | 2 a 3 meses |
+| **Circuito 1 (Panorâmico)** | 1A: Montanha Machu Picchu | 4h00 - 4h30 | Exigente / Difícil | Sim (do alto do cume a 3.082 m) | Não | 2 a 3 meses |
 | **Circuito 1 (Panorâmico)** | 1B: Terraço Superior | 2h00 | Fácil / Acessível | **Sim (Foto de Cartão-Postal)** | Não | 3 a 4 meses |
 | **Circuito 1 (Panorâmico)** | 1C: Portão Inti Punku | 2h30 | Moderado | Sim | Não | 2 meses (Só alta temp.) |
 | **Circuito 1 (Panorâmico)** | 1D: Ponte Inca | 2h30 | Fácil a Moderado | Sim | Não | 2 meses (Só alta temp.) |
@@ -78,6 +66,18 @@ Veja na tabela abaixo a comparação completa das 10 rotas oficiais para escolhe
 
 ![Vista clássica de Machu Picchu a partir do Terraço Superior](/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/circuito-clasico-foto.webp)
 *O cartão-postal definitivo de Machu Picchu, garantido pelos Circuitos 1B, 2A e 2B.*
+
+---
+
+## 2. Por que as Regras de Ingressos de Machu Picchu Mudaram?
+
+No passado, quem comprava um ingresso podia circular livremente por praticamente toda a cidadela por várias horas e até mesmo sair e entrar novamente. Essa circulação desordenada causou sobrecarga em locais delicados, como o Templo do Sol, o Intihuatana e o Templo do Condor.
+
+Para assegurar a preservação do monumento para as próximas gerações, o governo peruano implementou circuitos em sentido único e controle rígido de capacidade diária:
+- **Temporada Regular:** Limite diário de aproximadamente 4.500 a 5.000 visitantes.
+- **Alta Temporada (1 de junho a 15 de outubro e datas festivas):** A capacidade é expandida para até 5.600 pessoas por dia por meio de rotas complementares.
+
+> **›› Significado em Quechua:** O nome *Machu Picchu* vem do Quechua, em que *Machu* significa "velho" e *Picchu* significa "montanha". O complexo foi erguido em meados do século XV sob o comando do nono imperador inca, **Pachacútec**, servindo como retiro cerimonial e observatório astronômico a 2.430 metros de altitude (7.972 pés).
 
 ---
 

@@ -47,7 +47,34 @@ In this **complete 2026 guide to Humantay Lake in Peru**, we walk you through ev
 
 ---
 
-## 1. What is Humantay Lake and Why is the Water so Turquoise?
+## 1. Quick Comparison Table & Trail Summary ("At a Glance")
+
+Before heading out on the trail, review the key route metrics and see how Humantay Lake compares to other popular Cusco high-altitude day treks:
+
+| Route / Parameter | Humantay Lake | Rainbow Mountain (Vinicunca) | Palcoyo Rainbow Mountain | 7 Lakes of Ausangate |
+| :--- | :--- | :--- | :--- | :--- |
+| **Max Elevation:** | **4,200 m (13,779 ft)** | 5,200 m (17,060 ft) | 4,900 m (16,076 ft) | 4,650 m (15,255 ft) |
+| **Elevation Gain:** | **+300 m (+984 ft)** | +570 m (+1,870 ft) | +150 m (+492 ft) | +380 m (+1,246 ft) |
+| **Roundtrip Distance:** | **4.5 km (2.8 mi)** | 7.0 km (4.3 mi) | 3.5 km (2.1 mi) | 10.0 km (6.2 mi) |
+| **Hiking Time:** | **1.5 to 2h up / 1h down** | 1.5 to 2h up / 1.2h down | 45 min gentle walk | 4.5 to 5h loop |
+| **Terrain:** | Steep switchbacks & stones | Gradual incline then steep | Flat & undulating path | Open puna & rocky trail |
+| **Physical Effort:** | **Moderate (steep cardio)** | Strenuous (oxygen thin) | Easy to Gentle | Moderate to High |
+| **Horse Rental:** | Yes (~80-90 PEN / ~$25 USD) | Yes (~80-100 PEN) | Not available | Partial sections only |
+| **Community Fee:** | 20 PEN (~$5.50 USD) | 25 PEN (~$7.00 USD) | 15 PEN (~$4.00 USD) | 20 PEN (~$5.50 USD) |
+
+### Technical Trail Breakdown: Soraypampa to Humantay Lake
+
+| Feature | Official Trail Statistic |
+| :--- | :--- |
+| **Trailhead Elevation (Soraypampa):** | 3,900 m / 12,795 ft |
+| **Lake Elevation (Lakeshore):** | 4,200 m / 13,779 ft |
+| **Towering Peak (Glacier):** | Mount Humantay (5,473 m / 17,956 ft) |
+| **Average Temperature:** | 5 °C to 14 °C (41 °F to 57 °F, chilling summit winds) |
+| **Best Travel Window:** | May to October (Dry season with pristine blue skies) |
+
+---
+
+## 2. What is Humantay Lake and Why is the Water so Turquoise?
 
 Humantay Lake is fed directly by the perpetual meltwater of the **Humantay Glacier**, which crowns the peak at 5,473 meters (17,956 feet) within the sacred Salkantay massif.
 
@@ -60,22 +87,6 @@ The ethereal emerald-turquoise hue of the water is a natural optical phenomenon:
 
 ![Emerald turquoise waters of Humantay Lake beneath towering glacial walls](/images/Blog/laguna-humantay-todo-lo-que-tienes-que-saber/nevado-humantay-glaciar.webp)
 *The striking contrast between glacial ice and the vivid turquoise waters of Humantay Lake.*
-
----
-
-## 2. Trail Stats & Technical Overview
-
-| Feature | Official Trail Statistic |
-| :--- | :--- |
-| **Location:** | Soraypampa Community, Mollepata District, Anta, Cusco, Peru |
-| **Trailhead Elevation (Soraypampa):** | 3,900 m / 12,795 ft |
-| **Lake Elevation (Lakeshore):** | 4,200 m / 13,779 ft |
-| **Elevation Gain:** | +300 meters / +984 ft |
-| **Roundtrip Distance:** | 4.5 km / 2.8 miles |
-| **Hiking Time Up:** | 1.5 to 2 hours (measured, steady pace) |
-| **Hiking Time Down:** | 45 minutes to 1 hour |
-| **Difficulty Level:** | Moderate (continuous, steep gradient) |
-| **Average Temperature:** | 5 °C to 14 °C (41 °F to 57 °F) |
 
 ---
 

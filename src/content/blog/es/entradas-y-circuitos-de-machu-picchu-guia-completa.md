@@ -47,25 +47,13 @@ Si estás buscando tus **entradas a Machu Picchu**, esta guía exhaustiva te exp
 
 ---
 
-## 1. ¿Por qué cambió la normativa de entradas a Machu Picchu?
+## 1. Cuadro Comparativo de Todos los Circuitos y Rutas de Machu Picchu ("At a Glance")
 
-Durante décadas, comprar un boleto a Machu Picchu otorgaba acceso libre para recorrer prácticamente toda la ciudadela durante varias horas e incluso reingresar. Esto generó saturación en sectores vulnerables como el Templo del Cóndor, el Intihuatana y la Casa del Guardián.
-
-Para preservar la maravilla para las futuras generaciones y cumplir con los estándares de la UNESCO, el gobierno peruano estableció circuitos de sentido único unidireccional y aforos dinámicos diferenciados:
-- **Temporada Regular:** Aforo máximo controlado de aproximadamente 4,500 a 5,000 visitantes por día.
-- **Temporada Alta (1 de junio al 15 de octubre y fechas festivas):** El aforo se amplía hasta 5,600 visitantes diarios habilitando rutas especiales de descongestión.
-
-> **›› Fun Fact Histórico:** El nombre quechua original de la ciudadela es *Machu Pikchu*, donde *Machu* significa "viejo" o "antiguo" y *Pikchu* significa "montaña" o "pirámide". El sitio fue construido a mediados del siglo XV bajo el mandato del noveno emperador inca, el gran estadista **Pachacútec**.
-
----
-
-## 2. Tabla Comparativa de Todos los Circuitos y Rutas de Machu Picchu 2026
-
-Antes de profundizar en cada opción, compara de un vistazo las características principales de las 10 rutas oficiales para determinar cuál se adapta mejor a tu viaje:
+Antes de profundizar en cada opción, compara de un vistazo las características principales de las 10 rutas oficiales para determinar cuál se adapta mejor a tu viaje, estado físico e intereses fotográficos:
 
 | Circuito Oficial | Ruta Incluida | Duración Máx. | Nivel Físico | ¿Incluye Foto Clásica? | ¿Recorre Templos / Sector Urbano? | Anticipación Recomendada |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Circuito 1 (Panorámico)** | 1A: Montaña Machu Picchu | 4.0 - 4.5 hrs | Alta / Exigente | Sí (desde la cumbre) | No | 2 a 3 meses |
+| **Circuito 1 (Panorámico)** | 1A: Montaña Machu Picchu | 4.0 - 4.5 hrs | Alta / Exigente | Sí (desde la cumbre a 3,082 m) | No | 2 a 3 meses |
 | **Circuito 1 (Panorámico)** | 1B: Terraza Superior | 2.0 hrs | Baja / Fácil | **Sí (Foto Postal 100%)** | No | 3 a 4 meses |
 | **Circuito 1 (Panorámico)** | 1C: Portada Inti Punku | 2.5 hrs | Moderada | Sí | No | 2 meses (Solo temp. alta) |
 | **Circuito 1 (Panorámico)** | 1D: Puente Inca | 2.5 hrs | Fácil a Moderada | Sí | No | 2 meses (Solo temp. alta) |
@@ -78,6 +66,18 @@ Antes de profundizar en cada opción, compara de un vistazo las características
 
 ![Vista panorámica de Machu Picchu desde la Terraza Clásica](/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/circuito-clasico-foto.webp)
 *La clásica postal de Machu Picchu con el Huayna Picchu al fondo, obtenida mediante los Circuitos 1B, 2A y 2B.*
+
+---
+
+## 2. ¿Por qué cambió la normativa de entradas a Machu Picchu?
+
+Durante décadas, comprar un boleto a Machu Picchu otorgaba acceso libre para recorrer prácticamente toda la ciudadela durante varias horas e incluso reingresar. Esto generó saturación en sectores vulnerables como el Templo del Cóndor, el Intihuatana y la Casa del Guardián.
+
+Para preservar la maravilla para las futuras generaciones y cumplir con los estándares de la UNESCO, el gobierno peruano estableció circuitos de sentido único unidireccional y aforos dinámicos diferenciados:
+- **Temporada Regular:** Aforo máximo controlado de aproximadamente 4,500 a 5,000 visitantes por día.
+- **Temporada Alta (1 de junio al 15 de octubre y fechas festivas):** El aforo se amplía hasta 5,600 visitantes diarios habilitando rutas especiales de descongestión.
+
+> **›› Fun Fact Histórico:** El nombre quechua original de la ciudadela es *Machu Pikchu*, donde *Machu* significa "viejo" o "antiguo" y *Pikchu* significa "montaña" o "pirámide". El sitio fue construido a mediados del siglo XV bajo el mandato del noveno emperador inca, el gran estadista **Pachacútec**, situándose a una altitud estratégica de 2,430 m s. n. m. (7,972 ft) entre los Andes y la cuenca amazónica.
 
 ---
 
