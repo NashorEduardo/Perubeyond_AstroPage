@@ -56,8 +56,8 @@ itinerary:
     description: "Fin del tour y retorno."
     images:
       - "/itinerario/CUZCO/cusco07.webp"
-      - "/itinerario/CUZCO/cusco07.webp"
-      - "/itinerario/CUZCO/cusco07.webp"    
+      - "/itinerario/CUZCO/cusco03.webp"
+      - "/itinerario/CUZCO/cusco05.webp"
     activities:
       - "Traslado al aeropuerto para su vuelo de retorno"
 

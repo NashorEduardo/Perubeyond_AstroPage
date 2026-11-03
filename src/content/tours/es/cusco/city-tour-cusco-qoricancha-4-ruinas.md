@@ -37,7 +37,6 @@ gallery:
   - /itinerario/CUZCO/cusco07.webp
   - /itinerario/CUZCO/cusco05.webp
   - /itinerario/CUZCO/cusco06.webp
-  - /itinerario/CUZCO/cusco07.webp
 ---
 
 El City Tour Cusco es una excelente opción para quienes desean conocer los principales atractivos históricos y culturales de la ciudad en poco tiempo. Este recorrido comienza con la visita al Templo de Qoricancha, uno de los centros ceremoniales más importantes del Imperio Inca, donde se rendía culto al dios Inti (Sol).

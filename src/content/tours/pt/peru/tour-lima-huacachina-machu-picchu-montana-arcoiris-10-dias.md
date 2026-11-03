@@ -2,7 +2,7 @@
 title: "Lima, Ica, Cusco e Machu Picchu – 10 Dias / 9 Noites"
 price: "1109"
 duration: "10 Dias / 9 Noites"
-image: "/images/Moray/F1.webp"
+image: "/itinerario/MACHUPICCHU/machupicchu08.webp"
 wetravelUuid: "4505133607"
 description: "Percorra o melhor do Peru em 10 dias: Lima, Paracas, Ica, Cusco, Vale Sagrado, Machu Picchu, Laguna Humantay, Maras, Moray e Montanha das Cores, combinando cultura, aventura e natureza."
 availability: "Todos os dias"

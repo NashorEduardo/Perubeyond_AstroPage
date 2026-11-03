@@ -2,7 +2,7 @@
 title: "Tour Montaña Palcoyo"
 price: "50"
 duration: "1 Día"
-image: "/images/Montaña_de_7_colores/DSC02974.webp"
+image: "/images/Palcoyo/palcoyo01.webp"
 wetravelUuid: ""
 description: "Tour Full Day a la Montaña Palcoyo desde Cusco. Descubre la Cordillera de Colores, el Bosque de Piedra y espectaculares paisajes andinos con desayuno y almuerzo buffet incluidos."
 availability: "Todos los días"
@@ -29,10 +29,9 @@ itinerary:
     title: "Full Day Montaña Palcoyo"
     description: "Una experiencia única visitando la Cordillera de Colores de Palcoyo y su impresionante Bosque de Piedra."
     images:
-      - "/itinerario/CHINCHEROS/chinchero01.webp"
-      - "/itinerario/MARAS/maras01.webp"
-      - "/itinerario/MORAY/moray01.webp"
-      - "/itinerario/OLLANTAYTAMBO/ollantaytambo01.webp"
+      - "/itinerario/PALCOYO/palcoyo02.webp"
+      - "/itinerario/PALCOYO/palcoyo03.webp"
+      - "/itinerario/PALCOYO/palcoyo04.webp"
 
     activities:
       - "Recojo desde el hotel (04:00 a.m. aprox.)"
@@ -49,11 +48,10 @@ itinerary:
       - "Retorno a Cusco (llegada aproximada 05:00 p.m.)"
 
 gallery:
-  - "/itinerario/CHINCHEROS/chinchero02.webp"
-  - "/itinerario/MARAS/maras02.webp"
-  - "/itinerario/MORAY/moray02.webp"
-  - "/itinerario/OLLANTAYTAMBO/ollantaytambo02.webp"
-  - "/itinerario/OLLANTAYTAMBO/ollantaytambo03.webp"
+  - "/images/Palcoyo/palcoyo01.webp"
+  - "/itinerario/PALCOYO/palcoyo02.webp"
+  - "/itinerario/PALCOYO/palcoyo03.webp"
+  - "/itinerario/PALCOYO/palcoyo04.webp"
 
 videoUrl: ""
 

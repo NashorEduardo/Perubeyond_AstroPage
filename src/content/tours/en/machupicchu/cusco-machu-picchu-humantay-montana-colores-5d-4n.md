@@ -28,7 +28,9 @@ itinerary:
     title: "Cusco – City Tour"
     description: "First contact with Inca and colonial history in the imperial city."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/CUZCO/cusco01.webp"
+      - "/itinerario/CUZCO/cusco02.webp"
+      - "/itinerario/CUZCO/cusco04.webp"
     activities:
       - "Airport reception and transfer to the hotel"
       - "Visit to the Cathedral and Qoricancha"
@@ -38,7 +40,9 @@ itinerary:
     title: "Machu Picchu – Wonder of the World"
     description: "Guided visit to the most important Inca citadel in Peru."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu01.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu02.webp"
+      - "/itinerario/MACHUPICCHU/machupicchu05.webp"
     activities:
       - "Transfer to the train station and journey to Aguas Calientes"
       - "Bus to Machu Picchu and guided tour (approx. 2h30)"
@@ -49,7 +53,9 @@ itinerary:
     title: "Humantay Lake"
     description: "Full-day excursion to one of the most impressive lakes in the Andes."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
+      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
     activities:
       - "Excursion to Humantay Lake"
       - "Guided hike and time to enjoy the scenery"
@@ -59,7 +65,9 @@ itinerary:
     title: "Rainbow Mountain (Vinicunca)"
     description: "Ascent to one of the most striking landscapes in Peru."
     images:
-      - "/images/Montaña_de_7_colores/DSC02961.webp"
+      - "/itinerario/7COLORES/7colores01.webp"
+      - "/itinerario/7COLORES/7colores02.webp"
+      - "/itinerario/7COLORES/7colores03.webp"
     activities:
       - "Excursion to Rainbow Mountain"
       - "Guided hike and time to enjoy the scenery"

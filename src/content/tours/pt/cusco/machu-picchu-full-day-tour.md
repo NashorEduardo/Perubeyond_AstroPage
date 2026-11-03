@@ -49,7 +49,6 @@ gallery:
       - "/itinerario/MACHUPICCHU/machupicchu04.webp"
       - "/itinerario/MACHUPICCHU/machupicchu01.webp"
       - "/itinerario/MACHUPICCHU/machupicchu02.webp"
-      - "/itinerario/MACHUPICCHU/machupicchu08.webp"
 
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"

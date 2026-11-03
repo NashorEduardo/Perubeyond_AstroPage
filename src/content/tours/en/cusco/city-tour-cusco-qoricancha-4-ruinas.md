@@ -43,7 +43,6 @@ gallery:
       - "/itinerario/CUZCO/cusco07.webp"
       - "/itinerario/CUZCO/cusco05.webp"
       - "/itinerario/CUZCO/cusco06.webp"
-      - "/itinerario/CUZCO/cusco07.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

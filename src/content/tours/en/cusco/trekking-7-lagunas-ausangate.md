@@ -2,7 +2,7 @@
 title: "7 Lakes Trekking Tour"
 price: "50"
 duration: "1 Day"
-image: "/itinerario/7COLORES/7colores21.webp"
+image: "/images/Ausangate/ausangate01.webp"
 wetravelUuid: "4979000171"
 description: "Trekking to the 7 lakes of Ausangate, surrounded by Andean landscapes, local wildlife and ending with relaxation in hot springs."
 availability: "Every day"
@@ -24,9 +24,9 @@ itinerary:
     title: "7 Lakes Trekking Tour"
     description: "Hiking, contact with nature and relaxation in hot springs."
     images: 
-      - "/itinerario/LAGUNAHUMANTAY/humantay01.webp"
-      - "/itinerario/LAGUNAHUMANTAY/humantay03.webp"
-      - "/itinerario/LAGUNAHUMANTAY/humantay05.webp"
+      - "/itinerario/AUSANGATE/ausangate02.webp"
+      - "/itinerario/AUSANGATE/ausangate03.webp"
+      - "/itinerario/AUSANGATE/ausangate04.webp"
     activities:
       - "Hotel pickup in Cusco (approx. 04:30 a.m.)"
       - "Tourist transport journey to Pacchanta"
@@ -38,11 +38,10 @@ itinerary:
       - "Return to Cusco (approx. 07:00 p.m.)"
 
 gallery:
-  - "/itinerario/LAGUNAHUMANTAY/humantay02.webp"
-  - "/itinerario/LAGUNAHUMANTAY/humantay04.webp"
-  - "/itinerario/LAGUNAHUMANTAY/humantay06.webp"
-  - "/itinerario/LAGUNAHUMANTAY/humantay07.webp"
-  - "/itinerario/LAGUNAHUMANTAY/humantay10.webp"
+  - "/images/Ausangate/ausangate01.webp"
+  - "/itinerario/AUSANGATE/ausangate02.webp"
+  - "/itinerario/AUSANGATE/ausangate03.webp"
+  - "/itinerario/AUSANGATE/ausangate04.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 

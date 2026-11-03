@@ -37,9 +37,8 @@ itinerary:
 gallery:
   - "/itinerario/TIPON/tipon04.webp"
   - "/itinerario/TIPON/tipon05.webp"
-  - "/itinerario/CUZCO/cusco01.webp"
-  - "/itinerario/CUZCO/cusco03.webp"
-  - "/itinerario/CUZCO/cusco05.webp"
+  - "/itinerario/TIPON/tipon03.webp"
+  - "/itinerario/TIPON/tipon01.webp"
 
 videoUrl: "https://www.youtube.com/watch?v=HjTJtS7r8do&t=23s"
 
