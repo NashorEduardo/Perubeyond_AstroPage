@@ -128,6 +128,12 @@ export const featuredSlug = 'entradas-y-circuitos-de-machu-picchu-guia-completa'
 
 // Orden de aparición en el listado (debajo del destacado).
 const gridOrder = [
+  'es-seguro-viajar-a-peru-consejos-para-visitantes',
+  'como-organizar-un-viaje-a-peru-por-primera-vez',
+  'los-15-lugares-turisticos-de-peru-que-debes-conocer',
+  'tren-a-machu-picchu-tipos-de-servicio-y-diferencias',
+  'valle-sagrado-de-los-incas-lugares-que-debes-visitar',
+  'viajar-a-peru-con-adultos-mayores-rutas-y-consejos',
   'como-llegar-a-machu-picchu-desde-cusco-paso-a-paso',
   'que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje',
   'entradas-a-machu-picchu-2027-como-comprarlas',
