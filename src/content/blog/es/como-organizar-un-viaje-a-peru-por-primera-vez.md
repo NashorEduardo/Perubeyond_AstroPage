@@ -72,6 +72,9 @@ El tiempo disponible determinará el alcance de tu aventura. A continuación, co
 
 ---
 
+
+![Machu Picchu entre nubes, con Huayna Picchu al fondo](/images/Machupicchu/IMG_7715.webp)
+
 ## 2. Cronograma de Planificación: Con Cuánta Anticipación Organizar tu Viaje
 
 Una de las particularidades de viajar a Perú es que las reservas no pueden dejarse para el último momento debido a las estrictas regulaciones de preservación del patrimonio histórico. Sigue este calendario paso a paso:
@@ -115,6 +118,9 @@ Para ingresar a territorio peruano no se exigen trámites engorrosos ni pagos de
 4. **Visas:** Los ciudadanos de la Unión Europea, Reino Unido, Estados Unidos, Canadá, Australia y la gran mayoría de países de América no requieren visa para estancias turísticas de hasta 90 días prorrogables.
 
 ---
+
+
+![Plaza de Armas de Cusco, primer destino del viaje](/images/Cuzco/cusco.webp)
 
 ## 4. El Orden Perfecto de Ciudades: La Estrategia Definitiva contra el Soroche
 

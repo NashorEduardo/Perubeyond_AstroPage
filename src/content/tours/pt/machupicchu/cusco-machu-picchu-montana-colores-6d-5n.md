@@ -2,7 +2,7 @@
 title: "Cusco, Machu Picchu e Montanha das Cores "
 price: "649"
 duration: "6 Dias / 5 Noites"
-image: "/images/Cuzco/cusco.webp"
+image: "/images/Montaña_de_7_colores/DSC02961.webp"
 wetravelUuid: "8533779408"
 description: "Explore Cusco em 6 dias: City Tour, Vale Sagrado, Machu Picchu, Lagoa Humantay e Montanha das Cores, combinando cultura, história e aventura nos Andes peruanos."
 availability: "Todos os dias"

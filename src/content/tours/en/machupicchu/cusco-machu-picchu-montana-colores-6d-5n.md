@@ -2,7 +2,7 @@
 title: "Cusco, Machu Picchu, Humantay Lake and Rainbow Mountain"
 price: "649"
 duration: "6 Days / 5 Nights"
-image: "/images/Cuzco/cusco.webp"
+image: "/images/Montaña_de_7_colores/DSC02961.webp"
 wetravelUuid: "8533779408"
 description: "Explore Cusco in 6 days: City Tour, Sacred Valley, Machu Picchu, Humantay Lake and Rainbow Mountain, combining culture, history and adventure in the Peruvian Andes."
 availability: "Every day"

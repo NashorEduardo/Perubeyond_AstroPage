@@ -14,6 +14,19 @@
     { "source": "/actividades/toritos", "destination": "/es/actividades/toritos", "permanent": true },
     { "source": "/actividades", "destination": "/es/actividades", "permanent": true },
 
+    { "source": "/es/blog/laguna-humantay", "destination": "/es/blog/laguna-humantay-todo-lo-que-tienes-que-saber", "permanent": true },
+    { "source": "/en/blog/laguna-humantay", "destination": "/en/blog/laguna-humantay-todo-lo-que-tienes-que-saber", "permanent": true },
+    { "source": "/pt/blog/laguna-humantay", "destination": "/pt/blog/laguna-humantay-todo-lo-que-tienes-que-saber", "permanent": true },
+    { "source": "/es/blog/vinicunca-7-colores", "destination": "/es/blog/montana-de-7-colores-guia-completa", "permanent": true },
+    { "source": "/en/blog/vinicunca-7-colores", "destination": "/en/blog/montana-de-7-colores-guia-completa", "permanent": true },
+    { "source": "/pt/blog/vinicunca-7-colores", "destination": "/pt/blog/montana-de-7-colores-guia-completa", "permanent": true },
+    { "source": "/es/blog/entradas-machu-picchu", "destination": "/es/blog/entradas-y-circuitos-de-machu-picchu-guia-completa", "permanent": true },
+    { "source": "/en/blog/entradas-machu-picchu", "destination": "/en/blog/entradas-y-circuitos-de-machu-picchu-guia-completa", "permanent": true },
+    { "source": "/pt/blog/entradas-machu-picchu", "destination": "/pt/blog/entradas-y-circuitos-de-machu-picchu-guia-completa", "permanent": true },
+    { "source": "/es/blog/mejor-epoca-viajar-peru", "destination": "/es/blog/mejor-epoca-para-viajar-a-peru-guia-completa", "permanent": true },
+    { "source": "/en/blog/mejor-epoca-viajar-peru", "destination": "/en/blog/mejor-epoca-para-viajar-a-peru-guia-completa", "permanent": true },
+    { "source": "/pt/blog/mejor-epoca-viajar-peru", "destination": "/pt/blog/mejor-epoca-para-viajar-a-peru-guia-completa", "permanent": true },
+
     { "source": "/blog/:slug", "destination": "/es/blog/:slug", "permanent": true },
     { "source": "/blog", "destination": "/es/blog", "permanent": true },
 

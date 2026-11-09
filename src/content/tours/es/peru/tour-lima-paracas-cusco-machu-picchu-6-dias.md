@@ -2,7 +2,7 @@
 title: "Lima, Paracas, Huacachina y Machu Picchu"
 price: "859"
 duration: "6 Días / 5 Noches"
-image: "/images/Machupicchu/IMG_7715.webp"
+image: "/images/Paracas/pexels-gilmerdiaz-14097704.webp"
 wetravelUuid: "5833040421"
 description: "Tour de 6 días que combina Lima, Paracas, Huacachina y Cusco, incluyendo Machu Picchu, con experiencias de naturaleza, cultura y aventura."
 availability: "Todos los días"

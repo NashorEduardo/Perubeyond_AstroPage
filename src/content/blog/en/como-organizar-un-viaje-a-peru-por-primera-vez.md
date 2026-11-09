@@ -72,6 +72,9 @@ Your vacation duration shapes your travel pace. Below is an overview of the four
 
 ---
 
+
+![Machu Picchu in the clouds, with Huayna Picchu behind](/images/Machupicchu/IMG_7715.webp)
+
 ## 2. Planning Timeline: How Far in Advance to Book Your Trip
 
 Because Peru enforces strict heritage conservation laws, waiting until the last minute often leads to sold-out attractions. Follow this recommended booking schedule:
@@ -115,6 +118,9 @@ Entering Peru as an international tourist is remarkably straightforward:
 4. **Tourist Visa Exemption:** Citizens of the US, Canada, UK, EU, Australia, and New Zealand do not need a visa for tourism stays of up to 90 days.
 
 ---
+
+
+![Plaza de Armas in Cusco, the first stop of the trip](/images/Cuzco/cusco.webp)
 
 ## 4. The Smart Altitude Strategy: Avoiding Soroche Step by Step
 

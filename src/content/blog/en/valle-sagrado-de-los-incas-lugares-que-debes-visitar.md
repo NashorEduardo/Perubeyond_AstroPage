@@ -74,6 +74,9 @@ Compare the six core destinations of the Sacred Valley, their elevations, requir
 
 ---
 
+
+![Ollantaytambo terraces](/images/ValleSagrado/ollantaytambo-3.webp)
+
 ## 2. Why Was the Sacred Valley the Core of the Incan Empire?
 
 The Sacred Valley encompasses the Vilcanota-Urubamba river basin between the colonial towns of Písac and Ollantaytambo. The Incas revered this river as the earthly reflection of the celestial star river (*Chakana Mayu*).
@@ -155,6 +158,9 @@ Located in the geographical center of the valley at 2,870 meters, Urubamba is th
 - **Luxury Resorts:** Features world-renowned hotels (Tambo del Inka, Sol y Luna, Belmond Rio Sagrado) with lush gardens, ideal for unwinding after exploring archaeological ruins.
 
 ---
+
+
+![Maras salt ponds in the Sacred Valley](/images/Maras/F1.webp)
 
 ## 4. Tour Route Comparison: Classic vs. Super VIP vs. Maras & Moray
 

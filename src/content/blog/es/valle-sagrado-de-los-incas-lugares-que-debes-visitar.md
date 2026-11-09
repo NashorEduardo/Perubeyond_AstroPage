@@ -74,6 +74,9 @@ A continuación, compara de un vistazo los 6 destinos fundamentales del Valle Sa
 
 ---
 
+
+![Terrazas de Ollantaytambo](/images/ValleSagrado/ollantaytambo-3.webp)
+
 ## 2. ¿Qué es el Valle Sagrado y por qué fue el Núcleo del Tahuantinsuyo?
 
 El Valle Sagrado de los Incas abarca la cuenca fluvial del río Vilcanota-Urubamba entre las localidades de Písac y Ollantaytambo. Los Incas veneraban este río como la proyección terrenal de la constelación celeste del Río de las Estrellas (*Chakana Mayu*).
@@ -165,6 +168,9 @@ Ubicada en el centro geográfico del valle a 2,870 metros de altitud, Urubamba e
 - **Hotelería de Primera Clase:** Alberga los hoteles y resorts más prestigiosos del Perú (como Tambo del Inka Luxury Collection, Sol y Luna Relais & Châteaux y Rio Sagrado Belmond), rodeados de jardines floridos y con un clima templado ideal para reponer energías.
 
 ---
+
+
+![Salineras de Maras, en el Valle Sagrado](/images/Maras/F1.webp)
 
 ## 4. Comparativa de Rutas: ¿Valle Sagrado Clásico vs. Súper Valle VIP vs. Maras Moray?
 

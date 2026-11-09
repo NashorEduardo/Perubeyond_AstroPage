@@ -72,6 +72,9 @@ A quantidade de dias disponíveis ditará o ritmo da sua aventura. Compare as 4 
 
 ---
 
+
+![Machu Picchu entre nuvens, com o Huayna Picchu ao fundo](/images/Machupicchu/IMG_7715.webp)
+
 ## 2. Cronograma de Planejamento: Quando Reservar Cada Etapa
 
 Em razão das regras rígidas de preservação ambiental e arqueológica, os ingressos e trens para Machu Picchu têm cotas diárias estritas. Siga este calendário:
@@ -113,6 +116,9 @@ Em razão das regras rígidas de preservação ambiental e arqueológica, os ing
 - **Isenção de Imposto IGV nos Hotéis:** Guarde o carimbo ou comprovante de entrada no país; os hotéis peruanos concedem isenção de 18% do imposto para estrangeiros.
 
 ---
+
+
+![Praça de Armas de Cusco, primeiro destino da viagem](/images/Cuzco/cusco.webp)
 
 ## 4. Como Vencer o Soroche: A Rota Inteligente de Aclimatação
 

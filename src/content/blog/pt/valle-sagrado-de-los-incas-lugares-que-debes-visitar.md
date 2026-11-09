@@ -77,6 +77,9 @@ Para ajudá-lo a visualizar rapidamente as principais atrações do Vale Sagrado
 
 ---
 
+
+![Terraços de Ollantaytambo](/images/ValleSagrado/ollantaytambo-3.webp)
+
 ## 2. Por que o Vale Sagrado era Tão Crucial para o Império Inca?
 
 Para compreender a magnitude dos monumentos que você encontrará no vale, é fundamental entender a visão cosmológica e prática que os Incas possuíam sobre este território:
@@ -152,6 +155,9 @@ Urubamba repousa no coração geográfico mais plano e acolhedor do vale, a 2.87
 - **Cervejarias Artesanais:** Não deixe de visitar a *Cervecería del Valle Sagrado*, pioneira nacional na produção de cervejas artesanais premiadas internacionalmente elaboradas com água puríssima de degelo glacial e insumos locais como maracujá selvagem, milho roxo e lúpulos frescos.
 
 ---
+
+
+![Salinas de Maras, no Vale Sagrado](/images/Maras/F1.webp)
 
 ## 4. Como Estruturar seu Roteiro: 3 Opções Práticas
 
