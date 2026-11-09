@@ -7,7 +7,7 @@ date: "28 de Octubre, 2026"
 updatedDate: "Octubre 2026"
 author: "Equipo Peru Beyond"
 category: "Guías de Viaje"
-heroImage: "/images/Machupicchu/IMG_7715.webp"
+heroImage: "/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/hero.webp"
 heroPosition: "center 45%"
 readingTime: "18 min de lectura"
 views: "4.7k"
@@ -39,6 +39,14 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "cusco-machu-picchu-3d-2n"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
+imgAlbum:
+  - "/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/01-ninos-alpacas-machu-picchu.webp"
+  - "/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/02-mochila-portabebes-trekking-familia.webp"
+  - "/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/03-viaje-tren-familia-ventanas.webp"
+  - "/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/04-taller-chocolate-chocomuseo-cusco.webp"
+  - "/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/05-visita-chinchero-familia-alpacas.webp"
+  - "/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/06-senderos-faciles-machu-picchu-ninos.webp"
+  - "/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/07-hotel-familiar-valle-sagrado-jardines.webp"
 ---
 
 Visitar la maravilla del mundo moderno en familia es una de las vivencias más enriquecedoras que padres e hijos pueden compartir. Ver a los niños maravillarse con las llamas que pastan libremente entre los andenes incas, tocar las gigantescas piedras pulidas que encajan sin cemento y asomarse a los miradores del cañón del Urubamba crea recuerdos imborrables para toda la vida.
@@ -60,12 +68,23 @@ Antes de organizar tus actividades, consulta esta tabla comparativa para planifi
 | **Niños de 8 a 12 años** | **Circuito 2-B (Terraza Inferior) o 2-A (Clásico)**| Caminata completa autónoma por senderos incas | Tarifa reducida niño en entrada (~$19 USD) y tren | Sobrecarga de datos históricos densos | Integrar actividades activas: alimentar alpacas y taller de chocolate |
 | **Adolescentes (13 a 17 años)** | **Circuito 2-A (Clásico) o 1-A (Montaña)**| Caminata a ritmo adulto; aptos para retos de altura | Tarifa menor de edad en entrada (~$19 USD) | Mantenerlos desconectados de pantallas y motivados | Incluir tren Vistadome Observatory y opción de trekking panorámico |
 
-![Familia disfrutando de los andenes y vistas de Machu Picchu](/images/Machupicchu/IMG_7715.webp)
+
 *Con la planificación adecuada, Machu Picchu se convierte en el aula viva más fascinante y emocionante del mundo para los niños.*
 
 ---
 
 ## 2. ¿Es Recomendable y Seguro ir a Machu Picchu con Niños?
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/01-ninos-alpacas-machu-picchu.webp" alt="Niños con alpacas y llamas en Machu Picchu" loading="lazy" />
+    <figcaption>Encuentros mágicos: llamas y alpacas conviviendo libremente en los andenes verdes.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/02-mochila-portabebes-trekking-familia.webp" alt="Mochila portabebés ergonómica de trekking" loading="lazy" />
+    <figcaption>Mochila portabebés: obligatoria para menores de 3 años ante la prohibición de carritos de bebé.</figcaption>
+  </figure>
+</div>
 
 ¡Absolutamente sí! Es una de las mejores decisiones de viaje que puedes tomar en familia. Sin embargo, muchos padres sienten temor inicial por dos factores: la altitud y la seguridad física.
 
@@ -83,6 +102,17 @@ Antes de organizar tus actividades, consulta esta tabla comparativa para planifi
 ---
 
 ## 3. El Secreto de la Aclimatación Familiar: El Descenso Inmediato al Valle Sagrado
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/03-viaje-tren-familia-ventanas.webp" alt="Viaje en tren con niños hacia Machu Picchu" loading="lazy" />
+    <figcaption>Viaje en tren divertido: ventanas panorámicas para que los niños descubran ríos y cascadas.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/04-taller-chocolate-chocomuseo-cusco.webp" alt="Taller de chocolate en ChocoMuseo para niños" loading="lazy" />
+    <figcaption>Taller en el ChocoMuseo: una tarde interactiva elaborando chocolate artesanal peruano.</figcaption>
+  </figure>
+</div>
 
 Si hay un consejo que transforma por completo un viaje familiar a Perú, es la **estrategia de aclimatación inteligente** promovida por los médicos y guías de Peru Beyond:
 
@@ -106,6 +136,17 @@ Si hay un consejo que transforma por completo un viaje familiar a Perú, es la *
 
 ## 4. ¿Cuál es el Mejor Circuito de Machu Picchu para ir con Niños?
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/05-visita-chinchero-familia-alpacas.webp" alt="Alimentando alpacas en granja del Valle Sagrado" loading="lazy" />
+    <figcaption>Granjas del Valle Sagrado: alimentar crías de alpaca es una experiencia inolvidable para los pequeños.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/06-senderos-faciles-machu-picchu-ninos.webp" alt="Senderos llanos y seguros para caminar con niños" loading="lazy" />
+    <figcaption>Circuitos recomendados: senderos llanos en el sector inferior para caminar con seguridad.</figcaption>
+  </figure>
+</div>
+
 La elección del boleto de entrada determina cuántos escalones subirán tus hijos:
 
 ### 1. Circuito 3-B (Realeza Diseñada) — La Mejor Opción para Menores de 6 Años
@@ -127,6 +168,11 @@ La elección del boleto de entrada determina cuántos escalones subirán tus hij
 ---
 
 ## 5. Reglas e Infraestructura para Familias en Machu Picchu
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/machu-picchu-en-familia-consejos-para-viajar-con-ninos/07-hotel-familiar-valle-sagrado-jardines.webp" alt="Hotel con amplios jardines en el Valle Sagrado para familias" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Alojamientos con espacios verdes: elegir hoteles con amplios jardines y piscina en el Valle Sagrado permite a los niños jugar y descansar entre excursiones.</figcaption>
+</figure>
 
 Para evitar contratiempos en la puerta de control, ten en cuenta estas tres normas indispensables:
 
@@ -158,7 +204,7 @@ Para que el viaje no sea solo piedras e historia, combina las excursiones arqueo
 4. **Talleres de Chocolate en el ChocoMuseo de Cusco:** Una experiencia divertida donde los pequeños muelen granos de cacao peruano y fabrican sus propios bombones rellenos.
 5. **Mariposario de Machu Picchu (Wasi Pillpi en Aguas Calientes):** Un jardín botánico techado al pie del río donde cientos de mariposas tropicales de todos los colores vuelan alrededor de los visitantes.
 
-![Salineras de Maras en el Valle Sagrado](/images/ValleSagrado/moray.webp)
+
 *El Valle Sagrado ofrece paisajes interactivos y terrazas agrícolas que despiertan la curiosidad natural de los niños.*
 
 ---

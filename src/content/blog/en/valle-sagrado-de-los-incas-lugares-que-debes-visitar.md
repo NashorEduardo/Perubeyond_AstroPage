@@ -7,7 +7,7 @@ date: "November 8, 2026"
 updatedDate: "November 2026"
 author: "Peru Beyond Team"
 category: "Must-See Destinations"
-heroImage: "/images/ValleSagrado/moray-3.webp"
+heroImage: "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/hero.webp"
 heroPosition: "center 45%"
 readingTime: "22 min read"
 views: "8.1k"
@@ -39,6 +39,14 @@ relatedTours:
   - "valle-sagrado-full-day-almuerzo-buffet"
   - "super-valle-sagrado"
   - "maras-moray-salineras-tour"
+imgAlbum:
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/01-pisac-terrazas-incas-valle.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/02-mercado-artesanal-pisac-textiles.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/03-fortaleza-ollantaytambo-andenes.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/04-salineras-de-maras-pozas-sal.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/05-moray-anfiteatro-agricola.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/06-chinchero-tejedoras-tradicionales-alpaca.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/07-valle-sagrado-urubamba-rio-paisaje.webp"
 ---
 
 Stretching majestically between the soaring glacier-capped peaks of the Urubamba range and the winding shores of the sacred Willkamayu (Vilcanota) River, the **Sacred Valley of the Incas** is one of the most culturally profound and visually breathtaking landscapes in South America. For the Inca civilization, this valley was not merely a fertile geographical corridor, but the spiritual, agricultural, and astronomical heart of the Tahuantinsuyo empire.
@@ -68,6 +76,17 @@ Compare the six core destinations of the Sacred Valley, their elevations, requir
 
 ## 2. Why Was the Sacred Valley the Core of the Incan Empire?
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/01-pisac-terrazas-incas-valle.webp" alt="Pisac cliffside Inca terraces" loading="lazy" />
+    <figcaption>Archaeological Pisac: dramatic stone terraces clinging to sheer mountain cliffs.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/02-mercado-artesanal-pisac-textiles.webp" alt="Pisac traditional artisan market" loading="lazy" />
+    <figcaption>Pisac Artisan Market: authentic handwoven alpaca textiles, pottery, and silver.</figcaption>
+  </figure>
+</div>
+
 The Sacred Valley encompasses the Vilcanota-Urubamba river basin between the colonial towns of Písac and Ollantaytambo. The Incas revered this river as the earthly reflection of the celestial star river (*Chakana Mayu*).
 
 ### Why the Incas valued the valley above all else:
@@ -78,6 +97,17 @@ The Sacred Valley encompasses the Vilcanota-Urubamba river basin between the col
 ---
 
 ## 3. The 6 Best Places to Visit in the Sacred Valley
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/03-fortaleza-ollantaytambo-andenes.webp" alt="Ollantaytambo fortress and Sun Temple" loading="lazy" />
+    <figcaption>Ollantaytambo: the last living Inca town beneath colossal ceremonial terraces.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/04-salineras-de-maras-pozas-sal.webp" alt="Maras salt pans canyon" loading="lazy" />
+    <figcaption>Salineras de Maras: over 3,000 ancient terraced salt evaporation pans.</figcaption>
+  </figure>
+</div>
 
 ### 1. Pisac: Incan Terraces & Vibrant Craft Market
 Located 33 kilometers northeast of Cusco, Pisac is the grand eastern gateway to the Sacred Valley.
@@ -96,10 +126,26 @@ Resting on a high plateau at 3,762 meters with panoramic vistas of Mount Veróni
 - **Ancestral Weaving Demonstrations:** Local Quechua women's weaving collectives demonstrate ancient textile arts: washing raw alpaca fleece with a native root (*saqta*), spinning thread on drop spindles, and producing vivid dyes from plants and **cochineal insects**.
 
 ### 4. Moray: The Incan Agricultural Laboratory
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/05-moray-anfiteatro-agricola.webp" alt="Circular Inca amphitheater of Moray" loading="lazy" />
+    <figcaption>Moray: concentric circular terraces used as an advanced Inca agricultural lab.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/06-chinchero-tejedoras-tradicionales-alpaca.webp" alt="Chinchero traditional indigenous weavers" loading="lazy" />
+    <figcaption>Chinchero: indigenous master weavers practicing natural mineral and plant dyeing.</figcaption>
+  </figure>
+</div>
 At 3,500 meters, Moray appears as four gigantic circular terraced amphitheaters carved into a natural limestone depression.
 - **Agricultural Experimentation:** By manipulating terrace depth, stone wall heat retention, and wind exposure, the Incas engineered a temperature differential of **up to 15°C (27°F)** between the top and bottom rings, creating distinct microclimates to cultivate and adapt crops from different ecological zones.
 
 ### 5. Maras Salt Mines: 3,000 Pink Terraced Salt Pans
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/07-valle-sagrado-urubamba-rio-paisaje.webp" alt="Panoramic Sacred Valley view and Urubamba river" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">The Sacred Valley of the Incas: fertile agricultural plains along the Vilcanota River framed by glacier-crowned Andean summits.</figcaption>
+</figure>
 Tucked into a steep canyon, the Maras Salt Pans create a stunning geometric visual landscape.
 - **Pre-Incan Engineering:** Over 3,000 terraced pools are continuously fed by **Qoripujio**, a warm subterranean hyper-saline spring. When the water evaporates under the intense Andean sun, pure pink mineral salt is harvested by hand by more than 350 local families.
 

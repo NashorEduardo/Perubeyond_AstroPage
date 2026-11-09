@@ -7,7 +7,7 @@ date: "28 de Octubre, 2026"
 updatedDate: "Octubre 2026"
 author: "Equipo Peru Beyond"
 category: "Guías de Viaje"
-heroImage: "/images/Machupicchu/IMG_7709.webp"
+heroImage: "/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/hero.webp"
 heroPosition: "center 45%"
 readingTime: "18 min de lectura"
 views: "5.4k"
@@ -39,6 +39,14 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "cusco-machu-picchu-3d-2n"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
+imgAlbum:
+  - "/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/01-transporte-cusco-valle-sagrado-ruta.webp"
+  - "/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/02-estacion-ollantaytambo-tren.webp"
+  - "/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/03-recorrido-tren-rio-urubamba.webp"
+  - "/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/04-aguas-calientes-pueblo-machu-picchu.webp"
+  - "/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/05-buses-consettur-subida-carretera.webp"
+  - "/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/06-puerta-ingreso-machu-picchu-control.webp"
+  - "/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/07-ruta-alternativa-hidroelectrica-caminata.webp"
 ---
 
 Llegar a la imponente **Llaqta Inka de Machu Picchu** desde la ciudad imperial del Cusco es una de las travesías más emocionantes del planeta. Sin embargo, para los viajeros que planifican su visita por primera vez, la logística puede resultar desconcertante: la ciudadela no cuenta con carreteras de acceso vehicular directo, los boletos de tren y de ingreso tienen horarios estrictos que deben sincronizarse con exactitud, y existen múltiples alternativas que van desde viajes en trenes de lujo panorámicos hasta caminatas legendarias de varios días por las altas cumbres andinas.
@@ -59,12 +67,23 @@ Antes de analizar cada alternativa en detalle, compara de un vistazo las 5 princ
 | **Salkantay Trek (5 Días / 4 Noches)** | **5 días a pie (65 km)** | **Aventurero** (Dormos / Eco-lodges y campamentos) | **Muy Exigente** (Paso a 4,630 m s. n. m.) | **$450 - $700 USD** | Trekkers apasionados que buscan glaciares y ceja de selva |
 | **Ruta Hidroeléctrica (Ruta Alternativa)** | **7.5 a 9.0 horas** | **Bajo** (6h en van por curvas + 10 km a pie) | **Moderado** (Caminata plana de 2.5 a 3h) | **$90 - $130 USD** | Mochileros con presupuesto muy ajustado y mucho tiempo |
 
-![Tren panorámico rumbo a Aguas Calientes por el cañón del Urubamba](/images/ValleSagrado/ollantaytambo.webp)
+
 *El viaje por el Valle Sagrado y el cañón del río Urubamba es uno de los trayectos ferroviarios más hermosos del mundo.*
 
 ---
 
 ## 2. ¿Por qué no existe carretera directa hasta Machu Picchu?
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/01-transporte-cusco-valle-sagrado-ruta.webp" alt="Ruta en vehículo turístico de Cusco a Ollantaytambo" loading="lazy" />
+    <figcaption>Paso 1: Traslado panorámico por carretera desde Cusco a la estación de Ollantaytambo (1h 45m).</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/02-estacion-ollantaytambo-tren.webp" alt="Embarque en estación de Ollantaytambo" loading="lazy" />
+    <figcaption>Paso 2: Andén de embarque en Ollantaytambo para abordar el tren hacia Aguas Calientes.</figcaption>
+  </figure>
+</div>
 
 Una de las preguntas más frecuentes entre los viajeros que llegan a Cusco es: *¿por qué no se puede tomar un autobús directo o un taxi desde la Plaza de Armas hasta las ruinas de Machu Picchu?*
 
@@ -79,6 +98,17 @@ La respuesta combina geografía extrema y conservación ambiental:
 ---
 
 ## 3. Opción 1: En Tren Paso a Paso (La Vía Más Cómoda y Rápida)
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/03-recorrido-tren-rio-urubamba.webp" alt="Vía férrea bordeando el cañón del río Urubamba" loading="lazy" />
+    <figcaption>Trayecto en tren: 1h 40m de vistas deslumbrantes bordeando el río Vilcanota.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/04-aguas-calientes-pueblo-machu-picchu.webp" alt="Llegada a Aguas Calientes Machu Picchu Pueblo" loading="lazy" />
+    <figcaption>Aguas Calientes: pueblo peatonal rodeado de montañas exuberantes de selva alta.</figcaption>
+  </figure>
+</div>
 
 El viaje en tren es la ruta predilecta de más del 85% de los viajeros de todo el mundo. Se compone de **tres etapas consecutivas** que deben encadenarse de manera cronológica:
 
@@ -120,7 +150,7 @@ En Perú operan dos empresas ferroviarias autorizadas: **PeruRail** e **Inca Rai
 | **Inca Rail** | **The First Class** | Vagón exclusivo de lujo con música en directo, coche bar y menú degustación | Menú gourmet andino de 3 tiempos, maridaje de vinos y clase de pisco sour | $170 - $240 USD |
 | **Inca Rail** | **The Private** | Vagón salón privado exclusivo para familias o grupos corporativos (hasta 8 personas)| Chef privado a bordo, menú personalizado, barra libre y traslados privados | A consultar / Chárter |
 
-![Vistas a través de los ventanales panorámicos del tren](/images/Ollantaytambo/DSC03970.webp)
+
 *Los techos de cristal de los trenes panorámicos permiten contemplar los imponentes picos nevados del Valle Sagrado.*
 
 ---
@@ -147,6 +177,17 @@ Al descender en la estación de Aguas Calientes, caminas 3 minutos cruzando el m
 
 ## 4. Opción 2: Llegar Caminando por Rutas de Trekking
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/05-buses-consettur-subida-carretera.webp" alt="Subida en bus Consettur por carretera Hiram Bingham" loading="lazy" />
+    <figcaption>Paso 3: Ascenso en bus Consettur de 25 minutos zigzagueando por la montaña.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/06-puerta-ingreso-machu-picchu-control.webp" alt="Puerta de control e ingreso a Machu Picchu" loading="lazy" />
+    <figcaption>Control oficial: acceso al santuario con boleto oficial y pasaporte original.</figcaption>
+  </figure>
+</div>
+
 Para quienes conciben el viaje como una peregrinación física y espiritual, existen rutas de senderismo legendarias que culminan en la maravilla inca:
 
 ### 1. El Camino Inca Clásico (4 Días / 3 Noches — 43 km)
@@ -166,6 +207,11 @@ Para quienes conciben el viaje como una peregrinación física y espiritual, exi
 ---
 
 ## 5. Opción 3: La Ruta Alternativa por Santa María e Hidroeléctrica (Ruta Mochilera)
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/07-ruta-alternativa-hidroelectrica-caminata.webp" alt="Ruta alternativa mochilera caminando por Hidroeléctrica" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Ruta Alternativa por Hidroeléctrica: caminata de 10 km (2.5 a 3 horas) siguiendo las vías del tren rodeadas de abundante vegetación selvática.</figcaption>
+</figure>
 
 Esta alternativa nació como una opción económica para mochileros y aventureros que disponen de varios días libres y desean evitar el costo de los billetes de tren convencionales.
 

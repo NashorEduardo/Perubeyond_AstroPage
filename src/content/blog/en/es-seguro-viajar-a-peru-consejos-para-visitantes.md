@@ -7,7 +7,7 @@ date: "November 8, 2026"
 updatedDate: "November 2026"
 author: "Peru Beyond Team"
 category: "Travel Guides"
-heroImage: "/images/Cuzco/cusco.webp"
+heroImage: "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/hero.webp"
 heroPosition: "center 40%"
 readingTime: "18 min read"
 views: "6.2k"
@@ -39,6 +39,14 @@ relatedTours:
   - "tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
   - "machu-picchu-full-day-tour"
+imgAlbum:
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/01-malecon-miraflores-lima-seguridad.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/02-barranco-puente-suspiros-turismo.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/03-plaza-armas-cusco-patrullaje-turistico.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/04-valle-sagrado-pueblo-tranquilo-ollantaytambo.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/05-asistencia-turistica-peru-viajeros.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/06-transporte-seguro-aeropuerto-lima.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/07-mercado-san-pedro-cusco-seguridad.webp"
 ---
 
 Planning a dream vacation to the land of the Incas is one of the most rewarding adventures in the world. Yet, before purchasing transatlantic flights or reserving hotels, a natural question often arises: **is it safe to travel to Peru right now?**
@@ -79,6 +87,17 @@ Tourism is one of the pillars of Peru's economy, supporting over one million liv
 
 ## 3. City-by-City Safety Guide: Safe Zones & Smart Precautions
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/01-malecon-miraflores-lima-seguridad.webp" alt="Safe Miraflores boardwalk in Lima" loading="lazy" />
+    <figcaption>Miraflores boardwalk: coastal parks and 24/7 municipal patrols.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/02-barranco-puente-suspiros-turismo.webp" alt="Bohemian tourist district of Barranco Lima" loading="lazy" />
+    <figcaption>Bohemian Barranco: vibrant nightlife, scenic walkways and safe pedestrian streets.</figcaption>
+  </figure>
+</div>
+
 ### 3.1. Lima: The World Gastronomy Capital
 Lima is a vibrant coastal metropolis of nearly 10 million residents. As in major cities worldwide (such as London, New York, or Madrid), safety conditions vary significantly by neighborhood.
 
@@ -99,6 +118,17 @@ The Cusco region is celebrated as one of the safest, most hospitable regions in 
 
 ## 4. Transportation Safety: Getting Around Without Hassle
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/03-plaza-armas-cusco-patrullaje-turistico.webp" alt="Cusco Plaza de Armas patrolled by tourist police" loading="lazy" />
+    <figcaption>Historic Cusco: continuous tourist police protection around the clock.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/04-valle-sagrado-pueblo-tranquilo-ollantaytambo.webp" alt="Ollantaytambo village in the Sacred Valley" loading="lazy" />
+    <figcaption>Ollantaytambo: peaceful Andean town and secure gateway to the Machu Picchu train.</figcaption>
+  </figure>
+</div>
+
 Transit is the area where unprepared travelers encounter the most frustration. Following these three rules ensures a hassle-free trip:
 
 ### 4.1. Taxis at Airports and in Cities
@@ -115,6 +145,17 @@ Rail services to Machu Picchu are operated by two internationally accredited com
 ---
 
 ## 5. Health, Food Safety, and Altitude Sickness Prevention
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/05-asistencia-turistica-peru-viajeros.webp" alt="Official tourism assistance desk in Peru" loading="lazy" />
+    <figcaption>IPERÚ Assistance Network: 24/7 bilingual traveler support across the country.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/06-transporte-seguro-aeropuerto-lima.webp" alt="Official airport taxi transfer in Lima" loading="lazy" />
+    <figcaption>Authorized airport transfers and private tourist vehicles for seamless arrivals.</figcaption>
+  </figure>
+</div>
 
 The vast majority of travel disruptions in Peru stem from digestive adjustments or lack of altitude preparation, rather than street crime.
 
@@ -137,6 +178,11 @@ Carrying comprehensive international travel medical insurance is essential. Peru
 ---
 
 ## 6. Currency, ATMs, Cards, and Digital Connectivity
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/07-mercado-san-pedro-cusco-seguridad.webp" alt="San Pedro Central Market in Cusco" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">San Pedro Central Market: a vibrant Andean market experience to explore peacefully with a local certified guide.</figcaption>
+</figure>
 
 ### 6.1. Managing Cash and Currency Exchange
 - **Local Currency:** The official currency is the **Peruvian Sol (PEN)**. While hotels and train operators accept US Dollars (USD), daily purchases (taxis, markets, crafts, tips) require local soles.

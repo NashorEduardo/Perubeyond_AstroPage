@@ -7,7 +7,7 @@ date: "8 de Novembro, 2026"
 updatedDate: "Novembro 2026"
 author: "Peru Beyond Team"
 category: "Destinos Imperdíveis"
-heroImage: "/images/ValleSagrado/moray-3.webp"
+heroImage: "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/hero.webp"
 heroPosition: "center 45%"
 readingTime: "24 min de leitura"
 views: "7.9k"
@@ -40,6 +40,14 @@ relatedTours:
   - "valle-sagrado-full-day-almuerzo-buffet"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
   - "machu-picchu-full-day-tour"
+imgAlbum:
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/01-pisac-terrazas-incas-valle.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/02-mercado-artesanal-pisac-textiles.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/03-fortaleza-ollantaytambo-andenes.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/04-salineras-de-maras-pozas-sal.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/05-moray-anfiteatro-agricola.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/06-chinchero-tejedoras-tradicionales-alpaca.webp"
+  - "/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/07-valle-sagrado-urubamba-rio-paisaje.webp"
 ---
 
 O **Vale Sagrado dos Incas** (*Valle Sagrado de los Incas*) é uma das regiões mais espetaculares, férteis e historicamente significativas de todo o continente sul-americano. Estendendo-se ao longo do vale serpenteante formado pelo rio Vilcanota (também reverenciado como rio Urubamba ou *Willkamayu* em quéchua), esta depressão geográfica privilegiada dos Andes peruanos funcionou como o verdadeiro coração agrícola, espiritual, científico e logístico do Império Inca (Tahuantinsuyo).
@@ -71,6 +79,17 @@ Para ajudá-lo a visualizar rapidamente as principais atrações do Vale Sagrado
 
 ## 2. Por que o Vale Sagrado era Tão Crucial para o Império Inca?
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/01-pisac-terrazas-incas-valle.webp" alt="Terraços monumentais de Pisac" loading="lazy" />
+    <figcaption>Pisac Arqueológico: terraços imponentes suspensos sobre os cânions do vale.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/02-mercado-artesanal-pisac-textiles.webp" alt="Mercado de artesanato de Pisac" loading="lazy" />
+    <figcaption>Mercado de Pisac: tecidos finos de alpaca, pratas e cerâmicas tradicionais.</figcaption>
+  </figure>
+</div>
+
 Para compreender a magnitude dos monumentos que você encontrará no vale, é fundamental entender a visão cosmológica e prática que os Incas possuíam sobre este território:
 
 ### 2.1. O Espelho Terrestre da Via Láctea (*Mayu*)
@@ -85,6 +104,17 @@ O Vale Sagrado servia como barreira de segurança militar fundamental entre a ca
 ---
 
 ## 3. Os 6 Lugares Imperdíveis do Vale Sagrado: Roteiro Detalhado
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/03-fortaleza-ollantaytambo-andenes.webp" alt="Fortaleza e Templo do Sol de Ollantaytambo" loading="lazy" />
+    <figcaption>Ollantaytambo: a única cidade inca habitada continuamente desde a antiguidade.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/04-salineras-de-maras-pozas-sal.webp" alt="Salinas de Maras no Vale Sagrado" loading="lazy" />
+    <figcaption>Salinas de Maras: mais de 3.000 piscinas de sal rosa milenar no desfiladeiro.</figcaption>
+  </figure>
+</div>
 
 A seguir, apresentamos a análise aprofundada de cada um dos seis destinos essenciais que você não pode deixar de visitar:
 
@@ -135,6 +165,17 @@ Urubamba repousa no coração geográfico mais plano e acolhedor do vale, a 2.87
 
 ## 4. Como Estruturar seu Roteiro: 3 Opções Práticas
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/05-moray-anfiteatro-agricola.webp" alt="Anfiteatros concêntricos de Moray" loading="lazy" />
+    <figcaption>Moray: círculos concêntricos usados como laboratório agrícola de aclimatação.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/06-chinchero-tejedoras-tradicionales-alpaca.webp" alt="Mulheres tecelãs tradicionais de Chinchero" loading="lazy" />
+    <figcaption>Chinchero: mestras tecelãs demonstrando técnicas seculares de fiação e tintura natural.</figcaption>
+  </figure>
+</div>
+
 Dependendo do tempo disponível no seu planejamento de viagem pelo Peru, selecionamos as três melhores formas de vivenciar o Vale Sagrado com conforto e inteligência operacional:
 
 ### Opção A: O Clássico Super Vale Sagrado (Tour VIP de 1 Dia)
@@ -154,6 +195,11 @@ Dependendo do tempo disponível no seu planejamento de viagem pelo Peru, selecio
 ---
 
 ## 5. Logística, Ingressos e Custos: Guia Prático de Bolso
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/07-valle-sagrado-urubamba-rio-paisaje.webp" alt="Paisagem do Vale Sagrado e rio Urubamba" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Vale Sagrado dos Incas: vales férteis banhados pelo rio Vilcanota e abraçados pelas montanhas nevadas dos Andes.</figcaption>
+</figure>
 
 Para que nenhum detalhe burocrático surpreenda seu planejamento financeiro, veja como funcionam os ingressos e transportes:
 

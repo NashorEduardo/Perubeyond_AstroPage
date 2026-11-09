@@ -7,7 +7,7 @@ date: "8 de Noviembre, 2026"
 updatedDate: "Noviembre 2026"
 author: "Peru Beyond Team"
 category: "Guías de Viaje"
-heroImage: "/images/Machupicchu/FT 8.webp"
+heroImage: "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/hero.webp"
 heroPosition: "center 45%"
 readingTime: "20 min de lectura"
 views: "7.1k"
@@ -39,6 +39,14 @@ relatedTours:
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
   - "tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias"
   - "tour-lima-huacachina-machu-picchu-montana-arcoiris-10-dias"
+imgAlbum:
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/01-lima-centro-historico-plaza-mayor.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/02-islas-ballestas-paracas-fauna.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/03-oasis-huacachina-dunas-desierto.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/04-arequipa-plaza-armas-volcan-misti.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/05-cusco-calle-piedra-12-angulos.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/06-valle-sagrado-terrazas-pisac.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/07-lago-titicaca-islas-flotantes-uros.webp"
 ---
 
 Pocos países en el planeta reúnen en un solo territorio una de las Nuevas 7 Maravillas del Mundo Moderno, la capital gastronómica indiscutible de América, desiertos con dunas monumentales frente al océano Pacífico y cordilleras nevadas que superan los 6,000 metros de altitud. Por ello, **viajar a Perú por primera vez** es una de las aventuras más deseadas por cualquier amante de los viajes.
@@ -87,6 +95,17 @@ Una de las particularidades de viajar a Perú es que las reservas no pueden deja
 
 ## 3. Documentos y Requisitos Oficiales de Ingreso a Perú
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/01-lima-centro-historico-plaza-mayor.webp" alt="Plaza Mayor y Centro Histórico de Lima" loading="lazy" />
+    <figcaption>Lima Colonial: capital gastronómica y cuna del patrimonio virreinal.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/02-islas-ballestas-paracas-fauna.webp" alt="Islas Ballestas y Reserva Nacional de Paracas" loading="lazy" />
+    <figcaption>Islas Ballestas en Paracas: pingüinos de Humboldt y leones marinos en su hábitat.</figcaption>
+  </figure>
+</div>
+
 Para ingresar a territorio peruano no se exigen trámites engorrosos ni pagos de tasas de reciprocidad a la llegada:
 
 1. **Pasaporte Internacional:** Debe contar con una vigencia mínima residual de 6 meses contados desde la fecha de ingreso al país y hojas libres para sellos migratorios.
@@ -97,6 +116,17 @@ Para ingresar a territorio peruano no se exigen trámites engorrosos ni pagos de
 ---
 
 ## 4. El Orden Perfecto de Ciudades: La Estrategia Definitiva contra el Soroche
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/03-oasis-huacachina-dunas-desierto.webp" alt="Oasis de la Huacachina en Ica" loading="lazy" />
+    <figcaption>Oasis de Huacachina: laguna natural protegida por dunas doradas del desierto.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/04-arequipa-plaza-armas-volcan-misti.webp" alt="Plaza de Armas de Arequipa y volcán Misti" loading="lazy" />
+    <figcaption>Arequipa Ciudad Blanca: arquitectura en sillar volcánico custodiada por el Misti.</figcaption>
+  </figure>
+</div>
 
 El error más grave y frecuente de quienes viajan a Perú por primera vez es descuidar la altitud. Aterrizar en la ciudad del Cusco (**3,399 m s. n. m. / 11,152 ft**) y salir inmediatamente a caminar por cuestas empinadas suele provocar dolor de cabeza, náuseas y fatiga severa (*soroche*).
 
@@ -121,6 +151,17 @@ Paso 5: Cumbres de Altura    ──► Laguna Humantay (4,200 m) o Vinicunca (5,
 
 ## 5. Presupuesto Real, Moneda y Medios de Pago
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/05-cusco-calle-piedra-12-angulos.webp" alt="Calle Hatun Rumiyoc y la Piedra de los 12 Ángulos" loading="lazy" />
+    <figcaption>Cusco Imperial: ensamble perfecto entre mampostería inca y casonas coloniales.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/06-valle-sagrado-terrazas-pisac.webp" alt="Andenes de Pisac en el Valle Sagrado" loading="lazy" />
+    <figcaption>Valle Sagrado de los Incas: andenes agrícolas ceremoniales suspendidos sobre el cañón.</figcaption>
+  </figure>
+</div>
+
 Perú ofrece una extraordinaria relación calidad-precio. A continuación, desglosamos los costos referenciales para planificar tu presupuesto en 2026:
 
 ### 5.1. Costos Estimados por Día y Categoría
@@ -143,6 +184,11 @@ Perú ofrece una extraordinaria relación calidad-precio. A continuación, desgl
 ---
 
 ## 6. Aspectos Prácticos: Electricidad, Clima y Equipaje
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/07-lago-titicaca-islas-flotantes-uros.webp" alt="Islas flotantes de los Uros en el Lago Titicaca" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Islas Flotantes de los Uros en Puno: una comunidad milenaria viviendo en balsas de totora sobre el lago navegable más alto del mundo.</figcaption>
+</figure>
 
 ### 6.1. Voltaje y Enchufes
 - En Perú el voltaje estándar es de **220 voltios a 60 Hz**.

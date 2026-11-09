@@ -7,7 +7,7 @@ date: "8 de Novembro, 2026"
 updatedDate: "Novembro 2026"
 author: "Peru Beyond Team"
 category: "Destinos Imperdíveis"
-heroImage: "/images/Montaña_de_7_colores/DSC02974.webp"
+heroImage: "/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/hero.webp"
 heroPosition: "center 45%"
 readingTime: "24 min de leitura"
 views: "8.9k"
@@ -39,6 +39,14 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "trekking-montana-7-colores"
   - "tour-lima-huacachina-machu-picchu-montana-arcoiris-10-dias"
+imgAlbum:
+  - "/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/01-montana-7-colores-vinicunca.webp"
+  - "/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/02-laguna-humantay-nevado-salkantay.webp"
+  - "/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/03-valle-sagrado-moray-circulos-agricolas.webp"
+  - "/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/04-oasis-huacachina-sunset.webp"
+  - "/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/05-canon-colca-vuelo-condor.webp"
+  - "/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/06-lago-titicaca-taquile-uros.webp"
+  - "/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/07-selva-amazonica-puerto-maldonado.webp"
 ---
 
 O Peru é um dos países mais impressionantes e diversos de todo o planeta. Pouquíssimos lugares no mundo reúnem em um só território tantas paisagens antagônicas: do litoral desértico banhado pelo Oceano Pacífico às geleiras andinas que ultrapassam os 6.000 metros de altitude, culminando na densa floresta amazônica.
@@ -86,21 +94,59 @@ Confira a visão geral dos 15 principais atrativos do país por região, altitud
 - **Passeio sugerido:** [City Tour Cusco + Qoricancha e 4 Ruínas](/pt/tours/cusco/city-tour-cusco-qoricancha-4-ruinas).
 
 ### 3. Vale Sagrado dos Incas: Pisac e Ollantaytambo
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/01-montana-7-colores-vinicunca.webp" alt="Montanha de 7 Cores Vinicunca" loading="lazy" />
+    <figcaption>Montanha Vinicunca: faixas minerais coloridas a mais de 5.000 metros de altitude.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/02-laguna-humantay-nevado-salkantay.webp" alt="Lagoa Humantay turquesa sob a geleira Salkantay" loading="lazy" />
+    <figcaption>Lagoa Humantay: águas cor turquesa límpidas aos pés da geleira sagrada.</figcaption>
+  </figure>
+</div>
 - **Altitude:** 2.792 m a 2.972 m.
 - **Por que é imperdível:** Banhado pelo rio sagrado Urubamba, abriga a fortaleza de Pisac com seus terraços agrícolas nas montanhas e Ollantaytambo, a última "Cidade Inca Viva", com ruelas e canais de pedra preservados há seis séculos.
 - **Passeio sugerido:** [Tour Vale Sagrado Full Day com Almoço Buffet](/pt/tours/cusco/valle-sagrado-full-day-almuerzo-buffet).
 
 ### 4. Montanha de 7 Cores (Vinicunca)
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/03-valle-sagrado-moray-circulos-agricolas.webp" alt="Terraços circulares de Moray" loading="lazy" />
+    <figcaption>Moray: anfiteatros agrícolas circulares que criavam múltiplos microclimas.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/04-oasis-huacachina-sunset.webp" alt="Pôr do sol no oásis de Huacachina" loading="lazy" />
+    <figcaption>Huacachina ao entardecer: o único oásis natural no deserto da América do Sul.</figcaption>
+  </figure>
+</div>
 - **Altitude:** 5.200 metros.
 - **Por que é imperdível:** Fenômeno geológico mundial onde minerais expostos criam faixas em tons de vermelho, dourado, verde e lavanda aos pés do nevado Ausangate.
 - **Passeio sugerido:** [Trekking Montanha de 7 Cores](/pt/tours/cusco/trekking-montana-7-colores).
 
 ### 5. Laguna Humantay
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/05-canon-colca-vuelo-condor.webp" alt="Voo do condor no Cânion do Colca" loading="lazy" />
+    <figcaption>Cânion do Colca: o dobro da profundidade do Grand Canyon e terra do condor andino.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/06-lago-titicaca-taquile-uros.webp" alt="Ilha Taquile no Lago Titicaca" loading="lazy" />
+    <figcaption>Lago Titicaca e Ilha Taquile: arte têxtil ancestral tombada pela UNESCO.</figcaption>
+  </figure>
+</div>
 - **Altitude:** 4.200 metros.
 - **Por que é imperdível:** Lagoa de águas azul-turquesa cristalinas alimentada pelo degelo da montanha sagrada Humantay (5.473 m), parte da rota do Salkantay.
 - **Passeio sugerido:** [Trekking Laguna Humantay Full Day](/pt/tours/cusco/trekking-laguna-humantay-full-day).
 
 ### 6. Salinas de Maras e Terraços de Moray
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/07-selva-amazonica-puerto-maldonado.webp" alt="Reserva Nacional Tambopata na Amazônia peruana" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Amazônia Peruana (Tambopata): navegação fluvial em floresta primária com fauna e flora extraordinárias.</figcaption>
+</figure>
 - **Altitude:** 3.380 m a 3.500 m.
 - **Por que é imperdível:** Moray servia como laboratório agrícola inca com terraços circulares gerando até 20 microclimas térmicos. Perto dali, Maras reúne mais de 3.000 piscinas de sal rosa exploradas desde antes dos Incas.
 - **Passeio sugerido:** [Tour Maras, Moray e Salinas](/pt/tours/cusco/maras-moray-salineras-tour).

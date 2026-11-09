@@ -7,7 +7,7 @@ date: "8 de Novembro, 2026"
 updatedDate: "Novembro 2026"
 author: "Peru Beyond Team"
 category: "Dicas de Viagem"
-heroImage: "/images/Machupicchu/FT 7.webp"
+heroImage: "/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/hero.webp"
 heroPosition: "center 40%"
 readingTime: "25 min de leitura"
 views: "8.3k"
@@ -40,6 +40,14 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "trekking-palcoyo"
   - "tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias"
+imgAlbum:
+  - "/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/01-adultos-mayores-valle-sagrado-descanso.webp"
+  - "/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/02-tren-confortable-machu-picchu-asientos.webp"
+  - "/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/03-cusco-centro-historico-paseo-tranquilo.webp"
+  - "/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/04-machu-picchu-circuitos-accesibles-andenes.webp"
+  - "/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/05-chinchero-demostracion-textil-asientos.webp"
+  - "/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/06-bus-consettur-aguas-calientes.webp"
+  - "/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/07-gastronomia-peruana-restaurante-cusco.webp"
 ---
 
 Viajar para o Peru na melhor idade é uma das experiências mais inspiradoras, ricas e inesquecíveis que se pode vivenciar. Contemplar a mística cidadela de Machu Picchu despontando entre a neblina dos Andes, admirar a harmonia agrícola dos terraços do Vale Sagrado, navegar pelas águas calmas da baía de Paracas com seus leões-marinhos ou saborear a consagrada gastronomia mundial de Lima são vivências que não pertencem exclusivamente a jovens mochileiros ou aventureiros de alta montanha.
@@ -69,6 +77,17 @@ Para permitir uma avaliação rápida do nível de conforto, altitude e demanda 
 
 ## 2. Protocolo de Aclimatação à Altitude: A Estratégia do Vale em Primeiro Lugar
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/01-adultos-mayores-valle-sagrado-descanso.webp" alt="Jardins relaxantes em Urubamba no Vale Sagrado" loading="lazy" />
+    <figcaption>Vale Sagrado (2.870 m): clima ameno e oxigenação ideal para aclimatação serena.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/02-tren-confortable-machu-picchu-asientos.webp" alt="Assentos confortáveis no trem para Machu Picchu" loading="lazy" />
+    <figcaption>Trens panorâmicos confortáveis: assentos espaçosos e atendimento atencioso a bordo.</figcaption>
+  </figure>
+</div>
+
 O mal de altitude agudo, conhecido no Peru como *soroche*, pode acometer qualquer viajante. Contudo, em pessoas de idade mais madura, a prevenção é indispensável para evitar picos de pressão arterial, palpitações cardíacas, insônia ou fadiga acentuada que possam prejudicar o início do passeio.
 
 ### 2.1. O Erro Clássico dos Roteiros Tradicionais
@@ -92,6 +111,17 @@ A recomendação mandatória da Peru Beyond para passageiros da terceira idade �
 ---
 
 ## 3. Machu Picchu para a Terceira Idade: Qual Circuito Escolher?
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/03-cusco-centro-historico-paseo-tranquilo.webp" alt="Caminhada suave no centro histórico de Cusco" loading="lazy" />
+    <figcaption>Cusco em ritmo tranquilo: trajetos planos pelas praças históricas sem escadarias.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/04-machu-picchu-circuitos-accesibles-andenes.webp" alt="Mirantes acessíveis e planos em Machu Picchu" loading="lazy" />
+    <figcaption>Machu Picchu acessível: terraços planos e pontos de descanso para contemplar as ruínas sem esforço.</figcaption>
+  </figure>
+</div>
 
 Desde junho de 2024, o Ministério da Cultura do Peru implantou um novo sistema de visitas à cidadela inca, dividindo o santuário em três circuitos oficiais bem delimitados (Circuito 1 Panorâmico, Circuito 2 Clássico e Circuito 3 da Realeza). Compreender as características de cada um é vital para garantir uma visita sem riscos nem cansaço excessivo.
 
@@ -117,6 +147,17 @@ O Circuito 2 é o percurso mais longo de todos (cerca de 3 horas de caminhada in
 
 ## 4. Legislação Oficial sobre Bastões de Caminhada em Sítios Incas
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/05-chinchero-demostracion-textil-asientos.webp" alt="Demonstração têxtil sentados em Chinchero" loading="lazy" />
+    <figcaption>Imersão cultural confortável: oficina têxtil sentados com chá de muña e coca.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/06-bus-consettur-aguas-calientes.webp" alt="Ônibus turístico Consettur em Machu Picchu" loading="lazy" />
+    <figcaption>Ônibus Consettur: transporte direto e seguro até a entrada da cidadela.</figcaption>
+  </figure>
+</div>
+
 Uma das dúvidas mais comuns entre as famílias que viajam com idosos é o uso de bengalas e bastões de trekking. As normas do Parque Nacional de Machu Picchu são muito específicas:
 
 1. **Permissão Restrita:** O uso de bastões de trekking é proibido para jovens saudáveis, mas **é expressamente autorizado para pessoas com mais de 60 anos e viajantes com mobilidade reduzida ou necessidades médicas**.
@@ -126,6 +167,11 @@ Uma das dúvidas mais comuns entre as famílias que viajam com idosos é o uso d
 ---
 
 ## 5. Trens Panorâmicos e Ônibus Consettur: Conforto e Prioridade Legal
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/07-gastronomia-peruana-restaurante-cusco.webp" alt="Gastronomia peruana saudável em restaurante colonial em Cusco" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Alimentação saudável e nutritiva: sopas andinas e pratos balanceados servidos em pátios coloniais históricos.</figcaption>
+</figure>
 
 Chegar a Machu Picchu deve ser uma experiência relaxante e memorável, nunca um motivo de tensão física.
 

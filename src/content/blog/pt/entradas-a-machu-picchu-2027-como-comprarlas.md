@@ -7,7 +7,7 @@ date: "28 de Outubro, 2026"
 updatedDate: "Outubro 2026"
 author: "Equipe Peru Beyond"
 category: "Destinos Imperdíveis"
-heroImage: "/images/Machupicchu/IMG_7711.webp"
+heroImage: "/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/hero.webp"
 heroPosition: "center 45%"
 readingTime: "19 min de leitura"
 views: "5.8k"
@@ -39,6 +39,14 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "cusco-machu-picchu-3d-2n"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
+imgAlbum:
+  - "/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/01-circuito-1-panoramica-casa-guardian.webp"
+  - "/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/02-circuito-2-clasico-templo-sol.webp"
+  - "/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/03-circuito-3-realeza-roca-sagrada.webp"
+  - "/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/04-huayna-picchu-sendero-escaleras-muerte.webp"
+  - "/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/05-montana-machu-picchu-vista-alta.webp"
+  - "/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/06-control-acceso-puerta-boletos.webp"
+  - "/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/07-guia-oficial-turismo-machu-picchu.webp"
 ---
 
 Planejar uma viagem para Machu Picchu em 2027 exige entender com clareza o sistema de bilheteria do governo peruano. Com o objetivo de preservar os sítios incas contra o desgaste do sobreturismo e garantir a conservação do patrimônio mundial, o **Ministério da Cultura do Peru** consolidou um regulamento rigoroso que divide a visitação em **3 Grandes Circuitos Oficiais e 10 sub-rotas**, cada uma com limite diário de capacidade e horários estritos de entrada.
@@ -64,7 +72,7 @@ Antes de comprar o seu tíquete, consulte esta tabela comparativa completa com a
 | **Circuito 3 (Realeza)** | **3-C: Grande Caverna (Templo Lua)**| Templo cerimonial talhado em caverna atrás da montanha | Não (Trilha profunda de aventura) | 4h00 a 4h30 | Exigente (Apenas alta temporada) | 2 a 3 meses antes |
 | **Circuito 3 (Realeza)** | **3-D: Huchuy Picchu** | Colina baixa ao lado do Huayna Picchu e templos reais | Não (Visão baixa das ruínas) | 2h30 | Moderada (Apenas alta temporada) | 1 a 2 meses antes |
 
-![Foto clássica de cartão-postal tirada da Casa do Guardião](/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/circuito-clasico-foto.webp)
+
 *A tradicional foto de cartão-postal com Huayna Picchu ao fundo só é permitida pelos Circuitos 1B, 2A e 2B.*
 
 ---
@@ -88,6 +96,17 @@ O santuário inca possui um teto rigoroso de visitantes por dia estabelecido pel
 ---
 
 ## 3. Como Comprar os Ingressos para Machu Picchu 2027 Passo a Passo
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/01-circuito-1-panoramica-casa-guardian.webp" alt="Circuito 1 Panorâmico Casa do Guardião" loading="lazy" />
+    <figcaption>Circuito 1 (Panorâmico): a foto clássica de cartão-postal dos terraços superiores.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/02-circuito-2-clasico-templo-sol.webp" alt="Circuito 2 Clássico Templo do Sol" loading="lazy" />
+    <figcaption>Circuito 2 (Clássico): o roteiro mais completo pelos templos e praças incas.</figcaption>
+  </figure>
+</div>
 
 Existem duas formas de garantir suas entradas:
 
@@ -113,6 +132,17 @@ Com a **Peru Beyond**, cuidamos de tudo:
 ---
 
 ## 4. Tabela de Preços Oficiais e Descontos para 2027
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/03-circuito-3-realeza-roca-sagrada.webp" alt="Circuito 3 Realeza e Rocha Sagrada" loading="lazy" />
+    <figcaption>Circuito 3 (Realeza): setor inferior dos palácios reais e Rocha Sagrada.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/04-huayna-picchu-sendero-escaleras-muerte.webp" alt="Subida a Huayna Picchu escadarias incas" loading="lazy" />
+    <figcaption>Huayna Picchu: subida vertical emocionante para quem busca aventura e vistas aéreas.</figcaption>
+  </figure>
+</div>
 
 Os valores dos ingressos são tabelados pelo Ministério da Cultura do Peru:
 
@@ -141,6 +171,17 @@ Os valores dos ingressos são tabelados pelo Ministério da Cultura do Peru:
 
 ## 5. Regras de Horários de Entrada e Tolerância Oficial
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/05-montana-machu-picchu-vista-alta.webp" alt="Cume da Montanha Machu Picchu" loading="lazy" />
+    <figcaption>Montanha Machu Picchu: cume mais alto (3.061 m) com vista panorâmica de 360 graus.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/06-control-acceso-puerta-boletos.webp" alt="Catracas de controle eletrônico de acesso" loading="lazy" />
+    <figcaption>Controle de entrada: leitura de código QR e validação do horário agendado.</figcaption>
+  </figure>
+</div>
+
 Para manter a ordem e evitar aglomerações nas passagens de pedra, os horários de entrada são controlados:
 
 - **Turnos de Entrada:** Intervalos de 60 minutos das 6h00 às 15h00 (o parque encerra as atividades às 17h30).
@@ -154,6 +195,11 @@ Para manter a ordem e evitar aglomerações nas passagens de pedra, os horários
 ---
 
 ## 6. O que Fazer se os Ingressos Online Estiverem Esgotados para sua Data em 2027?
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/07-guia-oficial-turismo-machu-picchu.webp" alt="Guia oficial credenciado em Machu Picchu" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Acompanhamento profissional: visitar com guia credenciado enriquece a experiência revelando a sabedoria e os mistérios da engenharia inca.</figcaption>
+</figure>
 
 Se as vagas online para a sua data estiverem esgotadas, ainda resta uma alternativa de emergência: a **venda presencial de até 1.000 ingressos diários** no Centro Cultural de Aguas Calientes (Machu Picchu Pueblo).
 

@@ -7,7 +7,7 @@ date: "October 28, 2026"
 updatedDate: "October 2026"
 author: "Peru Beyond Team"
 category: "Travel Guides"
-heroImage: "/images/Machupicchu/FT 2.webp"
+heroImage: "/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/hero.webp"
 heroPosition: "center 45%"
 readingTime: "17 min read"
 views: "4.9k"
@@ -39,6 +39,14 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "cusco-machu-picchu-3d-2n"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
+imgAlbum:
+  - "/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/01-mochila-trekking-equipaje-mano.webp"
+  - "/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/02-calzado-trekking-botas-senderismo.webp"
+  - "/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/03-ropa-impermeable-chamarra-lluvia.webp"
+  - "/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/04-proteccion-solar-sombrero-lentes.webp"
+  - "/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/05-repelente-bloqueador-botella-agua.webp"
+  - "/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/06-bastones-trekking-puntas-goma.webp"
+  - "/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/07-pasaporte-boletos-oficiales-documentos.webp"
 ---
 
 Packing for a bucket-list expedition to the **Inca Sanctuary of Machu Picchu** requires careful planning. Located within an Andean cloud forest microclimate at 2,430 meters (7,972 ft), weather can shift dramatically from cool morning mountain mist to baking equatorial sunshine in less than an hour. Furthermore, strict national park regulations, sensitive archaeological preservation rules, and railway luggage weight caps mean you must pack intelligently: bringing every true necessity while avoiding prohibited or overweight items.
@@ -58,12 +66,23 @@ Before packing your daypack, review this comparative overview to match your ward
 | **1-Day Full Day Train Tour** | Comfortable multi-layer outfit, convertible zip-off pants | Well-cushioned walking or running shoes with traction | Sun cap, insect repellent against local Plumilla gnats | High-capacity power bank, cash in Peruvian Soles | Compact 15 to 20 L daypack (max 3 kg / 6.6 lbs) |
 | **Mountain Climbs (Huayna Picchu / Machu Picchu Peak)**| Ultra-breathable technical tee + wind-resistant lightweight shell | Sturdy trekking boots with Vibram sticky rubber soles | Sweat-absorbing bandana, compact micro-fiber towel | Electrolyte hydration tabs, high-calorie nuts & dried fruit | Ergonomic ultralight daypack (max 3 kg / 6.6 lbs) |
 
-![Hiker taking in views of Machu Picchu citadel](/images/Machupicchu/IMG_7726.webp)
+
 *Wearing the proper footwear and moisture-wicking layers makes the difference between an exhausting trek and an extraordinary experience.*
 
 ---
 
 ## 2. Mandatory Travel Documents (Do Not Forget!)
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/01-mochila-trekking-equipaje-mano.webp" alt="20-30L daypack allowed in Machu Picchu" loading="lazy" />
+    <figcaption>Daypack (max 20-30L): regulation size permitted on the train and inside the sanctuary.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/02-calzado-trekking-botas-senderismo.webp" alt="Sturdy waterproof hiking boots" loading="lazy" />
+    <figcaption>Sturdy trail footwear with ankle support and grip for ancient stone staircases.</figcaption>
+  </figure>
+</div>
 
 At the primary security checkpoint gate of Machu Picchu, identity verification is strict. You will be denied entry without the following physical documents:
 
@@ -87,6 +106,17 @@ At the primary security checkpoint gate of Machu Picchu, identity verification i
 ---
 
 ## 3. How to Dress for Machu Picchu: The 3-Layer System
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/03-ropa-impermeable-chamarra-lluvia.webp" alt="Waterproof rain jacket windbreaker" loading="lazy" />
+    <figcaption>Waterproof jacket & windbreaker: essential for shifting cloud forest weather.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/04-proteccion-solar-sombrero-lentes.webp" alt="Sun hat and UV protection sunglasses" loading="lazy" />
+    <figcaption>Sun protection: wide-brim hat and polarized UV sunglasses for high altitude rays.</figcaption>
+  </figure>
+</div>
 
 Machu Picchu is situated in a high-elevation subtropical cloud forest (*ceja de selva*) at 2,430 meters (7,972 ft). Mornings can be damp, windy, and shrouded in cool fog, while afternoons can bring intense, unfiltered equatorial sun.
 
@@ -114,6 +144,17 @@ Technical wicking t-shirt        Lightweight fleece or sweater        Windproof 
 
 ## 4. Ideal Footwear and Pants
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/05-repelente-bloqueador-botella-agua.webp" alt="Reusable water bottle and insect repellent" loading="lazy" />
+    <figcaption>Hydration & defense: reusable metal canteen and eco insect repellent.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/06-bastones-trekking-puntas-goma.webp" alt="Trekking poles with rubber tips" loading="lazy" />
+    <figcaption>Rubber-tipped trekking poles: mandatory to prevent damage to historic stone paths.</figcaption>
+  </figure>
+</div>
+
 During an average visit inside Machu Picchu, you will navigate between 600 and over 1,500 historic, uneven granite stone steps constructed more than five centuries ago.
 
 ### The Right Shoes:
@@ -130,6 +171,11 @@ During an average visit inside Machu Picchu, you will navigate between 600 and o
 ---
 
 ## 5. Daypack Regulations & Railway Baggage Limits
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/07-pasaporte-boletos-oficiales-documentos.webp" alt="Original passport and official Machu Picchu entrance ticket" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Essential Documents: valid physical original passport and printed official entrance voucher required at the sanctuary turnstiles.</figcaption>
+</figure>
 
 Both the archaeological sanctuary and the passenger trains enforce strict luggage dimensions:
 

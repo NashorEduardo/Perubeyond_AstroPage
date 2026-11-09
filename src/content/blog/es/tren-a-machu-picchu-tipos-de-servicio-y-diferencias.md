@@ -7,7 +7,7 @@ date: "8 de Noviembre, 2026"
 updatedDate: "Noviembre 2026"
 author: "Peru Beyond Team"
 category: "Experiencias"
-heroImage: "/images/Machupicchu/IMG_7711.webp"
+heroImage: "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/hero.webp"
 heroPosition: "center 45%"
 readingTime: "22 min de lectura"
 views: "7.8k"
@@ -39,6 +39,14 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "cusco-machu-picchu-3d-2n"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
+imgAlbum:
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/01-perurail-expedition-vagones.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/02-perurail-vistadome-ventanas-panoramicas.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/03-perurail-observatory-balcon-aire-libre.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/04-inca-rail-360-vagones-modernos.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/05-estacion-ollantaytambo-embarque.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/06-paisaje-canon-urubamba-rio-vilcanota.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/07-belmond-hiram-bingham-vagones-lujo.webp"
 ---
 
 El viaje en **tren a Machu Picchu** es considerado universalmente como una de las travesías ferroviarias más hermosas, espectaculares y cinematográficas del planeta. A lo largo de la ruta, los rieles serpentean paralelos al torrente sagrado del río Vilcanota (Urubamba), descendiendo gradualmente desde los campos andinos del Valle Sagrado hasta la exuberante selva nubosa subtropical que custodia la ciudadela inca.
@@ -80,6 +88,17 @@ Empresa de capitales peruanos fundada en 2007 que renovó la oferta ferroviaria 
 ---
 
 ## 3. Análisis Detallado por Categoría de Servicio
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/01-perurail-expedition-vagones.webp" alt="PeruRail Expedition interior del vagón" loading="lazy" />
+    <figcaption>PeruRail Expedition: asientos cómodos y excelente relación calidad-precio.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/02-perurail-vistadome-ventanas-panoramicas.webp" alt="PeruRail Vistadome ventanas curvas panorámicas" loading="lazy" />
+    <figcaption>PeruRail Vistadome: ventanales curvados envolventes y show folclórico a bordo.</figcaption>
+  </figure>
+</div>
 
 ### 3.1. Categoría Turista Estándar: PeruRail Expedition vs. Inca Rail The Voyager
 Son las alternativas más vendidas y económicas, ideales para quienes priorizan el presupuesto sin sacrificar confort ni seguridad.
@@ -133,6 +152,17 @@ Diseñadas para celebrar aniversarios, lunas de miel o disfrutar de un servicio 
 
 ## 4. Estaciones de Salida: ¿Desde Dónde Abordar el Tren?
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/03-perurail-observatory-balcon-aire-libre.webp" alt="Vistadome Observatory coche balcón exterior" loading="lazy" />
+    <figcaption>Vistadome Observatory: balcón panorámico al aire libre con música andina en vivo.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/04-inca-rail-360-vagones-modernos.webp" alt="Inca Rail The 360 vagones modernos" loading="lazy" />
+    <figcaption>Inca Rail The 360°: diseño vanguardista, app interactiva y snack andino orgánico.</figcaption>
+  </figure>
+</div>
+
 Un aspecto crucial que muchos visitantes primerizos confunden es la ubicación de las estaciones ferroviarias:
 
 ### 4.1. Estación de Ollantaytambo (Valle Sagrado)
@@ -152,6 +182,17 @@ Es el formato más práctico operado tanto por PeruRail (desde la estación de W
 
 ## 5. Reglamento Oficial de Equipaje en los Trenes
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/05-estacion-ollantaytambo-embarque.webp" alt="Estación de tren de Ollantaytambo" loading="lazy" />
+    <figcaption>Estación de Ollantaytambo: principal centro de embarque hacia Aguas Calientes.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/06-paisaje-canon-urubamba-rio-vilcanota.webp" alt="Cañón del río Urubamba desde la vía del tren" loading="lazy" />
+    <figcaption>Vistas panorámicas: el río Vilcanota acompañando la ruta hacia la selva alta.</figcaption>
+  </figure>
+</div>
+
 Para salvaguardar la comodidad de los pasajeros y el espacio de los vagones, existe una normativa estricta de equipaje:
 
 - **Límite Permitido:** Solo se permite llevar **una mochila de mano o bolso pequeño** por pasajero, con un peso máximo de **5 kg a 8 kg** (según el operador) y dimensiones máximas de 157 cm lineales (alto + largo + ancho).
@@ -160,6 +201,11 @@ Para salvaguardar la comodidad de los pasajeros y el espacio de los vagones, exi
 ---
 
 ## 6. Sincronización Estratégica: Horario del Tren vs. Entrada a Machu Picchu
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/07-belmond-hiram-bingham-vagones-lujo.webp" alt="Tren de ultralujo Belmond Hiram Bingham" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Belmond Hiram Bingham: la cumbre del lujo ferroviario mundial con coche restaurante estilo años 20, cena gourmet y barra libre de autor.</figcaption>
+</figure>
 
 El error más grave de un viajero independiente es comprar el boleto de tren sin considerar el horario de ingreso a la ciudadela inca.
 

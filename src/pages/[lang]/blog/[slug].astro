@@ -7,6 +7,7 @@ import { getMergedPosts, getBlogList } from '../../../data/blogIndex';
 import BlogCategories from '../../../components/BlogCategories.astro';
 import { getCategorySlug } from '../../../data/blogCategories';
 import { ui } from '../../../i18n/ui';
+import BlogImageCarousel from '../../../components/BlogImageCarousel.astro';
 
 export async function getStaticPaths() {
   const langs = ['es', 'en', 'pt'] as const;
@@ -457,6 +458,15 @@ const breadcrumbSchema = {
             </section>
           )}
 
+          <!-- Carrusel de Fotografías Destacadas (Frontmatter imgAlbum) -->
+          {blog.imgAlbum && blog.imgAlbum.length > 0 && (
+            <BlogImageCarousel
+              images={blog.imgAlbum}
+              title={lang === 'pt' ? 'Galeria Exclusiva da Rota' : lang === 'en' ? 'Route Photo Gallery' : 'Galería Fotográfica de la Ruta'}
+              lang={lang}
+            />
+          )}
+
           <!-- Contenido Renderizado: Markdown o Secciones -->
           {Content ? (
             <div class="prose-blog w-full">
@@ -679,10 +689,318 @@ const breadcrumbSchema = {
 
     </div>
 
+    <!-- ── MODAL LIGHTBOX FULLSCREEN (ZOOM INTERACTIVO) ── -->
+    <div
+      id="blog-lightbox"
+      class="fixed inset-0 z-[9999] bg-black/95 backdrop-blur-md hidden items-center justify-center p-4 select-none opacity-0 transition-opacity duration-300"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Visor fotográfico de alta resolución"
+    >
+      <!-- Botón Cerrar -->
+      <button
+        id="blog-lightbox-close"
+        type="button"
+        class="absolute top-5 right-5 text-white/80 hover:text-white w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-2xl transition-all z-20 cursor-pointer shadow-lg hover:scale-105"
+        title="Cerrar (Esc)"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <!-- Botón Anterior -->
+      <button
+        id="blog-lightbox-prev"
+        type="button"
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/25 rounded-full flex items-center justify-center text-white transition-all z-20 backdrop-blur-sm cursor-pointer shadow-lg hover:scale-105"
+        title="Foto anterior (←)"
+      >
+        <i class="bi bi-chevron-left text-xl"></i>
+      </button>
+
+      <!-- Contenedor Imagen Grande + Pie de Foto -->
+      <div class="max-w-5xl max-h-[90vh] flex flex-col items-center justify-center relative">
+        <img
+          id="blog-lightbox-img"
+          src=""
+          alt=""
+          class="max-h-[78vh] max-w-[92vw] md:max-w-4xl object-contain rounded-2xl shadow-2xl transition-transform duration-200"
+        />
+        <div class="mt-3 px-5 py-2.5 rounded-2xl bg-black/65 backdrop-blur-md border border-white/15 text-center max-w-2xl">
+          <p id="blog-lightbox-caption" class="text-white/95 text-xs sm:text-sm font-medium leading-relaxed"></p>
+        </div>
+      </div>
+
+      <!-- Botón Siguiente -->
+      <button
+        id="blog-lightbox-next"
+        type="button"
+        class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/25 rounded-full flex items-center justify-center text-white transition-all z-20 backdrop-blur-sm cursor-pointer shadow-lg hover:scale-105"
+        title="Siguiente foto (→)"
+      >
+        <i class="bi bi-chevron-right text-xl"></i>
+      </button>
+
+      <!-- Contador Inferior -->
+      <div
+        id="blog-lightbox-counter"
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 text-xs font-semibold px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 shadow"
+      ></div>
+    </div>
+
   </main>
 
   <Footer lang={lang} />
 </Layout>
+
+<script is:inline>
+  (() => {
+    // ── LIGHTBOX GLOBAL PARA BLOG ──
+    let lightboxGallery = [];
+    let currentLbIndex = 0;
+
+    const lb = document.getElementById('blog-lightbox');
+    const lbImg = document.getElementById('blog-lightbox-img');
+    const lbCaption = document.getElementById('blog-lightbox-caption');
+    const lbCounter = document.getElementById('blog-lightbox-counter');
+    const lbClose = document.getElementById('blog-lightbox-close');
+    const lbPrev = document.getElementById('blog-lightbox-prev');
+    const lbNext = document.getElementById('blog-lightbox-next');
+
+    function rebuildGalleryList() {
+      const imgs = Array.from(document.querySelectorAll('.prose-blog img, .blog-img-grid img, [data-carousel-img]'));
+      const seen = new Set();
+      lightboxGallery = [];
+
+      imgs.forEach((img) => {
+        const src = img.getAttribute('src');
+        if (!src || seen.has(src)) return;
+        seen.add(src);
+
+        // Buscar caption cercano
+        let cap = '';
+        const fig = img.closest('figure');
+        if (fig) {
+          const fc = fig.querySelector('figcaption');
+          if (fc) cap = fc.textContent.trim();
+        }
+        if (!cap) {
+          const nextEm = img.nextElementSibling;
+          if (nextEm && nextEm.tagName === 'EM') cap = nextEm.textContent.trim();
+        }
+        if (!cap) cap = img.getAttribute('alt') || '';
+
+        lightboxGallery.push({
+          src,
+          alt: img.getAttribute('alt') || '',
+          caption: cap,
+          el: img,
+        });
+
+        // Añadir cursor zoom-in y click
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const targetIndex = lightboxGallery.findIndex((item) => item.src === src);
+          openLightbox(targetIndex >= 0 ? targetIndex : 0);
+        });
+      });
+    }
+
+    function openLightbox(index) {
+      if (!lb || !lbImg || lightboxGallery.length === 0) return;
+      currentLbIndex = (index + lightboxGallery.length) % lightboxGallery.length;
+      const item = lightboxGallery[currentLbIndex];
+
+      lbImg.src = item.src;
+      lbImg.alt = item.alt;
+      if (lbCaption) lbCaption.textContent = item.caption || item.alt;
+      if (lbCounter) lbCounter.textContent = `${currentLbIndex + 1} / ${lightboxGallery.length}`;
+
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+      requestAnimationFrame(() => {
+        lb.classList.remove('opacity-0');
+        lb.classList.add('opacity-100');
+      });
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      if (!lb) return;
+      lb.classList.remove('opacity-100');
+      lb.classList.add('opacity-0');
+      setTimeout(() => {
+        lb.classList.remove('flex');
+        lb.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 200);
+    }
+
+    window.openBlogLightbox = (index, customSrc, customCaption) => {
+      if (customSrc) {
+        const found = lightboxGallery.findIndex((i) => i.src === customSrc);
+        if (found >= 0) {
+          openLightbox(found);
+          return;
+        }
+        // Si es externa al listado
+        if (lb && lbImg) {
+          lbImg.src = customSrc;
+          if (lbCaption) lbCaption.textContent = customCaption || '';
+          if (lbCounter) lbCounter.textContent = '';
+          lb.classList.remove('hidden');
+          lb.classList.add('flex');
+          requestAnimationFrame(() => {
+            lb.classList.remove('opacity-0');
+            lb.classList.add('opacity-100');
+          });
+          document.body.style.overflow = 'hidden';
+          return;
+        }
+      }
+      openLightbox(index || 0);
+    };
+
+    lbClose?.addEventListener('click', closeLightbox);
+    lb?.addEventListener('click', (e) => {
+      if (e.target === lb || e.target.id === 'blog-lightbox') {
+        closeLightbox();
+      }
+    });
+
+    lbNext?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openLightbox(currentLbIndex + 1);
+    });
+
+    lbPrev?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openLightbox(currentLbIndex - 1);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lb || lb.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') openLightbox(currentLbIndex + 1);
+      if (e.key === 'ArrowLeft') openLightbox(currentLbIndex - 1);
+    });
+
+    // ── SOPORTE DINÁMICO PARA BLOQUES <div class="blog-carousel"> EN MARKDOWN ──
+    function initMarkdownCarousels() {
+      const carouselBlocks = document.querySelectorAll('.blog-carousel');
+      carouselBlocks.forEach((block, bIdx) => {
+        if (block.getAttribute('data-initialized') === 'true') return;
+        block.setAttribute('data-initialized', 'true');
+
+        const figures = Array.from(block.querySelectorAll('figure'));
+        if (figures.length === 0) return;
+
+        const items = figures.map((fig) => {
+          const img = fig.querySelector('img');
+          const cap = fig.querySelector('figcaption');
+          return {
+            src: img ? img.getAttribute('src') : '',
+            alt: img ? img.getAttribute('alt') : '',
+            caption: cap ? cap.textContent.trim() : (img ? img.getAttribute('alt') : '')
+          };
+        }).filter(item => item.src);
+
+        if (items.length === 0) return;
+
+        let activeIdx = 0;
+        const total = items.length;
+
+        block.innerHTML = `
+          <div class="relative w-full h-[280px] sm:h-[380px] md:h-[480px] rounded-3xl overflow-hidden shadow-xl bg-slate-950 group cursor-pointer not-prose my-8">
+            <img class="w-full h-full object-cover transition-opacity duration-300" src="${items[0].src}" alt="${items[0].alt}" loading="lazy" />
+            <div class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-slate-950/75 backdrop-blur-md text-white text-xs font-semibold tracking-wider border border-white/10 shadow">
+              <span class="mc-counter">1 / ${total}</span>
+            </div>
+            <button type="button" class="mc-prev absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-950/70 hover:bg-[#c9a84c] text-white hover:text-slate-950 flex items-center justify-center transition-all backdrop-blur-md border border-white/15 shadow-lg group-hover:scale-105">
+              <i class="bi bi-chevron-left text-base sm:text-lg"></i>
+            </button>
+            <button type="button" class="mc-next absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-950/70 hover:bg-[#c9a84c] text-white hover:text-slate-950 flex items-center justify-center transition-all backdrop-blur-md border border-white/15 shadow-lg group-hover:scale-105">
+              <i class="bi bi-chevron-right text-base sm:text-lg"></i>
+            </button>
+            <div class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-transparent pt-12 pb-4 px-4 sm:px-6 pointer-events-none">
+              <p class="mc-caption text-white/95 text-xs sm:text-sm font-medium leading-relaxed drop-shadow max-w-3xl line-clamp-2">${items[0].caption}</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-2.5 mt-2 overflow-x-auto pb-2 pt-1 px-1 custom-scrollbar not-prose mb-8">
+            ${items.map((it, i) => `
+              <button type="button" class="mc-thumb flex-shrink-0 w-16 sm:w-20 h-12 sm:h-14 rounded-xl overflow-hidden border-2 transition-all duration-200 cursor-pointer ${i === 0 ? 'border-[#c9a84c] scale-105 opacity-100 shadow-md ring-2 ring-[#c9a84c]/30' : 'border-transparent opacity-60 hover:opacity-100'}" data-idx="${i}">
+                <img src="${it.src}" alt="${it.alt}" class="w-full h-full object-cover" loading="lazy" />
+              </button>
+            `).join('')}
+          </div>
+        `;
+
+        const mImg = block.querySelector('img');
+        const mCounter = block.querySelector('.mc-counter');
+        const mCaption = block.querySelector('.mc-caption');
+        const mPrev = block.querySelector('.mc-prev');
+        const mNext = block.querySelector('.mc-next');
+        const mThumbs = Array.from(block.querySelectorAll('.mc-thumb'));
+        const mStage = block.firstElementChild;
+
+        function updateMdCarousel(newIdx) {
+          if (newIdx < 0) newIdx = total - 1;
+          if (newIdx >= total) newIdx = 0;
+          activeIdx = newIdx;
+          const curr = items[activeIdx];
+
+          if (mImg) {
+            mImg.style.opacity = '0.4';
+            setTimeout(() => {
+              mImg.src = curr.src;
+              mImg.alt = curr.alt;
+              mImg.style.opacity = '1';
+            }, 120);
+          }
+          if (mCounter) mCounter.textContent = `${activeIdx + 1} / ${total}`;
+          if (mCaption) mCaption.textContent = curr.caption || curr.alt;
+
+          mThumbs.forEach((th, ti) => {
+            if (ti === activeIdx) {
+              th.className = 'mc-thumb flex-shrink-0 w-16 sm:w-20 h-12 sm:h-14 rounded-xl overflow-hidden border-2 transition-all duration-200 cursor-pointer border-[#c9a84c] scale-105 opacity-100 shadow-md ring-2 ring-[#c9a84c]/30';
+              th.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            } else {
+              th.className = 'mc-thumb flex-shrink-0 w-16 sm:w-20 h-12 sm:h-14 rounded-xl overflow-hidden border-2 transition-all duration-200 cursor-pointer border-transparent opacity-60 hover:opacity-100';
+            }
+          });
+        }
+
+        mNext?.addEventListener('click', (e) => { e.stopPropagation(); updateMdCarousel(activeIdx + 1); });
+        mPrev?.addEventListener('click', (e) => { e.stopPropagation(); updateMdCarousel(activeIdx - 1); });
+
+        mThumbs.forEach((th) => {
+          th.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const idx = parseInt(th.getAttribute('data-idx') || '0', 10);
+            updateMdCarousel(idx);
+          });
+        });
+
+        mStage?.addEventListener('click', (e) => {
+          if (!e.target.closest('button')) {
+            window.openBlogLightbox(0, items[activeIdx].src, items[activeIdx].caption);
+          }
+        });
+      });
+    }
+
+    // Inicializar al cargar
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initMarkdownCarousels();
+        rebuildGalleryList();
+      });
+    } else {
+      initMarkdownCarousels();
+      rebuildGalleryList();
+    }
+  })();
+</script>
 
 <style is:global>
   /* ── Estilos Prose Avanzados para Markdown (Salkantay Trekking & TreXperience) ── */
@@ -855,26 +1173,85 @@ const breadcrumbSchema = {
     margin-bottom: 0;
   }
 
-  /* ── Imágenes con Figcaption Elegante ── */
+  /* ── Imágenes con Figcaption Elegante y Zoom ── */
   .prose-blog img {
     border-radius: 16px;
     margin: 2rem auto 0.5rem;
     width: 100%;
-    max-height: 480px;
+    max-height: 520px;
     object-fit: cover;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .prose-blog img:hover {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.14);
   }
   .prose-blog img + em,
   .prose-blog p > em:only-child {
     display: block;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: #64748b;
     margin-top: 0.4rem;
     margin-bottom: 1.5rem;
+    font-style: italic;
   }
 
-  /* ── Scrollbar sutil para el índice TOC ── */
+  /* ── Grillas Fotográficas Comparativas de 2 Fotos Lado a Lado (Estilo TreXperience) ── */
+  .blog-img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  @media (max-width: 640px) {
+    .blog-img-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+  .blog-img-grid figure {
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem; /* rounded-2xl */
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .blog-img-grid figure:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  .blog-img-grid figure img {
+    width: 100%;
+    height: 18rem; /* h-72 */
+    object-fit: cover;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition: transform 0.5s ease;
+    cursor: zoom-in;
+  }
+  .blog-img-grid figure:hover img {
+    transform: scale(1.03);
+  }
+  .blog-img-grid figure figcaption {
+    padding: 0.75rem 1rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: #64748b;
+    text-align: center;
+    background: #f8fafc;
+    border-top: 1px solid #f1f5f9;
+    font-style: italic;
+  }
+
+  /* ── Scrollbar sutil para el índice TOC y carrusel ── */
   .custom-scrollbar::-webkit-scrollbar {
     width: 4px;
   }

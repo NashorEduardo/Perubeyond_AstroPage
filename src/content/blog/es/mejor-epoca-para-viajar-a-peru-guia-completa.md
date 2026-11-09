@@ -7,7 +7,7 @@ date: "26 de Octubre, 2026"
 updatedDate: "Octubre 2026"
 author: "Equipo Peru Beyond"
 category: "Consejos de Viaje"
-heroImage: "/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/portada-clima-peru.webp"
+heroImage: "/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/hero.webp"
 heroPosition: "center 40%"
 readingTime: "15 min de lectura"
 views: "3.9k"
@@ -39,6 +39,14 @@ relatedTours:
   - "tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias"
   - "tour-lima-huacachina-machu-picchu-montana-arcoiris-10-dias"
   - "machu-picchu-full-day-tour"
+imgAlbum:
+  - "/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/01-machu-picchu-cielo-despejado-invierno.webp"
+  - "/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/02-valle-sagrado-temporada-verde-lluvias.webp"
+  - "/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/03-costa-lima-miraflores-verano.webp"
+  - "/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/04-montana-7-colores-dia-soleado.webp"
+  - "/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/05-cusco-inti-raymi-fiesta-sol.webp"
+  - "/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/06-neblina-mistica-machu-picchu-nubes.webp"
+  - "/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/07-selva-amazonia-rio-temporada-seca.webp"
 ---
 
 Elegir la **mejor época para viajar a Perú** es una de las decisiones más cruciales al planificar tus vacaciones. A diferencia de otros países donde las cuatro estaciones del año están claramente delimitadas, Perú cuenta con 28 de los 32 climas existentes en el planeta debido a su geografía privilegiada: la costa desértica del Pacífico, la imponente Cordillera de los Andes y la densa cuenca amazónica.
@@ -68,12 +76,23 @@ Para planificar tu viaje rápidamente, consulta este resumen meteorológico, de 
 | **Noviembre** | Templado (21 °C), noche (7 °C) | Moderadas | Soleado de primavera (23 °C) | Media - Baja | Día de Todos los Santos (Panes wawa en Cusco) |
 | **Diciembre** | Días cálidos (20 °C), noche (8 °C) | Altas | Caluroso de verano (25 °C) | Alta por fiestas | Santurantikuy (Feria navideña de arte en Cusco) |
 
-![Machu Picchu con cielo despejado en temporada seca](/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/machu-picchu-temporada-seca.webp)
+
 *Cielos azules y sol radiante: el panorama habitual en Machu Picchu entre junio y agosto.*
 
 ---
 
 ## 2. La Geografía Peruana: Tres Regiones con Climas Opuestos
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/01-machu-picchu-cielo-despejado-invierno.webp" alt="Machu Picchu cielo despejado en temporada seca" loading="lazy" />
+    <figcaption>Temporada Seca (Mayo a Octubre): cielos azules, sol radiante y visibilidad perfecta.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/02-valle-sagrado-temporada-verde-lluvias.webp" alt="Valle Sagrado verde esmeralda en época de lluvias" loading="lazy" />
+    <figcaption>Temporada Verde (Diciembre a Marzo): andenes esmeralda, menos afluencia y cascadas activas.</figcaption>
+  </figure>
+</div>
 
 Para entender el clima en Perú, primero hay que distinguir sus tres grandes regiones naturales:
 
@@ -90,12 +109,23 @@ Para entender el clima en Perú, primero hay que distinguir sus tres grandes reg
 
 > **›› Fun Fact Geográfico:** La Cordillera de los Andes actúa como un gigantesco biombo natural que bloquea las masas de humedad cargadas desde la Amazonía hacia la costa, creando el desierto costero más árido del hemisferio sur junto con la corriente marina helada de Humboldt.
 
-![Valle Sagrado de los Incas en época verde](/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/valle-sagrado-verde.webp)
+
 *El Valle Sagrado de los Incas luce sus tonos verdes más espectaculares en los meses de transición (abril y mayo).*
 
 ---
 
 ## 3. Temporada Seca vs. Temporada de Lluvias en Cusco y Machu Picchu
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/03-costa-lima-miraflores-verano.webp" alt="Verano en la costa y playas de Lima" loading="lazy" />
+    <figcaption>Costa y Lima (Diciembre a Abril): verano cálido, playas soleadas y puestas de sol en el Pacífico.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/04-montana-7-colores-dia-soleado.webp" alt="Montaña de 7 Colores en día despejado" loading="lazy" />
+    <figcaption>Andes y Rutas de Trekking: mayor claridad para fotografiar Vinicunca y Humantay en invierno andino.</figcaption>
+  </figure>
+</div>
 
 Si tu viaje tiene como objetivo central visitar **Machu Picchu, el Valle Sagrado y la Montaña de 7 Colores**, debes considerar detalladamente estas dos grandes etapas del año:
 
@@ -117,6 +147,17 @@ Para muchos expertos de **Peru Beyond**, los meses de transición representan el
 
 ## 4. Calendario de Fiestas y Tradiciones Imperdibles
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/05-cusco-inti-raymi-fiesta-sol.webp" alt="Fiesta del Sol Inti Raymi en Cusco" loading="lazy" />
+    <figcaption>Junio en Cusco: el mes jubilar y la majestuosa escenificación del Inti Raymi en Sacsayhuamán.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/06-neblina-mistica-machu-picchu-nubes.webp" alt="Neblina mística amaneciendo en Machu Picchu" loading="lazy" />
+    <figcaption>Temporadas intermedias (Abril/Noviembre): velos de neblina que otorgan una atmósfera mística inigualable.</figcaption>
+  </figure>
+</div>
+
 Si quieres combinar maravillas arqueológicas con la viva cultura ancestral del Perú, programa tu viaje coincidiendo con estas fechas:
 
 ### 1. El Inti Raymi (Fiesta del Sol — 24 de Junio)
@@ -134,6 +175,11 @@ Quince santos y vírgenes ricamente ataviados salen en procesión desde sus parr
 ---
 
 ## 5. Qué Ropa Llevar: Packing List según la Época del Año
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/07-selva-amazonia-rio-temporada-seca.webp" alt="Navegación por el río Tambopata en época seca" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Amazonía Peruana: de mayo a octubre bajan los caudales fluviales facilitando el avistamiento de jaguares, caimanes y nutrias gigantes en las orillas.</figcaption>
+</figure>
 
 ### Para la Temporada Seca (Mayo a Octubre en Cusco y los Andes):
 - Ropa por capas: polos de algodón transpirable para el mediodía soleado.

@@ -1,0 +1,257 @@
+---
+export interface CarouselImageItem {
+  src: string;
+  alt?: string;
+  caption?: string;
+}
+
+interface Props {
+  images: (string | CarouselImageItem)[];
+  title?: string;
+  lang?: 'es' | 'en' | 'pt';
+  id?: string;
+}
+
+const { images = [], title, lang = 'es', id } = Astro.props;
+
+const normalizedImages: CarouselImageItem[] = images.map((img, idx) => {
+  if (typeof img === 'string') {
+    return {
+      src: img,
+      alt: `Fotografía editorial ${idx + 1}`,
+      caption: '',
+    };
+  }
+  return {
+    src: img.src,
+    alt: img.alt || `Fotografía editorial ${idx + 1}`,
+    caption: img.caption || '',
+  };
+});
+
+const defaultTitle = {
+  es: 'Galería Fotográfica Editorial',
+  en: 'Editorial Photo Gallery',
+  pt: 'Galeria Fotográfica Editorial',
+}[lang] || 'Galería Fotográfica';
+
+const carouselId = id || `blog-carousel-${Math.random().toString(36).substring(2, 9)}`;
+---
+
+{normalizedImages.length > 0 && (
+  <section class="blog-carousel-wrapper my-10 not-prose select-none" id={carouselId}>
+    <div class="flex items-center justify-between mb-3 px-1">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-[#c9a84c] animate-pulse"></span>
+        <h4 class="font-serif font-bold text-slate-900 text-base sm:text-lg tracking-tight">
+          {title || defaultTitle}
+        </h4>
+      </div>
+      <span class="text-xs text-slate-400 font-medium hidden sm:inline">
+        {lang === 'pt' ? 'Deslize ou use as setas' : lang === 'en' ? 'Swipe or click arrows' : 'Desliza o usa las flechas'}
+      </span>
+    </div>
+
+    <!-- Contenedor Principal de la Imagen Grande -->
+    <div
+      class="relative w-full h-[280px] sm:h-[380px] md:h-[480px] rounded-3xl overflow-hidden shadow-xl bg-slate-950 group cursor-pointer"
+      data-carousel-main
+    >
+      <img
+        src={normalizedImages[0].src}
+        alt={normalizedImages[0].alt}
+        class="w-full h-full object-cover transition-opacity duration-300"
+        loading="lazy"
+        data-carousel-img
+      />
+
+      <!-- Contador de Fotos Top-Right -->
+      <div class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-slate-950/75 backdrop-blur-md text-white text-xs font-semibold tracking-wider border border-white/10 shadow">
+        <span data-carousel-counter>1 / {normalizedImages.length}</span>
+      </div>
+
+      <!-- Botón Zoom / Lightbox Top-Left -->
+      <button
+        type="button"
+        class="absolute top-4 left-4 z-10 w-8 h-8 rounded-full bg-slate-950/70 hover:bg-[#c9a84c] text-white hover:text-slate-950 backdrop-blur-md flex items-center justify-center transition-all border border-white/10 shadow"
+        title="Ver en pantalla completa"
+        data-carousel-zoom
+      >
+        <i class="bi bi-arrows-fullscreen text-xs"></i>
+      </button>
+
+      <!-- Botón Flecha Izquierda -->
+      <button
+        type="button"
+        class="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-950/70 hover:bg-[#c9a84c] text-white hover:text-slate-950 flex items-center justify-center transition-all backdrop-blur-md border border-white/15 shadow-lg group-hover:scale-105"
+        aria-label="Foto anterior"
+        data-carousel-prev
+      >
+        <i class="bi bi-chevron-left text-base sm:text-lg"></i>
+      </button>
+
+      <!-- Botón Flecha Derecha -->
+      <button
+        type="button"
+        class="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-950/70 hover:bg-[#c9a84c] text-white hover:text-slate-950 flex items-center justify-center transition-all backdrop-blur-md border border-white/15 shadow-lg group-hover:scale-105"
+        aria-label="Siguiente foto"
+        data-carousel-next
+      >
+        <i class="bi bi-chevron-right text-base sm:text-lg"></i>
+      </button>
+
+      <!-- Pie de Foto (Caption) sobre Degradado Inferior Oscuro -->
+      <div class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-transparent pt-12 pb-4 px-4 sm:px-6 pointer-events-none">
+        <p
+          class="text-white/95 text-xs sm:text-sm font-medium leading-relaxed drop-shadow max-w-3xl line-clamp-2"
+          data-carousel-caption
+        >
+          {normalizedImages[0].caption || normalizedImages[0].alt}
+        </p>
+      </div>
+    </div>
+
+    <!-- Tira de Miniaturas (Thumbnails) Inferior Clicables -->
+    <div
+      class="flex items-center gap-2 sm:gap-2.5 mt-3 overflow-x-auto pb-2 pt-1 px-1 custom-scrollbar"
+      data-carousel-thumbs
+    >
+      {normalizedImages.map((img, idx) => (
+        <button
+          type="button"
+          class={`flex-shrink-0 w-16 sm:w-20 h-12 sm:h-14 rounded-xl overflow-hidden border-2 transition-all duration-200 cursor-pointer ${
+            idx === 0
+              ? 'border-[#c9a84c] scale-105 opacity-100 shadow-md ring-2 ring-[#c9a84c]/30'
+              : 'border-transparent opacity-60 hover:opacity-100 hover:border-slate-300'
+          }`}
+          data-thumb-index={idx}
+          title={img.caption || img.alt}
+        >
+          <img
+            src={img.src}
+            alt={img.alt}
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </button>
+      ))}
+    </div>
+  </section>
+)}
+
+<script define:vars={{ carouselId, imagesData: normalizedImages }}>
+  (() => {
+    const root = document.getElementById(carouselId);
+    if (!root) return;
+
+    let currentIndex = 0;
+    const total = imagesData.length;
+    if (total === 0) return;
+
+    const mainImg = root.querySelector('[data-carousel-img]');
+    const counter = root.querySelector('[data-carousel-counter]');
+    const caption = root.querySelector('[data-carousel-caption]');
+    const btnPrev = root.querySelector('[data-carousel-prev]');
+    const btnNext = root.querySelector('[data-carousel-next]');
+    const btnZoom = root.querySelector('[data-carousel-zoom]');
+    const thumbs = Array.from(root.querySelectorAll('[data-thumb-index]'));
+    const mainBox = root.querySelector('[data-carousel-main]');
+
+    function updateCarousel(idx) {
+      if (idx < 0) idx = total - 1;
+      if (idx >= total) idx = 0;
+      currentIndex = idx;
+
+      const item = imagesData[currentIndex];
+
+      if (mainImg) {
+        mainImg.style.opacity = '0.4';
+        setTimeout(() => {
+          mainImg.src = item.src;
+          mainImg.alt = item.alt || '';
+          mainImg.style.opacity = '1';
+        }, 120);
+      }
+
+      if (counter) {
+        counter.textContent = `${currentIndex + 1} / ${total}`;
+      }
+
+      if (caption) {
+        caption.textContent = item.caption || item.alt || '';
+      }
+
+      // Actualizar estilo activo en miniaturas
+      thumbs.forEach((th, i) => {
+        if (i === currentIndex) {
+          th.classList.add('border-[#c9a84c]', 'scale-105', 'opacity-100', 'shadow-md', 'ring-2', 'ring-[#c9a84c]/30');
+          th.classList.remove('border-transparent', 'opacity-60');
+          th.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          th.classList.remove('border-[#c9a84c]', 'scale-105', 'opacity-100', 'shadow-md', 'ring-2', 'ring-[#c9a84c]/30');
+          th.classList.add('border-transparent', 'opacity-60');
+        }
+      });
+    }
+
+    btnNext?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      updateCarousel(currentIndex + 1);
+    });
+
+    btnPrev?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      updateCarousel(currentIndex - 1);
+    });
+
+    thumbs.forEach((th) => {
+      th.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const idx = parseInt(th.getAttribute('data-thumb-index') || '0', 10);
+        updateCarousel(idx);
+      });
+    });
+
+    // Zoom a pantalla completa (Lightbox)
+    function triggerLightbox() {
+      const allBlogImgs = Array.from(document.querySelectorAll('.prose-blog img, [data-carousel-img], .blog-img-grid img'));
+      const targetSrc = imagesData[currentIndex].src;
+      const foundIdx = allBlogImgs.findIndex((img) => img.getAttribute('src') === targetSrc);
+      if (typeof window.openBlogLightbox === 'function') {
+        window.openBlogLightbox(foundIdx >= 0 ? foundIdx : 0, targetSrc, imagesData[currentIndex].caption || imagesData[currentIndex].alt);
+      }
+    }
+
+    btnZoom?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      triggerLightbox();
+    });
+
+    mainBox?.addEventListener('click', (e) => {
+      // Si el click no fue en los botones prev/next
+      if (!e.target.closest('button')) {
+        triggerLightbox();
+      }
+    });
+
+    // Soporte táctil Swipe en móviles
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    mainBox?.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    mainBox?.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) {
+          updateCarousel(currentIndex + 1); // Deslizó hacia la izquierda -> siguiente
+        } else {
+          updateCarousel(currentIndex - 1); // Deslizó hacia la derecha -> anterior
+        }
+      }
+    }, { passive: true });
+  })();
+</script>

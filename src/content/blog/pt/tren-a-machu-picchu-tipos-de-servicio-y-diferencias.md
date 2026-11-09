@@ -7,7 +7,7 @@ date: "8 de Novembro, 2026"
 updatedDate: "Novembro 2026"
 author: "Peru Beyond Team"
 category: "Experiências"
-heroImage: "/images/Machupicchu/IMG_7711.webp"
+heroImage: "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/hero.webp"
 heroPosition: "center 45%"
 readingTime: "22 min de leitura"
 views: "7.8k"
@@ -39,6 +39,14 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "cusco-machu-picchu-3d-2n"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
+imgAlbum:
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/01-perurail-expedition-vagones.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/02-perurail-vistadome-ventanas-panoramicas.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/03-perurail-observatory-balcon-aire-libre.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/04-inca-rail-360-vagones-modernos.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/05-estacion-ollantaytambo-embarque.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/06-paisaje-canon-urubamba-rio-vilcanota.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/07-belmond-hiram-bingham-vagones-lujo.webp"
 ---
 
 A viagem de **trem para Machu Picchu** é reconhecida mundialmente como um dos passeios ferroviários mais cênicos do planeta. À medida que os vagões avançam margeando o rio sagrado Vilcanota (Urubamba), a paisagem se transforma: os vales secos e agrícolas dão lugar à exuberante floresta subtropical andina que cerca a cidadela de pedra.
@@ -78,6 +86,17 @@ Empresa peruana moderna que se destaca pelo conforto dos assentos, pontualidade,
 ---
 
 ## 3. Análise Detalhada por Categoria
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/01-perurail-expedition-vagones.webp" alt="Interior do vagão PeruRail Expedition" loading="lazy" />
+    <figcaption>PeruRail Expedition: conforto prático e excelente custo-benefício.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/02-perurail-vistadome-ventanas-panoramicas.webp" alt="Janelas curvas panorâmicas do PeruRail Vistadome" loading="lazy" />
+    <figcaption>PeruRail Vistadome: janelas curvas no teto e dança típica tradicional a bordo.</figcaption>
+  </figure>
+</div>
 
 ### 3.1. Categoria Turística: Expedition vs. The Voyager
 Ideais para quem busca economizar sem abrir mão de conforto e segurança.
@@ -125,6 +144,17 @@ A viagem de trem pelo cânion do Urubamba oferece ângulos fotográficos únicos
 
 ## 4. De Onde Saem os Trens para Machu Picchu?
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/03-perurail-observatory-balcon-aire-libre.webp" alt="Vistadome Observatory com varanda ao ar livre" loading="lazy" />
+    <figcaption>Vistadome Observatory: varanda externa aberta com bar e música andina ao vivo.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/04-inca-rail-360-vagones-modernos.webp" alt="Vagões modernos do Inca Rail The 360" loading="lazy" />
+    <figcaption>Inca Rail The 360°: design contemporâneo, audioguia interativo e janelas amplas.</figcaption>
+  </figure>
+</div>
+
 ### 4.1. Estação de Ollantaytambo (Vale Sagrado)
 A estação principal, com maior oferta de horários durante todo o ano. Fica a 1h45 de carro de Cusco. A viagem de trem até Aguas Calientes dura apenas **1 hora e 40 minutos**.
 
@@ -138,12 +168,28 @@ O formato mais procurado: um ônibus executivo privativo leva você de Cusco at�
 
 ## 5. Regras de Bagagem no Trem
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/05-estacion-ollantaytambo-embarque.webp" alt="Estação de trem de Ollantaytambo" loading="lazy" />
+    <figcaption>Estação de Ollantaytambo: principal ponto de embarque para Aguas Calientes.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/06-paisaje-canon-urubamba-rio-vilcanota.webp" alt="Cânion do rio Urubamba visto do trem" loading="lazy" />
+    <figcaption>Paisagens deslumbrantes do cânion do rio Vilcanota descendo rumo à selva alta.</figcaption>
+  </figure>
+</div>
+
 - **Limite Permitido:** Apenas **1 mala de mão ou mochila** de até **5 kg a 8 kg** por pessoa.
 - **Onde deixar malas grandes:** Ficam guardadas com total segurança e gratuitamente no maleiro do seu hotel em Cusco ou Ollantaytambo. Você leva apenas uma muda de roupa para o passeio.
 
 ---
 
 ## 6. Como Sincronizar o Horário do Trem com Machu Picchu
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/07-belmond-hiram-bingham-vagones-lujo.webp" alt="Trem de luxo Belmond Hiram Bingham" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Belmond Hiram Bingham: o máximo em sofisticação ferroviária com vagões estilo anos 1920, gastronomia gourmet e serviço impecável.</figcaption>
+</figure>
 
 O trem de ida deve chegar a Aguas Calientes **pelo menos 1 hora e meia antes** do horário marcado no seu ingresso de Machu Picchu para dar tempo de pegar o ônibus Consettur e passar pela catraca com tranquilidade.
 

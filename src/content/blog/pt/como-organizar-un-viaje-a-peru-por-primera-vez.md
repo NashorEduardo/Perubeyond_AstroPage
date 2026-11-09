@@ -7,7 +7,7 @@ date: "8 de Novembro, 2026"
 updatedDate: "Novembro 2026"
 author: "Peru Beyond Team"
 category: "Guias de Viagem"
-heroImage: "/images/Machupicchu/FT 8.webp"
+heroImage: "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/hero.webp"
 heroPosition: "center 45%"
 readingTime: "20 min de leitura"
 views: "7.1k"
@@ -39,6 +39,14 @@ relatedTours:
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
   - "tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias"
   - "tour-lima-huacachina-machu-picchu-montana-arcoiris-10-dias"
+imgAlbum:
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/01-lima-centro-historico-plaza-mayor.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/02-islas-ballestas-paracas-fauna.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/03-oasis-huacachina-dunas-desierto.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/04-arequipa-plaza-armas-volcan-misti.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/05-cusco-calle-piedra-12-angulos.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/06-valle-sagrado-terrazas-pisac.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/07-lago-titicaca-islas-flotantes-uros.webp"
 ---
 
 Poucos lugares no mundo despertam tanta emoção quanto o Peru. Em um único país, você encontra uma das Sete Maravilhas do Mundo Moderno, a capital gastronômica mais premiada da América Latina, dunas gigantes no deserto costeiro e cordilheiras andinas coroadas de neve eterna. Não é à toa que **viajar para o Peru pela primeira vez** é o sonho de milhares de viajantes.
@@ -87,6 +95,17 @@ Em razão das regras rígidas de preservação ambiental e arqueológica, os ing
 
 ## 3. Documentação e Requisitos Oficiais de Entrada no Peru
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/01-lima-centro-historico-plaza-mayor.webp" alt="Centro Histórico de Lima e Plaza Mayor" loading="lazy" />
+    <figcaption>Lima Colonial: capital gastronômica e rica herança arquitetônica virreinal.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/02-islas-ballestas-paracas-fauna.webp" alt="Ilhas Ballestas em Paracas" loading="lazy" />
+    <figcaption>Ilhas Ballestas em Paracas: leões-marinhos e pinguins em santuário marinho.</figcaption>
+  </figure>
+</div>
+
 - **RG Original para Brasileiros:** Cidadãos brasileiros podem viajar apenas com o documento de identidade civil (RG) original em bom estado, com menos de 10 anos de emissão. CNH, certidão de nascimento ou carteiras de classe (OAB, CRM) **não são aceitas** pela imigração.
 - **Passaporte:** Caso prefira usar o passaporte, ele deve ter validade mínima de 6 meses.
 - **Sem Visto:** Brasileiros não precisam de visto de turismo para estadias de até 90 dias.
@@ -95,6 +114,17 @@ Em razão das regras rígidas de preservação ambiental e arqueológica, os ing
 ---
 
 ## 4. Como Vencer o Soroche: A Rota Inteligente de Aclimatação
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/03-oasis-huacachina-dunas-desierto.webp" alt="Oásis de Huacachina em Ica" loading="lazy" />
+    <figcaption>Oásis de Huacachina: lagoa natural no coração das dunas do deserto costeiro.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/04-arequipa-plaza-armas-volcan-misti.webp" alt="Praça de Armas de Arequipa e vulcão Misti" loading="lazy" />
+    <figcaption>Arequipa Cidade Branca: construções em pedra sillar branca com o vulcão Misti ao fundo.</figcaption>
+  </figure>
+</div>
 
 O erro mais comum de quem viaja pela primeira vez é desembarcar em Cusco (**3.399 metros de altitude**) e começar a passear e subir ladeiras imediatamente. O ar rarefeito costuma provocar dor de cabeça, náuseas e cansaço.
 
@@ -119,6 +149,17 @@ A **Estratégia Escalonada da Peru Beyond** elimina esse risco:
 
 ## 5. Orçamento Real, Moeda e Gastos Diários
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/05-cusco-calle-piedra-12-angulos.webp" alt="Pedra dos Doze Ângulos em Cusco" loading="lazy" />
+    <figcaption>Cusco Imperial: engenharia inca precisa nas ruelas históricas da antiga capital.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/06-valle-sagrado-terrazas-pisac.webp" alt="Terraços agrícolas de Pisac no Vale Sagrado" loading="lazy" />
+    <figcaption>Vale Sagrado dos Incas: terraços agrícolas ceremoniais esculpidos nas encostas.</figcaption>
+  </figure>
+</div>
+
 O Peru oferece uma excelente relação custo-benefício para os brasileiros:
 - **Moeda Local:** O **Sol Peruano (PEN)** vale aproximadamente entre R$ 1,40 e R$ 1,55 (cotações de referência).
 - **Notas de Dólar:** Devem estar impecáveis, sem nenhum pequeno rasgo ou carimbo.
@@ -128,6 +169,11 @@ O Peru oferece uma excelente relação custo-benefício para os brasileiros:
 ---
 
 ## 6. O que Levar na Mala: Roupas em Camadas
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/07-lago-titicaca-islas-flotantes-uros.webp" alt="Ilhas flutuantes dos Uros no Lago Titicaca" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Ilhas Flutuantes dos Uros no Lago Titicaca: comunidade ancestral que vive sobre ilhas de junco totora no lago navegável mais alto do mundo.</figcaption>
+</figure>
 
 No clima andino, o dia começa frio, esquenta bastante sob o sol do meio-dia e volta a esfriar intensamente à noite:
 - **Dia Ens solarado:** Camiseta respirável, óculos escuros e protetor solar com fator alto (a radiação UV nos Andes é intensa).

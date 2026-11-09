@@ -7,7 +7,7 @@ date: "November 8, 2026"
 updatedDate: "November 2026"
 author: "Peru Beyond Team"
 category: "Experiences"
-heroImage: "/images/Machupicchu/IMG_7711.webp"
+heroImage: "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/hero.webp"
 heroPosition: "center 45%"
 readingTime: "22 min read"
 views: "7.8k"
@@ -39,6 +39,14 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "cusco-machu-picchu-3d-2n"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
+imgAlbum:
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/01-perurail-expedition-vagones.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/02-perurail-vistadome-ventanas-panoramicas.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/03-perurail-observatory-balcon-aire-libre.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/04-inca-rail-360-vagones-modernos.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/05-estacion-ollantaytambo-embarque.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/06-paisaje-canon-urubamba-rio-vilcanota.webp"
+  - "/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/07-belmond-hiram-bingham-vagones-lujo.webp"
 ---
 
 The scenic **train to Machu Picchu** is celebrated across the travel world as one of the most breathtaking railway journeys on Earth. As the train tracks snake parallel to the sacred Vilcanota (Urubamba) River, the scenery transitions from the terraced agricultural hillsides of the Sacred Valley into the lush, emerald cloud forest guarding the Inca citadel.
@@ -80,6 +88,17 @@ Established in 2007 by Peruvian hospitality professionals, Inca Rail modernized 
 ---
 
 ## 3. Comprehensive Breakdown of Each Service Tier
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/01-perurail-expedition-vagones.webp" alt="PeruRail Expedition wagon interior" loading="lazy" />
+    <figcaption>PeruRail Expedition: comfortable seating and great value for travel.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/02-perurail-vistadome-ventanas-panoramicas.webp" alt="PeruRail Vistadome panoramic glass ceiling" loading="lazy" />
+    <figcaption>PeruRail Vistadome: wraparound glass ceiling and live folklore performance.</figcaption>
+  </figure>
+</div>
 
 ### 3.1. Standard Tourist Class: Expedition vs. The Voyager
 These budget-friendly options deliver high comfort, spotless interiors, and panoramic vistas at accessible price points.
@@ -133,6 +152,17 @@ For travelers celebrating milestones or seeking world-class luxury.
 
 ## 4. Train Stations: Where Do You Depart From?
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/03-perurail-observatory-balcon-aire-libre.webp" alt="Vistadome Observatory outdoor balcony car" loading="lazy" />
+    <figcaption>Vistadome Observatory: open-air viewing balcony accompanied by live Andean music.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/04-inca-rail-360-vagones-modernos.webp" alt="Inca Rail The 360 modern cars" loading="lazy" />
+    <figcaption>Inca Rail The 360°: sleek modern interior, interactive guide app and organic snacks.</figcaption>
+  </figure>
+</div>
+
 Understanding where your train leaves from is vital for avoiding missed departures:
 
 ### 4.1. Ollantaytambo Station (Sacred Valley)
@@ -152,12 +182,28 @@ Operated by both PeruRail and Inca Rail: a comfortable private tourist coach tak
 
 ## 5. Official Luggage Rules on Machu Picchu Trains
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/05-estacion-ollantaytambo-embarque.webp" alt="Ollantaytambo railway station platform" loading="lazy" />
+    <figcaption>Ollantaytambo Station: the main railway hub connecting Cusco with Machu Picchu.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/06-paisaje-canon-urubamba-rio-vilcanota.webp" alt="Urubamba River canyon views from the train" loading="lazy" />
+    <figcaption>Dramatic canyon landscapes: following the roaring Urubamba River into cloud forest.</figcaption>
+  </figure>
+</div>
+
 - **Strict Carry-on Allowance:** Each passenger is restricted to **one piece of hand luggage** (backpack or small duffle) weighing a maximum of **5 kg (11 lbs) to 8 kg**, with total dimensions not exceeding 157 cm (62 linear inches).
 - **Managing Large Luggage:** Large rolling suitcases (23 kg) are stored safely free of charge in your hotel's locked luggage room in Cusco or Ollantaytambo. You simply bring clothing and toiletries needed for your stay in Aguas Calientes.
 
 ---
 
 ## 6. How to Coordinate Train Schedules with Citadel Entry Permits
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/tren-a-machu-picchu-tipos-de-servicio-y-diferencias/07-belmond-hiram-bingham-vagones-lujo.webp" alt="Belmond Hiram Bingham luxury train Pullman car" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Belmond Hiram Bingham: the epitome of luxury rail travel featuring 1920s Pullman carriages, gourmet dining and open bar.</figcaption>
+</figure>
 
 > **💡 Peru Beyond Golden Rule:** Your outbound train must arrive in Aguas Calientes **at least 1.5 hours before** your scheduled Machu Picchu entry time slot.
 

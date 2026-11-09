@@ -7,7 +7,7 @@ date: "8 de Novembro, 2026"
 updatedDate: "Novembro 2026"
 author: "Peru Beyond Team"
 category: "Guias de Viagem"
-heroImage: "/images/Cuzco/cusco.webp"
+heroImage: "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/hero.webp"
 heroPosition: "center 40%"
 readingTime: "18 min de leitura"
 views: "6.2k"
@@ -39,6 +39,14 @@ relatedTours:
   - "tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
   - "machu-picchu-full-day-tour"
+imgAlbum:
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/01-malecon-miraflores-lima-seguridad.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/02-barranco-puente-suspiros-turismo.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/03-plaza-armas-cusco-patrullaje-turistico.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/04-valle-sagrado-pueblo-tranquilo-ollantaytambo.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/05-asistencia-turistica-peru-viajeros.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/06-transporte-seguro-aeropuerto-lima.webp"
+  - "/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/07-mercado-san-pedro-cusco-seguridad.webp"
 ---
 
 Planejar uma viagem para o berço do Império Inca é um dos projetos mais fascinantes para qualquer viajante. Contudo, antes de emitir passagens aéreas e reservar hotéis, é comum surgir uma dúvida essencial: **é seguro viajar para o Peru hoje em dia?**
@@ -78,6 +86,17 @@ O turismo sustenta mais de um milhão de famílias peruanas. Por isso, as autori
 
 ## 3. Segurança Cidade por Cidade: Onde Ficar e o que Evitar
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/01-malecon-miraflores-lima-seguridad.webp" alt="Calçadão seguro de Miraflores em Lima" loading="lazy" />
+    <figcaption>Orla de Miraflores: ciclovias e parques costeiros com patrulhamento 24 horas.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/02-barranco-puente-suspiros-turismo.webp" alt="Bairro boêmio e turístico de Barranco em Lima" loading="lazy" />
+    <figcaption>Barranco boêmio: gastronomia premiada e ambiente seguro para caminhar à noite.</figcaption>
+  </figure>
+</div>
+
 ### 3.1. Lima: Capital Gastronômica
 Metrópole litorânea com quase 10 milhões de habitantes, onde a segurança varia conforme o bairro:
 - **Bairros Recomendados:** **Miraflores**, **San Isidro** e **Barranco** abrigam a ampla maioria dos hotéis de alto padrão. Têm calçadões à beira-mar (*Malecón*), parques floridos, ciclovias e patrulhamento do *Serenazgo* 24 horas por dia.
@@ -108,6 +127,17 @@ A partir do aeroporto de Lima, operam dezenas de conexões domésticas diárias 
 
 ## 4. Segurança no Transporte: Como se Locomover com Calma
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/03-plaza-armas-cusco-patrullaje-turistico.webp" alt="Plaza de Armas de Cusco com segurança turística" loading="lazy" />
+    <figcaption>Centro Histórico de Cusco: presença ativa da Polícia de Turismo dia e noite.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/04-valle-sagrado-pueblo-tranquilo-ollantaytambo.webp" alt="Vila pacífica de Ollantaytambo no Vale Sagrado" loading="lazy" />
+    <figcaption>Ollantaytambo: atmosfera acolhedora e embarque seguro no trem para Machu Picchu.</figcaption>
+  </figure>
+</div>
+
 ### 4.1. Táxis em Aeroportos e Cidades
 - **Aeroporto de Lima:** Dentro do saguão de desembarque, contrate táxis oficiais nos guichês credenciados (como Green Taxi ou Taxi 365) com valor fixo, ou prefira o transfer privativo da Peru Beyond.
 - **Aplicativos Confiáveis:** Em Lima, use **Uber** ou **Cabify**, que oferecem rastreamento GPS e identificação clara do motorista.
@@ -119,6 +149,17 @@ Para viagens terrestres a Paracas ou Ica, opte por empresas conceituadas com ter
 ---
 
 ## 5. Saúde, Alimentação e Prevenção do Mal de Altitude (Soroche)
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/05-asistencia-turistica-peru-viajeros.webp" alt="Posto oficial de atendimento ao viajante no Peru" loading="lazy" />
+    <figcaption>Rede de Assistência IPERÚ: suporte oficial gratuito 24/7 para turistas.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/06-transporte-seguro-aeropuerto-lima.webp" alt="Táxi oficial e traslados privados no aeroporto de Lima" loading="lazy" />
+    <figcaption>Traslados oficiais autorizados e motoristas credenciados para viagens sem preocupações.</figcaption>
+  </figure>
+</div>
 
 ### 5.1. Como Evitar o Soroche em Cusco (3.399 m)
 - **Primeiro Dia:** Descanse algumas horas no hotel, caminhe devagar e beba bastante água ou chá quente de **coca** ou **muña**.
@@ -134,6 +175,11 @@ Ter um seguro viagem com cobertura médica hospitalar é fundamental para qualqu
 ---
 
 ## 6. Dinheiro, Câmbio e Conectividade
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/07-mercado-san-pedro-cusco-seguridad.webp" alt="Mercado Central de San Pedro em Cusco" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Mercado de San Pedro: cores, frutas exóticas e artesanatos andinos para vivenciar a cultura local com tranquilidade.</figcaption>
+</figure>
 
 - **Moeda e Dólares:** A moeda é o **Sol Peruano (PEN)**. Dólares em espécie devem estar em perfeito estado, sem rasgos ou manchas, pois notas danificadas não são aceitas nos bancos locais.
 - **Cartões:** Cartões de crédito e débito internacionais (Visa, Mastercard, Nomad, Wise) são amplamente aceitos com aproximação em restaurantes e hotéis.

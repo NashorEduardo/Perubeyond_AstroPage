@@ -7,7 +7,7 @@ date: "November 8, 2026"
 updatedDate: "November 2026"
 author: "Peru Beyond Team"
 category: "Travel Guides"
-heroImage: "/images/Machupicchu/FT 8.webp"
+heroImage: "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/hero.webp"
 heroPosition: "center 45%"
 readingTime: "20 min read"
 views: "7.1k"
@@ -39,6 +39,14 @@ relatedTours:
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
   - "tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias"
   - "tour-lima-huacachina-machu-picchu-montana-arcoiris-10-dias"
+imgAlbum:
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/01-lima-centro-historico-plaza-mayor.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/02-islas-ballestas-paracas-fauna.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/03-oasis-huacachina-dunas-desierto.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/04-arequipa-plaza-armas-volcan-misti.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/05-cusco-calle-piedra-12-angulos.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/06-valle-sagrado-terrazas-pisac.webp"
+  - "/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/07-lago-titicaca-islas-flotantes-uros.webp"
 ---
 
 Very few nations on Earth combine a New 7 Wonder of the World, the recognized gastronomic capital of the Americas, towering Pacific coastal dunes, and snowcapped Andean peaks exceeding 6,000 meters in a single journey. Because of this extraordinary variety, **first time travel to Peru** is high on the bucket list of discerning travelers worldwide.
@@ -87,6 +95,17 @@ Because Peru enforces strict heritage conservation laws, waiting until the last 
 
 ## 3. Official Entry Requirements and Documents for Peru
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/01-lima-centro-historico-plaza-mayor.webp" alt="Historic Plaza Mayor of Lima" loading="lazy" />
+    <figcaption>Colonial Lima: culinary capital and historical jewel of South America.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/02-islas-ballestas-paracas-fauna.webp" alt="Ballestas Islands marine wildlife Paracas" loading="lazy" />
+    <figcaption>Ballestas Islands: sea lions and Humboldt penguins off the desert coast.</figcaption>
+  </figure>
+</div>
+
 Entering Peru as an international tourist is remarkably straightforward:
 
 1. **Valid Passport:** Must have at least 6 months of validity remaining from your arrival date and empty stamp pages.
@@ -97,6 +116,17 @@ Entering Peru as an international tourist is remarkably straightforward:
 ---
 
 ## 4. The Smart Altitude Strategy: Avoiding Soroche Step by Step
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/03-oasis-huacachina-dunas-desierto.webp" alt="Huacachina desert oasis in Ica" loading="lazy" />
+    <figcaption>Huacachina Oasis: a palm-fringed natural lagoon surrounded by giant dunes.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/04-arequipa-plaza-armas-volcan-misti.webp" alt="Arequipa main square and Misti volcano" loading="lazy" />
+    <figcaption>Arequipa the White City: volcanic sillar architecture under Mount Misti.</figcaption>
+  </figure>
+</div>
 
 The single most common mistake first-time travelers make is underestimating altitude. Flying directly from sea level into Cusco (**3,399 m / 11,152 ft**) and immediately climbing steep cobblestone streets often results in severe headaches, fatigue, and nausea (*soroche*).
 
@@ -121,6 +151,17 @@ Step 5: High-Altitude Treks     ──► Humantay Lake (4,200 m) or Rainbow Mou
 
 ## 5. Realistic Travel Budget, Currency & Payments
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/05-cusco-calle-piedra-12-angulos.webp" alt="Hatun Rumiyoc twelve-angled stone Cusco" loading="lazy" />
+    <figcaption>Imperial Cusco: precision Inca stonework meeting Spanish colonial elegance.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/06-valle-sagrado-terrazas-pisac.webp" alt="Pisac agricultural terraces Sacred Valley" loading="lazy" />
+    <figcaption>Sacred Valley of the Incas: breathtaking mountain terraces overlooking the Urubamba.</figcaption>
+  </figure>
+</div>
+
 Peru offers outstanding value across all travel styles. Here is a realistic cost breakdown for 2026:
 
 ### 5.1. Daily Cost Estimates (Per Person)
@@ -143,6 +184,11 @@ Peru offers outstanding value across all travel styles. Here is a realistic cost
 ---
 
 ## 6. Practical Tips: Electricity, Weather & Packing
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/07-lago-titicaca-islas-flotantes-uros.webp" alt="Uros floating islands Lake Titicaca" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Floating Uros Islands on Lake Titicaca: an ancient civilization living upon woven totora reed islands on the highest navigable lake.</figcaption>
+</figure>
 
 ### 6.1. Electricity and Plugs
 - Standard voltage in Peru is **220V at 60Hz**.
