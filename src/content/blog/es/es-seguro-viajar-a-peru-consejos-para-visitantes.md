@@ -87,17 +87,6 @@ El turismo es uno de los principales motores económicos del Perú, generando m�
 
 ## 3. Seguridad Ciudad por Ciudad: Zonas Seguras y Precauciones
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/01-malecon-miraflores-lima-seguridad.webp" alt="Malecón de Miraflores seguro en Lima" loading="lazy" />
-    <figcaption>Malecón de Miraflores: ciclovías y parques con resguardo municipal permanente.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/02-barranco-puente-suspiros-turismo.webp" alt="Distrito turístico de Barranco en Lima" loading="lazy" />
-    <figcaption>Barranco bohemio: iluminación nocturna, restaurantes y ambiente peatonal seguro.</figcaption>
-  </figure>
-</div>
-
 ### 3.1. Lima: La Capital Gastronómica
 Lima es una metrópoli de casi 10 millones de habitantes. Como en toda gran capital del mundo (como Madrid, Nueva York o São Paulo), la seguridad varía según el distrito que visites.
 
@@ -116,18 +105,19 @@ La región del Cusco es reconocida internacionalmente como uno de los entornos m
 
 ---
 
-## 4. Seguridad en el Transporte: Cómo Moverse sin Riesgos
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/03-plaza-armas-cusco-patrullaje-turistico.webp" alt="Plaza de Armas de Cusco resguardada por Policía de Turismo" loading="lazy" />
-    <figcaption>Centro Histórico del Cusco: patrullaje continuo de POLTUR de día y noche.</figcaption>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/01-malecon-miraflores-lima-seguridad.webp" alt="Malecón de Miraflores seguro en Lima" loading="lazy" />
+    <figcaption>Malecón de Miraflores: ciclovías y parques con resguardo municipal permanente.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/04-valle-sagrado-pueblo-tranquilo-ollantaytambo.webp" alt="Ollantaytambo en el Valle Sagrado de los Incas" loading="lazy" />
-    <figcaption>Ollantaytambo: comunidad andina tranquila y punto de partida seguro hacia el tren.</figcaption>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/02-barranco-puente-suspiros-turismo.webp" alt="Distrito turístico de Barranco en Lima" loading="lazy" />
+    <figcaption>Barranco bohemio: iluminación nocturna, restaurantes y ambiente peatonal seguro.</figcaption>
   </figure>
 </div>
+
+
+## 4. Seguridad en el Transporte: Cómo Moverse sin Riesgos
 
 El transporte es el aspecto donde los turistas cometen más errores por falta de información. Seguir estas tres pautas garantiza un viaje sin sobresaltos:
 
@@ -144,18 +134,19 @@ El acceso ferroviario a Machu Picchu está operado por dos prestigiosas empresas
 
 ---
 
-## 5. Seguridad Sanitaria, Alimentaria y Prevención de Altitud
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/05-asistencia-turistica-peru-viajeros.webp" alt="Módulo de orientación y asistencia turística en Perú" loading="lazy" />
-    <figcaption>Red de Asistencia IPERÚ: soporte oficial 24/7 en aeropuertos y plazas principales.</figcaption>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/03-plaza-armas-cusco-patrullaje-turistico.webp" alt="Plaza de Armas de Cusco resguardada por Policía de Turismo" loading="lazy" />
+    <figcaption>Centro Histórico del Cusco: patrullaje continuo de POLTUR de día y noche.</figcaption>
   </figure>
   <figure>
     <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/06-transporte-seguro-aeropuerto-lima.webp" alt="Transporte oficial y transfers privados en Lima" loading="lazy" />
     <figcaption>Taxis oficiales autorizados y traslados privados coordinados para traslados sin riesgos.</figcaption>
   </figure>
 </div>
+
+
+## 5. Seguridad Sanitaria, Alimentaria y Prevención de Altitud
 
 La gran mayoría de inconvenientes que sufren los turistas en Perú no están relacionados con la delincuencia, sino con la salud digestiva y la falta de aclimatación al mal de montaña (*soroche*).
 
@@ -177,12 +168,13 @@ Es un requisito de sentido común contratar una póliza de seguro médico intern
 
 ---
 
-## 6. Dinero, Cajeros, Tarjetas y Conectividad
-
 <figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
   <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/07-mercado-san-pedro-cusco-seguridad.webp" alt="Mercado Central de San Pedro en Cusco" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
   <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Mercado Central de San Pedro: un festín de colores y aromas andinos para recorrer con tranquilidad y respeto cultural.</figcaption>
 </figure>
+
+
+## 6. Dinero, Cajeros, Tarjetas y Conectividad
 
 ### 6.1. Manejo de Efectivo y Cambio de Moneda
 - **La Moneda:** La moneda oficial es el **Sol Peruano (PEN)**. Aunque en agencias, trenes y hoteles se aceptan dólares estadounidenses (USD), para tus compras cotidianas (taxis, mercados, artesanías, propinas) requerirás billetes y monedas en soles.
@@ -209,6 +201,12 @@ Perú es uno de los destinos predilectos para quienes viajan en solitario. La re
 
 ---
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/04-valle-sagrado-pueblo-tranquilo-ollantaytambo.webp" alt="Ollantaytambo en el Valle Sagrado de los Incas" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Ollantaytambo: comunidad andina tranquila y punto de partida seguro hacia el tren.</figcaption>
+</figure>
+
+
 ## 8. Directorio Oficial y Números de Emergencia en Perú
 
 Guarda estos números en tu teléfono antes de iniciar tu viaje:
@@ -228,6 +226,12 @@ Viajar a Perú es una experiencia transformadora que supera con creces las expec
 Actuando con sentido común, respetando las recomendaciones de altitud y contratando tus servicios con una agencia turística formal, registrada y con experiencia comprobada como **Peru Beyond**, tu viaje por Lima, el Valle Sagrado, Cusco y la sagrada ciudadela de Machu Picchu será una vivencia plenamente segura, impecablemente coordinada y para recordar toda la vida.
 
 ---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/05-asistencia-turistica-peru-viajeros.webp" alt="Módulo de orientación y asistencia turística en Perú" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Red de Asistencia IPERÚ: soporte oficial 24/7 en aeropuertos y plazas principales.</figcaption>
+</figure>
+
 
 ## 10. Preguntas Frecuentes sobre la Seguridad en Perú (FAQs)
 

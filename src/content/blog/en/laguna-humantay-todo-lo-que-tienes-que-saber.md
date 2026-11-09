@@ -39,6 +39,10 @@ relatedTours:
   - "trekking-laguna-humantay-full-day"
   - "cusco-machu-picchu-humantay-4d-3n"
   - "cusco-machu-picchu-humantay-montana-colores-5d-4n"
+imgAlbum:
+  - "/images/Blog/laguna-humantay-todo-lo-que-tienes-que-saber/aguas-turquesas-laguna.webp"
+  - "/images/Blog/laguna-humantay-todo-lo-que-tienes-que-saber/ascenso-soraypampa-caminata.webp"
+  - "/images/Blog/laguna-humantay-todo-lo-que-tienes-que-saber/nevado-humantay-glaciar.webp"
 ---
 
 Regarded as one of the most mesmerizing alpine jewels in South America, **Humantay Lake** (Laguna Humantay) is a turquoise glacial lagoon nestled directly beneath hanging ice falls in the Vilcabamba Mountain Range. Situated at the base of snow-capped Mount Humantay and the legendary **Apu Salkantay**, this natural sanctuary is one of the most sought-after day hikes from Cusco.

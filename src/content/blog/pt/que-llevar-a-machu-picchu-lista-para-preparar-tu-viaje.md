@@ -66,23 +66,11 @@ Consulte a tabela abaixo para organizar sua mochila de acordo com a época do an
 | **Passeio de 1 Dia (Full Day de Trem)** | Roupas confortáveis em camadas, calça de trilha leve | Tênis macio com sola antiderrapante de borracha | Boné com aba, repelente contra o mosquito Plumilla | Carregador portátil (Powerbank), dinheiro em Soles | Mochila compacta de 15 a 20 L (máx. 3 kg) |
 | **Subida de Montanhas (Huayna Picchu / Montanha)**| Camiseta técnica de secagem rápida + jaqueta leve corta-vento| Bota de trilha com sola de alta aderência (Vibram) | Faixa absorvente de suor, toalha compacta de microfibra | Eletrólitos para hidratação, castanhas e lanche calórico | Mochila ergonômica ultraleve (máx. 3 kg) |
 
-
 *Usar roupas adequadas e calçados com boa aderência garante um passeio agradável e seguro pelas escadarias de pedra.*
 
 ---
 
 ## 2. Documentos Obrigatórios (Não Esqueça!)
-
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/01-mochila-trekking-equipaje-mano.webp" alt="Mochila de trekking de 20-30 litros permitida" loading="lazy" />
-    <figcaption>Mochila de ataque (máx. 20-30L): tamanho regulamentar para o trem e a cidadela.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/02-calzado-trekking-botas-senderismo.webp" alt="Botas de caminhada impermeáveis" loading="lazy" />
-    <figcaption>Botas de trilha antiderrapantes para escadarias de pedra antigas.</figcaption>
-  </figure>
-</div>
 
 Na portaria principal de Machu Picchu, a fiscalização de documentos é rigorosa. Você não entrará se esquecer os seguintes itens originais:
 
@@ -104,18 +92,13 @@ Na portaria principal de Machu Picchu, a fiscalização de documentos é rigoros
 
 ---
 
-## 3. Como se Vestir para Machu Picchu: O Sistema de 3 Camadas
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/07-pasaporte-boletos-oficiales-documentos.webp" alt="Passaporte original e ingressos oficiais para Machu Picchu" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Documentos indispensáveis: passaporte físico original válido e ingresso oficial impresso exigidos na entrada do parque.</figcaption>
+</figure>
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/03-ropa-impermeable-chamarra-lluvia.webp" alt="Jaqueta impermeável corta-vento" loading="lazy" />
-    <figcaption>Jaqueta impermeável e corta-vento: indispensável para o clima da selva nublada.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/04-proteccion-solar-sombrero-lentes.webp" alt="Chapéu de abas largas e óculos escuros com proteção UV" loading="lazy" />
-    <figcaption>Proteção solar completa: chapéu de abas e óculos UV contra a radiação andina.</figcaption>
-  </figure>
-</div>
+
+## 3. Como se Vestir para Machu Picchu: O Sistema de 3 Camadas
 
 Em Machu Picchu, a temperatura oscila bastante ao longo do passeio:
 
@@ -139,18 +122,19 @@ Camiseta técnica dry-fit          Blusa de fleece leve ou casaco         Jaquet
 
 ---
 
-## 4. Calçados Ideais e Calças Recomendadas
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/05-repelente-bloqueador-botella-agua.webp" alt="Garrafa de água reutilizável e repelente de insetos" loading="lazy" />
-    <figcaption>Hidratação e cuidados: garrafa reutilizável e repelente para mosquitos locais.</figcaption>
+    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/03-ropa-impermeable-chamarra-lluvia.webp" alt="Jaqueta impermeável corta-vento" loading="lazy" />
+    <figcaption>Jaqueta impermeável e corta-vento: indispensável para o clima da selva nublada.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/06-bastones-trekking-puntas-goma.webp" alt="Bastões de caminhada com ponteiras de borracha" loading="lazy" />
-    <figcaption>Bastões com pontas de borracha: obrigatórios para não desgastar as pedras incas.</figcaption>
+    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/04-proteccion-solar-sombrero-lentes.webp" alt="Chapéu de abas largas e óculos escuros com proteção UV" loading="lazy" />
+    <figcaption>Proteção solar completa: chapéu de abas e óculos UV contra a radiação andina.</figcaption>
   </figure>
 </div>
+
+
+## 4. Calçados Ideais e Calças Recomendadas
 
 Você caminhará por mais de mil degraus de granito construídos pelos incas:
 
@@ -167,12 +151,13 @@ Você caminhará por mais de mil degraus de granito construídos pelos incas:
 
 ---
 
-## 5. Regras de Mochila e Bagagem nos Trens
-
 <figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/07-pasaporte-boletos-oficiales-documentos.webp" alt="Passaporte original e ingressos oficiais para Machu Picchu" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Documentos indispensáveis: passaporte físico original válido e ingresso oficial impresso exigidos na entrada do parque.</figcaption>
+  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/02-calzado-trekking-botas-senderismo.webp" alt="Botas de caminhada impermeáveis" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Botas de trilha antiderrapantes para escadarias de pedra antigas.</figcaption>
 </figure>
+
+
+## 5. Regras de Mochila e Bagagem nos Trens
 
 ### Medidas Permitidas na Entrada de Machu Picchu:
 - Tamanho máximo da mochila: **40 x 40 x 20 centímetros**.
@@ -189,6 +174,12 @@ Você caminhará por mais de mil degraus de granito construídos pelos incas:
 
 ---
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/01-mochila-trekking-equipaje-mano.webp" alt="Mochila de trekking de 20-30 litros permitida" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Mochila de ataque (máx. 20-30L): tamanho regulamentar para o trem e a cidadela.</figcaption>
+</figure>
+
+
 ## 6. Saúde, Proteção Solar e Repelente contra Mosquitos
 
 1. **Protetor Solar FPS 50+:** O índice de radiação UV na altitude é extremo. Reaplique a cada 2 horas no rosto, orelhas e pescoço.
@@ -198,6 +189,12 @@ Você caminhará por mais de mil degraus de granito construídos pelos incas:
 5. **Remédios Pessoais Básicos:** Analgésicos para dor de cabeça, sachês de sais de reidratação para colocar na água e curativos para bolhas.
 
 ---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/05-repelente-bloqueador-botella-agua.webp" alt="Garrafa de água reutilizável e repelente de insetos" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Hidratação e cuidados: garrafa reutilizável e repelente para mosquitos locais.</figcaption>
+</figure>
+
 
 ## 7. Lista de Itens Proibidos em Machu Picchu
 
@@ -212,6 +209,12 @@ Para preservar o patrimônio histórico, os seguranças barram:
 - ❌ **Bebidas alcoólicas, cigarros tradicionais ou eletrônicos (vapes).**
 
 ---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/06-bastones-trekking-puntas-goma.webp" alt="Bastões de caminhada com ponteiras de borracha" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Bastões com pontas de borracha: obrigatórios para não desgastar as pedras incas.</figcaption>
+</figure>
+
 
 ## 8. Checklist Rápido para a Noite Anterior
 

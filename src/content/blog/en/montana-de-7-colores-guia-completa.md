@@ -39,6 +39,10 @@ relatedTours:
   - "trekking-montana-7-colores"
   - "trekking-palcoyo"
   - "cusco-machu-picchu-humantay-montana-colores-5d-4n"
+imgAlbum:
+  - "/images/Blog/montana-de-7-colores-guia-completa/franjas-minerales-colores.webp"
+  - "/images/Blog/montana-de-7-colores-guia-completa/caminata-caballos-cusipata.webp"
+  - "/images/Blog/montana-de-7-colores-guia-completa/cumbre-5200-metros.webp"
 ---
 
 Ranked as the second most visited tourist attraction in Peru after Machu Picchu, **Rainbow Mountain** (known natively in Quechua as **Vinicunca** or *Winikunka*) is one of South America's most staggering geological wonders. Located deep in the Vilcanota Mountain Range at an elevation exceeding 5,200 meters (17,060 feet), its mineralized ridges present a vivid spectrum of pink, turquoise, golden yellow, and deep terracotta.

@@ -39,6 +39,10 @@ relatedTours:
   - "trekking-montana-7-colores"
   - "trekking-palcoyo"
   - "cusco-machu-picchu-humantay-montana-colores-5d-4n"
+imgAlbum:
+  - "/images/Blog/montana-de-7-colores-guia-completa/franjas-minerales-colores.webp"
+  - "/images/Blog/montana-de-7-colores-guia-completa/caminata-caballos-cusipata.webp"
+  - "/images/Blog/montana-de-7-colores-guia-completa/cumbre-5200-metros.webp"
 ---
 
 Convertida en el segundo destino turístico más visitado de todo el Perú después de Machu Picchu, la **Montaña de 7 Colores** (conocida ancestralmente como **Vinicunca** o *Winikunka*) es una de las maravillas geológicas más sobrecogedoras del continente sudamericano. Situada en el corazón de la Cordillera del Vilcanota, a más de 5,200 metros sobre el nivel del mar, sus laderas lucen franjas cromáticas que van desde el fucsia y el turquesa hasta el dorado y el terracota.

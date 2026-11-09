@@ -95,61 +95,45 @@ Confira a visão geral dos 15 principais atrativos do país por região, altitud
 
 ### 3. Vale Sagrado dos Incas: Pisac e Ollantaytambo
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/01-montana-7-colores-vinicunca.webp" alt="Montanha de 7 Cores Vinicunca" loading="lazy" />
-    <figcaption>Montanha Vinicunca: faixas minerais coloridas a mais de 5.000 metros de altitude.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/02-laguna-humantay-nevado-salkantay.webp" alt="Lagoa Humantay turquesa sob a geleira Salkantay" loading="lazy" />
-    <figcaption>Lagoa Humantay: águas cor turquesa límpidas aos pés da geleira sagrada.</figcaption>
-  </figure>
-</div>
 - **Altitude:** 2.792 m a 2.972 m.
 - **Por que é imperdível:** Banhado pelo rio sagrado Urubamba, abriga a fortaleza de Pisac com seus terraços agrícolas nas montanhas e Ollantaytambo, a última "Cidade Inca Viva", com ruelas e canais de pedra preservados há seis séculos.
 - **Passeio sugerido:** [Tour Vale Sagrado Full Day com Almoço Buffet](/pt/tours/cusco/valle-sagrado-full-day-almuerzo-buffet).
 
 ### 4. Montanha de 7 Cores (Vinicunca)
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/03-valle-sagrado-moray-circulos-agricolas.webp" alt="Terraços circulares de Moray" loading="lazy" />
-    <figcaption>Moray: anfiteatros agrícolas circulares que criavam múltiplos microclimas.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/04-oasis-huacachina-sunset.webp" alt="Pôr do sol no oásis de Huacachina" loading="lazy" />
-    <figcaption>Huacachina ao entardecer: o único oásis natural no deserto da América do Sul.</figcaption>
-  </figure>
-</div>
 - **Altitude:** 5.200 metros.
 - **Por que é imperdível:** Fenômeno geológico mundial onde minerais expostos criam faixas em tons de vermelho, dourado, verde e lavanda aos pés do nevado Ausangate.
 - **Passeio sugerido:** [Trekking Montanha de 7 Cores](/pt/tours/cusco/trekking-montana-7-colores).
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/01-montana-7-colores-vinicunca.webp" alt="Montanha de 7 Cores Vinicunca" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Montanha Vinicunca: faixas minerais coloridas a mais de 5.000 metros de altitude.</figcaption>
+</figure>
+
+
 ### 5. Laguna Humantay
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/05-canon-colca-vuelo-condor.webp" alt="Voo do condor no Cânion do Colca" loading="lazy" />
-    <figcaption>Cânion do Colca: o dobro da profundidade do Grand Canyon e terra do condor andino.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/06-lago-titicaca-taquile-uros.webp" alt="Ilha Taquile no Lago Titicaca" loading="lazy" />
-    <figcaption>Lago Titicaca e Ilha Taquile: arte têxtil ancestral tombada pela UNESCO.</figcaption>
-  </figure>
-</div>
 - **Altitude:** 4.200 metros.
 - **Por que é imperdível:** Lagoa de águas azul-turquesa cristalinas alimentada pelo degelo da montanha sagrada Humantay (5.473 m), parte da rota do Salkantay.
 - **Passeio sugerido:** [Trekking Laguna Humantay Full Day](/pt/tours/cusco/trekking-laguna-humantay-full-day).
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/02-laguna-humantay-nevado-salkantay.webp" alt="Lagoa Humantay turquesa sob a geleira Salkantay" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Lagoa Humantay: águas cor turquesa límpidas aos pés da geleira sagrada.</figcaption>
+</figure>
+
+
 ### 6. Salinas de Maras e Terraços de Moray
 
-<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/07-selva-amazonica-puerto-maldonado.webp" alt="Reserva Nacional Tambopata na Amazônia peruana" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Amazônia Peruana (Tambopata): navegação fluvial em floresta primária com fauna e flora extraordinárias.</figcaption>
-</figure>
 - **Altitude:** 3.380 m a 3.500 m.
 - **Por que é imperdível:** Moray servia como laboratório agrícola inca com terraços circulares gerando até 20 microclimas térmicos. Perto dali, Maras reúne mais de 3.000 piscinas de sal rosa exploradas desde antes dos Incas.
 - **Passeio sugerido:** [Tour Maras, Moray e Salinas](/pt/tours/cusco/maras-moray-salineras-tour).
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/03-valle-sagrado-moray-circulos-agricolas.webp" alt="Terraços circulares de Moray" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Moray: anfiteatros agrícolas circulares que criavam múltiplos microclimas.</figcaption>
+</figure>
+
 
 ### 7. Chinchero, Terra do Arco-Íris
 - **Altitude:** 3.762 metros.
@@ -158,6 +142,12 @@ Confira a visão geral dos 15 principais atrativos do país por região, altitud
 ### 8. Oásis de Huacachina em Ica
 - **Altitude:** 400 metros.
 - **Por que é imperdível:** Uma lagoa natural cercada de palmeiras no meio das maiores dunas da América do Sul. Os passeios de buggy em alta velocidade e o pôr do sol no deserto são inesquecíveis.
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/04-oasis-huacachina-sunset.webp" alt="Pôr do sol no oásis de Huacachina" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Huacachina ao entardecer: o único oásis natural no deserto da América do Sul.</figcaption>
+</figure>
+
 
 ### 9. Reserva Nacional de Paracas e Ilhas Ballestas
 - **Altitude:** 0 metros (Nível do Mar).
@@ -195,11 +185,29 @@ Confira a visão geral dos 15 principais atrativos do país por região, altitud
 
 ---
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/05-canon-colca-vuelo-condor.webp" alt="Voo do condor no Cânion do Colca" loading="lazy" />
+    <figcaption>Cânion do Colca: o dobro da profundidade do Grand Canyon e terra do condor andino.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/06-lago-titicaca-taquile-uros.webp" alt="Ilha Taquile no Lago Titicaca" loading="lazy" />
+    <figcaption>Lago Titicaca e Ilha Taquile: arte têxtil ancestral tombada pela UNESCO.</figcaption>
+  </figure>
+</div>
+
+
 ## 2.16. Experiências Gastronômicas Imperdíveis em Cada Região
 Viajar pelo Peru é também uma jornada pelos sabores mais premiados da culinária mundial. Em cada um dos 15 destinos, você encontrará especialidades típicas que refletem a identidade dos povos locais:
 - **Na Costa (Lima e Paracas):** O clássico Ceviche de peixe branco fresco marinado em leche de tigre com milho choclo e batata-doce camote; Causa limeña recheada de siri ou frango com maionese caseira e abacate; e o Arroz con mariscos com aroma de ají amarillo.
 - **Na Cordilheira (Cusco e Vale Sagrado):** Sopa crioula andina; Lomo Saltado flambado em wok com cebola roxa e tomates; Truta grelhada pescada nos rios cristalinos do Vale Sagrado; e sobremesas com chocolate amargo de Quillabamba e café de especialidade premiado internacionalmente.
 - **No Deserto (Ica e Huacachina):** Degustação guiada de Pisco em adegas artesanais centenárias (como Vista Alegre e Tacama), provando pisco puro quebranta, acholado e deliciosos coquetéis Pisco Sour e Chilcano.
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/07-selva-amazonica-puerto-maldonado.webp" alt="Reserva Nacional Tambopata na Amazônia peruana" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Amazônia Peruana (Tambopata): navegação fluvial em floresta primária com fauna e flora extraordinárias.</figcaption>
+</figure>
+
 
 ## 2.17. Dicas de Ouro para Viajantes Brasileiros nos Pontos Turísticos
 1. **Entrada com RG:** Brasileiros não precisam de passaporte nem de visto; basta apresentar a Carteira de Identidade (RG) original emitida há menos de 10 anos.

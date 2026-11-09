@@ -77,17 +77,6 @@ To help you quickly evaluate the comfort level, altitude, and physical demands o
 
 ## 2. Altitude Management Protocol: The "Valley-First" Strategy
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/01-adultos-mayores-valle-sagrado-descanso.webp" alt="Relaxing gardens in Urubamba Sacred Valley" loading="lazy" />
-    <figcaption>Sacred Valley (2,870 m): mild weather and oxygen-rich air for gentle acclimatization.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/02-tren-confortable-machu-picchu-asientos.webp" alt="Comfortable train seats to Machu Picchu" loading="lazy" />
-    <figcaption>Comfortable panoramic trains: plush leather seats and attentive on-board service.</figcaption>
-  </figure>
-</div>
-
 Acute mountain sickness (*soroche*) can impact travelers of any age, but for senior travelers, proactive prevention is essential to avoid spikes in blood pressure, cardiovascular strain, or intense fatigue that could dampen the first days of your dream vacation.
 
 ### 2.1. The Critical Design Flaw to Avoid
@@ -110,18 +99,13 @@ Our non-negotiable recommendation for senior travelers is the **"Immediate Valle
 
 ---
 
-## 3. Machu Picchu for Older Adults: Choosing the Ideal Circuit
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/01-adultos-mayores-valle-sagrado-descanso.webp" alt="Relaxing gardens in Urubamba Sacred Valley" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Sacred Valley (2,870 m): mild weather and oxygen-rich air for gentle acclimatization.</figcaption>
+</figure>
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/03-cusco-centro-historico-paseo-tranquilo.webp" alt="Gentle walk in historic Cusco" loading="lazy" />
-    <figcaption>Leisurely Cusco: flat routes and scenic plazas without steep climbing.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/04-machu-picchu-circuitos-accesibles-andenes.webp" alt="Accessible viewpoints in Machu Picchu" loading="lazy" />
-    <figcaption>Accessible Machu Picchu: panoramic terraces with handrails and easy rest stops.</figcaption>
-  </figure>
-</div>
+
+## 3. Machu Picchu for Older Adults: Choosing the Ideal Circuit
 
 In June 2024, the Peruvian Ministry of Culture completely revamped the visitor routing system inside the Machu Picchu Sanctuary, replacing legacy free-roaming routes with three clearly delineated official circuits (Circuit 1 Panoramic, Circuit 2 Classic, and Circuit 3 Royalty). Selecting the right ticket type is crucial for your comfort and safety.
 
@@ -145,18 +129,19 @@ Circuit 2 is the longest of all circuits (nearly 3 hours of continuous stone wal
 
 ---
 
-## 4. Official Trekking Pole Regulations in Archaeological Sites
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/05-chinchero-demostracion-textil-asientos.webp" alt="Seated textile demonstration in Chinchero" loading="lazy" />
-    <figcaption>Comfortable cultural moments: seated weaving demonstrations with herbal teas.</figcaption>
+    <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/04-machu-picchu-circuitos-accesibles-andenes.webp" alt="Accessible viewpoints in Machu Picchu" loading="lazy" />
+    <figcaption>Accessible Machu Picchu: panoramic terraces with handrails and easy rest stops.</figcaption>
   </figure>
   <figure>
     <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/06-bus-consettur-aguas-calientes.webp" alt="Consettur tourist bus ascending to Machu Picchu" loading="lazy" />
     <figcaption>Consettur buses: safe and direct transit right to the sanctuary gates.</figcaption>
   </figure>
 </div>
+
+
+## 4. Official Trekking Pole Regulations in Archaeological Sites
 
 Walking sticks provide invaluable stability on centuries-old Andean stones. However, the Machu Picchu Sanctuary enforces strict preservation mandates:
 
@@ -166,12 +151,13 @@ Walking sticks provide invaluable stability on centuries-old Andean stones. Howe
 
 ---
 
-## 5. Scenic Trains & Consettur Buses: Comfort & Priority Boarding
-
 <figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/07-gastronomia-peruana-restaurante-cusco.webp" alt="Healthy Peruvian dining in historic Cusco courtyard" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Healthy, nourishing Andean cuisine: light, fresh local dishes enjoyed in serene colonial courtyards.</figcaption>
+  <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/03-cusco-centro-historico-paseo-tranquilo.webp" alt="Gentle walk in historic Cusco" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Leisurely Cusco: flat routes and scenic plazas without steep climbing.</figcaption>
 </figure>
+
+
+## 5. Scenic Trains & Consettur Buses: Comfort & Priority Boarding
 
 Navigating the transit to Machu Picchu should be a pleasurable highlight of your vacation rather than a stressful ordeal.
 
@@ -187,6 +173,12 @@ Modern shuttle buses operated by Consettur transport passengers on a 25-minute s
 - Simply present your passport to the Consettur boarding agent to be directed immediately onto the next departing shuttle with reserved, air-conditioned seating.
 
 ---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/02-tren-confortable-machu-picchu-asientos.webp" alt="Comfortable train seats to Machu Picchu" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Comfortable panoramic trains: plush leather seats and attentive on-board service.</figcaption>
+</figure>
+
 
 ## 6. Low-Impact Alternatives to High-Altitude Marvels
 
@@ -212,6 +204,12 @@ Rather than attempting to walk up the steep cobblestone streets of the bohemian 
 
 ---
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/05-chinchero-demostracion-textil-asientos.webp" alt="Seated textile demonstration in Chinchero" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Comfortable cultural moments: seated weaving demonstrations with herbal teas.</figcaption>
+</figure>
+
+
 ## 7. Packing List & Footwear Essentials for Mature Travelers
 
 Ensuring physical comfort in the Andes comes down to bringing the right clothing and footwear:
@@ -225,6 +223,12 @@ Ensuring physical comfort in the Andes comes down to bringing the right clothing
 4. **Compact Daypack (15-20 Liters):** Keep your daypack light. Carry only your water bottle, rain shell, prescription medications, original passport, and a light energy snack (almonds, dried fruit, or oat biscuits).
 
 ---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/viajar-a-peru-con-adultos-mayores-rutas-y-consejos/07-gastronomia-peruana-restaurante-cusco.webp" alt="Healthy Peruvian dining in historic Cusco courtyard" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Healthy, nourishing Andean cuisine: light, fresh local dishes enjoyed in serene colonial courtyards.</figcaption>
+</figure>
+
 
 ## 8. Frequently Asked Questions (FAQs)
 

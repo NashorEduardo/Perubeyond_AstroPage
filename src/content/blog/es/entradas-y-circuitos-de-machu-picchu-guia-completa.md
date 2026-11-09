@@ -39,6 +39,10 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "cusco-machu-picchu-3d-2n"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
+imgAlbum:
+  - "/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/circuito-clasico-foto.webp"
+  - "/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/terraza-superior-panoramica.webp"
+  - "/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/huayna-picchu-vista.webp"
 ---
 
 Planificar un viaje a la maravilla del mundo moderno es el sueño de millones de viajeros en todo el planeta. Sin embargo, en 2026 la visita a la ciudadela inca ya no funciona como hace algunos años. Con el objetivo de proteger el patrimonio arqueológico contra el desgaste del sobreturismo y organizar un flujo sostenible de visitantes, el **Ministerio de Cultura del Perú** implementó una nueva y rigurosa reglamentación que divide la visita a la *Llaqta Inka* en **3 grandes Circuitos Oficiales con 10 sub-rutas específicas**.

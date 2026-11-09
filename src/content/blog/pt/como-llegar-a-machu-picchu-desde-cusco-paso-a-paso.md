@@ -67,23 +67,11 @@ Antes de conhecer cada modalidade a fundo, compare na tabela abaixo as 5 princip
 | **Salkantay Trek (5 Dias / 4 Noites)** | **5 dias a pé (65 km)** | **Aventura** (Eco-lodges e domos geodésicos) | **Muito Exigente** (Passo a 4.630 m de altitude)| **$450 - $700 USD** | Trilheiros que buscam geleiras e floresta tropical |
 | **Rota por Hidroelétrica (Mochileira)** | **7h30 a 9h00** | **Baixo** (6h de van por curvas + 10 km de trilha)| **Moderado** (Caminhada plana de 2h30 a 3h) | **$90 - $130 USD** | Mochileiros com muito tempo e orçamento restrito |
 
-
 *A rota férrea contornando o Rio Urubamba pelo Vale Sagrado é uma das mais fascinantes e cênicas do planeta.*
 
 ---
 
 ## 2. Por que não existem estradas diretas até Machu Picchu?
-
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/01-transporte-cusco-valle-sagrado-ruta.webp" alt="Traslado cênico de Cusco para Ollantaytambo" loading="lazy" />
-    <figcaption>Passo 1: Traslado cênico por terra de Cusco até a estação de Ollantaytambo (1h 45m).</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/02-estacion-ollantaytambo-tren.webp" alt="Plataforma de embarque em Ollantaytambo" loading="lazy" />
-    <figcaption>Passo 2: Embarque no trem panorâmico rumo a Aguas Calientes.</figcaption>
-  </figure>
-</div>
 
 Muitos viajantes brasileiros se perguntam: *Por que não há uma rodovia direta ligando Cusco até a entrada da cidadela de Machu Picchu?*
 
@@ -97,18 +85,19 @@ A explicação envolve barreiras geográficas extremas e proteção ecológica:
 
 ---
 
-## 3. Opção 1: De Trem Passo a Passo (A Rota Mais Confortável e Procurada)
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/03-recorrido-tren-rio-urubamba.webp" alt="Linha férrea contornando o rio Urubamba" loading="lazy" />
-    <figcaption>Viagem de trem: 1h 40m de paisagens fascinantes descendo o rio Vilcanota.</figcaption>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/01-transporte-cusco-valle-sagrado-ruta.webp" alt="Traslado cênico de Cusco para Ollantaytambo" loading="lazy" />
+    <figcaption>Passo 1: Traslado cênico por terra de Cusco até a estação de Ollantaytambo (1h 45m).</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/04-aguas-calientes-pueblo-machu-picchu.webp" alt="Chegada a Aguas Calientes Machu Picchu Pueblo" loading="lazy" />
-    <figcaption>Aguas Calientes: vila aos pés das montanhas imponentes da selva alta.</figcaption>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/02-estacion-ollantaytambo-tren.webp" alt="Plataforma de embarque em Ollantaytambo" loading="lazy" />
+    <figcaption>Passo 2: Embarque no trem panorâmico rumo a Aguas Calientes.</figcaption>
   </figure>
 </div>
+
+
+## 3. Opção 1: De Trem Passo a Passo (A Rota Mais Confortável e Procurada)
 
 A rota ferroviária é a preferida por mais de 85% dos turistas internacionais. Ela se divide em **três etapas cronológicas**:
 
@@ -150,7 +139,6 @@ Existem duas operadoras oficiais no Peru: **PeruRail** e **Inca Rail**, com cate
 | **Inca Rail** | **The First Class** | Vagão luxuoso com música ao vivo, lounge exclusivo e menu degustação | Almoço gourmet em 3 passos, carta de vinhos e aula de pisco sour | $170 - $240 USD |
 | **Inca Rail** | **The Private** | Vagão privativo exclusivo para famílias ou grupos fechados (até 8 pessoas)| Chef particular a bordo, champanhe livre e traslados privativos | Sob consulta |
 
-
 *Os tetos de vidro dos trens panorâmicos permitem apreciar as muralhas de pedra do cânion andino.*
 
 ---
@@ -175,18 +163,19 @@ Ao desembarcar na estação de Aguas Calientes, você caminha poucos metros pela
 
 ---
 
-## 4. Opção 2: Chegar Caminhando por Trilhas Famosas
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/05-buses-consettur-subida-carretera.webp" alt="Subida de ônibus Consettur na estrada Hiram Bingham" loading="lazy" />
-    <figcaption>Passo 3: Subida de 25 minutos em ônibus turístico pelas curvas da montanha.</figcaption>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/03-recorrido-tren-rio-urubamba.webp" alt="Linha férrea contornando o rio Urubamba" loading="lazy" />
+    <figcaption>Viagem de trem: 1h 40m de paisagens fascinantes descendo o rio Vilcanota.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/06-puerta-ingreso-machu-picchu-control.webp" alt="Portão de entrada e controle oficial de Machu Picchu" loading="lazy" />
-    <figcaption>Controle de acesso oficial com bilhete impresso e passaporte original.</figcaption>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/04-aguas-calientes-pueblo-machu-picchu.webp" alt="Chegada a Aguas Calientes Machu Picchu Pueblo" loading="lazy" />
+    <figcaption>Aguas Calientes: vila aos pés das montanhas imponentes da selva alta.</figcaption>
   </figure>
 </div>
+
+
+## 4. Opção 2: Chegar Caminhando por Trilhas Famosas
 
 Para os viajantes que desejam uma experiência transformadora em contato com a natureza, existem trilhas imperdíveis:
 
@@ -208,11 +197,6 @@ Para os viajantes que desejam uma experiência transformadora em contato com a n
 
 ## 5. Opção 3: Rota Alternativa por Hidroelétrica (A Rota Mochileira)
 
-<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/07-ruta-alternativa-hidroelectrica-caminata.webp" alt="Rota alternativa mochileira caminhando por Hidroeléctrica" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Rota Alternativa por Hidroeléctrica: caminhada de 10 km (2,5 a 3 horas) ao lado dos trilhos do trem em plena selva subtropical.</figcaption>
-</figure>
-
 Criada como alternativa econômica para quem deseja fugir dos custos das passagens de trem:
 
 ### Como funciona o trajeto:
@@ -231,6 +215,12 @@ Criada como alternativa econômica para quem deseja fugir dos custos das passage
 
 ---
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/07-ruta-alternativa-hidroelectrica-caminata.webp" alt="Rota alternativa mochileira caminhando por Hidroeléctrica" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Rota Alternativa por Hidroeléctrica: caminhada de 10 km (2,5 a 3 horas) ao lado dos trilhos do trem em plena selva subtropical.</figcaption>
+</figure>
+
+
 ## 6. Bate e Volta de 1 Dia vs. Pernoitar em Aguas Calientes: Comparativo
 
 | Fator de Avaliação | Passeio de 1 Dia (Full Day saindo de Cusco) | Roteiro de 2 Dias / 1 Noite (Dormindo em Aguas Calientes) |
@@ -245,6 +235,18 @@ Criada como alternativa econômica para quem deseja fugir dos custos das passage
 > **💡 Dica de Ouro Peru Beyond:** Se você tiver 4 ou mais dias em Cusco, o roteiro perfeito é: **Dia 1:** Passear pelo Vale Sagrado (Pisac, Salineras de Maras, Moray e Ollantaytambo), pegando o trem do fim da tarde para Aguas Calientes; **Dia 2:** Subir a Machu Picchu nas primeiras horas da manhã com ar fresco e voltar para Cusco no fim do dia. Essa sequência garante uma aclimatação inteligente e zero estresse.
 
 ---
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/05-buses-consettur-subida-carretera.webp" alt="Subida de ônibus Consettur na estrada Hiram Bingham" loading="lazy" />
+    <figcaption>Passo 3: Subida de 25 minutos em ônibus turístico pelas curvas da montanha.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/06-puerta-ingreso-machu-picchu-control.webp" alt="Portão de entrada e controle oficial de Machu Picchu" loading="lazy" />
+    <figcaption>Controle de acesso oficial com bilhete impresso e passaporte original.</figcaption>
+  </figure>
+</div>
+
 
 ## 7. Pacotes Recomendados com a Peru Beyond
 

@@ -76,6 +76,29 @@ A continuación, compara de un vistazo los 6 destinos fundamentales del Valle Sa
 
 ## 2. ¿Qué es el Valle Sagrado y por qué fue el Núcleo del Tahuantinsuyo?
 
+El Valle Sagrado de los Incas abarca la cuenca fluvial del río Vilcanota-Urubamba entre las localidades de Písac y Ollantaytambo. Los Incas veneraban este río como la proyección terrenal de la constelación celeste del Río de las Estrellas (*Chakana Mayu*).
+
+### Factores que lo convirtieron en un lugar sagrado:
+1. **Microclima Favorable:** Flanqueado por nevados tutelares (*Apus*) que superan los 5,500 metros (como el Chicón, el Pumahuanca y la Verónica), el fondo del valle goza de un microclima abrigado y soleado protegido de los vientos gélidos de la puna andina.
+2. **Centro Agrícola de Élite:** En sus andenerías se domesticaron y cultivaron variedades únicas de maíz, papas nativas, quinua, kiwicha y plantas medicinales destinadas a las ofrendas religiosas de la élite cuzqueña.
+3. **Escudo Defensivo y Militar:** Las fortalezas de Pisac y Ollantaytambo actuaban como puestos de avanzada inexpugnables que custodiaban el acceso imperial frente a posibles invasiones de tribus amazónicas provenientes de la selva baja (*Antisuyo*).
+
+---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/07-valle-sagrado-urubamba-rio-paisaje.webp" alt="Panorámica del Valle Sagrado y río Urubamba" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Valle Sagrado de los Incas: campos agrícolas fértiles bordeados por el río Vilcanota y las cumbres nevadas de la cordillera de Vilcabamba.</figcaption>
+</figure>
+
+
+## 3. Los 6 Lugares Esenciales que Debes Visitar en el Valle Sagrado
+
+### 1. Pisac: La Corona Oriental del Valle
+Ubicado a 33 kilómetros al noreste de Cusco, Pisac es la puerta de entrada oriental al Valle Sagrado y uno de los complejos arqueológicos más extensos y espectaculares del continente.
+
+- **El Complejo Arqueológico de Pisac:** Construido en lo alto de una cresta montañosa vertical con vistas panorámicas sobre el río Vilcanota. Alberga el sector de **Intihuatana** (el reloj solar sagrado tallado en la roca viva), el barrio ceremonial de **K'alla Q'asa**, recintos militares, canales hidráulicos subterráneos y el cementerio prehispánico de **Tantana Marka**, con cientos de tumbas incas empotradas en los acantilados de roca.
+- **El Mercado Artesanal de Pisac:** En la Plaza de Armas del pueblo colonial se celebra uno de los mercados más coloridos del Perú. Aquí los artesanos de las comunidades altoandinas descienden vestidos con sus trajes tradicionales para vender ponchos de alpaca, telares teñidos con tintes vegetales, orfebrería en plata y cerámica andina. No te pierdas las empanadas tradicionales cocinadas en hornos de barro coloniales de leña.
+
 <div class="blog-img-grid">
   <figure>
     <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/01-pisac-terrazas-incas-valle.webp" alt="Andenes colgantes de Pisac" loading="lazy" />
@@ -87,33 +110,6 @@ A continuación, compara de un vistazo los 6 destinos fundamentales del Valle Sa
   </figure>
 </div>
 
-El Valle Sagrado de los Incas abarca la cuenca fluvial del río Vilcanota-Urubamba entre las localidades de Písac y Ollantaytambo. Los Incas veneraban este río como la proyección terrenal de la constelación celeste del Río de las Estrellas (*Chakana Mayu*).
-
-### Factores que lo convirtieron en un lugar sagrado:
-1. **Microclima Favorable:** Flanqueado por nevados tutelares (*Apus*) que superan los 5,500 metros (como el Chicón, el Pumahuanca y la Verónica), el fondo del valle goza de un microclima abrigado y soleado protegido de los vientos gélidos de la puna andina.
-2. **Centro Agrícola de Élite:** En sus andenerías se domesticaron y cultivaron variedades únicas de maíz, papas nativas, quinua, kiwicha y plantas medicinales destinadas a las ofrendas religiosas de la élite cuzqueña.
-3. **Escudo Defensivo y Militar:** Las fortalezas de Pisac y Ollantaytambo actuaban como puestos de avanzada inexpugnables que custodiaban el acceso imperial frente a posibles invasiones de tribus amazónicas provenientes de la selva baja (*Antisuyo*).
-
----
-
-## 3. Los 6 Lugares Esenciales que Debes Visitar en el Valle Sagrado
-
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/03-fortaleza-ollantaytambo-andenes.webp" alt="Fortaleza y Templo del Sol de Ollantaytambo" loading="lazy" />
-    <figcaption>Ollantaytambo: la única ciudad inca viviente custodiada por su colosal fortaleza.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/04-salineras-de-maras-pozas-sal.webp" alt="Pozas de evaporación en Salineras de Maras" loading="lazy" />
-    <figcaption>Salineras de Maras: más de 3,000 pozas de sal rosada milenaria alimentadas por agua subterránea.</figcaption>
-  </figure>
-</div>
-
-### 1. Pisac: La Corona Oriental del Valle
-Ubicado a 33 kilómetros al noreste de Cusco, Pisac es la puerta de entrada oriental al Valle Sagrado y uno de los complejos arqueológicos más extensos y espectaculares del continente.
-
-- **El Complejo Arqueológico de Pisac:** Construido en lo alto de una cresta montañosa vertical con vistas panorámicas sobre el río Vilcanota. Alberga el sector de **Intihuatana** (el reloj solar sagrado tallado en la roca viva), el barrio ceremonial de **K'alla Q'asa**, recintos militares, canales hidráulicos subterráneos y el cementerio prehispánico de **Tantana Marka**, con cientos de tumbas incas empotradas en los acantilados de roca.
-- **El Mercado Artesanal de Pisac:** En la Plaza de Armas del pueblo colonial se celebra uno de los mercados más coloridos del Perú. Aquí los artesanos de las comunidades altoandinas descienden vestidos con sus trajes tradicionales para vender ponchos de alpaca, telares teñidos con tintes vegetales, orfebrería en plata y cerámica andina. No te pierdas las empanadas tradicionales cocinadas en hornos de barro coloniales de leña.
 
 ### 2. Ollantaytambo: La Fortaleza y Ciudad Inca Viviente
 Ubicado en el extremo occidental del valle, Ollantaytambo es un monumento histórico sin igual: es el **único poblado del Imperio Inca que conserva intacto su diseño urbano original**.
@@ -123,6 +119,12 @@ Ubicado en el extremo occidental del valle, Ollantaytambo es un monumento histó
 - **Las Fuentes Ceremoniales del Agua:** El sector de Baño de la Ñusta y las fuentes litúrgicas muestran la reverencia inca por el agua como elemento viviente purificador.
 - **Pinkuylluna:** En la montaña que se eleva frente a la fortaleza pueden apreciarse los antiguos almacenes agrícolas (*qollqas*) construidos a gran altura para aprovechar las corrientes de aire frío y conservar el grano.
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/03-fortaleza-ollantaytambo-andenes.webp" alt="Fortaleza y Templo del Sol de Ollantaytambo" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Ollantaytambo: la única ciudad inca viviente custodiada por su colosal fortaleza.</figcaption>
+</figure>
+
+
 ### 3. Chinchero: La Tierra del Arcoíris y el Arte Textil Ancestral
 Situado a 3,762 metros de altitud sobre una meseta con vistas panorámicas a los nevados Verónica y Chicón, Chinchero fue la residencia de descanso real del Inca Túpac Yupanqui.
 
@@ -131,16 +133,6 @@ Situado a 3,762 metros de altitud sobre una meseta con vistas panorámicas a los
 
 ### 4. Moray: El Laboratorio Agrícola y Astronómico de los Incas
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/05-moray-anfiteatro-agricola.webp" alt="Anfiteatros concéntricos de Moray" loading="lazy" />
-    <figcaption>Moray: terrazas circulares concéntricas diseñadas como laboratorio botánico inca.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/06-chinchero-tejedoras-tradicionales-alpaca.webp" alt="Tejedoras tradicionales de Chinchero" loading="lazy" />
-    <figcaption>Chinchero: maestras que conservan técnicas de teñido natural transmitidas por siglos.</figcaption>
-  </figure>
-</div>
 A 3,500 metros de altitud, en una meseta solitaria cerca de Maras, se encuentra uno de los centros de investigación científica más asombrosos del mundo antiguo.
 
 - **Diseño Arquitectónico:** Moray está compuesto por cuatro depresiones naturales colosales en forma de anfiteatro circular, en cuyas paredes los incas levantaron andenes agrícolas concéntricos provistos de canales de irrigación y sistemas de drenaje subterráneo que evitan que se inunden incluso bajo tormentas torrenciales.
@@ -148,15 +140,23 @@ A 3,500 metros de altitud, en una meseta solitaria cerca de Maras, se encuentra 
 
 ### 5. Salineras de Maras: Más de 3,000 Pozas de Sal Milenaria
 
-<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/07-valle-sagrado-urubamba-rio-paisaje.webp" alt="Panorámica del Valle Sagrado y río Urubamba" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Valle Sagrado de los Incas: campos agrícolas fértiles bordeados por el río Vilcanota y las cumbres nevadas de la cordillera de Vilcabamba.</figcaption>
-</figure>
 Enclavadas en una ladera estrecha del cañón de Qaqawiñay, las Salineras de Maras representan una postal visual única en el planeta.
 
 - **Origen Geológico:** Más de 3,000 pozas escalonadas de sal son alimentadas continuamente por un manantial subterráneo de agua salada hiperconcentrada y tibia llamado **Qoripujio**. Los campesinos desvían el agua mediante canales diminutos llenando cada poza con unos pocos centímetros de salmuera.
 - **Evaporación Solar:** Bajo el intenso sol andino, el agua se evapora gradualmente dejando una costra cristalina de sal pura. La recolección manual se realiza como en la época preincaica: sal blanca de cocina en la capa superior, sal rosada gourmet en la capa intermedia (rica en hierro, zinc, magnesio y calcio, exportada a las mejores cocinas del mundo) y sal industrial en la base.
 - **Administración Comunitaria:** Las pozas pertenecen a más de 350 familias locales de Maras. El turismo genera un beneficio directo y sostenible para la comunidad.
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/04-salineras-de-maras-pozas-sal.webp" alt="Pozas de evaporación en Salineras de Maras" loading="lazy" />
+    <figcaption>Salineras de Maras: más de 3,000 pozas de sal rosada milenaria alimentadas por agua subterránea.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/05-moray-anfiteatro-agricola.webp" alt="Anfiteatros concéntricos de Moray" loading="lazy" />
+    <figcaption>Moray: terrazas circulares concéntricas diseñadas como laboratorio botánico inca.</figcaption>
+  </figure>
+</div>
+
 
 ### 6. Urubamba: La Capital Gastronómica y Refugio Hotelero del Valle
 Ubicada en el centro geográfico del valle a 2,870 metros de altitud, Urubamba es la ciudad más grande y acogedora de la quebrada.
@@ -179,6 +179,12 @@ Para elegir la excursión perfecta, considera las diferencias entre los tres tou
 | **Enlace al Tour** | [Ver Tour Valle Sagrado Clásico](/es/tours/cusco/valle-sagrado-full-day-almuerzo-buffet) | [Ver Tour Súper Valle Sagrado VIP](/es/tours/cusco/super-valle-sagrado) | [Ver Tour Maras y Moray](/es/tours/cusco/maras-moray-salineras-tour) |
 
 ---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/06-chinchero-tejedoras-tradicionales-alpaca.webp" alt="Tejedoras tradicionales de Chinchero" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Chinchero: maestras que conservan técnicas de teñido natural transmitidas por siglos.</figcaption>
+</figure>
+
 
 ## 5. Boletos de Ingreso: Boleto Turístico del Cusco (BTC) y Entradas
 

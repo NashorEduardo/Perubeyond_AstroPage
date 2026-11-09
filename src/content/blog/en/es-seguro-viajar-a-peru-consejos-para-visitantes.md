@@ -87,17 +87,6 @@ Tourism is one of the pillars of Peru's economy, supporting over one million liv
 
 ## 3. City-by-City Safety Guide: Safe Zones & Smart Precautions
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/01-malecon-miraflores-lima-seguridad.webp" alt="Safe Miraflores boardwalk in Lima" loading="lazy" />
-    <figcaption>Miraflores boardwalk: coastal parks and 24/7 municipal patrols.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/02-barranco-puente-suspiros-turismo.webp" alt="Bohemian tourist district of Barranco Lima" loading="lazy" />
-    <figcaption>Bohemian Barranco: vibrant nightlife, scenic walkways and safe pedestrian streets.</figcaption>
-  </figure>
-</div>
-
 ### 3.1. Lima: The World Gastronomy Capital
 Lima is a vibrant coastal metropolis of nearly 10 million residents. As in major cities worldwide (such as London, New York, or Madrid), safety conditions vary significantly by neighborhood.
 
@@ -116,18 +105,19 @@ The Cusco region is celebrated as one of the safest, most hospitable regions in 
 
 ---
 
-## 4. Transportation Safety: Getting Around Without Hassle
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/03-plaza-armas-cusco-patrullaje-turistico.webp" alt="Cusco Plaza de Armas patrolled by tourist police" loading="lazy" />
-    <figcaption>Historic Cusco: continuous tourist police protection around the clock.</figcaption>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/01-malecon-miraflores-lima-seguridad.webp" alt="Safe Miraflores boardwalk in Lima" loading="lazy" />
+    <figcaption>Miraflores boardwalk: coastal parks and 24/7 municipal patrols.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/04-valle-sagrado-pueblo-tranquilo-ollantaytambo.webp" alt="Ollantaytambo village in the Sacred Valley" loading="lazy" />
-    <figcaption>Ollantaytambo: peaceful Andean town and secure gateway to the Machu Picchu train.</figcaption>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/02-barranco-puente-suspiros-turismo.webp" alt="Bohemian tourist district of Barranco Lima" loading="lazy" />
+    <figcaption>Bohemian Barranco: vibrant nightlife, scenic walkways and safe pedestrian streets.</figcaption>
   </figure>
 </div>
+
+
+## 4. Transportation Safety: Getting Around Without Hassle
 
 Transit is the area where unprepared travelers encounter the most frustration. Following these three rules ensures a hassle-free trip:
 
@@ -144,18 +134,19 @@ Rail services to Machu Picchu are operated by two internationally accredited com
 
 ---
 
-## 5. Health, Food Safety, and Altitude Sickness Prevention
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/05-asistencia-turistica-peru-viajeros.webp" alt="Official tourism assistance desk in Peru" loading="lazy" />
-    <figcaption>IPERÚ Assistance Network: 24/7 bilingual traveler support across the country.</figcaption>
+    <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/03-plaza-armas-cusco-patrullaje-turistico.webp" alt="Cusco Plaza de Armas patrolled by tourist police" loading="lazy" />
+    <figcaption>Historic Cusco: continuous tourist police protection around the clock.</figcaption>
   </figure>
   <figure>
     <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/06-transporte-seguro-aeropuerto-lima.webp" alt="Official airport taxi transfer in Lima" loading="lazy" />
     <figcaption>Authorized airport transfers and private tourist vehicles for seamless arrivals.</figcaption>
   </figure>
 </div>
+
+
+## 5. Health, Food Safety, and Altitude Sickness Prevention
 
 The vast majority of travel disruptions in Peru stem from digestive adjustments or lack of altitude preparation, rather than street crime.
 
@@ -177,12 +168,13 @@ Carrying comprehensive international travel medical insurance is essential. Peru
 
 ---
 
-## 6. Currency, ATMs, Cards, and Digital Connectivity
-
 <figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
   <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/07-mercado-san-pedro-cusco-seguridad.webp" alt="San Pedro Central Market in Cusco" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
   <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">San Pedro Central Market: a vibrant Andean market experience to explore peacefully with a local certified guide.</figcaption>
 </figure>
+
+
+## 6. Currency, ATMs, Cards, and Digital Connectivity
 
 ### 6.1. Managing Cash and Currency Exchange
 - **Local Currency:** The official currency is the **Peruvian Sol (PEN)**. While hotels and train operators accept US Dollars (USD), daily purchases (taxis, markets, crafts, tips) require local soles.
@@ -208,6 +200,12 @@ Peru is one of the most rewarding and welcoming destinations for solo travelers:
 
 ---
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/04-valle-sagrado-pueblo-tranquilo-ollantaytambo.webp" alt="Ollantaytambo village in the Sacred Valley" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Ollantaytambo: peaceful Andean town and secure gateway to the Machu Picchu train.</figcaption>
+</figure>
+
+
 ## 8. Official Emergency Contacts in Peru
 
 Save these contacts in your phone before traveling:
@@ -226,6 +224,12 @@ Visiting Peru is an uplifting, life-enriching journey that consistently exceeds 
 By applying common-sense travel precautions, taking altitude acclimatization seriously, and partnering with an accredited, officially registered operator like **Peru Beyond**, your trip through Lima, the Sacred Valley, Cusco, and Machu Picchu will be safe, flawlessly coordinated, and filled with memories to cherish forever.
 
 ---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/es-seguro-viajar-a-peru-consejos-para-visitantes/05-asistencia-turistica-peru-viajeros.webp" alt="Official tourism assistance desk in Peru" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">IPERÚ Assistance Network: 24/7 bilingual traveler support across the country.</figcaption>
+</figure>
+
 
 ## 10. Frequently Asked Questions (FAQs)
 

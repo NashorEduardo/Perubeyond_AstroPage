@@ -76,6 +76,28 @@ Compare the six core destinations of the Sacred Valley, their elevations, requir
 
 ## 2. Why Was the Sacred Valley the Core of the Incan Empire?
 
+The Sacred Valley encompasses the Vilcanota-Urubamba river basin between the colonial towns of Písac and Ollantaytambo. The Incas revered this river as the earthly reflection of the celestial star river (*Chakana Mayu*).
+
+### Why the Incas valued the valley above all else:
+1. **Protected Microclimate:** Sheltered by protective mountain deities (*Apus*) exceeding 5,500 meters (such as Mount Chicón, Pumahuanca, and Verónica), the valley floor remains warm, fertile, and shielded from harsh alpine winds.
+2. **Agricultural Excellence:** Incan agronomists built advanced stone terraces that optimized sun absorption, allowing them to cultivate prized varieties of maize, native potatoes, and sacred crops reserved for imperial and religious ceremonies in Cusco.
+3. **Strategic Defense Barrier:** The stone fortresses of Pisac and Ollantaytambo formed an unassailable defensive shield guarding the imperial capital against invasions from the Amazon basin (*Antisuyo*).
+
+---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/07-valle-sagrado-urubamba-rio-paisaje.webp" alt="Panoramic Sacred Valley view and Urubamba river" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">The Sacred Valley of the Incas: fertile agricultural plains along the Vilcanota River framed by glacier-crowned Andean summits.</figcaption>
+</figure>
+
+
+## 3. The 6 Best Places to Visit in the Sacred Valley
+
+### 1. Pisac: Incan Terraces & Vibrant Craft Market
+Located 33 kilometers northeast of Cusco, Pisac is the grand eastern gateway to the Sacred Valley.
+- **The Archaeological Ruins:** Perched high on a dramatic mountain ridge overlooking the valley, Pisac features the largest complex of agricultural terraces in Peru. Key areas include the **Intihuatana** (a sacred solar calendar carved into living bedrock), ceremonial quarters, underground aqueducts, and the **Tantana Marka** prehispánico cliffside cemetery with hundreds of ancient tombs.
+- **The Pisac Artisan Market:** In the cobblestone town square below, indigenous weavers and craftspeople from high-altitude communities gather to sell alpaca blankets, silver jewelry, hand-painted ceramics, and wood carvings. Don't miss sampling freshly baked empanadas from wood-fired colonial adobe ovens.
+
 <div class="blog-img-grid">
   <figure>
     <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/01-pisac-terrazas-incas-valle.webp" alt="Pisac cliffside Inca terraces" loading="lazy" />
@@ -87,38 +109,18 @@ Compare the six core destinations of the Sacred Valley, their elevations, requir
   </figure>
 </div>
 
-The Sacred Valley encompasses the Vilcanota-Urubamba river basin between the colonial towns of Písac and Ollantaytambo. The Incas revered this river as the earthly reflection of the celestial star river (*Chakana Mayu*).
-
-### Why the Incas valued the valley above all else:
-1. **Protected Microclimate:** Sheltered by protective mountain deities (*Apus*) exceeding 5,500 meters (such as Mount Chicón, Pumahuanca, and Verónica), the valley floor remains warm, fertile, and shielded from harsh alpine winds.
-2. **Agricultural Excellence:** Incan agronomists built advanced stone terraces that optimized sun absorption, allowing them to cultivate prized varieties of maize, native potatoes, and sacred crops reserved for imperial and religious ceremonies in Cusco.
-3. **Strategic Defense Barrier:** The stone fortresses of Pisac and Ollantaytambo formed an unassailable defensive shield guarding the imperial capital against invasions from the Amazon basin (*Antisuyo*).
-
----
-
-## 3. The 6 Best Places to Visit in the Sacred Valley
-
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/03-fortaleza-ollantaytambo-andenes.webp" alt="Ollantaytambo fortress and Sun Temple" loading="lazy" />
-    <figcaption>Ollantaytambo: the last living Inca town beneath colossal ceremonial terraces.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/04-salineras-de-maras-pozas-sal.webp" alt="Maras salt pans canyon" loading="lazy" />
-    <figcaption>Salineras de Maras: over 3,000 ancient terraced salt evaporation pans.</figcaption>
-  </figure>
-</div>
-
-### 1. Pisac: Incan Terraces & Vibrant Craft Market
-Located 33 kilometers northeast of Cusco, Pisac is the grand eastern gateway to the Sacred Valley.
-- **The Archaeological Ruins:** Perched high on a dramatic mountain ridge overlooking the valley, Pisac features the largest complex of agricultural terraces in Peru. Key areas include the **Intihuatana** (a sacred solar calendar carved into living bedrock), ceremonial quarters, underground aqueducts, and the **Tantana Marka** prehispánico cliffside cemetery with hundreds of ancient tombs.
-- **The Pisac Artisan Market:** In the cobblestone town square below, indigenous weavers and craftspeople from high-altitude communities gather to sell alpaca blankets, silver jewelry, hand-painted ceramics, and wood carvings. Don't miss sampling freshly baked empanadas from wood-fired colonial adobe ovens.
 
 ### 2. Ollantaytambo: The Living Inca Town & Megalithic Fortress
 At the western end of the valley, Ollantaytambo is unique in the Americas: it is the **only surviving town that preserves its original Incan urban street grid**.
 - **The Sun Temple & Fortress:** Towering agricultural terraces lead up to the unfinished Sun Temple, composed of six colossal rose-colored granite monoliths weighing over 50 tons each, brought from quarries 6 kilometers away across the roaring river.
 - **The Battle of Ollantaytambo (1537):** This fortress was the site of a rare, celebrated Incan military victory against Spanish conquistadors, when Manco Inca flooded the lower plains using stone aqueducts to immobilize Spanish cavalry.
 - **Water Fountains:** The ceremonial baths (*Baño de la Ñusta*) still channel mountain spring water through carved stone spouts.
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/03-fortaleza-ollantaytambo-andenes.webp" alt="Ollantaytambo fortress and Sun Temple" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Ollantaytambo: the last living Inca town beneath colossal ceremonial terraces.</figcaption>
+</figure>
+
 
 ### 3. Chinchero: The Rainbow Textile Heartland
 Resting on a high plateau at 3,762 meters with panoramic vistas of Mount Verónica, Chinchero was the country estate of Emperor Túpac Yupanqui.
@@ -127,27 +129,25 @@ Resting on a high plateau at 3,762 meters with panoramic vistas of Mount Veróni
 
 ### 4. Moray: The Incan Agricultural Laboratory
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/05-moray-anfiteatro-agricola.webp" alt="Circular Inca amphitheater of Moray" loading="lazy" />
-    <figcaption>Moray: concentric circular terraces used as an advanced Inca agricultural lab.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/06-chinchero-tejedoras-tradicionales-alpaca.webp" alt="Chinchero traditional indigenous weavers" loading="lazy" />
-    <figcaption>Chinchero: indigenous master weavers practicing natural mineral and plant dyeing.</figcaption>
-  </figure>
-</div>
 At 3,500 meters, Moray appears as four gigantic circular terraced amphitheaters carved into a natural limestone depression.
 - **Agricultural Experimentation:** By manipulating terrace depth, stone wall heat retention, and wind exposure, the Incas engineered a temperature differential of **up to 15°C (27°F)** between the top and bottom rings, creating distinct microclimates to cultivate and adapt crops from different ecological zones.
 
 ### 5. Maras Salt Mines: 3,000 Pink Terraced Salt Pans
 
-<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/07-valle-sagrado-urubamba-rio-paisaje.webp" alt="Panoramic Sacred Valley view and Urubamba river" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">The Sacred Valley of the Incas: fertile agricultural plains along the Vilcanota River framed by glacier-crowned Andean summits.</figcaption>
-</figure>
 Tucked into a steep canyon, the Maras Salt Pans create a stunning geometric visual landscape.
 - **Pre-Incan Engineering:** Over 3,000 terraced pools are continuously fed by **Qoripujio**, a warm subterranean hyper-saline spring. When the water evaporates under the intense Andean sun, pure pink mineral salt is harvested by hand by more than 350 local families.
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/04-salineras-de-maras-pozas-sal.webp" alt="Maras salt pans canyon" loading="lazy" />
+    <figcaption>Salineras de Maras: over 3,000 ancient terraced salt evaporation pans.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/05-moray-anfiteatro-agricola.webp" alt="Circular Inca amphitheater of Moray" loading="lazy" />
+    <figcaption>Moray: concentric circular terraces used as an advanced Inca agricultural lab.</figcaption>
+  </figure>
+</div>
+
 
 ### 6. Urubamba: Gourmet Andean Dining & Peaceful Lodging
 Located in the geographical center of the valley at 2,870 meters, Urubamba is the valley's culinary and hotel capital.
@@ -167,6 +167,12 @@ Located in the geographical center of the valley at 2,870 meters, Urubamba is th
 | **Tour Link** | [View Classic Sacred Valley Tour](/en/tours/cusco/valle-sagrado-full-day-almuerzo-buffet) | [View Super Sacred Valley VIP Tour](/en/tours/cusco/super-valle-sagrado) | [View Maras & Moray Tour](/en/tours/cusco/maras-moray-salineras-tour) |
 
 ---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/valle-sagrado-de-los-incas-lugares-que-debes-visitar/06-chinchero-tejedoras-tradicionales-alpaca.webp" alt="Chinchero traditional indigenous weavers" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Chinchero: indigenous master weavers practicing natural mineral and plant dyeing.</figcaption>
+</figure>
+
 
 ## 5. Entry Tickets & Regulations
 

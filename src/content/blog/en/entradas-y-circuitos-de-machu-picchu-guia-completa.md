@@ -39,6 +39,10 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "cusco-machu-picchu-3d-2n"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
+imgAlbum:
+  - "/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/circuito-clasico-foto.webp"
+  - "/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/terraza-superior-panoramica.webp"
+  - "/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/huayna-picchu-vista.webp"
 ---
 
 Planning a bucket-list journey to the seventh wonder of the modern world is an exhilarating milestone for any passionate traveler. However, visiting Machu Picchu in 2026 requires an understanding of recent official regulations. To protect this fragile UNESCO World Heritage sanctuary from the strain of overtourism and ensure sustainable visitor flow, Peru’s **Ministry of Culture** restructured the ancient citadel into **3 Primary Circuits encompassing 10 specialized sub-routes**.

@@ -222,7 +222,39 @@ const breadcrumbSchema = {
     },
   ],
 };
+
+// Mapeo inteligente de captions y alt para las imágenes del álbum
+const imageMetaMap = new Map<string, { alt: string; caption: string }>();
+const sourceBody = blog.contentMarkdown || (mdEntry ? mdEntry.body : '') || '';
+const figRegex = /<img[^>]+src=["']([^"']+)["'][^>]*alt=["']([^"']*)["'][^>]*>[\s\S]*?(?:<figcaption[^>]*>([\s\S]*?)<\/figcaption>)?/gi;
+let figMatch;
+while ((figMatch = figRegex.exec(sourceBody)) !== null) {
+  const mSrc = figMatch[1];
+  const mAlt = figMatch[2] || '';
+  const mCap = figMatch[3] ? figMatch[3].replace(/<[^>]+>/g, '').trim() : '';
+  if (mSrc) {
+    imageMetaMap.set(mSrc, { alt: mAlt, caption: mCap || mAlt });
+  }
+}
+
+const enrichedAlbum = (blog.imgAlbum || []).map((img: any) => {
+  const src = typeof img === 'string' ? img : img.src;
+  const meta = imageMetaMap.get(src);
+  if (typeof img === 'string') {
+    return {
+      src,
+      alt: meta?.alt || '',
+      caption: meta?.caption || meta?.alt || '',
+    };
+  }
+  return {
+    ...img,
+    alt: img.alt || meta?.alt || '',
+    caption: img.caption || meta?.caption || meta?.alt || '',
+  };
+});
 ---
+
 
 <Layout
   title={`${blog.title} | Peru Beyond`}
@@ -461,7 +493,7 @@ const breadcrumbSchema = {
           <!-- Carrusel de Fotografías Destacadas (Frontmatter imgAlbum) -->
           {blog.imgAlbum && blog.imgAlbum.length > 0 && (
             <BlogImageCarousel
-              images={blog.imgAlbum}
+              images={enrichedAlbum}
               title={lang === 'pt' ? 'Galeria Exclusiva da Rota' : lang === 'en' ? 'Route Photo Gallery' : 'Galería Fotográfica de la Ruta'}
               lang={lang}
             />

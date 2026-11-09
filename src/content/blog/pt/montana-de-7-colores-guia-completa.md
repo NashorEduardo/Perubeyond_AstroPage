@@ -39,6 +39,10 @@ relatedTours:
   - "trekking-montana-7-colores"
   - "trekking-palcoyo"
   - "cusco-machu-picchu-humantay-montana-colores-5d-4n"
+imgAlbum:
+  - "/images/Blog/montana-de-7-colores-guia-completa/franjas-minerales-colores.webp"
+  - "/images/Blog/montana-de-7-colores-guia-completa/caminata-caballos-cusipata.webp"
+  - "/images/Blog/montana-de-7-colores-guia-completa/cumbre-5200-metros.webp"
 ---
 
 A **Montanha Colorida** (conhecida originalmente em quéchua como **Vinicunca** ou *Winikunka*) se transformou na segunda atração turística mais visitada do Peru, logo atrás de Machu Picchu. Localizada na magnífica Cordilheira de Vilcanota a 5.200 metros de altitude, suas encostas exibem faixas de cores naturais que variam entre o rosa, turquesa, dourado e vermelho terracota.

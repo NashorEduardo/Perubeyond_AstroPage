@@ -14,18 +14,88 @@ interface Props {
 
 const { images = [], title, lang = 'es', id } = Astro.props;
 
-const normalizedImages: CarouselImageItem[] = images.map((img, idx) => {
-  if (typeof img === 'string') {
-    return {
-      src: img,
-      alt: `Fotografía editorial ${idx + 1}`,
-      caption: '',
-    };
+function formatImageLabel(src: string): string {
+  if (!src) return '';
+  const filename = src.split('/').pop()?.replace(/\.[^.]+$/, '') || '';
+  let clean = filename.replace(/^\d+[-_]?/, '');
+  if (clean === 'hero' || !clean) {
+    const parts = src.split('/').filter(Boolean);
+    clean = parts[parts.length - 2] || 'Fotografía de la Ruta';
+    clean = clean.replace(/^\d+[-_]?/, '');
   }
+
+  const termMap: Record<string, string> = {
+    'machu picchu': 'Machu Picchu',
+    'huayna picchu': 'Huayna Picchu',
+    'montana machu picchu': 'Montaña Machu Picchu',
+    'urubamba': 'Urubamba',
+    'ollantaytambo': 'Ollantaytambo',
+    'valle sagrado': 'Valle Sagrado',
+    'cusco': 'Cusco',
+    'cuzco': 'Cusco',
+    'huacachina': 'Huacachina',
+    'paracas': 'Paracas',
+    'ballestas': 'Islas Ballestas',
+    'titicaca': 'Lago Titicaca',
+    'uros': 'Islas Flotantes de los Uros',
+    'vinicunca': 'Montaña de 7 Colores (Vinicunca)',
+    'humantay': 'Laguna Humantay',
+    'salkantay': 'Nevado Salkantay',
+    'perurail': 'PeruRail',
+    'vistadome': 'PeruRail Vistadome',
+    'expedition': 'PeruRail Expedition',
+    'observatory': 'PeruRail Observatory',
+    'inca rail': 'Inca Rail',
+    'hiram bingham': 'Belmond Hiram Bingham',
+    'consettur': 'Bus Consettur',
+    'chinchero': 'Chinchero',
+    'pisac': 'Písac',
+    'moray': 'Moray',
+    'maras': 'Salineras de Maras',
+    'aguas calientes': 'Aguas Calientes',
+    'arequipa': 'Arequipa',
+    'misti': 'Volcán Misti',
+    'colca': 'Cañón del Colca',
+    'taquile': 'Isla Taquile',
+    'miraflores': 'Miraflores',
+    'barranco': 'Barranco',
+    'san pedro': 'Mercado San Pedro',
+    'chocomuseo': 'ChocoMuseo',
+  };
+
+  const words = clean.replace(/[-_]/g, ' ').trim().toLowerCase().split(/\s+/);
+  const titled = words.map((w) => {
+    if (['de', 'la', 'el', 'los', 'las', 'del', 'en', 'y', 'al', 'por', 'con', 'para', 'a', 'vs'].includes(w)) {
+      return w;
+    }
+    return w.charAt(0).toUpperCase() + w.slice(1);
+  }).join(' ');
+
+  let result = titled.charAt(0).toUpperCase() + titled.slice(1);
+  for (const [key, val] of Object.entries(termMap)) {
+    const reg = new RegExp(key.replace(/\s+/g, '[\\s-_]+'), 'gi');
+    result = result.replace(reg, val);
+  }
+  return result;
+}
+
+const isGeneric = (text?: string) => !text || /^fotograf[ií]a editorial/i.test(text.trim());
+
+const normalizedImages: CarouselImageItem[] = images.map((img, idx) => {
+  const isStr = typeof img === 'string';
+  const src = isStr ? img : img.src;
+  const rawCaption = isStr ? '' : (img.caption || '');
+  const rawAlt = isStr ? '' : (img.alt || '');
+
+  const label = !isGeneric(rawCaption)
+    ? rawCaption
+    : (!isGeneric(rawAlt) ? rawAlt : formatImageLabel(src));
+  const altText = !isGeneric(rawAlt) ? rawAlt : label;
+
   return {
-    src: img.src,
-    alt: img.alt || `Fotografía editorial ${idx + 1}`,
-    caption: img.caption || '',
+    src,
+    alt: altText,
+    caption: label,
   };
 });
 

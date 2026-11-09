@@ -76,23 +76,11 @@ To help you choose the best timing for your adventure, here is an executive over
 | **Nov** | Warm (21 °C / 70 °F), Night (7 °C / 45 °F) | Moderate | Sunny spring (23 °C / 73 °F) | Moderate-Low | All Saints' Day traditions |
 | **Dec** | Pleasant (20 °C / 68 °F), Night (8 °C / 46 °F)| High | Summer warmth (25 °C / 77 °F) | High for Holidays | Santurantikuy Folk Art Fair in Cusco |
 
-
 *Crystal clear skies and vibrant colors at Machu Picchu during the June-to-August dry season.*
 
 ---
 
 ## 2. Understanding Peru's 3 Distinct Climate Zones
-
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/01-machu-picchu-cielo-despejado-invierno.webp" alt="Machu Picchu blue skies in dry season" loading="lazy" />
-    <figcaption>Dry Season (May to October): deep blue skies, radiant sunshine, and crystal-clear mountain vistas.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/02-valle-sagrado-temporada-verde-lluvias.webp" alt="Emerald green Sacred Valley during rainy season" loading="lazy" />
-    <figcaption>Green Season (December to March): lush emerald valleys, fewer crowds, and vibrant waterfalls.</figcaption>
-  </figure>
-</div>
 
 ### The Pacific Coast (Lima, Paracas, Huacachina, Nazca, Máncora)
 - **Coastal Summer (December to April):** Radiant sunshine with temperatures averaging 24 °C to 30 °C (75 °F to 86 °F). Perfect for exploring the Ballestas Islands, dune buggy riding in Huacachina, and open-air seaside dining in Lima.
@@ -107,18 +95,19 @@ To help you choose the best timing for your adventure, here is an executive over
 
 ---
 
-## 3. Dry Season vs. Rainy Season in Cusco & Machu Picchu
-
 <div class="blog-img-grid">
   <figure>
     <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/03-costa-lima-miraflores-verano.webp" alt="Sunny summer in coastal Lima Miraflores" loading="lazy" />
     <figcaption>Coastal Lima (December to April): warm summer weather, Pacific beaches, and sunset surfs.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/04-montana-7-colores-dia-soleado.webp" alt="Rainbow Mountain Vinicunca on a clear sunny day" loading="lazy" />
-    <figcaption>High Altitude Treks: optimal color vibrancy at Vinicunca and Humantay during the dry months.</figcaption>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/07-selva-amazonia-rio-temporada-seca.webp" alt="Tambopata river cruising during dry season" loading="lazy" />
+    <figcaption>Peruvian Amazon: May to October offers lower river levels, maximizing sightings of jaguars, caimans, and giant river otters on sandy banks.</figcaption>
   </figure>
 </div>
+
+
+## 3. Dry Season vs. Rainy Season in Cusco & Machu Picchu
 
 ### Dry Season (May to October) — The Hiker's Paradise
 - **Advantages:** Pristine skies with minimal risk of rain interrupting photography. Perfect for multi-day treks like the Classic Inca Trail, Salkantay Trek, and Huayna Picchu climb.
@@ -134,18 +123,19 @@ To help you choose the best timing for your adventure, here is an executive over
 
 ---
 
-## 4. Packing List: Essential Clothing by Season
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/05-cusco-inti-raymi-fiesta-sol.webp" alt="Inti Raymi Festival of the Sun in Cusco" loading="lazy" />
-    <figcaption>June in Cusco: the imperial Jubilee month and the grand Inti Raymi solstice celebration at Sacsayhuamán.</figcaption>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/01-machu-picchu-cielo-despejado-invierno.webp" alt="Machu Picchu blue skies in dry season" loading="lazy" />
+    <figcaption>Dry Season (May to October): deep blue skies, radiant sunshine, and crystal-clear mountain vistas.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/06-neblina-mistica-machu-picchu-nubes.webp" alt="Mystical morning mist over Machu Picchu" loading="lazy" />
-    <figcaption>Shoulder Months (April / November): enchanting morning mists parting over ancient stone citadel.</figcaption>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/02-valle-sagrado-temporada-verde-lluvias.webp" alt="Emerald green Sacred Valley during rainy season" loading="lazy" />
+    <figcaption>Green Season (December to March): lush emerald valleys, fewer crowds, and vibrant waterfalls.</figcaption>
   </figure>
 </div>
+
+
+## 4. Packing List: Essential Clothing by Season
 
 ### For the Dry Season (May to October):
 - Thermal base layers (merino wool or moisture-wicking synthetic).
@@ -162,14 +152,21 @@ To help you choose the best timing for your adventure, here is an executive over
 
 ---
 
-## 5. Recommended Multi-Destination Packages
-
 <figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/07-selva-amazonia-rio-temporada-seca.webp" alt="Tambopata river cruising during dry season" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Peruvian Amazon: May to October offers lower river levels, maximizing sightings of jaguars, caimans, and giant river otters on sandy banks.</figcaption>
+  <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/05-cusco-inti-raymi-fiesta-sol.webp" alt="Inti Raymi Festival of the Sun in Cusco" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">June in Cusco: the imperial Jubilee month and the grand Inti Raymi solstice celebration at Sacsayhuamán.</figcaption>
 </figure>
+
+
+## 5. Recommended Multi-Destination Packages
 
 To experience the best of both worlds across coastal sands and Andean peaks:
 
 - [7-Day Lima, Paracas, Huacachina, Cusco & Machu Picchu](/en/tours/peru/tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias): The perfect balance of coastal sunshine and Inca heritage.
 - [10-Day Lima, Huacachina, Machu Picchu & Rainbow Mountain](/en/tours/peru/tour-lima-huacachina-machu-picchu-montana-arcoiris-10-dias): The ultimate comprehensive itinerary for adventurous explorers.
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/04-montana-7-colores-dia-soleado.webp" alt="Rainbow Mountain Vinicunca on a clear sunny day" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">High Altitude Treks: optimal color vibrancy at Vinicunca and Humantay during the dry months.</figcaption>
+</figure>
+

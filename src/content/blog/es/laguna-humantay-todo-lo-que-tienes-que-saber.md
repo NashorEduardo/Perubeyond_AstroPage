@@ -39,6 +39,10 @@ relatedTours:
   - "trekking-laguna-humantay-full-day"
   - "cusco-machu-picchu-humantay-4d-3n"
   - "cusco-machu-picchu-humantay-montana-colores-5d-4n"
+imgAlbum:
+  - "/images/Blog/laguna-humantay-todo-lo-que-tienes-que-saber/aguas-turquesas-laguna.webp"
+  - "/images/Blog/laguna-humantay-todo-lo-que-tienes-que-saber/ascenso-soraypampa-caminata.webp"
+  - "/images/Blog/laguna-humantay-todo-lo-que-tienes-que-saber/nevado-humantay-glaciar.webp"
 ---
 
 Considerada una de las joyas paisajísticas más bellas de toda la cordillera andina, la **Laguna Humantay** es un espejo de agua turquesa custodiado por imponentes glaciares que parece extraído de un cuento de hadas. Situada al pie del nevado Humantay y en las faldas del majestuoso **Apu Salkantay**, esta laguna altoandina se ha consolidado como una de las excursiones de un día más deseadas por quienes visitan Cusco.

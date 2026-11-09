@@ -93,8 +93,6 @@ Em razão das regras rígidas de preservação ambiental e arqueológica, os ing
 
 ---
 
-## 3. Documentação e Requisitos Oficiais de Entrada no Peru
-
 <div class="blog-img-grid">
   <figure>
     <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/01-lima-centro-historico-plaza-mayor.webp" alt="Centro Histórico de Lima e Plaza Mayor" loading="lazy" />
@@ -106,6 +104,9 @@ Em razão das regras rígidas de preservação ambiental e arqueológica, os ing
   </figure>
 </div>
 
+
+## 3. Documentação e Requisitos Oficiais de Entrada no Peru
+
 - **RG Original para Brasileiros:** Cidadãos brasileiros podem viajar apenas com o documento de identidade civil (RG) original em bom estado, com menos de 10 anos de emissão. CNH, certidão de nascimento ou carteiras de classe (OAB, CRM) **não são aceitas** pela imigração.
 - **Passaporte:** Caso prefira usar o passaporte, ele deve ter validade mínima de 6 meses.
 - **Sem Visto:** Brasileiros não precisam de visto de turismo para estadias de até 90 dias.
@@ -114,17 +115,6 @@ Em razão das regras rígidas de preservação ambiental e arqueológica, os ing
 ---
 
 ## 4. Como Vencer o Soroche: A Rota Inteligente de Aclimatação
-
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/03-oasis-huacachina-dunas-desierto.webp" alt="Oásis de Huacachina em Ica" loading="lazy" />
-    <figcaption>Oásis de Huacachina: lagoa natural no coração das dunas do deserto costeiro.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/04-arequipa-plaza-armas-volcan-misti.webp" alt="Praça de Armas de Arequipa e vulcão Misti" loading="lazy" />
-    <figcaption>Arequipa Cidade Branca: construções em pedra sillar branca com o vulcão Misti ao fundo.</figcaption>
-  </figure>
-</div>
 
 O erro mais comum de quem viaja pela primeira vez é desembarcar em Cusco (**3.399 metros de altitude**) e começar a passear e subir ladeiras imediatamente. O ar rarefeito costuma provocar dor de cabeça, náuseas e cansaço.
 
@@ -147,18 +137,19 @@ A **Estratégia Escalonada da Peru Beyond** elimina esse risco:
 
 ---
 
-## 5. Orçamento Real, Moeda e Gastos Diários
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/05-cusco-calle-piedra-12-angulos.webp" alt="Pedra dos Doze Ângulos em Cusco" loading="lazy" />
-    <figcaption>Cusco Imperial: engenharia inca precisa nas ruelas históricas da antiga capital.</figcaption>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/03-oasis-huacachina-dunas-desierto.webp" alt="Oásis de Huacachina em Ica" loading="lazy" />
+    <figcaption>Oásis de Huacachina: lagoa natural no coração das dunas do deserto costeiro.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/06-valle-sagrado-terrazas-pisac.webp" alt="Terraços agrícolas de Pisac no Vale Sagrado" loading="lazy" />
-    <figcaption>Vale Sagrado dos Incas: terraços agrícolas ceremoniais esculpidos nas encostas.</figcaption>
+    <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/04-arequipa-plaza-armas-volcan-misti.webp" alt="Praça de Armas de Arequipa e vulcão Misti" loading="lazy" />
+    <figcaption>Arequipa Cidade Branca: construções em pedra sillar branca com o vulcão Misti ao fundo.</figcaption>
   </figure>
 </div>
+
+
+## 5. Orçamento Real, Moeda e Gastos Diários
 
 O Peru oferece uma excelente relação custo-benefício para os brasileiros:
 - **Moeda Local:** O **Sol Peruano (PEN)** vale aproximadamente entre R$ 1,40 e R$ 1,55 (cotações de referência).
@@ -168,12 +159,13 @@ O Peru oferece uma excelente relação custo-benefício para os brasileiros:
 
 ---
 
-## 6. O que Levar na Mala: Roupas em Camadas
-
 <figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/07-lago-titicaca-islas-flotantes-uros.webp" alt="Ilhas flutuantes dos Uros no Lago Titicaca" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Ilhas Flutuantes dos Uros no Lago Titicaca: comunidade ancestral que vive sobre ilhas de junco totora no lago navegável mais alto do mundo.</figcaption>
+  <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/05-cusco-calle-piedra-12-angulos.webp" alt="Pedra dos Doze Ângulos em Cusco" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Cusco Imperial: engenharia inca precisa nas ruelas históricas da antiga capital.</figcaption>
 </figure>
+
+
+## 6. O que Levar na Mala: Roupas em Camadas
 
 No clima andino, o dia começa frio, esquenta bastante sob o sol do meio-dia e volta a esfriar intensamente à noite:
 - **Dia Ens solarado:** Camiseta respirável, óculos escuros e protetor solar com fator alto (a radiação UV nos Andes é intensa).
@@ -182,6 +174,12 @@ No clima andino, o dia começa frio, esquenta bastante sob o sol do meio-dia e v
 
 ---
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/06-valle-sagrado-terrazas-pisac.webp" alt="Terraços agrícolas de Pisac no Vale Sagrado" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Vale Sagrado dos Incas: terraços agrícolas ceremoniais esculpidos nas encostas.</figcaption>
+</figure>
+
+
 ## 7. Os 10 Erros Mais Frequentes de Quem Viaja pela Primeira Vez
 
 1. **Achar que dá para comprar ingresso na entrada de Machu Picchu:** Todos os ingressos devem ser comprados previamente online ou via agência credenciada.
@@ -189,6 +187,13 @@ No clima andino, o dia começa frio, esquenta bastante sob o sol do meio-dia e v
 3. **Não alinhar o horário do trem com o horário de Machu Picchu:** A tolerância na entrada da cidadela é de apenas 30 minutos.
 4. **Levar mala grande no trem:** Desrespeitar a cota de 5 a 8 kg da bagagem de bordo.
 5. **Trocar dinheiro na rua:** Procure sempre casas de câmbio fechadas.
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/como-organizar-un-viaje-a-peru-por-primera-vez/07-lago-titicaca-islas-flotantes-uros.webp" alt="Ilhas flutuantes dos Uros no Lago Titicaca" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Ilhas Flutuantes dos Uros no Lago Titicaca: comunidade ancestral que vive sobre ilhas de junco totora no lago navegável mais alto do mundo.</figcaption>
+</figure>
+
+
 6. **Beber água da torneira:** Beba sempre água mineral engarrafada.
 7. **Visitar Machu Picchu sem guia oficial:** Você perde todo o contexto histórico e arqueológico.
 8. **Esquecer dinheiro em espécie em soles:** Pequenos artesãos e feirantes não aceitam cartão.

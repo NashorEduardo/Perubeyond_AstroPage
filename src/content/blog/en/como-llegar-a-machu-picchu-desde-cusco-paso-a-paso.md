@@ -67,23 +67,11 @@ Before exploring each option in depth, compare the 5 main routes from Cusco to M
 | **Salkantay Trek (5 Days / 4 Nights)** | **5 days on foot (65 km / 40 mi)**| **Adventure Lodges** & geodesic dome camps | **Very Strenuous** (Crosses 4,630 m / 15,190 ft pass)| **$450 - $700 USD** | Active adventure travelers seeking glaciers and cloud forest |
 | **Hidroeléctrica Route (Backpacker Route)** | **7.5 to 9.0 hours** | **Low** (6-hour mountain van ride + 10 km hike) | **Moderate** (2.5 to 3-hour flat track walk) | **$90 - $130 USD** | Budget backpackers with ample time and tight funds |
 
-
 *The scenic rail ride following the rushing Urubamba River through the Sacred Valley is considered one of the most stunning train routes in the world.*
 
 ---
 
 ## 2. Why Are There No Direct Roads to Machu Picchu?
-
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/01-transporte-cusco-valle-sagrado-ruta.webp" alt="Scenic road transfer from Cusco to Ollantaytambo" loading="lazy" />
-    <figcaption>Step 1: Scenic private transfer from Cusco to Ollantaytambo Station (1h 45m).</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/02-estacion-ollantaytambo-tren.webp" alt="Boarding platform at Ollantaytambo station" loading="lazy" />
-    <figcaption>Step 2: Boarding your scenic train to Aguas Calientes at Ollantaytambo.</figcaption>
-  </figure>
-</div>
 
 One of the most frequent questions from international travelers arriving in Cusco is: *Why can't I simply take a direct Uber, taxi, or highway bus from Cusco straight to the ruins of Machu Picchu?*
 
@@ -97,18 +85,19 @@ The answer lies in dramatic geography and environmental preservation:
 
 ---
 
-## 3. Option 1: The Train Route Step by Step (The Most Comfortable & Efficient Way)
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/03-recorrido-tren-rio-urubamba.webp" alt="Railway winding along the Urubamba River canyon" loading="lazy" />
-    <figcaption>Scenic train journey: 1h 40m alongside the dramatic Urubamba River gorge.</figcaption>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/01-transporte-cusco-valle-sagrado-ruta.webp" alt="Scenic road transfer from Cusco to Ollantaytambo" loading="lazy" />
+    <figcaption>Step 1: Scenic private transfer from Cusco to Ollantaytambo Station (1h 45m).</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/04-aguas-calientes-pueblo-machu-picchu.webp" alt="Aguas Calientes Machu Picchu town" loading="lazy" />
-    <figcaption>Aguas Calientes: the pedestrian base village nestled under emerald peaks.</figcaption>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/02-estacion-ollantaytambo-tren.webp" alt="Boarding platform at Ollantaytambo station" loading="lazy" />
+    <figcaption>Step 2: Boarding your scenic train to Aguas Calientes at Ollantaytambo.</figcaption>
   </figure>
 </div>
+
+
+## 3. Option 1: The Train Route Step by Step (The Most Comfortable & Efficient Way)
 
 Chosen by over 85% of worldwide visitors, the scenic train journey consists of **three consecutive stages** that must be scheduled in chronological order:
 
@@ -150,7 +139,6 @@ Two authorized railway operators run regular services: **PeruRail** and **Inca R
 | **Inca Rail** | **The First Class** | Exclusive luxury coach with live music and observational lounge | 3-course gourmet dining experience, fine wine pairing, and pisco sour masterclass | $170 - $240 USD |
 | **Inca Rail** | **The Private** | Entire private lounge car for families or corporate retreats (up to 8 guests)| Private onboard chef, personalized menu, open champagne bar, and luxury road transfers | On request / Charter |
 
-
 *Glass-domed train carriages offer spectacular views of the Sacred Valley's soaring granite cliffs.*
 
 ---
@@ -175,18 +163,19 @@ After stepping off the train in Aguas Calientes, walk 3 minutes through the hand
 
 ---
 
-## 4. Option 2: Arriving via Historic Trekking Routes
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/05-buses-consettur-subida-carretera.webp" alt="Consettur bus switchback road to citadel" loading="lazy" />
-    <figcaption>Step 3: 25-minute Consettur bus ride ascending the Hiram Bingham switchbacks.</figcaption>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/03-recorrido-tren-rio-urubamba.webp" alt="Railway winding along the Urubamba River canyon" loading="lazy" />
+    <figcaption>Scenic train journey: 1h 40m alongside the dramatic Urubamba River gorge.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/06-puerta-ingreso-machu-picchu-control.webp" alt="Machu Picchu entrance gate and checkpoint" loading="lazy" />
-    <figcaption>Sanctuary Entry: presenting your official ticket and original passport.</figcaption>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/04-aguas-calientes-pueblo-machu-picchu.webp" alt="Aguas Calientes Machu Picchu town" loading="lazy" />
+    <figcaption>Aguas Calientes: the pedestrian base village nestled under emerald peaks.</figcaption>
   </figure>
 </div>
+
+
+## 4. Option 2: Arriving via Historic Trekking Routes
 
 For adventurous travelers who seek a physical and spiritual pilgrimage, multiple world-class hiking trails lead to Machu Picchu:
 
@@ -208,11 +197,6 @@ For adventurous travelers who seek a physical and spiritual pilgrimage, multiple
 
 ## 5. Option 3: The Alternative Hidroeléctrica Route (Budget Backpacker Route)
 
-<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/07-ruta-alternativa-hidroelectrica-caminata.webp" alt="Backpacker trek along Hidroelectrica railway tracks" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Alternative Hidroeléctrica route: a flat 10 km (2.5 to 3 hour) scenic hike along the railway line through lush subtropical jungle.</figcaption>
-</figure>
-
 Popular among long-term backpackers seeking to minimize rail costs, this route bypasses train tickets in exchange for long vehicle hours:
 
 ### The Journey Step by Step:
@@ -231,6 +215,12 @@ Popular among long-term backpackers seeking to minimize rail costs, this route b
 
 ---
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/07-ruta-alternativa-hidroelectrica-caminata.webp" alt="Backpacker trek along Hidroelectrica railway tracks" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Alternative Hidroeléctrica route: a flat 10 km (2.5 to 3 hour) scenic hike along the railway line through lush subtropical jungle.</figcaption>
+</figure>
+
+
 ## 6. Full Day vs. Overnight in Aguas Calientes: Comparison
 
 | Factor | 1-Day Full Day Trip from Cusco | 2-Day / 1-Night Trip (Overnight in Aguas Calientes) |
@@ -246,6 +236,18 @@ Popular among long-term backpackers seeking to minimize rail costs, this route b
 > **💡 Peru Beyond Pro-Tip:** If you have 4 or more days in Cusco, the ultimate itinerary is: **Day 1:** Tour the Sacred Valley (Moray, Maras Salt Mines, and Ollantaytambo Fortress), catching the late afternoon scenic train to Aguas Calientes; **Day 2:** Tour Machu Picchu in the crisp morning air and return to Cusco before sunset. This provides progressive altitude acclimatization and zero stress.
 
 ---
+
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/05-buses-consettur-subida-carretera.webp" alt="Consettur bus switchback road to citadel" loading="lazy" />
+    <figcaption>Step 3: 25-minute Consettur bus ride ascending the Hiram Bingham switchbacks.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/como-llegar-a-machu-picchu-desde-cusco-paso-a-paso/06-puerta-ingreso-machu-picchu-control.webp" alt="Machu Picchu entrance gate and checkpoint" loading="lazy" />
+    <figcaption>Sanctuary Entry: presenting your official ticket and original passport.</figcaption>
+  </figure>
+</div>
+
 
 ## 7. Recommended Guided Tour Packages with Peru Beyond
 

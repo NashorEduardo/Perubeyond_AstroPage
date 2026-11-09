@@ -39,6 +39,10 @@ relatedTours:
   - "machu-picchu-full-day-tour"
   - "cusco-machu-picchu-3d-2n"
   - "cusco-valle-sagrado-machu-picchu-4d-3n"
+imgAlbum:
+  - "/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/circuito-clasico-foto.webp"
+  - "/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/terraza-superior-panoramica.webp"
+  - "/images/Blog/entradas-y-circuitos-de-machu-picchu-guia-completa/huayna-picchu-vista.webp"
 ---
 
 Conhecer a mítica cidade sagrada dos Incas é o grande sonho de viajantes de todo o Brasil e do mundo. No entanto, visitar o santuário histórico em 2026 exige atenção às novas regras oficiais. Para proteger o patrimônio arqueológico contra o desgaste do turismo massivo e preservar este Patrimônio Mundial da UNESCO, o **Ministério da Cultura do Peru** reorganizou a visitação à *Llaqta Inka* em **3 Grandes Circuitos Oficiais divididos em 10 rotas específicas**.

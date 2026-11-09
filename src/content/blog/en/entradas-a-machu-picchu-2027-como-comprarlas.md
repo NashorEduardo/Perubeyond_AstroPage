@@ -72,7 +72,6 @@ Before reserving your entrance permit, review this master breakdown of all 10 of
 | **Circuit 3 (Royalty)** | **3-C: Great Cavern (Temple Moon)**| Ceremonial temple carved inside cave behind Huayna Picchu| No (Deep backcountry trekking) | 4.0 to 4.5 hours | Strenuous (High Season only) | 2 to 3 months |
 | **Circuit 3 (Royalty)** | **3-D: Huchuy Picchu Peak** | Small peak adjacent to Huayna Picchu & lower ruins | No (Low vantage angle) | 2.5 hours | Moderate (High Season only) | 1 to 2 months |
 
-
 *The legendary postcard view of Machu Picchu with Huayna Picchu in the backdrop is only captured via Circuits 1B, 2A, and 2B.*
 
 ---
@@ -95,8 +94,6 @@ Machu Picchu is subject to strict carrying capacity caps mandated by UNESCO to p
 
 ---
 
-## 3. How to Buy Machu Picchu Tickets 2027 Step by Step
-
 <div class="blog-img-grid">
   <figure>
     <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/01-circuito-1-panoramica-casa-guardian.webp" alt="Circuit 1 Panoramic view from Guardhouse" loading="lazy" />
@@ -107,6 +104,9 @@ Machu Picchu is subject to strict carrying capacity caps mandated by UNESCO to p
     <figcaption>Circuit 2 (Classic): the most comprehensive circuit exploring temples and urban sectors.</figcaption>
   </figure>
 </div>
+
+
+## 3. How to Buy Machu Picchu Tickets 2027 Step by Step
 
 There are two primary ways to purchase official permits:
 
@@ -131,8 +131,6 @@ When booking with **Peru Beyond**, our Cusco logistics team:
 
 ---
 
-## 4. Official 2027 Ticket Pricing & Discount Categories
-
 <div class="blog-img-grid">
   <figure>
     <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/03-circuito-3-realeza-roca-sagrada.webp" alt="Circuit 3 Royalty and Sacred Rock" loading="lazy" />
@@ -143,6 +141,9 @@ When booking with **Peru Beyond**, our Cusco logistics team:
     <figcaption>Huayna Picchu: thrilling vertical ascent for adventure seekers with breathtaking views.</figcaption>
   </figure>
 </div>
+
+
+## 4. Official 2027 Ticket Pricing & Discount Categories
 
 Official rates are established by the Ministry of Culture:
 
@@ -171,17 +172,6 @@ Official rates are established by the Ministry of Culture:
 
 ## 5. Entry Time Slot Rules & Grace Period Tolerances
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/05-montana-machu-picchu-vista-alta.webp" alt="Montaña Machu Picchu high peak summit" loading="lazy" />
-    <figcaption>Montaña Machu Picchu: highest summit (3,061 m) with complete 360-degree panoramas.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/06-control-acceso-puerta-boletos.webp" alt="Entrance gate turnstiles Machu Picchu" loading="lazy" />
-    <figcaption>Access Control: electronic QR code verification matching your assigned time slot.</figcaption>
-  </figure>
-</div>
-
 To preserve order and prevent dangerous bottlenecks along narrow stone alleys, tickets are strictly timed:
 
 - **Entry Slots:** 60-minute windows from 6:00 AM to 3:00 PM (the park closes at 5:30 PM).
@@ -194,12 +184,19 @@ To preserve order and prevent dangerous bottlenecks along narrow stone alleys, t
 
 ---
 
-## 6. What to Do If Online Tickets Are Sold Out for Your 2027 Dates?
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/05-montana-machu-picchu-vista-alta.webp" alt="Montaña Machu Picchu high peak summit" loading="lazy" />
+    <figcaption>Montaña Machu Picchu: highest summit (3,061 m) with complete 360-degree panoramas.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/06-control-acceso-puerta-boletos.webp" alt="Entrance gate turnstiles Machu Picchu" loading="lazy" />
+    <figcaption>Access Control: electronic QR code verification matching your assigned time slot.</figcaption>
+  </figure>
+</div>
 
-<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/07-guia-oficial-turismo-machu-picchu.webp" alt="Licensed official tour guide at Machu Picchu" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Certified Guided Experience: exploring with a licensed guide brings to life the astronomical alignments and sacred engineering of the sanctuary.</figcaption>
-</figure>
+
+## 6. What to Do If Online Tickets Are Sold Out for Your 2027 Dates?
 
 If online permits are completely sold out for your travel window, one emergency in-person option remains: the **1,000 daily in-person tickets** sold at the Cultural Center in Aguas Calientes (Machu Picchu Town).
 
@@ -226,3 +223,9 @@ Secure your official Circuit 2 or Huayna Picchu permits backed by our dedicated 
 - [Machu Picchu Full Day Tour](/en/tours/cusco/machu-picchu-full-day-tour): The fastest, most rewarding single-day journey from Cusco.
 - [Cusco & Machu Picchu Classic (3 Days / 2 Nights)](/en/tours/machupicchu/cusco-machu-picchu-3d-2n): The quintessential itinerary for a seamless Andean getaway.
 - [Cusco, Sacred Valley & Machu Picchu (4 Days / 3 Nights)](/en/tours/machupicchu/cusco-valle-sagrado-machu-picchu-4d-3n): Our premier progressive acclimatization journey.
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/entradas-a-machu-picchu-2027-como-comprarlas/07-guia-oficial-turismo-machu-picchu.webp" alt="Licensed official tour guide at Machu Picchu" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Certified Guided Experience: exploring with a licensed guide brings to life the astronomical alignments and sacred engineering of the sanctuary.</figcaption>
+</figure>
+

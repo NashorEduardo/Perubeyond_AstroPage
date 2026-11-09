@@ -97,61 +97,45 @@ Explore all 15 bucket-list destinations across Peru, categorized by region, elev
 
 ### 3. Sacred Valley of the Incas: Pisac & Ollantaytambo
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/01-montana-7-colores-vinicunca.webp" alt="Vinicunca Rainbow Mountain Peru" loading="lazy" />
-    <figcaption>Rainbow Mountain: geological mineral stripes towering at 5,036 meters.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/02-laguna-humantay-nevado-salkantay.webp" alt="Turquoise Humantay Lake beneath Salkantay glacier" loading="lazy" />
-    <figcaption>Humantay Lake: ethereal turquoise glacial waters beneath snow-capped peaks.</figcaption>
-  </figure>
-</div>
 - **Elevation:** 2,792 m to 2,972 m (9,160 to 9,750 feet).
 - **Why visit:** The agricultural and spiritual heartland along the Vilcanota River. Pisac dazzles with sweeping agricultural terraces clinging to steep cliffs, while Ollantaytambo is the only surviving "Living Inca Town," with stone residences and freshwater channels unchanged since 1450.
 - **Featured Tour:** [Sacred Valley Full Day Tour with Buffet Lunch](/en/tours/cusco/valle-sagrado-full-day-almuerzo-buffet).
 
 ### 4. Rainbow Mountain (Vinicunca)
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/03-valle-sagrado-moray-circulos-agricolas.webp" alt="Concentric Inca terraces Moray" loading="lazy" />
-    <figcaption>Moray: circular terraced amphitheaters used as an Inca agronomic laboratory.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/04-oasis-huacachina-sunset.webp" alt="Sunset over Huacachina oasis" loading="lazy" />
-    <figcaption>Huacachina Sunset: South America’s only true natural desert oasis.</figcaption>
-  </figure>
-</div>
 - **Elevation:** 5,200 meters (17,060 feet).
 - **Why visit:** Discovered by international travelers after glacial melting revealed millions of years of weathered sandstone and trace minerals, Vinicunca displays vibrant parallel stripes of lavender, turquoise, gold, and terracotta against the snowy backdrop of Mount Ausangate.
 - **Featured Tour:** [Rainbow Mountain Trekking Full Day](/en/tours/cusco/trekking-montana-7-colores).
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/01-montana-7-colores-vinicunca.webp" alt="Vinicunca Rainbow Mountain Peru" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Rainbow Mountain: geological mineral stripes towering at 5,036 meters.</figcaption>
+</figure>
+
+
 ### 5. Humantay Lake
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/05-canon-colca-vuelo-condor.webp" alt="Andean condor flying in Colca Canyon" loading="lazy" />
-    <figcaption>Colca Canyon: breathtaking depths and the majestic flight of the Andean condor.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/06-lago-titicaca-taquile-uros.webp" alt="Taquile Island Lake Titicaca" loading="lazy" />
-    <figcaption>Lake Titicaca & Taquile Island: UNESCO-recognized ancestral textile traditions.</figcaption>
-  </figure>
-</div>
 - **Elevation:** 4,200 meters (13,779 feet).
 - **Why visit:** A radiant turquoise alpine jewel fed by the hanging glaciers of Mount Humantay (5,473 m), nestled along the Salkantay trail. Andean travelers leave stone cairns (*apachetas*) here in gratitude to Pachamama (Mother Earth).
 - **Featured Tour:** [Humantay Lake Trekking Full Day](/en/tours/cusco/trekking-laguna-humantay-full-day).
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/02-laguna-humantay-nevado-salkantay.webp" alt="Turquoise Humantay Lake beneath Salkantay glacier" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Humantay Lake: ethereal turquoise glacial waters beneath snow-capped peaks.</figcaption>
+</figure>
+
+
 ### 6. Maras Salt Mines & Moray Agricultural Laboratory
 
-<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/07-selva-amazonica-puerto-maldonado.webp" alt="Tambopata National Reserve Peruvian Amazon" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Peruvian Amazon (Tambopata): riverboat safaris through primary rainforest boasting unmatched biodiversity.</figcaption>
-</figure>
 - **Elevation:** 3,380 m to 3,500 m.
 - **Why visit:** In Moray, concentric circular terraces create a temperature variance of up to 15°C (27°F) between top and bottom, functioning as an Incan crop acclimatization laboratory. Minutes away, the Maras Salt Pans cascade down a canyon with over 3,000 pink salt pools fed by a subterranean hyper-saline spring.
 - **Featured Tour:** [Maras, Moray & Salt Mines Tour](/en/tours/cusco/maras-moray-salineras-tour).
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/03-valle-sagrado-moray-circulos-agricolas.webp" alt="Concentric Inca terraces Moray" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Moray: circular terraced amphitheaters used as an Inca agronomic laboratory.</figcaption>
+</figure>
+
 
 ### 7. Chinchero: The Rainbow Weaving Town
 - **Elevation:** 3,762 meters (12,342 feet).
@@ -160,6 +144,12 @@ Explore all 15 bucket-list destinations across Peru, categorized by region, elev
 ### 8. Huacachina Desert Oasis (Ica)
 - **Elevation:** 400 meters (1,312 feet).
 - **Why visit:** South America's only true desert oasis, featuring a natural palm-fringed lagoon surrounded by the continent's tallest dunes. The late-afternoon 4x4 dune buggy rides and sandboarding offer an exhilarating rush and golden desert sunsets.
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/04-oasis-huacachina-sunset.webp" alt="Sunset over Huacachina oasis" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Huacachina Sunset: South America’s only true natural desert oasis.</figcaption>
+</figure>
+
 
 ### 9. Paracas National Reserve & Ballestas Islands
 - **Elevation:** 0 meters (Sea Level).
@@ -195,6 +185,18 @@ Explore all 15 bucket-list destinations across Peru, categorized by region, elev
 
 ---
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/05-canon-colca-vuelo-condor.webp" alt="Andean condor flying in Colca Canyon" loading="lazy" />
+    <figcaption>Colca Canyon: breathtaking depths and the majestic flight of the Andean condor.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/06-lago-titicaca-taquile-uros.webp" alt="Taquile Island Lake Titicaca" loading="lazy" />
+    <figcaption>Lake Titicaca & Taquile Island: UNESCO-recognized ancestral textile traditions.</figcaption>
+  </figure>
+</div>
+
+
 ## 3. How to Structure Your Peru Itinerary Logistically
 
 To minimize transit fatigue, group attractions logically:
@@ -204,6 +206,12 @@ To minimize transit fatigue, group attractions logically:
 4. **Southern Altiplano Extension (3-4 Days):** Scenic bus across the high plains ➔ Lake Titicaca (Puno) ➔ Arequipa & Colca Canyon.
 
 ---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/07-selva-amazonica-puerto-maldonado.webp" alt="Tambopata National Reserve Peruvian Amazon" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Peruvian Amazon (Tambopata): riverboat safaris through primary rainforest boasting unmatched biodiversity.</figcaption>
+</figure>
+
 
 ## 4. Frequently Asked Questions (FAQs)
 

@@ -66,23 +66,11 @@ Antes de empacar tu mochila, consulta esta tabla comparativa para adaptar tu ind
 | **Viaje en Tren Full Day (1 Día desde Cusco)**| Ropa cómoda por capas, pantalón ligero desmontable | Calzado deportivo con suela de buen relieve | Gorra para sol, repelente contra mosquito Plumilla | Batería externa (Powerbank), efectivo en Soles | Mochila pequeña de 15 a 20 L (máx. 3 kg) |
 | **Subida a Montañas (Huayna Picchu / Montaña)**| Camiseta técnica de secado ultra-rápido + rompevientos | Botas de trekking con suela de alta adherencia (Vibram) | Bandana absorbente de sudor, toalla pequeña de microfibra | Electrolitos / sales hidratantes, snacks calóricos | Mochila ergonómica ultraligera (máx. 3 kg) |
 
-
 *Llevar el calzado y la vestimenta adecuada marca la diferencia entre una visita inolvidable y una jornada incómoda.*
 
 ---
 
 ## 2. Documentos Obligatorios e Indispensables
-
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/01-mochila-trekking-equipaje-mano.webp" alt="Mochila de trekking de 20-30 litros permitida" loading="lazy" />
-    <figcaption>Mochila de día (máx. 20-30L): tamaño reglamentario para el tren y la ciudadela.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/02-calzado-trekking-botas-senderismo.webp" alt="Botas de senderismo impermeables para Machu Picchu" loading="lazy" />
-    <figcaption>Calzado de trekking con buen agarre para escalinatas incas de piedra.</figcaption>
-  </figure>
-</div>
 
 En la puerta principal de acceso a Machu Picchu el control de identidad es riguroso. Sin estos documentos físicos vigentes no se te permitirá el ingreso, sin excepción:
 
@@ -105,18 +93,13 @@ En la puerta principal de acceso a Machu Picchu el control de identidad es rigur
 
 ---
 
-## 3. Cómo Vestirse para Machu Picchu: El Sistema de 3 Capas
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/07-pasaporte-boletos-oficiales-documentos.webp" alt="Pasaporte vigente y boletos oficiales de Machu Picchu" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Documentación imprescindible: pasaporte original físico vigente y boleto de ingreso oficial impreso, obligatorios para superar el control de acceso.</figcaption>
+</figure>
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/03-ropa-impermeable-chamarra-lluvia.webp" alt="Chaqueta impermeable cortavientos" loading="lazy" />
-    <figcaption>Chaqueta cortavientos e impermeable: esencial para el clima cambiante de la ceja de selva.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/04-proteccion-solar-sombrero-lentes.webp" alt="Sombrero de ala ancha y gafas de sol con protección UV" loading="lazy" />
-    <figcaption>Protección solar completa: sombrero de ala ancha y gafas UV contra la radiación andina.</figcaption>
-  </figure>
-</div>
+
+## 3. Cómo Vestirse para Machu Picchu: El Sistema de 3 Capas
 
 Machu Picchu se localiza en una zona de transición ecológica denominada **ceja de selva** o bosque nuboso subtropical. La altitud es moderada (2,430 m s. n. m. / 7,972 ft), lo que propicia mañanas frescas y cargadas de humedad seguidas por mediodías de calor intenso.
 
@@ -142,18 +125,19 @@ Camiseta técnica dry-fit        Chaqueta polar o fleece ligero        Cortavien
 
 ---
 
-## 4. Calzado Ideal y Ropa Recomendada
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/05-repelente-bloqueador-botella-agua.webp" alt="Botella de agua reutilizable repelente y bloqueador" loading="lazy" />
-    <figcaption>Hidratación y cuidado: cantimplora reutilizable y repelente ecológico contra mosquitos.</figcaption>
+    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/03-ropa-impermeable-chamarra-lluvia.webp" alt="Chaqueta impermeable cortavientos" loading="lazy" />
+    <figcaption>Chaqueta cortavientos e impermeable: esencial para el clima cambiante de la ceja de selva.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/06-bastones-trekking-puntas-goma.webp" alt="Bastones de trekking con regatones de goma" loading="lazy" />
-    <figcaption>Bastones con puntas de goma: obligatorios para proteger los senderos líticos incas.</figcaption>
+    <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/04-proteccion-solar-sombrero-lentes.webp" alt="Sombrero de ala ancha y gafas de sol con protección UV" loading="lazy" />
+    <figcaption>Protección solar completa: sombrero de ala ancha y gafas UV contra la radiación andina.</figcaption>
   </figure>
 </div>
+
+
+## 4. Calzado Ideal y Ropa Recomendada
 
 En un recorrido regular por Machu Picchu subirás y bajarás entre 600 y más de 1,500 escalones de granito rústico colocados por los incas hace más de 500 años.
 
@@ -170,12 +154,13 @@ En un recorrido regular por Machu Picchu subirás y bajarás entre 600 y más de
 
 ---
 
-## 5. Qué Llevar en tu Mochila y Reglamento Oficial de Equipaje
-
 <figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/07-pasaporte-boletos-oficiales-documentos.webp" alt="Pasaporte vigente y boletos oficiales de Machu Picchu" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Documentación imprescindible: pasaporte original físico vigente y boleto de ingreso oficial impreso, obligatorios para superar el control de acceso.</figcaption>
+  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/02-calzado-trekking-botas-senderismo.webp" alt="Botas de senderismo impermeables para Machu Picchu" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Calzado de trekking con buen agarre para escalinatas incas de piedra.</figcaption>
 </figure>
+
+
+## 5. Qué Llevar en tu Mochila y Reglamento Oficial de Equipaje
 
 Para ingresar a la ciudadela y viajar en los trenes andinos debes cumplir regulaciones estrictas de tamaño y peso:
 
@@ -194,6 +179,12 @@ Para ingresar a la ciudadela y viajar en los trenes andinos debes cumplir regula
 
 ---
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/01-mochila-trekking-equipaje-mano.webp" alt="Mochila de trekking de 20-30 litros permitida" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Mochila de día (máx. 20-30L): tamaño reglamentario para el tren y la ciudadela.</figcaption>
+</figure>
+
+
 ## 6. Salud, Protección Solar y Lucha contra los Insectos
 
 A 2,430 metros de altitud, la atmósfera filtra menos radiación ultravioleta y el microclima tropical alberga insectos particulares:
@@ -210,6 +201,12 @@ A 2,430 metros de altitud, la atmósfera filtra menos radiación ultravioleta y 
 
 ---
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/05-repelente-bloqueador-botella-agua.webp" alt="Botella de agua reutilizable repelente y bloqueador" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Hidratación y cuidado: cantimplora reutilizable y repelente ecológico contra mosquitos.</figcaption>
+</figure>
+
+
 ## 7. Lista Oficial de Objetos Prohibidos en Machu Picchu
 
 Para proteger el patrimonio arqueológico contra el deterioro y evitar accidentes, los agentes del parque decomisan o niegan el ingreso con los siguientes elementos:
@@ -223,6 +220,12 @@ Para proteger el patrimonio arqueológico contra el deterioro y evitar accidente
 - ❌ **Alimentos pesados, bebidas alcohólicas y cigarrillos/vapeadores:** No está permitido fumar ni comer dentro de los recintos sagrados.
 
 ---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/que-llevar-a-machu-picchu-lista-para-preparar-tu-viaje/06-bastones-trekking-puntas-goma.webp" alt="Bastones de trekking con regatones de goma" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Bastones con puntas de goma: obligatorios para proteger los senderos líticos incas.</figcaption>
+</figure>
+
 
 ## 8. Checklist Rápido para Empacar tu Mochila de Día
 

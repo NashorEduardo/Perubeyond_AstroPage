@@ -97,62 +97,46 @@ A continuación, visualiza de forma integral los 15 atractivos indispensables de
 
 ### 3. Valle Sagrado de los Incas: Pisac y Ollantaytambo
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/01-montana-7-colores-vinicunca.webp" alt="Montaña de 7 Colores Vinicunca" loading="lazy" />
-    <figcaption>Montaña Vinicunca: franjas minerales a más de 5,000 metros de altitud.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/02-laguna-humantay-nevado-salkantay.webp" alt="Laguna Humantay turquesa y glaciar Salkantay" loading="lazy" />
-    <figcaption>Laguna Humantay: espejo de agua turquesa custodiado por el glaciar sagrado.</figcaption>
-  </figure>
-</div>
 - **Altitud:** 2,792 m a 2,972 m (9,160 a 9,750 pies).
 - **Por qué es imperdible:** El fértil valle del río Willkamayu fue el epicentro de la producción del maíz gigante y refugio de las haciendas reales incas. Pisac impresiona con sus terrazas agrícolas suspendidas sobre el abismo y su cementerio prehispánico; mientras que Ollantaytambo es la única "Ciudad Inca Viviente", donde los canales de agua y las viviendas de piedra conservan intacto su trazado original desde hace 600 años.
 - **Tour sugerido:** [Tour Valle Sagrado Full Day con Almuerzo Buffet](/es/tours/cusco/valle-sagrado-full-day-almuerzo-buffet).
 
 ### 4. Montaña de 7 Colores (Vinicunca)
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/03-valle-sagrado-moray-circulos-agricolas.webp" alt="Andenes concéntricos de Moray" loading="lazy" />
-    <figcaption>Moray: anfiteatros circulares donde los incas recreaban microclimas agrícolas.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/04-oasis-huacachina-sunset.webp" alt="Atardecer en Huacachina Ica" loading="lazy" />
-    <figcaption>Huacachina al atardecer: el único oasis natural del desierto sudamericano.</figcaption>
-  </figure>
-</div>
 - **Altitud:** 5,200 metros (17,060 pies).
 - **Por qué es imperdible:** Uno de los fenómenos geológicos más asombrosos del continente. El deshielo de los glaciares en la Cordillera del Vilcanota reveló franjas de óxidos de hierro, azufre, cobre y magnesio que tiñen la montaña de tonos rojos, dorados, turquesas y violetas, con el imponente nevado Ausangate de fondo.
 - **Consejo de Altitud:** Programa esta visita para tu 4º o 5º día de viaje para estar perfectamente aclimatado.
 - **Tour sugerido:** [Trekking Montaña de 7 Colores Full Day](/es/tours/cusco/trekking-montana-7-colores).
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/01-montana-7-colores-vinicunca.webp" alt="Montaña de 7 Colores Vinicunca" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Montaña Vinicunca: franjas minerales a más de 5,000 metros de altitud.</figcaption>
+</figure>
+
+
 ### 5. Laguna Humantay
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/05-canon-colca-vuelo-condor.webp" alt="Vuelo del cóndor en el Cañón del Colca" loading="lazy" />
-    <figcaption>Cañón del Colca: uno de los cañones más profundos del planeta y hogar del cóndor.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/06-lago-titicaca-taquile-uros.webp" alt="Isla de Taquile en el Lago Titicaca" loading="lazy" />
-    <figcaption>Lago Titicaca e Isla Taquile: arte textil reconocido como patrimonio de la UNESCO.</figcaption>
-  </figure>
-</div>
 - **Altitud:** 4,200 metros (13,779 pies).
 - **Por qué es imperdible:** Una joya de aguas color turquesa lechoso formada por el deshielo del nevado Humantay (5,473 m), en la ruta hacia el Apu Salkantay. Los chamanes y viajeros andinos depositan aquí apachetas de piedra y hojas de coca en homenaje a la Pachamama.
 - **Tour sugerido:** [Trekking Laguna Humantay Full Day](/es/tours/cusco/trekking-laguna-humantay-full-day).
 
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/02-laguna-humantay-nevado-salkantay.webp" alt="Laguna Humantay turquesa y glaciar Salkantay" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Laguna Humantay: espejo de agua turquesa custodiado por el glaciar sagrado.</figcaption>
+</figure>
+
+
 ### 6. Salineras de Maras y Complejo Circular de Moray
 
-<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/07-selva-amazonica-puerto-maldonado.webp" alt="Reserva Nacional Tambopata en la Amazonía" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Amazonía Peruana (Tambopata): navegación por ríos selváticos y contacto directo con la mayor biodiversidad del planeta.</figcaption>
-</figure>
 - **Altitud:** 3,380 m a 3,500 m.
 - **Por qué es imperdible:** En Moray, cuatro anfiteatros concéntricos de terrazas agrícolas creaban hasta 20 microclimas térmicos distintos, sirviendo como estación experimental botánica inca. A pocos minutos, las Salineras de Maras deslumbran con más de 3,000 pozas escalonadas de sal rosada milenaria alimentadas por un manantial hipersalino subterráneo.
 - **Tour sugerido:** [Tour Maras, Moray y Salineras](/es/tours/cusco/maras-moray-salineras-tour).
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/03-valle-sagrado-moray-circulos-agricolas.webp" alt="Andenes concéntricos de Moray" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Moray: anfiteatros circulares donde los incas recreaban microclimas agrícolas.</figcaption>
+</figure>
+
 
 ### 7. Chinchero, la Tierra del Arcoíris
 - **Altitud:** 3,762 metros (12,342 pies).
@@ -161,6 +145,12 @@ A continuación, visualiza de forma integral los 15 atractivos indispensables de
 ### 8. Oasis de la Huacachina en Ica
 - **Altitud:** 400 metros (1,312 pies).
 - **Por qué es imperdible:** Es el único oasis natural de Sudamérica, una laguna de aguas verdosas rodeada de palmeras reales y huarangos en medio de las dunas más altas del continente. La excursión en carros areneros (*buggies*) a toda velocidad y la práctica de sandboarding al atardecer regalan una de las puestas de sol más espectaculares del planeta.
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/04-oasis-huacachina-sunset.webp" alt="Atardecer en Huacachina Ica" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Huacachina al atardecer: el único oasis natural del desierto sudamericano.</figcaption>
+</figure>
+
 
 ### 9. Reserva Nacional de Paracas e Islas Ballestas
 - **Altitud:** 0 metros (Nivel del Mar).
@@ -196,6 +186,18 @@ A continuación, visualiza de forma integral los 15 atractivos indispensables de
 
 ---
 
+<div class="blog-img-grid">
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/05-canon-colca-vuelo-condor.webp" alt="Vuelo del cóndor en el Cañón del Colca" loading="lazy" />
+    <figcaption>Cañón del Colca: uno de los cañones más profundos del planeta y hogar del cóndor.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/06-lago-titicaca-taquile-uros.webp" alt="Isla de Taquile en el Lago Titicaca" loading="lazy" />
+    <figcaption>Lago Titicaca e Isla Taquile: arte textil reconocido como patrimonio de la UNESCO.</figcaption>
+  </figure>
+</div>
+
+
 ## 3. Cómo Diseñar una Ruta Equilibrada para Conocer Estos Destinos
 
 Para no desgastar tu energía ni perder días en traslados innecesarios, recomendamos agrupar los lugares por cercanía geográfica:
@@ -206,6 +208,12 @@ Para no desgastar tu energía ni perder días en traslados innecesarios, recomen
 4. **Extensión Altiplánica (3 a 4 días):** Ruta del Sol en bus turístico ➔ Lago Titicaca (Puno) ➔ Arequipa y Cañón del Colca.
 
 ---
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/los-15-lugares-turisticos-de-peru-que-debes-conocer/07-selva-amazonica-puerto-maldonado.webp" alt="Reserva Nacional Tambopata en la Amazonía" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Amazonía Peruana (Tambopata): navegación por ríos selváticos y contacto directo con la mayor biodiversidad del planeta.</figcaption>
+</figure>
+
 
 ## 4. Preguntas Frecuentes sobre Lugares Turísticos de Perú (FAQs)
 

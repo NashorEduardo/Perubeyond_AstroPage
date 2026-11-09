@@ -80,17 +80,6 @@ Para planejar sua viagem com facilidade, confira esta visão geral do clima, do 
 
 ## 2. As 3 Grandes Regiões e Seus Climas
 
-<div class="blog-img-grid">
-  <figure>
-    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/01-machu-picchu-cielo-despejado-invierno.webp" alt="Machu Picchu com céu claro na época seca" loading="lazy" />
-    <figcaption>Estação Seca (Maio a Outubro): céu azul anil, sol radiante e visibilidade perfeita das montanhas.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/02-valle-sagrado-temporada-verde-lluvias.webp" alt="Vale Sagrado verde esmeralda na época de chuvas" loading="lazy" />
-    <figcaption>Estação Verde (Dezembro a Março): vales esmeralda floridos, menos multidões e cachoeiras ativas.</figcaption>
-  </figure>
-</div>
-
 ### O Litoral (Lima, Paracas, Huacachina, Nazca)
 - **Verão Litorâneo (Dezembro a Abril):** Dias ensolarados e quentes (24 °C a 30 °C). Perfeito para os passeios de barco nas Ilhas Ballestas em Paracas, passeios de buggy no oásis de Huacachina e caminhadas pela orla de Miraflores em Lima.
 - **Inverno Litorâneo (Maio a Novembro):** Céu encoberto pela famosa névoa costeira (*garúa*) em Lima, com temperaturas amenas (15 °C a 19 °C). No entanto, Paracas e o deserto de Ica mantêm sol quase o ano todo.
@@ -101,18 +90,19 @@ Para planejar sua viagem com facilidade, confira esta visão geral do clima, do 
 
 ---
 
-## 3. Estação Seca vs. Estação Chuvosa nos Andes
-
 <div class="blog-img-grid">
   <figure>
     <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/03-costa-lima-miraflores-verano.webp" alt="Verão na costa e praias de Lima" loading="lazy" />
     <figcaption>Costa e Lima (Dezembro a Abril): verão ensolarado, praias do Pacífico e gastronomia à beira-mar.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/04-montana-7-colores-dia-soleado.webp" alt="Montanha de 7 Cores em dia ensolarado" loading="lazy" />
-    <figcaption>Trilhas nos Andes: máxima nitidez de cores em Vinicunca e Humantay nos meses secos de inverno.</figcaption>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/07-selva-amazonia-rio-temporada-seca.webp" alt="Navegação no rio Tambopata na época seca" loading="lazy" />
+    <figcaption>Amazônia Peruana: de maio a outubro o nível dos rios baixa, ideal para avistar onças-pintadas, jacarés e ariranhas gigantes nas margens.</figcaption>
   </figure>
 </div>
+
+
+## 3. Estação Seca vs. Estação Chuvosa nos Andes
 
 ### Estação Seca (Maio a Outubro) — A Favorita dos Viajantes
 - **Pontos Positivos:** Céu limpo e zero probabilidade de chuva estragar suas fotos em Machu Picchu ou na Montanha Colorida.
@@ -128,18 +118,19 @@ Para planejar sua viagem com facilidade, confira esta visão geral do clima, do 
 
 ---
 
-## 4. O que Levar na Mala: Roupas Essenciais
-
 <div class="blog-img-grid">
   <figure>
-    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/05-cusco-inti-raymi-fiesta-sol.webp" alt="Festa do Sol Inti Raymi em Cusco" loading="lazy" />
-    <figcaption>Junho em Cusco: mês festivo imperial e a grandiosa celebração do Inti Raymi em Sacsayhuamán.</figcaption>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/01-machu-picchu-cielo-despejado-invierno.webp" alt="Machu Picchu com céu claro na época seca" loading="lazy" />
+    <figcaption>Estação Seca (Maio a Outubro): céu azul anil, sol radiante e visibilidade perfeita das montanhas.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/06-neblina-mistica-machu-picchu-nubes.webp" alt="Neblina mística ao amanhecer em Machu Picchu" loading="lazy" />
-    <figcaption>Meses de transição (Abril e Novembro): véus de névoa mágica que criam um cenário cinematográfico único.</figcaption>
+    <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/02-valle-sagrado-temporada-verde-lluvias.webp" alt="Vale Sagrado verde esmeralda na época de chuvas" loading="lazy" />
+    <figcaption>Estação Verde (Dezembro a Março): vales esmeralda floridos, menos multidões e cachoeiras ativas.</figcaption>
   </figure>
 </div>
+
+
+## 4. O que Levar na Mala: Roupas Essenciais
 
 - **Para o Litoral:** Roupas de banho, camisetas leves, bermudas, chinelos, protetor solar e boné.
 - **Para os Andes:** Blusas de manga longa térmicas, agasalho polar (fleece), jaqueta grossa corta-vento impermeável, gorro de lã, luvas e bota de trilha macia e confortável.
@@ -147,13 +138,20 @@ Para planejar sua viagem com facilidade, confira esta visão geral do clima, do 
 
 ---
 
-## 5. Pacotes Completos com a Peru Beyond
-
 <figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
-  <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/07-selva-amazonia-rio-temporada-seca.webp" alt="Navegação no rio Tambopata na época seca" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
-  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Amazônia Peruana: de maio a outubro o nível dos rios baixa, ideal para avistar onças-pintadas, jacarés e ariranhas gigantes nas margens.</figcaption>
+  <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/05-cusco-inti-raymi-fiesta-sol.webp" alt="Festa do Sol Inti Raymi em Cusco" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Junho em Cusco: mês festivo imperial e a grandiosa celebração do Inti Raymi em Sacsayhuamán.</figcaption>
 </figure>
+
+
+## 5. Pacotes Completos com a Peru Beyond
 
 Conheça nossos pacotes que integram o melhor da costa e das montanhas:
 - [Tour Lima, Paracas, Huacachina, Cusco & Machu Picchu (7 Dias)](/pt/tours/peru/tour-lima-paracas-huacachina-machu-picchu-cusco-7-dias): O roteiro mais procurado pelos brasileiros.
 - [Tour Lima, Huacachina, Machu Picchu & Montanha Colorida (10 Dias)](/pt/tours/peru/tour-lima-huacachina-machu-picchu-montana-arcoiris-10-dias): A viagem definitiva pelo Peru.
+
+<figure class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 not-prose">
+  <img src="/images/Blog/mejor-epoca-para-viajar-a-peru-guia-completa/04-montana-7-colores-dia-soleado.webp" alt="Montanha de 7 Cores em dia ensolarado" class="w-full h-80 sm:h-96 object-cover cursor-zoom-in" loading="lazy" />
+  <figcaption class="p-3 bg-slate-50 text-center text-xs text-slate-500 italic border-t border-slate-100">Trilhas nos Andes: máxima nitidez de cores em Vinicunca e Humantay nos meses secos de inverno.</figcaption>
+</figure>
+
