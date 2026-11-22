@@ -105,7 +105,7 @@ La siguiente tabla reúne a las especies más buscadas. La columna de probabilid
 | **Oso de anteojos (oso andino)** | *Tremarctos ornatus* | Bosque nublado remoto | Muy baja |
 | **Puma** | *Puma concolor* | Zonas remotas, activo de noche | Excepcional |
 
-> **📌 Dato Clave:** El gallito de las rocas es el **ave nacional del Perú**. El macho es de plumaje rojo anaranjado intenso con una cresta en forma de disco; la hembra es de tonos pardos, como la de la fotografía.
+> **📌 Dato Clave:** El gallito de las rocas es el **ave nacional del Perú**. El macho es de plumaje rojo anaranjado intenso con una cresta en forma de disco; la hembra es de tonos pardos.
 
 Las especies de la tabla se explican a continuación una por una.
 

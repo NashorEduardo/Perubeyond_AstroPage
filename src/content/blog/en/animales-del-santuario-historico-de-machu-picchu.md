@@ -105,7 +105,7 @@ The table below gathers the most sought-after species. The likelihood column is 
 | **Spectacled bear (Andean bear)** | *Tremarctos ornatus* | Remote cloud forest | Very low |
 | **Puma** | *Puma concolor* | Remote areas, active at night | Exceptional |
 
-> **📌 Key Fact:** The Andean cock-of-the-rock is **Peru's national bird**. The male has intense orange-red plumage with a disc-shaped crest; the female is brownish, like the one in the photo.
+> **📌 Key Fact:** The Andean cock-of-the-rock is **Peru's national bird**. The male has intense orange-red plumage with a disc-shaped crest; the female is brownish.
 
 Each species in the table is explained below.
 

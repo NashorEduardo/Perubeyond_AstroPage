@@ -105,7 +105,7 @@ A tabela a seguir reúne as espécies mais procuradas. A coluna de probabilidade
 | **Urso-de-óculos (urso andino)** | *Tremarctos ornatus* | Floresta nublada remota | Muito baixa |
 | **Onça-parda (puma)** | *Puma concolor* | Áreas remotas, ativa à noite | Excepcional |
 
-> **📌 Dado-Chave:** O galo-da-serra-peruano é a **ave nacional do Peru**. O macho tem plumagem laranja-avermelhada intensa e uma crista em forma de disco; a fêmea tem tons de marrom, como a da foto.
+> **📌 Dado-Chave:** O galo-da-serra-peruano é a **ave nacional do Peru**. O macho tem plumagem laranja-avermelhada intensa e uma crista em forma de disco; a fêmea tem tons de marrom.
 
 As espécies da tabela são explicadas a seguir, uma a uma.
 
