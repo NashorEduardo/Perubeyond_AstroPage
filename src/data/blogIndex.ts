@@ -124,10 +124,18 @@ export function getMergedPosts(lang: BlogLang): Record<string, BlogPostLike> {
   return base;
 }
 
-export const featuredSlug = 'entradas-y-circuitos-de-machu-picchu-guia-completa';
+export const featuredSlug = 'paquetes-a-peru-desde-mexico-que-revisar-antes-de-reservar';
 
 // Orden de aparición en el listado (debajo del destacado).
 const gridOrder = [
+  'requisitos-para-entrar-a-peru-con-pasaporte-mexicano',
+  'viajar-a-peru-en-navidad-y-ano-nuevo-destinos-para-tus-vacaciones',
+  'lomo-saltado-aji-de-gallina-y-causa-limena-guia-de-la-gastronomia-peruana',
+  'pisco-peruano-vs-tequila-diferencias-historia-y-cultura',
+  'costumbres-peruanas-que-los-mexicanos-deben-conocer-antes-de-viajar',
+  'animales-del-santuario-historico-de-machu-picchu',
+  'dias-festivos-en-peru-y-como-pueden-afectar-tu-viaje',
+  'entradas-y-circuitos-de-machu-picchu-guia-completa',
   'es-seguro-viajar-a-peru-consejos-para-visitantes',
   'como-organizar-un-viaje-a-peru-por-primera-vez',
   'los-15-lugares-turisticos-de-peru-que-debes-conocer',
