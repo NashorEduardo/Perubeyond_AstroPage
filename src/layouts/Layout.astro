@@ -69,6 +69,13 @@ const htmlLang = lang === 'pt' ? 'pt-BR' : lang;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageAbs} />
+    <!-- Google Tag Manager -->
+    <script is:inline async src="https://www.googletagmanager.com/gtm.js?id=GTM-NLNTJVJZ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
     <!-- hreflang para el sitio multilingüe -->
     {resolvedAlternates?.es && <link rel="alternate" hreflang="es" href={resolvedAlternates.es} />}
     {resolvedAlternates?.en && <link rel="alternate" hreflang="en" href={resolvedAlternates.en} />}
@@ -151,13 +158,9 @@ const htmlLang = lang === 'pt' ? 'pt-BR' : lang;
         window.__pb_applyLang(currentLang);
       });
     </script>
-<!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-HYTHEVC84M"></script>
     <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
       gtag('config', 'G-HYTHEVC84M');
     </script>
     <!-- Meta Pixel Code -->
